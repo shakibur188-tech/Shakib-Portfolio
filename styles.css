@@ -1,0 +1,394 @@
+/* ==========================================================================
+   Md. Shakibur Rahaman Portfolio Stylesheet
+   Executive Royal Sapphire Trust (#1E40AF, #2563EB, #38BDF8) & Warm Gold (#D4AF37)
+   Obsidian Glassmorphism & High-End Interactions
+   ========================================================================== */
+
+:root {
+  --bg-primary: #060A14;
+  --bg-card: #0B132B;
+  --bg-card-subtle: #111C38;
+  --border-color: rgba(56, 189, 248, 0.2);
+  --border-gold: rgba(212, 175, 55, 0.35);
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  
+  --gold-accent: #D4AF37;
+  --gold-light: #F3E5AB;
+  --gold-glow: rgba(212, 175, 55, 0.25);
+  
+  --blue-trust: #2563EB;
+  --blue-royal: #1D4ED8;
+  --blue-cyan: #38BDF8;
+  --blue-glow: rgba(37, 99, 235, 0.25);
+  --blue-cyan-glow: rgba(56, 189, 248, 0.2);
+}
+
+.light-theme {
+  --bg-primary: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-card-subtle: #F0F4F8;
+  --border-color: rgba(203, 213, 225, 0.9);
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --gold-accent: #B48C1C;
+  --blue-trust: #1D4ED8;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(37, 99, 235, 0.07) 0%, transparent 45%),
+    radial-gradient(circle at 85% 25%, rgba(212, 175, 55, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 50% 75%, rgba(56, 189, 248, 0.05) 0%, transparent 50%);
+}
+
+/* Light Mode Overrides */
+body.light-theme {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-main) !important;
+  background-image: none !important;
+}
+
+body.light-theme header#navbar {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-bottom-color: rgba(226, 232, 240, 0.9) !important;
+}
+
+body.light-theme .text-white {
+  color: #0F172A !important;
+}
+
+body.light-theme .text-slate-300,
+body.light-theme .text-slate-200 {
+  color: #334155 !important;
+}
+
+body.light-theme .text-slate-400 {
+  color: #64748B !important;
+}
+
+body.light-theme .bg-slate-900,
+body.light-theme .bg-slate-900\/90,
+body.light-theme .bg-slate-900\/80,
+body.light-theme .bg-slate-900\/60,
+body.light-theme .bg-slate-950,
+body.light-theme .bg-slate-950\/80,
+body.light-theme .bg-slate-950\/70,
+body.light-theme .bg-slate-950\/60,
+body.light-theme .bg-slate-950\/40 {
+  background-color: #FFFFFF !important;
+  border-color: rgba(226, 232, 240, 0.9) !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .bg-slate-800,
+body.light-theme .bg-slate-800\/90,
+body.light-theme .bg-slate-800\/80,
+body.light-theme .bg-slate-800\/50 {
+  background-color: #F1F5F9 !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
+  color: #1E293B !important;
+}
+
+body.light-theme #mobileMenu {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-bottom-color: rgba(226, 232, 240, 0.9) !important;
+}
+
+body.light-theme input,
+body.light-theme select,
+body.light-theme textarea {
+  background-color: #F8FAFC !important;
+  border-color: #CBD5E1 !important;
+  color: #0F172A !important;
+}
+
+body.light-theme footer {
+  background-color: #F8FAFC !important;
+  border-top-color: #E2E8F0 !important;
+}
+
+/* ==========================================================================
+   Ambient Glow Effects with Blue & Gold Parallax
+   ========================================================================== */
+.ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.22;
+  pointer-events: none;
+  transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.glow-1 {
+  width: 650px;
+  height: 650px;
+  top: -150px;
+  left: -150px;
+  background: radial-gradient(circle, #2563EB 0%, #1D4ED8 40%, rgba(37, 99, 235, 0) 75%);
+}
+
+.glow-2 {
+  width: 700px;
+  height: 700px;
+  top: 25%;
+  right: -200px;
+  background: radial-gradient(circle, #D4AF37 0%, rgba(212, 175, 55, 0) 70%);
+}
+
+.glow-3 {
+  width: 600px;
+  height: 600px;
+  bottom: 12%;
+  left: 10%;
+  background: radial-gradient(circle, #0284C7 0%, rgba(2, 132, 199, 0) 70%);
+}
+
+/* ==========================================================================
+   Trust Card & Luxury Glass Styling
+   ========================================================================== */
+.trust-card {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(11, 19, 43, 0.9) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(37, 99, 235, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.trust-card:hover {
+  border-color: rgba(56, 189, 248, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 30px rgba(37, 99, 235, 0.18);
+}
+
+.gold-glow-card {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(20, 24, 38, 0.9) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 55, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-glow-card:hover {
+  border-color: rgba(212, 175, 55, 0.6);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 35px rgba(212, 175, 55, 0.22);
+}
+
+/* Trust Pill Badges */
+.trust-badge-blue {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.18), rgba(56, 189, 248, 0.08));
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #7DD3FC;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.15);
+}
+
+.trust-badge-gold {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.18), rgba(245, 158, 11, 0.08));
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: #FDE68A;
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.15);
+}
+
+/* Animated Gradient Border Bar */
+.gradient-border-bar {
+  background: linear-gradient(90deg, #2563EB 0%, #38BDF8 35%, #D4AF37 70%, #F59E0B 100%);
+  background-size: 200% 100%;
+  animation: shimmerGradient 4s linear infinite;
+}
+
+@keyframes shimmerGradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Top Scroll Progress Indicator */
+#scrollProgressBar {
+  background: linear-gradient(90deg, #2563EB, #38BDF8, #D4AF37);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.8), 0 0 24px rgba(212, 175, 55, 0.5);
+}
+
+/* ==========================================================================
+   Scroll-Driven Reveal & Smooth Stagger Effects
+   ========================================================================== */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed,
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.94) translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-scale.is-revealed,
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-left.is-revealed,
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-right.is-revealed,
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger Delays */
+.stagger-1 { transition-delay: 0.08s; }
+.stagger-2 { transition-delay: 0.16s; }
+.stagger-3 { transition-delay: 0.24s; }
+.stagger-4 { transition-delay: 0.32s; }
+.stagger-5 { transition-delay: 0.40s; }
+.stagger-6 { transition-delay: 0.48s; }
+
+/* Active Nav Indicator with Blue-Gold Accent */
+.nav-link {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #38BDF8, #D4AF37);
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover::after,
+.nav-link.active-section::after {
+  width: 100%;
+}
+
+.nav-link.active-section {
+  color: #38BDF8 !important;
+  font-weight: 600;
+}
+
+/* Filter buttons */
+.filter-btn {
+  background-color: rgba(15, 23, 42, 0.8);
+  color: #94A3B8;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+  color: #F8FAFC;
+  border-color: rgba(56, 189, 248, 0.5);
+  background-color: rgba(30, 41, 59, 0.9);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%) !important;
+  color: #FFFFFF !important;
+  font-weight: 700;
+  border-color: #38BDF8 !important;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4) !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #060A14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38BDF8;
+}
+
+/* Animated Marketing & Telemetry Keyframes */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes floatReverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(8px) rotate(-1deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.65; transform: scale(1.05); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Subtle Matrix Grid Texture for Hero */
+.hero-matrix-bg {
+  background-size: 32px 32px;
+  background-image: 
+    radial-gradient(circle, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+}
+
+.light-theme .hero-matrix-bg {
+  background-image: 
+    radial-gradient(circle, rgba(37, 99, 235, 0.06) 1px, transparent 1px);
+}
+
+/* Clean Print Support */
+@media print {
+  #backToTopBtn,
+  #floatingAdminBtn,
+  #scrollProgressBar,
+  .ambient-glow {
+    display: none !important;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "md-shakibur-rahaman-portfolio",
+  "version": "2.0.0",
+  "description": "Md. Shakibur Rahaman - Multi-Industry Brand & Performance Marketing Portfolio & SEO CMS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "performance-marketing",
+    "brand-marketing",
+    "cms",
+    "seo"
+  ],
+  "author": "Md. Shakibur Rahaman <shakibur188@gmail.com>",
+  "license": "MIT"
+}

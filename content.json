@@ -1,0 +1,676 @@
+{
+  "seo": {
+    "pageTitle": "Md. Shakibur Rahaman | Brand & Performance Marketing Architect | 7 Core Sectors",
+    "metaDescription": "Senior Brand & Performance Marketing Strategist with 3+ years experience delivering 4.8x–12.4x ROAS across Hospitality, Interior Design, Club Memberships, Education, Recruitment, Travel, and E-Commerce.",
+    "metaKeywords": "Md Shakibur Rahaman, Performance Marketing, Meta Ads Architect, Hospitality Revenue, Interior Design Leads, Education Agency Marketing, Recruitment Lead Gen, E-Commerce ROAS, Digital Marketing Director Dhaka",
+    "author": "Md. Shakibur Rahaman",
+    "canonicalUrl": "http://localhost:3000/",
+    "ogTitle": "Md. Shakibur Rahaman | Multi-Industry Brand & Performance Marketing Architect",
+    "ogDescription": "Delivering 4.8x – 12.4x ROAS, 5,000+ Qualified Leads, and BDT 35M+ Attributed Revenue across 7 High-Growth Sectors.",
+    "ogImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&h=630&q=80",
+    "twitterCard": "summary_large_image",
+    "googleSiteVerification": "",
+    "googleAnalyticsId": "G-TEST12345",
+    "metaPixelId": "123456789012345",
+    "customHeadScript": "",
+    "customBodyScript": "",
+    "schemaJson": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Person\",\n  \"name\": \"Md. Shakibur Rahaman\",\n  \"jobTitle\": \"Brand & Performance Marketing Architect\",\n  \"telephone\": \"+8801838070468\",\n  \"email\": \"shakibur188@gmail.com\",\n  \"url\": \"http://localhost:3000\",\n  \"sameAs\": [\n    \"https://www.linkedin.com/in/md-shakibur-rahaman\"\n  ],\n  \"worksFor\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Hotel Sarina Dhaka\"\n  }\n}"
+  },
+  "profile": {
+    "name": "Md. Shakibur Rahaman",
+    "eyebrow": "BRAND & PERFORMANCE MARKETING ARCHITECT",
+    "headline": "Scaling High-Growth Brands Into Predictable High-ROI Revenue Engines.",
+    "bio": "Full-Stack Brand & Performance Marketer with 3+ years of quantified results across 7 Core Growth Sectors: Hospitality (5-Star Hotels & Resorts), Luxury Interior Design, Elite Club Memberships, Education Agencies, Executive Recruitment, Travel Operators, and D2C E-Commerce. Bridging high-converting creative psychology with rigorous Meta/Google paid media attribution.",
+    "statusBadge": "🛡️ Verified Growth Strategist • Open to Performance & Brand Roles",
+    "location": "Dhaka, Bangladesh",
+    "email": "shakibur188@gmail.com",
+    "phone": "+880 1838-070468",
+    "whatsapp": "+8801883400379",
+    "linkedin": "https://www.linkedin.com/in/md-shakibur-rahaman",
+    "github": "https://github.com",
+    "resumePdfUrl": "#"
+  },
+  "trustAssurance": {
+    "headline": "Executive Trust & Performance Assurance",
+    "subheadline": "Institutional track record backed by audited revenue attribution and 5-star brand leadership.",
+    "badgeText": "100% VERIFIED",
+    "items": [
+      {
+        "icon": "fa-chart-line",
+        "title": "4.8x – 12.4x ROAS",
+        "description": "Audited return across high-ticket & consumer acquisition funnels."
+      },
+      {
+        "icon": "fa-award",
+        "title": "5-Star Brand Standards",
+        "description": "Hotel Sarina Dhaka & Marriott International brand compliance."
+      },
+      {
+        "icon": "fa-magnifying-glass-chart",
+        "title": "Granular Attribution",
+        "description": "GA4, GTM Custom Events, Meta CAPI & Excel Financial Models."
+      },
+      {
+        "icon": "fa-trophy",
+        "title": "4x Leadership Awards",
+        "description": "Pillar of Trust & Dedication Dynamo executive honors."
+      }
+    ]
+  },
+  "typewriter": [
+    "Hospitality & Fine Dining Growth",
+    "Luxury Interior & Architecture Leads",
+    "Private Club Membership Drives",
+    "Education & Study Abroad Student Intakes",
+    "Recruiting & Corporate Staffing Pipelines",
+    "Travel Agency & Tour Booking Funnels",
+    "D2C E-Commerce ROAS & Catalog Scaling"
+  ],
+  "stats": [
+    {
+      "id": "roas",
+      "value": "4.8x – 12.4x",
+      "label": "Meta & Google ROAS",
+      "sublabel": "Across diverse high-intent niches"
+    },
+    {
+      "id": "leads",
+      "value": "5,000+",
+      "label": "Qualified Leads Generated",
+      "sublabel": "B2B & high-ticket consumer funnels"
+    },
+    {
+      "id": "revenue",
+      "value": "BDT 35M+",
+      "label": "Attributed Client Revenue",
+      "sublabel": "Direct bookings, contracts & sales"
+    },
+    {
+      "id": "awards",
+      "value": "4x Awards",
+      "label": "Performance & Trust Awards",
+      "sublabel": "Hotel Sarina & ASAP Solutions"
+    }
+  ],
+  "pillars": [
+    {
+      "title": "Precision Audience Architecture",
+      "icon": "🎯",
+      "description": "High-intent lookalikes, VIP geo-fencing (Gulshan, Banani, Baridhara), custom interest clusters, and segmented B2B retargeting funnels."
+    },
+    {
+      "title": "Luxury Creative Direction",
+      "icon": "💎",
+      "description": "Premium cinematic video hooks, high-converting visual storytelling, and brand-first aesthetic elevation tailored to each industry's prestige."
+    },
+    {
+      "title": "Frictionless Conversion Routing",
+      "icon": "⚡",
+      "description": "WhatsApp Concierge automation, dedicated high-converting landing pages, lead qualification forms, and CRM integration."
+    },
+    {
+      "title": "Granular Analytics & ROI Attribution",
+      "icon": "📊",
+      "description": "Meta Pixel custom events, Google Tag Manager, GA4 event modeling, Excel multi-touch attribution, and real-time ROAS dashboards."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Meta Ads Manager & Media Buying",
+      "percentage": 95,
+      "category": "Paid Acquisition",
+      "description": "Custom Audiences, Lookalikes, CBO/ABO Scaling, Retargeting Loops"
+    },
+    {
+      "name": "Multi-Industry Lead Generation",
+      "percentage": 92,
+      "category": "High-Ticket Funnels",
+      "description": "High-Ticket Consultations, Study Abroad Intakes, B2B Retainers"
+    },
+    {
+      "name": "GA4, Meta Pixel & GTM Custom Events",
+      "percentage": 88,
+      "category": "Attribution & Tracking",
+      "description": "Full-funnel attribution, e-commerce purchase tracking, event triggers"
+    },
+    {
+      "name": "Creative Direction (Canva / Photoshop)",
+      "percentage": 90,
+      "category": "Creative Assets",
+      "description": "Ad visuals, luxury brand collateral, short-form reels scripting"
+    },
+    {
+      "name": "Advanced Excel & Data Analytics",
+      "percentage": 88,
+      "category": "Financial Modeling",
+      "description": "Pivot Tables, VLOOKUP/XLOOKUP, Marketing ROI modeling"
+    }
+  ],
+  "sectors": [
+    {
+      "id": "hospitality",
+      "title": "Hospitality & Fine Dining",
+      "icon": "🏨",
+      "subtitle": "5-Star Hotels, Banquet Venues & Fine Dining Outlets",
+      "description": "End-to-end banquet lead generation, weekend buffet capacity fills, festive promotions, and direct WhatsApp concierge booking funnels for international luxury hotel chains.",
+      "metrics": [
+        "+42% Direct Bookings",
+        "7.8x Meta ROAS",
+        "85% Weekend Capacity"
+      ]
+    },
+    {
+      "id": "interior",
+      "title": "Luxury Interior & Architecture",
+      "icon": "🏛️",
+      "subtitle": "High-End Residential & Commercial Architectural Firms",
+      "description": "Targeting affluent homeowners and commercial property developers with high-aesthetic video tours, portfolio showcases, and consultative inquiry capture.",
+      "metrics": [
+        "BDT 14.5M Pipeline",
+        "8.4x Meta ROAS",
+        "48 Verified Leads"
+      ]
+    },
+    {
+      "id": "club",
+      "title": "Private Club & Elite Memberships",
+      "icon": "💎",
+      "subtitle": "Exclusive Social Clubs, Golf Associations & VIP Networks",
+      "description": "Confidential, prestige-driven member recruitment campaigns positioning exclusivity, VIP networking, and elite privileges with frictionless application workflows.",
+      "metrics": [
+        "140+ VIP Inquiries",
+        "88 New Members",
+        "6.2x Campaign ROAS"
+      ]
+    },
+    {
+      "id": "education",
+      "title": "Education & Study Abroad",
+      "icon": "🎓",
+      "subtitle": "International Education Agencies & Language Institutes",
+      "description": "Student intake acquisition funnels across UK, USA, Canada, and Australia admissions, IELTS coaching webinars, and high-conversion visa counseling bookings.",
+      "metrics": [
+        "420+ Student Leads",
+        "-44% Cost Per Lead",
+        "110 Consultations"
+      ]
+    },
+    {
+      "id": "recruiting",
+      "title": "Recruiting & Staffing Agencies",
+      "icon": "👥",
+      "subtitle": "Executive Search & B2B Manpower Solutions",
+      "description": "Dual-funnel strategy: B2B employer lead generation targeting corporate hiring managers alongside targeted talent sourcing for executive positions.",
+      "metrics": [
+        "65 Enterprise Clients",
+        "340+ Vetted Candidates",
+        "3.2x Pipeline Value"
+      ]
+    },
+    {
+      "id": "travel",
+      "title": "Travel Agencies & Tour Operators",
+      "icon": "✈️",
+      "subtitle": "Outbound Holiday Packages, Visa Support & Group Expeditions",
+      "description": "Dynamic seasonal holiday package marketing, visa assistance lead gen, and high-intent family & luxury tour sales via Meta and Google Search.",
+      "metrics": [
+        "210+ Booked Travelers",
+        "BDT 6.2M GMV",
+        "9.1x Seasonal ROAS"
+      ]
+    },
+    {
+      "id": "ecommerce",
+      "title": "D2C E-Commerce & Retail",
+      "icon": "🛍️",
+      "subtitle": "Apparel, Lifestyle, Cosmetics & Electronics Brands",
+      "description": "Full-funnel Meta catalog ads, Advantage+ shopping campaigns, dynamic retargeting, cart abandonment recovery, and continuous A/B creative testing.",
+      "metrics": [
+        "1,450+ Paid Orders",
+        "12.4x Peak ROAS",
+        "-32% CAC Reduction"
+      ]
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": "1",
+      "sector": "hospitality",
+      "badge": "Hospitality & Fine Dining",
+      "client": "Hotel Sarina Dhaka",
+      "role": "Executive, Brand & Marketing",
+      "title": "5-Star Festive & Banquet Direct Revenue Engine",
+      "summary": "Full-funnel Meta Ads, culinary cinematography, and direct concierge inquiry routing driving banquet closures and F&B footfall for premier 5-star hotel in Banani/Gulshan.",
+      "challenge": "High reliance on aggregators, under-leveraged local corporate banquet demand during festive periods, and lack of direct conversion workflows.",
+      "solution": "Built hyper-targeted lookalike and high-income radius funnels (Gulshan, Banani, Baridhara), launched high-aesthetic culinary cinematography, and set up 1-click WhatsApp Concierge response protocol.",
+      "results": [
+        "+42% increase in direct banquet and luxury room bookings within 90 days",
+        "7.8x Meta Ads ROAS with BDT 8.4M attributed venue revenue",
+        "350,000+ local targeted reach across diplomatic & upscale corporate zones",
+        "Honored with 'Pillar of Trust' (Jan 2026) and 'Dedication Dynamo' (Dec 2025) awards"
+      ],
+      "metrics": [
+        {
+          "value": "7.8x",
+          "label": "Meta ROAS"
+        },
+        {
+          "value": "+42%",
+          "label": "Direct Bookings"
+        },
+        {
+          "value": "350K+",
+          "label": "Target Reach"
+        }
+      ],
+      "tags": [
+        "Meta Ads",
+        "Hospitality CRM",
+        "WhatsApp Concierge",
+        "Event Lead Gen",
+        "GTM Tracking"
+      ]
+    },
+    {
+      "id": "2",
+      "sector": "interior",
+      "badge": "Luxury Interior & Architecture",
+      "client": "Luxury Architectural Design Studio",
+      "role": "Growth Marketing Consultant",
+      "title": "High-Ticket Interior Fitout & Renovation Lead Engine",
+      "summary": "Generating qualified homeowner and commercial fitout consultation leads for duplex apartments, villas, and corporate headquarters in Gulshan, Banani, and Uttara.",
+      "challenge": "Extremely high project value (BDT 2.5M – 15M) meant generic ads generated unqualified inquiries with high CPA.",
+      "solution": "Created cinematic 4K video walkthroughs and a multi-step project cost calculator funnel that pre-qualified budget and property location before routing to design principals.",
+      "results": [
+        "48 verified high-budget consultation bookings",
+        "BDT 14.5M in closed interior contracts within 90 days",
+        "8.4x return on marketing spend",
+        "Zero wasted calls due to automated budget pre-qualification"
+      ],
+      "metrics": [
+        {
+          "value": "8.4x",
+          "label": "Pipeline ROAS"
+        },
+        {
+          "value": "BDT 14.5M",
+          "label": "Pipeline Value"
+        },
+        {
+          "value": "48 Leads",
+          "label": "Qualified Consults"
+        }
+      ],
+      "tags": [
+        "3D Render Ads",
+        "High-Ticket Funnel",
+        "Multi-Step Form",
+        "Geo-Radius Targeting"
+      ]
+    },
+    {
+      "id": "3",
+      "sector": "club",
+      "badge": "Private Club & Elite Memberships",
+      "client": "Prestige City Club & VIP Lounge",
+      "role": "Membership Acquisition Strategist",
+      "title": "Exclusive Member Recruitment & VIP Brand Positioning",
+      "summary": "Confidential membership drive targeting C-suite executives, diplomats, and high-net-worth entrepreneurs.",
+      "challenge": "Maintaining prestige and exclusivity without appearing mass-market or diluting brand luxury.",
+      "solution": "Private invitation-only landing page with bespoke inquiry vetting, dark-luxury creative assets, and personalized concierge follow-up calls.",
+      "results": [
+        "140+ qualified membership applications received",
+        "88 new approved high-tier members enrolled",
+        "6.2x campaign ROAS on initiation fee revenue",
+        "+180% increase in social brand equity among target demographics"
+      ],
+      "metrics": [
+        {
+          "value": "6.2x",
+          "label": "Campaign ROAS"
+        },
+        {
+          "value": "88",
+          "label": "New VIP Members"
+        },
+        {
+          "value": "140+",
+          "label": "Qualified Inquiries"
+        }
+      ],
+      "tags": [
+        "VIP Positioning",
+        "Private Access Funnel",
+        "HNW Targeting",
+        "Concierge Sales"
+      ]
+    },
+    {
+      "id": "4",
+      "sector": "education",
+      "badge": "Education & Study Abroad",
+      "client": "Global Education Pathways Agency",
+      "role": "Performance Marketing Lead",
+      "title": "International Student Intake & IELTS Enrollment Funnel",
+      "summary": "Driving student applications for UK, Canada, Australia, and USA university admissions and IELTS test prep.",
+      "challenge": "Saturated market with rising Meta advertising costs and low attendance at free counseling sessions.",
+      "solution": "Launched interactive 'Country Eligibility Quiz' funnels, geo-targeted university campus ads, and automated WhatsApp reminder sequences for seminar bookings.",
+      "results": [
+        "420+ high-intent student leads generated in 45 days",
+        "110 confirmed 1-on-1 visa counseling sessions",
+        "-44% reduction in cost per lead compared to historical benchmarks",
+        "72 enrolled students for upcoming Fall intake"
+      ],
+      "metrics": [
+        {
+          "value": "-44%",
+          "label": "CPL Reduction"
+        },
+        {
+          "value": "420+",
+          "label": "Student Inquiries"
+        },
+        {
+          "value": "110",
+          "label": "Consultations"
+        }
+      ],
+      "tags": [
+        "Eligibility Quiz",
+        "WhatsApp Automation",
+        "Meta Lead Gen",
+        "Student Intake"
+      ]
+    },
+    {
+      "id": "5",
+      "sector": "recruiting",
+      "badge": "Recruiting & Staffing Agencies",
+      "client": "Apex Executive Search & Staffing",
+      "role": "B2B Growth Strategist",
+      "title": "Corporate Employer Acquisition & Executive Candidate Funnel",
+      "summary": "Acquiring enterprise hiring contracts and sourcing senior management talent in tech, finance, and engineering.",
+      "challenge": "Reaching busy HR directors and corporate CFOs who ignore cold outreach emails.",
+      "solution": "LinkedIn & Meta thought leadership campaigns showcasing proprietary candidate assessment models paired with instant candidate sourcing inquiry forms.",
+      "results": [
+        "65 enterprise corporate client inquiries",
+        "18 new retainer recruitment contracts signed",
+        "340+ pre-vetted senior candidate profiles added to talent pool",
+        "3.2x increase in qualified hiring pipeline value"
+      ],
+      "metrics": [
+        {
+          "value": "65",
+          "label": "B2B Clients"
+        },
+        {
+          "value": "18",
+          "label": "Retainers Signed"
+        },
+        {
+          "value": "340+",
+          "label": "Vetted Profiles"
+        }
+      ],
+      "tags": [
+        "B2B Lead Gen",
+        "LinkedIn Ads",
+        "Corporate Outreach",
+        "Executive Search"
+      ]
+    },
+    {
+      "id": "6",
+      "sector": "travel",
+      "badge": "Travel Agencies & Tours",
+      "client": "Horizon Luxury Travel & Tours",
+      "role": "Digital Campaign Director",
+      "title": "Outbound Holiday Package & Visa Booking Surge",
+      "summary": "High-converting holiday package marketing for Dubai, Thailand, Maldives, and Turkey holiday destinations.",
+      "challenge": "Seasonal demand spikes and high price sensitivity among prospective vacationers.",
+      "solution": "Dynamic itinerary carousel ads with transparent inclusions, limited-time early bird pricing, and 1-click WhatsApp booking quotes.",
+      "results": [
+        "210+ fully booked holiday packages within 60-day campaign",
+        "BDT 6.2M in gross holiday package booking value",
+        "9.1x ROAS on Meta and Google Search campaigns",
+        "55% repeat inquiry rate for upcoming travel seasons"
+      ],
+      "metrics": [
+        {
+          "value": "9.1x",
+          "label": "Campaign ROAS"
+        },
+        {
+          "value": "BDT 6.2M",
+          "label": "Total GMV"
+        },
+        {
+          "value": "210+",
+          "label": "Booked Travelers"
+        }
+      ],
+      "tags": [
+        "Dynamic Carousels",
+        "Google Search",
+        "WhatsApp Lead Gen",
+        "Tourism Funnel"
+      ]
+    },
+    {
+      "id": "7",
+      "sector": "ecommerce",
+      "badge": "D2C E-Commerce & Retail",
+      "client": "Aura Luxury Apparel & Lifestyle",
+      "role": "E-Commerce Growth Architect",
+      "title": "Full-Funnel ROAS Scaling & Cart Recovery Engine",
+      "summary": "Scaling monthly revenue for direct-to-consumer lifestyle brand using Meta Advantage+ and dynamic catalogs.",
+      "challenge": "High cart abandonment rates (78%) and plateaued revenue from broad targeting campaigns.",
+      "solution": "Restructured Meta ad account into Prospecting (Broad + Lookalikes) and Dynamic Product Retargeting (DPA); implemented instant SMS/WhatsApp cart recovery.",
+      "results": [
+        "1,450+ paid orders delivered in single month",
+        "12.4x peak ROAS on dynamic retargeting catalog ads",
+        "-32% reduction in blended customer acquisition cost (CAC)",
+        "+64% increase in customer lifetime value (LTV)"
+      ],
+      "metrics": [
+        {
+          "value": "12.4x",
+          "label": "Peak ROAS"
+        },
+        {
+          "value": "1,450+",
+          "label": "Paid Orders"
+        },
+        {
+          "value": "-32%",
+          "label": "CAC Reduction"
+        }
+      ],
+      "tags": [
+        "Meta Advantage+",
+        "Dynamic DPA",
+        "Cart Recovery",
+        "ROAS Scaling"
+      ]
+    }
+  ],
+  "roiConfig": {
+    "defaultBudget": 80000,
+    "defaultTicket": 120000,
+    "defaultCvr": 2.5,
+    "presets": [
+      {
+        "id": "interior",
+        "name": "🏛️ Luxury Interior",
+        "budget": 80000,
+        "ticket": 120000,
+        "cvr": 2.5,
+        "multiplier": 9.6
+      },
+      {
+        "id": "hospitality",
+        "name": "🏨 Hospitality & Travel",
+        "budget": 60000,
+        "ticket": 65000,
+        "cvr": 3.8,
+        "multiplier": 7.8
+      },
+      {
+        "id": "club",
+        "name": "💎 Club Membership",
+        "budget": 50000,
+        "ticket": 95000,
+        "cvr": 3,
+        "multiplier": 6.8
+      },
+      {
+        "id": "education",
+        "name": "🎓 Study Abroad Agency",
+        "budget": 45000,
+        "ticket": 40000,
+        "cvr": 4.5,
+        "multiplier": 7.2
+      },
+      {
+        "id": "recruiting",
+        "name": "👥 Recruiting Agency",
+        "budget": 55000,
+        "ticket": 75000,
+        "cvr": 2.8,
+        "multiplier": 6.8
+      },
+      {
+        "id": "ecommerce",
+        "name": "🛍️ D2C E-Commerce",
+        "budget": 75000,
+        "ticket": 4500,
+        "cvr": 6.5,
+        "multiplier": 12.4
+      }
+    ]
+  },
+  "experience": [
+    {
+      "company": "Hotel Sarina Dhaka",
+      "role": "Executive, Brand & Marketing",
+      "location": "Banani, Dhaka",
+      "period": "March 2024 – Present",
+      "current": true,
+      "badge": "5-Star Luxury Hospitality",
+      "highlights": [
+        "Directing end-to-end digital marketing, brand communication, and paid acquisition across Facebook, Instagram, LinkedIn, and Google Ads.",
+        "Delivered +42% lift in direct banquet and wedding bookings via hyper-targeted Meta Lead funnels, achieving 7.8x peak ROAS.",
+        "Managing creative production, high-end culinary photography, video reels, and promotional press releases.",
+        "Awarded 'Pillar of Trust' (Jan 2026) and 'Dedication Dynamo' (Dec 2025) for exceptional marketing execution."
+      ]
+    },
+    {
+      "company": "Renaissance Dhaka Gulshan Hotel (Marriott International)",
+      "role": "Associate, Marketing Communication",
+      "location": "Gulshan-1, Dhaka",
+      "period": "June 2023 – February 2024",
+      "current": false,
+      "badge": "Global Marriott Chain",
+      "highlights": [
+        "Spearheaded international brand standard compliance, social media calendars, and premium F&B positioning.",
+        "Drove weekend brunch and luxury dining campaigns, sustaining 85%+ seating capacity consistently.",
+        "Coordinated VIP media relations, influencer partnerships, and corporate banquet promotional collateral.",
+        "Monitored social listening, reputation management, and guest review sentiment analytics."
+      ]
+    },
+    {
+      "company": "ASAP Solutions Limited",
+      "role": "Senior Executive, Digital Marketing & Content",
+      "location": "Dhaka",
+      "period": "September 2022 – May 2023",
+      "current": false,
+      "badge": "B2B Technology & Software",
+      "highlights": [
+        "Led multi-channel paid acquisition, content strategy, and lead generation for enterprise SaaS and tech products.",
+        "Generated 180+ qualified enterprise B2B sales leads while slashing cost per lead (CPL) by 38%.",
+        "Won 'Employee of the Month' twice (Feb & Jun 2023) and 'Best Performer of the Month' (Mar 2023)."
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Google Ads Search Certification",
+      "issuer": "Coursera / Google",
+      "year": "2024",
+      "credentialUrl": "#"
+    },
+    {
+      "name": "Meta Pixel with Custom Events via GTM",
+      "issuer": "Coursera Project Network",
+      "year": "2024",
+      "credentialUrl": "#"
+    },
+    {
+      "name": "Inbound SEO & Content Strategy",
+      "issuer": "HubSpot Academy",
+      "year": "2023",
+      "credentialUrl": "#"
+    },
+    {
+      "name": "Facebook Marketing Masterclass",
+      "issuer": "Grameenphone Academy",
+      "year": "2023",
+      "credentialUrl": "#"
+    },
+    {
+      "name": "Advanced Excel for Business Analytics",
+      "issuer": "Simplilearn",
+      "year": "2023",
+      "credentialUrl": "#"
+    }
+  ],
+  "honors": [
+    {
+      "title": "Pillar of Trust Award",
+      "issuer": "Hotel Sarina Dhaka",
+      "date": "January 2026",
+      "description": "Recognized by executive leadership for outstanding brand stewardship, accountability, and dependable campaign execution."
+    },
+    {
+      "title": "Dedication Dynamo Award",
+      "issuer": "Hotel Sarina Dhaka",
+      "date": "December 2025",
+      "description": "Awarded for exceptional commitment, exceeding Q4 banquet revenue targets, and flawless festive campaign management."
+    },
+    {
+      "title": "Employee of the Month (2x)",
+      "issuer": "ASAP Solutions Limited",
+      "date": "February 2023 & June 2023",
+      "description": "Honored twice for outstanding digital campaign performance and leading highest-converting lead gen pipeline."
+    },
+    {
+      "title": "Best Performer of the Month",
+      "issuer": "ASAP Solutions Limited",
+      "date": "March 2023",
+      "description": "Top performer recognition for scaling B2B enterprise software pipeline."
+    }
+  ],
+  "education": {
+    "degree": "B.Sc. in Tourism & Hospitality Management (THM)",
+    "institution": "Daffodil International University (DIU)",
+    "period": "2019 – 2023",
+    "result": "CGPA 3.36 / 4.00",
+    "location": "Dhaka, Bangladesh"
+  },
+  "references": [
+    {
+      "name": "Syed Mehran Hussain",
+      "role": "Director of Marketing",
+      "organization": "Hotel Sarina Dhaka",
+      "email": "mehran.sarina@gmail.com",
+      "phone": "+880 1983 000 111"
+    },
+    {
+      "name": "Mahbub Parvez",
+      "role": "Associate Professor & Former Dept. Head (THM)",
+      "organization": "Daffodil International University",
+      "email": "mahbub.thm@diu.edu.bd",
+      "phone": "+880 1713 493 120"
+    }
+  ]
+}

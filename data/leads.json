@@ -1,0 +1,38 @@
+[
+  {
+    "id": "lead-1788613084132-623",
+    "createdAt": "2026-09-05T12:58:04.132Z",
+    "date": "2026-09-05T12:58:04.132Z",
+    "name": "Enterprise Client",
+    "email": "director@luxurybrand.com",
+    "phone": "+8801700000000",
+    "service": "Hospitality & Luxury Interior",
+    "sector": "Hospitality & Luxury Interior",
+    "budget": "Custom Budget",
+    "message": "Ready to scale ROAS.",
+    "status": "new"
+  },
+  {
+    "id": "lead-1788606629064-449",
+    "createdAt": "2026-09-05T11:10:29.064Z",
+    "name": "Tanvir Chowdhury",
+    "email": "tanvir@luxuryvillas.com",
+    "phone": "+880 1888 000 111",
+    "sector": "Luxury Interior & Architecture",
+    "budget": "BDT 150,000 / month",
+    "roiEstimate": null,
+    "message": "Need high-ticket homeowner lead generation strategy.",
+    "status": "new"
+  },
+  {
+    "id": "lead-sample-1",
+    "createdAt": "2026-09-04T10:30:00.000Z",
+    "name": "Sarah Jenkins",
+    "email": "s.jenkins@luxurydesign.com",
+    "phone": "+880 1711 000 000",
+    "sector": "Luxury Interior & Architecture",
+    "budget": "BDT 120,000 / month",
+    "message": "Interested in running a high-ticket Meta and Google Ads campaign for our architectural design firm in Gulshan. Need consultation on lead qualification.",
+    "status": "new"
+  }
+]
