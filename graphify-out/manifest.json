@@ -12,9 +12,9 @@
     "semantic_hash": ""
   },
   "app.js": {
-    "mtime": 1789929002.4643013,
-    "seen": 1789929041.9483902,
-    "ast_hash": "003efbf7ac627790d5c6f4eb784c7879",
+    "mtime": 1789929750.9004037,
+    "seen": 1789930117.8955867,
+    "ast_hash": "5f4933a30e708836d82b82d80fdf42c6",
     "semantic_hash": ""
   },
   "content.json": {
@@ -228,9 +228,9 @@
     "semantic_hash": ""
   },
   "case-studies.html": {
-    "mtime": 1789928916.7074609,
-    "seen": 1789929041.9483902,
-    "ast_hash": "d2efb44f3ebb59d15c7f82c7081f6eba",
+    "mtime": 1789929765.9125843,
+    "seen": 1789930117.8955867,
+    "ast_hash": "9df7662d2ef5c690fb66299a4f6fb650",
     "semantic_hash": ""
   },
   "case-study.html": {
@@ -252,9 +252,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1789896540.0493147,
-    "seen": 1789929041.9483902,
-    "ast_hash": "86827bfb49f7da8947ec4a301ccf9cd2",
+    "mtime": 1789929730.9142108,
+    "seen": 1789930117.8955867,
+    "ast_hash": "f0c3931da263c6c4aa7f40544dc0230c",
     "semantic_hash": ""
   },
   "llms.txt": {
@@ -282,21 +282,21 @@
     "semantic_hash": ""
   },
   "services/event-activation.html": {
-    "mtime": 1789929410.0076914,
-    "seen": 1789929452.8259723,
-    "ast_hash": "516229e6830a008e49ef949ca5417fac",
+    "mtime": 1789930009.2861829,
+    "seen": 1789930117.8955867,
+    "ast_hash": "96f34347c9044d9807ab576ca7f7f634",
     "semantic_hash": ""
   },
   "services/google-ads.html": {
-    "mtime": 1789929384.8305202,
-    "seen": 1789929452.8259723,
-    "ast_hash": "5abcb5639847b692dd53206947ef2273",
+    "mtime": 1789929975.8890483,
+    "seen": 1789930117.8955867,
+    "ast_hash": "cb1fc36a00e7dafb520486992e835cef",
     "semantic_hash": ""
   },
   "services/graphics-design.html": {
-    "mtime": 1789929303.329161,
-    "seen": 1789929452.8259723,
-    "ast_hash": "792d6a3284bff3db358ef457821b07ba",
+    "mtime": 1789929858.3611984,
+    "seen": 1789930117.8955867,
+    "ast_hash": "5350c367b9b04420b393fbb7e2b20e70",
     "semantic_hash": ""
   },
   "services/index.html": {
@@ -306,21 +306,21 @@
     "semantic_hash": ""
   },
   "services/public-relations.html": {
-    "mtime": 1789929359.381618,
-    "seen": 1789929452.8259723,
-    "ast_hash": "b305c8b5f5f19ceabbab42f9271a2fe3",
+    "mtime": 1789929944.8082066,
+    "seen": 1789930117.8955867,
+    "ast_hash": "a3ee1c55a13792032f518ffc09de2a07",
     "semantic_hash": ""
   },
   "services/social-media-marketing.html": {
-    "mtime": 1789929334.7246192,
-    "seen": 1789929452.8259723,
-    "ast_hash": "b737fca7accb32790acb5d7fa70caa47",
+    "mtime": 1789929912.3476813,
+    "seen": 1789930117.8955867,
+    "ast_hash": "d3e72cc710ebca081518568fc9359859",
     "semantic_hash": ""
   },
   "services/web-development.html": {
-    "mtime": 1789929244.40694,
-    "seen": 1789929452.8259723,
-    "ast_hash": "7220af5705f122d633934d6a705d3446",
+    "mtime": 1789929820.3220446,
+    "seen": 1789930117.8955867,
+    "ast_hash": "e7be6ab33acfb11649cf791ba6fb1522",
     "semantic_hash": ""
   },
   "assets/profile.jpg": {

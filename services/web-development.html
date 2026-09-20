@@ -192,308 +192,377 @@
         </p>
       </div>
 
-      <!-- Executive Connected Timeline Architecture (Scroll-Driven Editorial Timeline) -->
-      <div class="executive-timeline-container">
-        <!-- Continuous Glowing Spine Track -->
-        <div class="executive-timeline-spine"></div>
+      <!-- Executive Delivery Framework Cards (Scroll-Driven Auto Reveal) -->
+      <div class="space-y-6 max-w-4xl mx-auto">
 
         <!-- Phase 01 -->
-        <div class="timeline-step-wrapper active-phase-step reveal-on-scroll" data-phase-card="0" id="phase-01">
-          <div class="timeline-milestone-node">01</div>
-          
-          <div class="timeline-phase-card">
-            <div class="phase-watermark-numeral">01</div>
-
-            <!-- Card Header Meta -->
-            <div class="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-[#70805D]/15 relative z-10">
-              <span class="px-3 py-1 rounded-full bg-[#70805D]/10 text-xs font-black text-[#70805D] tracking-wider uppercase border border-[#70805D]/20">
-                Phase 01 • Immersion &amp; Audit
-              </span>
+        <div class="reveal-on-scroll bg-white rounded-3xl border border-[#70805D]/20 shadow-sm hover:border-[#70805D]/50 hover:shadow-md transition-all duration-300 overflow-hidden" id="phase-01">
+          <div class="p-6 sm:p-8">
+            <!-- Header Row -->
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-5 pb-5 border-b border-[#70805D]/15">
+              <div class="flex items-center gap-3.5">
+                <div class="w-12 h-12 rounded-2xl bg-[#1C2B1B] text-white flex items-center justify-center font-black text-base shadow-sm shrink-0">
+                  01
+                </div>
+                <div>
+                  <span class="text-[11px] font-black text-[#70805D] tracking-wider uppercase block">Phase 01 • Immersion &amp; Audit</span>
+                  <h3 class="text-xl sm:text-2xl font-extrabold text-[#1C2B1B] tracking-tight">
+                    Technical Discovery &amp; Forensic Architecture Audit
+                  </h3>
+                </div>
+              </div>
               <div class="flex items-center gap-2">
-                <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-regular fa-clock mr-1"></i> Week 01</span>
-                <span class="px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-bold text-emerald-800"><i class="fa-solid fa-shield-check mr-1"></i> 100% Alignment</span>
+                <span class="px-3 py-1 rounded-full bg-[#F1F3ED] text-xs font-bold text-[#4D614A] border border-[#70805D]/20">
+                  <i class="fa-regular fa-clock mr-1 text-[#70805D]"></i> Week 01
+                </span>
+                <span class="px-3 py-1 rounded-full bg-emerald-50 text-xs font-bold text-emerald-800 border border-emerald-200">
+                  <i class="fa-solid fa-check mr-1 text-emerald-600"></i> 100% Alignment
+                </span>
               </div>
             </div>
 
-            <!-- Title & Narrative -->
-            <h3 class="text-xl sm:text-2xl font-black text-[#1C2B1B] mb-3 tracking-tight relative z-10">
-              Technical Discovery &amp; Forensic Architecture Audit
-            </h3>
-            <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6 max-w-3xl relative z-10">
+            <!-- Narrative -->
+            <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
               In-depth technical and strategic immersion into existing codebases, database performance, API latency, competitor benchmarks, and security vulnerabilities before a single line of production code is written.
             </p>
 
-            <!-- 4 Bento Deliverable Micro-Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 relative z-10">
-              <div class="deliverable-micro-card">
-                <div class="deliverable-icon-box"><i class="fa-solid fa-network-wired"></i></div>
+            <!-- 4 Bento Deliverable Items -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div class="p-4 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/15 flex items-start gap-3 hover:bg-white hover:border-[#70805D]/35 transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-sm shrink-0 mt-0.5">
+                  <i class="fa-solid fa-network-wired"></i>
+                </div>
                 <div>
                   <div class="text-xs font-extrabold text-[#1C2B1B]">Infrastructure &amp; Stack Review</div>
-                  <div class="text-[11px] text-[#55738D] mt-0.5">Cloud architecture, Docker containers &amp; hosting audit</div>
+                  <div class="text-[11.5px] text-[#55738D] mt-0.5">Cloud architecture, Docker containers &amp; hosting audit</div>
                 </div>
               </div>
 
-              <div class="deliverable-micro-card">
-                <div class="deliverable-icon-box"><i class="fa-solid fa-gauge-high"></i></div>
+              <div class="p-4 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/15 flex items-start gap-3 hover:bg-white hover:border-[#70805D]/35 transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-sm shrink-0 mt-0.5">
+                  <i class="fa-solid fa-gauge-high"></i>
+                </div>
                 <div>
                   <div class="text-xs font-extrabold text-[#1C2B1B]">Performance &amp; Core Web Vitals</div>
-                  <div class="text-[11px] text-[#55738D] mt-0.5">PageSpeed, TBT, CLS &amp; mobile speed diagnostics</div>
+                  <div class="text-[11.5px] text-[#55738D] mt-0.5">PageSpeed, TBT, CLS &amp; mobile speed diagnostics</div>
                 </div>
               </div>
 
-              <div class="deliverable-micro-card">
-                <div class="deliverable-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="p-4 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/15 flex items-start gap-3 hover:bg-white hover:border-[#70805D]/35 transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-sm shrink-0 mt-0.5">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
                 <div>
                   <div class="text-xs font-extrabold text-[#1C2B1B]">Security &amp; Auth Diagnostics</div>
-                  <div class="text-[11px] text-[#55738D] mt-0.5">Vulnerability review, auth flows &amp; data privacy check</div>
+                  <div class="text-[11.5px] text-[#55738D] mt-0.5">Vulnerability review, auth flows &amp; data privacy check</div>
                 </div>
               </div>
 
-              <div class="deliverable-micro-card">
-                <div class="deliverable-icon-box"><i class="fa-solid fa-file-signature"></i></div>
+              <div class="p-4 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/15 flex items-start gap-3 hover:bg-white hover:border-[#70805D]/35 transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-sm shrink-0 mt-0.5">
+                  <i class="fa-solid fa-file-signature"></i>
+                </div>
                 <div>
                   <div class="text-xs font-extrabold text-[#1C2B1B]">Strategic Scope Specification</div>
-                  <div class="text-[11px] text-[#55738D] mt-0.5">API contracts, milestone roadmap &amp; delivery sign-off</div>
+                  <div class="text-[11.5px] text-[#55738D] mt-0.5">API contracts, milestone roadmap &amp; delivery sign-off</div>
                 </div>
               </div>
             </div>
-
-            <!-- Milestone Output Banner -->
-            <div class="milestone-output-banner relative z-10">
-              <div class="flex items-center gap-2 text-[#2A3B27] font-bold">
-                <span class="text-[#70805D] text-sm"><i class="fa-solid fa-bullseye"></i></span>
-                <span>Tangible Milestone Deliverable: Full-Stack Architecture Dossier &amp; Scope Contract</span>
-              </div>
-              <div class="text-[11px] text-[#55738D] font-semibold">
-                <i class="fa-solid fa-video mr-1 text-[#70805D]"></i> 2x 45-min Zoom Alignment Sessions
-              </div>
-            </div>
-
           </div>
+
+          <!-- Milestone Output Banner -->
+          <div class="bg-[#F1F3ED]/80 border-t border-[#70805D]/15 px-6 py-3.5 flex flex-wrap items-center justify-between gap-3 text-xs">
+            <div class="flex items-center gap-2 font-bold text-[#1C2B1B]">
+              <span class="w-5 h-5 rounded-full bg-[#70805D] text-white flex items-center justify-center text-[10px] shrink-0">
+                <i class="fa-solid fa-bullseye"></i>
+              </span>
+              <span>Tangible Deliverable: Full-Stack Architecture Dossier &amp; Scope Contract</span>
+            </div>
+            <div class="text-[11.5px] font-semibold text-[#55738D]">
+              <i class="fa-solid fa-video mr-1 text-[#70805D]"></i> 2x 45-min Zoom Alignment Sessions
+            </div>
+          </div>
+        </div>
+
+        <!-- Connector Line -->
+        <div class="flex justify-center py-1">
+          <div class="w-px h-6 bg-gradient-to-b from-[#70805D]/40 to-transparent"></div>
         </div>
 
         <!-- Phase 02 -->
-        <div class="timeline-step-wrapper reveal-on-scroll" data-phase-card="1" id="phase-02">
-          <div class="timeline-milestone-node">02</div>
-          
-          <div class="timeline-phase-card">
-            <div class="phase-watermark-numeral">02</div>
-
-            <!-- Card Header Meta -->
-            <div class="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-[#70805D]/15 relative z-10">
-              <span class="px-3 py-1 rounded-full bg-[#70805D]/10 text-xs font-black text-[#70805D] tracking-wider uppercase border border-[#70805D]/20">
-                Phase 02 • Architecture &amp; Prototypes
-              </span>
+        <div class="reveal-on-scroll bg-white rounded-3xl border border-[#70805D]/20 shadow-sm hover:border-[#70805D]/50 hover:shadow-md transition-all duration-300 overflow-hidden" id="phase-02">
+          <div class="p-6 sm:p-8">
+            <!-- Header Row -->
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-5 pb-5 border-b border-[#70805D]/15">
+              <div class="flex items-center gap-3.5">
+                <div class="w-12 h-12 rounded-2xl bg-[#1C2B1B] text-white flex items-center justify-center font-black text-base shadow-sm shrink-0">
+                  02
+                </div>
+                <div>
+                  <span class="text-[11px] font-black text-[#70805D] tracking-wider uppercase block">Phase 02 • Architecture &amp; Prototypes</span>
+                  <h3 class="text-xl sm:text-2xl font-extrabold text-[#1C2B1B] tracking-tight">
+                    Design Systems &amp; Clickable Jamstack Prototypes
+                  </h3>
+                </div>
+              </div>
               <div class="flex items-center gap-2">
-                <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-regular fa-clock mr-1"></i> Week 02</span>
-                <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]"><i class="fa-solid fa-layer-group mr-1 text-[#70805D]"></i> Blueprint Approval</span>
+                <span class="px-3 py-1 rounded-full bg-[#F1F3ED] text-xs font-bold text-[#4D614A] border border-[#70805D]/20">
+                  <i class="fa-regular fa-clock mr-1 text-[#70805D]"></i> Week 02
+                </span>
+                <span class="px-3 py-1 rounded-full bg-white text-xs font-bold text-[#2A3B27] border border-[#70805D]/25">
+                  <i class="fa-solid fa-layer-group mr-1 text-[#70805D]"></i> Blueprint Approval
+                </span>
               </div>
             </div>
 
-            <!-- Title & Narrative -->
-            <h3 class="text-xl sm:text-2xl font-black text-[#1C2B1B] mb-3 tracking-tight relative z-10">
-              Design Systems &amp; Clickable Jamstack Prototypes
-            </h3>
-            <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6 max-w-3xl relative z-10">
+            <!-- Narrative -->
+            <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
               Drafting the foundational blueprint: creative direction moodboards, interactive design tokens, database schemas, and clickable Figma wireframes before touching code.
             </p>
 
-            <!-- 4 Bento Deliverable Micro-Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 relative z-10">
-              <div class="deliverable-micro-card">
-                <div class="deliverable-icon-box"><i class="fa-solid fa-bezier-curve"></i></div>
+            <!-- 4 Bento Deliverable Items -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div class="p-4 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/15 flex items-start gap-3 hover:bg-white hover:border-[#70805D]/35 transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-sm shrink-0 mt-0.5">
+                  <i class="fa-solid fa-bezier-curve"></i>
+                </div>
                 <div>
                   <div class="text-xs font-extrabold text-[#1C2B1B]">Design Token System</div>
-                  <div class="text-[11px] text-[#55738D] mt-0.5">Scalable typography, color tokens &amp; accessible palettes</div>
+                  <div class="text-[11.5px] text-[#55738D] mt-0.5">Scalable typography, color tokens &amp; accessible palettes</div>
                 </div>
               </div>
 
-              <div class="deliverable-micro-card">
-                <div class="deliverable-icon-box"><i class="fa-solid fa-mobile-screen"></i></div>
+              <div class="p-4 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/15 flex items-start gap-3 hover:bg-white hover:border-[#70805D]/35 transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-sm shrink-0 mt-0.5">
+                  <i class="fa-solid fa-mobile-screen"></i>
+                </div>
                 <div>
                   <div class="text-xs font-extrabold text-[#1C2B1B]">Clickable Figma Prototypes</div>
-                  <div class="text-[11px] text-[#55738D] mt-0.5">Interactive mobile &amp; desktop user flows for feedback</div>
+                  <div class="text-[11.5px] text-[#55738D] mt-0.5">Interactive mobile &amp; desktop user flows for feedback</div>
                 </div>
               </div>
 
-              <div class="deliverable-micro-card">
-                <div class="deliverable-icon-box"><i class="fa-solid fa-database"></i></div>
+              <div class="p-4 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/15 flex items-start gap-3 hover:bg-white hover:border-[#70805D]/35 transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-sm shrink-0 mt-0.5">
+                  <i class="fa-solid fa-database"></i>
+                </div>
                 <div>
                   <div class="text-xs font-extrabold text-[#1C2B1B]">Database Schema Modeling</div>
-                  <div class="text-[11px] text-[#55738D] mt-0.5">Relational/NoSQL data schemas &amp; caching structures</div>
+                  <div class="text-[11.5px] text-[#55738D] mt-0.5">Relational/NoSQL data schemas &amp; caching structures</div>
                 </div>
               </div>
 
-              <div class="deliverable-micro-card">
-                <div class="deliverable-icon-box"><i class="fa-solid fa-code-branch"></i></div>
+              <div class="p-4 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/15 flex items-start gap-3 hover:bg-white hover:border-[#70805D]/35 transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-sm shrink-0 mt-0.5">
+                  <i class="fa-solid fa-code-branch"></i>
+                </div>
                 <div>
                   <div class="text-xs font-extrabold text-[#1C2B1B]">API Endpoint Contracts</div>
-                  <div class="text-[11px] text-[#55738D] mt-0.5">REST/GraphQL definitions &amp; external integration mapping</div>
+                  <div class="text-[11.5px] text-[#55738D] mt-0.5">REST/GraphQL definitions &amp; external integration mapping</div>
                 </div>
               </div>
             </div>
-
-            <!-- Milestone Output Banner -->
-            <div class="milestone-output-banner relative z-10">
-              <div class="flex items-center gap-2 text-[#2A3B27] font-bold">
-                <span class="text-[#70805D] text-sm"><i class="fa-solid fa-bullseye"></i></span>
-                <span>Tangible Milestone Deliverable: Approved Figma Clickable Master Prototype &amp; Schema Blueprint</span>
-              </div>
-              <div class="text-[11px] text-[#55738D] font-semibold">
-                <i class="fa-solid fa-link mr-1 text-[#70805D]"></i> Figma Link &amp; Architecture Deck
-              </div>
-            </div>
-
           </div>
+
+          <!-- Milestone Output Banner -->
+          <div class="bg-[#F1F3ED]/80 border-t border-[#70805D]/15 px-6 py-3.5 flex flex-wrap items-center justify-between gap-3 text-xs">
+            <div class="flex items-center gap-2 font-bold text-[#1C2B1B]">
+              <span class="w-5 h-5 rounded-full bg-[#70805D] text-white flex items-center justify-center text-[10px] shrink-0">
+                <i class="fa-solid fa-bullseye"></i>
+              </span>
+              <span>Tangible Deliverable: Approved Figma Clickable Master Prototype &amp; Schema Blueprint</span>
+            </div>
+            <div class="text-[11.5px] font-semibold text-[#55738D]">
+              <i class="fa-solid fa-link mr-1 text-[#70805D]"></i> Figma Link &amp; Architecture Deck
+            </div>
+          </div>
+        </div>
+
+        <!-- Connector Line -->
+        <div class="flex justify-center py-1">
+          <div class="w-px h-6 bg-gradient-to-b from-[#70805D]/40 to-transparent"></div>
         </div>
 
         <!-- Phase 03 -->
-        <div class="timeline-step-wrapper reveal-on-scroll" data-phase-card="2" id="phase-03">
-          <div class="timeline-milestone-node">03</div>
-          
-          <div class="timeline-phase-card">
-            <div class="phase-watermark-numeral">03</div>
-
-            <!-- Card Header Meta -->
-            <div class="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-[#70805D]/15 relative z-10">
-              <span class="px-3 py-1 rounded-full bg-[#70805D]/10 text-xs font-black text-[#70805D] tracking-wider uppercase border border-[#70805D]/20">
-                Phase 03 • Surgical Sprints
-              </span>
+        <div class="reveal-on-scroll bg-white rounded-3xl border border-[#70805D]/20 shadow-sm hover:border-[#70805D]/50 hover:shadow-md transition-all duration-300 overflow-hidden" id="phase-03">
+          <div class="p-6 sm:p-8">
+            <!-- Header Row -->
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-5 pb-5 border-b border-[#70805D]/15">
+              <div class="flex items-center gap-3.5">
+                <div class="w-12 h-12 rounded-2xl bg-[#1C2B1B] text-white flex items-center justify-center font-black text-base shadow-sm shrink-0">
+                  03
+                </div>
+                <div>
+                  <span class="text-[11px] font-black text-[#70805D] tracking-wider uppercase block">Phase 03 • Surgical Sprints</span>
+                  <h3 class="text-xl sm:text-2xl font-extrabold text-[#1C2B1B] tracking-tight">
+                    Agile Full-Stack Development &amp; Staging Deployments
+                  </h3>
+                </div>
+              </div>
               <div class="flex items-center gap-2">
-                <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-regular fa-clock mr-1"></i> Weeks 03–04</span>
-                <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]"><i class="fa-solid fa-code mr-1 text-[#70805D]"></i> Live Staging</span>
+                <span class="px-3 py-1 rounded-full bg-[#F1F3ED] text-xs font-bold text-[#4D614A] border border-[#70805D]/20">
+                  <i class="fa-regular fa-clock mr-1 text-[#70805D]"></i> Weeks 03–04
+                </span>
+                <span class="px-3 py-1 rounded-full bg-white text-xs font-bold text-[#2A3B27] border border-[#70805D]/25">
+                  <i class="fa-solid fa-code mr-1 text-[#70805D]"></i> Live Staging
+                </span>
               </div>
             </div>
 
-            <!-- Title & Narrative -->
-            <h3 class="text-xl sm:text-2xl font-black text-[#1C2B1B] mb-3 tracking-tight relative z-10">
-              Agile Full-Stack Development &amp; Staging Deployments
-            </h3>
-            <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6 max-w-3xl relative z-10">
+            <!-- Narrative -->
+            <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
               Rapid production iterations with weekly video walkthroughs, private staging deployments, sub-second latency tuning, cross-browser QA, and zero-defect security hardening.
             </p>
 
-            <!-- 4 Bento Deliverable Micro-Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 relative z-10">
-              <div class="deliverable-micro-card">
-                <div class="deliverable-icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+            <!-- 4 Bento Deliverable Items -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div class="p-4 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/15 flex items-start gap-3 hover:bg-white hover:border-[#70805D]/35 transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-sm shrink-0 mt-0.5">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
                 <div>
                   <div class="text-xs font-extrabold text-[#1C2B1B]">Full-Stack Production Build</div>
-                  <div class="text-[11px] text-[#55738D] mt-0.5">Component-driven architecture, fluid UI motion &amp; API hooks</div>
+                  <div class="text-[11.5px] text-[#55738D] mt-0.5">Component-driven architecture, fluid UI motion &amp; API hooks</div>
                 </div>
               </div>
 
-              <div class="deliverable-micro-card">
-                <div class="deliverable-icon-box"><i class="fa-solid fa-globe"></i></div>
+              <div class="p-4 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/15 flex items-start gap-3 hover:bg-white hover:border-[#70805D]/35 transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-sm shrink-0 mt-0.5">
+                  <i class="fa-solid fa-globe"></i>
+                </div>
                 <div>
                   <div class="text-xs font-extrabold text-[#1C2B1B]">Private Staging URL Access</div>
-                  <div class="text-[11px] text-[#55738D] mt-0.5">Live password-protected deployment URL for continuous review</div>
+                  <div class="text-[11.5px] text-[#55738D] mt-0.5">Live password-protected deployment URL for continuous review</div>
                 </div>
               </div>
 
-              <div class="deliverable-micro-card">
-                <div class="deliverable-icon-box"><i class="fa-solid fa-bolt-lightning"></i></div>
+              <div class="p-4 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/15 flex items-start gap-3 hover:bg-white hover:border-[#70805D]/35 transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-sm shrink-0 mt-0.5">
+                  <i class="fa-solid fa-bolt-lightning"></i>
+                </div>
                 <div>
                   <div class="text-xs font-extrabold text-[#1C2B1B]">Performance &amp; Web Vitals QA</div>
-                  <div class="text-[11px] text-[#55738D] mt-0.5">Asset optimization, Brotli compression &amp; 95+ score tuning</div>
+                  <div class="text-[11.5px] text-[#55738D] mt-0.5">Asset optimization, Brotli compression &amp; 95+ score tuning</div>
                 </div>
               </div>
 
-              <div class="deliverable-micro-card">
-                <div class="deliverable-icon-box"><i class="fa-solid fa-vial-circle-check"></i></div>
+              <div class="p-4 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/15 flex items-start gap-3 hover:bg-white hover:border-[#70805D]/35 transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-sm shrink-0 mt-0.5">
+                  <i class="fa-solid fa-vial-circle-check"></i>
+                </div>
                 <div>
                   <div class="text-xs font-extrabold text-[#1C2B1B]">Cross-Device Verification</div>
-                  <div class="text-[11px] text-[#55738D] mt-0.5">iOS Safari, Chrome, Android, Firefox QA &amp; accessibility checks</div>
+                  <div class="text-[11.5px] text-[#55738D] mt-0.5">iOS Safari, Chrome, Android, Firefox QA &amp; accessibility checks</div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Milestone Output Banner -->
-            <div class="milestone-output-banner relative z-10">
-              <div class="flex items-center gap-2 text-[#2A3B27] font-bold">
-                <span class="text-[#70805D] text-sm"><i class="fa-solid fa-bullseye"></i></span>
-                <span>Tangible Milestone Deliverable: Feature-Complete Working Web Platform on Live Staging URL</span>
-              </div>
-              <div class="text-[11px] text-[#55738D] font-semibold">
-                <i class="fa-solid fa-circle-play mr-1 text-[#70805D]"></i> Weekly Loom Video Demos
-              </div>
+          <!-- Milestone Output Banner -->
+          <div class="bg-[#F1F3ED]/80 border-t border-[#70805D]/15 px-6 py-3.5 flex flex-wrap items-center justify-between gap-3 text-xs">
+            <div class="flex items-center gap-2 font-bold text-[#1C2B1B]">
+              <span class="w-5 h-5 rounded-full bg-[#70805D] text-white flex items-center justify-center text-[10px] shrink-0">
+                <i class="fa-solid fa-bullseye"></i>
+              </span>
+              <span>Tangible Deliverable: Feature-Complete Working Web Platform on Live Staging URL</span>
             </div>
-
+            <div class="text-[11.5px] font-semibold text-[#55738D]">
+              <i class="fa-solid fa-circle-play mr-1 text-[#70805D]"></i> Weekly Loom Video Demos
+            </div>
           </div>
         </div>
 
-        <!-- Phase 04 -->
-        <div class="timeline-step-wrapper reveal-on-scroll" data-phase-card="3" id="phase-04">
-          <div class="timeline-milestone-node">04</div>
-          
-          <div class="timeline-phase-card">
-            <div class="phase-watermark-numeral">04</div>
+        <!-- Connector Line -->
+        <div class="flex justify-center py-1">
+          <div class="w-px h-6 bg-gradient-to-b from-[#70805D]/40 to-transparent"></div>
+        </div>
 
-            <!-- Card Header Meta -->
-            <div class="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-[#70805D]/15 relative z-10">
-              <span class="px-3 py-1 rounded-full bg-[#70805D]/10 text-xs font-black text-[#70805D] tracking-wider uppercase border border-[#70805D]/20">
-                Phase 04 • Launch &amp; Scale
-              </span>
+        <!-- Phase 04 -->
+        <div class="reveal-on-scroll bg-white rounded-3xl border border-[#70805D]/20 shadow-sm hover:border-[#70805D]/50 hover:shadow-md transition-all duration-300 overflow-hidden" id="phase-04">
+          <div class="p-6 sm:p-8">
+            <!-- Header Row -->
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-5 pb-5 border-b border-[#70805D]/15">
+              <div class="flex items-center gap-3.5">
+                <div class="w-12 h-12 rounded-2xl bg-[#1C2B1B] text-white flex items-center justify-center font-black text-base shadow-sm shrink-0">
+                  04
+                </div>
+                <div>
+                  <span class="text-[11px] font-black text-[#70805D] tracking-wider uppercase block">Phase 04 • Launch &amp; Scale</span>
+                  <h3 class="text-xl sm:text-2xl font-extrabold text-[#1C2B1B] tracking-tight">
+                    Production Go-Live, IP Transfer &amp; 30-Day Warranty
+                  </h3>
+                </div>
+              </div>
               <div class="flex items-center gap-2">
-                <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-rocket mr-1"></i> Production Cutover</span>
-                <span class="px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-bold text-emerald-800"><i class="fa-solid fa-award mr-1"></i> 30-Day SLA</span>
+                <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]">
+                  <i class="fa-solid fa-rocket mr-1"></i> Production Cutover
+                </span>
+                <span class="px-3 py-1 rounded-full bg-emerald-50 text-xs font-bold text-emerald-800 border border-emerald-200">
+                  <i class="fa-solid fa-award mr-1"></i> 30-Day SLA
+                </span>
               </div>
             </div>
 
-            <!-- Title & Narrative -->
-            <h3 class="text-xl sm:text-2xl font-black text-[#1C2B1B] mb-3 tracking-tight relative z-10">
-              Production Go-Live, IP Transfer &amp; 30-Day Warranty
-            </h3>
-            <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6 max-w-3xl relative z-10">
+            <!-- Narrative -->
+            <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
               Turnkey rollout, production DNS switchover, 100% intellectual property &amp; codebase transfer, and ongoing performance telemetry monitoring backed by a 30-day warranty.
             </p>
 
-            <!-- 4 Bento Deliverable Micro-Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 relative z-10">
-              <div class="deliverable-micro-card">
-                <div class="deliverable-icon-box"><i class="fa-solid fa-server"></i></div>
+            <!-- 4 Bento Deliverable Items -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div class="p-4 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/15 flex items-start gap-3 hover:bg-white hover:border-[#70805D]/35 transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-sm shrink-0 mt-0.5">
+                  <i class="fa-solid fa-server"></i>
+                </div>
                 <div>
                   <div class="text-xs font-extrabold text-[#1C2B1B]">Zero-Downtime DNS Cutover</div>
-                  <div class="text-[11px] text-[#55738D] mt-0.5">Production CDN edge deployment, SSL certificates &amp; redirects</div>
+                  <div class="text-[11.5px] text-[#55738D] mt-0.5">Production CDN edge deployment, SSL certificates &amp; redirects</div>
                 </div>
               </div>
 
-              <div class="deliverable-micro-card">
-                <div class="deliverable-icon-box"><i class="fa-solid fa-key"></i></div>
+              <div class="p-4 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/15 flex items-start gap-3 hover:bg-white hover:border-[#70805D]/35 transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-sm shrink-0 mt-0.5">
+                  <i class="fa-solid fa-key"></i>
+                </div>
                 <div>
                   <div class="text-xs font-extrabold text-[#1C2B1B]">100% Master Asset &amp; IP Handover</div>
-                  <div class="text-[11px] text-[#55738D] mt-0.5">Full Git repository ownership, credentials &amp; documentation</div>
+                  <div class="text-[11.5px] text-[#55738D] mt-0.5">Full Git repository ownership, credentials &amp; documentation</div>
                 </div>
               </div>
 
-              <div class="deliverable-micro-card">
-                <div class="deliverable-icon-box"><i class="fa-solid fa-chart-line"></i></div>
+              <div class="p-4 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/15 flex items-start gap-3 hover:bg-white hover:border-[#70805D]/35 transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-sm shrink-0 mt-0.5">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
                 <div>
                   <div class="text-xs font-extrabold text-[#1C2B1B]">Live Telemetry &amp; Error Tracking</div>
-                  <div class="text-[11px] text-[#55738D] mt-0.5">Sentry monitoring, GA4 events &amp; server health telemetry</div>
+                  <div class="text-[11.5px] text-[#55738D] mt-0.5">Sentry monitoring, GA4 events &amp; server health telemetry</div>
                 </div>
               </div>
 
-              <div class="deliverable-micro-card">
-                <div class="deliverable-icon-box"><i class="fa-solid fa-handshake-angle"></i></div>
+              <div class="p-4 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/15 flex items-start gap-3 hover:bg-white hover:border-[#70805D]/35 transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-sm shrink-0 mt-0.5">
+                  <i class="fa-solid fa-handshake-angle"></i>
+                </div>
                 <div>
                   <div class="text-xs font-extrabold text-[#1C2B1B]">30-Day Post-Launch SLA Warranty</div>
-                  <div class="text-[11px] text-[#55738D] mt-0.5">Priority bugfix turnaround, post-launch tuning &amp; training</div>
+                  <div class="text-[11.5px] text-[#55738D] mt-0.5">Priority bugfix turnaround, post-launch tuning &amp; training</div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Milestone Output Banner -->
-            <div class="milestone-output-banner relative z-10">
-              <div class="flex items-center gap-2 text-[#2A3B27] font-bold">
-                <span class="text-[#70805D] text-sm"><i class="fa-solid fa-bullseye"></i></span>
-                <span>Tangible Milestone Deliverable: Live Production Platform, 100% IP Handover &amp; Signed SLA</span>
-              </div>
-              <div class="text-[11px] text-[#55738D] font-semibold">
-                <i class="fa-solid fa-check-double mr-1 text-[#70805D]"></i> Turnkey Production Launch
-              </div>
+          <!-- Milestone Output Banner -->
+          <div class="bg-[#F1F3ED]/80 border-t border-[#70805D]/15 px-6 py-3.5 flex flex-wrap items-center justify-between gap-3 text-xs">
+            <div class="flex items-center gap-2 font-bold text-[#1C2B1B]">
+              <span class="w-5 h-5 rounded-full bg-[#70805D] text-white flex items-center justify-center text-[10px] shrink-0">
+                <i class="fa-solid fa-bullseye"></i>
+              </span>
+              <span>Tangible Deliverable: Live Production Platform, 100% IP Handover &amp; Signed SLA</span>
             </div>
-
+            <div class="text-[11.5px] font-semibold text-[#55738D]">
+              <i class="fa-solid fa-check-double mr-1 text-[#70805D]"></i> Turnkey Production Launch
+            </div>
           </div>
         </div>
 

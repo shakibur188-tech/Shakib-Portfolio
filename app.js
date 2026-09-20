@@ -760,20 +760,20 @@ function renderHomeCaseStudies(caseStudies) {
     `).join('');
 
     return `
-      <div class="spotlight-card rounded-3xl bg-white border border-[#70805D]/20 overflow-hidden flex flex-col justify-between shadow-sm hover:border-[#70805D] transition-all reveal-on-scroll">
+      <div onclick="window.location.href='/case-study.html?id=${encodeURIComponent(cs.id)}'" class="spotlight-card rounded-3xl bg-white border border-[#70805D]/20 overflow-hidden flex flex-col justify-between shadow-sm hover:border-[#70805D] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group reveal-on-scroll">
         <div class="p-6 sm:p-7">
           <div class="flex items-center justify-between gap-3 mb-3">
             <span class="px-2.5 py-0.5 rounded-full bg-[#70805D]/10 text-[10px] font-bold text-[#70805D] uppercase tracking-wider border border-[#70805D]/20">${escapeHtml(cs.category || 'UX Case Study')}</span>
             <span class="text-xs font-bold text-[#55738D]">${escapeHtml(cs.year || '2026')}</span>
           </div>
-          <h3 class="text-lg sm:text-xl font-bold text-[#1C2B1B] mb-2 leading-snug">${escapeHtml(cs.title)}</h3>
+          <h3 class="text-lg sm:text-xl font-bold text-[#1C2B1B] group-hover:text-[#70805D] transition-colors mb-2 leading-snug">${escapeHtml(cs.title)}</h3>
           <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-4">${escapeHtml(cs.tagline || cs.challenge || '')}</p>
           <div class="flex flex-wrap gap-2 mb-2">${metricsHtml}</div>
         </div>
         <div class="p-4 sm:px-7 sm:pb-6 pt-0 border-t border-gray-100 flex items-center justify-between">
-          <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="btn-aesthetic-primary text-xs py-2 px-4 justify-center">
+          <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="btn-aesthetic-primary text-xs py-2 px-4 justify-center pointer-events-none">
             <span>Read UX Case Study</span>
-            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
           </a>
           <span class="text-xs font-bold text-[#55738D]">${escapeHtml(cs.client || '')}</span>
         </div>

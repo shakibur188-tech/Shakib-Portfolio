@@ -626,7 +626,7 @@
         `).join('');
 
         return `
-          <div class="spotlight-card p-0 overflow-hidden flex flex-col justify-between group bg-white border border-[#70805D]/25 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500">
+          <div onclick="if (!event.target.closest('button, a')) window.location.href='/case-study.html?id=${encodeURIComponent(cs.id)}'" class="spotlight-card p-0 overflow-hidden flex flex-col justify-between group bg-white border border-[#70805D]/25 rounded-3xl shadow-sm hover:shadow-2xl hover:border-[#70805D] hover:-translate-y-1.5 transition-all duration-500 cursor-pointer">
             <!-- Cover Visual with Badges -->
             <div class="relative h-60 sm:h-72 w-full overflow-hidden bg-[#F1F3ED]">
               <img src="${escapeHtml(cs.coverImage || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80')}" alt="${escapeHtml(cs.title)}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" loading="lazy">
@@ -655,7 +655,7 @@
             <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
               <div>
                 <h3 class="text-xl sm:text-2xl font-black text-[#1C2B1B] group-hover:text-[#70805D] transition-colors tracking-tight leading-snug mb-2">
-                  ${escapeHtml(cs.title)}
+                  <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="hover:text-[#70805D] text-inherit no-underline">${escapeHtml(cs.title)}</a>
                 </h3>
                 <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-4">
                   ${escapeHtml(cs.tagline || cs.challenge || '')}
@@ -676,16 +676,16 @@
               <div class="pt-4 border-t border-[#70805D]/15 flex items-center justify-between gap-3">
                 <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="btn-aesthetic-primary text-xs py-2 px-4 justify-center">
                   <span>Deep Dive Case Study</span>
-                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                  <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
                 </a>
 
                 <div class="flex items-center gap-2">
-                  <button type="button" onclick="openCaseStudyModal('${escapeHtml(cs.id)}')" class="text-xs font-bold text-[#55738D] hover:text-[#2A3B27] px-2 py-1 transition-colors">
+                  <button type="button" onclick="event.stopPropagation(); openCaseStudyModal('${escapeHtml(cs.id)}')" class="text-xs font-bold text-[#55738D] hover:text-[#2A3B27] px-2 py-1 transition-colors">
                     <span>Preview</span>
                   </button>
                   ${cs.liveUrl ? `
-                    <a href="${escapeHtml(cs.liveUrl)}" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-[#55738D] hover:text-[#2A3B27] flex items-center gap-1 transition-colors">
-                      <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                    <a href="${escapeHtml(cs.liveUrl)}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="text-xs font-bold text-[#55738D] hover:text-[#2A3B27] flex items-center gap-1 transition-colors" title="View Live Website">
+                      <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                     </a>
                   ` : ''}
                 </div>
