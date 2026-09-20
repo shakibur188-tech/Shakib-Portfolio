@@ -1,17 +1,17 @@
 # Graph Report - shakibur-portfolio-live  (2026-09-21)
 
 ## Corpus Check
-- 38 files · ~135,057 words
+- 38 files · ~132,436 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 11 file(s) not represented in the graph (top: (none) 2, .css 2, .bat 2)
 
 ## Summary
-- 283 nodes · 451 edges · 20 communities (15 shown, 5 thin omitted)
+- 284 nodes · 453 edges · 20 communities (15 shown, 5 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 31 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0d5002e5`
+- Built from commit: `653bb9fa`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -84,7 +84,7 @@ Nodes (18): addFieldToBuilder(), closeEmbedModal(), closeTemplateModal(), export
 
 ### Community 6 - "service-page.js"
 Cohesion: 0.14
-Nodes (5): initAmbientCanvas(), initInteractiveWorkflow(), onScrollSpy(), updateActiveUI(), initScrollProgressBar()
+Nodes (6): initAmbientCanvas(), initInteractiveWorkflow(), onScrollSpy(), scrollToPhase(), updateActiveUI(), initScrollProgressBar()
 
 ### Community 7 - "package.json"
 Cohesion: 0.18

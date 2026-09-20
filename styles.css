@@ -1585,69 +1585,188 @@ a.spotlight-card {
   text-overflow: ellipsis;
 }
 
-.workflow-card-interactive {
-  background: #FFFFFF;
-  border: 1px solid rgba(112, 128, 93, 0.18);
-  border-radius: 24px;
-  padding: 32px;
-  display: flex !important;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 10px 30px -10px rgba(42, 59, 39, 0.08);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+/* ==========================================================================
+   EXECUTIVE WORKFLOW TIMELINE ARCHITECTURE (Scroll-Driven Editorial Timeline)
+   ========================================================================== */
+.executive-timeline-container {
   position: relative;
-  margin-bottom: 28px;
-  scroll-margin-top: 170px;
+  padding-left: 64px;
+  margin-top: 36px;
 }
 
-.workflow-card-interactive:last-child {
+@media (max-width: 640px) {
+  .executive-timeline-container {
+    padding-left: 40px;
+    margin-top: 24px;
+  }
+}
+
+/* Continuous Glowing Spine Track */
+.executive-timeline-spine {
+  position: absolute;
+  top: 32px;
+  bottom: 32px;
+  left: 27px;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(112, 128, 93, 0.4) 0%, rgba(85, 115, 141, 0.25) 50%, rgba(112, 128, 93, 0.12) 100%);
+}
+
+@media (max-width: 640px) {
+  .executive-timeline-spine {
+    left: 15px;
+  }
+}
+
+/* Milestone Node */
+.timeline-milestone-node {
+  position: absolute;
+  left: -64px;
+  top: 28px;
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  background: #FFFFFF;
+  border: 2px solid rgba(112, 128, 93, 0.25);
+  box-shadow: 0 6px 20px rgba(42, 59, 39, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 13px;
+  color: var(--palette-olive);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 10;
+}
+
+@media (max-width: 640px) {
+  .timeline-milestone-node {
+    left: -40px;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    font-size: 10px;
+    top: 22px;
+  }
+}
+
+.timeline-step-wrapper.active-phase-step .timeline-milestone-node {
+  background: var(--palette-olive);
+  color: #FFFFFF;
+  border-color: var(--palette-olive);
+  box-shadow: 0 0 0 6px rgba(112, 128, 93, 0.2), 0 8px 24px rgba(112, 128, 93, 0.35);
+  transform: scale(1.06);
+}
+
+/* Timeline Step Wrapper */
+.timeline-step-wrapper {
+  position: relative;
+  margin-bottom: 44px;
+}
+
+.timeline-step-wrapper:last-child {
   margin-bottom: 0;
 }
 
-.grid .workflow-card-interactive {
-  margin-bottom: 0 !important;
+/* Timeline Phase Card */
+.timeline-phase-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(112, 128, 93, 0.18);
+  border-radius: 28px;
+  padding: 38px 36px;
+  box-shadow: 0 10px 32px -8px rgba(42, 59, 39, 0.06);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.workflow-card-interactive:hover,
-.workflow-card-interactive.active-scrolled-phase {
+@media (max-width: 640px) {
+  .timeline-phase-card {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+}
+
+.timeline-step-wrapper.active-phase-step .timeline-phase-card,
+.timeline-phase-card:hover {
   border-color: var(--palette-olive);
-  box-shadow: 0 20px 45px -10px rgba(112, 128, 93, 0.22);
+  box-shadow: 0 20px 50px -12px rgba(112, 128, 93, 0.22);
   transform: translateY(-3px);
 }
 
-.workflow-card-interactive.active-scrolled-phase .phase-number-badge {
-  background: var(--palette-olive) !important;
-  color: #FFFFFF !important;
-  border-color: var(--palette-olive) !important;
-  box-shadow: 0 4px 12px rgba(112, 128, 93, 0.35);
+/* Watermark Numeral in Background */
+.phase-watermark-numeral {
+  position: absolute;
+  top: -16px;
+  right: 20px;
+  font-size: 120px;
+  font-weight: 900;
+  line-height: 1;
+  color: #1C2B1B;
+  opacity: 0.035;
+  pointer-events: none;
+  user-select: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.05em;
+  transition: opacity 0.3s ease, color 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .workflow-stepper-sticky-wrap {
-    top: 82px;
-    padding: 8px 10px;
-  }
-  .workflow-stepper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 4px;
-  }
-  .workflow-step-btn {
-    padding: 8px 4px;
-    text-align: center;
-    border-radius: 10px;
-  }
-  .workflow-step-btn .ws-num {
-    font-size: 9px;
-  }
-  .workflow-step-btn .ws-title {
-    display: none;
-  }
-  .workflow-card-interactive {
-    padding: 22px 18px;
-    margin-bottom: 20px;
-    scroll-margin-top: 140px;
-  }
+.timeline-step-wrapper.active-phase-step .phase-watermark-numeral {
+  opacity: 0.075;
+  color: var(--palette-olive);
+}
+
+/* Deliverable Micro-Cards */
+.deliverable-micro-card {
+  background: #F8F9F6;
+  border: 1px solid rgba(112, 128, 93, 0.12);
+  border-radius: 16px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: all 0.25s ease;
+}
+
+.deliverable-micro-card:hover {
+  background: #FFFFFF;
+  border-color: rgba(112, 128, 93, 0.35);
+  box-shadow: 0 6px 18px rgba(42, 59, 39, 0.06);
+  transform: translateY(-2px);
+}
+
+.deliverable-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: rgba(112, 128, 93, 0.12);
+  color: var(--palette-olive);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  transition: all 0.25s ease;
+}
+
+.deliverable-micro-card:hover .deliverable-icon-box {
+  background: var(--palette-olive);
+  color: #FFFFFF;
+}
+
+/* Tangible Milestone Output Banner */
+.milestone-output-banner {
+  margin-top: 24px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(112, 128, 93, 0.08) 0%, rgba(85, 115, 141, 0.06) 100%);
+  border: 1px solid rgba(112, 128, 93, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12px;
 }
 
 

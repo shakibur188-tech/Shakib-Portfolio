@@ -192,123 +192,308 @@
         </p>
       </div>
 
-      <!-- Sticky Auto-Advancing Stepper Tracker -->
-      <div class="workflow-stepper-sticky-wrap">
-        <div class="workflow-stepper">
-          <button type="button" class="workflow-step-btn active" data-phase="0">
-            <div class="ws-num">Phase 01</div>
-            <div class="ws-title">Discovery &amp; Audit</div>
-          </button>
-          <button type="button" class="workflow-step-btn" data-phase="1">
-            <div class="ws-num">Phase 02</div>
-            <div class="ws-title">Architecture</div>
-          </button>
-          <button type="button" class="workflow-step-btn" data-phase="2">
-            <div class="ws-num">Phase 03</div>
-            <div class="ws-title">Sprint Execution</div>
-          </button>
-          <button type="button" class="workflow-step-btn" data-phase="3">
-            <div class="ws-num">Phase 04</div>
-            <div class="ws-title">Launch &amp; Scaling</div>
-          </button>
-        </div>
-        <div class="w-full bg-[#70805D]/15 h-1.5 rounded-full overflow-hidden mt-3 shadow-inner">
-          <div id="workflowProgressBar" class="h-full bg-[#70805D] transition-all duration-500 rounded-full" style="width: 25%;"></div>
-        </div>
-      </div>
-
-      <!-- Sequential 4-Phase Delivery Cards (Auto-Scrolled Timeline) -->
-      <div class="workflow-cards-timeline space-y-7 relative">
+      <!-- Executive Connected Timeline Architecture (Scroll-Driven Editorial Timeline) -->
+      <div class="executive-timeline-container">
+        <!-- Continuous Glowing Spine Track -->
+        <div class="executive-timeline-spine"></div>
 
         <!-- Phase 01 -->
-        <div class="workflow-card-interactive active reveal-on-scroll" data-phase-card="0" id="phase-01">
-          <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
-            <div>
-              <span class="phase-number-badge text-xs font-bold text-[#70805D] tracking-wider uppercase px-2.5 py-1 rounded-md bg-[#70805D]/10 border border-[#70805D]/20 transition-all duration-300">Phase 01 of 04</span>
-              <h3 class="text-xl font-extrabold text-[#1C2B1B] mt-2">Discovery &amp; Comprehensive Audit</h3>
+        <div class="timeline-step-wrapper active-phase-step reveal-on-scroll" data-phase-card="0" id="phase-01">
+          <div class="timeline-milestone-node">01</div>
+          
+          <div class="timeline-phase-card">
+            <div class="phase-watermark-numeral">01</div>
+
+            <!-- Card Header Meta -->
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-[#70805D]/15 relative z-10">
+              <span class="px-3 py-1 rounded-full bg-[#70805D]/10 text-xs font-black text-[#70805D] tracking-wider uppercase border border-[#70805D]/20">
+                Phase 01 • Immersion &amp; Audit
+              </span>
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-regular fa-clock mr-1"></i> Week 01</span>
+                <span class="px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-bold text-emerald-800"><i class="fa-solid fa-shield-check mr-1"></i> 100% Brand Clarity</span>
+              </div>
             </div>
-            <div class="flex items-center gap-2">
-              <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-clock mr-1"></i> Week 01</span>
-              <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">100% Alignment</span>
+
+            <!-- Title & Narrative -->
+            <h3 class="text-xl sm:text-2xl font-black text-[#1C2B1B] mb-3 tracking-tight relative z-10">
+              Visual Identity Immersion &amp; Competitor Whitespace Audit
+            </h3>
+            <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6 max-w-3xl relative z-10">
+              Deep-dive creative immersion into brand archetype, competitor visual audits, target demographic aesthetics, packaging tactile considerations, and color psychology before vectorizing a single path.
+            </p>
+
+            <!-- 4 Bento Deliverable Micro-Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 relative z-10">
+              <div class="deliverable-micro-card">
+                <div class="deliverable-icon-box"><i class="fa-solid fa-compass-drafting"></i></div>
+                <div>
+                  <div class="text-xs font-extrabold text-[#1C2B1B]">Brand Archetype &amp; Positioning</div>
+                  <div class="text-[11px] text-[#55738D] mt-0.5">Core values, persona aesthetic profiles &amp; tone of voice</div>
+                </div>
+              </div>
+
+              <div class="deliverable-micro-card">
+                <div class="deliverable-icon-box"><i class="fa-solid fa-binoculars"></i></div>
+                <div>
+                  <div class="text-xs font-extrabold text-[#1C2B1B]">Competitor Visual Audit</div>
+                  <div class="text-[11px] text-[#55738D] mt-0.5">Deconstructing category clichés &amp; uncovering whitespace</div>
+                </div>
+              </div>
+
+              <div class="deliverable-micro-card">
+                <div class="deliverable-icon-box"><i class="fa-solid fa-box-open"></i></div>
+                <div>
+                  <div class="text-xs font-extrabold text-[#1C2B1B]">Packaging &amp; Tactile Feasibility</div>
+                  <div class="text-[11px] text-[#55738D] mt-0.5">Substrate selection, foil stamping &amp; Pantone constraints</div>
+                </div>
+              </div>
+
+              <div class="deliverable-micro-card">
+                <div class="deliverable-icon-box"><i class="fa-solid fa-palette"></i></div>
+                <div>
+                  <div class="text-xs font-extrabold text-[#1C2B1B]">Creative Direction Moodboards</div>
+                  <div class="text-[11px] text-[#55738D] mt-0.5">Curated typographic, photographic &amp; texture moodboards</div>
+                </div>
+              </div>
             </div>
-          </div>
-          <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
-            In-depth technical and strategic immersion into current brand perception, competitor whitespace, analytics telemetry, and commercial bottlenecks before any design or code begins.
-          </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27] mb-8">
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Stakeholder &amp; Founder Discovery Sessions</span></div>
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Competitor &amp; Category Benchmark Audit</span></div>
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Technical Architecture &amp; Data Review</span></div>
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Strategic Scope &amp; Deliverables Sign-Off</span></div>
+
+            <!-- Milestone Output Banner -->
+            <div class="milestone-output-banner relative z-10">
+              <div class="flex items-center gap-2 text-[#2A3B27] font-bold">
+                <span class="text-[#70805D] text-sm"><i class="fa-solid fa-bullseye"></i></span>
+                <span>Tangible Milestone Deliverable: Approved Creative Direction Deck &amp; Whitespace Audit</span>
+              </div>
+              <div class="text-[11px] text-[#55738D] font-semibold">
+                <i class="fa-solid fa-video mr-1 text-[#70805D]"></i> 2x 45-min Zoom Strategy Sessions
+              </div>
+            </div>
+
           </div>
         </div>
 
         <!-- Phase 02 -->
-        <div class="workflow-card-interactive reveal-on-scroll" data-phase-card="1" id="phase-02">
-          <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
-            <div>
-              <span class="phase-number-badge text-xs font-bold text-[#70805D] tracking-wider uppercase px-2.5 py-1 rounded-md bg-[#70805D]/10 border border-[#70805D]/20 transition-all duration-300">Phase 02 of 04</span>
-              <h3 class="text-xl font-extrabold text-[#1C2B1B] mt-2">Strategic Architecture &amp; Prototypes</h3>
+        <div class="timeline-step-wrapper reveal-on-scroll" data-phase-card="1" id="phase-02">
+          <div class="timeline-milestone-node">02</div>
+          
+          <div class="timeline-phase-card">
+            <div class="phase-watermark-numeral">02</div>
+
+            <!-- Card Header Meta -->
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-[#70805D]/15 relative z-10">
+              <span class="px-3 py-1 rounded-full bg-[#70805D]/10 text-xs font-black text-[#70805D] tracking-wider uppercase border border-[#70805D]/20">
+                Phase 02 • Core Systems
+              </span>
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-regular fa-clock mr-1"></i> Week 02</span>
+                <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]"><i class="fa-solid fa-bezier-curve mr-1 text-[#70805D]"></i> Blueprint Approval</span>
+              </div>
             </div>
-            <div class="flex items-center gap-2">
-              <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-clock mr-1"></i> Week 02</span>
-              <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">Blueprint Approval</span>
+
+            <!-- Title & Narrative -->
+            <h3 class="text-xl sm:text-2xl font-black text-[#1C2B1B] mb-3 tracking-tight relative z-10">
+              Vector Identity Systems &amp; Typographic Architecture
+            </h3>
+            <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6 max-w-3xl relative z-10">
+              Mathematical logo geometry, responsive logomark lockups, custom typographic hierarchy, and precision chromatic palettes engineered for both physical luxury and high-DPI screens.
+            </p>
+
+            <!-- 4 Bento Deliverable Micro-Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 relative z-10">
+              <div class="deliverable-micro-card">
+                <div class="deliverable-icon-box"><i class="fa-solid fa-shapes"></i></div>
+                <div>
+                  <div class="text-xs font-extrabold text-[#1C2B1B]">Mathematical Vector Geometry</div>
+                  <div class="text-[11px] text-[#55738D] mt-0.5">Grid-aligned primary, secondary &amp; icon badge lockups</div>
+                </div>
+              </div>
+
+              <div class="deliverable-micro-card">
+                <div class="deliverable-icon-box"><i class="fa-solid fa-font"></i></div>
+                <div>
+                  <div class="text-xs font-extrabold text-[#1C2B1B]">Typographic Architecture</div>
+                  <div class="text-[11px] text-[#55738D] mt-0.5">Primary display typefaces &amp; editorial body pairings</div>
+                </div>
+              </div>
+
+              <div class="deliverable-micro-card">
+                <div class="deliverable-icon-box"><i class="fa-solid fa-swatchbook"></i></div>
+                <div>
+                  <div class="text-xs font-extrabold text-[#1C2B1B]">Chromatic Palette &amp; Contrast</div>
+                  <div class="text-[11px] text-[#55738D] mt-0.5">WCAG digital hex codes, CMYK &amp; Pantone spot formulas</div>
+                </div>
+              </div>
+
+              <div class="deliverable-micro-card">
+                <div class="deliverable-icon-box"><i class="fa-solid fa-icons"></i></div>
+                <div>
+                  <div class="text-xs font-extrabold text-[#1C2B1B]">Iconography &amp; Graphical Motifs</div>
+                  <div class="text-[11px] text-[#55738D] mt-0.5">Custom vector icon sets, accent patterns &amp; brand textures</div>
+                </div>
+              </div>
             </div>
-          </div>
-          <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
-            Drafting the foundational blueprint: creative direction decks, typographic hierarchies, database schemas, interactive wireframes, and milestone sign-offs.
-          </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27]">
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Creative Direction &amp; Moodboard Alignment</span></div>
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Technical Specifications &amp; API Contracts</span></div>
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Interactive Low-Fidelity Clickable Wireframes</span></div>
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Pre-Production Technical Sprint Plan</span></div>
+
+            <!-- Milestone Output Banner -->
+            <div class="milestone-output-banner relative z-10">
+              <div class="flex items-center gap-2 text-[#2A3B27] font-bold">
+                <span class="text-[#70805D] text-sm"><i class="fa-solid fa-bullseye"></i></span>
+                <span>Tangible Milestone Deliverable: Approved Master Logo System &amp; Chromatic Typographic Spec</span>
+              </div>
+              <div class="text-[11px] text-[#55738D] font-semibold">
+                <i class="fa-solid fa-file-pdf mr-1 text-[#70805D]"></i> Vector Design System File
+              </div>
+            </div>
+
           </div>
         </div>
 
         <!-- Phase 03 -->
-        <div class="workflow-card-interactive reveal-on-scroll" data-phase-card="2" id="phase-03">
-          <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
-            <div>
-              <span class="phase-number-badge text-xs font-bold text-[#70805D] tracking-wider uppercase px-2.5 py-1 rounded-md bg-[#70805D]/10 border border-[#70805D]/20 transition-all duration-300">Phase 03 of 04</span>
-              <h3 class="text-xl font-extrabold text-[#1C2B1B] mt-2">Surgical Sprint Execution</h3>
+        <div class="timeline-step-wrapper reveal-on-scroll" data-phase-card="2" id="phase-03">
+          <div class="timeline-milestone-node">03</div>
+          
+          <div class="timeline-phase-card">
+            <div class="phase-watermark-numeral">03</div>
+
+            <!-- Card Header Meta -->
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-[#70805D]/15 relative z-10">
+              <span class="px-3 py-1 rounded-full bg-[#70805D]/10 text-xs font-black text-[#70805D] tracking-wider uppercase border border-[#70805D]/20">
+                Phase 03 • Tangible Prototypes
+              </span>
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-regular fa-clock mr-1"></i> Weeks 03–04</span>
+                <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]"><i class="fa-solid fa-cube mr-1 text-[#70805D]"></i> 3D Visualization</span>
+              </div>
             </div>
-            <div class="flex items-center gap-2">
-              <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-clock mr-1"></i> Weeks 03–04</span>
-              <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">Live Staging</span>
+
+            <!-- Title & Narrative -->
+            <h3 class="text-xl sm:text-2xl font-black text-[#1C2B1B] mb-3 tracking-tight relative z-10">
+              Packaging Production, Editorial Decks &amp; 3D Renders
+            </h3>
+            <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6 max-w-3xl relative z-10">
+              Translating brand systems into high-impact tactile assets: luxury packaging die-lines, executive pitch decks, marketing collateral, and photorealistic 3D product visualizations.
+            </p>
+
+            <!-- 4 Bento Deliverable Micro-Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 relative z-10">
+              <div class="deliverable-micro-card">
+                <div class="deliverable-icon-box"><i class="fa-solid fa-box-archive"></i></div>
+                <div>
+                  <div class="text-xs font-extrabold text-[#1C2B1B]">Packaging Die-Lines &amp; Specs</div>
+                  <div class="text-[11px] text-[#55738D] mt-0.5">Pre-press vector die-lines with bleed, fold &amp; foil layers</div>
+                </div>
+              </div>
+
+              <div class="deliverable-micro-card">
+                <div class="deliverable-icon-box"><i class="fa-solid fa-cubes"></i></div>
+                <div>
+                  <div class="text-xs font-extrabold text-[#1C2B1B]">Photorealistic 3D Renders</div>
+                  <div class="text-[11px] text-[#55738D] mt-0.5">Studio-lit 4K packaging renders for pre-launch marketing</div>
+                </div>
+              </div>
+
+              <div class="deliverable-micro-card">
+                <div class="deliverable-icon-box"><i class="fa-solid fa-file-powerpoint"></i></div>
+                <div>
+                  <div class="text-xs font-extrabold text-[#1C2B1B]">Executive Pitch &amp; Sales Decks</div>
+                  <div class="text-[11px] text-[#55738D] mt-0.5">Modular Keynote/PowerPoint decks with typography &amp; charts</div>
+                </div>
+              </div>
+
+              <div class="deliverable-micro-card">
+                <div class="deliverable-icon-box"><i class="fa-solid fa-newspaper"></i></div>
+                <div>
+                  <div class="text-xs font-extrabold text-[#1C2B1B]">Collateral &amp; Print Marketing</div>
+                  <div class="text-[11px] text-[#55738D] mt-0.5">Business stationery, editorial brochures &amp; event banners</div>
+                </div>
+              </div>
             </div>
-          </div>
-          <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
-            Rapid production iterations with weekly video walkthroughs, staging deployments, cross-browser QA, and collaborative client feedback cycles.
-          </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27]">
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Weekly Agile Milestone Video Reviews</span></div>
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Live Staging URL Deployment Access</span></div>
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Pixel-Perfect Visual &amp; Performance Tuning</span></div>
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Zero-Defect Security &amp; Regression Testing</span></div>
+
+            <!-- Milestone Output Banner -->
+            <div class="milestone-output-banner relative z-10">
+              <div class="flex items-center gap-2 text-[#2A3B27] font-bold">
+                <span class="text-[#70805D] text-sm"><i class="fa-solid fa-bullseye"></i></span>
+                <span>Tangible Milestone Deliverable: Factory-Ready Pre-Press Files &amp; 4K 3D Product Renders</span>
+              </div>
+              <div class="text-[11px] text-[#55738D] font-semibold">
+                <i class="fa-solid fa-circle-play mr-1 text-[#70805D]"></i> Weekly Creative Loom Reviews
+              </div>
+            </div>
+
           </div>
         </div>
 
         <!-- Phase 04 -->
-        <div class="workflow-card-interactive reveal-on-scroll" data-phase-card="3" id="phase-04">
-          <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
-            <div>
-              <span class="phase-number-badge text-xs font-bold text-[#70805D] tracking-wider uppercase px-2.5 py-1 rounded-md bg-[#70805D]/10 border border-[#70805D]/20 transition-all duration-300">Phase 04 of 04</span>
-              <h3 class="text-xl font-extrabold text-[#1C2B1B] mt-2">Launch, Governance &amp; Scale</h3>
+        <div class="timeline-step-wrapper reveal-on-scroll" data-phase-card="3" id="phase-04">
+          <div class="timeline-milestone-node">04</div>
+          
+          <div class="timeline-phase-card">
+            <div class="phase-watermark-numeral">04</div>
+
+            <!-- Card Header Meta -->
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-[#70805D]/15 relative z-10">
+              <span class="px-3 py-1 rounded-full bg-[#70805D]/10 text-xs font-black text-[#70805D] tracking-wider uppercase border border-[#70805D]/20">
+                Phase 04 • Governance &amp; Vault
+              </span>
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-book-bookmark mr-1"></i> Brand Bible</span>
+                <span class="px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-bold text-emerald-800"><i class="fa-solid fa-certificate mr-1"></i> 100% IP Transfer</span>
+              </div>
             </div>
-            <div class="flex items-center gap-2">
-              <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-rocket mr-1"></i> Deployment</span>
-              <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">30-Day SLA</span>
+
+            <!-- Title & Narrative -->
+            <h3 class="text-xl sm:text-2xl font-black text-[#1C2B1B] mb-3 tracking-tight relative z-10">
+              Brand Guidelines Bible &amp; Master Vector Asset Vault
+            </h3>
+            <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6 max-w-3xl relative z-10">
+              Comprehensive 50+ page brand guidelines bible, organized cloud asset vault in all commercial vector/raster formats, and full intellectual property copyright transfer.
+            </p>
+
+            <!-- 4 Bento Deliverable Micro-Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 relative z-10">
+              <div class="deliverable-micro-card">
+                <div class="deliverable-icon-box"><i class="fa-solid fa-book"></i></div>
+                <div>
+                  <div class="text-xs font-extrabold text-[#1C2B1B]">50+ Page Brand Guidelines</div>
+                  <div class="text-[11px] text-[#55738D] mt-0.5">Strict rules on clearspace, minimum sizing, misuse &amp; colors</div>
+                </div>
+              </div>
+
+              <div class="deliverable-micro-card">
+                <div class="deliverable-icon-box"><i class="fa-solid fa-cloud-arrow-down"></i></div>
+                <div>
+                  <div class="text-xs font-extrabold text-[#1C2B1B]">Master Cloud Asset Vault</div>
+                  <div class="text-[11px] text-[#55738D] mt-0.5">Categorized folders with SVG, AI, EPS, PDF, WebP &amp; PNG</div>
+                </div>
+              </div>
+
+              <div class="deliverable-micro-card">
+                <div class="deliverable-icon-box"><i class="fa-solid fa-file-invoice"></i></div>
+                <div>
+                  <div class="text-xs font-extrabold text-[#1C2B1B]">Font Licensing &amp; Inventory</div>
+                  <div class="text-[11px] text-[#55738D] mt-0.5">Commercial font licenses, stock assets &amp; typography tokens</div>
+                </div>
+              </div>
+
+              <div class="deliverable-micro-card">
+                <div class="deliverable-icon-box"><i class="fa-solid fa-handshake"></i></div>
+                <div>
+                  <div class="text-xs font-extrabold text-[#1C2B1B]">100% Copyright &amp; IP Handover</div>
+                  <div class="text-[11px] text-[#55738D] mt-0.5">Exclusive legal handover of all marks, assets &amp; raw files</div>
+                </div>
+              </div>
             </div>
-          </div>
-          <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
-            Turnkey rollout, production DNS switch, 100% intellectual property transfer, and ongoing performance telemetry monitoring with SLA support.
-          </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27]">
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>100% IP &amp; Master Asset Handover</span></div>
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Production Go-Live &amp; DNS Cutover</span></div>
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>30-Day Post-Launch SLA Warranty</span></div>
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Quarterly Performance Retainer Review</span></div>
+
+            <!-- Milestone Output Banner -->
+            <div class="milestone-output-banner relative z-10">
+              <div class="flex items-center gap-2 text-[#2A3B27] font-bold">
+                <span class="text-[#70805D] text-sm"><i class="fa-solid fa-bullseye"></i></span>
+                <span>Tangible Milestone Deliverable: 50-Page Brand Bible PDF, Master Cloud Vault &amp; Signed IP Transfer</span>
+              </div>
+              <div class="text-[11px] text-[#55738D] font-semibold">
+                <i class="fa-solid fa-infinity mr-1 text-[#70805D]"></i> Lifetime Asset Cloud Access
+              </div>
+            </div>
+
           </div>
         </div>
 

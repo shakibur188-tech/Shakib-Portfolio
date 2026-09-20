@@ -1633,7 +1633,7 @@
       "file_type": "code",
       "norm_label": "initbentocards()",
       "source_file": "services/service-page.js",
-      "source_location": "L369"
+      "source_location": "L426"
     },
     {
       "id": "services_service_page_initflipcards",
@@ -1669,7 +1669,19 @@
       "file_type": "code",
       "norm_label": "onscrollspy()",
       "source_file": "services/service-page.js",
-      "source_location": "L339"
+      "source_location": "L391"
+    },
+    {
+      "id": "services_service_page_initinteractiveworkflow_scrolltophase",
+      "label": "scrollToPhase()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "service-page.js",
+      "file_type": "code",
+      "norm_label": "scrolltophase()",
+      "source_file": "services/service-page.js",
+      "source_location": "L361"
     },
     {
       "id": "services_service_page_initinteractiveworkflow_updateactiveui",
@@ -1681,7 +1693,7 @@
       "file_type": "code",
       "norm_label": "updateactiveui()",
       "source_file": "services/service-page.js",
-      "source_location": "L323"
+      "source_location": "L330"
     },
     {
       "id": "services_service_page_initmobilenav",
@@ -1705,7 +1717,7 @@
       "file_type": "code",
       "norm_label": "initperspectiverow()",
       "source_file": "services/service-page.js",
-      "source_location": "L390"
+      "source_location": "L447"
     },
     {
       "id": "services_service_page_initscrollprogressbar",
@@ -3259,7 +3271,6 @@
     {
       "id": "ref_child_process",
       "label": "ref_child_process",
-      "_origin": "semantic",
       "community": 1,
       "community_name": "server.js",
       "external": true,
@@ -3271,7 +3282,6 @@
     {
       "id": "ref_crypto",
       "label": "ref_crypto",
-      "_origin": "semantic",
       "community": 1,
       "community_name": "server.js",
       "external": true,
@@ -3283,7 +3293,6 @@
     {
       "id": "ref_https",
       "label": "ref_https",
-      "_origin": "semantic",
       "community": 1,
       "community_name": "server.js",
       "external": true,
@@ -3295,7 +3304,6 @@
     {
       "id": "ref_url",
       "label": "ref_url",
-      "_origin": "semantic",
       "community": 1,
       "community_name": "server.js",
       "external": true,
@@ -3307,7 +3315,6 @@
     {
       "id": "ref_http",
       "label": "ref_http",
-      "_origin": "semantic",
       "community": 13,
       "community_name": "test_cms.js",
       "external": true,
@@ -3319,7 +3326,6 @@
     {
       "id": "ref_fs",
       "label": "ref_fs",
-      "_origin": "semantic",
       "community": 4,
       "community_name": "update_navbar_and_about.js",
       "external": true,
@@ -3331,7 +3337,6 @@
     {
       "id": "ref_path",
       "label": "ref_path",
-      "_origin": "semantic",
       "community": 4,
       "community_name": "update_navbar_and_about.js",
       "external": true,
@@ -5235,7 +5240,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "services/service-page.js",
-      "source_location": "L358",
+      "source_location": "L413",
+      "weight": 1.0
+    },
+    {
+      "source": "services_service_page_initinteractiveworkflow_scrolltophase",
+      "target": "services_service_page_initinteractiveworkflow_updateactiveui",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "services/service-page.js",
+      "source_location": "L364",
       "weight": 1.0
     },
     {
@@ -5595,7 +5612,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "services/service-page.js",
-      "source_location": "L369",
+      "source_location": "L426",
       "weight": 1.0
     },
     {
@@ -5607,7 +5624,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "services/service-page.js",
-      "source_location": "L390",
+      "source_location": "L447",
       "weight": 1.0
     },
     {
@@ -5631,7 +5648,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "services/service-page.js",
-      "source_location": "L323",
+      "source_location": "L330",
+      "weight": 1.0
+    },
+    {
+      "source": "services_service_page_initinteractiveworkflow",
+      "target": "services_service_page_initinteractiveworkflow_scrolltophase",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "services/service-page.js",
+      "source_location": "L361",
       "weight": 1.0
     },
     {
@@ -8524,7 +8553,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "services/service-page.js",
-      "source_location": "L362",
+      "source_location": "L417",
       "weight": 1.0
     },
     {
@@ -8541,5 +8570,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0d5002e5fb9e7013b7e76bb0c8c14bcbd370b053"
+  "built_at_commit": "653bb9fa678134c27a57433762c37f21146a8d94"
 }

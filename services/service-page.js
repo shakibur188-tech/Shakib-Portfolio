@@ -309,99 +309,44 @@ function initMobileNav() {
 }
 
 /* ==========================================================================
-   6. Interactive Production Workflow Engine (Auto-Scrolling 4-Phase Timeline)
+   6. Interactive Executive Timeline Engine (Pure Scroll-Driven Milestone Tracker)
    ========================================================================== */
 function initInteractiveWorkflow() {
-  const stepBtns = document.querySelectorAll('.workflow-step-btn');
+  const stepWrappers = document.querySelectorAll('.timeline-step-wrapper');
   const phaseCards = document.querySelectorAll('.workflow-card-interactive[data-phase-card]');
-  const progressBar = document.getElementById('workflowProgressBar');
+  const activeElements = stepWrappers.length ? stepWrappers : phaseCards;
 
-  if (!phaseCards.length) return;
-
-  // Ensure all cards are visible in the layout
-  phaseCards.forEach(card => {
-    card.style.display = 'flex';
-  });
+  if (!activeElements.length) return;
 
   let activeIndex = 0;
-  let isProgrammaticScrolling = false;
-  let scrollTimer = null;
 
   function updateActiveUI(index) {
-    if (index < 0 || index >= phaseCards.length) return;
+    if (index < 0 || index >= activeElements.length) return;
     activeIndex = index;
 
-    // Update Stepper Navigation Buttons
-    stepBtns.forEach((btn, i) => {
+    activeElements.forEach((el, i) => {
       if (i === index) {
-        btn.classList.add('active');
-        btn.setAttribute('aria-selected', 'true');
+        el.classList.add('active-phase-step');
+        el.classList.add('active-scrolled-phase');
       } else {
-        btn.classList.remove('active');
-        btn.setAttribute('aria-selected', 'false');
+        el.classList.remove('active-phase-step');
+        el.classList.remove('active-scrolled-phase');
       }
     });
-
-    // Update Phase Content Cards Focus Styling
-    phaseCards.forEach((card, i) => {
-      if (i === index) {
-        card.classList.add('active-scrolled-phase');
-      } else {
-        card.classList.remove('active-scrolled-phase');
-      }
-    });
-
-    // Update Progress Bar
-    if (progressBar) {
-      const percentage = ((index + 1) / phaseCards.length) * 100;
-      progressBar.style.width = `${percentage}%`;
-    }
   }
 
-  function scrollToPhase(index) {
-    if (index < 0 || index >= phaseCards.length) return;
-    isProgrammaticScrolling = true;
-    updateActiveUI(index);
-
-    const targetCard = phaseCards[index];
-    const stickyWrap = document.querySelector('.workflow-stepper-sticky-wrap');
-    const headerOffset = (stickyWrap ? stickyWrap.offsetHeight : 50) + 95;
-    const targetY = targetCard.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-
-    window.scrollTo({
-      top: Math.max(0, targetY),
-      behavior: 'smooth'
-    });
-
-    clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(() => {
-      isProgrammaticScrolling = false;
-    }, 800);
-  }
-
-  // Click on Stepper tabs -> smooth auto-scroll to that phase
-  stepBtns.forEach((btn, index) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      scrollToPhase(index);
-    });
-  });
-
-  // Auto Scroll-Spy: As user naturally scrolls down the screen, automatically highlight Phase 1 -> 4
+  // Pure Scroll-Spy: As user naturally scrolls down the screen, automatically activate the current phase
   function onScrollSpy() {
-    if (isProgrammaticScrolling) return;
-
     const focalPoint = window.innerHeight * 0.40;
     let closestIndex = 0;
     let minDistance = Infinity;
 
-    phaseCards.forEach((card, idx) => {
-      const rect = card.getBoundingClientRect();
-      // Calculate distance between focal point and card's top third
-      const cardFocal = rect.top + Math.min(rect.height * 0.35, 120);
-      const dist = Math.abs(cardFocal - focalPoint);
+    activeElements.forEach((el, idx) => {
+      const rect = el.getBoundingClientRect();
+      const elFocal = rect.top + Math.min(rect.height * 0.35, 120);
+      const dist = Math.abs(elFocal - focalPoint);
 
-      if (rect.top <= window.innerHeight * 0.70 && rect.bottom >= window.innerHeight * 0.15) {
+      if (rect.top <= window.innerHeight * 0.75 && rect.bottom >= window.innerHeight * 0.15) {
         if (dist < minDistance) {
           minDistance = dist;
           closestIndex = idx;
@@ -415,8 +360,6 @@ function initInteractiveWorkflow() {
   }
 
   window.addEventListener('scroll', onScrollSpy, { passive: true });
-
-  // Initial highlight
   updateActiveUI(0);
 }
 
