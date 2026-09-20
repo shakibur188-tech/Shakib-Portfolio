@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Studies &amp; Recent Works | Md. Shakibur Rahaman</title>
+  <meta name="description" content="Explore in-depth case studies and recent works across Web Development, Graphics Design, Social Media Marketing, PR, Google Ads, and Event Activations directed by Md. Shakibur Rahaman.">
+  <link rel="canonical" href="http://localhost:5500/case-studies.html">
+  
+  <!-- Plus Jakarta Sans Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN & DopelyColors Palette Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#70805D',
+              forest: '#2A3B27',
+              slate: '#55738D',
+              mist: '#96A7B6',
+              stone: '#CBC8C4'
+            },
+            canvas: '#F8F9F6'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Unified Aesthetic Stylesheet -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-[#F8F9F6] text-[#1C2B1B] font-sans antialiased selection:bg-[#70805D] selection:text-white relative overflow-x-hidden">
+
+  <!-- 0. Top Scroll Progress Bar -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- 1. Ambient Background Canvas, Animated Mesh & Vignette -->
+  <div class="ambient-mesh-glow"></div>
+  <canvas id="ambientCanvas"></canvas>
+  <div class="ambient-vignette"></div>
+
+  <!-- 2. FIXED NAVBAR WITH 6 SERVICES HOVER DROPDOWN -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#F8F9F6]/90 backdrop-blur-2xl border-b border-[#70805D]/15 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo / Monogram -->
+      <a href="/" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-xl bg-[#70805D] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#70805D]/25">
+          SR
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-[#1C2B1B] tracking-tight text-base sm:text-lg group-hover:text-[#70805D] transition-colors">Md. Shakibur Rahaman</span>
+          <span class="text-[10.5px] text-[#70805D] font-bold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
+        </div>
+      </a>
+
+      <!-- Centered Floating Pill Navigation Menu with Services Dropdown -->
+      <nav class="hidden lg:flex items-center gap-6 px-6 py-2.5 rounded-full bg-white/90 border border-[#70805D]/20 text-xs font-semibold text-[#4D614A] backdrop-blur-md shadow-sm">
+        <a href="/" class="desktop-nav-link hover:text-[#70805D] transition-colors">Home</a>
+        <a href="/#about" class="desktop-nav-link hover:text-[#70805D] transition-colors">About</a>
+        
+        <!-- SERVICES MENU ITEM WITH HOVER SUB-MENU -->
+        <div class="services-menu-item relative group">
+          <a href="/services.html" class="desktop-nav-link hover:text-[#70805D] transition-colors flex items-center gap-1.5 py-1">
+            <span>Services</span>
+            <i class="fa-solid fa-chevron-down text-[9px] text-[#70805D] transition-transform duration-200 group-hover:rotate-180"></i>
+          </a>
+          
+          <!-- 6 Services Hover Sub-Menu Panel -->
+          <div class="services-dropdown">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-[#70805D]/15">
+              <span class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-layer-group text-[#70805D]"></i>
+                <span>Core Capabilities (6 Disciplines)</span>
+              </span>
+              <a href="/services.html" class="text-[11px] font-bold text-[#70805D] hover:underline flex items-center gap-1">
+                <span>View All Services Directory</span>
+                <i class="fa-solid fa-arrow-right text-[9px]"></i>
+              </a>
+            </div>
+
+            <div class="services-dropdown-grid grid grid-cols-2 sm:grid-cols-3 gap-2">
+              <a href="/services/graphics-design.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-bezier-curve"></i></div>
+                <div>
+                  <div class="service-sub-title ">01 Graphics & Visual Identity</div>
+                  <div class="service-sub-desc">Packaging, UI/UX & decks</div>
+                </div>
+              </a>
+              <a href="/services/web-development.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-code"></i></div>
+                <div>
+                  <div class="service-sub-title ">02 Web design & Development</div>
+                  <div class="service-sub-desc">Jamstack portals & apps</div>
+                </div>
+              </a>
+              <a href="/services/social-media-marketing.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-hashtag"></i></div>
+                <div>
+                  <div class="service-sub-title ">03 Social Media marketing</div>
+                  <div class="service-sub-desc">Viral reels & Meta ads</div>
+                </div>
+              </a>
+              <a href="/services/public-relations.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-newspaper"></i></div>
+                <div>
+                  <div class="service-sub-title ">04 Public relation & Media outreach</div>
+                  <div class="service-sub-desc">Tier-1 press & media PR</div>
+                </div>
+              </a>
+              <a href="/services/google-ads.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-chart-line"></i></div>
+                <div>
+                  <div class="service-sub-title ">05 Google ads & Intent Scaling</div>
+                  <div class="service-sub-desc">Performance Max funnels</div>
+                </div>
+              </a>
+              <a href="/services/event-activation.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-cubes"></i></div>
+                <div>
+                  <div class="service-sub-title ">06 Event activation & Exhibition</div>
+                  <div class="service-sub-desc">Expos & 3D spatial builds</div>
+                </div>
+              </a>
+            </div>
+
+            <div class="mt-3 pt-2.5 border-t border-[#70805D]/15 flex items-center justify-between text-[11px] text-[#55738D]">
+              <span>Integrated strategic leadership across all 6 disciplines</span>
+              <a href="/services.html" class="font-bold text-[#70805D] hover:text-[#2A3B27] flex items-center gap-1">
+                <span>View Full Services Directory</span>
+                <i class="fa-solid fa-chevron-right text-[8px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/#projects" class="desktop-nav-link hover:text-[#70805D] transition-colors">Projects</a>
+        <a href="/case-studies.html" class="desktop-nav-link text-[#70805D] font-bold">Case Studies</a>
+        <a href="/#testimonials" class="desktop-nav-link hover:text-[#70805D] transition-colors">Reviews</a>
+        <a href="#inquiry" class="desktop-nav-link hover:text-[#70805D] transition-colors">Consultation</a>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center gap-3">
+        <a href="#inquiry" class="nav-cta-btn btn-aesthetic-primary text-xs hidden md:inline-flex items-center gap-2">
+          <span>Book Consultation</span>
+          <i class="fa-solid fa-arrow-down text-[10px]"></i>
+        </a>
+        <button id="mobileMenuToggle" aria-label="Toggle Navigation" class="lg:hidden w-10 h-10 rounded-xl bg-white border border-[#70805D]/25 flex items-center justify-center text-[#2A3B27] shadow-sm">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 border-b border-[#70805D]/15 px-6 py-5 space-y-3 shadow-xl">
+      <a href="/" class="mobile-link block text-sm font-semibold text-[#4D614A] hover:text-[#70805D]">Home</a>
+      <a href="/#about" class="mobile-link block text-sm font-semibold text-[#4D614A] hover:text-[#70805D]">About</a>
+      <a href="/services.html" class="mobile-link block text-sm font-semibold text-[#4D614A] hover:text-[#70805D]">Services Directory</a>
+      <a href="/#projects" class="mobile-link block text-sm font-semibold text-[#4D614A] hover:text-[#70805D]">15 Web Projects</a>
+      <a href="/case-studies.html" class="mobile-link block text-sm font-bold text-[#70805D]">Case Studies &amp; Works</a>
+      <a href="#inquiry" class="mobile-link block text-sm font-bold text-[#70805D]">Book Consultation</a>
+    </div>
+  </header>
+
+  <!-- 1. HERO DIRECTORY HEADER -->
+  <section class="relative pt-36 pb-16 md:pt-44 md:pb-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      
+      <div class="section-tag justify-center mb-6">
+        <span class="pulse-dot-olive"></span>
+        <span>PORTFOLIO CASE STUDIES &amp; RECENT WORKS</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-[#1C2B1B] tracking-tight leading-[1.08] mb-6 reveal-on-scroll">
+        Strategic Impact, Commercial Growth &amp; <br>
+        <span class="olive-gradient-text">Proven Blueprints</span>
+      </h1>
+
+      <p class="text-sm sm:text-base text-[#4D614A] max-w-3xl mx-auto leading-relaxed mb-10 reveal-on-scroll">
+        In-depth retrospectives into technical architecture, visual systems, and measurable commercial results engineered for market-leading enterprises.
+      </p>
+
+      <!-- Key Strategic Stats Strip -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto text-center reveal-on-scroll mb-12">
+        <div class="spotlight-card p-4 bg-white border border-[#70805D]/20 rounded-2xl">
+          <div class="text-2xl sm:text-3xl font-black text-[#2A3B27]" id="statTotalCases">7+</div>
+          <div class="text-[11px] text-[#55738D] uppercase font-extrabold mt-1">Detailed Case Studies</div>
+        </div>
+        <div class="spotlight-card p-4 bg-white border border-[#70805D]/20 rounded-2xl">
+          <div class="text-2xl sm:text-3xl font-black text-[#2A3B27]">15+</div>
+          <div class="text-[11px] text-[#55738D] uppercase font-extrabold mt-1">Live Web Portals</div>
+        </div>
+        <div class="spotlight-card p-4 bg-white border border-[#70805D]/20 rounded-2xl">
+          <div class="text-2xl sm:text-3xl font-black text-[#70805D]">4.8x</div>
+          <div class="text-[11px] text-[#55738D] uppercase font-extrabold mt-1">Avg. Measured ROAS</div>
+        </div>
+        <div class="spotlight-card p-4 bg-white border border-[#70805D]/20 rounded-2xl">
+          <div class="text-2xl sm:text-3xl font-black text-[#2A3B27]">100%</div>
+          <div class="text-[11px] text-[#55738D] uppercase font-extrabold mt-1">IP Asset Ownership</div>
+        </div>
+      </div>
+
+      <!-- Interactive Filter Bar & Live Search -->
+      <div class="max-w-5xl mx-auto bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl border border-[#70805D]/20 shadow-sm space-y-4">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div class="relative w-full sm:w-80">
+            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-xs text-[#55738D]"></i>
+            <input type="text" id="csSearchInput" placeholder="Search by client, title, keyword..." class="w-full pl-9 pr-4 py-2 rounded-xl bg-[#F8F9F6] border border-[#70805D]/20 text-xs text-[#1C2B1B] focus:outline-none focus:border-[#70805D]">
+          </div>
+          <div class="text-xs text-[#55738D] font-bold">
+            Showing <span id="csVisibleCount" class="text-[#2A3B27] font-black">7</span> case studies
+          </div>
+        </div>
+
+        <!-- Filter Pill Buttons -->
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+          <button class="cs-filter-btn active" data-category="All">All Works</button>
+          <button class="cs-filter-btn" data-category="Graphics & Visual Identity">Graphics &amp; ID</button>
+          <button class="cs-filter-btn" data-category="Web design & Development">Web Dev</button>
+          <button class="cs-filter-btn" data-category="Social Media marketing">Social Media</button>
+          <button class="cs-filter-btn" data-category="Public relation & Media outreach">PR &amp; Media</button>
+          <button class="cs-filter-btn" data-category="Google ads & Intent Scaling">Google Ads</button>
+          <button class="cs-filter-btn" data-category="Event activation & Exhibition">3D Events</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       2. MASTER CASE STUDIES GRID
+       ========================================================================= -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+    <div id="allCaseStudiesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Hydrated dynamically from data/content.json -->
+    </div>
+    <div id="noResultsMsg" class="hidden text-center py-20 text-sm text-[#55738D] font-bold">
+      No case studies found matching your query. Clear your search or select "All Works".
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       3. CASE STUDY DEEP DIVE MODAL
+       ========================================================================= -->
+  <div id="caseStudyModal" class="modal-overlay hidden">
+    <div class="modal-card max-w-3xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto relative">
+      <button id="closeCaseStudyModal" class="modal-close-btn" aria-label="Close Case Study Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="flex flex-wrap items-center gap-2.5 mb-4">
+        <span id="csModalCategory" class="px-3 py-1 rounded-full bg-[#70805D]/15 text-[#70805D] font-extrabold text-[11px] uppercase tracking-wider">Category</span>
+        <span id="csModalClient" class="px-3 py-1 rounded-full bg-white border border-[#70805D]/25 text-[#2A3B27] font-bold text-[11px]">Client Name</span>
+        <span id="csModalYear" class="px-2.5 py-0.5 rounded-full bg-[#F1F3ED] text-[#55738D] text-[10.5px] font-bold">2026</span>
+      </div>
+
+      <h2 id="csModalTitle" class="text-2xl sm:text-3xl font-extrabold text-[#1C2B1B] tracking-tight mb-2">Case Study Title</h2>
+      <p id="csModalTagline" class="text-sm font-semibold text-[#70805D] mb-6 italic">High-impact summary tagline</p>
+
+      <div class="w-full h-64 sm:h-80 rounded-2xl overflow-hidden mb-6 bg-[#F1F3ED] border border-[#70805D]/20 relative">
+        <img id="csModalImage" src="" alt="Case Study Cover" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Key Metrics ROI Strip -->
+      <div class="mb-6">
+        <div class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+          <i class="fa-solid fa-chart-line text-[#70805D]"></i>
+          <span>Measured ROI &amp; Performance Lift:</span>
+        </div>
+        <div id="csModalMetrics" class="grid grid-cols-1 sm:grid-cols-3 gap-3"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+        <div class="p-4 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15">
+          <h4 class="text-xs font-extrabold text-[#2A3B27] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i class="fa-solid fa-triangle-exclamation text-[#EAB308]"></i>
+            <span>The Challenge</span>
+          </h4>
+          <p id="csModalChallenge" class="text-xs sm:text-sm text-[#4D614A] leading-relaxed"></p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15">
+          <h4 class="text-xs font-extrabold text-[#2A3B27] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i class="fa-solid fa-lightbulb text-[#70805D]"></i>
+            <span>Strategic Execution</span>
+          </h4>
+          <p id="csModalSolution" class="text-xs sm:text-sm text-[#4D614A] leading-relaxed"></p>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <div class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider mb-2">Key Deliverables &amp; Artifacts:</div>
+        <div id="csModalDeliverables" class="flex flex-wrap gap-2"></div>
+      </div>
+
+      <div class="pt-4 border-t border-[#70805D]/15 flex flex-wrap items-center justify-between gap-3">
+        <a id="csModalLiveLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-aesthetic-primary text-xs">
+          <span>Visit Live Implementation</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+        <a href="#inquiry" onclick="closeCaseStudyModal();" class="btn-outline-emerald text-xs">
+          <span>Commission Similar Scope</span>
+          <i class="fa-solid fa-comments text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       4. DEDICATED INQUIRY FORM
+       ========================================================================= -->
+  <section id="inquiry" class="py-24 border-t border-[#70805D]/15 bg-white relative z-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal-on-scroll">
+        <div class="section-tag justify-center mb-3">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>INITIATE PROJECT</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-[#1C2B1B] tracking-tight">
+          Ready to Build Your Case Study?
+        </h2>
+        <p class="text-xs sm:text-sm text-[#4D614A] mt-2">
+          Brief Md. Shakibur Rahaman directly on your commercial targets, target timeline, and budget.
+        </p>
+      </div>
+
+      <div class="spotlight-card p-6 sm:p-10 border border-[#70805D]/25 bg-white shadow-xl">
+        <form id="csContactForm" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Full Name *</label>
+              <input type="text" id="csLeadName" required placeholder="Marcus Vance" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Corporate Email *</label>
+              <input type="email" id="csLeadEmail" required placeholder="marcus@company.com" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Phone / WhatsApp</label>
+              <input type="text" id="csLeadPhone" placeholder="+880 1838-070468" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Relevant Service Vertical</label>
+              <select id="csLeadService" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+                <option value="Graphics & Visual Identity">01 • Graphics & Visual Identity</option>
+                <option value="Web design & Development" selected>02 • Web design & Development</option>
+                <option value="Social Media marketing">03 • Social Media marketing</option>
+                <option value="Public relation & Media outreach">04 • Public relation & Media outreach</option>
+                <option value="Google ads & Intent Scaling">05 • Google ads & Intent Scaling</option>
+                <option value="Event activation & Exhibition">06 • Event activation & Exhibition</option>
+                <option value="Multi-Service Bundle Retainer">⭐ Multi-Service Retainer</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Project Scope &amp; Target Timeline *</label>
+            <textarea id="csLeadMessage" rows="4" required placeholder="Tell me about your business goals, target audience, budget, and desired delivery date..." class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]"></textarea>
+          </div>
+
+          <div id="csStatusAlert" class="hidden p-4 rounded-xl text-xs font-semibold"></div>
+
+          <button type="submit" id="csSubmitBtn" class="btn-aesthetic-primary w-full justify-center text-sm py-3.5">
+            <span>Transmit Executive Project Brief</span>
+            <i class="fa-solid fa-paper-plane text-xs"></i>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. FOOTER -->
+  <footer class="py-16 border-t border-[#70805D]/15 bg-[#F1F3ED] relative z-10 text-xs text-[#4D614A]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-[#70805D] text-white flex items-center justify-center font-black text-xs shadow-sm">
+              SR
+            </div>
+            <span class="font-bold text-[#1C2B1B] tracking-tight text-base">Md. Shakibur Rahaman</span>
+          </div>
+          <p class="text-xs text-[#4D614A] leading-relaxed">
+            Strategic Lead &amp; Digital Architect. Directing branding systems, high-performance web engineering, and commercial acquisition.
+          </p>
+        </div>
+
+        <div class="space-y-2.5">
+          <div class="text-[#2A3B27] font-bold uppercase tracking-wider text-[11px] mb-2">Core Services</div>
+          <div><a href="/services/graphics-design.html" class="hover:text-[#70805D]">01 Graphics &amp; Visual ID</a></div>
+          <div><a href="/services/web-development.html" class="hover:text-[#70805D]">02 Web Development</a></div>
+          <div><a href="/services/social-media-marketing.html" class="hover:text-[#70805D]">03 Social Media (SMM)</a></div>
+          <div><a href="/services/public-relations.html" class="hover:text-[#70805D]">04 PR &amp; Media Outreach</a></div>
+          <div><a href="/services/google-ads.html" class="hover:text-[#70805D]">05 Google Ads &amp; Intent</a></div>
+          <div><a href="/services/event-activation.html" class="hover:text-[#70805D]">06 Event &amp; Exhibition</a></div>
+        </div>
+
+        <div class="space-y-2.5">
+          <div class="text-[#2A3B27] font-bold uppercase tracking-wider text-[11px] mb-2">Navigation</div>
+          <div><a href="/" class="hover:text-[#70805D]">Home</a></div>
+          <div><a href="/#about" class="hover:text-[#70805D]">About</a></div>
+          <div><a href="/services.html" class="hover:text-[#70805D]">Services Directory</a></div>
+          <div><a href="/#projects" class="hover:text-[#70805D]">15 Web Projects</a></div>
+          <div><a href="/case-studies.html" class="hover:text-[#70805D] font-bold text-[#2A3B27]">Case Studies &amp; Works</a></div>
+        </div>
+
+        <div class="space-y-2.5">
+          <div class="text-[#2A3B27] font-bold uppercase tracking-wider text-[11px] mb-2">Direct Contact</div>
+          <div><a href="mailto:shakibur188@gmail.com" class="hover:text-[#70805D] font-bold">shakibur188@gmail.com</a></div>
+          <div><a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#70805D] font-bold">+880 1838-070468</a></div>
+          <div class="pt-2"><a href="/admin" target="_blank" class="text-[11px] text-[#55738D] hover:text-[#2A3B27] font-bold">Admin CMS Portal 🔐</a></div>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-[#70805D]/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+        <div>© 2026 Md. Shakibur Rahaman. All rights reserved.</div>
+        <div>Designed &amp; Engineered by <span class="text-[#2A3B27] font-bold">Md. Shakibur Rahaman</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Styles for Filter Buttons -->
+  <style>
+    .cs-filter-btn {
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      background: #F8F9F6;
+      color: #4D614A;
+      border: 1px solid rgba(112, 128, 93, 0.2);
+    }
+    .cs-filter-btn:hover {
+      background: rgba(112, 128, 93, 0.1);
+      color: #2A3B27;
+      border-color: rgba(112, 128, 93, 0.4);
+    }
+    .cs-filter-btn.active {
+      background: #70805D;
+      color: #FFFFFF;
+      border-color: #70805D;
+      box-shadow: 0 4px 12px -2px rgba(112, 128, 93, 0.35);
+    }
+  </style>
+
+  <!-- Controller Script for Case Studies Page -->
+  <script>
+    let allCaseStudies = [];
+    let currentCategory = 'All';
+    let currentSearch = '';
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      // 1. Mobile Menu Toggle
+      const toggle = document.getElementById('mobileMenuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (toggle && mobileMenu) {
+        toggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+
+      // 2. Scroll Progress Bar
+      const bar = document.getElementById('scrollProgressBar');
+      if (bar) {
+        window.addEventListener('scroll', () => {
+          const s = window.pageYOffset || document.documentElement.scrollTop;
+          const h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          bar.style.width = (h > 0 ? (s / h) * 100 : 0) + '%';
+        });
+      }
+
+      // 3. Modal close handlers
+      const closeBtn = document.getElementById('closeCaseStudyModal');
+      if (closeBtn) closeBtn.addEventListener('click', closeCaseStudyModal);
+      const modal = document.getElementById('caseStudyModal');
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeCaseStudyModal();
+        });
+      }
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeCaseStudyModal();
+      });
+
+      // 4. Fetch content and load case studies
+      try {
+        const res = await fetch('/api/content?t=' + Date.now());
+        const data = await res.json();
+        allCaseStudies = data.caseStudies || [];
+      } catch (e) {
+        console.error('Failed to fetch case studies:', e);
+      }
+
+      renderGrid();
+
+      // 5. Filter buttons
+      document.querySelectorAll('.cs-filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.cs-filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCategory = btn.getAttribute('data-category');
+          renderGrid();
+        });
+      });
+
+      // 6. Search input
+      const searchInput = document.getElementById('csSearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentSearch = e.target.value.toLowerCase().trim();
+          renderGrid();
+        });
+      }
+
+      // 7. Contact form submission
+      const form = document.getElementById('csContactForm');
+      if (form) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const btn = document.getElementById('csSubmitBtn');
+          const alertBox = document.getElementById('csStatusAlert');
+          btn.disabled = true;
+          btn.innerHTML = '<span>Transmitting...</span>';
+          alertBox.className = 'hidden';
+
+          const payload = {
+            name: document.getElementById('csLeadName').value.trim(),
+            email: document.getElementById('csLeadEmail').value.trim(),
+            phone: document.getElementById('csLeadPhone').value.trim(),
+            service: document.getElementById('csLeadService').value,
+            message: document.getElementById('csLeadMessage').value.trim(),
+            source: 'Case Studies Directory Page'
+          };
+
+          try {
+            const r = await fetch('/api/leads', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+            const resData = await r.json();
+            if (r.ok && resData.success) {
+              alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 block';
+              alertBox.textContent = '✓ Thank you! Your project brief has been received. Md. Shakibur Rahaman will respond within 24 hours.';
+              form.reset();
+            } else {
+              throw new Error(resData.error || 'Failed to submit brief');
+            }
+          } catch (err) {
+            alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-red-50 text-red-800 border border-red-200 block';
+            alertBox.textContent = 'Error: ' + err.message;
+          } finally {
+            btn.disabled = false;
+            btn.innerHTML = '<span>Transmit Executive Project Brief</span><i class="fa-solid fa-paper-plane text-xs"></i>';
+          }
+        });
+      }
+    });
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function renderGrid() {
+      const grid = document.getElementById('allCaseStudiesGrid');
+      const noResults = document.getElementById('noResultsMsg');
+      const countEl = document.getElementById('csVisibleCount');
+      if (!grid) return;
+
+      let filtered = allCaseStudies.filter(cs => {
+        const matchesCategory = (currentCategory === 'All') || (cs.category === currentCategory);
+        const searchStr = `${cs.title} ${cs.client} ${cs.category} ${cs.tagline} ${cs.challenge} ${cs.solution} ${(cs.deliverables || []).join(' ')}`.toLowerCase();
+        const matchesSearch = !currentSearch || searchStr.includes(currentSearch);
+        return matchesCategory && matchesSearch;
+      });
+
+      if (countEl) countEl.textContent = filtered.length;
+
+      if (!filtered.length) {
+        grid.innerHTML = '';
+        if (noResults) noResults.classList.remove('hidden');
+        return;
+      }
+
+      if (noResults) noResults.classList.add('hidden');
+
+      grid.innerHTML = filtered.map(cs => {
+        const metricsHtml = (cs.metrics || []).slice(0, 3).map(m => `
+          <span class="px-2.5 py-1 rounded-md bg-[#F1F3ED] text-[11px] font-extrabold text-[#2A3B27] border border-[#70805D]/20 flex items-center gap-1.5 shadow-2xs">
+            <i class="fa-solid fa-arrow-trend-up text-[#70805D] text-[10px]"></i>
+            <span>${escapeHtml(m)}</span>
+          </span>
+        `).join('');
+
+        const deliverablesHtml = (cs.deliverables || []).slice(0, 4).map(d => `
+          <span class="text-[10.5px] text-[#55738D] font-bold bg-white px-2 py-0.5 rounded border border-[#70805D]/15">${escapeHtml(d)}</span>
+        `).join('');
+
+        return `
+          <div class="spotlight-card p-0 overflow-hidden flex flex-col justify-between group bg-white border border-[#70805D]/25 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500">
+            <!-- Cover Visual with Badges -->
+            <div class="relative h-60 sm:h-72 w-full overflow-hidden bg-[#F1F3ED]">
+              <img src="${escapeHtml(cs.coverImage || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80')}" alt="${escapeHtml(cs.title)}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent"></div>
+
+              <!-- Top Pill Badges -->
+              <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
+                <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#70805D]/30 text-[11px] font-extrabold text-[#2A3B27] shadow-sm flex items-center gap-1.5">
+                  <i class="fa-solid fa-building text-[#70805D] text-[10px]"></i>
+                  <span>${escapeHtml(cs.client)}</span>
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-[#2A3B27]/85 backdrop-blur-md border border-white/20 text-[10.5px] font-bold text-white shadow-sm">
+                  ${escapeHtml(cs.year || '2025')}
+                </span>
+              </div>
+
+              <!-- Bottom Category Tag on Image -->
+              <div class="absolute bottom-3.5 left-4">
+                <span class="px-3 py-1 rounded-lg bg-[#70805D] text-white font-extrabold text-[11px] shadow-sm tracking-wide">
+                  ${escapeHtml(cs.category || 'Strategic Growth')}
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Body -->
+            <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl sm:text-2xl font-black text-[#1C2B1B] group-hover:text-[#70805D] transition-colors tracking-tight leading-snug mb-2">
+                  ${escapeHtml(cs.title)}
+                </h3>
+                <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-4">
+                  ${escapeHtml(cs.tagline || cs.challenge || '')}
+                </p>
+
+                <!-- Metrics Pills -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                  ${metricsHtml}
+                </div>
+
+                <!-- Deliverables Tags -->
+                <div class="flex flex-wrap gap-1.5 mb-6 pt-3 border-t border-[#70805D]/15">
+                  ${deliverablesHtml}
+                </div>
+              </div>
+
+              <!-- Card Actions Row -->
+              <div class="pt-4 border-t border-[#70805D]/15 flex items-center justify-between gap-3">
+                <button type="button" onclick="openCaseStudyModal('${escapeHtml(cs.id)}')" class="btn-aesthetic-primary text-xs py-2 px-4 justify-center">
+                  <span>Deep Dive Case Study</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </button>
+
+                ${cs.liveUrl ? `
+                  <a href="${escapeHtml(cs.liveUrl)}" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-[#55738D] hover:text-[#2A3B27] flex items-center gap-1.5 transition-colors">
+                    <span>Live Showcase</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                  </a>
+                ` : ''}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    window.openCaseStudyModal = function(id) {
+      const cs = allCaseStudies.find(c => c.id === id);
+      if (!cs) return;
+
+      const el = (i) => document.getElementById(i);
+      if (el('csModalCategory')) el('csModalCategory').textContent = cs.category || 'Case Study';
+      if (el('csModalClient')) el('csModalClient').textContent = cs.client || 'Client Organization';
+      if (el('csModalYear')) el('csModalYear').textContent = cs.year || '2026';
+      if (el('csModalTitle')) el('csModalTitle').textContent = cs.title || '';
+      if (el('csModalTagline')) el('csModalTagline').textContent = cs.tagline || '';
+      if (el('csModalImage')) el('csModalImage').src = cs.coverImage || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80';
+      if (el('csModalChallenge')) el('csModalChallenge').textContent = cs.challenge || 'Confidential challenge brief.';
+      if (el('csModalSolution')) el('csModalSolution').textContent = cs.solution || 'Confidential strategic solution.';
+
+      if (el('csModalMetrics')) {
+        el('csModalMetrics').innerHTML = (cs.metrics || []).map(m => `
+          <div class="p-3 rounded-xl bg-white border border-[#70805D]/20 shadow-2xs">
+            <div class="text-[10px] text-[#70805D] font-extrabold uppercase">Verified Result</div>
+            <div class="text-xs sm:text-sm font-black text-[#1C2B1B] mt-0.5">${escapeHtml(m)}</div>
+          </div>
+        `).join('');
+      }
+
+      if (el('csModalDeliverables')) {
+        el('csModalDeliverables').innerHTML = (cs.deliverables || []).map(d => `
+          <span class="px-2.5 py-1 rounded-lg bg-[#F8F9F6] border border-[#70805D]/20 text-[11px] font-bold text-[#2A3B27]">${escapeHtml(d)}</span>
+        `).join('');
+      }
+
+      const liveLink = el('csModalLiveLink');
+      if (liveLink) {
+        if (cs.liveUrl) {
+          liveLink.href = cs.liveUrl;
+          liveLink.classList.remove('hidden');
+        } else {
+          liveLink.classList.add('hidden');
+        }
+      }
+
+      const modal = document.getElementById('caseStudyModal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    };
+
+    window.closeCaseStudyModal = function() {
+      const modal = document.getElementById('caseStudyModal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    };
+  </script>
+</body>
+</html>

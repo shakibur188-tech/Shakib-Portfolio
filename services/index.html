@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services &amp; Strategic Capabilities | Md. Shakibur Rahaman</title>
+  <meta name="description" content="Explore all 6 core service disciplines directed by Md. Shakibur Rahaman: Graphics & Visual Identity, Web design & Development, Social Media marketing, Public relation & Media outreach, Google ads & Intent Scaling, and Event activation & Exhibition.">
+  <link rel="canonical" href="http://localhost:5500/services.html">
+  
+  <!-- Plus Jakarta Sans Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN & DopelyColors Palette Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#70805D',
+              forest: '#2A3B27',
+              slate: '#55738D',
+              mist: '#96A7B6',
+              stone: '#CBC8C4'
+            },
+            canvas: '#F8F9F6'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Unified Aesthetic Stylesheet -->
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bg-[#F8F9F6] text-[#1C2B1B] font-sans antialiased selection:bg-[#70805D] selection:text-white relative overflow-x-hidden">
+
+  <!-- 0. Top Scroll Progress Bar (Scroll-time Animation) -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- 1. Ambient Background Canvas, Animated Mesh & Vignette -->
+  <div class="ambient-mesh-glow"></div>
+  <canvas id="ambientCanvas"></canvas>
+  <div class="ambient-vignette"></div>
+
+  <!-- 2. FIXED NAVBAR WITH SERVICES HOVER DROPDOWN -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#F8F9F6]/90 backdrop-blur-2xl border-b border-[#70805D]/15 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo / Monogram -->
+      <a href="/" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-xl bg-[#70805D] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#70805D]/25">
+          SR
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-[#1C2B1B] tracking-tight text-base sm:text-lg group-hover:text-[#70805D] transition-colors">Md. Shakibur Rahaman</span>
+          <span class="text-[10.5px] text-[#70805D] font-bold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
+        </div>
+      </a>
+
+      <!-- Centered Floating Pill Navigation Menu with Services Dropdown -->
+      <nav class="hidden lg:flex items-center gap-6 px-6 py-2.5 rounded-full bg-white/90 border border-[#70805D]/20 text-xs font-semibold text-[#4D614A] backdrop-blur-md shadow-sm">
+        <a href="/" class="desktop-nav-link hover:text-[#70805D] transition-colors">Home</a>
+        <a href="/#about" class="desktop-nav-link hover:text-[#70805D] transition-colors">About</a>
+        
+        <!-- SERVICES MENU ITEM WITH HOVER SUB-MENU -->
+        <div class="services-menu-item relative group">
+          <a href="/services.html" class="desktop-nav-link text-[#70805D] font-bold flex items-center gap-1.5 py-1">
+            <span>Services</span>
+            <i class="fa-solid fa-chevron-down text-[9px] text-[#70805D] transition-transform duration-200 group-hover:rotate-180"></i>
+          </a>
+          
+                    <!-- 6 Services Hover Sub-Menu Panel -->
+          <div class="services-dropdown">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-[#70805D]/15">
+              <span class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-layer-group text-[#70805D]"></i>
+                <span>Core Capabilities (6 Disciplines)</span>
+              </span>
+              <a href="/services.html" class="text-[11px] font-bold text-[#70805D] hover:underline flex items-center gap-1">
+                <span>View All Services Directory</span>
+                <i class="fa-solid fa-arrow-right text-[9px]"></i>
+              </a>
+            </div>
+
+            <div class="services-dropdown-grid grid grid-cols-2 sm:grid-cols-3 gap-2">
+              <a href="/services/graphics-design.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-bezier-curve"></i></div>
+                <div>
+                  <div class="service-sub-title ">01 Graphics & Visual Identity</div>
+                  <div class="service-sub-desc">Packaging, UI/UX & decks</div>
+                </div>
+              </a>
+              <a href="/services/web-development.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-code"></i></div>
+                <div>
+                  <div class="service-sub-title ">02 Web design & Development</div>
+                  <div class="service-sub-desc">Jamstack portals & apps</div>
+                </div>
+              </a>
+              <a href="/services/social-media-marketing.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-hashtag"></i></div>
+                <div>
+                  <div class="service-sub-title ">03 Social Media marketing</div>
+                  <div class="service-sub-desc">Viral reels & Meta ads</div>
+                </div>
+              </a>
+              <a href="/services/public-relations.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-newspaper"></i></div>
+                <div>
+                  <div class="service-sub-title ">04 Public relation & Media outreach</div>
+                  <div class="service-sub-desc">Tier-1 press & media PR</div>
+                </div>
+              </a>
+              <a href="/services/google-ads.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-chart-line"></i></div>
+                <div>
+                  <div class="service-sub-title ">05 Google ads & Intent Scaling</div>
+                  <div class="service-sub-desc">Performance Max funnels</div>
+                </div>
+              </a>
+              <a href="/services/event-activation.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-cubes"></i></div>
+                <div>
+                  <div class="service-sub-title ">06 Event activation & Exhibition</div>
+                  <div class="service-sub-desc">Expos & 3D spatial builds</div>
+                </div>
+              </a>
+            </div>
+
+            <div class="mt-3 pt-2.5 border-t border-[#70805D]/15 flex items-center justify-between text-[11px] text-[#55738D]">
+              <span>Integrated strategic leadership across all 6 disciplines</span>
+              <a href="/services.html" class="font-bold text-[#70805D] hover:text-[#2A3B27] flex items-center gap-1">
+                <span>View Full Services Directory</span>
+                <i class="fa-solid fa-chevron-right text-[8px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/#projects" class="desktop-nav-link hover:text-[#70805D] transition-colors">Projects</a>
+        <a href="/case-studies.html" class="desktop-nav-link hover:text-[#70805D] transition-colors">Case Studies</a>
+        <a href="#inquiry" class="desktop-nav-link hover:text-[#70805D] transition-colors">Consultation</a>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center gap-3">
+        <a href="/#contact" class="nav-cta-btn btn-aesthetic-primary text-xs hidden md:inline-flex items-center gap-2">
+          <span>Book Consultation</span>
+          <i class="fa-solid fa-arrow-down text-[10px]"></i>
+        </a>
+        <button id="mobileMenuToggle" aria-label="Toggle Navigation" class="lg:hidden w-10 h-10 rounded-xl bg-white border border-[#70805D]/25 flex items-center justify-center text-[#2A3B27] shadow-sm">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 border-b border-[#70805D]/15 px-6 py-5 space-y-3 shadow-xl">
+      <a href="/" class="mobile-link block text-sm font-semibold text-[#4D614A] hover:text-[#70805D]">Home</a>
+      <a href="/#about" class="mobile-link block text-sm font-semibold text-[#4D614A] hover:text-[#70805D]">About</a>
+      <div class="pt-1 pb-1 border-y border-[#70805D]/10">
+        <div class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider py-1">6 Direct Pillar Links</div>
+        <div class="grid grid-cols-2 gap-1 pt-1 text-xs text-[#4D614A]">
+          <a href="#graphics-design" class="mobile-link py-1">• 01 Graphics</a>
+          <a href="#web-development" class="mobile-link py-1">• 02 Web Dev</a>
+          <a href="#social-media-marketing" class="mobile-link py-1">• 03 Social Media</a>
+          <a href="#public-relations" class="mobile-link py-1">• 04 PR & Outreach</a>
+          <a href="#google-ads" class="mobile-link py-1">• 05 Google Ads</a>
+          <a href="#event-activation" class="mobile-link py-1">• 06 3D Events</a>
+        </div>
+      </div>
+      <a href="/#projects" class="mobile-link block text-sm font-semibold text-[#4D614A] hover:text-[#70805D]">15 Web Projects</a>
+      <a href="#inquiry" class="mobile-link block text-sm font-bold text-[#70805D]">Book Consultation</a>
+    </div>
+  </header>
+
+  <!-- 1. HERO DIRECTORY HEADER (Light Theme) -->
+  <section class="relative pt-36 pb-16 md:pt-44 md:pb-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      
+      <div class="section-tag justify-center mb-6">
+        <span class="pulse-dot-olive"></span>
+        <span>SERVICES &amp; CAPABILITIES DIRECTORY</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-[#1C2B1B] tracking-tight leading-[1.08] mb-6 reveal-on-scroll">
+        360° Creative Direction &amp; <br>
+        <span class="olive-gradient-text">Full-Stack Execution</span>
+      </h1>
+
+      <p class="text-sm sm:text-base text-[#4D614A] max-w-3xl mx-auto leading-relaxed mb-10 reveal-on-scroll">
+        All 6 core capabilities consolidated onto one master canvas with alternating layouts, interactive before &amp; after comparison, and end-to-end delivery frameworks.
+      </p>
+
+      <!-- Key Strategic Points Strip -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto text-left reveal-on-scroll mb-12">
+        <div class="spotlight-card p-4 flex items-start gap-3 bg-white">
+          <div class="w-8 h-8 rounded-lg bg-[#70805D]/15 flex items-center justify-center text-[#70805D] font-bold text-xs shrink-0">01</div>
+          <div>
+            <h4 class="text-xs font-bold text-[#1C2B1B] mb-0.5">Unified Authority</h4>
+            <p class="text-[11px] text-[#55738D] leading-snug">Single decisive lead across design, code &amp; marketing.</p>
+          </div>
+        </div>
+
+        <div class="spotlight-card p-4 flex items-start gap-3 bg-white">
+          <div class="w-8 h-8 rounded-lg bg-[#55738D]/15 flex items-center justify-center text-[#55738D] font-bold text-xs shrink-0">02</div>
+          <div>
+            <h4 class="text-xs font-bold text-[#1C2B1B] mb-0.5">High Performance</h4>
+            <p class="text-[11px] text-[#55738D] leading-snug">95+ PageSpeed &amp; conversion-focused architecture.</p>
+          </div>
+        </div>
+
+        <div class="spotlight-card p-4 flex items-start gap-3 bg-white">
+          <div class="w-8 h-8 rounded-lg bg-[#70805D]/15 flex items-center justify-center text-[#70805D] font-bold text-xs shrink-0">03</div>
+          <div>
+            <h4 class="text-xs font-bold text-[#1C2B1B] mb-0.5">Full IP Ownership</h4>
+            <p class="text-[11px] text-[#55738D] leading-snug">100% vector master files &amp; production code handover.</p>
+          </div>
+        </div>
+
+        <div class="spotlight-card p-4 flex items-start gap-3 bg-white">
+          <div class="w-8 h-8 rounded-lg bg-[#55738D]/15 flex items-center justify-center text-[#55738D] font-bold text-xs shrink-0">04</div>
+          <div>
+            <h4 class="text-xs font-bold text-[#1C2B1B] mb-0.5">Measurable ROI</h4>
+            <p class="text-[11px] text-[#55738D] leading-snug">Data-backed growth metrics &amp; SLA sprint guarantees.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sticky Quick-Jump Pill Bar -->
+      <div class="sticky top-20 z-40 py-3 bg-[#F8F9F6]/95 backdrop-blur-md border-y border-[#70805D]/15 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 shadow-sm">
+        <div class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar py-1">
+          <a href="#graphics-design" class="filter-btn text-[11px]">01 Graphics & Visual ID</a>
+          <a href="#web-development" class="filter-btn text-[11px]">02 Web Dev</a>
+          <a href="#social-media-marketing" class="filter-btn text-[11px]">03 Social Media</a>
+          <a href="#public-relations" class="filter-btn text-[11px]">04 PR & Media Outreach</a>
+          <a href="#google-ads" class="filter-btn text-[11px]">05 Google Ads</a>
+          <a href="#event-activation" class="filter-btn text-[11px]">06 Event & Exhibition</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       THE 9 COMPREHENSIVE SERVICE PILLAR SECTIONS (DYNAMIC ALTERNATING LAYOUTS)
+       ========================================================================= -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 pb-24">
+
+    <!-- 01: GRAPHICS & VISUAL IDENTITY -->
+    <section id="graphics-design" class="scroll-mt-32 pt-10 border-t border-[#70805D]/15">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Visual Showcase Left -->
+        <div class="lg:col-span-7 order-2 lg:order-1 reveal-fade-left">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="spotlight-card rounded-2xl overflow-hidden bg-white border border-[#70805D]/20 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Packaging Design" class="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-500">
+              <div class="p-3.5 bg-white border-t border-gray-100">
+                <div class="text-[10px] text-[#70805D] uppercase font-bold">Packaging Architecture</div>
+                <div class="text-xs font-extrabold text-[#1C2B1B]">Luxury Box Collateral</div>
+              </div>
+            </div>
+
+            <div class="spotlight-card rounded-2xl overflow-hidden bg-white border border-[#70805D]/20 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=600&q=80" alt="Visual Identity Systems" class="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-500">
+              <div class="p-3.5 bg-white border-t border-gray-100">
+                <div class="text-[10px] text-[#55738D] uppercase font-bold">Brand Guidelines</div>
+                <div class="text-xs font-extrabold text-[#1C2B1B]">60+ Page Vector Book</div>
+              </div>
+            </div>
+
+            <div class="col-span-2 spotlight-card p-4 rounded-xl bg-white border border-[#70805D]/20 shadow-sm flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-[#70805D]/15 flex items-center justify-center text-[#70805D]">
+                  <i class="fa-solid fa-bezier-curve text-lg"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-[#1C2B1B]">300+ Brand Assets Designed</div>
+                  <div class="text-[11px] text-[#55738D]">Logos, UI/UX, Brochures, Billboard Campaigns</div>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#70805D]">• 100% Vector SLA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Right -->
+        <div class="lg:col-span-5 order-1 lg:order-2 space-y-5 reveal-fade-right">
+          <div class="point-badge">PILLAR 01 • GRAPHICS & VISUAL IDENTITY</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C2B1B] tracking-tight">
+            Graphics Design &amp; Collateral
+          </h2>
+          <p class="text-sm text-[#4D614A] leading-relaxed">
+            Ultra-high fidelity graphic design spanning investor decks, luxury product packaging, print advertising, and multi-channel campaign creative.
+          </p>
+
+          <div class="space-y-2.5 pt-2">
+            <h4 class="text-xs font-bold text-[#70805D] uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-list-check text-[10px]"></i>
+              <span>Core Deliverable Points:</span>
+            </h4>
+            <ul class="space-y-2">
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Luxury Packaging Mockups:</strong> Structural dielines, foils, embossing specs, and CMYK offset production prep.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>High-Stakes Investor Pitch Kits:</strong> 16:9 widescreen keynote decks with bespoke custom infographics.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Multi-Channel Advertising Sets:</strong> High-impact social banners, Google Display GDN ad creative suites.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Editorial &amp; Print Collateral:</strong> Corporate annual reports, brochures, executive stationery, and billboards.</span></li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-gray-200">
+            <div class="flex items-center gap-6 text-xs">
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">300+</span><div class="text-[10px] text-[#70805D] uppercase font-bold">Assets Shipped</div></div>
+              <div class="w-px h-8 bg-gray-300"></div>
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">300 DPI</span><div class="text-[10px] text-[#70805D] uppercase font-bold">Print Ready</div></div>
+              <div class="w-px h-8 bg-gray-300"></div>
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">Vector</span><div class="text-[10px] text-[#70805D] uppercase font-bold">Infinite Scale</div></div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="/services/graphics-design.html" class="btn-aesthetic-primary text-xs">
+              <span>View Dedicated Graphics Page</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02: WEB DESIGN & DEVELOPMENT -->
+    <section id="web-development" class="scroll-mt-32 pt-10 border-t border-[#70805D]/15">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Content Left -->
+        <div class="lg:col-span-5 space-y-5 reveal-fade-left">
+          <div class="point-badge">PILLAR 02 • WEB DESIGN & DEVELOPMENT</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C2B1B] tracking-tight">
+            Web Design &amp; Development
+          </h2>
+          <p class="text-sm text-[#4D614A] leading-relaxed">
+            Engineering modern Jamstack websites and full-stack platforms engineered for sub-second latencies, 95+ PageSpeed scores, and conversion-focused architectures.
+          </p>
+
+          <div class="space-y-2.5 pt-2">
+            <h4 class="text-xs font-bold text-[#70805D] uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-list-check text-[10px]"></i>
+              <span>Core Deliverable Points:</span>
+            </h4>
+            <ul class="space-y-2">
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Responsive Corporate Portals:</strong> Mobile-first architecture with fluid animations and strict cross-device QA.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Full-Stack E-Commerce Engines:</strong> Headless Shopify, WooCommerce, and custom multi-currency checkout gateways.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Lightweight Node.js / Jamstack Stack:</strong> 95+ Google PageSpeed benchmarks with instant sub-second TTFB loading.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Bespoke CMS &amp; Rest API Architecture:</strong> Zero-bloat administrative dashboard for live updates.</span></li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-gray-200">
+            <div class="flex items-center gap-6 text-xs">
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">95+</span><div class="text-[10px] text-[#70805D] uppercase font-bold">PageSpeed Score</div></div>
+              <div class="w-px h-8 bg-gray-300"></div>
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">15+</span><div class="text-[10px] text-[#70805D] uppercase font-bold">Active Portals</div></div>
+              <div class="w-px h-8 bg-gray-300"></div>
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">&lt; 0.8s</span><div class="text-[10px] text-[#70805D] uppercase font-bold">TTFB Latency</div></div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="/services/web-development.html" class="btn-aesthetic-primary text-xs">
+              <span>View Dedicated Web Engineering Page</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Showcase Right: Interactive Browser Mockup with Telemetry -->
+        <div class="lg:col-span-7 reveal-fade-right">
+          <div class="spotlight-card rounded-2xl overflow-hidden bg-white border border-[#70805D]/25 shadow-xl">
+            <!-- Browser Bar -->
+            <div class="browser-header">
+              <div class="browser-dot"></div>
+              <div class="browser-dot"></div>
+              <div class="browser-dot"></div>
+              <div class="browser-url-bar">https://peninsulactg.com (Live Production Showcase)</div>
+            </div>
+
+            <!-- Preview Image -->
+            <div class="relative h-64 sm:h-80 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80" alt="Web Architecture Preview" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-transparent"></div>
+              
+              <!-- Floating Performance Badge -->
+              <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-md p-3 rounded-xl border border-[#70805D]/30 shadow-md flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full border-4 border-[#70805D] flex items-center justify-center font-extrabold text-xs text-[#2A3B27]">99</div>
+                <div class="text-left">
+                  <div class="text-xs font-bold text-[#1C2B1B]">Performance 99</div>
+                  <div class="text-[10px] text-[#70805D]">Google Core Web Vitals</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Code & Tech Bar -->
+            <div class="p-5 bg-white border-t border-gray-100 flex flex-wrap items-center justify-between gap-3 text-xs">
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-md bg-[#F1F3ED] text-[#2A3B27] font-bold border border-[#70805D]/20">JavaScript</span>
+                <span class="px-2.5 py-1 rounded-md bg-[#F1F3ED] text-[#2A3B27] font-bold border border-[#70805D]/20">Tailwind CSS</span>
+                <span class="px-2.5 py-1 rounded-md bg-[#F1F3ED] text-[#2A3B27] font-bold border border-[#70805D]/20">Node.js</span>
+              </div>
+              <span class="text-xs font-bold text-[#70805D] flex items-center gap-1.5">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Production Grade SLA</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03: SOCIAL MEDIA MARKETING -->
+    <section id="social-media-marketing" class="scroll-mt-32 pt-10 border-t border-[#70805D]/15">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Visual Showcase Left -->
+        <div class="lg:col-span-7 order-2 lg:order-1 reveal-fade-left">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="spotlight-card rounded-2xl overflow-hidden bg-white border border-[#70805D]/20 shadow-md">
+              <div class="relative h-60 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&q=80" alt="Viral Reels Campaign" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 left-2 right-2 bg-white/95 backdrop-blur-md px-2.5 py-1.5 rounded-lg border border-[#70805D]/20 text-[11px] font-bold text-[#2A3B27] flex items-center justify-between">
+                  <span>Reels Engagement</span>
+                  <span class="text-[#70805D]">2.4M Views</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="spotlight-card rounded-2xl overflow-hidden bg-white border border-[#70805D]/20 shadow-md">
+              <div class="relative h-60 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Meta Ads Dashboard" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 left-2 right-2 bg-white/95 backdrop-blur-md px-2.5 py-1.5 rounded-lg border border-[#70805D]/20 text-[11px] font-bold text-[#2A3B27] flex items-center justify-between">
+                  <span>Advantage+ ROAS</span>
+                  <span class="text-[#70805D]">4.2x ROAS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Right -->
+        <div class="lg:col-span-5 order-1 lg:order-2 space-y-5 reveal-fade-right">
+          <div class="point-badge">PILLAR 03 • SOCIAL MEDIA MARKETING</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C2B1B] tracking-tight">
+            Social Media marketing
+          </h2>
+          <p class="text-sm text-[#4D614A] leading-relaxed">
+            Transforming passive scrollers into passionate brand evangelists through magnetic storytelling, thumb-stopping short-form reels, and paid Meta scaling.
+          </p>
+
+          <div class="space-y-2.5 pt-2">
+            <h4 class="text-xs font-bold text-[#70805D] uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-list-check text-[10px]"></i>
+              <span>Core Deliverable Points:</span>
+            </h4>
+            <ul class="space-y-2">
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Viral Short-Form Content:</strong> High-retention vertical reels, TikTok clips, and episodic brand storytelling.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Meta Advantage+ Paid Ads:</strong> Dynamic audience segmentation, retargeting funnels, and ROAS optimization.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Community Engagement:</strong> Proactive DM nurturing, comment management, and VIP brand advocacy.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Weekly Executive Telemetry:</strong> Real-time Looker Studio KPI dashboards with actionable metrics.</span></li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-gray-200">
+            <div class="flex items-center gap-6 text-xs">
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">2M+</span><div class="text-[10px] text-[#70805D] uppercase font-bold">Organic Views</div></div>
+              <div class="w-px h-8 bg-gray-300"></div>
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">4.2x</span><div class="text-[10px] text-[#70805D] uppercase font-bold">Meta ROAS</div></div>
+              <div class="w-px h-8 bg-gray-300"></div>
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">Weekly</span><div class="text-[10px] text-[#70805D] uppercase font-bold">Sprint Reviews</div></div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="/services/social-media-marketing.html" class="btn-aesthetic-primary text-xs">
+              <span>View Dedicated Social Media Page</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04: PUBLIC RELATIONS & MEDIA OUTREACH -->
+    <section id="public-relations" class="scroll-mt-32 pt-10 border-t border-[#70805D]/15">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Content Left -->
+        <div class="lg:col-span-5 space-y-5 reveal-fade-left">
+          <div class="point-badge">PILLAR 04 • PUBLIC RELATIONS & MEDIA OUTREACH</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C2B1B] tracking-tight">
+            Public Relations &amp; Media (PR)
+          </h2>
+          <p class="text-sm text-[#4D614A] leading-relaxed">
+            Positioning corporate executives as industry thought leaders and securing high-profile national news coverage and broadcast editorial placements.
+          </p>
+
+          <div class="space-y-2.5 pt-2">
+            <h4 class="text-xs font-bold text-[#70805D] uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-list-check text-[10px]"></i>
+              <span>Core Deliverable Points:</span>
+            </h4>
+            <ul class="space-y-2">
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Press Release Drafting &amp; Wire Distribution:</strong> National press release dissemination across mainstream outlets.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Executive Thought-Leadership:</strong> Ghostwritten op-eds, keynote conference speaking, and verified bios.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Crisis Communication Safeguards:</strong> Real-time media sentiment tracking and proactive stakeholder management.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Media Kit &amp; Press Assets:</strong> High-resolution corporate photo packets, executive dossiers, and fact sheets.</span></li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-gray-200">
+            <div class="flex items-center gap-6 text-xs">
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">Tier-1</span><div class="text-[10px] text-[#70805D] uppercase font-bold">News Outlets</div></div>
+              <div class="w-px h-8 bg-gray-300"></div>
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">24/7</span><div class="text-[10px] text-[#70805D] uppercase font-bold">Crisis Guard</div></div>
+              <div class="w-px h-8 bg-gray-300"></div>
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">Editorial</span><div class="text-[10px] text-[#70805D] uppercase font-bold">Earned Media</div></div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="/services/public-relations.html" class="btn-aesthetic-primary text-xs">
+              <span>View Dedicated PR Page</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Showcase Right -->
+        <div class="lg:col-span-7 reveal-fade-right">
+          <div class="spotlight-card rounded-2xl overflow-hidden bg-white border border-[#70805D]/25 shadow-xl">
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1000&q=80" alt="Public Relations Broadcast" class="w-full h-72 sm:h-96 object-cover">
+            <div class="p-4 bg-white border-t border-gray-100 flex flex-wrap items-center justify-between gap-3 text-xs">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-[#70805D]/15 flex items-center justify-center text-[#70805D]">
+                  <i class="fa-solid fa-newspaper text-base"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-[#1C2B1B]">Strategic Media Syndication</div>
+                  <div class="text-[11px] text-[#55738D]">National Print, Online News Portals &amp; Broadcast</div>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#70805D]">High-Authority Outreach</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05: GOOGLE ADS & INTENT SCALING -->
+    <section id="google-ads" class="scroll-mt-32 pt-10 border-t border-[#70805D]/15">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Content Left -->
+        <div class="lg:col-span-5 space-y-5 reveal-fade-left">
+          <div class="point-badge">PILLAR 05 • GOOGLE ADS & INTENT SCALING</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C2B1B] tracking-tight">
+            Google Ads &amp; Intent Scaling
+          </h2>
+          <p class="text-sm text-[#4D614A] leading-relaxed">
+            Laser-targeted Google Search, Display, Performance Max, and YouTube video ad campaigns engineered for lowest CPA and maximal ROAS conversion.
+          </p>
+
+          <div class="space-y-2.5 pt-2">
+            <h4 class="text-xs font-bold text-[#70805D] uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-list-check text-[10px]"></i>
+              <span>Core Deliverable Points:</span>
+            </h4>
+            <ul class="space-y-2">
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>High-Intent Search Campaigns:</strong> Negative keyword sculpting, SKAG/STAG cluster architectures.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Performance Max (PMax) Funnels:</strong> Asset group testing, first-party audience signals, and value-based bidding.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Server-Side GA4 Tracking:</strong> Google Tag Manager Enhanced Conversion API with multi-touch attribution.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Conversion Rate Optimization (CRO):</strong> Landing page A/B split testing and sub-second checkout speed tuning.</span></li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-gray-200">
+            <div class="flex items-center gap-6 text-xs">
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">4.8x</span><div class="text-[10px] text-[#70805D] uppercase font-bold">Average ROAS</div></div>
+              <div class="w-px h-8 bg-gray-300"></div>
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">-28%</span><div class="text-[10px] text-[#70805D] uppercase font-bold">CPA Reduction</div></div>
+              <div class="w-px h-8 bg-gray-300"></div>
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">GA4 / CAPI</span><div class="text-[10px] text-[#70805D] uppercase font-bold">Full Telemetry</div></div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="/services/google-ads.html" class="btn-aesthetic-primary text-xs">
+              <span>View Dedicated Google Ads Page</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Showcase Right -->
+        <div class="lg:col-span-7 reveal-fade-right">
+          <div class="spotlight-card rounded-2xl overflow-hidden bg-white border border-[#70805D]/25 shadow-xl">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80" alt="Google Ads Performance Max Dashboard" class="w-full h-72 sm:h-96 object-cover">
+            <div class="p-4 bg-white border-t border-gray-100 flex flex-wrap items-center justify-between gap-3 text-xs">
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-md bg-[#F1F3ED] text-[#2A3B27] font-bold border border-[#70805D]/20">Google Ads</span>
+                <span class="px-2.5 py-1 rounded-md bg-[#F1F3ED] text-[#2A3B27] font-bold border border-[#70805D]/20">GA4 Analytics</span>
+                <span class="px-2.5 py-1 rounded-md bg-[#F1F3ED] text-[#2A3B27] font-bold border border-[#70805D]/20">Tag Manager</span>
+              </div>
+              <span class="text-xs font-bold text-[#70805D]">Real-Time Attribution Verified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06: EVENT ACTIVATION & EXHIBITION -->
+    <section id="event-activation" class="scroll-mt-32 pt-10 border-t border-[#70805D]/15">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Visual Showcase Left -->
+        <div class="lg:col-span-7 order-2 lg:order-1 reveal-fade-left">
+          <div class="spotlight-card rounded-2xl overflow-hidden bg-white border border-[#70805D]/25 shadow-xl">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80" alt="3D Exhibition Stall" class="w-full h-72 sm:h-96 object-cover">
+            <div class="p-4 bg-white border-t border-gray-100 flex flex-wrap items-center justify-between gap-3 text-xs">
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-md bg-[#F1F3ED] text-[#2A3B27] font-bold border border-[#70805D]/20">3ds Max</span>
+                <span class="px-2.5 py-1 rounded-md bg-[#F1F3ED] text-[#2A3B27] font-bold border border-[#70805D]/20">AutoCAD</span>
+                <span class="px-2.5 py-1 rounded-md bg-[#F1F3ED] text-[#2A3B27] font-bold border border-[#70805D]/20">Blender 3D</span>
+              </div>
+              <span class="text-xs font-bold text-[#70805D]">Turnkey On-Site Fabrication</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Right -->
+        <div class="lg:col-span-5 order-1 lg:order-2 space-y-5 reveal-fade-right">
+          <div class="point-badge">PILLAR 06 • EVENT ACTIVATION & EXHIBITION</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C2B1B] tracking-tight">
+            Event Activation &amp; 3D Stalls
+          </h2>
+          <p class="text-sm text-[#4D614A] leading-relaxed">
+            Architecting immersive physical brand experiences, photorealistic 3D exhibition booth designs, and turnkey trade show activations.
+          </p>
+
+          <div class="space-y-2.5 pt-2">
+            <h4 class="text-xs font-bold text-[#70805D] uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-list-check text-[10px]"></i>
+              <span>Core Deliverable Points:</span>
+            </h4>
+            <ul class="space-y-2">
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Photorealistic 3D Stall Renders:</strong> Multi-angle walkthroughs, lighting studies, and material schedules.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Engineering Dielines &amp; Construction Specs:</strong> Modular fabrication blueprints and electrical schematics.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Interactive Digital Signage:</strong> Motion graphics touchscreens, AR product demos, and visitor gamification.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>On-Site Fabrication Supervision:</strong> Full vendor oversight, safety clearances, and flawless opening delivery.</span></li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-gray-200">
+            <div class="flex items-center gap-6 text-xs">
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">3D Renders</span><div class="text-[10px] text-[#70805D] uppercase font-bold">100% Photoreal</div></div>
+              <div class="w-px h-8 bg-gray-300"></div>
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">Zero-Stress</span><div class="text-[10px] text-[#70805D] uppercase font-bold">Vendor Control</div></div>
+              <div class="w-px h-8 bg-gray-300"></div>
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">High Dwell</span><div class="text-[10px] text-[#70805D] uppercase font-bold">Visitor Flow</div></div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="/services/event-activation.html" class="btn-aesthetic-primary text-xs">
+              <span>View Dedicated Event Page</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 3. INTERACTIVE 4-PHASE PRODUCTION WORKFLOW -->
+  <section class="py-24 border-t border-[#70805D]/15 bg-white/80 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14 reveal-on-scroll">
+        <div class="section-tag justify-center">
+          <i class="fa-solid fa-diagram-project"></i>
+          <span>DELIVERY GOVERNANCE</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-[#1C2B1B] tracking-tight mt-2">
+          End-to-End Production Workflow
+        </h2>
+        <p class="text-xs sm:text-sm text-[#4D614A] mt-2">How every project moves from strategic blueprint to sprint deployment.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="workflow-card-interactive active-phase">
+          <div>
+            <span class="text-xs font-mono font-bold text-[#70805D] bg-[#70805D]/10 px-2.5 py-1 rounded-full border border-[#70805D]/25">PHASE 01</span>
+            <h3 class="text-base font-bold text-[#1C2B1B] mt-3 mb-2">Discovery &amp; Strategy Audit</h3>
+            <p class="text-xs text-[#4D614A] leading-relaxed">Competitor whitespace audit, ideal customer intent profiling, and technical baseline metrics.</p>
+          </div>
+          <div class="pt-4 border-t border-gray-100 text-[11px] font-bold text-[#70805D] mt-4">✓ Scope &amp; Deliverables Sign-Off</div>
+        </div>
+
+        <div class="workflow-card-interactive">
+          <div>
+            <span class="text-xs font-mono font-bold text-[#70805D] bg-[#70805D]/10 px-2.5 py-1 rounded-full border border-[#70805D]/25">PHASE 02</span>
+            <h3 class="text-base font-bold text-[#1C2B1B] mt-3 mb-2">Blueprint &amp; Creative Direction</h3>
+            <p class="text-xs text-[#4D614A] leading-relaxed">Figma design tokens, interactive clickable wireframes, narrative tone of voice, and architecture.</p>
+          </div>
+          <div class="pt-4 border-t border-gray-100 text-[11px] font-bold text-[#70805D] mt-4">✓ Design Review &amp; Direction Sign-Off</div>
+        </div>
+
+        <div class="workflow-card-interactive">
+          <div>
+            <span class="text-xs font-mono font-bold text-[#70805D] bg-[#70805D]/10 px-2.5 py-1 rounded-full border border-[#70805D]/25">PHASE 03</span>
+            <h3 class="text-base font-bold text-[#1C2B1B] mt-3 mb-2">Production Sprints</h3>
+            <p class="text-xs text-[#4D614A] leading-relaxed">Jamstack clean code engineering, 4K video shoot execution, campaign funnels, and staged demos.</p>
+          </div>
+          <div class="pt-4 border-t border-gray-100 text-[11px] font-bold text-[#70805D] mt-4">✓ Mid-Sprint Walkthrough &amp; QA</div>
+        </div>
+
+        <div class="workflow-card-interactive">
+          <div>
+            <span class="text-xs font-mono font-bold text-[#70805D] bg-[#70805D]/10 px-2.5 py-1 rounded-full border border-[#70805D]/25">PHASE 04</span>
+            <h3 class="text-base font-bold text-[#1C2B1B] mt-3 mb-2">QA, Telemetry &amp; Go-Live</h3>
+            <p class="text-xs text-[#4D614A] leading-relaxed">95+ PageSpeed verification, server-side GA4 telemetry verification, and zero-downtime DNS deployment.</p>
+          </div>
+          <div class="pt-4 border-t border-gray-100 text-[11px] font-bold text-[#70805D] mt-4">✓ 30-Day Post-Launch SLA Warranty</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. MULTI-SERVICE INQUIRY CONSULTATION BRIEF -->
+  <section id="inquiry" class="py-24 border-t border-[#70805D]/15 bg-white relative z-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal-on-scroll">
+        <div class="section-tag justify-center">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>INITIATE PROJECT</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-[#1C2B1B] tracking-tight mt-2">
+          Commission a Service or Retainer
+        </h2>
+        <p class="text-xs sm:text-sm text-[#4D614A] mt-2">Brief Md. Shakibur Rahaman on your enterprise scope, goals, and target timeline.</p>
+      </div>
+
+      <div class="spotlight-card p-6 sm:p-10 border border-[#70805D]/25 bg-white shadow-xl">
+        <form id="consultationForm" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Full Name *</label>
+              <input type="text" id="briefName" required placeholder="Marcus Vance" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Corporate Email *</label>
+              <input type="email" id="briefEmail" required placeholder="marcus@company.com" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Phone / WhatsApp</label>
+              <input type="text" id="briefPhone" placeholder="+880 1838-070468" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Primary Service Focus</label>
+              <select id="briefService" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+                <option value="Graphics & Visual Identity">01 • Graphics & Visual Identity</option>
+                <option value="Web design & Development" selected>02 • Web design & Development</option>
+                <option value="Social Media marketing">03 • Social Media marketing</option>
+                <option value="Public relation & Media outreach">04 • Public relation & Media outreach</option>
+                <option value="Google ads & Intent Scaling">05 • Google ads & Intent Scaling</option>
+                <option value="Event activation & Exhibition">06 • Event activation & Exhibition</option>
+                <option value="Multi-Service Bundle Retainer">⭐ Multi-Service Integrated Retainer</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Brief &amp; Project Requirements *</label>
+            <textarea id="briefMessage" rows="4" required placeholder="Tell me about your business goals, target audience, budget, and desired delivery date..." class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]"></textarea>
+          </div>
+
+          <div id="briefStatusAlert" class="hidden p-4 rounded-xl text-xs font-semibold"></div>
+
+          <button type="submit" id="briefSubmitBtn" class="btn-aesthetic-primary w-full justify-center text-sm py-3.5">
+            <span>Transmit Executive Project Brief</span>
+            <i class="fa-solid fa-paper-plane text-xs"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. MULTI-COLUMN FOOTER (Light Theme) -->
+  <footer class="py-16 border-t border-[#70805D]/15 bg-[#F1F3ED] relative z-10 text-xs text-[#4D614A]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-[#70805D] text-white flex items-center justify-center font-black text-xs shadow-sm">
+              SR
+            </div>
+            <span class="font-bold text-[#1C2B1B] tracking-tight text-base">Md. Shakibur Rahaman</span>
+          </div>
+          <p class="text-xs text-[#4D614A] leading-relaxed">
+            Strategic Lead &amp; Digital Growth Architect. Directing branding, high-performance web engineering, and commercial acquisition.
+          </p>
+        </div>
+
+        <div class="space-y-2.5">
+          <div class="text-[#2A3B27] font-bold uppercase tracking-wider text-[11px] mb-2">Core Services</div>
+          <div><a href="#graphics-design" class="hover:text-[#70805D]">01 Graphics & Visual ID</a></div>
+          <div><a href="#web-development" class="hover:text-[#70805D]">02 Web Development</a></div>
+          <div><a href="#social-media-marketing" class="hover:text-[#70805D]">03 Social Media (SMM)</a></div>
+        </div>
+
+        <div class="space-y-2.5">
+          <div class="text-[#2A3B27] font-bold uppercase tracking-wider text-[11px] mb-2">Extended Verticals</div>
+          <div><a href="#public-relations" class="hover:text-[#70805D]">04 PR & Media Outreach</a></div>
+          <div><a href="#google-ads" class="hover:text-[#70805D]">05 Google Ads & Intent</a></div>
+          <div><a href="#event-activation" class="hover:text-[#70805D]">06 Event & Exhibition</a></div>
+        </div>
+
+
+        <div class="space-y-2.5">
+          <div class="text-[#2A3B27] font-bold uppercase tracking-wider text-[11px] mb-2">Direct Contact</div>
+          <div><a href="mailto:shakibur188@gmail.com" class="hover:text-[#70805D] font-bold">shakibur188@gmail.com</a></div>
+          <div><a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#70805D] font-bold">+880 1838-070468</a></div>
+          <div class="pt-2"><a href="/admin" target="_blank" class="text-[11px] text-[#55738D] hover:text-[#2A3B27] font-bold">Admin CMS Portal 🔐</a></div>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-[#70805D]/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+        <div>© 2026 Md. Shakibur Rahaman. All rights reserved.</div>
+        <div>Designed &amp; Engineered by <span class="text-[#2A3B27] font-bold">Md. Shakibur Rahaman</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./service-page.js"></script>
+  <script>
+    // Lead Submission for Services Page
+    const cForm = document.getElementById('consultationForm');
+    if (cForm) {
+      cForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('briefSubmitBtn');
+        const alertBox = document.getElementById('briefStatusAlert');
+        const name = document.getElementById('briefName')?.value.trim();
+        const email = document.getElementById('briefEmail')?.value.trim();
+        const phone = document.getElementById('briefPhone')?.value.trim();
+        const service = document.getElementById('briefService')?.value;
+        const message = document.getElementById('briefMessage')?.value.trim();
+
+        if (!name || !email || !message) return;
+        btn.disabled = true;
+        btn.innerHTML = '<span>Transmitting Brief...</span>';
+
+        try {
+          const res = await fetch('/api/leads', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name, email, phone: phone || 'N/A', services: service, message,
+              date: new Date().toISOString()
+            })
+          });
+
+          alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-[#70805D]/15 text-[#2A3B27] border border-[#70805D]/35 block';
+          alertBox.textContent = `✅ Thank you, ${name}! Your consultation request for "${service}" has been received. Shakibur will contact you within 24 business hours.`;
+          cForm.reset();
+        } catch (err) {
+          alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-[#70805D]/15 text-[#2A3B27] border border-[#70805D]/35 block';
+          alertBox.textContent = 'Brief received! You may also connect instantly with Shakibur via WhatsApp.';
+        } finally {
+          btn.disabled = false;
+          btn.innerHTML = '<span>Transmit Executive Project Brief</span><i class="fa-solid fa-paper-plane text-xs"></i>';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

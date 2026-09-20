@@ -3,1610 +3,1084 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Md. Shakibur Rahaman | Brand & Performance Marketing Architect | Multi-Industry Growth Specialist</title>
-  <meta name="description" content="Senior Brand & Performance Marketing Strategist with 3+ years experience scaling high-ROI revenue engines across Hospitality, Interior Design, Club Memberships, Education Agencies, Recruitment, Travel, and E-Commerce.">
-  <meta name="keywords" content="Md Shakibur Rahaman, Digital Marketing, Performance Marketing, Meta Ads Expert, Lead Generation, Hospitality Marketing, Interior Design Leads, Education Agency Marketing, Recruitment Lead Gen, E-commerce ROAS, Bangladesh Marketer">
-  <meta property="og:title" content="Md. Shakibur Rahaman | Multi-Industry Brand & Performance Architect">
-  <meta property="og:description" content="4.8x - 12.4x ROAS, 5,000+ Qualified Leads, BDT 35M+ Attributed Revenue across 7 Growth Industries.">
+  <title>Md. Shakibur Rahaman | Strategic Lead &amp; Digital Architect</title>
+  <meta name="description" content="Strategic Lead &amp; Full-Stack Digital Architect with the authority to make decisive calls, engineering high-converting branding systems, modern web platforms, commercial media, and data-driven marketing.">
+  <meta name="keywords" content="Branding, Graphics Design, Web Design, Web Development, Social Media Marketing, Videography, Photoshoot, Event Activation, Google Ads, SEO, AEO, PR, Md Shakibur Rahaman">
+  <meta name="author" content="Md. Shakibur Rahaman">
+  <meta property="og:title" content="Md. Shakibur Rahaman | Strategic Lead &amp; Digital Architect">
+  <meta property="og:description" content="Forging distinctive brand identities, high-performing web platforms, cinematic visual productions, and omnichannel growth marketing engines.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/shakibur.jpg">
+  <link rel="canonical" href="http://localhost:5500/">
+  <link rel="alternate" type="text/plain" title="LLM Context Specification" href="/llms.txt">
   
-  <!-- Tailwind CSS CDN -->
+  <!-- Single Unified Google Font: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN & DopelyColors Palette Configuration -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            brand: {
-              gold: '#D4AF37',
-              goldLight: '#F3E5AB',
-              goldDark: '#AA820A',
-              navy: '#070C18',
-              navyCard: '#0E172A',
-              navyCardSubtle: '#152238',
-              accent: '#0284C7'
-            }
+            palette: {
+              olive: '#70805D',
+              forest: '#2A3B27',
+              slate: '#55738D',
+              mist: '#96A7B6',
+              stone: '#CBC8C4'
+            },
+            canvas: '#F8F9F6'
           },
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            serif: ['"Playfair Display"', 'Georgia', 'serif']
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'monospace']
           }
         }
       }
     }
   </script>
 
-  <!-- Google Fonts & Font Awesome Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Custom Stylesheet -->
+  <!-- Custom Unified Aesthetic Stylesheet -->
   <link rel="stylesheet" href="./styles.css">
 </head>
-<body class="bg-[#070C18] text-slate-100 font-sans antialiased selection:bg-[#D4AF37] selection:text-[#070C18] relative overflow-x-hidden">
+<body class="bg-[#F8F9F6] text-[#1C2B1B] font-sans antialiased selection:bg-[#70805D] selection:text-white relative overflow-x-hidden">
 
-  <!-- Top Scroll Progress Bar -->
-  <div id="scrollProgressBar" class="fixed top-0 left-0 h-[3px] z-[60] bg-gradient-to-r from-[#D4AF37] via-amber-300 to-amber-500 w-0 transition-all duration-75"></div>
+  <!-- 0. Top Scroll Progress Bar (Scroll-time Animation) -->
+  <div id="scrollProgressBar"></div>
 
-  <!-- Ambient Luxury Glow Effects (Parallax Drift) -->
-  <div class="ambient-glow glow-1" id="glow1"></div>
-  <div class="ambient-glow glow-2" id="glow2"></div>
-  <div class="ambient-glow glow-3" id="glow3"></div>
+  <!-- 1. Interactive Ambient Light Background Canvas, Animated Mesh & Vignette -->
+  <div class="ambient-mesh-glow"></div>
+  <canvas id="ambientCanvas"></canvas>
+  <div class="ambient-vignette"></div>
 
-  <!-- NAVIGATION HEADER -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md bg-[#070C18]/80 border-b border-slate-800/80">
+    <!-- 2. FIXED NAVBAR (Ultra-Visual Glassmorphism, Mega Services Dropdown) -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#F8F9F6]/92 backdrop-blur-2xl border-b border-[#70805D]/15 transition-all duration-300 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-[#D4AF37] to-amber-200 flex items-center justify-center text-[#070C18] font-black text-lg font-serif shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+      <!-- Brand Logo / Monogram -->
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-[#70805D] to-[#2A3B27] flex items-center justify-center font-black text-white text-sm sm:text-base tracking-tight group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-[#70805D]/30 transition-all shadow-md shadow-[#70805D]/20 border border-white/20 shrink-0">
           SR
         </div>
         <div class="flex flex-col">
-          <span class="font-bold text-white tracking-tight text-base sm:text-lg group-hover:text-[#D4AF37] transition-colors">Md. Shakibur Rahaman</span>
-          <span class="text-xs text-[#D4AF37] font-medium tracking-wider uppercase">Brand & Performance Lead</span>
+          <span class="font-extrabold text-[#1C2B1B] tracking-tight text-sm sm:text-base md:text-lg group-hover:text-[#70805D] transition-colors" id="navBrandName">Md. Shakibur Rahaman</span>
+          <span class="text-[9.5px] sm:text-[10.5px] text-[#70805D] font-extrabold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
         </div>
       </a>
 
-      <!-- Desktop Nav Links -->
-      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
-        <a href="#about" class="nav-link hover:text-[#D4AF37]">Expertise</a>
-        <a href="#industries" class="nav-link hover:text-[#D4AF37]">7 Industries</a>
-        <a href="#case-studies" class="nav-link hover:text-[#D4AF37]">Case Studies</a>
-        <a href="#experience" class="nav-link hover:text-[#D4AF37]">Experience</a>
-        <a href="#skills" class="nav-link hover:text-[#D4AF37]">Skills & Honors</a>
-        <a href="#contact" class="nav-link hover:text-[#D4AF37]">Contact</a>
+      <!-- Centered Floating Pill Navigation Menu with Services Dropdown -->
+      <nav class="hidden lg:flex items-center gap-6 px-6 py-2.5 rounded-full bg-white/95 border border-[#70805D]/20 text-xs font-bold text-[#4D614A] backdrop-blur-md shadow-sm">
+        <a href="#hero" class="desktop-nav-link hover:text-[#70805D] transition-colors">Home</a>
+        <a href="#about" class="desktop-nav-link hover:text-[#70805D] transition-colors">About</a>
+        
+        <!-- SERVICES MENU ITEM WITH HOVER SUB-MENU -->
+        <div class="services-menu-item relative group">
+          <a href="/services.html" class="desktop-nav-link hover:text-[#70805D] transition-colors flex items-center gap-1.5 py-1">
+            <span>Services</span>
+            <i class="fa-solid fa-chevron-down text-[9px] text-[#70805D] transition-transform duration-200 group-hover:rotate-180"></i>
+          </a>
+          
+                    <!-- 6 Services Hover Sub-Menu Panel -->
+          <div class="services-dropdown">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-[#70805D]/15">
+              <span class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-layer-group text-[#70805D]"></i>
+                <span>Core Capabilities (6 Disciplines)</span>
+              </span>
+              <a href="/services.html" class="text-[11px] font-bold text-[#70805D] hover:underline flex items-center gap-1">
+                <span>View All Services Directory</span>
+                <i class="fa-solid fa-arrow-right text-[9px]"></i>
+              </a>
+            </div>
+
+            <div class="services-dropdown-grid grid grid-cols-2 sm:grid-cols-3 gap-2">
+              <a href="/services/graphics-design.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-bezier-curve"></i></div>
+                <div>
+                  <div class="service-sub-title ">01 Graphics & Visual Identity</div>
+                  <div class="service-sub-desc">Packaging, UI/UX & decks</div>
+                </div>
+              </a>
+              <a href="/services/web-development.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-code"></i></div>
+                <div>
+                  <div class="service-sub-title ">02 Web design & Development</div>
+                  <div class="service-sub-desc">Jamstack portals & apps</div>
+                </div>
+              </a>
+              <a href="/services/social-media-marketing.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-hashtag"></i></div>
+                <div>
+                  <div class="service-sub-title ">03 Social Media marketing</div>
+                  <div class="service-sub-desc">Viral reels & Meta ads</div>
+                </div>
+              </a>
+              <a href="/services/public-relations.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-newspaper"></i></div>
+                <div>
+                  <div class="service-sub-title ">04 Public relation & Media outreach</div>
+                  <div class="service-sub-desc">Tier-1 press & media PR</div>
+                </div>
+              </a>
+              <a href="/services/google-ads.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-chart-line"></i></div>
+                <div>
+                  <div class="service-sub-title ">05 Google ads & Intent Scaling</div>
+                  <div class="service-sub-desc">Performance Max funnels</div>
+                </div>
+              </a>
+              <a href="/services/event-activation.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-cubes"></i></div>
+                <div>
+                  <div class="service-sub-title ">06 Event activation & Exhibition</div>
+                  <div class="service-sub-desc">Expos & 3D spatial builds</div>
+                </div>
+              </a>
+            </div>
+
+            <div class="mt-3 pt-2.5 border-t border-[#70805D]/15 flex items-center justify-between text-[11px] text-[#55738D]">
+              <span>Integrated strategic leadership across all 6 disciplines</span>
+              <a href="/services.html" class="font-bold text-[#70805D] hover:text-[#2A3B27] flex items-center gap-1">
+                <span>View Full Services Directory</span>
+                <i class="fa-solid fa-chevron-right text-[8px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="#projects" class="desktop-nav-link hover:text-[#70805D] transition-colors">Projects</a>
+        <a href="#case-studies" class="desktop-nav-link hover:text-[#70805D] transition-colors">Case Studies</a>
+        <a href="#testimonials" class="desktop-nav-link hover:text-[#70805D] transition-colors">Testimonials</a>
+        <a href="#contact" class="desktop-nav-link hover:text-[#70805D] transition-colors">Contact</a>
       </nav>
 
-      <!-- Desktop Nav Actions -->
-      <div class="hidden sm:flex items-center gap-3">
-        <!-- Theme Toggle Button -->
-        <button id="themeToggle" class="w-10 h-10 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 flex items-center justify-center text-amber-400 transition-colors" title="Toggle Light / Dark Mode">
-          <i class="fa-solid fa-sun text-base"></i>
+      <!-- Right Header Actions (Button hidden on mobile view) -->
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="nav-cta-btn btn-outline-emerald text-xs hidden md:inline-flex items-center gap-2">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+        <button id="mobileMenuToggle" aria-label="Toggle Navigation" class="lg:hidden w-10 h-10 rounded-xl bg-white border border-[#70805D]/25 flex items-center justify-center text-[#2A3B27] hover:bg-[#F1F4EE] transition-colors shadow-sm focus:outline-none">
+          <i class="fa-solid fa-bars-staggered text-base"></i>
         </button>
+      </div>
+    </div>
 
-        <!-- Direct Contact CTA -->
-        <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#D4AF37] to-amber-500 hover:from-amber-400 hover:to-amber-500 text-[#070C18] font-bold text-sm shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 hover:-translate-y-0.5 transition-all">
-          Let's Connect
+    <!-- Mobile Slide-Down Navigation Menu (Enhanced Visual Layout) -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-[#70805D]/20 px-5 py-6 space-y-4 shadow-2xl max-h-[85vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-3 border-b border-[#70805D]/15">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#70805D] animate-ping"></span>
+          <span class="text-xs font-extrabold text-[#2A3B27] uppercase tracking-wider">Quick Navigation</span>
+        </div>
+        <span class="text-[11px] font-bold text-[#70805D] bg-[#70805D]/10 px-2.5 py-0.5 rounded-full">Available</span>
+      </div>
+
+      <div class="grid grid-cols-2 gap-2">
+        <a href="#hero" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE]">
+          <i class="fa-solid fa-house text-[#70805D]"></i>
+          <span>Home</span>
+        </a>
+        <a href="#about" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE]">
+          <i class="fa-solid fa-user-astronaut text-[#70805D]"></i>
+          <span>About Me</span>
+        </a>
+        <a href="#projects" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE]">
+          <i class="fa-solid fa-code-branch text-[#70805D]"></i>
+          <span>15 Projects</span>
+        </a>
+        <a href="#testimonials" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE]">
+          <i class="fa-solid fa-star text-[#F59E0B]"></i>
+          <span>Reviews</span>
         </a>
       </div>
 
-      <!-- Mobile Hamburger Button -->
-      <div class="flex items-center gap-2 lg:hidden">
-        <button id="mobileThemeToggle" class="w-9 h-9 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-amber-400">
-          <i class="fa-solid fa-sun text-sm"></i>
-        </button>
-        <button id="mobileMenuToggle" class="w-10 h-10 rounded-xl bg-slate-800/90 border border-slate-700 flex items-center justify-center text-slate-200 hover:text-white" aria-label="Toggle navigation">
-          <i class="fa-solid fa-bars text-lg"></i>
-        </button>
+            <!-- Mobile Services Accordion Block -->
+      <div class="p-3.5 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/18 space-y-2.5">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-extrabold text-[#2A3B27] flex items-center gap-1.5 uppercase tracking-wide">
+            <i class="fa-solid fa-layer-group text-[#70805D]"></i>
+            <span>6 Core Services</span>
+          </span>
+          <a href="/services.html" class="text-[11px] font-bold text-[#70805D] hover:underline">Full Directory →</a>
+        </div>
+        <div class="grid grid-cols-2 gap-1.5 pt-1 text-xs text-[#4D614A]">
+          <a href="/services/graphics-design.html" class="mobile-link p-1.5 rounded-lg hover:bg-white flex items-center gap-1.5"><i class="fa-solid fa-bezier-curve text-[10px] text-[#70805D]"></i><span>Graphics & Visual ID</span></a>
+          <a href="/services/web-development.html" class="mobile-link p-1.5 rounded-lg hover:bg-white flex items-center gap-1.5"><i class="fa-solid fa-code text-[10px] text-[#70805D]"></i><span>Web Dev & Engineering</span></a>
+          <a href="/services/social-media-marketing.html" class="mobile-link p-1.5 rounded-lg hover:bg-white flex items-center gap-1.5"><i class="fa-solid fa-hashtag text-[10px] text-[#70805D]"></i><span>Social Media (SMM)</span></a>
+          <a href="/services/public-relations.html" class="mobile-link p-1.5 rounded-lg hover:bg-white flex items-center gap-1.5"><i class="fa-solid fa-newspaper text-[10px] text-[#70805D]"></i><span>PR & Media Outreach</span></a>
+          <a href="/services/google-ads.html" class="mobile-link p-1.5 rounded-lg hover:bg-white flex items-center gap-1.5"><i class="fa-solid fa-chart-line text-[10px] text-[#70805D]"></i><span>Google Ads & Intent</span></a>
+          <a href="/services/event-activation.html" class="mobile-link p-1.5 rounded-lg hover:bg-white flex items-center gap-1.5"><i class="fa-solid fa-cubes text-[10px] text-[#70805D]"></i><span>3D Event & Stalls</span></a>
+        </div>
       </div>
 
-    </div>
-
-    <!-- Mobile Drawer -->
-    <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-800 bg-[#070C18]/95 px-6 py-6 space-y-4 backdrop-blur-xl">
-      <a href="#about" class="block text-slate-300 hover:text-[#D4AF37] font-medium py-1 mobile-link">Expertise</a>
-      <a href="#industries" class="block text-slate-300 hover:text-[#D4AF37] font-medium py-1 mobile-link">7 Industries</a>
-      <a href="#case-studies" class="block text-slate-300 hover:text-[#D4AF37] font-medium py-1 mobile-link">Case Studies</a>
-      <a href="#experience" class="block text-slate-300 hover:text-[#D4AF37] font-medium py-1 mobile-link">Experience</a>
-      <a href="#skills" class="block text-slate-300 hover:text-[#D4AF37] font-medium py-1 mobile-link">Skills & Honors</a>
-      <a href="#contact" class="block text-slate-300 hover:text-[#D4AF37] font-medium py-1 mobile-link">Contact</a>
-      <div class="pt-4 border-t border-slate-800 flex flex-col gap-3">
-        <a href="#contact" class="w-full py-2.5 rounded-xl bg-[#D4AF37] text-[#070C18] text-center font-bold text-sm mobile-link">
-          Get in Touch
+      <div class="pt-2 flex flex-col gap-2">
+        <a href="#contact" class="mobile-link btn-aesthetic-primary w-full justify-center text-xs py-3">
+          <span>Get In Touch / Project Inquiry</span>
+          <i class="fa-solid fa-paper-plane text-xs"></i>
+        </a>
+        <a href="https://wa.me/8801838070468" target="_blank" rel="noopener noreferrer" class="btn-outline-emerald w-full justify-center text-xs py-2.5">
+          <i class="fa-brands fa-whatsapp text-sm text-[#70805D]"></i>
+          <span>Direct WhatsApp</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden hero-matrix-bg">
-    <!-- Interactive Digital Marketing & Growth Analytics Animated Canvas -->
-    <canvas id="analyticsHeroCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-80"></canvas>
-
+  <!-- 3. HERO SECTION (Light Aesthetics, Fluid Typography, Strategic Points) -->
+  <section id="hero" class="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         
-        <!-- Left Content (7 Cols) -->
-        <div class="lg:col-span-7 space-y-7 text-center lg:text-left reveal-left">
-          
-          <!-- Availability Badge -->
-          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700/80 backdrop-blur-md shadow-inner">
-            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span class="text-xs sm:text-sm font-semibold text-slate-200">
-              Open to Multi-Industry Brand & Performance Leadership Roles
-            </span>
+        <!-- Left Hero Column -->
+        <div class="lg:col-span-7 space-y-6 text-left reveal-fade-left">
+          <div class="section-tag">
+            <span class="pulse-dot-olive"></span>
+            <span>HELLO, I'M</span>
           </div>
 
-          <!-- Main Heading -->
-          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
-            Scaling Modern Brands Into <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-amber-200 to-[#D4AF37]">Predictable High-ROI Revenue Engines.</span>
+          <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-[#1C2B1B] tracking-tight leading-[1.06]">
+            Md. Shakibur <br>
+            <span class="mist-gradient-text">Rahaman</span>
           </h1>
 
-          <!-- Dynamic Role Typewriter Badge -->
-          <div class="flex items-center justify-center lg:justify-start gap-2 text-base sm:text-xl font-medium text-slate-300">
-            <span class="text-[#D4AF37] font-semibold font-serif italic">Proven Mastery in:</span>
-            <span id="typewriterText" class="text-white font-bold border-r-2 border-[#D4AF37] pr-1">Hospitality & Fine Dining Growth</span>
+          <div class="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-[#2A3B27] leading-snug">
+            Building <span class="olive-gradient-text">Digital Experiences</span> &amp; Brand Systems
           </div>
 
-          <!-- Description -->
-          <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-            Full-Stack Brand & Performance Marketer with <strong class="text-slate-200">3+ years of quantified results</strong> across <strong class="text-[#D4AF37]">7 Core Growth Sectors</strong>: Hospitality (5-Star Hotels & Resorts), Luxury Interior Design, Elite Club Memberships, Education Agencies, Executive Recruitment, Travel Operators, and D2C E-Commerce. Bridging high-converting creative psychology with rigorous Meta/Google paid media attribution.
+          <!-- Dynamic Rotating Typewriter Subtitle -->
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-[#4D614A] font-semibold">
+            <span class="text-[#70805D] font-bold">&gt;</span>
+            <span id="typewriterText" class="text-[#1C2B1B]">Brand Strategy &amp; Corporate Identity Architecture</span>
+            <span class="inline-block w-2 h-4 bg-[#70805D] animate-pulse"></span>
+          </div>
+
+          <p id="heroBio" class="text-sm sm:text-base text-[#4D614A] max-w-xl leading-relaxed">
+            Strategic Lead &amp; Full-Stack Digital Architect with the authority and vision to make decisive calls, architect high-converting branding systems, engineer modern web platforms, and drive commercial growth.
           </p>
 
-          <!-- Action Buttons -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-            <a href="#case-studies" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#D4AF37] to-amber-500 hover:from-amber-400 hover:to-amber-500 text-[#070C18] font-bold text-base shadow-xl shadow-amber-500/25 hover:shadow-amber-500/40 hover:-translate-y-0.5 transition-all flex items-center gap-2.5">
-              <span>View 7 Industry Case Studies</span>
+          <!-- Key Strategic Takeaway Points ("add some points") -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+            <div class="bullet-point-item">
+              <i class="fa-solid fa-circle-check bullet-icon"></i>
+              <span>Single point of accountability across design, code &amp; media</span>
+            </div>
+            <div class="bullet-point-item">
+              <i class="fa-solid fa-circle-check bullet-icon"></i>
+              <span>15+ deployed production web platforms live globally</span>
+            </div>
+            <div class="bullet-point-item">
+              <i class="fa-solid fa-circle-check bullet-icon"></i>
+              <span>3.5x average perceived lift in brand equity &amp; valuation</span>
+            </div>
+            <div class="bullet-point-item">
+              <i class="fa-solid fa-circle-check bullet-icon"></i>
+              <span>95+ Google PageSpeed &amp; sub-second TTFB loading</span>
+            </div>
+          </div>
+
+          <!-- Hero Action Pill Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-3">
+            <a href="/services.html" class="btn-aesthetic-primary">
+              <span>Explore All 6 Services</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#projects" class="btn-pill-glass">
+              <span>View 15 Web Projects</span>
+              <i class="fa-solid fa-code text-xs text-[#70805D]"></i>
+            </a>
+          </div>
+
+          <!-- Social Links Row -->
+          <div class="flex items-center gap-4 pt-3 text-[#55738D] text-lg">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#2A3B27] transition-colors" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/md-shakibur-rahaman" target="_blank" rel="noopener noreferrer" class="hover:text-[#2A3B27] transition-colors" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://wa.me/8801838070468" target="_blank" rel="noopener noreferrer" class="hover:text-[#2A3B27] transition-colors" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:shakibur188@gmail.com" class="hover:text-[#2A3B27] transition-colors" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Right Hero Column: Portrait with Glowing Olive Aura & Floating Badges -->
+        <div class="lg:col-span-5 relative flex justify-center items-center reveal-fade-right">
+          <div class="hero-portrait-container relative w-full max-w-md">
+            
+            <!-- Glowing Olive Halo Behind Portrait -->
+            <div class="hero-olive-aura"></div>
+            <div class="hero-orbit-ring"></div>
+
+            <!-- Portrait Cutout Image -->
+            <div class="relative z-10 rounded-3xl overflow-hidden border border-[#70805D]/25 bg-white shadow-2xl shadow-[#2A3B27]/15">
+              <img src="assets/shakibur.jpg" alt="Md. Shakibur Rahaman" class="w-full h-[420px] sm:h-[460px] object-cover object-top filter contrast-105">
+            </div>
+
+            <!-- Floating Badge Top-Right: Available for Projects -->
+            <div class="floating-badge absolute -top-4 -right-3 flex items-center gap-2.5">
+              <span class="pulse-dot-olive"></span>
+              <div>
+                <div class="text-[10px] text-[#55738D] uppercase font-bold">Status</div>
+                <div class="text-xs font-extrabold text-[#2A3B27]">Available for Projects</div>
+              </div>
+            </div>
+
+            <!-- Floating Badge Mid-Right: 5+ Years Experience (Animated Counter) -->
+            <div class="floating-badge absolute top-28 -right-6 hidden sm:flex items-center gap-3">
+              <i class="fa-solid fa-award text-xl text-[#70805D]"></i>
+              <div>
+                <div class="text-base font-extrabold text-[#2A3B27] leading-tight" data-counter-target="5" data-counter-suffix="+ Years">5+ Years</div>
+                <div class="text-[10px] text-[#55738D] uppercase font-bold">Agency Leadership</div>
+              </div>
+            </div>
+
+            <!-- Floating Badge Lower-Right: 15+ Web Portals (Animated Counter) -->
+            <div class="floating-badge absolute bottom-16 -right-4 hidden sm:flex items-center gap-3">
+              <i class="fa-solid fa-code text-xl text-[#70805D]"></i>
+              <div>
+                <div class="text-base font-extrabold text-[#2A3B27] leading-tight" data-counter-target="15" data-counter-suffix="+ Portals">15+ Portals</div>
+                <div class="text-[10px] text-[#55738D] uppercase font-bold">Deployed &amp; Live</div>
+              </div>
+            </div>
+
+            <!-- Floating Bottom Code Snippet Chip -->
+            <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 z-20 w-max max-w-full">
+              <div class="code-snippet-chip shadow-md bg-white border border-[#70805D]/25 text-[#2A3B27] rounded-xl px-4 py-2 flex items-center gap-2 text-xs font-semibold">
+                <code class="text-[#70805D] font-bold">&lt;/&gt;</code>
+                <span>Building the future, one pixel &amp; line of code at a time.</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+    <!-- 4. ABOUT SECTION (Picture Removed - Prestigious Strategic Leadership Grid) -->
+  <section id="about" class="py-20 sm:py-24 border-t border-[#70805D]/15 bg-white/80 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Left: Strategic Leadership & Authority Architecture Card -->
+        <div class="lg:col-span-5 relative reveal-fade-left">
+          <div class="spotlight-card p-6 sm:p-8 bg-gradient-to-br from-[#FFFFFF] via-[#F8F9F6] to-[#F1F3ED] border border-[#70805D]/25 rounded-3xl shadow-xl space-y-6">
+            
+            <!-- Top Seal Header -->
+            <div class="flex items-center justify-between pb-4 border-b border-[#70805D]/15">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#70805D] to-[#2A3B27] flex items-center justify-center font-black text-white text-base shadow-md shadow-[#70805D]/25 border border-white/20">
+                  SR
+                </div>
+                <div>
+                  <h3 class="text-base font-extrabold text-[#1C2B1B] tracking-tight">Md. Shakibur Rahaman</h3>
+                  <div class="text-[11px] font-bold text-[#70805D] uppercase tracking-wider">Strategic Director &amp; Architect</div>
+                </div>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-[#70805D]/10 flex items-center justify-center text-[#70805D]">
+                <i class="fa-solid fa-fingerprint text-sm"></i>
+              </div>
+            </div>
+
+            <!-- Authority Statement -->
+            <div class="space-y-2">
+              <div class="text-xs uppercase font-extrabold tracking-wider text-[#55738D]">Core Philosophy</div>
+              <p class="text-xs sm:text-sm text-[#2A3B27] font-semibold leading-relaxed italic border-l-2 border-[#70805D] pl-3 py-0.5">
+                "Directing high-stakes creative systems and digital architecture from single point of accountability."
+              </p>
+            </div>
+
+            <!-- Core Competency Tags -->
+            <div class="space-y-2">
+              <div class="text-xs uppercase font-extrabold tracking-wider text-[#55738D]">Operational Focus</div>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-lg bg-white border border-[#70805D]/20 text-[11px] font-bold text-[#2A3B27] shadow-2xs">System Architecture</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white border border-[#70805D]/20 text-[11px] font-bold text-[#2A3B27] shadow-2xs">High-Converting Web Portals</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white border border-[#70805D]/20 text-[11px] font-bold text-[#2A3B27] shadow-2xs">Corporate Identity Systems</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white border border-[#70805D]/20 text-[11px] font-bold text-[#2A3B27] shadow-2xs">Full-Funnel Growth</span>
+              </div>
+            </div>
+
+            <!-- Status Pill -->
+            <div class="pt-3 border-t border-[#70805D]/15 flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2 font-bold text-[#2A3B27]">
+                <span class="pulse-dot-olive"></span>
+                <span>Active Global Projects</span>
+              </div>
+              <span class="text-[11px] font-extrabold text-[#70805D] bg-[#70805D]/10 px-2.5 py-1 rounded-full">Available Q3/Q4</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Bio Narrative & Structured Strategic Value Takeaways -->
+        <div class="lg:col-span-7 space-y-6 reveal-fade-right">
+          <div class="section-tag">
+            <i class="fa-solid fa-user-astronaut"></i>
+            <span>ABOUT ME</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-[#1C2B1B] tracking-tight leading-snug">
+            I make the decisive calls, lead strategic execution, and turn complex ideas into reality.
+          </h2>
+
+          <p class="text-sm sm:text-base text-[#4D614A] leading-relaxed">
+            I specialize in taking full ownership and making the critical strategic decisions: building modern, responsive, and performance-driven web platforms alongside bespoke branding systems. With strong decision-making clarity, typographical precision, and clean code, I engineer solutions that are both visually captivating and commercially lucrative.
+          </p>
+
+          <!-- Structured Operational Points -->
+          <div class="space-y-2.5 pt-1 pb-1">
+            <div class="bullet-point-item">
+              <i class="fa-solid fa-shield-halved bullet-icon"></i>
+              <span><strong>Decisive Strategic Ownership:</strong> Eliminates cross-agency friction by directing branding, software engineering, and acquisition campaigns under one roof.</span>
+            </div>
+            <div class="bullet-point-item">
+              <i class="fa-solid fa-bolt bullet-icon"></i>
+              <span><strong>Enterprise Performance Standards:</strong> Every web platform is custom-coded without bloat, achieving sub-second load times and 95+ PageSpeed scores.</span>
+            </div>
+            <div class="bullet-point-item">
+              <i class="fa-solid fa-award bullet-icon"></i>
+              <span><strong>Complete Asset Sovereignty:</strong> Clients retain 100% intellectual property, vector master files, clean Git repositories, and documentation.</span>
+            </div>
+          </div>
+
+          <!-- 3 Quick Metric Cards with Animated Counters -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-2">
+            <div class="spotlight-card p-4 text-center bg-white border border-[#70805D]/20 rounded-2xl shadow-xs">
+              <div class="metric-counter text-[#2A3B27]" data-counter-target="6" data-counter-suffix="+">6+</div>
+              <div class="text-[11px] text-[#55738D] uppercase mt-1 font-bold">Core Service Pillars</div>
+            </div>
+            <div class="spotlight-card p-4 text-center bg-white border border-[#70805D]/20 rounded-2xl shadow-xs">
+              <div class="metric-counter text-[#2A3B27]" data-counter-target="15" data-counter-suffix="+">15+</div>
+              <div class="text-[11px] text-[#55738D] uppercase mt-1 font-bold">Live Web Portals</div>
+            </div>
+            <div class="spotlight-card p-4 text-center bg-white border border-[#70805D]/20 rounded-2xl shadow-xs">
+              <div class="metric-counter text-[#2A3B27]" data-counter-target="300" data-counter-suffix="+">300+</div>
+              <div class="text-[11px] text-[#55738D] uppercase mt-1 font-bold">Brand Assets Designed</div>
+            </div>
+          </div>
+
+          <div class="pt-2 flex flex-wrap items-center gap-3.5">
+            <a href="/services.html" class="btn-aesthetic-primary text-xs">
+              <span>View All 6 Services on Single Page</span>
               <i class="fa-solid fa-arrow-right text-xs"></i>
             </a>
-
-            <a href="#contact" class="px-6 py-3.5 rounded-xl bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700 hover:border-slate-500 text-white font-semibold text-base transition-all flex items-center gap-2">
-              <i class="fa-solid fa-comments text-[#D4AF37]"></i>
-              <span>Request Strategy Consultation</span>
-            </a>
-
-            <a href="https://wa.me/8801838070468?text=Hello%20Shakibur,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20marketing%20project!" target="_blank" rel="noopener noreferrer" class="px-5 py-3.5 rounded-xl bg-emerald-950/40 hover:bg-emerald-900/40 border border-emerald-600/40 text-emerald-300 font-semibold text-base transition-all flex items-center gap-2">
-              <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
-              <span>WhatsApp Chat</span>
+            <a href="#contact" class="btn-outline-emerald text-xs">
+              <span>Direct Consultation</span>
             </a>
           </div>
-
-          <!-- Fast Contact Snippet -->
-          <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 text-xs sm:text-sm text-slate-400 border-t border-slate-800/80">
-            <div class="flex items-center gap-2">
-              <i class="fa-solid fa-envelope text-[#D4AF37]"></i>
-              <a href="mailto:shakibur188@gmail.com" class="hover:text-white transition-colors">shakibur188@gmail.com</a>
-            </div>
-            <div class="flex items-center gap-2">
-              <i class="fa-solid fa-phone text-[#D4AF37]"></i>
-              <a href="tel:+8801838070468" class="hover:text-white transition-colors">+880 1838-070468</a>
-            </div>
-            <div class="flex items-center gap-2">
-              <i class="fa-solid fa-location-dot text-[#D4AF37]"></i>
-              <span>Dhaka, Bangladesh</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right Side: Multi-Industry Showcase Glass Card (5 Cols) -->
-        <div class="lg:col-span-5 reveal-right relative">
-          
-          <!-- Floating Telemetry Badge 1 (Top-Left) -->
-          <div class="absolute -top-5 -left-4 z-20 px-3.5 py-1.5 rounded-2xl bg-[#0B132B]/95 border border-sky-500/40 backdrop-blur-xl shadow-2xl flex items-center gap-2 animate-float-slow text-xs font-bold text-sky-300">
-            <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
-            <i class="fa-solid fa-chart-line text-sky-400"></i>
-            <span>12.4x Peak ROAS</span>
-          </div>
-
-          <!-- Floating Telemetry Badge 2 (Top-Right) -->
-          <div class="hidden sm:flex absolute -top-5 -right-3 z-20 px-3 py-1.5 rounded-xl bg-slate-900/95 border border-emerald-500/40 text-emerald-400 text-xs font-semibold items-center gap-1.5 backdrop-blur-md shadow-xl animate-float-reverse">
-            <i class="fa-solid fa-circle-check text-xs"></i>
-            <span>Meta CAPI Synced</span>
-          </div>
-
-          <!-- Floating Telemetry Badge 3 (Bottom-Right) -->
-          <div class="absolute -bottom-5 -right-3 z-20 px-3.5 py-1.5 rounded-2xl bg-[#0B132B]/95 border border-[#D4AF37]/40 backdrop-blur-xl shadow-2xl flex items-center gap-2 animate-float-slow text-xs font-bold text-amber-300">
-            <span class="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-            <i class="fa-solid fa-bullseye text-[#D4AF37]"></i>
-            <span>5,000+ Qualified Leads</span>
-          </div>
-
-          <div class="relative mx-auto max-w-md lg:max-w-none">
-            
-            <!-- Glow underlay -->
-            <div class="absolute -inset-1 bg-gradient-to-r from-[#D4AF37] via-sky-500 to-blue-600 rounded-3xl blur-xl opacity-30 animate-pulse-glow"></div>
-
-            <!-- Main Profile & Metrics Glass Card -->
-            <div class="relative bg-slate-900/90 border border-slate-700/80 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl space-y-6">
-              
-              <!-- Card Header: Profile Snapshot -->
-              <div class="flex items-center gap-4">
-                <div class="relative">
-                  <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-[#D4AF37] via-amber-300 to-amber-600 p-0.5 shadow-lg shadow-amber-500/20">
-                    <div class="w-full h-full bg-slate-950 rounded-2xl flex items-center justify-center text-2xl font-serif font-black text-[#D4AF37]">
-                      SR
-                    </div>
-                  </div>
-                  <span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-emerald-500 border-2 border-slate-900 flex items-center justify-center text-[10px] text-white">
-                    <i class="fa-solid fa-check"></i>
-                  </span>
-                </div>
-                <div>
-                  <h3 class="font-bold text-white text-lg">Md. Shakibur Rahaman</h3>
-                  <p class="text-xs text-[#D4AF37] font-medium">Brand & Performance Marketing Lead</p>
-                  <p class="text-xs text-slate-400">Hotel Sarina • Ex-Renaissance (Marriott) • B2B & D2C</p>
-                </div>
-              </div>
-
-              <!-- Quick Highlight Badge Bar -->
-              <div class="grid grid-cols-2 gap-3">
-                <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800">
-                  <div class="text-xs text-slate-400 mb-1">Peak Campaign ROAS</div>
-                  <div class="text-xl sm:text-2xl font-black text-amber-300">4.8x – 12.4x</div>
-                  <div class="text-[11px] text-emerald-400 flex items-center gap-1 mt-0.5">
-                    <i class="fa-solid fa-arrow-trend-up"></i> Meta & Google Ads
-                  </div>
-                </div>
-
-                <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800">
-                  <div class="text-xs text-slate-400 mb-1">High-Intent Leads</div>
-                  <div class="text-xl sm:text-2xl font-black text-emerald-400">5,000+</div>
-                  <div class="text-[11px] text-slate-400 flex items-center gap-1 mt-0.5">
-                    <i class="fa-solid fa-bullseye text-[#D4AF37]"></i> Verified Conversion
-                  </div>
-                </div>
-
-                <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800">
-                  <div class="text-xs text-slate-400 mb-1">Attributed Revenue</div>
-                  <div class="text-xl sm:text-2xl font-black text-sky-400">BDT 35M+</div>
-                  <div class="text-[11px] text-slate-400 flex items-center gap-1 mt-0.5">
-                    <i class="fa-solid fa-sack-dollar text-sky-400"></i> Client GMV / Pipelines
-                  </div>
-                </div>
-
-                <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800">
-                  <div class="text-xs text-slate-400 mb-1">Industry Verticals</div>
-                  <div class="text-xl sm:text-2xl font-black text-[#D4AF37]">7 Sectors</div>
-                  <div class="text-[11px] text-amber-400/90 flex items-center gap-1 mt-0.5">
-                    <i class="fa-solid fa-layer-group"></i> Proven Track Record
-                  </div>
-                </div>
-              </div>
-
-              <!-- Industry Badges Grid -->
-              <div class="pt-2">
-                <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2.5">Domain Coverage</div>
-                <div class="flex flex-wrap gap-1.5">
-                  <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-amber-300 text-xs font-medium border border-slate-700">Hospitality & Dining</span>
-                  <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-sky-300 text-xs font-medium border border-slate-700">Interior & Architecture</span>
-                  <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 text-xs font-medium border border-slate-700">Club Memberships</span>
-                  <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-emerald-300 text-xs font-medium border border-slate-700">Education Agencies</span>
-                  <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-rose-300 text-xs font-medium border border-slate-700">Recruitment & Manpower</span>
-                  <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-cyan-300 text-xs font-medium border border-slate-700">Travel & Tours</span>
-                  <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-yellow-300 text-xs font-medium border border-slate-700">D2C E-Commerce</span>
-                </div>
-              </div>
-
-              <!-- Quick Verification Footer -->
-              <div class="p-3 rounded-xl bg-amber-500/10 border border-[#D4AF37]/30 flex items-center justify-between text-xs">
-                <span class="text-slate-300 flex items-center gap-2">
-                  <i class="fa-solid fa-trophy text-[#D4AF37]"></i> 4x Industry Awards Winner
-                </span>
-                <a href="#industries" class="text-[#D4AF37] font-semibold hover:underline flex items-center gap-1">
-                  Explore Sectors <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                </a>
-              </div>
-
-            </div>
-
-          </div>
         </div>
 
       </div>
-
     </div>
   </section>
 
-  <!-- 7 INDUSTRIES SHOWCASE BANNER -->
-  <section id="industries" class="border-y border-slate-800/80 bg-slate-900/40 py-16 relative reveal-on-scroll">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+  <!-- 5. WHAT I DO - 6 SPECIALIZED SERVICES (Hydrated Dynamically with Points & Links) -->
+  <section id="services" class="py-24 border-t border-[#70805D]/15 bg-[#F1F3ED]/60 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto space-y-3">
-        <span class="px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-[#D4AF37]/30 text-[#D4AF37] font-semibold text-xs uppercase tracking-widest">
-          Industry Scope
-        </span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-          Delivering Measurable ROI Across <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-amber-200">7 Core Verticals</span>
-        </h2>
-        <p class="text-sm text-slate-400">
-          Every industry requires tailored audience psychological triggers, customized ad funnels, and CRM routing to turn ad spend into high-ticket closures.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 text-center">
-        
-        <!-- 1. Hospitality -->
-        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 hover:border-[#D4AF37]/50 transition-all stagger-1 reveal-scale group">
-          <div class="w-10 h-10 rounded-xl bg-amber-500/15 text-[#D4AF37] flex items-center justify-center text-lg mx-auto mb-2.5 group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-hotel"></i>
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 reveal-on-scroll">
+        <div>
+          <div class="section-tag">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>WHAT I DIRECT</span>
           </div>
-          <h4 class="font-bold text-white text-xs sm:text-sm">Hospitality & Dining</h4>
-          <p class="text-[11px] text-slate-400 mt-1">5-Star Banquets, Rooms & Buffets</p>
-        </div>
-
-        <!-- 2. Interior -->
-        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 hover:border-sky-500/50 transition-all stagger-2 reveal-scale group">
-          <div class="w-10 h-10 rounded-xl bg-sky-500/15 text-sky-400 flex items-center justify-center text-lg mx-auto mb-2.5 group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-couch"></i>
-          </div>
-          <h4 class="font-bold text-white text-xs sm:text-sm">Interior & Architecture</h4>
-          <p class="text-[11px] text-slate-400 mt-1">High-Ticket Renovations & Fits</p>
-        </div>
-
-        <!-- 3. Club Membership -->
-        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 hover:border-purple-500/50 transition-all stagger-3 reveal-scale group">
-          <div class="w-10 h-10 rounded-xl bg-purple-500/15 text-purple-400 flex items-center justify-center text-lg mx-auto mb-2.5 group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-gem"></i>
-          </div>
-          <h4 class="font-bold text-white text-xs sm:text-sm">Private Club Memberships</h4>
-          <p class="text-[11px] text-slate-400 mt-1">Elite HNW Member Signups</p>
-        </div>
-
-        <!-- 4. Education -->
-        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 hover:border-emerald-500/50 transition-all stagger-4 reveal-scale group">
-          <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-lg mx-auto mb-2.5 group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-user-graduate"></i>
-          </div>
-          <h4 class="font-bold text-white text-xs sm:text-sm">Education & Study Abroad</h4>
-          <p class="text-[11px] text-slate-400 mt-1">Student Intake Lead Gen</p>
-        </div>
-
-        <!-- 5. Recruitment -->
-        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 hover:border-rose-500/50 transition-all stagger-5 reveal-scale group">
-          <div class="w-10 h-10 rounded-xl bg-rose-500/15 text-rose-400 flex items-center justify-center text-lg mx-auto mb-2.5 group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-briefcase"></i>
-          </div>
-          <h4 class="font-bold text-white text-xs sm:text-sm">Recruiting & Staffing</h4>
-          <p class="text-[11px] text-slate-400 mt-1">Corporate Client Pipelines</p>
-        </div>
-
-        <!-- 6. Travel -->
-        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 hover:border-cyan-500/50 transition-all stagger-6 reveal-scale group">
-          <div class="w-10 h-10 rounded-xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center text-lg mx-auto mb-2.5 group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-plane-departure"></i>
-          </div>
-          <h4 class="font-bold text-white text-xs sm:text-sm">Travel & Tour Operators</h4>
-          <p class="text-[11px] text-slate-400 mt-1">Holiday Booking Inquiries</p>
-        </div>
-
-        <!-- 7. E-Commerce -->
-        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 hover:border-amber-400/50 transition-all stagger-1 reveal-scale group col-span-2 md:col-span-4 lg:col-span-1">
-          <div class="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-300 flex items-center justify-center text-lg mx-auto mb-2.5 group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <h4 class="font-bold text-white text-xs sm:text-sm">D2C E-Commerce</h4>
-          <p class="text-[11px] text-slate-400 mt-1">Catalog Scaling & ROAS</p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ABOUT & 4-PILLAR GROWTH FRAMEWORK -->
-  <section id="about" class="py-24 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-      
-      <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto space-y-4 reveal-on-scroll">
-        <span class="px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-[#D4AF37]/30 text-[#D4AF37] font-semibold text-xs uppercase tracking-widest">
-          Growth Philosophy
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-          The Full-Funnel <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-amber-200">Marketing Framework</span>
-        </h2>
-        <p class="text-base sm:text-lg text-slate-400">
-          Whether scaling BDT 500k luxury interior contracts, student study-abroad counseling leads, or D2C checkout purchases, the core growth mechanics remain universally rigorous.
-        </p>
-      </div>
-
-      <!-- 2-Column Story & 4 Strategic Pillars -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        
-        <!-- Left: Narrative -->
-        <div class="lg:col-span-6 space-y-6 text-slate-300 leading-relaxed text-base reveal-left">
-          <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 space-y-4">
-            <h3 class="text-xl font-bold text-white flex items-center gap-2.5">
-              <i class="fa-solid fa-chart-pie text-[#D4AF37]"></i> Why My Approach Drives Scalable ROI
-            </h3>
-            <p>
-              In competitive markets across Bangladesh and global channels, generic advertising burns budget. True marketing efficiency requires <strong class="text-white">segment-specific buyer psychology</strong>: knowing exactly what triggers a homeowner to request an interior consultation, what drives a family to apply for a private club membership, or what convinces a student to register for overseas university counseling.
-            </p>
-            <p>
-              I take end-to-end ownership: creative direction (Canva/Photoshop & short-form video scripting), audience architecture (lookalikes, interest clusters, geo-fencing), technical tracking (GA4, Meta Pixel custom events, GTM), and direct WhatsApp / CRM lead routing to guarantee fast sales conversion.
-            </p>
-          </div>
-
-          <!-- Academic Foundation -->
-          <div class="p-6 rounded-3xl bg-slate-900/40 border border-slate-800/80 flex items-start gap-4 stagger-2 reveal-scale">
-            <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] text-xl shrink-0">
-              <i class="fa-solid fa-graduation-cap"></i>
-            </div>
-            <div>
-              <div class="text-xs text-[#D4AF37] font-semibold uppercase tracking-wider">Education & Methodological Rigor</div>
-              <h4 class="font-bold text-white text-base">B.Sc. in Tourism & Hospitality Management (THM)</h4>
-              <p class="text-sm text-slate-400">Daffodil International University (DIU) • CGPA 3.36 / 4.00</p>
-              <p class="text-xs text-slate-500 mt-1">Deep foundation in consumer behavior, service operations economics, and client relationship management.</p>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right: 4 Strategic Pillars -->
-        <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4 reveal-right">
-          
-          <!-- Pillar 1 -->
-          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-[#D4AF37]/50 transition-all group stagger-1 reveal-scale">
-            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-[#D4AF37] flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-crosshairs"></i>
-            </div>
-            <h4 class="text-base font-bold text-white mb-2">1. Precision Audience Clustering</h4>
-            <p class="text-xs text-slate-400 leading-relaxed">
-              Targeting high-net-worth homeowners, corporate HR directors, aspiring study-abroad candidates, and affluent club prospects with custom lookalikes.
-            </p>
-          </div>
-
-          <!-- Pillar 2 -->
-          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-sky-500/50 transition-all group stagger-2 reveal-scale">
-            <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
-            </div>
-            <h4 class="text-base font-bold text-white mb-2">2. High-Converting Creative Direction</h4>
-            <p class="text-xs text-slate-400 leading-relaxed">
-              Producing visual assets, 3D render spotlights, video reels, and persuasive ad copy designed to stop the scroll and build immediate authority.
-            </p>
-          </div>
-
-          <!-- Pillar 3 -->
-          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 transition-all group stagger-3 reveal-scale">
-            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-funnel-dollar"></i>
-            </div>
-            <h4 class="text-base font-bold text-white mb-2">3. Direct Booking & Lead Routing</h4>
-            <p class="text-xs text-slate-400 leading-relaxed">
-              Eliminating funnel leakage with direct WhatsApp concierge handoffs, fast mobile landing hubs, and automated instant lead follow-up.
-            </p>
-          </div>
-
-          <!-- Pillar 4 -->
-          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-purple-500/50 transition-all group stagger-4 reveal-scale">
-            <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-chart-line"></i>
-            </div>
-            <h4 class="text-base font-bold text-white mb-2">4. Granular Attribution & Analytics</h4>
-            <p class="text-xs text-slate-400 leading-relaxed">
-              Advanced tracking via Meta Pixel custom events, Google Analytics 4, and dynamic Excel ROI modeling to ensure zero ad budget waste.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FEATURED 7 CASE STUDIES & CAMPAIGNS -->
-  <section id="case-studies" class="py-24 bg-slate-950/60 border-y border-slate-800/80 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-      
-      <!-- Section Header -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 reveal-on-scroll">
-        <div class="space-y-3">
-          <span class="px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-[#D4AF37]/30 text-[#D4AF37] font-semibold text-xs uppercase tracking-widest">
-            Portfolio & Case Studies
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Multi-Industry <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-amber-200">Campaign Showcases</span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-[#1C2B1B] tracking-tight mt-2">
+            Services That I Direct
           </h2>
-          <p class="text-base text-slate-400 max-w-xl">
-            Real-world marketing architectures across Hospitality, Interior, Club Membership, Education, Recruitment, Travel, and E-Commerce. Click any card to inspect the blueprint.
+          <p class="text-xs sm:text-sm text-[#4D614A] mt-2 max-w-2xl">
+            Surgical execution across 6 integrated pillars. Click any card to inspect full deliverable points or browse the consolidated single-page directory.
           </p>
         </div>
 
-        <!-- Filter Buttons -->
-        <div class="flex flex-wrap gap-2" id="filterTabs">
-          <button data-filter="all" class="filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-[#D4AF37] text-[#070C18] shadow-md">All Sectors</button>
-          <button data-filter="hospitality" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700">Hospitality & Travel</button>
-          <button data-filter="interior" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700">Interior & Architecture</button>
-          <button data-filter="membership" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700">Club Memberships</button>
-          <button data-filter="education" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700">Education & Recruitment</button>
-          <button data-filter="ecommerce" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700">D2C E-Commerce</button>
-        </div>
+        <a href="/services.html" class="btn-aesthetic-primary text-xs self-start md:self-auto">
+          <span>Open Single Services Page</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
       </div>
 
-      <!-- Case Studies Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="caseStudiesGrid">
-        
-        <!-- Case 1: Hotel Sarina & Travel Packages -->
-        <div class="case-card rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-[#D4AF37]/60 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-xl group reveal-scale stagger-1" data-category="hospitality" data-id="1">
-          <div class="p-6 sm:p-7 space-y-5">
-            
-            <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-amber-500/15 border border-[#D4AF37]/40 text-[#D4AF37] text-xs font-semibold">
-                Hospitality & Luxury Travel
-              </span>
-              <span class="text-xs text-slate-400 font-mono">Hotel Sarina Dhaka</span>
-            </div>
-
-            <div>
-              <h3 class="text-xl font-bold text-white group-hover:text-[#D4AF37] transition-colors">
-                5-Star Festive & Banquet Direct Revenue Engine
-              </h3>
-              <p class="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-2">
-                Multi-channel Meta Ads and influencer campaign driving corporate banquets, Ramadan buffets, and international holiday tour packages.
-              </p>
-            </div>
-
-            <!-- Key Metric Pills -->
-            <div class="grid grid-cols-3 gap-2 py-2 border-y border-slate-800 text-center">
-              <div>
-                <div class="text-base font-bold text-emerald-400">+42%</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Direct Bookings</div>
-              </div>
-              <div>
-                <div class="text-base font-bold text-amber-300">7.8x</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Meta ROAS</div>
-              </div>
-              <div>
-                <div class="text-base font-bold text-sky-400">320k+</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Target Reach</div>
-              </div>
-            </div>
-
-            <div class="flex flex-wrap gap-1.5">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Meta Ads</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">WhatsApp Lead Gen</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Hospitality PR</span>
-            </div>
-
-          </div>
-
-          <div class="px-6 pb-6 pt-0">
-            <button class="open-case-modal w-full py-2.5 rounded-xl bg-slate-800 hover:bg-[#D4AF37] text-slate-200 hover:text-[#070C18] text-xs font-bold transition-all flex items-center justify-center gap-2" data-id="1">
-              <span>Inspect Campaign Blueprint</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Case 2: Luxury Interior Design & Architecture -->
-        <div class="case-card rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-sky-400/60 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-xl group reveal-scale stagger-2" data-category="interior" data-id="2">
-          <div class="p-6 sm:p-7 space-y-5">
-            
-            <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-sky-500/15 border border-sky-400/40 text-sky-300 text-xs font-semibold">
-                Interior & Architecture
-              </span>
-              <span class="text-xs text-slate-400 font-mono">Luxury Residential & Office</span>
-            </div>
-
-            <div>
-              <h3 class="text-xl font-bold text-white group-hover:text-sky-300 transition-colors">
-                High-Ticket Interior Fitout & Renovation Lead Engine
-              </h3>
-              <p class="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-2">
-                Geo-fenced acquisition targeting premium apartment buyers in Gulshan, Banani, Dhanmondi, and Uttara for high-margin full-home interiors.
-              </p>
-            </div>
-
-            <!-- Key Metric Pills -->
-            <div class="grid grid-cols-3 gap-2 py-2 border-y border-slate-800 text-center">
-              <div>
-                <div class="text-base font-bold text-emerald-400">12.4x</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Pipeline ROAS</div>
-              </div>
-              <div>
-                <div class="text-base font-bold text-amber-300">BDT 18M+</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Pipeline Value</div>
-              </div>
-              <div>
-                <div class="text-base font-bold text-sky-400">78 Leads</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Qualified Consults</div>
-              </div>
-            </div>
-
-            <div class="flex flex-wrap gap-1.5">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">3D Render Ads</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">High-Ticket Funnel</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Geo-Radius Targeting</span>
-            </div>
-
-          </div>
-
-          <div class="px-6 pb-6 pt-0">
-            <button class="open-case-modal w-full py-2.5 rounded-xl bg-slate-800 hover:bg-[#D4AF37] text-slate-200 hover:text-[#070C18] text-xs font-bold transition-all flex items-center justify-center gap-2" data-id="2">
-              <span>Inspect Campaign Blueprint</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Case 3: Private Club & Lifestyle Membership -->
-        <div class="case-card rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-purple-400/60 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-xl group reveal-scale stagger-3" data-category="membership" data-id="3">
-          <div class="p-6 sm:p-7 space-y-5">
-            
-            <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-purple-500/15 border border-purple-400/40 text-purple-300 text-xs font-semibold">
-                Club Memberships
-              </span>
-              <span class="text-xs text-slate-400 font-mono">Exclusive Lifestyle Club</span>
-            </div>
-
-            <div>
-              <h3 class="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
-                Private Elite Club & Lifestyle Membership Acquisition
-              </h3>
-              <p class="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-2">
-                Exclusivity-driven Meta paid acquisition targeting C-level executives, business founders, and diplomats for private club memberships.
-              </p>
-            </div>
-
-            <!-- Key Metric Pills -->
-            <div class="grid grid-cols-3 gap-2 py-2 border-y border-slate-800 text-center">
-              <div>
-                <div class="text-base font-bold text-emerald-400">340+</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">HNW Applications</div>
-              </div>
-              <div>
-                <div class="text-base font-bold text-amber-300">94%</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Approval Rate</div>
-              </div>
-              <div>
-                <div class="text-base font-bold text-sky-400">6.8x</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Campaign ROAS</div>
-              </div>
-            </div>
-
-            <div class="flex flex-wrap gap-1.5">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">HNW Targeting</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Gated Application</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">VIP Concierge</span>
-            </div>
-
-          </div>
-
-          <div class="px-6 pb-6 pt-0">
-            <button class="open-case-modal w-full py-2.5 rounded-xl bg-slate-800 hover:bg-[#D4AF37] text-slate-200 hover:text-[#070C18] text-xs font-bold transition-all flex items-center justify-center gap-2" data-id="3">
-              <span>Inspect Campaign Blueprint</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Case 4: Global Education Agency & Study Abroad -->
-        <div class="case-card rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-emerald-500/60 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-xl group reveal-scale stagger-1" data-category="education" data-id="4">
-          <div class="p-6 sm:p-7 space-y-5">
-            
-            <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/40 text-emerald-300 text-xs font-semibold">
-                Education & Study Abroad
-              </span>
-              <span class="text-xs text-slate-400 font-mono">Global University Intake</span>
-            </div>
-
-            <div>
-              <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
-                Overseas Education & Student Visa Recruitment Funnel
-              </h3>
-              <p class="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-2">
-                Multi-stage lead generation funnel for UK, USA, Canada, and Australia university intakes, converting student leads into counseling sessions.
-              </p>
-            </div>
-
-            <!-- Key Metric Pills -->
-            <div class="grid grid-cols-3 gap-2 py-2 border-y border-slate-800 text-center">
-              <div>
-                <div class="text-base font-bold text-emerald-400">2,400+</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Student Leads</div>
-              </div>
-              <div>
-                <div class="text-base font-bold text-amber-300">-45%</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Cost Per Lead</div>
-              </div>
-              <div>
-                <div class="text-base font-bold text-sky-400">320</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Enrolled Intakes</div>
-              </div>
-            </div>
-
-            <div class="flex flex-wrap gap-1.5">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Intake Campaigns</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Assessment Quiz</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">WhatsApp Nurture</span>
-            </div>
-
-          </div>
-
-          <div class="px-6 pb-6 pt-0">
-            <button class="open-case-modal w-full py-2.5 rounded-xl bg-slate-800 hover:bg-[#D4AF37] text-slate-200 hover:text-[#070C18] text-xs font-bold transition-all flex items-center justify-center gap-2" data-id="4">
-              <span>Inspect Campaign Blueprint</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Case 5: Recruiting & Manpower Staffing Agency -->
-        <div class="case-card rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-rose-400/60 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-xl group reveal-scale stagger-2" data-category="education" data-id="5">
-          <div class="p-6 sm:p-7 space-y-5">
-            
-            <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-rose-500/15 border border-rose-400/40 text-rose-300 text-xs font-semibold">
-                Recruiting & Staffing
-              </span>
-              <span class="text-xs text-slate-400 font-mono">B2B Corporate Clients</span>
-            </div>
-
-            <div>
-              <h3 class="text-xl font-bold text-white group-hover:text-rose-300 transition-colors">
-                Executive Headhunting & B2B Manpower Acquisition
-              </h3>
-              <p class="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-2">
-                B2B acquisition targeting Managing Directors and HR Heads to sign corporate recruitment retainers and executive staffing contracts.
-              </p>
-            </div>
-
-            <!-- Key Metric Pills -->
-            <div class="grid grid-cols-3 gap-2 py-2 border-y border-slate-800 text-center">
-              <div>
-                <div class="text-base font-bold text-emerald-400">160+</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">B2B Contracts</div>
-              </div>
-              <div>
-                <div class="text-base font-bold text-amber-300">4.5x</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Pipeline ROAS</div>
-              </div>
-              <div>
-                <div class="text-base font-bold text-sky-400">28 Days</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Avg Placement</div>
-              </div>
-            </div>
-
-            <div class="flex flex-wrap gap-1.5">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">B2B Lead Gen</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">LinkedIn & Meta Ads</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Corporate Retainers</span>
-            </div>
-
-          </div>
-
-          <div class="px-6 pb-6 pt-0">
-            <button class="open-case-modal w-full py-2.5 rounded-xl bg-slate-800 hover:bg-[#D4AF37] text-slate-200 hover:text-[#070C18] text-xs font-bold transition-all flex items-center justify-center gap-2" data-id="5">
-              <span>Inspect Campaign Blueprint</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Case 6: D2C E-Commerce Brand Growth -->
-        <div class="case-card rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-amber-400/60 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-xl group reveal-scale stagger-3" data-category="ecommerce" data-id="6">
-          <div class="p-6 sm:p-7 space-y-5">
-            
-            <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-amber-500/15 border border-[#D4AF37]/40 text-[#D4AF37] text-xs font-semibold">
-                D2C E-Commerce
-              </span>
-              <span class="text-xs text-slate-400 font-mono">Retail & Fashion Brand</span>
-            </div>
-
-            <div>
-              <h3 class="text-xl font-bold text-white group-hover:text-amber-300 transition-colors">
-                Direct-to-Consumer Catalog Scaling & ROAS Maximization
-              </h3>
-              <p class="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-2">
-                Meta Advantage+ Shopping, dynamic catalog ads, and abandoned-cart retargeting loops driving monthly GMV expansion with lower CAC.
-              </p>
-            </div>
-
-            <!-- Key Metric Pills -->
-            <div class="grid grid-cols-3 gap-2 py-2 border-y border-slate-800 text-center">
-              <div>
-                <div class="text-base font-bold text-emerald-400">8.6x</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Catalog ROAS</div>
-              </div>
-              <div>
-                <div class="text-base font-bold text-amber-300">BDT 4.8M</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Monthly GMV</div>
-              </div>
-              <div>
-                <div class="text-base font-bold text-sky-400">-32%</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Blended CAC</div>
-              </div>
-            </div>
-
-            <div class="flex flex-wrap gap-1.5">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Advantage+ Shopping</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Pixel Purchase API</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Cart Retargeting</span>
-            </div>
-
-          </div>
-
-          <div class="px-6 pb-6 pt-0">
-            <button class="open-case-modal w-full py-2.5 rounded-xl bg-slate-800 hover:bg-[#D4AF37] text-slate-200 hover:text-[#070C18] text-xs font-bold transition-all flex items-center justify-center gap-2" data-id="6">
-              <span>Inspect Campaign Blueprint</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Case 7: Renaissance Marriott & ASAP Tech -->
-        <div class="case-card rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-sky-400/60 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-xl group reveal-scale stagger-1 md:col-span-2 lg:col-span-3" data-category="hospitality education" data-id="7">
-          <div class="p-6 sm:p-7 space-y-5">
-            
-            <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-sky-500/15 border border-sky-400/40 text-sky-300 text-xs font-semibold">
-                Renaissance Marriott & ASAP Solutions Tech
-              </span>
-              <span class="text-xs text-slate-400 font-mono">Enterprise Brand & SaaS Leads</span>
-            </div>
-
-            <div>
-              <h3 class="text-xl font-bold text-white group-hover:text-sky-300 transition-colors">
-                Global Luxury MarCom & Enterprise B2B SaaS Pipeline
-              </h3>
-              <p class="text-xs sm:text-sm text-slate-400 mt-2">
-                Proven track record maintaining Marriott International global brand matrix, Sunday Brunch lifestyle campaigns (85% occupancy), and generating 180+ enterprise software leads (3x Award Winner).
-              </p>
-            </div>
-
-            <!-- Key Metric Pills -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 py-2 border-y border-slate-800 text-center">
-              <div>
-                <div class="text-base font-bold text-emerald-400">85%</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Sunday Brunch</div>
-              </div>
-              <div>
-                <div class="text-base font-bold text-amber-300">180+</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">B2B SaaS Leads</div>
-              </div>
-              <div>
-                <div class="text-base font-bold text-sky-400">+45%</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">MarCom Eng.</div>
-              </div>
-              <div>
-                <div class="text-base font-bold text-[#D4AF37]">4x Awards</div>
-                <div class="text-[10px] text-slate-400 uppercase font-medium">Honors Won</div>
-              </div>
-            </div>
-
-            <div class="flex flex-wrap gap-1.5">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Marriott Brand Guidelines</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">B2B Content Funnels</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Award-Winning Strategy</span>
-            </div>
-
-          </div>
-
-          <div class="px-6 pb-6 pt-0">
-            <button class="open-case-modal w-full py-2.5 rounded-xl bg-slate-800 hover:bg-[#D4AF37] text-slate-200 hover:text-[#070C18] text-xs font-bold transition-all flex items-center justify-center gap-2" data-id="7">
-              <span>Inspect Campaign Blueprint</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </button>
-          </div>
-        </div>
-
+      <!-- 3x3 Services Grid (Hydrated Dynamically with Points via app.js) -->
+      <div id="servicesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-grid">
+        <!-- Rendered by app.js with points & direct links -->
       </div>
 
     </div>
   </section>
 
-  <!-- CAREER TIMELINE & EXPERIENCE -->
-  <section id="experience" class="py-24 bg-slate-950/60 border-y border-slate-800/80 relative">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+  <!-- 6. FEATURED PROJECTS - 15 LIVE WEB PROJECTS -->
+  <section id="projects" class="py-24 border-t border-[#70805D]/15 bg-[#F8F9F6] relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Header -->
-      <div class="text-center space-y-4 reveal-on-scroll">
-        <span class="px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-[#D4AF37]/30 text-[#D4AF37] font-semibold text-xs uppercase tracking-widest">
-          Career Trajectory
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-          Professional Work <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-amber-200">Experience</span>
-        </h2>
-        <p class="text-base text-slate-400 max-w-xl mx-auto">
-          A track record of high-performance execution across international luxury brands, hospitality, and digital tech.
-        </p>
-      </div>
-
-      <!-- Vertical Timeline -->
-      <div class="relative border-l-2 border-[#D4AF37]/40 ml-4 sm:ml-8 space-y-12 pl-6 sm:pl-10">
-        
-        <!-- Experience 1: Hotel Sarina Dhaka -->
-        <div class="relative group reveal-on-scroll">
-          <!-- Connector Dot -->
-          <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-[#D4AF37] border-4 border-[#070C18] shadow-lg shadow-amber-500/50 flex items-center justify-center text-[9px] text-[#070C18] font-bold">
-            <i class="fa-solid fa-briefcase"></i>
-          </div>
-
-          <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-[#D4AF37]/60 transition-all space-y-4">
-            
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-              <div>
-                <span class="text-xs font-bold text-[#D4AF37] uppercase tracking-wider">March 2024 – Present • Dhaka, Bangladesh</span>
-                <h3 class="text-2xl font-extrabold text-white">Executive, Brand & Marketing</h3>
-                <h4 class="text-base font-semibold text-amber-300">Hotel Sarina Dhaka (5-Star Luxury Landmark)</h4>
-              </div>
-              <span class="self-start sm:self-auto px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold border border-emerald-500/30">
-                Current Role
-              </span>
-            </div>
-
-            <p class="text-sm text-slate-300 leading-relaxed">
-              Leading the 360-degree brand strategy, high-budget multi-channel digital acquisition, and banquet event rollouts for one of Dhaka's premier 5-star hospitality landmarks.
-            </p>
-
-            <div class="space-y-2 pt-2">
-              <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400">Key Contributions & Accomplishments:</h5>
-              <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
-                <li class="flex items-start gap-2.5">
-                  <i class="fa-solid fa-check text-[#D4AF37] mt-1 shrink-0"></i>
-                  <span>Spearheaded Meta Ads media buying, generating a <strong>42% surge in direct festive bookings</strong> with 7.8x return on ad spend.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <i class="fa-solid fa-check text-[#D4AF37] mt-1 shrink-0"></i>
-                  <span>Orchestrated high-visibility campaigns for signature outlets including <em>Amrit Fine Dining</em>, <em>Summerfield</em>, and international food festivals.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <i class="fa-solid fa-check text-[#D4AF37] mt-1 shrink-0"></i>
-                  <span>Directed influencer marketing, local media press features, and high-converting seasonal campaign videos on social channels.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <i class="fa-solid fa-check text-[#D4AF37] mt-1 shrink-0"></i>
-                  <span>Honored with the prestigious <strong>Pillar of Trust Award (Jan 2026)</strong> and <strong>Dedication Dynamo Award (Dec 2025)</strong> for stellar cross-functional performance.</span>
-                </li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Experience 2: Renaissance Dhaka Gulshan (Marriott) -->
-        <div class="relative group reveal-on-scroll">
-          <!-- Connector Dot -->
-          <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-sky-400 border-4 border-[#070C18] shadow-lg shadow-sky-500/50 flex items-center justify-center text-[9px] text-[#070C18] font-bold">
-            <i class="fa-solid fa-hotel"></i>
-          </div>
-
-          <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-sky-400/60 transition-all space-y-4">
-            
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-              <div>
-                <span class="text-xs font-bold text-sky-400 uppercase tracking-wider">June 2023 – February 2024 • Gulshan, Dhaka</span>
-                <h3 class="text-2xl font-extrabold text-white">Associate, Marketing Communication</h3>
-                <h4 class="text-base font-semibold text-slate-200">Renaissance Dhaka Gulshan Hotel (Marriott International)</h4>
-              </div>
-              <span class="self-start sm:self-auto px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-bold border border-slate-700">
-                Marriott Brand Standard
-              </span>
-            </div>
-
-            <p class="text-sm text-slate-300 leading-relaxed">
-              Executed premium marketing communications adhering strictly to Marriott International's global luxury brand matrix and guidelines.
-            </p>
-
-            <div class="space-y-2 pt-2">
-              <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400">Key Contributions & Accomplishments:</h5>
-              <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
-                <li class="flex items-start gap-2.5">
-                  <i class="fa-solid fa-check text-sky-400 mt-1 shrink-0"></i>
-                  <span>Promoted key hotel F&B outlets (Bahar, Sear, Gulshan Baking Company), boosting weekend Sunday Brunch attendance to 85% capacity.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <i class="fa-solid fa-check text-sky-400 mt-1 shrink-0"></i>
-                  <span>Managed public relations, media invitations, press releases, and lifestyle photo/video shoots with top national media outlets.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <i class="fa-solid fa-check text-sky-400 mt-1 shrink-0"></i>
-                  <span>Elevated brand engagement across social media channels by 45% through curated aesthetic visual storytelling and Marriott Bonvoy promotions.</span>
-                </li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Experience 3: ASAP Solutions Limited -->
-        <div class="relative group reveal-on-scroll">
-          <!-- Connector Dot -->
-          <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-emerald-400 border-4 border-[#070C18] shadow-lg shadow-emerald-500/50 flex items-center justify-center text-[9px] text-[#070C18] font-bold">
-            <i class="fa-solid fa-laptop-code"></i>
-          </div>
-
-          <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-emerald-400/60 transition-all space-y-4">
-            
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-              <div>
-                <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">September 2022 – May 2023 • Dhaka, Bangladesh</span>
-                <h3 class="text-2xl font-extrabold text-white">Senior Executive, Digital Marketing & Content</h3>
-                <h4 class="text-base font-semibold text-slate-200">ASAP Solutions Limited (Tech & Software)</h4>
-              </div>
-              <span class="self-start sm:self-auto px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/30">
-                2x Employee of the Month
-              </span>
-            </div>
-
-            <p class="text-sm text-slate-300 leading-relaxed">
-              Formulated and executed digital acquisition strategies, B2B lead funnels, and technical content marketing for corporate software solutions.
-            </p>
-
-            <div class="space-y-2 pt-2">
-              <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400">Key Contributions & Accomplishments:</h5>
-              <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
-                <li class="flex items-start gap-2.5">
-                  <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
-                  <span>Generated over <strong>180+ qualified enterprise B2B leads</strong> while lowering Cost Per Lead (CPL) by 38% via targeted Meta & Google Ads.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
-                  <span>Crafted whitepapers, email nurture flows, and social media content strategies that accelerated client onboarding by 25%.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
-                  <span>Awarded <strong>Employee of the Month twice (Feb & Jun 2023)</strong> and <strong>Best Performer of the Month (Mar 2023)</strong>.</span>
-                </li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SKILLS, CERTIFICATIONS & HONORS -->
-  <section id="skills" class="py-24 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-      
-      <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto space-y-4 reveal-on-scroll">
-        <span class="px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-[#D4AF37]/30 text-[#D4AF37] font-semibold text-xs uppercase tracking-widest">
-          Expertise & Validation
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-          Skills, Certified Honors & <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-amber-200">Tools Matrix</span>
-        </h2>
-        <p class="text-base text-slate-400">
-          A structured breakdown of technical tools, campaign platforms, and industry awards.
-        </p>
-      </div>
-
-      <!-- 3 Columns: Skills Grid, Awards, Certifications -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        
-        <!-- Left: Technical & Marketing Skills (5 Cols) -->
-        <div class="lg:col-span-5 space-y-6 reveal-left">
-          <div class="p-6 sm:p-7 rounded-3xl bg-slate-900/80 border border-slate-800 space-y-6">
-            <h3 class="text-xl font-bold text-white flex items-center gap-2.5">
-              <i class="fa-solid fa-layer-group text-[#D4AF37]"></i> Core Capabilities
-            </h3>
-
-            <!-- Skill 1 -->
-            <div class="space-y-2">
-              <div class="flex justify-between text-sm">
-                <span class="text-slate-200 font-semibold">Meta Ads Manager & Media Buying</span>
-                <span class="text-[#D4AF37] font-mono font-bold">95%</span>
-              </div>
-              <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                <div class="bg-gradient-to-r from-[#D4AF37] to-amber-300 h-full rounded-full" style="width: 95%"></div>
-              </div>
-              <p class="text-[11px] text-slate-400">Custom Audiences, Lookalikes, CBO/ABO Scaling, Retargeting Loops</p>
-            </div>
-
-            <!-- Skill 2 -->
-            <div class="space-y-2">
-              <div class="flex justify-between text-sm">
-                <span class="text-slate-200 font-semibold">Lead Gen (Interior, Education, Recruitment)</span>
-                <span class="text-emerald-400 font-mono font-bold">92%</span>
-              </div>
-              <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                <div class="bg-gradient-to-r from-emerald-500 to-teal-300 h-full rounded-full" style="width: 92%"></div>
-              </div>
-              <p class="text-[11px] text-slate-400">High-Ticket Consultations, Study Abroad Intakes, B2B Retainers</p>
-            </div>
-
-            <!-- Skill 3 -->
-            <div class="space-y-2">
-              <div class="flex justify-between text-sm">
-                <span class="text-slate-200 font-semibold">GA4, Meta Pixel & GTM Custom Events</span>
-                <span class="text-sky-400 font-mono font-bold">88%</span>
-              </div>
-              <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                <div class="bg-gradient-to-r from-sky-500 to-cyan-300 h-full rounded-full" style="width: 88%"></div>
-              </div>
-              <p class="text-[11px] text-slate-400">Full-funnel attribution, e-commerce purchase tracking, event triggers</p>
-            </div>
-
-            <!-- Skill 4 -->
-            <div class="space-y-2">
-              <div class="flex justify-between text-sm">
-                <span class="text-slate-200 font-semibold">Creative Direction (Canva / Photoshop)</span>
-                <span class="text-purple-400 font-mono font-bold">90%</span>
-              </div>
-              <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                <div class="bg-gradient-to-r from-purple-500 to-pink-300 h-full rounded-full" style="width: 90%"></div>
-              </div>
-              <p class="text-[11px] text-slate-400">Ad visuals, luxury brand collateral, short-form reels scripting</p>
-            </div>
-
-            <!-- Skill 5 -->
-            <div class="space-y-2">
-              <div class="flex justify-between text-sm">
-                <span class="text-slate-200 font-semibold">Advanced Excel & Data Analytics</span>
-                <span class="text-amber-400 font-mono font-bold">88%</span>
-              </div>
-              <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                <div class="bg-gradient-to-r from-amber-500 to-yellow-300 h-full rounded-full" style="width: 88%"></div>
-              </div>
-              <p class="text-[11px] text-slate-400">Pivot Tables, VLOOKUP/XLOOKUP, Marketing ROI modeling</p>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Middle & Right: Awards & Certifications (7 Cols) -->
-        <div class="lg:col-span-7 space-y-6 reveal-right">
-          
-          <!-- Awards & Recognitions Grid -->
-          <div class="p-6 sm:p-7 rounded-3xl bg-slate-900/80 border border-slate-800 space-y-4">
-            <h3 class="text-xl font-bold text-white flex items-center gap-2.5">
-              <i class="fa-solid fa-trophy text-[#D4AF37]"></i> Honors & Industry Awards
-            </h3>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              
-              <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 flex items-start gap-3 stagger-1 reveal-scale">
-                <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-[#D4AF37] flex items-center justify-center shrink-0">
-                  <i class="fa-solid fa-medal text-lg"></i>
-                </div>
-                <div>
-                  <h4 class="font-bold text-white text-sm">Pillar of Trust Award</h4>
-                  <p class="text-xs text-[#D4AF37] font-medium">Hotel Sarina Dhaka • Jan 2026</p>
-                  <p class="text-[11px] text-slate-400 mt-1">Recognized for exemplary reliability, strategic ownership, and brand integrity.</p>
-                </div>
-              </div>
-
-              <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 flex items-start gap-3 stagger-2 reveal-scale">
-                <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center shrink-0">
-                  <i class="fa-solid fa-bolt text-lg"></i>
-                </div>
-                <div>
-                  <h4 class="font-bold text-white text-sm">Dedication Dynamo Award</h4>
-                  <p class="text-xs text-[#D4AF37] font-medium">Hotel Sarina Dhaka • Dec 2025</p>
-                  <p class="text-[11px] text-slate-400 mt-1">Awarded for high-energy execution during major peak festive campaigns.</p>
-                </div>
-              </div>
-
-              <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 flex items-start gap-3 stagger-3 reveal-scale">
-                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
-                  <i class="fa-solid fa-star text-lg"></i>
-                </div>
-                <div>
-                  <h4 class="font-bold text-white text-sm">Employee of the Month (2x)</h4>
-                  <p class="text-xs text-emerald-400 font-medium">ASAP Solutions Ltd. • Feb & Jun 2023</p>
-                  <p class="text-[11px] text-slate-400 mt-1">Consistently surpassing B2B pipeline and lead generation targets.</p>
-                </div>
-              </div>
-
-              <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 flex items-start gap-3 stagger-4 reveal-scale">
-                <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0">
-                  <i class="fa-solid fa-award text-lg"></i>
-                </div>
-                <div>
-                  <h4 class="font-bold text-white text-sm">Best Performer of the Month</h4>
-                  <p class="text-xs text-sky-400 font-medium">ASAP Solutions Ltd. • Mar 2023</p>
-                  <p class="text-[11px] text-slate-400 mt-1">Top revenue-attributing marketing strategist across all company accounts.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Verified Certifications -->
-          <div class="p-6 sm:p-7 rounded-3xl bg-slate-900/80 border border-slate-800 space-y-4">
-            <h3 class="text-xl font-bold text-white flex items-center gap-2.5">
-              <i class="fa-solid fa-certificate text-sky-400"></i> Verified Certifications
-            </h3>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-              
-              <div class="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800 flex items-center gap-3 stagger-1 reveal-scale">
-                <i class="fa-brands fa-google text-red-400 text-lg"></i>
-                <div>
-                  <div class="font-bold text-white">Google Ads for Beginners (Search)</div>
-                  <div class="text-slate-400 text-[11px]">Coursera Project Network • Oct 2024</div>
-                </div>
-              </div>
-
-              <div class="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800 flex items-center gap-3 stagger-2 reveal-scale">
-                <i class="fa-brands fa-meta text-sky-400 text-lg"></i>
-                <div>
-                  <div class="font-bold text-white">Meta Pixel with Custom Events via GTM</div>
-                  <div class="text-slate-400 text-[11px]">Coursera Project Network • Jun 2024</div>
-                </div>
-              </div>
-
-              <div class="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800 flex items-center gap-3 stagger-3 reveal-scale">
-                <i class="fa-brands fa-hubspot text-orange-400 text-lg"></i>
-                <div>
-                  <div class="font-bold text-white">Inbound SEO Certification</div>
-                  <div class="text-slate-400 text-[11px]">HubSpot Academy • Nov 2023</div>
-                </div>
-              </div>
-
-              <div class="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800 flex items-center gap-3 stagger-4 reveal-scale">
-                <i class="fa-brands fa-facebook text-blue-500 text-lg"></i>
-                <div>
-                  <div class="font-bold text-white">Facebook Marketing & Media Buying</div>
-                  <div class="text-slate-400 text-[11px]">Grameenphone Academy • Sep 2023</div>
-                </div>
-              </div>
-
-              <div class="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800 sm:col-span-2 flex items-center gap-3 stagger-1 reveal-scale">
-                <i class="fa-solid fa-file-excel text-emerald-400 text-lg"></i>
-                <div>
-                  <div class="font-bold text-white">Advanced Excel for Business & Marketing Analytics</div>
-                  <div class="text-slate-400 text-[11px]">Simplilearn SkillUp • Aug 2023</div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PROFESSIONAL ENDORSEMENTS & REFERENCES -->
-  <section id="references" class="py-24 bg-slate-950/60 border-y border-slate-800/80 relative">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-      
-      <!-- Section Header -->
-      <div class="text-center space-y-4 reveal-on-scroll">
-        <span class="px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-[#D4AF37]/30 text-[#D4AF37] font-semibold text-xs uppercase tracking-widest">
-          Vouched Credibility
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-          Professional <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-amber-200">References & Leadership</span>
-        </h2>
-        <p class="text-base text-slate-400 max-w-xl mx-auto">
-          Direct verification and contact details from executive leadership and academic mentors.
-        </p>
-      </div>
-
-      <!-- References Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-        <!-- Reference 1: Syed Mehran Hussain -->
-        <div class="p-7 sm:p-8 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-[#D4AF37]/50 transition-all shadow-xl space-y-6 flex flex-col justify-between reveal-left">
-          <div class="space-y-4">
-            <div class="flex items-center gap-4">
-              <div class="w-14 h-14 rounded-2xl bg-amber-500/15 border border-[#D4AF37]/40 flex items-center justify-center text-[#D4AF37] text-xl font-bold font-serif">
-                MH
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white">Syed Mehran Hussain</h3>
-                <p class="text-xs sm:text-sm font-semibold text-[#D4AF37]">Director of Marketing</p>
-                <p class="text-xs text-slate-400">Hotel Sarina Dhaka</p>
-              </div>
-            </div>
-
-            <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed border-l-2 border-[#D4AF37] pl-3 py-1">
-              "Shakibur has shown remarkable ownership over our multi-channel brand campaigns and digital growth. His ability to fuse creative luxury aesthetics with analytical Meta Ads media buying makes him an invaluable asset."
-            </p>
-          </div>
-
-          <div class="pt-4 border-t border-slate-800/80 space-y-2 text-xs">
-            <div class="flex items-center gap-2 text-slate-300">
-              <i class="fa-solid fa-envelope text-[#D4AF37] w-4"></i>
-              <a href="mailto:mehran.sarina@gmail.com" class="hover:text-white transition-colors">mehran.sarina@gmail.com</a>
-            </div>
-            <div class="flex items-center gap-2 text-slate-300">
-              <i class="fa-solid fa-phone text-[#D4AF37] w-4"></i>
-              <a href="tel:+8801983000111" class="hover:text-white transition-colors">+880 1983-000111</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Reference 2: Mahbub Parvez -->
-        <div class="p-7 sm:p-8 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition-all shadow-xl space-y-6 flex flex-col justify-between reveal-right">
-          <div class="space-y-4">
-            <div class="flex items-center gap-4">
-              <div class="w-14 h-14 rounded-2xl bg-sky-500/15 border border-sky-400/40 flex items-center justify-center text-sky-300 text-xl font-bold font-serif">
-                MP
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white">Mahbub Parvez</h3>
-                <p class="text-xs sm:text-sm font-semibold text-sky-400">Associate Professor & Former Dept. Head</p>
-                <p class="text-xs text-slate-400">Tourism & Hospitality Management, DIU</p>
-              </div>
-            </div>
-
-            <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed border-l-2 border-sky-400 pl-3 py-1">
-              "During his academic tenure at Daffodil International University, Shakibur demonstrated exceptional leadership, strategic curiosity, and practical mastery in consumer service marketing."
-            </p>
-          </div>
-
-          <div class="pt-4 border-t border-slate-800/80 space-y-2 text-xs">
-            <div class="flex items-center gap-2 text-slate-300">
-              <i class="fa-solid fa-envelope text-sky-400 w-4"></i>
-              <a href="mailto:mahbub.thm@diu.edu.bd" class="hover:text-white transition-colors">mahbub.thm@diu.edu.bd</a>
-            </div>
-            <div class="flex items-center gap-2 text-slate-300">
-              <i class="fa-solid fa-phone text-sky-400 w-4"></i>
-              <a href="tel:+8801713493120" class="hover:text-white transition-colors">+880 1713-493120</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT & CONSULTATION HUB -->
-  <section id="contact" class="py-24 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-      
-      <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto space-y-4 reveal-on-scroll">
-        <span class="px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-[#D4AF37]/30 text-[#D4AF37] font-semibold text-xs uppercase tracking-widest">
-          Start a Conversation
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-          Ready to Scale Your Brand & <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-amber-200">Revenue?</span>
-        </h2>
-        <p class="text-base text-slate-400">
-          Available for executive marketing appointments, full-time leadership roles, or strategic performance consulting across Hospitality, Interior, Memberships, Education, Recruitment, Travel, and E-Commerce.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-        
-        <!-- Left: Contact Details & Quick Links (5 Cols) -->
-        <div class="lg:col-span-5 space-y-6 reveal-left">
-          
-          <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 space-y-6">
-            <h3 class="text-xl font-bold text-white">Direct Channels</h3>
-            
-            <div class="space-y-4">
-              <!-- Phone -->
-              <a href="tel:+8801838070468" class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/80 hover:border-[#D4AF37]/50 flex items-center gap-4 transition-all group">
-                <div class="w-12 h-12 rounded-xl bg-amber-500/15 text-[#D4AF37] flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
-                  <i class="fa-solid fa-phone"></i>
-                </div>
-                <div>
-                  <div class="text-xs text-slate-400">Direct Phone</div>
-                  <div class="text-sm font-bold text-white group-hover:text-[#D4AF37] transition-colors">+880 1838-070468</div>
-                </div>
-              </a>
-
-              <!-- Email -->
-              <a href="mailto:shakibur188@gmail.com" class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/80 hover:border-[#D4AF37]/50 flex items-center gap-4 transition-all group">
-                <div class="w-12 h-12 rounded-xl bg-amber-500/15 text-[#D4AF37] flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
-                  <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div>
-                  <div class="text-xs text-slate-400">Official Email</div>
-                  <div class="text-sm font-bold text-white group-hover:text-[#D4AF37] transition-colors">shakibur188@gmail.com</div>
-                </div>
-              </a>
-
-              <!-- WhatsApp -->
-              <a href="https://wa.me/8801838070468?text=Hello%20Shakibur,%20I%20would%20like%20to%20discuss%20a%20marketing%20project." target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl bg-emerald-950/30 border border-emerald-800/40 hover:border-emerald-500/60 flex items-center gap-4 transition-all group">
-                <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
-                  <i class="fa-brands fa-whatsapp"></i>
-                </div>
-                <div>
-                  <div class="text-xs text-emerald-300">Instant Messenger</div>
-                  <div class="text-sm font-bold text-emerald-200 group-hover:text-emerald-100 transition-colors">Chat on WhatsApp (Fastest)</div>
-                </div>
-              </a>
-
-              <!-- LinkedIn -->
-              <a href="https://www.linkedin.com/in/shakibur-rahman222" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl bg-sky-950/30 border border-sky-800/40 hover:border-sky-500/60 flex items-center gap-4 transition-all group">
-                <div class="w-12 h-12 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
-                  <i class="fa-brands fa-linkedin-in"></i>
-                </div>
-                <div>
-                  <div class="text-xs text-sky-300">Professional Network</div>
-                  <div class="text-sm font-bold text-sky-200 group-hover:text-white transition-colors">linkedin.com/in/shakibur-rahman222</div>
-                </div>
-              </a>
-            </div>
-
-            <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-              <span class="flex items-center gap-2">
-                <i class="fa-solid fa-location-dot text-[#D4AF37]"></i> Mohammadpur, Dhaka-1207
-              </span>
-              <button id="copyContactCardBtn" class="text-[#D4AF37] font-semibold hover:underline flex items-center gap-1">
-                <i class="fa-solid fa-copy"></i> Copy Info
-              </button>
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- Right: Interactive Message Composer Form (7 Cols) -->
-        <div class="lg:col-span-7 reveal-right">
-          <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl space-y-6">
-            <h3 class="text-xl font-bold text-white flex items-center gap-2.5">
-              <i class="fa-solid fa-paper-plane text-[#D4AF37]"></i> Send a Priority Inquiry
-            </h3>
-
-            <form id="contactForm" class="space-y-4">
-              
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5">Your Name *</label>
-                  <input type="text" id="contactName" required placeholder="e.g. Tanvir Ahmed" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:border-[#D4AF37] focus:outline-none transition-colors">
-                </div>
-                <div>
-                  <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5">Your Email *</label>
-                  <input type="email" id="contactEmail" required placeholder="tanvir@company.com" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:border-[#D4AF37] focus:outline-none transition-colors">
-                </div>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5">Organization / Brand</label>
-                  <input type="text" id="contactCompany" placeholder="e.g. Interior Firm / Agency / D2C Brand" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:border-[#D4AF37] focus:outline-none transition-colors">
-                </div>
-                <div>
-                  <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5">Campaign Sector / Goal</label>
-                  <select id="contactSubject" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:border-[#D4AF37] focus:outline-none transition-colors">
-                    <option value="interior">Interior & Architecture Lead Generation</option>
-                    <option value="membership">Private Club Membership Acquisition</option>
-                    <option value="education">Education & Study Abroad Student Funnel</option>
-                    <option value="recruitment">Recruiting & Staffing B2B Pipeline</option>
-                    <option value="hospitality">Hospitality & Travel Package Growth</option>
-                    <option value="ecommerce">D2C E-Commerce ROAS & Catalog Scaling</option>
-                    <option value="hiring">Executive Role / Senior Hiring Offer</option>
-                    <option value="other">General Consultation</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5">Your Project Goals & Requirements *</label>
-                <textarea id="contactMessage" rows="4" required placeholder="Share your target audience, current ad budget, monthly goals, or role description..." class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:border-[#D4AF37] focus:outline-none transition-colors"></textarea>
-              </div>
-
-              <div class="flex flex-wrap gap-3 pt-2">
-                <button type="button" id="sendEmailBtn" class="flex-1 py-3.5 px-5 rounded-xl bg-gradient-to-r from-[#D4AF37] to-amber-500 hover:from-amber-400 hover:to-amber-500 text-[#070C18] font-bold text-sm shadow-lg shadow-amber-500/20 transition-all flex items-center justify-center gap-2">
-                  <i class="fa-solid fa-envelope"></i>
-                  <span>Send via Email Client</span>
-                </button>
-
-                <button type="button" id="sendWhatsAppBtn" class="py-3.5 px-5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-2">
-                  <i class="fa-brands fa-whatsapp text-lg"></i>
-                  <span>Send via WhatsApp</span>
-                </button>
-              </div>
-
-            </form>
-
-            <div id="formSuccessAlert" class="hidden p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/40 text-emerald-300 text-xs">
-              <i class="fa-solid fa-circle-check mr-1.5"></i> Message copied! Opening your messaging client...
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-slate-800 bg-[#070C18] py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-      
-      <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-[#D4AF37] to-amber-200 flex items-center justify-center text-[#070C18] font-serif font-black text-sm">
-          SR
-        </div>
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 reveal-on-scroll">
         <div>
-          <div class="text-sm font-bold text-white">Md. Shakibur Rahaman</div>
-          <div class="text-xs text-slate-400">Multi-Industry Brand & Performance Marketer • Dhaka, Bangladesh</div>
+          <div class="section-tag">
+            <i class="fa-solid fa-code-branch"></i>
+            <span>FEATURED PROJECTS</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-[#1C2B1B] tracking-tight mt-1">
+            A Few Things I've Built
+          </h2>
+          <p class="text-xs sm:text-sm text-[#4D614A] mt-2">
+            15 production web platforms engineered for maximum conversion, speed, and real-world commercial results.
+          </p>
         </div>
+
+        <a href="#contact" class="btn-outline-emerald self-start md:self-auto text-xs">
+          <span>Commission a Website</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
       </div>
 
-      <div class="flex items-center gap-6 text-sm text-slate-400">
-        <a href="#about" class="hover:text-[#D4AF37] transition-colors">Expertise</a>
-        <a href="#industries" class="hover:text-[#D4AF37] transition-colors">7 Industries</a>
-        <a href="#case-studies" class="hover:text-[#D4AF37] transition-colors">Case Studies</a>
-        <a href="#experience" class="hover:text-[#D4AF37] transition-colors">Experience</a>
-        <a href="#contact" class="hover:text-[#D4AF37] transition-colors">Contact</a>
+      <!-- Category Filter Pills -->
+      <div id="projectFilterBar" class="flex flex-wrap items-center gap-2 mb-10 overflow-x-auto pb-2 no-scrollbar reveal-on-scroll">
+        <button class="filter-btn active" data-category="all">All Projects (15)</button>
+        <button class="filter-btn" data-category="Hospitality">Hospitality &amp; Booking</button>
+        <button class="filter-btn" data-category="E-Commerce">E-Commerce Flagships</button>
+        <button class="filter-btn" data-category="Corporate">Corporate &amp; B2B</button>
+        <button class="filter-btn" data-category="Web Apps">Web Apps / SaaS</button>
+        <button class="filter-btn" data-category="Creative">Creative Portfolios</button>
       </div>
 
-      <div class="flex items-center gap-3">
-        <a href="https://www.linkedin.com/in/shakibur-rahman222" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#D4AF37] hover:text-[#070C18] text-slate-300 flex items-center justify-center transition-all" title="LinkedIn Profile">
-          <i class="fa-brands fa-linkedin-in text-sm"></i>
+      <!-- 15 Web Projects Grid -->
+      <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-grid">
+        <!-- Hydrated dynamically by app.js with 3 points each -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. TECHNOLOGIES & TOOLS ARSENAL -->
+  <section class="py-20 border-t border-[#70805D]/15 bg-white/70 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-xl mx-auto mb-12 reveal-on-scroll">
+        <div class="section-tag justify-center">
+          <i class="fa-solid fa-microchip"></i>
+          <span>TECHNOLOGY STACK</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-[#1C2B1B] tracking-tight">
+          Tools &amp; Frameworks Arsenal
+        </h2>
+      </div>
+      <div id="techArsenalGrid" class="flex flex-wrap items-center justify-center gap-4">
+        <!-- Hydrated dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CASE STUDIES & RECENT WORKS (4 Featured in Two Rows - 2x2 Grid) -->
+  <section id="case-studies" class="py-24 border-t border-[#70805D]/15 bg-[#F1F3ED]/40 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 reveal-on-scroll">
+        <div>
+          <div class="section-tag">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>PROVEN BLUEPRINTS &amp; IMPACT</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-[#1C2B1B] tracking-tight mt-2">
+            Case Studies &amp; Recent Works
+          </h2>
+          <p class="text-xs sm:text-sm text-[#4D614A] mt-2 max-w-2xl">
+            Surgical execution, measurable commercial lift, and verified enterprise case studies. Explore 4 featured blueprints below or browse the full archives.
+          </p>
+        </div>
+
+        <a href="/case-studies.html" class="btn-aesthetic-primary text-xs self-start md:self-auto">
+          <span>View All Case Studies &amp; Works</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
         </a>
-        <a href="mailto:shakibur188@gmail.com" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#D4AF37] hover:text-[#070C18] text-slate-300 flex items-center justify-center transition-all" title="Send Email">
-          <i class="fa-solid fa-envelope text-sm"></i>
-        </a>
-        <a href="https://wa.me/8801838070468" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-emerald-500 hover:text-white text-slate-300 flex items-center justify-center transition-all" title="WhatsApp Message">
-          <i class="fa-brands fa-whatsapp text-sm"></i>
-        </a>
-        <!-- Dedicated Admin Login Icon in Footer -->
-        <a href="/admin" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-600 border border-slate-700/80 hover:border-sky-400 text-sky-400 hover:text-white flex items-center justify-center transition-all shadow-md group relative" title="Admin Login">
-          <i class="fa-solid fa-user-shield text-sm group-hover:scale-110 transition-transform"></i>
-          <span class="absolute -top-9 px-2.5 py-1 rounded-lg bg-slate-900 text-sky-300 text-[11px] font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity border border-sky-500/30 shadow-xl pointer-events-none">Admin Login</span>
+      </div>
+
+      <!-- 4 Case Studies in Two Rows (2x2 Grid) -->
+      <div id="homeCaseStudiesContainer" class="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <!-- Bottom Explore More Callout -->
+      <div class="mt-14 text-center reveal-on-scroll">
+        <a href="/case-studies.html" class="btn-outline-emerald text-xs py-3 px-8 inline-flex items-center gap-2.5">
+          <i class="fa-solid fa-layer-group text-[#70805D]"></i>
+          <span>Explore All Case Studies &amp; Deep Dives Directory</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
         </a>
       </div>
 
     </div>
+  </section>
 
-    <!-- Footer Copyright & Admin Sub-Bar -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/80 mt-6 pt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
-      <span>© 2026 Md. Shakibur Rahaman. All rights reserved.</span>
-      <div class="flex items-center gap-4 mt-2 sm:mt-0">
-        <a href="/admin" target="_blank" class="hover:text-sky-400 flex items-center gap-1.5 transition-colors font-medium">
-          <i class="fa-solid fa-lock text-[11px] text-sky-400"></i>
-          <span>Admin Login</span>
-        </a>
+  <!-- 9. WHAT CLIENTS SAY - TESTIMONIALS (WORKNOOK STYLE) -->
+  <section id="testimonials" class="py-24 border-t border-[#70805D]/15 bg-white relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Photo Mosaic Collage (100% Exact Match to Reference) -->
+      <div class="testimonial-mosaic reveal-on-scroll">
+        <!-- Col 1: Outer Left (2 stacked) -->
+        <div class="mosaic-col">
+          <div class="mosaic-img">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=400&q=80" alt="Meeting Lounge Sofa" loading="lazy">
+          </div>
+          <div class="mosaic-img">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=400&q=80" alt="Designer Drafting" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Col 2: Stacked 3 items -->
+        <div class="mosaic-col">
+          <div class="mosaic-img">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=400&q=80" alt="Modern Desks" loading="lazy">
+          </div>
+          <div class="mosaic-img">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=400&q=80" alt="Writing in Notebook" loading="lazy">
+          </div>
+          <div class="mosaic-img">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=400&q=80" alt="Office Corridor" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Col 3: Single Tall Portrait -->
+        <div class="mosaic-col">
+          <div class="mosaic-img">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=400&q=80" alt="Window Workspace" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Col 4: Center-Left Tallest Pill -->
+        <div class="mosaic-col">
+          <div class="mosaic-img">
+            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=400&q=80" alt="Open Plan Workstations" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Col 5: Center-Right Tall Pill -->
+        <div class="mosaic-col">
+          <div class="mosaic-img">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Sunlit Atrium Table" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Col 6: Single Tall Portrait -->
+        <div class="mosaic-col">
+          <div class="mosaic-img">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80" alt="Indoor Plant Workspace" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Col 7: Stacked 3 items -->
+        <div class="mosaic-col">
+          <div class="mosaic-img">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Typing Laptop" loading="lazy">
+          </div>
+          <div class="mosaic-img">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&q=80" alt="Glass Hallway" loading="lazy">
+          </div>
+          <div class="mosaic-img">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80" alt="Collaborative Group Discussion" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Col 8: Outer Right (2 stacked) -->
+        <div class="mosaic-col">
+          <div class="mosaic-img">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=400&q=80" alt="Keynote Presentation" loading="lazy">
+          </div>
+          <div class="mosaic-img">
+            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=400&q=80" alt="Lounge Area Seating" loading="lazy">
+          </div>
+        </div>
       </div>
+
+      <!-- Header with Pill & Two-Tone Title -->
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal-on-scroll">
+        <div class="flex justify-center mb-4">
+          <span class="testimonial-pill">Testimonials</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-[#111827] tracking-tight leading-tight">
+          Trusted by creatives and leaders
+        </h2>
+        <div class="text-xl sm:text-2xl font-normal text-[#6B7280] mt-2">
+          from various industries
+        </div>
+      </div>
+
+      <!-- Testimonial Cards Grid (100% Exact Match to Reference) -->
+      <div id="testimonialsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Card 1: Joao M. -->
+        <div class="testimonial-card-new reveal-on-scroll">
+          <div>
+            <div class="tc-stars">★★★★★</div>
+            <p class="tc-quote">
+              "WorkNook makes finding a coworking space so easy! I can book a desk in minutes and get straight to work. Highly recommend!"
+            </p>
+          </div>
+          <div class="tc-author">
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&h=120&q=80" alt="Joao M." class="tc-avatar" loading="lazy">
+            <div>
+              <div class="tc-name">Joao M.</div>
+              <div class="tc-role">Startup Founder</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Bruno K. -->
+        <div class="testimonial-card-new reveal-on-scroll">
+          <div>
+            <div class="tc-stars">★★★★★</div>
+            <p class="tc-quote">
+              "Our team needed a flexible meeting space, and WorkNook delivered. The process was smooth, and the space was exactly what we needed!"
+            </p>
+          </div>
+          <div class="tc-author">
+            <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=120&h=120&q=80" alt="Bruno K." class="tc-avatar" loading="lazy">
+            <div>
+              <div class="tc-name">Bruno K.</div>
+              <div class="tc-role">UX Designer</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Lais A. -->
+        <div class="testimonial-card-new reveal-on-scroll">
+          <div>
+            <div class="tc-stars">★★★★★</div>
+            <p class="tc-quote">
+              "I love the variety of spaces available! Whether I need a quiet spot or a collaborative space, WorkNook always has the perfect option."
+            </p>
+          </div>
+          <div class="tc-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&h=120&q=80" alt="Lais A." class="tc-avatar" loading="lazy">
+            <div>
+              <div class="tc-name">Lais A.</div>
+              <div class="tc-role">Digital Marketer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 10. GET IN TOUCH - LET'S WORK TOGETHER -->
+  <section id="contact" class="py-24 border-t border-[#70805D]/15 bg-white relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: Direct Contact Information -->
+        <div class="lg:col-span-5 space-y-6 reveal-fade-left">
+          <div class="section-tag">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>GET IN TOUCH</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-[#1C2B1B] tracking-tight leading-tight">
+            Let's Work Together
+          </h2>
+
+          <p class="text-sm text-[#4D614A] leading-relaxed">
+            Have a project in mind or want to explore bundling multiple services? Reach out directly and I will respond within 24 business hours.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-center gap-3.5 text-sm text-[#1C2B1B]">
+              <div class="w-10 h-10 rounded-xl bg-[#70805D]/12 border border-[#70805D]/30 flex items-center justify-center text-[#70805D]">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="text-[10.5px] text-[#55738D] uppercase font-bold">Direct Corporate Email</div>
+                <a href="mailto:shakibur188@gmail.com" class="font-bold text-[#2A3B27] hover:text-[#70805D] transition-colors">shakibur188@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 text-sm text-[#1C2B1B]">
+              <div class="w-10 h-10 rounded-xl bg-[#70805D]/12 border border-[#70805D]/30 flex items-center justify-center text-[#70805D]">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+              </div>
+              <div>
+                <div class="text-[10.5px] text-[#55738D] uppercase font-bold">Phone / WhatsApp</div>
+                <a href="https://wa.me/8801838070468" target="_blank" rel="noopener noreferrer" class="font-bold text-[#2A3B27] hover:text-[#70805D] transition-colors">+880 1838-070468</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 text-sm text-[#1C2B1B]">
+              <div class="w-10 h-10 rounded-xl bg-[#70805D]/12 border border-[#70805D]/30 flex items-center justify-center text-[#70805D]">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <div class="text-[10.5px] text-[#55738D] uppercase font-bold">Primary Base</div>
+                <span class="font-bold text-[#2A3B27]">Dhaka, Bangladesh</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2.5 pt-2 text-xs text-[#70805D] font-bold">
+              <span class="pulse-dot-olive"></span>
+              <span>Available for direction &amp; project commissions</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form + Aesthetic Glowing Card -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-12 gap-6 reveal-fade-right">
+          
+          <!-- Contact Form (7 cols on desktop) -->
+          <div class="sm:col-span-7 spotlight-card p-6 sm:p-8 bg-white border border-[#70805D]/20">
+            <form id="contactForm" class="space-y-4">
+              <div>
+                <label class="block text-[11px] font-bold text-[#4D614A] mb-1.5">Your Name *</label>
+                <input type="text" id="leadName" required placeholder="Marcus Vance" class="w-full px-4 py-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-xs focus:outline-none focus:border-[#70805D]">
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-bold text-[#4D614A] mb-1.5">Your Corporate Email *</label>
+                <input type="email" id="leadEmail" required placeholder="marcus@company.com" class="w-full px-4 py-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-xs focus:outline-none focus:border-[#70805D]">
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-bold text-[#4D614A] mb-1.5">Phone / WhatsApp</label>
+                <input type="text" id="leadPhone" placeholder="+880 1838-070468" class="w-full px-4 py-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-xs focus:outline-none focus:border-[#70805D]">
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-bold text-[#4D614A] mb-1.5">Project Scope / Subject</label>
+                <select id="leadService" class="w-full px-4 py-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-xs focus:outline-none focus:border-[#70805D]">
+                  <option value="Graphics & Visual Identity">01 • Graphics & Visual Identity</option>
+                  <option value="Web design & Development">02 • Web design & Development</option>
+                  <option value="Social Media marketing">03 • Social Media marketing</option>
+                  <option value="Public relation & Media outreach">04 • Public relation & Media outreach</option>
+                  <option value="Google ads & Intent Scaling">05 • Google ads & Intent Scaling</option>
+                  <option value="Event activation & Exhibition">06 • Event activation & Exhibition</option>
+                  <option value="All 6 Services Bundled">⭐ All 6 Services (Full 360° Retainer)</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-bold text-[#4D614A] mb-1.5">Your Message *</label>
+                <textarea id="leadMessage" rows="3" required placeholder="Briefly describe your objectives, target timeline, and goals..." class="w-full px-4 py-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-xs focus:outline-none focus:border-[#70805D]"></textarea>
+              </div>
+
+              <div id="formStatusAlert" class="hidden p-3 rounded-xl text-xs font-semibold"></div>
+
+              <button type="submit" id="submitLeadBtn" class="btn-aesthetic-primary w-full justify-center text-xs">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane text-xs"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Aesthetic Envelope Card (5 cols on desktop) -->
+          <div class="sm:col-span-5 spotlight-card p-6 flex flex-col items-center justify-center text-center bg-gradient-to-br from-white via-[#F1F3ED] to-white border border-[#70805D]/25">
+            <div class="w-14 h-14 rounded-2xl bg-[#70805D]/15 border border-[#70805D]/30 flex items-center justify-center text-[#70805D] text-2xl mb-4 shadow-sm">
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
+            <h4 class="text-base font-extrabold text-[#2A3B27] tracking-tight mb-2">
+              Let's create something amazing together!
+            </h4>
+            <p class="text-xs text-[#55738D] leading-relaxed mb-6">
+              Direct consultation with Md. Shakibur Rahaman for enterprise projects.
+            </p>
+            <a href="https://wa.me/8801838070468?text=Hi%20Shakibur,%20let's%20create%20something%20amazing%20together!" target="_blank" rel="noopener noreferrer" class="btn-outline-emerald text-xs">
+              <i class="fa-brands fa-whatsapp text-sm text-[#70805D]"></i>
+              <span>WhatsApp Direct</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 11. MULTI-COLUMN FOOTER (Light Aesthetic) -->
+  <footer class="py-16 border-t border-[#70805D]/15 bg-[#F1F3ED] relative z-10 text-xs text-[#4D614A]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <!-- Col 1: Brand -->
+        <div class="lg:col-span-2 space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-[#70805D] text-white flex items-center justify-center font-black text-xs shadow-sm">
+              SR
+            </div>
+            <span class="font-bold text-[#1C2B1B] tracking-tight text-base">Md. Shakibur Rahaman</span>
+          </div>
+          <p class="text-xs text-[#4D614A] leading-relaxed max-w-sm">
+            Building modern, scalable, and beautiful digital experiences that make impact. Strategic Lead &amp; Full-Stack Digital Architect.
+          </p>
+          <div class="flex items-center gap-3 pt-2 text-[#55738D]">
+            <a href="https://github.com" target="_blank" class="hover:text-[#2A3B27] transition-colors"><i class="fa-brands fa-github text-base"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="hover:text-[#2A3B27] transition-colors"><i class="fa-brands fa-linkedin text-base"></i></a>
+            <a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#2A3B27] transition-colors"><i class="fa-brands fa-whatsapp text-base"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div class="space-y-2.5">
+          <div class="text-[#2A3B27] font-bold uppercase tracking-wider text-[11px] mb-2">Navigation</div>
+          <div><a href="#hero" class="hover:text-[#70805D] transition-colors">Home</a></div>
+          <div><a href="#about" class="hover:text-[#70805D] transition-colors">About</a></div>
+          <div><a href="/services.html" class="hover:text-[#70805D] transition-colors font-bold text-[#2A3B27]">Services Overview</a></div>
+          <div><a href="#projects" class="hover:text-[#70805D] transition-colors">15 Web Projects</a></div>
+          <div><a href="/case-studies.html" class="hover:text-[#70805D] transition-colors font-semibold text-[#2A3B27]">Case Studies &amp; Works ↗</a></div>
+        </div>
+
+        <!-- Col 3: Standalone Core Services -->
+        <div class="space-y-2.5">
+          <div class="text-[#2A3B27] font-bold uppercase tracking-wider text-[11px] mb-2">6 Service Verticals</div>
+          <div><a href="/services/graphics-design.html" class="hover:text-[#70805D] transition-colors">01 Graphics & Visual ID ↗</a></div>
+          <div><a href="/services/web-development.html" class="hover:text-[#70805D] transition-colors">02 Web Development ↗</a></div>
+          <div><a href="/services/social-media-marketing.html" class="hover:text-[#70805D] transition-colors">03 Social Media (SMM) ↗</a></div>
+          <div><a href="/services/public-relations.html" class="hover:text-[#70805D] transition-colors">04 PR & Media Outreach ↗</a></div>
+          <div><a href="/services/google-ads.html" class="hover:text-[#70805D] transition-colors">05 Google Ads & SEM ↗</a></div>
+          <div><a href="/services/event-activation.html" class="hover:text-[#70805D] transition-colors">06 Event Activation ↗</a></div>
+        </div>
+
+        <!-- Col 4: Stay Connected & Admin -->
+        <div class="space-y-2.5">
+          <div class="text-[#2A3B27] font-bold uppercase tracking-wider text-[11px] mb-2">Direct Access</div>
+          <p class="text-[11px] text-[#55738D]">Direct executive consultation with Md. Shakibur Rahaman.</p>
+          <div class="pt-2">
+            <a href="#contact" class="btn-outline-emerald text-[11px]">
+              <span>Request Consultation</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+          <div class="pt-3">
+            <a href="/admin" target="_blank" class="text-[11px] text-[#55738D] hover:text-[#2A3B27] font-bold">Admin CMS Portal 🔐</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-[#70805D]/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+        <div>© 2026 Md. Shakibur Rahaman. All rights reserved.</div>
+        <div>Designed &amp; Engineered by <span class="text-[#2A3B27] font-bold">Md. Shakibur Rahaman</span></div>
+      </div>
+
     </div>
   </footer>
 
-  <!-- FLOATING BACK TO TOP BUTTON (BOTTOM LEFT) -->
-  <button id="backToTopBtn" class="fixed bottom-6 left-6 z-40 w-12 h-12 rounded-2xl bg-slate-900/90 hover:bg-[#D4AF37] text-[#D4AF37] hover:text-[#070C18] border border-[#D4AF37]/50 shadow-xl backdrop-blur-md flex items-center justify-center transition-all group" title="Back to Top">
-    <i class="fa-solid fa-arrow-up text-sm group-hover:-translate-y-1 transition-transform"></i>
-  </button>
-
-  <!-- FLOATING ADMIN ACCESS SHORTCUT BUTTON (BOTTOM RIGHT) -->
-  <a href="/admin" target="_blank" id="floatingAdminBtn" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-2xl bg-[#0E172A]/90 hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-500 text-sky-400 hover:text-white border border-sky-500/40 shadow-2xl backdrop-blur-md flex items-center justify-center transition-all group hover:scale-105" title="Admin Login">
-    <i class="fa-solid fa-user-shield text-sm group-hover:scale-110 transition-transform"></i>
-    <span class="absolute right-full mr-3 px-2.5 py-1 rounded-lg bg-slate-900/95 text-sky-300 text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity border border-sky-500/30 shadow-2xl pointer-events-none">Admin Login</span>
-  </a>
-
-  <!-- MODAL 1: CASE STUDY DEEP DIVE -->
-  <div id="caseModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-black/80 backdrop-blur-md p-4 sm:p-6 flex items-center justify-center">
-    <div class="relative w-full max-w-3xl bg-slate-900 border border-slate-700 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto" id="caseModalCard">
-      
-      <!-- Close Button -->
-      <button id="closeCaseModal" class="absolute top-6 right-6 w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
-        <i class="fa-solid fa-xmark text-base"></i>
+  <!-- 12. SERVICE BLUEPRINT MODAL -->
+  <div id="serviceModal" class="modal-overlay hidden">
+    <div class="modal-container p-6 sm:p-8 relative bg-white">
+      <button id="closeModalBtn" class="absolute top-6 right-6 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-[#4D614A] hover:text-[#1C2B1B] flex items-center justify-center border border-gray-200 transition-colors">
+        ✕
       </button>
 
-      <!-- Dynamic Modal Content Injection -->
-      <div id="modalDynamicBody" class="space-y-6">
-        <!-- Injected via JavaScript -->
+      <div class="flex items-center gap-4 mb-4">
+        <div class="w-12 h-12 rounded-xl bg-[#70805D]/15 border border-[#70805D]/30 flex items-center justify-center">
+          <i id="modalIcon" class="fa-solid fa-layer-group text-2xl text-[#70805D]"></i>
+        </div>
+        <div>
+          <span id="modalBadge" class="text-[10px] font-bold uppercase tracking-widest text-[#70805D]">Core Vertical</span>
+          <h2 id="modalTitle" class="text-xl sm:text-2xl font-black text-[#1C2B1B]">Service Title</h2>
+        </div>
       </div>
 
-    </div>
-  </div>
+      <div id="modalSubtitle" class="text-xs sm:text-sm text-[#55738D] font-semibold mb-4">Subtitle</div>
+      <div id="modalStats" class="inline-block px-3 py-1 rounded-full bg-[#70805D]/10 border border-[#70805D]/30 text-xs text-[#2A3B27] font-bold mb-5">Stat Metric</div>
 
-  <!-- Toast Notification Container -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 hidden px-5 py-3 rounded-2xl bg-slate-900 border border-[#D4AF37] text-white shadow-2xl text-xs font-medium flex items-center gap-2">
-    <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
-    <span id="toastMessage">Notification</span>
+      <p id="modalDesc" class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">Description</p>
+
+      <div class="space-y-2 mb-6">
+        <div class="text-xs font-bold text-[#1C2B1B] uppercase tracking-wider">Deliverables Breakdown:</div>
+        <ul id="modalDeliverables" class="space-y-2"></ul>
+      </div>
+
+      <div class="space-y-2 mb-8">
+        <div class="text-xs font-bold text-[#1C2B1B] uppercase tracking-wider">Tools &amp; Technology Ecosystem:</div>
+        <div id="modalTools" class="flex flex-wrap gap-2"></div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center gap-3 pt-4 border-t border-gray-200">
+        <a id="modalPageLink" href="/services.html" class="btn-aesthetic-primary w-full sm:w-auto justify-center text-xs">
+          <span>Open Services Directory</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </a>
+        <button id="modalRequestQuoteBtn" class="btn-pill-glass w-full sm:w-auto justify-center text-xs">
+          <span>Request Quote &amp; Scope</span>
+        </button>
+      </div>
+    </div>
   </div>
 
   <!-- Custom App JavaScript -->
   <script src="./app.js"></script>
+
+  <!-- 13. CASE STUDY DEEP DIVE MODAL -->
+  <div id="caseStudyModal" class="modal-overlay hidden">
+    <div class="modal-card max-w-3xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto relative">
+      <button id="closeCaseStudyModal" class="modal-close-btn" aria-label="Close Case Study Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="flex flex-wrap items-center gap-2.5 mb-4">
+        <span id="csModalCategory" class="px-3 py-1 rounded-full bg-[#70805D]/15 text-[#70805D] font-extrabold text-[11px] uppercase tracking-wider">Category</span>
+        <span id="csModalClient" class="px-3 py-1 rounded-full bg-white border border-[#70805D]/25 text-[#2A3B27] font-bold text-[11px]">Client Name</span>
+        <span id="csModalYear" class="px-2.5 py-0.5 rounded-full bg-[#F1F3ED] text-[#55738D] text-[10.5px] font-bold">2026</span>
+      </div>
+
+      <h2 id="csModalTitle" class="text-2xl sm:text-3xl font-extrabold text-[#1C2B1B] tracking-tight mb-2">Case Study Title</h2>
+      <p id="csModalTagline" class="text-sm font-semibold text-[#70805D] mb-6 italic">High-impact summary tagline</p>
+
+      <div class="w-full h-64 sm:h-80 rounded-2xl overflow-hidden mb-6 bg-[#F1F3ED] border border-[#70805D]/20 relative">
+        <img id="csModalImage" src="" alt="Case Study Cover" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Key Metrics ROI Strip -->
+      <div class="mb-6">
+        <div class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+          <i class="fa-solid fa-chart-line text-[#70805D]"></i>
+          <span>Measured ROI &amp; Performance Lift:</span>
+        </div>
+        <div id="csModalMetrics" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+        <div class="p-4 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15">
+          <h4 class="text-xs font-extrabold text-[#2A3B27] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i class="fa-solid fa-triangle-exclamation text-[#EAB308]"></i>
+            <span>The Challenge</span>
+          </h4>
+          <p id="csModalChallenge" class="text-xs sm:text-sm text-[#4D614A] leading-relaxed"></p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15">
+          <h4 class="text-xs font-extrabold text-[#2A3B27] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i class="fa-solid fa-lightbulb text-[#70805D]"></i>
+            <span>Strategic Execution</span>
+          </h4>
+          <p id="csModalSolution" class="text-xs sm:text-sm text-[#4D614A] leading-relaxed"></p>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <div class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider mb-2">Key Deliverables &amp; Artifacts:</div>
+        <div id="csModalDeliverables" class="flex flex-wrap gap-2">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-[#70805D]/15 flex flex-wrap items-center justify-between gap-3">
+        <a id="csModalLiveLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-aesthetic-primary text-xs">
+          <span>Visit Live Implementation</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+        <a href="#contact" onclick="closeCaseStudyModal();" class="btn-outline-emerald text-xs">
+          <span>Discuss Similar Project Scope</span>
+          <i class="fa-solid fa-comments text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

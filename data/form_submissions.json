@@ -1,0 +1,19 @@
+[
+  {
+    "id": "sub-1789723942564-b089a1d5",
+    "formId": "tpl-executive-consultation",
+    "formTitle": "Executive Consultation & Strategy Briefing",
+    "createdAt": "2026-09-18T09:32:22.568Z",
+    "clientIp": "::1",
+    "data": {
+      "clientName": "David Sterling",
+      "workEmail": "david@enterprise.com",
+      "phone": "+880 1838-070468",
+      "companyName": "Sterling Global Capital",
+      "serviceInterest": "Corporate Brand Transformation",
+      "budgetScope": "Enterprise (,000 - ,000+)",
+      "strategicGoals": "Global rebranding and brand architecture rollout across 5 jurisdictions."
+    },
+    "status": "unread"
+  }
+]

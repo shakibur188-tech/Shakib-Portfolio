@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Control Center | Md. Shakibur Rahaman Portfolio & SEO CMS</title>
+  <title>Admin Control Center | Md. Shakibur Rahaman Portfolio CMS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="admin.css">
 </head>
 <body class="admin-body">
@@ -19,7 +20,7 @@
       <div class="login-header">
         <div class="admin-brand-icon">⚡</div>
         <h2>Admin Control Center</h2>
-        <p>Md. Shakibur Rahaman Portfolio, SEO & Growth CMS</p>
+        <p>Md. Shakibur Rahaman • 360° Creative Director CMS</p>
       </div>
       <form id="loginForm" class="login-form">
         <div class="form-group">
@@ -28,7 +29,7 @@
         </div>
         <div class="form-group">
           <label for="loginPassword">Password</label>
-          <input type="password" id="loginPassword" class="admin-input" placeholder="Enter admin password (default: admin1234)" required autocomplete="current-password">
+          <input type="password" id="loginPassword" class="admin-input" placeholder="Enter admin password" required autocomplete="current-password">
         </div>
         <div id="loginError" class="login-error hidden"></div>
         <button type="submit" id="loginSubmitBtn" class="btn-primary-gold w-full">
@@ -37,7 +38,7 @@
         </button>
         <div class="login-footer">
           <a href="/" target="_blank" class="link-back-site">← Return to Public Website</a>
-          <span class="auth-hint">Default: <code>admin1234</code></span>
+          <span class="text-dim text-xs">Obsidian Noir CMS 2.0</span>
         </div>
       </form>
     </div>
@@ -61,63 +62,61 @@
       <nav class="sidebar-nav">
         <button class="nav-item active" data-tab="tab-overview">
           <span class="nav-icon">📊</span>
-          <span class="nav-label">Overview & Metrics</span>
+          <span class="nav-label">Dashboard Overview</span>
+        </button>
+        <button class="nav-item" data-tab="tab-services">
+          <span class="nav-icon">✨</span>
+          <span class="nav-label">6 Core Services</span>
+        </button>
+        <button class="nav-item" data-tab="tab-webprojects">
+          <span class="nav-icon">💻</span>
+          <span class="nav-label">15 Web Projects (Live)</span>
+        </button>
+        <button class="nav-item" data-tab="tab-casestudies">
+          <span class="nav-icon">💼</span>
+          <span class="nav-label">Case Studies & Recent Works</span>
+          <span id="caseStudiesBadge" class="nav-badge">7</span>
+        </button>
+        <button class="nav-item" data-tab="tab-creative">
+          <span class="nav-icon">🎨</span>
+          <span class="nav-label">Creative Media Studio</span>
+        </button>
+        <button class="nav-item" data-tab="tab-process">
+          <span class="nav-icon">⚙️</span>
+          <span class="nav-label">4-Stage Methodology</span>
+        </button>
+        <button class="nav-item" data-tab="tab-testimonials">
+          <span class="nav-icon">⭐</span>
+          <span class="nav-label">Client Testimonials</span>
         </button>
         <button class="nav-item" data-tab="tab-seo">
           <span class="nav-icon">🔍</span>
-          <span class="nav-label">Global & Content SEO</span>
+          <span class="nav-label">Global & AI SEO Center</span>
         </button>
         <button class="nav-item" data-tab="tab-hero">
           <span class="nav-icon">👤</span>
-          <span class="nav-label">Hero & Profile</span>
-        </button>
-        <button class="nav-item" data-tab="tab-trust">
-          <span class="nav-icon">🛡️</span>
-          <span class="nav-label">Trust & Credibility</span>
-        </button>
-        <button class="nav-item" data-tab="tab-stats">
-          <span class="nav-icon">📈</span>
-          <span class="nav-label">Top Stats Cards</span>
-        </button>
-        <button class="nav-item" data-tab="tab-sectors">
-          <span class="nav-icon">🏢</span>
-          <span class="nav-label">7 Core Sectors</span>
-        </button>
-        <button class="nav-item" data-tab="tab-casestudies">
-          <span class="nav-icon">📂</span>
-          <span class="nav-label">Case Studies CMS</span>
-        </button>
-        <button class="nav-item" data-tab="tab-pillars">
-          <span class="nav-icon">🎯</span>
-          <span class="nav-label">Marketing Pillars</span>
-        </button>
-        <button class="nav-item" data-tab="tab-skills">
-          <span class="nav-icon">📊</span>
-          <span class="nav-label">Skills Matrix</span>
-        </button>
-        <button class="nav-item" data-tab="tab-experience">
-          <span class="nav-icon">💼</span>
-          <span class="nav-label">Career Timeline</span>
-        </button>
-        <button class="nav-item" data-tab="tab-education">
-          <span class="nav-icon">🎓</span>
-          <span class="nav-label">Education & Degree</span>
-        </button>
-        <button class="nav-item" data-tab="tab-credentials">
-          <span class="nav-icon">🏆</span>
-          <span class="nav-label">Certs, Awards & Refs</span>
+          <span class="nav-label">Hero, Profile & Stats</span>
         </button>
         <button class="nav-item" data-tab="tab-leads">
           <span class="nav-icon">📬</span>
-          <span class="nav-label">Leads Inbox</span>
+          <span class="nav-label">Leads & Inquiries Inbox</span>
           <span id="leadsBadge" class="nav-badge">0</span>
         </button>
+        <button class="nav-item" data-tab="tab-forms">
+          <span class="nav-icon"><i class="fa-solid fa-rectangle-list"></i></span>
+          <span class="nav-label">Form Builder &amp; 20+ Templates</span>
+          <span id="formsBadge" class="nav-badge">22</span>
+        </button>
+        <button class="nav-item" data-tab="tab-aistudio">
+          <span class="nav-icon">🤖</span>
+          <span class="nav-label">AI Studio & OpenAI Suite</span>
+        </button>
         <button class="nav-item" data-tab="tab-scripts">
-          <span class="nav-icon">🎨</span>
-          <span class="nav-label">Scripts & Styling</span>
+          <span class="nav-icon">💻</span>
+          <span class="nav-label">Custom Scripts Injection</span>
         </button>
         <button class="nav-item" data-tab="tab-settings">
-          <span class="nav-icon">⚙️</span>
+          <span class="nav-icon">🔐</span>
           <span class="nav-label">Security & Backups</span>
         </button>
       </nav>
@@ -125,7 +124,7 @@
       <div class="sidebar-footer">
         <a href="/" target="_blank" class="btn-secondary-link">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-          <span>View Live Site</span>
+          <span>View Public Website ↗</span>
         </a>
         <button id="logoutBtn" class="btn-logout">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>
@@ -141,7 +140,7 @@
       <header class="admin-topbar glass-panel">
         <div class="topbar-left">
           <h1 id="pageTitle">Dashboard Overview</h1>
-          <p id="pageSubtitle">Real-time control over all 7 industries, case studies, and inquiries.</p>
+          <p id="pageSubtitle">Full real-time management over 6 services, 15 live web projects, and incoming client briefs.</p>
         </div>
         <div class="topbar-right">
           <button id="discardChangesBtn" class="btn-ghost hidden">Discard</button>
@@ -159,186 +158,336 @@
         <section id="tab-overview" class="tab-pane active">
           <div class="overview-grid">
             <div class="stat-widget glass-panel">
+              <div class="widget-icon">✨</div>
+              <div class="widget-data">
+                <span class="widget-value" id="overviewServicesCount">9</span>
+                <span class="widget-label">Core Service Verticals</span>
+              </div>
+            </div>
+            <div class="stat-widget glass-panel">
+              <div class="widget-icon">💻</div>
+              <div class="widget-data">
+                <span class="widget-value" style="color:var(--cyan-accent);" id="overviewProjectsCount">15</span>
+                <span class="widget-label">Live Web Portals Active</span>
+              </div>
+            </div>
+            <div class="stat-widget glass-panel">
               <div class="widget-icon">📬</div>
               <div class="widget-data">
                 <span class="widget-value" id="overviewLeadsCount">0</span>
-                <span class="widget-label">Total Client Inquiries</span>
+                <span class="widget-label">Total Inquiries Received</span>
               </div>
             </div>
             <div class="stat-widget glass-panel">
               <div class="widget-icon">🔍</div>
               <div class="widget-data">
-                <span class="widget-value" style="color:var(--cyan-accent);">100% Ready</span>
-                <span class="widget-label">SEO & Social Meta Indexing</span>
-              </div>
-            </div>
-            <div class="stat-widget glass-panel">
-              <div class="widget-icon">📂</div>
-              <div class="widget-data">
-                <span class="widget-value" id="overviewCasesCount">7</span>
-                <span class="widget-label">Published Case Studies</span>
-              </div>
-            </div>
-            <div class="stat-widget glass-panel">
-              <div class="widget-icon">⚡</div>
-              <div class="widget-data">
-                <span class="widget-value">4.8x – 12.4x</span>
-                <span class="widget-label">ROAS Benchmark Engine</span>
+                <span class="widget-value" style="color:#10B981;">100% Ready</span>
+                <span class="widget-label">AI & Google SEO Score</span>
               </div>
             </div>
           </div>
 
           <div class="overview-split">
             <div class="overview-card glass-panel">
-              <h3>🚀 Quick Navigation & Actions</h3>
-              <p class="section-desc">Jump directly to manage specific sections of Shakibur's website:</p>
+              <h3>🚀 Fast Jump Navigation</h3>
+              <p class="section-desc">Quick shortcuts to manage your 6 services and 15 live web portals:</p>
               <div class="quick-links-grid">
+                <button class="quick-link-btn" onclick="switchTab('tab-services')">
+                  <span>✨ 6 Core Services CMS</span>
+                  <small>Branding, Graphics, Web Dev, SMM, Photo/Video, etc.</small>
+                </button>
+                <button class="quick-link-btn" onclick="switchTab('tab-webprojects')">
+                  <span>💻 15 Web Projects CMS</span>
+                  <small>Edit titles, live links, categories & metrics</small>
+                </button>
                 <button class="quick-link-btn" onclick="switchTab('tab-seo')">
-                  <span>🔍 Global SEO & Meta Tags</span>
-                  <small>Page title, description, keywords & GA4</small>
-                </button>
-                <button class="quick-link-btn" onclick="switchTab('tab-hero')">
-                  <span>👤 Edit Bio & Hero Headline</span>
-                  <small>Update name, status badge & typewriter</small>
-                </button>
-                <button class="quick-link-btn" onclick="switchTab('tab-casestudies')">
-                  <span>📂 Manage Case Studies</span>
-                  <small>Add, edit, or reorder client campaigns</small>
+                  <span>🔍 Global & AI SEO Center</span>
+                  <small>Page title, keywords, /llms.txt & schema</small>
                 </button>
                 <button class="quick-link-btn" onclick="switchTab('tab-leads')">
-                  <span>📬 View Recent Inquiries</span>
-                  <small>Check new potential client inquiries</small>
+                  <span>📬 Inquiries Inbox</span>
+                  <small>Review project briefs & export to CSV</small>
                 </button>
               </div>
             </div>
 
             <div class="overview-card glass-panel">
-              <div class="flex-between">
-                <h3>📬 Latest Inquiries</h3>
+              <div class="flex-between mb-3">
+                <h3>📬 Recent Client Inquiries</h3>
                 <button class="btn-link" onclick="switchTab('tab-leads')">View All →</button>
               </div>
               <div id="overviewRecentLeads" class="recent-leads-list">
-                <div class="empty-state-sm">No new inquiries yet.</div>
+                <div class="empty-state-sm">No new inquiries yet. Submissions from the contact form will appear here.</div>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- TAB 2: GLOBAL & CONTENT SEO CENTER -->
+        <!-- TAB 2: 9 CORE SERVICES CMS -->
+        <section id="tab-services" class="tab-pane">
+          <div class="card-form glass-panel">
+            <div class="flex-between mb-4">
+              <div>
+                <h3>✨ 9 Core Specialized Services CMS</h3>
+                <p class="section-desc">Manage the 9 service pillars: titles, subtitles, FontAwesome icons, deliverables, tools, and impact metrics.</p>
+              </div>
+              <button type="button" id="addNewServiceBtn" class="btn-primary-gold">
+                <span>+ Add Service</span>
+              </button>
+            </div>
+            <div id="servicesEditorContainer" class="cases-accordion-list"></div>
+          </div>
+        </section>
+
+        <!-- TAB 3: 15 WEB PROJECTS CMS -->
+        <section id="tab-webprojects" class="tab-pane">
+          <div class="card-form glass-panel">
+            <div class="flex-between mb-4">
+              <div>
+                <h3>💻 15 Deployed Web Development Portals CMS</h3>
+                <p class="section-desc">Manage the 15 live web development projects: client name, categories, live external URLs, tech stack, and highlights.</p>
+              </div>
+              <button type="button" id="addNewWebProjectBtn" class="btn-primary-gold">
+                <span>+ Add Web Project</span>
+              </button>
+            </div>
+            <div id="webProjectsEditorContainer" class="cases-accordion-list"></div>
+          </div>
+        </section>
+
+        <!-- TAB: CASE STUDIES & RECENT WORKS CMS -->
+        <section id="tab-casestudies" class="tab-pane">
+          <div class="card-form glass-panel">
+            <div class="flex-between mb-4">
+              <div>
+                <h3>💼 Case Studies &amp; Recent Works CMS</h3>
+                <p class="section-desc">Write, edit, feature, and publish comprehensive case studies and measurable ROI results for your audience.</p>
+              </div>
+              <button type="button" id="addNewCaseStudyBtn" class="btn-primary-sm">+ Add New Case Study</button>
+            </div>
+
+            <div class="flex-between gap-3 mb-4">
+              <input type="text" id="caseStudiesAdminSearch" class="admin-input text-xs" style="max-width:320px;" placeholder="Search case studies by client, title, or service...">
+              <span class="text-xs text-slate-400 font-bold" id="caseStudiesAdminCount">7 case studies loaded</span>
+            </div>
+
+            <div id="caseStudiesEditorContainer" class="cases-accordion-list"></div>
+          </div>
+        </section>
+
+        <!-- TAB 4: CREATIVE MEDIA STUDIO -->
+        <section id="tab-creative" class="tab-pane">
+          <div class="card-form glass-panel">
+            <div class="flex-between mb-4">
+              <div>
+                <h3>🎨 Creative Media Studio Gallery CMS</h3>
+                <p class="section-desc">Manage creative studio works: visual identity guidelines, commercial films, 3D packaging, and expo activations.</p>
+              </div>
+              <button type="button" id="addNewCreativeBtn" class="btn-secondary-sm">+ Add Media Item</button>
+            </div>
+            <div id="creativeEditorContainer" class="cases-accordion-list"></div>
+          </div>
+        </section>
+
+        <!-- TAB 5: 4-STAGE STRATEGIC PROCESS -->
+        <section id="tab-process" class="tab-pane">
+          <div class="card-form glass-panel">
+            <div class="flex-between mb-4">
+              <div>
+                <h3>⚙️ 4-Stage Strategic Methodology CMS</h3>
+                <p class="section-desc">Manage the 4 execution phases: Deep Discovery, Creative Architecture, Engineering, and Omnichannel Amplification.</p>
+              </div>
+            </div>
+            <div id="processEditorContainer" class="cases-accordion-list"></div>
+          </div>
+        </section>
+
+        <!-- TAB 6: CLIENT TESTIMONIALS -->
+        <section id="tab-testimonials" class="tab-pane">
+          <div class="card-form glass-panel">
+            <div class="flex-between mb-4">
+              <div>
+                <h3>⭐ Client Testimonials & Endorsements CMS</h3>
+                <p class="section-desc">Manage executive client quotes, reviewer names, organization affiliations, and roles.</p>
+              </div>
+              <button type="button" id="addNewTestimonialBtn" class="btn-secondary-sm">+ Add Testimonial</button>
+            </div>
+            <div id="testimonialsEditorContainer" class="cases-accordion-list"></div>
+          </div>
+        </section>
+
+        <!-- TAB 7: GLOBAL & AI SEO CENTER -->
         <section id="tab-seo" class="tab-pane">
           
-          <!-- Live Google SERP Preview Card -->
+          <!-- AI SEO & Search Engine Optimization Banner -->
           <div class="card-form glass-panel mb-6">
-            <div class="flex-between mb-3">
-              <h3>🔍 Live Google Search Result Preview</h3>
-              <span class="badge-live">Real-Time Search Simulator</span>
+            <div class="flex-between mb-2">
+              <div class="flex-gap align-center">
+                <span class="ai-badge-chip">🤖 Next-Gen AI &amp; AEO Engine</span>
+                <span class="badge-live">ChatGPT • Perplexity • Claude • Gemini</span>
+              </div>
+              <div class="seo-audit-score" id="seoLiveScore">SEO Score: 98/100</div>
             </div>
-            <div class="google-preview-box">
-              <div class="google-preview-url" id="previewSeoUrl">http://localhost:3000/ › md-shakibur-rahaman</div>
-              <div class="google-preview-title" id="previewSeoTitle">Md. Shakibur Rahaman | Brand & Performance Marketing Architect</div>
-              <div class="google-preview-desc" id="previewSeoDesc">Senior Brand & Performance Marketing Strategist with 3+ years experience delivering 4.8x–12.4x ROAS across Hospitality, Interior Design, Club Memberships, Education, Recruitment, Travel, and E-Commerce.</div>
+            <p class="section-desc">Ground your portfolio's knowledge graph directly into LLM retrieval models and traditional search engines:</p>
+
+            <div class="form-group">
+              <label>Target AI Search Queries (Pipe-separated phrases)</label>
+              <input type="text" id="seo_targetAiQueries" class="admin-input" placeholder="e.g. Who is Md. Shakibur Rahaman? | Top creative agency director in Dhaka | Best web design and graphics agency in Bangladesh">
+            </div>
+
+            <div class="form-group">
+              <label>AI Entity Fact Capsule (Direct Context for AI Crawlers)</label>
+              <textarea id="seo_aiSummary" class="admin-textarea font-sans" rows="4" placeholder="Unambiguous factual statements about Shakibur's verified track record across 9 services, 15 web projects, and client impact..."></textarea>
+            </div>
+
+            <!-- llms.txt Standard -->
+            <div class="form-group">
+              <div class="flex-between mb-1">
+                <label>llms.txt Standard Specification (Markdown Context for AI Agents)</label>
+                <div class="flex-gap">
+                  <button type="button" class="btn-link" onclick="autoGenerateLlmsTxt()">⚡ Auto-Generate From Site Data</button>
+                  <a href="/llms.txt" target="_blank" class="btn-link text-sky-400">🔗 View /llms.txt ↗</a>
+                </div>
+              </div>
+              <textarea id="seo_llmsTxtContent" class="admin-textarea font-mono text-xs" rows="6"></textarea>
+            </div>
+
+            <div class="flex-between p-3 rounded-xl bg-slate-950/60 border border-slate-800">
+              <div>
+                <strong class="text-white text-xs block">Allow AI Search Crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)</strong>
+                <span class="text-dim text-[11px]">Permits automated AI search engines to index your credentials for live citations.</span>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="seo_allowAiCrawlers" checked>
+                <span class="slider round"></span>
+              </label>
             </div>
           </div>
 
-          <!-- Main SEO Meta Tags Form -->
+          <!-- Google SERP Preview Card -->
+          <div class="card-form glass-panel mb-6">
+            <div class="flex-between mb-3">
+              <h3>🔍 Live Google Search Result Preview</h3>
+              <span class="badge-live">SERP Simulator</span>
+            </div>
+            <div class="google-preview-box">
+              <div class="google-preview-url" id="previewSeoUrl">http://localhost:5500/ › md-shakibur-rahaman</div>
+              <div class="google-preview-title" id="previewSeoTitle">Md. Shakibur Rahaman | 360° Creative Director & Digital Growth Architect</div>
+              <div class="google-preview-desc" id="previewSeoDesc">Senior Creative Director & Full-Stack Growth Strategist specializing in Graphics Design, Web Design & Development, Social Media, Videography, Event Activation, Google Ads, SEO & AEO, and PR.</div>
+            </div>
+          </div>
+
+          <!-- Core Search Engine Meta Tags -->
           <div class="card-form glass-panel mb-6">
             <h3>🌐 Core Search Engine Meta Tags</h3>
-            <p class="section-desc">These tags determine how search engines like Google, Bing, and AI crawlers index and rank the website:</p>
             
             <div class="form-group">
-              <label>Page Title Tag (`&lt;title&gt;`)</label>
-              <input type="text" id="seo_pageTitle" class="admin-input" placeholder="e.g. Md. Shakibur Rahaman | Brand & Performance Marketing Architect">
-              <small class="text-dim">Optimal length: 50–60 characters.</small>
+              <div class="flex-between">
+                <label>Page Title Tag (`&lt;title&gt;`)</label>
+                <span id="titleCharCount" class="text-dim text-xs font-mono">0 / 60 chars</span>
+              </div>
+              <input type="text" id="seo_pageTitle" class="admin-input">
             </div>
 
             <div class="form-group">
-              <label>Meta Description (`&lt;meta name="description"&gt;`)</label>
-              <textarea id="seo_metaDescription" class="admin-textarea" rows="3" placeholder="Compelling summary of Shakibur's experience, multi-industry results, and ROAS benchmarks..."></textarea>
-              <small class="text-dim">Optimal length: 150–160 characters.</small>
+              <div class="flex-between">
+                <label>Meta Description (`&lt;meta name="description"&gt;`)</label>
+                <span id="descCharCount" class="text-dim text-xs font-mono">0 / 160 chars</span>
+              </div>
+              <textarea id="seo_metaDescription" class="admin-textarea" rows="3"></textarea>
             </div>
 
             <div class="form-row-2">
               <div class="form-group">
-                <label>Meta Keywords (Comma-separated)</label>
-                <input type="text" id="seo_metaKeywords" class="admin-input" placeholder="Performance Marketing, Meta Ads Expert, Lead Generation...">
+                <label>Primary Focus Keyword</label>
+                <input type="text" id="seo_primaryKeyword" class="admin-input" placeholder="e.g. Creative Director & Web Development Dhaka">
               </div>
+              <div class="form-group">
+                <label>Secondary Keywords</label>
+                <input type="text" id="seo_secondaryKeywords" class="admin-input" placeholder="e.g. Graphics Design, Web Design & Development, Social Media Marketing">
+              </div>
+            </div>
+
+            <div class="form-row-3">
               <div class="form-group">
                 <label>Canonical URL</label>
-                <input type="url" id="seo_canonicalUrl" class="admin-input" placeholder="https://shakibur.com/">
+                <input type="url" id="seo_canonicalUrl" class="admin-input">
+              </div>
+              <div class="form-group">
+                <label>Robots Directive</label>
+                <input type="text" id="seo_robots" class="admin-input">
+              </div>
+              <div class="form-group">
+                <label>Author Tag</label>
+                <input type="text" id="seo_author" class="admin-input">
               </div>
             </div>
 
-            <div class="form-row-2">
-              <div class="form-group">
-                <label>Author</label>
-                <input type="text" id="seo_author" class="admin-input" value="Md. Shakibur Rahaman">
-              </div>
-              <div class="form-group">
-                <label>Google Search Console Verification Tag</label>
-                <input type="text" id="seo_googleSiteVerification" class="admin-input" placeholder="google-site-verification-code">
-              </div>
+            <div class="form-group mb-0">
+              <label>Google Search Console Verification Tag</label>
+              <input type="text" id="seo_googleSiteVerification" class="admin-input" placeholder="google-site-verification-code">
             </div>
           </div>
 
           <!-- OpenGraph & Social Sharing Meta -->
           <div class="card-form glass-panel mb-6">
-            <h3>📱 OpenGraph & Social Share Cards (Facebook, LinkedIn, WhatsApp, Twitter)</h3>
-            <p class="section-desc">Configures how preview links look when shared on LinkedIn, WhatsApp, and Facebook:</p>
-            
+            <h3>📱 OpenGraph & Social Share Cards</h3>
             <div class="form-row-2">
               <div class="form-group">
                 <label>OG / Social Title</label>
-                <input type="text" id="seo_ogTitle" class="admin-input" placeholder="Md. Shakibur Rahaman | Brand & Performance Marketing Lead">
+                <input type="text" id="seo_ogTitle" class="admin-input">
               </div>
               <div class="form-group">
                 <label>Twitter Card Type</label>
                 <select id="seo_twitterCard" class="admin-select">
-                  <option value="summary_large_image" selected>summary_large_image (Large Hero Card)</option>
-                  <option value="summary">summary (Standard Card)</option>
+                  <option value="summary_large_image" selected>summary_large_image</option>
+                  <option value="summary">summary</option>
                 </select>
               </div>
             </div>
-
             <div class="form-group">
               <label>OG Description</label>
-              <textarea id="seo_ogDescription" class="admin-textarea" rows="2" placeholder="Delivering 4.8x–12.4x ROAS, 5,000+ Qualified Leads, and BDT 35M+ Attributed Revenue..."></textarea>
+              <textarea id="seo_ogDescription" class="admin-textarea" rows="2"></textarea>
             </div>
-
-            <div class="form-group">
-              <label>OG Share Image URL (1200x630px recommended)</label>
-              <input type="url" id="seo_ogImage" class="admin-input" placeholder="https://example.com/og-banner.jpg">
+            <div class="form-group mb-0">
+              <label>OG Share Image URL (1200x630px)</label>
+              <input type="url" id="seo_ogImage" class="admin-input">
             </div>
           </div>
 
-          <!-- Tracking & Analytics IDs -->
+          <!-- Analytics & Tracking IDs -->
           <div class="card-form glass-panel mb-6">
             <h3>📊 Analytics & Conversion Tracking Tags</h3>
-            <p class="section-desc">Connect analytics engines to monitor traffic, audience attribution, and campaign events:</p>
-            
-            <div class="form-row-2">
+            <div class="form-row-3">
               <div class="form-group">
-                <label>Google Analytics 4 (GA4) Measurement ID</label>
-                <input type="text" id="seo_googleAnalyticsId" class="admin-input" placeholder="e.g. G-XXXXXXXXXX">
+                <label>Google Tag Manager (GTM) ID</label>
+                <input type="text" id="seo_gtmId" class="admin-input" placeholder="GTM-XXXXXXX">
               </div>
               <div class="form-group">
-                <label>Meta Pixel ID</label>
-                <input type="text" id="seo_metaPixelId" class="admin-input" placeholder="e.g. 123456789012345">
+                <label>Google Analytics 4 (GA4) ID</label>
+                <input type="text" id="seo_googleAnalyticsId" class="admin-input" placeholder="G-XXXXXXXXXX">
+              </div>
+              <div class="form-group">
+                <label>Meta Pixel (Facebook) ID</label>
+                <input type="text" id="seo_metaPixelId" class="admin-input" placeholder="123456789012345">
               </div>
             </div>
           </div>
 
           <!-- Schema.org JSON-LD Structured Data -->
           <div class="card-form glass-panel">
-            <h3>🤖 Schema.org JSON-LD Structured Data</h3>
-            <p class="section-desc">Rich snippets schema helping search engines understand Shakibur as a Person & Marketing Professional:</p>
+            <div class="flex-between mb-2">
+              <h3>🤖 Schema.org JSON-LD Structured Data</h3>
+              <button type="button" class="btn-link" onclick="formatSchemaJson()">✨ Format JSON</button>
+            </div>
             <div class="form-group mb-0">
-              <textarea id="seo_schemaJson" class="admin-textarea font-mono" rows="8" placeholder="{\n  &quot;@context&quot;: &quot;https://schema.org&quot;,\n  &quot;@type&quot;: &quot;Person&quot;...\n}"></textarea>
+              <textarea id="seo_schemaJson" class="admin-textarea font-mono text-xs" rows="8"></textarea>
             </div>
           </div>
 
         </section>
 
-        <!-- TAB 3: HERO & PROFILE -->
+        <!-- TAB 8: HERO & PROFILE & STATS -->
         <section id="tab-hero" class="tab-pane">
           <div class="card-form glass-panel">
             <h3>👤 Profile & Identity Information</h3>
@@ -353,7 +502,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label>Hero Main Headline</label>
+              <label>Hero Main Headline (supports HTML span tags)</label>
               <input type="text" id="prof_headline" class="admin-input">
             </div>
             <div class="form-group">
@@ -397,195 +546,23 @@
               </div>
             </div>
 
-            <h4 class="mt-6 mb-2">⌨️ Dynamic Typewriter Cycling Phrases</h4>
-            <p class="section-desc">Add or remove phrases that animate on the hero section:</p>
+            <h4 class="mt-6 mb-2">⌨️ Animated Typewriter Phrases</h4>
+            <p class="section-desc">Phrases that cycle through the hero banner under the headline:</p>
             <div id="typewriterList" class="dynamic-list"></div>
-            <button type="button" id="addTypewriterBtn" class="btn-secondary-sm mt-3">+ Add New Typewriter Phrase</button>
-          </div>
-        </section>
+            <button type="button" id="addTypewriterBtn" class="btn-secondary-sm mt-3">+ Add Typewriter Phrase</button>
 
-        <!-- TAB 4: TRUST & CREDIBILITY STRIP -->
-        <section id="tab-trust" class="tab-pane">
-          <div class="card-form glass-panel mb-6">
-            <h3>🛡️ Trust & Credibility Strip Header</h3>
-            <p class="section-desc">Manage the institutional trust guarantee banner located under the hero:</p>
-            
-            <div class="form-row-2">
-              <div class="form-group">
-                <label>Strip Headline</label>
-                <input type="text" id="trust_headline" class="admin-input">
-              </div>
-              <div class="form-group">
-                <label>Verified Badge Tag</label>
-                <input type="text" id="trust_badgeText" class="admin-input">
-              </div>
-            </div>
-            <div class="form-group mb-0">
-              <label>Subheadline / Guarantee Description</label>
-              <input type="text" id="trust_subheadline" class="admin-input">
-            </div>
-          </div>
-
-          <div class="card-form glass-panel">
-            <h3>🛡️ 4 Trust Guarantee Pillars</h3>
-            <div id="trustItemsContainer" class="trust-items-grid"></div>
-          </div>
-        </section>
-
-        <!-- TAB 5: STATS CARDS -->
-        <section id="tab-stats" class="tab-pane">
-          <div class="card-form glass-panel">
-            <h3>📈 Key Impact Metrics (Hero & Stats Bar)</h3>
-            <p class="section-desc">These 4 cards are prominently featured below the hero section:</p>
+            <h4 class="mt-8 mb-2">📈 4 Key Quick Stat Cards</h4>
             <div id="statsEditorContainer" class="stats-editor-grid"></div>
           </div>
         </section>
 
-        <!-- TAB 6: 7 CORE SECTORS -->
-        <section id="tab-sectors" class="tab-pane">
-          <div class="card-form glass-panel">
-            <div class="flex-between">
-              <div>
-                <h3>🏢 7 Core Industry Practice Areas</h3>
-                <p class="section-desc">Manage industry positioning, titles, icons, descriptions, and key metric badges:</p>
-              </div>
-            </div>
-            <div id="sectorsEditorContainer" class="sectors-editor-list"></div>
-          </div>
-        </section>
-
-        <!-- TAB 7: CASE STUDIES CMS -->
-        <section id="tab-casestudies" class="tab-pane">
-          <div class="card-form glass-panel">
-            <div class="flex-between mb-4">
-              <div>
-                <h3>📂 Case Studies & Campaign Blueprints CMS</h3>
-                <p class="section-desc">Manage deep-dive case studies, metric cards, challenges, solutions, and tech tags:</p>
-              </div>
-              <button type="button" id="addNewCaseBtn" class="btn-primary-gold">
-                <span>+ Add New Case Study</span>
-              </button>
-            </div>
-            <div id="casesListContainer" class="cases-accordion-list"></div>
-          </div>
-        </section>
-
-        <!-- TAB 8: 4 MARKETING FRAMEWORK PILLARS -->
-        <section id="tab-pillars" class="tab-pane">
-          <div class="card-form glass-panel">
-            <div class="flex-between mb-4">
-              <div>
-                <h3>🎯 Strategic Marketing Methodology (4 Pillars)</h3>
-                <p class="section-desc">Manage core marketing pillars shown in the About/Philosophy section:</p>
-              </div>
-              <button type="button" id="addPillarBtn" class="btn-secondary-sm">+ Add Pillar</button>
-            </div>
-            <div id="pillarsListContainer" class="pillars-editor-list"></div>
-          </div>
-        </section>
-
-        <!-- TAB 9: SKILLS & TOOLS MATRIX -->
-        <section id="tab-skills" class="tab-pane">
-          <div class="card-form glass-panel">
-            <div class="flex-between mb-4">
-              <div>
-                <h3>📊 Core Capabilities & Tools Matrix</h3>
-                <p class="section-desc">Manage quantified capability bars, percentages, and tool stacks:</p>
-              </div>
-              <button type="button" id="addSkillBtn" class="btn-secondary-sm">+ Add Capability</button>
-            </div>
-            <div id="skillsListContainer" class="skills-editor-list"></div>
-          </div>
-        </section>
-
-        <!-- TAB 10: CAREER TIMELINE -->
-        <section id="tab-experience" class="tab-pane">
-          <div class="card-form glass-panel">
-            <div class="flex-between mb-4">
-              <div>
-                <h3>💼 Career Timeline & Experience</h3>
-                <p class="section-desc">Add, edit, and reorder verified corporate positions:</p>
-              </div>
-              <button type="button" id="addExperienceBtn" class="btn-primary-gold">+ Add Position</button>
-            </div>
-            <div id="experienceListContainer" class="experience-list"></div>
-          </div>
-        </section>
-
-        <!-- TAB 12: EDUCATION & DEGREE -->
-        <section id="tab-education" class="tab-pane">
-          <div class="card-form glass-panel">
-            <h3>🎓 Academic Degree & Education</h3>
-            <div class="form-row-2">
-              <div class="form-group">
-                <label>Degree Title</label>
-                <input type="text" id="edu_degree" class="admin-input">
-              </div>
-              <div class="form-group">
-                <label>Institution / University</label>
-                <input type="text" id="edu_institution" class="admin-input">
-              </div>
-            </div>
-            <div class="form-row-3">
-              <div class="form-group">
-                <label>Period / Graduation Years</label>
-                <input type="text" id="edu_period" class="admin-input">
-              </div>
-              <div class="form-group">
-                <label>Result / CGPA</label>
-                <input type="text" id="edu_result" class="admin-input">
-              </div>
-              <div class="form-group">
-                <label>Location</label>
-                <input type="text" id="edu_location" class="admin-input">
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- TAB 13: CREDENTIALS, HONORS & REFERENCES -->
-        <section id="tab-credentials" class="tab-pane">
-          <div class="card-form glass-panel mb-6">
-            <div class="flex-between mb-4">
-              <div>
-                <h3>🏆 Honors & Performance Awards</h3>
-                <p class="section-desc">Manage verified leadership and performance awards:</p>
-              </div>
-              <button type="button" id="addHonorBtn" class="btn-secondary-sm">+ Add Award</button>
-            </div>
-            <div id="honorsListContainer" class="credentials-list"></div>
-          </div>
-
-          <div class="card-form glass-panel mb-6">
-            <div class="flex-between mb-4">
-              <div>
-                <h3>📜 Verified Professional Certifications</h3>
-                <p class="section-desc">Google, Meta, HubSpot, and Simplilearn certifications:</p>
-              </div>
-              <button type="button" id="addCertBtn" class="btn-secondary-sm">+ Add Certification</button>
-            </div>
-            <div id="certsListContainer" class="credentials-list"></div>
-          </div>
-
-          <div class="card-form glass-panel">
-            <div class="flex-between mb-4">
-              <div>
-                <h3>👥 Executive References</h3>
-                <p class="section-desc">Professional leadership referee contacts:</p>
-              </div>
-              <button type="button" id="addRefBtn" class="btn-secondary-sm">+ Add Reference</button>
-            </div>
-            <div id="refsListContainer" class="credentials-list"></div>
-          </div>
-        </section>
-
-        <!-- TAB 14: LEADS INBOX -->
+        <!-- TAB 9: LEADS INBOX -->
         <section id="tab-leads" class="tab-pane">
           <div class="card-form glass-panel">
             <div class="flex-between mb-4">
               <div>
-                <h3>📬 Client Inquiries & Strategy Requests</h3>
-                <p class="section-desc">All messages submitted via portfolio contact form and ROI calculator:</p>
+                <h3>📬 Client Inquiries & Leads Inbox</h3>
+                <p class="section-desc">All project briefs submitted via the portfolio contact form:</p>
               </div>
               <div class="leads-actions">
                 <input type="text" id="leadsSearchInput" placeholder="Search inquiries..." class="admin-input-search">
@@ -599,11 +576,519 @@
           </div>
         </section>
 
-        <!-- TAB 15: CUSTOM SCRIPTS & STYLING -->
+        <!-- TAB: AI STUDIO & OPENAI SUITE -->
+        <section id="tab-aistudio" class="tab-pane">
+          <!-- Card 1: API Configuration -->
+          <div class="card-form glass-panel mb-6 border border-[#BDCFAA]/30 shadow-lg shadow-[#BDCFAA]/5">
+            <div class="flex items-center justify-between flex-wrap gap-3 mb-2">
+              <div class="flex items-center gap-2.5">
+                <span class="text-xl">🤖</span>
+                <h3 class="text-white font-bold text-lg mb-0">OpenAI API Engine & Credentials</h3>
+              </div>
+              <span id="aiStatusBadge" class="badge-tag bg-slate-800 text-slate-400 border border-white/10 font-mono text-xs">
+                Checking Status...
+              </span>
+            </div>
+            <p class="section-desc">Connect your private OpenAI API Key to empower your CMS with automated copywriting, DALL-E 3 visual generation, and creative strategy brainstorming. Stored securely on your server backend.</p>
+
+            <div class="form-row-3 mt-4">
+              <div class="form-group">
+                <label>API Base URL / Gateway</label>
+                <input type="text" id="aiBaseUrlInput" class="admin-input font-mono" placeholder="https://api.xkiro.com/v1" value="https://api.xkiro.com/v1">
+                <div class="flex items-center gap-1.5 mt-2 flex-wrap">
+                  <button type="button" class="btn-ghost-sm text-[10.5px] py-0.5 px-2" onclick="setAiPreset('https://api.xkiro.com/v1', 'qwen/qwen3.8-max:free')">⚡ xkiro (Qwen Free)</button>
+                  <button type="button" class="btn-ghost-sm text-[10.5px] py-0.5 px-2" onclick="setAiPreset('https://api.openai.com/v1', 'gpt-4o-mini')">Official OpenAI</button>
+                  <button type="button" class="btn-ghost-sm text-[10.5px] py-0.5 px-2" onclick="setAiPreset('https://openrouter.ai/api/v1', 'deepseek/deepseek-chat')">OpenRouter</button>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>API Key / Bearer Token</label>
+                <div class="relative flex items-center">
+                  <input type="password" id="aiApiKeyInput" class="admin-input font-mono pr-20" placeholder="Enter API Key / Token" autocomplete="off">
+                  <button type="button" id="toggleAiKeyVisibility" class="btn-ghost-sm absolute right-2 text-xs py-1 px-2 text-slate-400 hover:text-white">Show</button>
+                </div>
+                <small class="text-dim">Secured on server backend, never exposed to clients.</small>
+              </div>
+
+              <div class="form-group">
+                <label>Text & Strategy Model</label>
+                <input type="text" id="aiTextModelInput" list="aiModelList" class="admin-input font-mono" placeholder="qwen/qwen3.8-max:free" value="qwen/qwen3.8-max:free">
+                <datalist id="aiModelList">
+                  <option value="qwen/qwen3.8-max:free">qwen/qwen3.8-max:free (Free on xkiro)</option>
+                  <option value="gpt-4o-mini">gpt-4o-mini (Ultra Fast & Cost-Efficient)</option>
+                  <option value="gpt-4o">gpt-4o (High Creative Intelligence)</option>
+                  <option value="meta-llama/llama-3.3-70b-instruct:free">meta-llama/llama-3.3-70b-instruct:free</option>
+                  <option value="deepseek/deepseek-chat">deepseek/deepseek-chat</option>
+                </datalist>
+                <small class="text-dim">Supports any OpenAI-compatible model ID.</small>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between flex-wrap gap-3 pt-2">
+              <div class="text-xs text-slate-400" id="aiKeyPreviewText">Status: Not configured</div>
+              <div class="flex items-center gap-2">
+                <button type="button" id="testAiConnectionBtn" class="btn-secondary-sm">
+                  <span>⚡ Test Connection</span>
+                </button>
+                <button type="button" id="saveAiConfigBtn" class="btn-primary-gold-sm">
+                  <span>💾 Save API Settings</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Two Columns: Copywriting Studio & DALL-E Visuals -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            
+            <!-- Tool 1: Copywriting & Content Generator -->
+            <div class="card-form glass-panel flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-lg">✍️</span>
+                  <h3 class="text-white font-bold mb-0">AI Copywriting & Bio Studio</h3>
+                </div>
+                <p class="section-desc">Generate production-ready case studies, punchy headlines, bio hooks, or deliverables.</p>
+
+                <div class="form-group mt-3">
+                  <label>Quick Preset Prompt Templates</label>
+                  <select id="aiCopyPresetSelect" class="admin-input">
+                    <option value="">-- Choose a preset template or write custom --</option>
+                    <option value="case-study">Generate 150-word Web Project Case Study</option>
+                    <option value="hero-bio">Generate 3 Punchy Executive Hero Bio Options</option>
+                    <option value="service-specs">Generate 6 Granular Deliverables for a Service</option>
+                    <option value="seo-meta">Generate High-Clickthrough Google SEO Title & Meta</option>
+                    <option value="lead-reply">Draft Professional Inquiry Proposal Pitch</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Creative Prompt & Directives</label>
+                  <textarea id="aiTextPromptInput" class="admin-textarea" rows="4" placeholder="e.g. Write a compelling, prestigious case study for a 5-Star Hotel luxury booking web portal engineered for high conversions and mobile speed..."></textarea>
+                </div>
+
+                <div class="flex justify-end mb-4">
+                  <button type="button" id="generateTextBtn" class="btn-primary-gold-sm">
+                    <span>✨ Generate Copy</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Output Box -->
+              <div class="border-t border-white/10 pt-4">
+                <div class="flex items-center justify-between mb-2">
+                  <label class="text-[11px] uppercase tracking-wider text-slate-400 font-mono">Generated Result</label>
+                  <button type="button" id="copyAiTextBtn" class="btn-ghost-sm text-xs py-1 px-2.5" title="Copy to Clipboard">📋 Copy</button>
+                </div>
+                <div id="aiTextResultBox" class="p-3.5 rounded-xl bg-black/40 border border-white/10 text-xs text-slate-200 leading-relaxed min-h-[100px] max-h-[220px] overflow-y-auto whitespace-pre-wrap font-sans">
+                  Generated text will appear here...
+                </div>
+              </div>
+            </div>
+
+            <!-- Tool 2: DALL-E 3 Visual Media Studio -->
+            <div class="card-form glass-panel flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-lg">🎨</span>
+                  <h3 class="text-white font-bold mb-0">DALL-E 3 Visual Studio</h3>
+                </div>
+                <p class="section-desc">Generate cinematic banners, 3D mockups, and thumbnail assets directly into your portfolio.</p>
+
+                <div class="form-row-2 mt-3">
+                  <div class="form-group">
+                    <label>Aesthetic Style</label>
+                    <select id="aiImageStyleSelect" class="admin-input">
+                      <option value="Botanical Sage &amp; Obsidian Noir (#BDCFAA sage, #5E7892 slate, #F3EFDF cream, cinematic lighting)">Botanical Sage &amp; Obsidian Noir (Brand Theme)</option>
+                      <option value="Ultra-photorealistic commercial studio product photography">Luxury Studio Photography</option>
+                      <option value="3D isometric isometric UI/UX web mockup rendering in dark room">3D Isometric UI Mockup</option>
+                      <option value="Minimalist corporate editorial design layout">Minimalist Editorial Design</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Aspect Ratio / Dimensions</label>
+                    <select id="aiImageSizeSelect" class="admin-input">
+                      <option value="1024x1024">Square (1024x1024 - Service Icons & Posts)</option>
+                      <option value="1792x1024">Landscape (1792x1024 - Banners & Thumbnails)</option>
+                      <option value="1024x1792">Portrait (1024x1792 - Stories & Posters)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Visual Description Prompt</label>
+                  <textarea id="aiImagePromptInput" class="admin-textarea" rows="3" placeholder="e.g. Modern sleek responsive web dashboard for a fintech portal on a glass table, dark moody ambient lighting with emerald green glow, 8k render..."></textarea>
+                </div>
+
+                <div class="flex justify-end mb-4">
+                  <button type="button" id="generateImageBtn" class="btn-primary-gold-sm">
+                    <span>🖼️ Generate DALL-E 3 Visual</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Image Output Box -->
+              <div class="border-t border-white/10 pt-4">
+                <div class="flex items-center justify-between mb-2">
+                  <label class="text-[11px] uppercase tracking-wider text-slate-400 font-mono">Visual Preview & Asset Link</label>
+                  <a id="downloadAiImageLink" href="#" target="_blank" download="ai_generated.png" class="btn-ghost-sm text-xs py-1 px-2.5 hidden">⬇️ Download File</a>
+                </div>
+                <div id="aiImagePreviewContainer" class="h-44 rounded-xl bg-black/40 border border-white/10 flex items-center justify-center overflow-hidden relative group">
+                  <span id="aiImagePlaceholder" class="text-xs text-slate-500 font-mono">DALL-E 3 visual will render here</span>
+                  <img id="aiImageResultImg" src="" alt="AI Result" class="w-full h-full object-cover hidden">
+                </div>
+                <div id="aiImageUrlBar" class="mt-2 text-[11px] text-slate-400 font-mono break-all hidden"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Card 3: Creative Idea & Strategic Campaign Brainstormer -->
+          <div class="card-form glass-panel mb-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-lg">💡</span>
+              <h3 class="text-white font-bold mb-0">Strategy, Angles & Creative Hook Brainstormer</h3>
+            </div>
+            <p class="section-desc">Enter any client niche or industry to instantly generate high-converting strategic angles, campaign slogans, and value propositions.</p>
+
+            <div class="form-row-3 mt-4">
+              <div class="form-group">
+                <label>Client Niche / Industry</label>
+                <input type="text" id="aiIdeaIndustry" class="admin-input" placeholder="e.g. Luxury Real Estate, B2B SaaS, Fine Dining Cloud Kitchen">
+              </div>
+              <div class="form-group">
+                <label>Campaign Objective</label>
+                <select id="aiIdeaGoal" class="admin-input">
+                  <option value="Brand Positioning & Market Differentiation">Brand Positioning & Market Differentiation</option>
+                  <option value="Lead Generation & High-Ticket Client Acquisition">Lead Generation & High-Ticket Acquisition</option>
+                  <option value="Viral Omnichannel Short-Form Reel Strategy">Viral Social Media & Video Hooks</option>
+                  <option value="High-Performance Website Redesign Strategy">High-Performance Website Redesign</option>
+                </select>
+              </div>
+              <div class="form-group flex items-end">
+                <button type="button" id="brainstormIdeasBtn" class="btn-secondary w-full">
+                  <span>🧠 Brainstorm Strategic Angles</span>
+                </button>
+              </div>
+            </div>
+
+            <div id="aiIdeasOutputContainer" class="p-4 rounded-xl bg-black/40 border border-white/10 text-xs text-slate-200 leading-relaxed min-h-[80px] max-h-[260px] overflow-y-auto whitespace-pre-wrap mt-3 hidden font-sans">
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB: FORM BUILDER & 20+ TEMPLATES -->
+        <section id="tab-forms" class="tab-pane">
+          <div class="form-builder-header">
+            <div>
+              <h2 class="text-xl font-extrabold text-[#1C2B1B] tracking-tight">Form Builder &amp; 20+ Template Engine</h2>
+              <p class="text-xs text-[#55738D] mt-1">Deploy client onboarding forms, enterprise RFPs, event registrations, and custom client intake surveys.</p>
+            </div>
+            <div class="form-subnav">
+              <button type="button" class="form-subnav-btn active" data-subtab="templates">
+                <i class="fa-solid fa-layer-group text-xs mr-1"></i>
+                <span>Template Library (22)</span>
+              </button>
+              <button type="button" class="form-subnav-btn" data-subtab="myforms">
+                <i class="fa-solid fa-table-list text-xs mr-1"></i>
+                <span>My Active Forms</span>
+              </button>
+              <button type="button" class="form-subnav-btn" data-subtab="builder">
+                <i class="fa-solid fa-pen-ruler text-xs mr-1"></i>
+                <span>Visual Form Builder</span>
+              </button>
+              <button type="button" class="form-subnav-btn" data-subtab="submissions">
+                <i class="fa-solid fa-inbox text-xs mr-1"></i>
+                <span>Submissions Inbox</span>
+                <span id="submissionsTabBadge" class="nav-badge ml-1.5">0</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- SUBTAB 1: TEMPLATES GALLERY -->
+          <div id="subtabTemplatesView" class="space-y-6">
+            <div class="glass-panel p-4 flex flex-wrap items-center justify-between gap-4">
+              <div class="flex flex-wrap items-center gap-2" id="templateCategoryFilters">
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#70805D] text-white" data-cat="all">All (22)</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#70805D]/25 text-[#2A3B27] hover:bg-[#F1F4EE]" data-cat="Strategy">Strategy</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#70805D]/25 text-[#2A3B27] hover:bg-[#F1F4EE]" data-cat="Branding">Branding</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#70805D]/25 text-[#2A3B27] hover:bg-[#F1F4EE]" data-cat="Web Development">Web Dev</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#70805D]/25 text-[#2A3B27] hover:bg-[#F1F4EE]" data-cat="Paid Media">Paid Media</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#70805D]/25 text-[#2A3B27] hover:bg-[#F1F4EE]" data-cat="Creative Media">Video/Photo</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#70805D]/25 text-[#2A3B27] hover:bg-[#F1F4EE]" data-cat="Experiential">Events/3D</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#70805D]/25 text-[#2A3B27] hover:bg-[#F1F4EE]" data-cat="Organic Growth">SEO/AEO</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#70805D]/25 text-[#2A3B27] hover:bg-[#F1F4EE]" data-cat="PR & Media">PR</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#70805D]/25 text-[#2A3B27] hover:bg-[#F1F4EE]" data-cat="Feedback & QA">Feedback</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#70805D]/25 text-[#2A3B27] hover:bg-[#F1F4EE]" data-cat="Careers & Hiring">Careers</button>
+              </div>
+              <div class="w-full sm:w-64">
+                <input type="text" id="templateSearchInput" class="admin-input text-xs py-2" placeholder="🔍 Search 22 templates...">
+              </div>
+            </div>
+
+            <div id="templateCardsContainer" class="template-cards-grid">
+              <!-- Rendered dynamically by admin.js -->
+            </div>
+          </div>
+
+          <!-- SUBTAB 2: MY CUSTOM FORMS -->
+          <div id="subtabMyFormsView" class="hidden space-y-6">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="text-base font-bold text-[#1C2B1B]">Active Published Forms</h3>
+                <p class="text-xs text-[#55738D]">Custom forms created and currently active on the website.</p>
+              </div>
+              <button type="button" id="createNewFormBtn" class="btn-primary-gold text-xs">
+                <i class="fa-solid fa-plus text-xs"></i>
+                <span>Create Form from Scratch</span>
+              </button>
+            </div>
+
+            <div class="custom-forms-table-wrap">
+              <table class="admin-data-table">
+                <thead>
+                  <tr>
+                    <th>Form Title</th>
+                    <th>Category</th>
+                    <th>Public URL Slug</th>
+                    <th>Fields</th>
+                    <th>Submissions</th>
+                    <th>Status</th>
+                    <th class="text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="customFormsTableBody">
+                  <!-- Rendered dynamically by admin.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- SUBTAB 3: VISUAL FORM BUILDER -->
+          <div id="subtabBuilderView" class="hidden space-y-6">
+            <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-[#70805D]/15">
+              <div>
+                <h3 class="text-lg font-bold text-[#1C2B1B]" id="builderFormModeHeading">Create / Edit Form</h3>
+                <p class="text-xs text-[#55738D]">Configure form schema, drag-and-drop fields, and preview live.</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <button type="button" id="cancelBuilderBtn" class="btn-ghost text-xs">
+                  <span>Cancel</span>
+                </button>
+                <button type="button" id="saveFormBtn" class="btn-primary-gold text-xs">
+                  <i class="fa-solid fa-floppy-disk text-xs"></i>
+                  <span>Save &amp; Publish Form</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-builder-two-col">
+              <!-- Left Column: Settings & Fields -->
+              <div class="space-y-6">
+                <!-- General Info Card -->
+                <div class="builder-panel">
+                  <h4 class="text-xs font-extrabold uppercase tracking-wider text-[#70805D] mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-sliders text-xs"></i>
+                    <span>Form Settings &amp; Metadata</span>
+                  </h4>
+
+                  <input type="hidden" id="builderFormId">
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="form-group">
+                      <label>Form Title *</label>
+                      <input type="text" id="builderFormTitle" class="admin-input" placeholder="e.g. Executive Strategy Brief" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Custom URL Slug *</label>
+                      <input type="text" id="builderFormSlug" class="admin-input" placeholder="e.g. strategy-brief" required>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="form-group">
+                      <label>Category</label>
+                      <input type="text" id="builderFormCategory" class="admin-input" placeholder="e.g. Strategy & Direction">
+                    </div>
+                    <div class="form-group">
+                      <label>Submit Button Text</label>
+                      <input type="text" id="builderFormSubmitText" class="admin-input" placeholder="Submit Form">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Form Description / Subtitle</label>
+                    <textarea id="builderFormDescription" class="admin-textarea" rows="2" placeholder="Brief explanation shown below the form title..."></textarea>
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="form-group">
+                      <label>Success Message</label>
+                      <input type="text" id="builderFormSuccessMessage" class="admin-input" placeholder="Thank you! Your submission has been received.">
+                    </div>
+                    <div class="form-group">
+                      <label>Redirect URL (Optional)</label>
+                      <input type="url" id="builderFormRedirectUrl" class="admin-input" placeholder="https://example.com/thank-you">
+                    </div>
+                  </div>
+
+                  <div class="flex items-center justify-between pt-3 border-t border-[#70805D]/15">
+                    <label class="flex items-center gap-2 text-xs font-bold text-[#1C2B1B] cursor-pointer">
+                      <input type="checkbox" id="builderFormIsActive" class="rounded text-[#70805D] focus:ring-[#70805D]" checked>
+                      <span>Form is Active &amp; Accepting Submissions</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Field Builder Card -->
+                <div class="builder-panel">
+                  <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-xs font-extrabold uppercase tracking-wider text-[#70805D] flex items-center gap-2">
+                      <i class="fa-solid fa-list-check text-xs"></i>
+                      <span>Form Fields (<span id="builderFieldsCount">0</span>)</span>
+                    </h4>
+                    <button type="button" id="builderAddFieldBtn" class="px-3 py-1.5 rounded-lg bg-[#70805D]/10 hover:bg-[#70805D]/20 text-[#70805D] text-xs font-bold transition-colors flex items-center gap-1.5">
+                      <i class="fa-solid fa-plus text-[10px]"></i>
+                      <span>Add New Field</span>
+                    </button>
+                  </div>
+
+                  <div id="builderFieldsContainer" class="space-y-3">
+                    <!-- Fields dynamically rendered by admin.js -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Live Interactive Preview -->
+              <div>
+                <div class="builder-panel sticky top-28">
+                  <div class="flex items-center justify-between pb-3 mb-4 border-b border-[#70805D]/15">
+                    <span class="text-xs font-extrabold uppercase tracking-wider text-[#2A3B27] flex items-center gap-1.5">
+                      <i class="fa-solid fa-eye text-[#70805D]"></i>
+                      <span>Live Client Preview</span>
+                    </span>
+                    <span class="text-[11px] text-[#55738D] font-semibold">Updates in Real-Time</span>
+                  </div>
+
+                  <div class="p-6 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/20 shadow-inner max-h-[75vh] overflow-y-auto" id="builderLivePreviewBox">
+                    <!-- Form preview rendered dynamically -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBTAB 4: SUBMISSIONS INBOX -->
+          <div id="subtabSubmissionsView" class="hidden space-y-6">
+            <div class="glass-panel p-4 flex flex-wrap items-center justify-between gap-4">
+              <div class="flex flex-wrap items-center gap-3">
+                <div>
+                  <label class="block text-[11px] font-bold text-[#55738D] mb-1">Filter by Form:</label>
+                  <select id="submissionsFilterFormSelect" class="admin-input text-xs py-2 w-56">
+                    <option value="">All Form Submissions</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-[#55738D] mb-1">Search Submissions:</label>
+                  <input type="text" id="submissionsSearchInput" class="admin-input text-xs py-2 w-64" placeholder="Search by name, email, keyword...">
+                </div>
+              </div>
+
+              <div class="flex items-center gap-2 pt-4 sm:pt-0">
+                <button type="button" id="exportSubmissionsCsvBtn" class="btn-primary-gold text-xs">
+                  <i class="fa-solid fa-file-csv text-xs"></i>
+                  <span>Export Submissions to CSV</span>
+                </button>
+              </div>
+            </div>
+
+            <div id="submissionsCardsContainer" class="space-y-4">
+              <!-- Submissions rendered dynamically -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Template Preview Modal -->
+        <div id="templatePreviewModal" class="admin-modal-overlay hidden">
+          <div class="admin-modal-content">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#70805D]/15">
+              <div>
+                <span id="tplModalCatBadge" class="template-cat-badge">Category</span>
+                <h3 id="tplModalTitle" class="text-xl font-bold text-[#1C2B1B] mt-1">Template Title</h3>
+              </div>
+              <button type="button" id="closeTplModalBtn" class="text-gray-400 hover:text-gray-600 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <p id="tplModalDesc" class="text-xs text-[#4D614A] leading-relaxed mb-6"></p>
+
+            <div class="mb-6">
+              <h4 class="text-xs font-extrabold uppercase tracking-wider text-[#70805D] mb-3">Included Fields Schema:</h4>
+              <div id="tplModalFieldsList" class="space-y-2 max-h-64 overflow-y-auto pr-2"></div>
+            </div>
+
+            <div class="flex items-center justify-end gap-3 pt-4 border-t border-[#70805D]/15">
+              <button type="button" id="closeTplModalSecondaryBtn" class="btn-ghost text-xs">Close</button>
+              <button type="button" id="useThisTemplateBtn" class="btn-primary-gold text-xs">
+                <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
+                <span>Use This Template &amp; Customize</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Embed Code & Public Link Modal -->
+        <div id="embedCodeModal" class="admin-modal-overlay hidden">
+          <div class="admin-modal-content">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#70805D]/15">
+              <h3 class="text-lg font-bold text-[#1C2B1B] flex items-center gap-2">
+                <i class="fa-solid fa-share-nodes text-[#70805D]"></i>
+                <span>Share &amp; Embed Custom Form</span>
+              </h3>
+              <button type="button" id="closeEmbedModalBtn" class="text-gray-400 hover:text-gray-600 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <div class="space-y-5">
+              <div>
+                <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Direct Public Link</label>
+                <div class="flex items-center gap-2">
+                  <input type="text" id="embedDirectUrl" class="admin-input text-xs font-mono" readonly>
+                  <button type="button" id="copyDirectUrlBtn" class="btn-primary-gold text-xs px-3 py-2 shrink-0">Copy Link</button>
+                  <a href="#" id="openDirectUrlBtn" target="_blank" class="btn-ghost text-xs px-3 py-2 shrink-0">Open ↗</a>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">HTML iFrame Embed Code</label>
+                <textarea id="embedIframeCode" class="admin-textarea font-mono text-xs" rows="3" readonly></textarea>
+                <button type="button" id="copyIframeBtn" class="btn-ghost text-xs mt-1.5">Copy iFrame Snippet</button>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">WhatsApp Instant Share Link</label>
+                <div class="flex items-center gap-2">
+                  <input type="text" id="embedWhatsAppUrl" class="admin-input text-xs font-mono" readonly>
+                  <a href="#" id="openWhatsAppShareBtn" target="_blank" class="btn-primary-gold text-xs px-3 py-2 shrink-0 flex items-center gap-1.5 bg-[#25D366]">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>Share on WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-end pt-4 mt-6 border-t border-[#70805D]/15">
+              <button type="button" id="closeEmbedModalSecondaryBtn" class="btn-ghost text-xs">Done</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 10: CUSTOM SCRIPTS -->
         <section id="tab-scripts" class="tab-pane">
           <div class="card-form glass-panel mb-6">
             <h3>💻 Custom Header Scripts (`&lt;head&gt;`)</h3>
-            <p class="section-desc">Inject Google Tag Manager, custom meta tags, or tracking pixels directly into the head:</p>
+            <p class="section-desc">Inject custom meta tags, tracking pixels, or CSS directly into the head:</p>
             <div class="form-group mb-0">
               <textarea id="seo_customHeadScript" class="admin-textarea font-mono" rows="5" placeholder="<!-- Paste custom head script here -->"></textarea>
             </div>
@@ -611,18 +1096,17 @@
 
           <div class="card-form glass-panel">
             <h3>💻 Custom Body Footer Scripts (`&lt;body&gt;`)</h3>
-            <p class="section-desc">Inject live chat widgets, remarketing tags, or third-party tools before the closing body tag:</p>
+            <p class="section-desc">Inject live chat widgets or third-party tracking scripts before the closing body tag:</p>
             <div class="form-group mb-0">
               <textarea id="seo_customBodyScript" class="admin-textarea font-mono" rows="5" placeholder="<!-- Paste custom body script here -->"></textarea>
             </div>
           </div>
         </section>
 
-        <!-- TAB 16: SETTINGS & SECURITY -->
+        <!-- TAB 11: SETTINGS & SECURITY -->
         <section id="tab-settings" class="tab-pane">
           <div class="card-form glass-panel mb-6">
             <h3>🔐 Security: Change Admin Password</h3>
-            <p class="section-desc">Update the password used to access this CMS dashboard:</p>
             <form id="changePasswordForm" class="mt-4">
               <div class="form-row-2">
                 <div class="form-group">
@@ -640,7 +1124,7 @@
 
           <div class="card-form glass-panel mb-6">
             <h3>💾 Backup & Migration</h3>
-            <p class="section-desc">Download a complete JSON snapshot of all portfolio content, SEO tags, case studies, and leads:</p>
+            <p class="section-desc">Download a complete JSON snapshot of all portfolio services, web projects, SEO, and leads:</p>
             <div class="flex-gap mt-4">
               <button type="button" id="downloadBackupBtn" class="btn-secondary-sm">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
@@ -656,7 +1140,7 @@
 
           <div class="card-form glass-panel danger-zone">
             <h3>⚠️ Factory Reset</h3>
-            <p class="section-desc">Reset all content back to the default factory state:</p>
+            <p class="section-desc">Reset all content back to factory defaults:</p>
             <button type="button" id="factoryResetBtn" class="btn-danger mt-3">Reset to Default Content</button>
           </div>
         </section>
@@ -671,11 +1155,11 @@
     <div id="unsavedBar" class="unsaved-bar hidden">
       <div class="unsaved-info">
         <span class="unsaved-dot">●</span>
-        <span>You have unsaved changes!</span>
+        <span>You have unsaved changes! Click "Save & Publish Live" to write to site.</span>
       </div>
       <div class="unsaved-actions">
         <button id="floatingDiscardBtn" class="btn-ghost-sm">Discard</button>
-        <button id="floatingSaveBtn" class="btn-primary-gold-sm">Save & Publish</button>
+        <button id="floatingSaveBtn" class="btn-primary-gold-sm">Save &amp; Publish Live</button>
       </div>
     </div>
 

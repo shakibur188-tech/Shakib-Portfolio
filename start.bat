@@ -8,13 +8,9 @@ echo Checking Node.js runtime...
 where node >nul 2>nul
 if %errorlevel% neq 0 (
     echo [NOTE] Node.js is not found in PATH.
-    echo Opening public portfolio directly in your default browser...
-    start index.html
-    echo.
-    echo To enable the live Admin CMS & local database on this PC,
-    echo install Node.js from https://nodejs.org
-    echo.
-    pause
+    echo Launching built-in Windows HTTP server on http://localhost:5500 ...
+    start http://localhost:5500/
+    powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0serve.ps1"
     exit /b
 )
 

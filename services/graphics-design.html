@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graphics Design & Visual Collateral | Md. Shakibur Rahaman</title>
+  <meta name="description" content="Pixel-perfect packaging architecture, luxury print editorial, digital advertising suites, and vector design systems engineered for commercial conversion.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#70805D',
+              forest: '#2A3B27',
+              slate: '#55738D',
+              mist: '#96A7B6',
+              stone: '#CBC8C4'
+            },
+            canvas: '#F8F9F6'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bg-[#F8F9F6] text-[#1C2B1B] font-sans antialiased selection:bg-[#70805D] selection:text-white relative overflow-x-hidden min-h-screen">
+  <!-- Top Scroll Progress Bar -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- Ambient Light Background Canvas & Mesh -->
+  <div class="ambient-mesh-glow"></div>
+  <canvas id="ambientCanvas"></canvas>
+  <div class="ambient-vignette"></div>
+
+  <!-- Header -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#F8F9F6]/90 backdrop-blur-2xl border-b border-[#70805D]/15 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <a href="/" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-xl bg-[#70805D] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#70805D]/25">
+          SR
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-[#1C2B1B] tracking-tight text-base sm:text-lg group-hover:text-[#70805D] transition-colors" id="navBrandName">Md. Shakibur Rahaman</span>
+          <span class="text-[10.5px] text-[#70805D] font-bold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
+        </div>
+      </a>
+
+      <!-- Centered Floating Pill Navigation Menu with Services Dropdown -->
+      <nav class="hidden lg:flex items-center gap-6 px-6 py-2.5 rounded-full bg-white/90 border border-[#70805D]/20 text-xs font-semibold text-[#4D614A] backdrop-blur-md shadow-sm">
+        <a href="/" class="desktop-nav-link hover:text-[#70805D] transition-colors">Home</a>
+        <a href="/#about" class="desktop-nav-link hover:text-[#70805D] transition-colors">About</a>
+        
+        <div class="services-menu-item relative group">
+          <a href="/services.html" class="desktop-nav-link text-[#70805D] font-bold flex items-center gap-1.5 py-1">
+            <span>Services</span>
+            <i class="fa-solid fa-chevron-down text-[9px] text-[#70805D] transition-transform duration-200 group-hover:rotate-180"></i>
+          </a>
+          
+                    <!-- 6 Services Hover Sub-Menu Panel -->
+          <div class="services-dropdown">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-[#70805D]/15">
+              <span class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-layer-group text-[#70805D]"></i>
+                <span>Core Capabilities (6 Disciplines)</span>
+              </span>
+              <a href="/services.html" class="text-[11px] font-bold text-[#70805D] hover:underline flex items-center gap-1">
+                <span>View All Services Directory</span>
+                <i class="fa-solid fa-arrow-right text-[9px]"></i>
+              </a>
+            </div>
+
+            <div class="services-dropdown-grid grid grid-cols-2 sm:grid-cols-3 gap-2">
+              <a href="/services/graphics-design.html" class="service-sub-item bg-[#70805D]/10">
+                <div class="service-sub-icon bg-[#70805D] text-white"><i class="fa-solid fa-bezier-curve"></i></div>
+                <div>
+                  <div class="service-sub-title text-[#70805D]">01 Graphics & Visual Identity</div>
+                  <div class="service-sub-desc">Packaging, UI/UX & decks</div>
+                </div>
+              </a>
+              <a href="/services/web-development.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-code"></i></div>
+                <div>
+                  <div class="service-sub-title ">02 Web design & Development</div>
+                  <div class="service-sub-desc">Jamstack portals & apps</div>
+                </div>
+              </a>
+              <a href="/services/social-media-marketing.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-hashtag"></i></div>
+                <div>
+                  <div class="service-sub-title ">03 Social Media marketing</div>
+                  <div class="service-sub-desc">Viral reels & Meta ads</div>
+                </div>
+              </a>
+              <a href="/services/public-relations.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-newspaper"></i></div>
+                <div>
+                  <div class="service-sub-title ">04 Public relation & Media outreach</div>
+                  <div class="service-sub-desc">Tier-1 press & media PR</div>
+                </div>
+              </a>
+              <a href="/services/google-ads.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-chart-line"></i></div>
+                <div>
+                  <div class="service-sub-title ">05 Google ads & Intent Scaling</div>
+                  <div class="service-sub-desc">Performance Max funnels</div>
+                </div>
+              </a>
+              <a href="/services/event-activation.html" class="service-sub-item ">
+                <div class="service-sub-icon "><i class="fa-solid fa-cubes"></i></div>
+                <div>
+                  <div class="service-sub-title ">06 Event activation & Exhibition</div>
+                  <div class="service-sub-desc">Expos & 3D spatial builds</div>
+                </div>
+              </a>
+            </div>
+
+            <div class="mt-3 pt-2.5 border-t border-[#70805D]/15 flex items-center justify-between text-[11px] text-[#55738D]">
+              <span>Integrated strategic leadership across all 6 disciplines</span>
+              <a href="/services.html" class="font-bold text-[#70805D] hover:text-[#2A3B27] flex items-center gap-1">
+                <span>View Full Services Directory</span>
+                <i class="fa-solid fa-chevron-right text-[8px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/#projects" class="desktop-nav-link hover:text-[#70805D] transition-colors">Projects</a>
+        <a href="/case-studies.html" class="desktop-nav-link hover:text-[#70805D] transition-colors">Case Studies</a>
+        <a href="#inquiry" class="desktop-nav-link hover:text-[#70805D] transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#inquiry" class="nav-cta-btn btn-aesthetic-primary text-xs hidden md:inline-flex items-center gap-2">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-down text-[10px]"></i>
+        </a>
+        <button id="mobileMenuToggle" class="lg:hidden w-10 h-10 rounded-xl bg-white border border-[#70805D]/25 flex items-center justify-center text-[#2A3B27] shadow-sm">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 border-b border-[#70805D]/15 px-6 py-5 space-y-3 shadow-xl">
+      <a href="/" class="mobile-link block text-sm font-semibold text-[#4D614A]">Home</a>
+      <a href="/services.html" class="mobile-link block text-sm font-bold text-[#70805D]">All 6 Services Directory</a>
+      <div class="pt-1 pb-1 border-y border-[#70805D]/10">
+        <div class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider py-1">6 Core Services</div>
+        <div class="grid grid-cols-2 gap-1 pt-1 text-xs text-[#4D614A]">
+          <a href="/services/graphics-design.html" class="mobile-link py-1 font-bold text-[#70805D]">• 01 Graphics</a>
+          <a href="/services/web-development.html" class="mobile-link py-1 ">• 02 Web Dev</a>
+          <a href="/services/social-media-marketing.html" class="mobile-link py-1 ">• 03 Social Media</a>
+          <a href="/services/public-relations.html" class="mobile-link py-1 ">• 04 PR & Outreach</a>
+          <a href="/services/google-ads.html" class="mobile-link py-1 ">• 05 Google Ads</a>
+          <a href="/services/event-activation.html" class="mobile-link py-1 ">• 06 3D Events</a>
+        </div>
+      </div>
+      <a href="/#projects" class="mobile-link block text-sm font-semibold text-[#4D614A]">15 Web Projects</a>
+      <a href="#inquiry" class="mobile-link block text-sm font-bold text-[#70805D]">Book Consultation</a>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       5. 4-PHASE INTERACTIVE WORKFLOW STEPPER
+       ========================================================================= -->
+  <section id="workflow" class="py-24 border-t border-[#70805D]/15 bg-[#F1F3ED]/50 relative z-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal-on-scroll">
+        <div class="section-tag justify-center mb-3">
+          <i class="fa-solid fa-layer-group"></i>
+          <span>EXECUTION METHODOLOGY</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C2B1B] tracking-tight">
+          4-Phase Delivery Framework
+        </h2>
+        <p class="text-xs sm:text-sm text-[#4D614A] mt-2">
+          Transparent, milestone-driven sprint execution ensuring zero surprises and complete executive governance.
+        </p>
+      </div>
+
+      <!-- Stepper Buttons -->
+      <div class="workflow-stepper reveal-on-scroll">
+        <button type="button" class="workflow-step-btn active" data-phase="0">
+          <div class="ws-num">Phase 01</div>
+          <div class="ws-title">Discovery &amp; Audit</div>
+        </button>
+        <button type="button" class="workflow-step-btn" data-phase="1">
+          <div class="ws-num">Phase 02</div>
+          <div class="ws-title">Architecture</div>
+        </button>
+        <button type="button" class="workflow-step-btn" data-phase="2">
+          <div class="ws-num">Phase 03</div>
+          <div class="ws-title">Sprint Execution</div>
+        </button>
+        <button type="button" class="workflow-step-btn" data-phase="3">
+          <div class="ws-num">Phase 04</div>
+          <div class="ws-title">Launch &amp; Scaling</div>
+        </button>
+      </div>
+
+      <!-- Stepper Progress Bar -->
+      <div class="w-full bg-[#70805D]/15 h-2 rounded-full overflow-hidden mb-8 shadow-inner">
+        <div id="workflowProgressBar" class="h-full bg-[#70805D] transition-all duration-500 rounded-full" style="width: 25%;"></div>
+      </div>
+
+      <!-- Phase Content Cards -->
+      <div class="workflow-card-interactive active" data-phase-card="0">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
+          <div>
+            <span class="text-xs font-bold text-[#70805D] tracking-wider uppercase">Phase 01 of 04</span>
+            <h3 class="text-xl font-extrabold text-[#1C2B1B]">Discovery &amp; Comprehensive Audit</h3>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-clock mr-1"></i> Week 01</span>
+            <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">100% Alignment</span>
+          </div>
+        </div>
+        <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
+          In-depth technical and strategic immersion into current brand perception, competitor whitespace, analytics telemetry, and commercial bottlenecks before any design or code begins.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27] mb-8">
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Stakeholder &amp; Founder Discovery Sessions</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Competitor &amp; Category Benchmark Audit</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Technical Architecture &amp; Data Review</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Strategic Scope &amp; Deliverables Sign-Off</span></div>
+        </div>
+        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+          <span class="text-xs text-[#55738D] font-semibold">Ready for Architecture?</span>
+          <button type="button" data-workflow-next class="btn-aesthetic-primary text-xs py-2.5 px-5">
+            <span>Next: Phase 02 Architecture →</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="workflow-card-interactive" data-phase-card="1">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
+          <div>
+            <span class="text-xs font-bold text-[#70805D] tracking-wider uppercase">Phase 02 of 04</span>
+            <h3 class="text-xl font-extrabold text-[#1C2B1B]">Strategic Architecture &amp; Prototypes</h3>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-clock mr-1"></i> Week 02</span>
+            <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">Blueprint Approval</span>
+          </div>
+        </div>
+        <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
+          Drafting the foundational blueprint: creative direction decks, typographic hierarchies, database schemas, interactive wireframes, and milestone sign-offs.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27] mb-8">
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Creative Direction &amp; Moodboard Alignment</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Technical Specifications &amp; API Contracts</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Interactive Low-Fidelity Clickable Wireframes</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Pre-Production Technical Sprint Plan</span></div>
+        </div>
+        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+          <button type="button" data-workflow-prev class="btn-pill-glass text-xs py-2 px-4">
+            <span>← Previous: Phase 01</span>
+          </button>
+          <button type="button" data-workflow-next class="btn-aesthetic-primary text-xs py-2.5 px-5">
+            <span>Next: Phase 03 Execution →</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="workflow-card-interactive" data-phase-card="2">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
+          <div>
+            <span class="text-xs font-bold text-[#70805D] tracking-wider uppercase">Phase 03 of 04</span>
+            <h3 class="text-xl font-extrabold text-[#1C2B1B]">Surgical Sprint Execution</h3>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-clock mr-1"></i> Weeks 03–04</span>
+            <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">Live Staging</span>
+          </div>
+        </div>
+        <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
+          Rapid production iterations with weekly video walkthroughs, staging deployments, cross-browser QA, and collaborative client feedback cycles.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27] mb-8">
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Weekly Agile Milestone Video Reviews</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Live Staging URL Deployment Access</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Pixel-Perfect Visual &amp; Performance Tuning</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Zero-Defect Security &amp; Regression Testing</span></div>
+        </div>
+        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+          <button type="button" data-workflow-prev class="btn-pill-glass text-xs py-2 px-4">
+            <span>← Previous: Phase 02</span>
+          </button>
+          <button type="button" data-workflow-next class="btn-aesthetic-primary text-xs py-2.5 px-5">
+            <span>Next: Phase 04 Launch →</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="workflow-card-interactive" data-phase-card="3">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
+          <div>
+            <span class="text-xs font-bold text-[#70805D] tracking-wider uppercase">Phase 04 of 04</span>
+            <h3 class="text-xl font-extrabold text-[#1C2B1B]">Launch, Governance &amp; Scale</h3>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-rocket mr-1"></i> Deployment</span>
+            <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">30-Day SLA</span>
+          </div>
+        </div>
+        <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
+          Turnkey rollout, production DNS switch, 100% intellectual property transfer, and ongoing performance telemetry monitoring with SLA support.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27] mb-8">
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>100% IP &amp; Master Asset Handover</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Production Go-Live &amp; DNS Cutover</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>30-Day Post-Launch SLA Warranty</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Quarterly Performance Retainer Review</span></div>
+        </div>
+        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+          <button type="button" data-workflow-prev class="btn-pill-glass text-xs py-2 px-4">
+            <span>← Previous: Phase 03</span>
+          </button>
+          <a href="#inquiry" class="btn-aesthetic-primary text-xs py-2.5 px-5">
+            <span>Initiate Project Briefing ↓</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. DEDICATED SERVICE INQUIRY FORM
+       ========================================================================= -->
+  <section id="inquiry" class="py-24 border-t border-[#70805D]/15 bg-white relative z-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal-on-scroll">
+        <div class="section-tag justify-center">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>INITIATE PROJECT</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-[#1C2B1B] tracking-tight mt-2">
+          Start Your Graphics Design & Visual Collateral Project
+        </h2>
+        <p class="text-xs sm:text-sm text-[#4D614A] mt-2">
+          Brief us on your enterprise goals, current challenges, and target timeline.
+        </p>
+      </div>
+
+      <div class="spotlight-card p-6 sm:p-10 border border-[#70805D]/25 bg-white shadow-xl">
+        <form id="serviceContactForm" class="space-y-6">
+          <input type="hidden" id="selectedServiceHidden" value="Graphics Design & Visual Collateral">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Full Name *</label>
+              <input type="text" id="svcLeadName" required placeholder="Marcus Vance" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Corporate Email *</label>
+              <input type="email" id="svcLeadEmail" required placeholder="marcus@company.com" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Phone / WhatsApp</label>
+              <input type="text" id="svcLeadPhone" placeholder="+880 1838-070468" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Estimated Budget Scope</label>
+              <select id="svcLeadBudget" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+                <option value="Comprehensive Packaging & Collateral Suite ($2,500 - $6,000+)">Comprehensive Packaging & Collateral Suite ($2,500 - $6,000+)</option>
+                <option value="High-Stakes Investor Pitch Deck ($1,200 - $2,500)">High-Stakes Investor Pitch Deck ($1,200 - $2,500)</option>
+                <option value="Digital Advertising & Social Asset Kit ($800 - $1,500)">Digital Advertising & Social Asset Kit ($800 - $1,500)</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Project Scope &amp; Target Timeline *</label>
+            <textarea id="svcLeadMessage" rows="4" required placeholder="Tell us about your strategic goals, current challenges, and desired delivery schedule..." class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]"></textarea>
+          </div>
+
+          <div id="svcStatusAlert" class="hidden p-4 rounded-xl text-xs font-semibold"></div>
+
+          <button type="submit" id="svcSubmitBtn" class="btn-aesthetic-primary w-full justify-center text-sm py-3.5">
+            <span>Submit Project Brief</span>
+            <i class="fa-solid fa-paper-plane text-xs"></i>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-[#70805D]/15 bg-[#F1F3ED] relative z-10 text-xs text-[#4D614A] text-center">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>© 2026 Md. Shakibur Rahaman. All rights reserved.</div>
+        <div class="flex items-center gap-4 font-bold text-[#2A3B27]">
+          <a href="/" class="hover:text-[#70805D]">Home</a>
+          <a href="/services.html" class="hover:text-[#70805D]">All Services Directory</a>
+          <a href="/#projects" class="hover:text-[#70805D]">Projects</a>
+          <a href="#inquiry" class="hover:text-[#70805D]">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./service-page.js"></script>
+</body>
+</html>
