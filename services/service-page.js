@@ -309,19 +309,31 @@ function initMobileNav() {
 }
 
 /* ==========================================================================
-   6. Interactive Production Workflow Engine (4-Phase Framework)
+   6. Interactive Production Workflow Engine (Auto-Scrolling 4-Phase Timeline)
    ========================================================================== */
 function initInteractiveWorkflow() {
   const stepBtns = document.querySelectorAll('.workflow-step-btn');
-  const phaseCards = document.querySelectorAll('.workflow-card-interactive');
+  const phaseCards = document.querySelectorAll('.workflow-card-interactive[data-phase-card]');
   const progressBar = document.getElementById('workflowProgressBar');
 
-  if (!stepBtns.length || !phaseCards.length) return;
+  if (!phaseCards.length) return;
 
-  function setActivePhase(index) {
-    if (index < 0 || index >= stepBtns.length) return;
+  // Ensure all cards are visibly placed one after another
+  phaseCards.forEach(card => {
+    card.style.display = 'flex';
+    card.style.opacity = '1';
+    card.style.transform = 'none';
+  });
 
-    // Update Buttons
+  let activeIndex = 0;
+  let isProgrammaticScrolling = false;
+  let scrollTimer = null;
+
+  function updateActiveUI(index) {
+    if (index < 0 || index >= phaseCards.length) return;
+    activeIndex = index;
+
+    // Update Stepper Navigation Buttons
     stepBtns.forEach((btn, i) => {
       if (i === index) {
         btn.classList.add('active');
@@ -332,57 +344,101 @@ function initInteractiveWorkflow() {
       }
     });
 
-    // Update Phase Content Cards
+    // Update Phase Content Cards Focus Styling
     phaseCards.forEach((card, i) => {
       if (i === index) {
-        card.classList.add('active');
-        card.style.display = 'block';
-        card.style.opacity = '1';
-        card.style.transform = 'translateY(0)';
+        card.classList.add('active-scrolled-phase');
       } else {
-        card.classList.remove('active');
-        card.style.display = 'none';
-        card.style.opacity = '0';
+        card.classList.remove('active-scrolled-phase');
       }
     });
 
     // Update Progress Bar
     if (progressBar) {
-      const percentage = ((index + 1) / stepBtns.length) * 100;
+      const percentage = ((index + 1) / phaseCards.length) * 100;
       progressBar.style.width = `${percentage}%`;
-      progressBar.style.backgroundColor = '#70805D';
     }
   }
 
-  // Bind click handlers to stepper tabs
+  function scrollToPhase(index) {
+    if (index < 0 || index >= phaseCards.length) return;
+    isProgrammaticScrolling = true;
+    updateActiveUI(index);
+
+    const targetCard = phaseCards[index];
+    const stickyWrap = document.querySelector('.workflow-stepper-sticky-wrap');
+    const headerOffset = (stickyWrap ? stickyWrap.offsetHeight : 50) + 95;
+    const targetY = targetCard.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: Math.max(0, targetY),
+      behavior: 'smooth'
+    });
+
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => {
+      isProgrammaticScrolling = false;
+    }, 800);
+  }
+
+  // Click on Stepper tabs -> smooth auto-scroll to that phase
   stepBtns.forEach((btn, index) => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      setActivePhase(index);
+      scrollToPhase(index);
     });
   });
 
-  // Bind Next/Prev navigation buttons if present
+  // Next / Previous buttons inside cards -> smooth auto-scroll to next/prev phase
   document.querySelectorAll('[data-workflow-next]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const currentIdx = Array.from(stepBtns).findIndex(b => b.classList.contains('active'));
-      const nextIdx = (currentIdx + 1) % stepBtns.length;
-      setActivePhase(nextIdx);
+      const targetAttr = btn.getAttribute('data-workflow-next');
+      const targetIdx = targetAttr !== '' && !isNaN(targetAttr) ? parseInt(targetAttr, 10) : activeIndex + 1;
+      scrollToPhase(Math.min(targetIdx, phaseCards.length - 1));
     });
   });
 
   document.querySelectorAll('[data-workflow-prev]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const currentIdx = Array.from(stepBtns).findIndex(b => b.classList.contains('active'));
-      const prevIdx = (currentIdx - 1 + stepBtns.length) % stepBtns.length;
-      setActivePhase(prevIdx);
+      const targetAttr = btn.getAttribute('data-workflow-prev');
+      const targetIdx = targetAttr !== '' && !isNaN(targetAttr) ? parseInt(targetAttr, 10) : activeIndex - 1;
+      scrollToPhase(Math.max(targetIdx, 0));
     });
   });
 
-  // Initialize with Phase 0 active
-  setActivePhase(0);
+  // Auto Scroll-Spy: As user naturally scrolls down the screen, automatically highlight Phase 1 -> 4
+  function onScrollSpy() {
+    if (isProgrammaticScrolling) return;
+
+    const focalPoint = window.innerHeight * 0.40;
+    let closestIndex = 0;
+    let minDistance = Infinity;
+
+    phaseCards.forEach((card, idx) => {
+      const rect = card.getBoundingClientRect();
+      // Calculate distance between focal point and card's top third
+      const cardFocal = rect.top + Math.min(rect.height * 0.35, 120);
+      const dist = Math.abs(cardFocal - focalPoint);
+
+      if (rect.top <= window.innerHeight * 0.70 && rect.bottom >= window.innerHeight * 0.15) {
+        if (dist < minDistance) {
+          minDistance = dist;
+          closestIndex = idx;
+        }
+      }
+    });
+
+    if (closestIndex !== activeIndex) {
+      updateActiveUI(closestIndex);
+    }
+  }
+
+  window.addEventListener('scroll', onScrollSpy, { passive: true });
+
+  // Initial highlight
+  updateActiveUI(0);
 }
 
 /* ==========================================================================

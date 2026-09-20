@@ -1521,25 +1521,44 @@ a.spotlight-card {
 
 
 /* ==========================================================================
-   20. INTERACTIVE WORKFLOW STEPPER (SERVICE PAGES)
+   20. INTERACTIVE WORKFLOW STEPPER & SEQUENTIAL TIMELINE (SERVICE PAGES)
    ========================================================================== */
+.workflow-stepper-sticky-wrap {
+  position: sticky;
+  top: 86px;
+  z-index: 30;
+  background: rgba(248, 249, 246, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 12px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(112, 128, 93, 0.18);
+  box-shadow: 0 10px 30px -10px rgba(42, 59, 39, 0.08);
+  margin-bottom: 32px;
+  transition: all 0.3s ease;
+}
+
 .workflow-stepper {
   display: flex;
-  gap: 4px;
-  margin-bottom: 30px;
+  gap: 8px;
   position: relative;
 }
 
 .workflow-step-btn {
   flex: 1;
-  padding: 14px 16px;
+  padding: 10px 14px;
   border-radius: 12px;
   border: 1px solid rgba(112, 128, 93, 0.2);
   background: #FFFFFF;
   cursor: pointer;
   text-align: left;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   font-family: var(--font-sans);
+}
+
+.workflow-step-btn:hover {
+  border-color: var(--palette-olive);
+  transform: translateY(-1px);
 }
 
 .workflow-step-btn.active {
@@ -1552,41 +1571,83 @@ a.spotlight-card {
 .workflow-step-btn .ws-num {
   font-size: 10px;
   font-weight: 700;
-  opacity: 0.7;
+  opacity: 0.75;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
 .workflow-step-btn .ws-title {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .workflow-card-interactive {
   background: #FFFFFF;
   border: 1px solid rgba(112, 128, 93, 0.18);
-  border-radius: 20px;
+  border-radius: 24px;
   padding: 32px;
-  display: none;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
   box-shadow: 0 10px 30px -10px rgba(42, 59, 39, 0.08);
-  transition: all 0.3s ease;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  margin-bottom: 28px;
+  scroll-margin-top: 170px;
 }
 
-.workflow-card-interactive.active {
-  display: block !important;
-  opacity: 1 !important;
-  transform: none !important;
-  animation: fadeSlideUp 0.35s ease;
+.workflow-card-interactive:last-child {
+  margin-bottom: 0;
 }
 
-@keyframes fadeSlideUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.grid .workflow-card-interactive {
+  margin-bottom: 0 !important;
+}
+
+.workflow-card-interactive:hover,
+.workflow-card-interactive.active-scrolled-phase {
+  border-color: var(--palette-olive);
+  box-shadow: 0 20px 45px -10px rgba(112, 128, 93, 0.22);
+  transform: translateY(-3px);
+}
+
+.workflow-card-interactive.active-scrolled-phase .phase-number-badge {
+  background: var(--palette-olive) !important;
+  color: #FFFFFF !important;
+  border-color: var(--palette-olive) !important;
+  box-shadow: 0 4px 12px rgba(112, 128, 93, 0.35);
 }
 
 @media (max-width: 768px) {
-  .workflow-stepper { flex-direction: column; gap: 8px; }
+  .workflow-stepper-sticky-wrap {
+    top: 82px;
+    padding: 8px 10px;
+  }
+  .workflow-stepper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+  }
+  .workflow-step-btn {
+    padding: 8px 4px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .workflow-step-btn .ws-num {
+    font-size: 9px;
+  }
+  .workflow-step-btn .ws-title {
+    display: none;
+  }
+  .workflow-card-interactive {
+    padding: 22px 18px;
+    margin-bottom: 20px;
+    scroll-margin-top: 140px;
+  }
 }
 
 

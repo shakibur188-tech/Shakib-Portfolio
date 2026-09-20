@@ -116,16 +116,10 @@
       "tools": [
         "Photoshop",
         "Illustrator",
-        "InDesign",
-        "Figma"
+        "Canva"
       ],
       "stats": "300+ Brand Assets Designed",
-      "pageUrl": "/services/graphics-design.html",
-      "points": [
-        "Publication-ready print & vector master assets",
-        "100% intellectual property ownership",
-        "Multi-channel social & digital design templates"
-      ]
+      "pageUrl": "/services/graphics-design.html"
     },
     {
       "id": "web-development",
@@ -148,12 +142,7 @@
         "REST APIs"
       ],
       "stats": "15+ Live Web Portals Deployed",
-      "pageUrl": "/services/web-development.html",
-      "points": [
-        "95+ Google PageSpeed score guaranteed",
-        "Sub-second load latencies worldwide",
-        "Zero monthly plugin bloat & clean codebase"
-      ]
+      "pageUrl": "/services/web-development.html"
     },
     {
       "id": "social-media-marketing",
@@ -176,12 +165,7 @@
         "Canva Pro"
       ],
       "stats": "2M+ Organic Video Views Delivered",
-      "pageUrl": "/services/social-media-marketing.html",
-      "points": [
-        "5x organic impressions multiplier",
-        "Systematic audience retention funnels",
-        "Data-driven weekly creative iterations"
-      ]
+      "pageUrl": "/services/social-media-marketing.html"
     },
     {
       "id": "public-relations",
@@ -204,12 +188,7 @@
         "Cision"
       ],
       "stats": "40+ Mainstream Media Features",
-      "pageUrl": "/services/public-relations.html",
-      "points": [
-        "Direct Tier-1 national media journalist network",
-        "Executive reputation & authority placement",
-        "Comprehensive media tracking & sentiment audit"
-      ]
+      "pageUrl": "/services/public-relations.html"
     },
     {
       "id": "google-ads",
@@ -232,12 +211,7 @@
         "Looker Studio"
       ],
       "stats": "4.8x–12.4x Target Return on Ad Spend",
-      "pageUrl": "/services/google-ads.html",
-      "points": [
-        "Sub-20% target CPA acquisition economics",
-        "Granular GA4 multi-touch attribution modeling",
-        "Real-time Looker Studio executive dashboards"
-      ]
+      "pageUrl": "/services/google-ads.html"
     },
     {
       "id": "event-activation",
@@ -260,12 +234,7 @@
         "SketchUp"
       ],
       "stats": "25+ Major Expos & Activations Executed",
-      "pageUrl": "/services/event-activation.html",
-      "points": [
-        "Turnkey vendor management & build oversight",
-        "Visitor dwell-time & experiential optimization",
-        "100% on-schedule handover before expo doors open"
-      ]
+      "pageUrl": "/services/event-activation.html"
     }
   ],
   "webProjects": [
@@ -582,20 +551,20 @@
     {
       "quote": "WorkNook makes finding a coworking space so easy! I can book a desk in minutes and get straight to work. Highly recommend!",
       "author": "Joao M.",
-      "role": "Startup Founder",
-      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&h=120&q=80"
+      "organization": "",
+      "role": "Startup Founder"
     },
     {
       "quote": "Our team needed a flexible meeting space, and WorkNook delivered. The process was smooth, and the space was exactly what we needed!",
       "author": "Bruno K.",
-      "role": "UX Designer",
-      "avatar": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=120&h=120&q=80"
+      "organization": "",
+      "role": "UX Designer"
     },
     {
       "quote": "I love the variety of spaces available! Whether I need a quiet spot or a collaborative space, WorkNook always has the perfect option.",
       "author": "Lais A.",
-      "role": "Digital Marketer",
-      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&h=120&q=80"
+      "organization": "",
+      "role": "Digital Marketer"
     }
   ],
   "caseStudies": [
@@ -604,7 +573,8 @@
       "title": "Direct Hospitality Booking & Yield Optimization Engine",
       "client": "The Peninsula Chittagong",
       "category": "Web design & Development",
-      "serviceSlug": "web-development",
+      "year": "2025",
+      "featuredOnHome": true,
       "tagline": "Transitioning a 4-star luxury landmark from OTA dependency to high-margin direct reservations.",
       "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80",
       "challenge": "The Peninsula was losing 18-25% in commission fees to third-party travel aggregators (OTAs). Their legacy portal had high checkout abandonment (>65%) and sluggish mobile speeds exceeding 4.2 seconds.",
@@ -620,16 +590,15 @@
         "High-Intent Google Ads Funnel",
         "3D Panoramic Room Visualizer"
       ],
-      "liveUrl": "https://peninsulactg.com",
-      "featuredOnHome": true,
-      "year": "2025"
+      "liveUrl": "https://peninsulactg.com"
     },
     {
       "id": "cs-aarong",
       "title": "Omnichannel Rebranding & High-Retention Social Growth",
       "client": "Aarong Lifestyle Retail",
       "category": "Social Media marketing",
-      "serviceSlug": "social-media-marketing",
+      "year": "2025",
+      "featuredOnHome": true,
       "tagline": "Unifying retail packaging systems with high-retention viral video storytelling and Meta ads scaling.",
       "coverImage": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80",
       "challenge": "Fragmented seasonal visual collateral across 20+ national outlets caused brand dilution among younger affluent demographics, leading to plateaued organic engagement on social channels.",
@@ -645,16 +614,15 @@
         "Meta Advantage+ Ad Campaigns",
         "Influencer Brand Guidelines"
       ],
-      "liveUrl": "https://aarong.com",
-      "featuredOnHome": true,
-      "year": "2025"
+      "liveUrl": "https://aarong.com"
     },
     {
       "id": "cs-beximco",
       "title": "Enterprise Corporate Hub & Tier-1 Press Outreach",
       "client": "Beximco Group",
       "category": "Public relation & Media outreach",
-      "serviceSlug": "public-relations",
+      "year": "2026",
+      "featuredOnHome": true,
       "tagline": "Positioning a national conglomerate as an ESG and financial innovator with global authority.",
       "coverImage": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80",
       "challenge": "Enterprise conglomerate stakeholders and institutional investors struggled to access clean disclosures, ESG reports, and verified leadership perspectives amidst shifting corporate media narratives.",
@@ -670,22 +638,22 @@
         "Executive Crisis Playbook",
         "ESG Impact Telemetry Dashboard"
       ],
-      "liveUrl": "https://beximco.com",
-      "featuredOnHome": true,
-      "year": "2026"
+      "liveUrl": "https://beximco.com"
     },
     {
       "id": "cs-apex",
       "title": "Intent Scaling & 3D Experiential Exhibition Pavilion",
       "client": "Apex Footwear Ltd.",
       "category": "Event activation & Exhibition",
-      "serviceSlug": "event-activation",
+      "year": "2025",
+      "featuredOnHome": true,
       "tagline": "Connecting high-intent Google Search customer funnels with an immersive 3D physical exhibition space.",
       "coverImage": "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=1000&q=80",
       "challenge": "Competitive seasonal footwear market required dominating digital intent keywords while simultaneously driving experiential foot traffic and dwell time at the National Trade Fair.",
       "solution": "Engineered high-ROI Google Search & Performance Max funnels linked to an award-winning photorealistic 3D modular exhibition pavilion featuring interactive digital size-recommender kiosks.",
       "metrics": [
-        "45,000+ Verified Pavilion Visitors",
+        "45",
+        "000+ Verified Pavilion Visitors",
         "4.8x Blended Digital Ad ROAS",
         "-28% Customer Acquisition Cost"
       ],
@@ -695,16 +663,15 @@
         "Google Ads Performance Max",
         "Interactive Digital Kiosk UI"
       ],
-      "liveUrl": "https://apex4u.com",
-      "featuredOnHome": true,
-      "year": "2025"
+      "liveUrl": "https://apex4u.com"
     },
     {
       "id": "cs-novapulse",
       "title": "SaaS Product Onboarding & Visual Identity Architecture",
       "client": "NovaPulse AI Analytics",
       "category": "Graphics & Visual Identity",
-      "serviceSlug": "graphics-design",
+      "year": "2025",
+      "featuredOnHome": false,
       "tagline": "Redesigning complex AI data visualization into a clean, investor-ready UI/UX and visual branding system.",
       "coverImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
       "challenge": "High churn during the first 5 minutes of free trial signup due to visual information overload and a disjointed brand identity that failed to inspire enterprise trust.",
@@ -720,22 +687,22 @@
         "Investor Pitch Deck Architecture",
         "Interactive Onboarding Tour"
       ],
-      "liveUrl": "https://chaldal.com",
-      "featuredOnHome": false,
-      "year": "2025"
+      "liveUrl": "https://chaldal.com"
     },
     {
       "id": "cs-echosound",
       "title": "Rapid Sellout Campaign & Immersive Stage Activation",
       "client": "EchoSound Music & Arts Festival",
       "category": "Event activation & Exhibition",
-      "serviceSlug": "event-activation",
+      "year": "2026",
+      "featuredOnHome": false,
       "tagline": "Executing an aggressive 3-week digital ticketing blitz and turnkey experiential festival grounds.",
       "coverImage": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1000&q=80",
       "challenge": "With only 21 days until showtime, 15,000 festival tickets remained to be sold with zero room for advertising budget leakage or on-site gate queues.",
       "solution": "Orchestrated a viral Instagram/TikTok countdown campaign paired with influencer amplification, real-time ticket inventory urgency banners, and on-site RFID wristband access portals.",
       "metrics": [
-        "15,000 Tickets Sold Out in 72 Hours",
+        "15",
+        "000 Tickets Sold Out in 72 Hours",
         "2.8M Organic Impressions",
         "Zero Queue Bottlenecks at Gate Cutover"
       ],
@@ -745,16 +712,15 @@
         "Stage Spatial Design & Lighting",
         "Live Experiential Activation Zones"
       ],
-      "liveUrl": "https://shohoz.com",
-      "featuredOnHome": false,
-      "year": "2026"
+      "liveUrl": "https://shohoz.com"
     },
     {
       "id": "cs-hotelsarina",
       "title": "Luxury Dining & VIP Private Event Acquisition",
       "client": "Hotel Sarina Dhaka",
       "category": "Google ads & Intent Scaling",
-      "serviceSlug": "google-ads",
+      "year": "2026",
+      "featuredOnHome": false,
       "tagline": "Capturing high-ticket corporate banquet and luxury dining bookings through hyper-local intent search.",
       "coverImage": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80",
       "challenge": "Banquet halls and private dining spaces had seasonal low-utilization weekdays, losing lucrative corporate conference and wedding bookings to competing 5-star properties.",
@@ -770,9 +736,7 @@
         "Banquet Event Landing Page",
         "WhatsApp Instant Concierge Routing"
       ],
-      "liveUrl": "https://wellparkresidence.com",
-      "featuredOnHome": false,
-      "year": "2026"
+      "liveUrl": "https://wellparkresidence.com"
     }
   ]
 }

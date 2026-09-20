@@ -192,148 +192,156 @@
         </p>
       </div>
 
-      <!-- Stepper Buttons -->
-      <div class="workflow-stepper reveal-on-scroll">
-        <button type="button" class="workflow-step-btn active" data-phase="0">
-          <div class="ws-num">Phase 01</div>
-          <div class="ws-title">Discovery &amp; Audit</div>
-        </button>
-        <button type="button" class="workflow-step-btn" data-phase="1">
-          <div class="ws-num">Phase 02</div>
-          <div class="ws-title">Architecture</div>
-        </button>
-        <button type="button" class="workflow-step-btn" data-phase="2">
-          <div class="ws-num">Phase 03</div>
-          <div class="ws-title">Sprint Execution</div>
-        </button>
-        <button type="button" class="workflow-step-btn" data-phase="3">
-          <div class="ws-num">Phase 04</div>
-          <div class="ws-title">Launch &amp; Scaling</div>
-        </button>
-      </div>
-
-      <!-- Stepper Progress Bar -->
-      <div class="w-full bg-[#70805D]/15 h-2 rounded-full overflow-hidden mb-8 shadow-inner">
-        <div id="workflowProgressBar" class="h-full bg-[#70805D] transition-all duration-500 rounded-full" style="width: 25%;"></div>
-      </div>
-
-      <!-- Phase Content Cards -->
-      <div class="workflow-card-interactive active" data-phase-card="0">
-        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
-          <div>
-            <span class="text-xs font-bold text-[#70805D] tracking-wider uppercase">Phase 01 of 04</span>
-            <h3 class="text-xl font-extrabold text-[#1C2B1B]">Discovery &amp; Comprehensive Audit</h3>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-clock mr-1"></i> Week 01</span>
-            <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">100% Alignment</span>
-          </div>
-        </div>
-        <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
-          In-depth technical and strategic immersion into current brand perception, competitor whitespace, analytics telemetry, and commercial bottlenecks before any design or code begins.
-        </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27] mb-8">
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Stakeholder &amp; Founder Discovery Sessions</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Competitor &amp; Category Benchmark Audit</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Technical Architecture &amp; Data Review</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Strategic Scope &amp; Deliverables Sign-Off</span></div>
-        </div>
-        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-          <span class="text-xs text-[#55738D] font-semibold">Ready for Architecture?</span>
-          <button type="button" data-workflow-next class="btn-aesthetic-primary text-xs py-2.5 px-5">
-            <span>Next: Phase 02 Architecture →</span>
+      <!-- Sticky Auto-Advancing Stepper Tracker -->
+      <div class="workflow-stepper-sticky-wrap">
+        <div class="workflow-stepper">
+          <button type="button" class="workflow-step-btn active" data-phase="0">
+            <div class="ws-num">Phase 01</div>
+            <div class="ws-title">Discovery &amp; Audit</div>
           </button>
+          <button type="button" class="workflow-step-btn" data-phase="1">
+            <div class="ws-num">Phase 02</div>
+            <div class="ws-title">Architecture</div>
+          </button>
+          <button type="button" class="workflow-step-btn" data-phase="2">
+            <div class="ws-num">Phase 03</div>
+            <div class="ws-title">Sprint Execution</div>
+          </button>
+          <button type="button" class="workflow-step-btn" data-phase="3">
+            <div class="ws-num">Phase 04</div>
+            <div class="ws-title">Launch &amp; Scaling</div>
+          </button>
+        </div>
+        <div class="w-full bg-[#70805D]/15 h-1.5 rounded-full overflow-hidden mt-3 shadow-inner">
+          <div id="workflowProgressBar" class="h-full bg-[#70805D] transition-all duration-500 rounded-full" style="width: 25%;"></div>
         </div>
       </div>
 
-      <div class="workflow-card-interactive" data-phase-card="1">
-        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
-          <div>
-            <span class="text-xs font-bold text-[#70805D] tracking-wider uppercase">Phase 02 of 04</span>
-            <h3 class="text-xl font-extrabold text-[#1C2B1B]">Strategic Architecture &amp; Prototypes</h3>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-clock mr-1"></i> Week 02</span>
-            <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">Blueprint Approval</span>
-          </div>
-        </div>
-        <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
-          Drafting the foundational blueprint: creative direction decks, typographic hierarchies, database schemas, interactive wireframes, and milestone sign-offs.
-        </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27] mb-8">
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Creative Direction &amp; Moodboard Alignment</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Technical Specifications &amp; API Contracts</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Interactive Low-Fidelity Clickable Wireframes</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Pre-Production Technical Sprint Plan</span></div>
-        </div>
-        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-          <button type="button" data-workflow-prev class="btn-pill-glass text-xs py-2 px-4">
-            <span>← Previous: Phase 01</span>
-          </button>
-          <button type="button" data-workflow-next class="btn-aesthetic-primary text-xs py-2.5 px-5">
-            <span>Next: Phase 03 Execution →</span>
-          </button>
-        </div>
-      </div>
+      <!-- Sequential 4-Phase Delivery Cards (Auto-Scrolled Timeline) -->
+      <div class="workflow-cards-timeline space-y-7 relative">
 
-      <div class="workflow-card-interactive" data-phase-card="2">
-        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
-          <div>
-            <span class="text-xs font-bold text-[#70805D] tracking-wider uppercase">Phase 03 of 04</span>
-            <h3 class="text-xl font-extrabold text-[#1C2B1B]">Surgical Sprint Execution</h3>
+        <!-- Phase 01 -->
+        <div class="workflow-card-interactive active reveal-on-scroll" data-phase-card="0" id="phase-01">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
+            <div>
+              <span class="phase-number-badge text-xs font-bold text-[#70805D] tracking-wider uppercase px-2.5 py-1 rounded-md bg-[#70805D]/10 border border-[#70805D]/20 transition-all duration-300">Phase 01 of 04</span>
+              <h3 class="text-xl font-extrabold text-[#1C2B1B] mt-2">Discovery &amp; Comprehensive Audit</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-clock mr-1"></i> Week 01</span>
+              <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">100% Alignment</span>
+            </div>
           </div>
-          <div class="flex items-center gap-2">
-            <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-clock mr-1"></i> Weeks 03–04</span>
-            <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">Live Staging</span>
+          <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
+            In-depth technical and strategic immersion into current brand perception, competitor whitespace, analytics telemetry, and commercial bottlenecks before any design or code begins.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27] mb-8">
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Stakeholder &amp; Founder Discovery Sessions</span></div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Competitor &amp; Category Benchmark Audit</span></div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Technical Architecture &amp; Data Review</span></div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Strategic Scope &amp; Deliverables Sign-Off</span></div>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+            <span class="text-xs text-[#55738D] font-semibold"><i class="fa-solid fa-angles-down mr-1 text-[#70805D]"></i> Continuous scroll reveals next phase</span>
+            <button type="button" data-workflow-next="1" class="btn-aesthetic-primary text-xs py-2.5 px-5">
+              <span>Scroll to Phase 02 Architecture ↓</span>
+            </button>
           </div>
         </div>
-        <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
-          Rapid production iterations with weekly video walkthroughs, staging deployments, cross-browser QA, and collaborative client feedback cycles.
-        </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27] mb-8">
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Weekly Agile Milestone Video Reviews</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Live Staging URL Deployment Access</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Pixel-Perfect Visual &amp; Performance Tuning</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Zero-Defect Security &amp; Regression Testing</span></div>
-        </div>
-        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-          <button type="button" data-workflow-prev class="btn-pill-glass text-xs py-2 px-4">
-            <span>← Previous: Phase 02</span>
-          </button>
-          <button type="button" data-workflow-next class="btn-aesthetic-primary text-xs py-2.5 px-5">
-            <span>Next: Phase 04 Launch →</span>
-          </button>
-        </div>
-      </div>
 
-      <div class="workflow-card-interactive" data-phase-card="3">
-        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
-          <div>
-            <span class="text-xs font-bold text-[#70805D] tracking-wider uppercase">Phase 04 of 04</span>
-            <h3 class="text-xl font-extrabold text-[#1C2B1B]">Launch, Governance &amp; Scale</h3>
+        <!-- Phase 02 -->
+        <div class="workflow-card-interactive reveal-on-scroll" data-phase-card="1" id="phase-02">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
+            <div>
+              <span class="phase-number-badge text-xs font-bold text-[#70805D] tracking-wider uppercase px-2.5 py-1 rounded-md bg-[#70805D]/10 border border-[#70805D]/20 transition-all duration-300">Phase 02 of 04</span>
+              <h3 class="text-xl font-extrabold text-[#1C2B1B] mt-2">Strategic Architecture &amp; Prototypes</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-clock mr-1"></i> Week 02</span>
+              <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">Blueprint Approval</span>
+            </div>
           </div>
-          <div class="flex items-center gap-2">
-            <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-rocket mr-1"></i> Deployment</span>
-            <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">30-Day SLA</span>
+          <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
+            Drafting the foundational blueprint: creative direction decks, typographic hierarchies, database schemas, interactive wireframes, and milestone sign-offs.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27] mb-8">
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Creative Direction &amp; Moodboard Alignment</span></div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Technical Specifications &amp; API Contracts</span></div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Interactive Low-Fidelity Clickable Wireframes</span></div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Pre-Production Technical Sprint Plan</span></div>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+            <button type="button" data-workflow-prev="0" class="btn-pill-glass text-xs py-2 px-4">
+              <span>↑ Previous: Phase 01</span>
+            </button>
+            <button type="button" data-workflow-next="2" class="btn-aesthetic-primary text-xs py-2.5 px-5">
+              <span>Scroll to Phase 03 Execution ↓</span>
+            </button>
           </div>
         </div>
-        <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
-          Turnkey rollout, production DNS switch, 100% intellectual property transfer, and ongoing performance telemetry monitoring with SLA support.
-        </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27] mb-8">
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>100% IP &amp; Master Asset Handover</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Production Go-Live &amp; DNS Cutover</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>30-Day Post-Launch SLA Warranty</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Quarterly Performance Retainer Review</span></div>
+
+        <!-- Phase 03 -->
+        <div class="workflow-card-interactive reveal-on-scroll" data-phase-card="2" id="phase-03">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
+            <div>
+              <span class="phase-number-badge text-xs font-bold text-[#70805D] tracking-wider uppercase px-2.5 py-1 rounded-md bg-[#70805D]/10 border border-[#70805D]/20 transition-all duration-300">Phase 03 of 04</span>
+              <h3 class="text-xl font-extrabold text-[#1C2B1B] mt-2">Surgical Sprint Execution</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-clock mr-1"></i> Weeks 03–04</span>
+              <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">Live Staging</span>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
+            Rapid production iterations with weekly video walkthroughs, staging deployments, cross-browser QA, and collaborative client feedback cycles.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27] mb-8">
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Weekly Agile Milestone Video Reviews</span></div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Live Staging URL Deployment Access</span></div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Pixel-Perfect Visual &amp; Performance Tuning</span></div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Zero-Defect Security &amp; Regression Testing</span></div>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+            <button type="button" data-workflow-prev="1" class="btn-pill-glass text-xs py-2 px-4">
+              <span>↑ Previous: Phase 02</span>
+            </button>
+            <button type="button" data-workflow-next="3" class="btn-aesthetic-primary text-xs py-2.5 px-5">
+              <span>Scroll to Phase 04 Launch ↓</span>
+            </button>
+          </div>
         </div>
-        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-          <button type="button" data-workflow-prev class="btn-pill-glass text-xs py-2 px-4">
-            <span>← Previous: Phase 03</span>
-          </button>
-          <a href="#inquiry" class="btn-aesthetic-primary text-xs py-2.5 px-5">
-            <span>Initiate Project Briefing ↓</span>
-          </a>
+
+        <!-- Phase 04 -->
+        <div class="workflow-card-interactive reveal-on-scroll" data-phase-card="3" id="phase-04">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
+            <div>
+              <span class="phase-number-badge text-xs font-bold text-[#70805D] tracking-wider uppercase px-2.5 py-1 rounded-md bg-[#70805D]/10 border border-[#70805D]/20 transition-all duration-300">Phase 04 of 04</span>
+              <h3 class="text-xl font-extrabold text-[#1C2B1B] mt-2">Launch, Governance &amp; Scale</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-rocket mr-1"></i> Deployment</span>
+              <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">30-Day SLA</span>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
+            Turnkey rollout, production DNS switch, 100% intellectual property transfer, and ongoing performance telemetry monitoring with SLA support.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27] mb-8">
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>100% IP &amp; Master Asset Handover</span></div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Production Go-Live &amp; DNS Cutover</span></div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>30-Day Post-Launch SLA Warranty</span></div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Quarterly Performance Retainer Review</span></div>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+            <button type="button" data-workflow-prev="2" class="btn-pill-glass text-xs py-2 px-4">
+              <span>↑ Previous: Phase 03</span>
+            </button>
+            <a href="#inquiry" class="btn-aesthetic-primary text-xs py-2.5 px-5">
+              <span>Initiate Project Briefing ↓</span>
+            </a>
+          </div>
         </div>
+
       </div>
 
     </div>

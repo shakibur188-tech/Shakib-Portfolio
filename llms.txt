@@ -1,14 +1,17 @@
-# Md. Shakibur Rahaman - Strategic Lead & Digital Architect
+# Md. Shakibur Rahaman - Strategic Lead & Digital Architect & Digital Growth Architect
 
-> Full-Stack Creative Director delivering integrated visual design, web engineering, omnichannel social media marketing, strategic PR, high-performance Google Ads, and live experiential event activations.
+> Full-Stack Creative Director delivering integrated branding, visual design, web engineering, omnichannel marketing, commercial cinematography, and live experiential activations.
 
-## 6 Core Service Pillars
-1. **Graphics & Visual Identity**: Visual identity systems, logo marks, UI/UX interface design, luxury packaging, editorial print, and high-impact marketing collateral.
-2. **Web design & Development**: 15+ live deployed web platforms, headless e-commerce, custom web apps, API architecture, and 95+ PageSpeed performance.
-3. **Social Media marketing**: Omnichannel strategy, viral short-form video reels, community growth, and Meta Advantage+ paid scaling.
-4. **Public relation & Media outreach**: Strategic press release distribution, tier-1 media placements, crisis communications, and executive thought leadership.
-5. **Google ads & Intent Scaling**: High-intent Search, Performance Max, YouTube conversion funnels, and granular GA4 multi-touch attribution.
-6. **Event activation & Exhibition**: 3D booth design & custom fabrication, B2B trade show installations, corporate galas, and experiential brand activations.
+## 9 Core Service Pillars
+1. **Branding**: Comprehensive brand strategy, brand positioning, brand architecture, corporate identity manuals, brand guidelines, and tone of voice.
+2. **Graphics Design**: Visual identity systems, logo marks, UI/UX interface design, luxury packaging, editorial print, and high-impact marketing collateral.
+3. **Web Design & Development**: 15+ live deployed web platforms, headless e-commerce, custom web apps, API architecture, and 95+ PageSpeed performance.
+4. **Social Media Marketing (SMM)**: Omnichannel strategy, viral short-form video reels, community growth, and Meta Advantage+ paid scaling.
+5. **Photoshoot & Videography**: Commercial broadcast TVCs, cinematic product shoots, brand documentaries, high-retention video reels, and aerial drone cinematography.
+6. **Event Activation & Exhibition**: 3D booth design & custom fabrication, B2B trade show installations, corporate galas, and experiential brand activations.
+7. **Google Ads**: High-intent Search, Performance Max, YouTube conversion funnels, and granular GA4 multi-touch attribution.
+8. **SEO & AEO**: Technical on-page SEO, generative AI engine optimization (ChatGPT, Perplexity, Claude, Gemini), /llms.txt context, and Schema.org knowledge graph.
+9. **PR (Public Relations)**: Strategic press release distribution, tier-1 media placements, crisis communications, and executive thought leadership.
 
 ## 15 Deployed Web Portals
 - Hotel Sarina Dhaka (5-Star Luxury Booking & Dining Portal)
@@ -32,5 +35,5 @@
 - Email: shakibur188@gmail.com
 - Phone / WhatsApp: +880 1838-070468
 - Location: Dhaka, Bangladesh
-- Portfolio: http://localhost:5500/
-- Admin CMS: http://localhost:5500/admin
+- Portfolio: https://www.shakibur.info/
+- Admin CMS: https://www.shakibur.info/admin
