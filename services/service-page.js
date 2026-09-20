@@ -318,11 +318,9 @@ function initInteractiveWorkflow() {
 
   if (!phaseCards.length) return;
 
-  // Ensure all cards are visibly placed one after another
+  // Ensure all cards are visible in the layout
   phaseCards.forEach(card => {
     card.style.display = 'flex';
-    card.style.opacity = '1';
-    card.style.transform = 'none';
   });
 
   let activeIndex = 0;
@@ -386,25 +384,6 @@ function initInteractiveWorkflow() {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       scrollToPhase(index);
-    });
-  });
-
-  // Next / Previous buttons inside cards -> smooth auto-scroll to next/prev phase
-  document.querySelectorAll('[data-workflow-next]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetAttr = btn.getAttribute('data-workflow-next');
-      const targetIdx = targetAttr !== '' && !isNaN(targetAttr) ? parseInt(targetAttr, 10) : activeIndex + 1;
-      scrollToPhase(Math.min(targetIdx, phaseCards.length - 1));
-    });
-  });
-
-  document.querySelectorAll('[data-workflow-prev]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetAttr = btn.getAttribute('data-workflow-prev');
-      const targetIdx = targetAttr !== '' && !isNaN(targetAttr) ? parseInt(targetAttr, 10) : activeIndex - 1;
-      scrollToPhase(Math.max(targetIdx, 0));
     });
   });
 

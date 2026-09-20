@@ -742,6 +742,47 @@ function renderTechArsenal() {
 }
 
 /* ==========================================================================
+   6.1 Render Featured Case Studies (2x2 Grid on Home Page)
+   ========================================================================== */
+function renderHomeCaseStudies(caseStudies) {
+  const container = document.getElementById('homeCaseStudiesContainer');
+  if (!container) return;
+
+  const featured = caseStudies.filter(c => c.featuredOnHome !== false).slice(0, 4);
+  if (!featured.length) return;
+
+  container.innerHTML = featured.map(cs => {
+    const metricsHtml = (cs.metrics || []).slice(0, 2).map(m => `
+      <span class="px-2.5 py-1 rounded-md bg-[#F1F3ED] text-[11px] font-extrabold text-[#2A3B27] border border-[#70805D]/20 flex items-center gap-1.5 shadow-2xs">
+        <i class="fa-solid fa-arrow-trend-up text-[#70805D] text-[10px]"></i>
+        <span>${escapeHtml(m)}</span>
+      </span>
+    `).join('');
+
+    return `
+      <div class="spotlight-card rounded-3xl bg-white border border-[#70805D]/20 overflow-hidden flex flex-col justify-between shadow-sm hover:border-[#70805D] transition-all reveal-on-scroll">
+        <div class="p-6 sm:p-7">
+          <div class="flex items-center justify-between gap-3 mb-3">
+            <span class="px-2.5 py-0.5 rounded-full bg-[#70805D]/10 text-[10px] font-bold text-[#70805D] uppercase tracking-wider border border-[#70805D]/20">${escapeHtml(cs.category || 'UX Case Study')}</span>
+            <span class="text-xs font-bold text-[#55738D]">${escapeHtml(cs.year || '2026')}</span>
+          </div>
+          <h3 class="text-lg sm:text-xl font-bold text-[#1C2B1B] mb-2 leading-snug">${escapeHtml(cs.title)}</h3>
+          <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-4">${escapeHtml(cs.tagline || cs.challenge || '')}</p>
+          <div class="flex flex-wrap gap-2 mb-2">${metricsHtml}</div>
+        </div>
+        <div class="p-4 sm:px-7 sm:pb-6 pt-0 border-t border-gray-100 flex items-center justify-between">
+          <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="btn-aesthetic-primary text-xs py-2 px-4 justify-center">
+            <span>Read UX Case Study</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+          <span class="text-xs font-bold text-[#55738D]">${escapeHtml(cs.client || '')}</span>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+/* ==========================================================================
    7. Render Experience & Roadmap Timeline
    ========================================================================== */
 function renderRoadmap() {

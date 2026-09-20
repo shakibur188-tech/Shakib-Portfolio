@@ -310,14 +310,19 @@
       </div>
 
       <div class="pt-4 border-t border-[#70805D]/15 flex flex-wrap items-center justify-between gap-3">
-        <a id="csModalLiveLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-aesthetic-primary text-xs">
-          <span>Visit Live Implementation</span>
-          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        <a id="csModalFullPageLink" href="/case-study.html" class="btn-aesthetic-primary text-xs py-2.5 px-4">
+          <span>Open Full UX Case Study Details</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
         </a>
-        <a href="#inquiry" onclick="closeCaseStudyModal();" class="btn-outline-emerald text-xs">
-          <span>Commission Similar Scope</span>
-          <i class="fa-solid fa-comments text-[10px]"></i>
-        </a>
+        <div class="flex items-center gap-2">
+          <a id="csModalLiveLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-pill-glass text-xs py-2 px-3.5">
+            <span>Live Showcase</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          </a>
+          <a href="#inquiry" onclick="closeCaseStudyModal();" class="text-xs font-bold text-[#55738D] hover:text-[#2A3B27] px-3 py-2">
+            <span>Commission Scope</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -669,17 +674,21 @@
 
               <!-- Card Actions Row -->
               <div class="pt-4 border-t border-[#70805D]/15 flex items-center justify-between gap-3">
-                <button type="button" onclick="openCaseStudyModal('${escapeHtml(cs.id)}')" class="btn-aesthetic-primary text-xs py-2 px-4 justify-center">
+                <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="btn-aesthetic-primary text-xs py-2 px-4 justify-center">
                   <span>Deep Dive Case Study</span>
                   <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                </button>
+                </a>
 
-                ${cs.liveUrl ? `
-                  <a href="${escapeHtml(cs.liveUrl)}" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-[#55738D] hover:text-[#2A3B27] flex items-center gap-1.5 transition-colors">
-                    <span>Live Showcase</span>
-                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-                  </a>
-                ` : ''}
+                <div class="flex items-center gap-2">
+                  <button type="button" onclick="openCaseStudyModal('${escapeHtml(cs.id)}')" class="text-xs font-bold text-[#55738D] hover:text-[#2A3B27] px-2 py-1 transition-colors">
+                    <span>Preview</span>
+                  </button>
+                  ${cs.liveUrl ? `
+                    <a href="${escapeHtml(cs.liveUrl)}" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-[#55738D] hover:text-[#2A3B27] flex items-center gap-1 transition-colors">
+                      <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                    </a>
+                  ` : ''}
+                </div>
               </div>
             </div>
           </div>
@@ -692,6 +701,7 @@
       if (!cs) return;
 
       const el = (i) => document.getElementById(i);
+      if (el('csModalFullPageLink')) el('csModalFullPageLink').href = `/case-study.html?id=${encodeURIComponent(cs.id)}`;
       if (el('csModalCategory')) el('csModalCategory').textContent = cs.category || 'Case Study';
       if (el('csModalClient')) el('csModalClient').textContent = cs.client || 'Client Organization';
       if (el('csModalYear')) el('csModalYear').textContent = cs.year || '2026';

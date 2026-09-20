@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UX Case Study Details | Md. Shakibur Rahaman</title>
+  <meta name="description" content="In-depth UX Case Study breakdown covering user research, problem framing, strategic solutions, project duration, tools used, and the 5-stage design process by Md. Shakibur Rahaman.">
+  <link rel="canonical" href="http://localhost:5500/case-study.html">
+  
+  <!-- Plus Jakarta Sans Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN & DopelyColors Theme Palette -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#70805D',
+              forest: '#2A3B27',
+              slate: '#55738D',
+              mist: '#96A7B6',
+              stone: '#CBC8C4'
+            },
+            accent: {
+              amber: '#E07A5F',
+              gold: '#D97706',
+              blue: '#3B82F6'
+            },
+            canvas: '#F8F9F6'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Unified Aesthetic Stylesheet -->
+  <link rel="stylesheet" href="./styles.css">
+
+  <style>
+    /* Case Study Custom Accent Underline (matching the user's reference) */
+    .accent-title-wrap {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .accent-title-wrap::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 44px;
+      height: 4px;
+      border-radius: 9999px;
+      background: #E07A5F;
+      box-shadow: 0 2px 8px rgba(224, 122, 95, 0.4);
+      transition: width 0.3s ease;
+    }
+    .accent-title-wrap:hover::after {
+      width: 64px;
+    }
+
+    /* Ambient Floating Decorative Glow Orbs matching the screenshot */
+    .ambient-orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+      filter: blur(55px);
+      opacity: 0.55;
+      animation: floatSlow 12s ease-in-out infinite alternate;
+    }
+    .ambient-orb-1 {
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(246, 173, 85, 0.45) 0%, rgba(224, 122, 95, 0.15) 70%, transparent 100%);
+      top: 60px;
+      left: -80px;
+      animation-duration: 14s;
+    }
+    .ambient-orb-2 {
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(147, 197, 253, 0.4) 0%, rgba(85, 115, 141, 0.15) 70%, transparent 100%);
+      top: 80px;
+      right: -60px;
+      animation-duration: 16s;
+    }
+    .ambient-orb-3 {
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(251, 191, 36, 0.3) 0%, rgba(112, 128, 93, 0.12) 70%, transparent 100%);
+      top: 650px;
+      right: 5%;
+      animation-duration: 18s;
+    }
+    .ambient-orb-4 {
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(234, 88, 12, 0.35) 0%, rgba(224, 122, 95, 0.1) 70%, transparent 100%);
+      top: 380px;
+      left: 2%;
+      animation-duration: 15s;
+    }
+
+    @keyframes floatSlow {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(20px, -25px) scale(1.08); }
+      100% { transform: translate(-15px, 15px) scale(0.95); }
+    }
+
+    /* Process Step Card */
+    .process-step-box {
+      background: #FFFFFF;
+      border: 1px solid rgba(112, 128, 93, 0.18);
+      border-radius: 20px;
+      padding: 24px 16px;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 20px -5px rgba(42, 59, 39, 0.05);
+      position: relative;
+    }
+    .process-step-box:hover {
+      transform: translateY(-4px);
+      border-color: #70805D;
+      box-shadow: 0 16px 32px -8px rgba(112, 128, 93, 0.2);
+    }
+
+    /* Brand Tool Badge */
+    .tool-badge-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 10px;
+      border-radius: 16px;
+      background: #FFFFFF;
+      border: 1px solid rgba(112, 128, 93, 0.15);
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .tool-badge-card:hover {
+      transform: translateY(-3px);
+      border-color: #70805D;
+      box-shadow: 0 8px 20px -4px rgba(112, 128, 93, 0.2);
+    }
+
+    /* Custom Bullet List */
+    .cs-bullet-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .cs-bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+      font-size: 13.5px;
+      color: #334432;
+    }
+    .cs-bullet-list li::before {
+      content: '•';
+      position: absolute;
+      left: 2px;
+      top: -1px;
+      color: #E07A5F;
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    /* Case Study Selector Pill */
+    .cs-switcher-pill {
+      padding: 7px 16px;
+      border-radius: 9999px;
+      font-size: 11.5px;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      background: #FFFFFF;
+      color: #4D614A;
+      border: 1px solid rgba(112, 128, 93, 0.2);
+    }
+    .cs-switcher-pill:hover {
+      border-color: #70805D;
+      color: #2A3B27;
+      background: rgba(112, 128, 93, 0.08);
+    }
+    .cs-switcher-pill.active {
+      background: #70805D;
+      color: #FFFFFF;
+      border-color: #70805D;
+      box-shadow: 0 4px 12px rgba(112, 128, 93, 0.35);
+    }
+  </style>
+</head>
+<body class="bg-[#F8F9F6] text-[#1C2B1B] font-sans antialiased selection:bg-[#70805D] selection:text-white relative overflow-x-hidden min-h-screen">
+
+  <!-- 0. Top Scroll Progress Bar -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- Ambient Decorative Glowing Orbs -->
+  <div class="ambient-orb ambient-orb-1"></div>
+  <div class="ambient-orb ambient-orb-2"></div>
+  <div class="ambient-orb ambient-orb-3"></div>
+  <div class="ambient-orb ambient-orb-4"></div>
+
+  <!-- Ambient Canvas Background Animation -->
+  <canvas id="ambientCanvas"></canvas>
+
+  <!-- 1. FIXED NAVBAR WITH 6 SERVICES HOVER DROPDOWN -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#F8F9F6]/90 backdrop-blur-2xl border-b border-[#70805D]/15 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo / Monogram -->
+      <a href="/" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-xl bg-[#70805D] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#70805D]/25">
+          SR
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-[#1C2B1B] tracking-tight text-base sm:text-lg group-hover:text-[#70805D] transition-colors">Md. Shakibur Rahaman</span>
+          <span class="text-[10.5px] text-[#70805D] font-bold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
+        </div>
+      </a>
+
+      <!-- Centered Floating Pill Navigation Menu with Services Dropdown -->
+      <nav class="hidden lg:flex items-center gap-6 px-6 py-2.5 rounded-full bg-white/90 border border-[#70805D]/20 text-xs font-semibold text-[#4D614A] backdrop-blur-md shadow-sm">
+        <a href="/" class="desktop-nav-link hover:text-[#70805D] transition-colors">Home</a>
+        <a href="/#about" class="desktop-nav-link hover:text-[#70805D] transition-colors">About</a>
+        
+        <!-- SERVICES MENU ITEM WITH HOVER SUB-MENU -->
+        <div class="services-menu-item relative group">
+          <a href="/services.html" class="desktop-nav-link hover:text-[#70805D] transition-colors flex items-center gap-1.5 py-1">
+            <span>Services</span>
+            <i class="fa-solid fa-chevron-down text-[9px] text-[#70805D] transition-transform duration-200 group-hover:rotate-180"></i>
+          </a>
+          
+          <!-- 6 Services Hover Sub-Menu Panel -->
+          <div class="services-dropdown">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-[#70805D]/15">
+              <span class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-layer-group text-[#70805D]"></i>
+                <span>Core Capabilities (6 Disciplines)</span>
+              </span>
+              <a href="/services.html" class="text-[11px] font-bold text-[#70805D] hover:underline flex items-center gap-1">
+                <span>View All Services Directory</span>
+                <i class="fa-solid fa-arrow-right text-[9px]"></i>
+              </a>
+            </div>
+
+            <div class="services-dropdown-grid grid grid-cols-2 sm:grid-cols-3 gap-2">
+              <a href="/services/graphics-design.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-bezier-curve"></i></div>
+                <div>
+                  <div class="service-sub-title">01 Graphics &amp; Visual Identity</div>
+                  <div class="service-sub-desc">Packaging, UI/UX &amp; decks</div>
+                </div>
+              </a>
+              <a href="/services/web-development.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-code"></i></div>
+                <div>
+                  <div class="service-sub-title">02 Web design &amp; Development</div>
+                  <div class="service-sub-desc">Jamstack portals &amp; apps</div>
+                </div>
+              </a>
+              <a href="/services/social-media-marketing.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-hashtag"></i></div>
+                <div>
+                  <div class="service-sub-title">03 Social Media marketing</div>
+                  <div class="service-sub-desc">Viral reels &amp; Meta ads</div>
+                </div>
+              </a>
+              <a href="/services/public-relations.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-newspaper"></i></div>
+                <div>
+                  <div class="service-sub-title">04 Public relation &amp; Media</div>
+                  <div class="service-sub-desc">Press releases &amp; syndication</div>
+                </div>
+              </a>
+              <a href="/services/google-ads.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <div>
+                  <div class="service-sub-title">05 Google ads &amp; Intent Scaling</div>
+                  <div class="service-sub-desc">High ROI Search &amp; P-Max</div>
+                </div>
+              </a>
+              <a href="/services/event-activation.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-cubes"></i></div>
+                <div>
+                  <div class="service-sub-title">06 Event activation &amp; Exhibition</div>
+                  <div class="service-sub-desc">3D booths &amp; brand summits</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/case-studies.html" class="desktop-nav-link text-[#70805D] font-bold transition-colors">Case Studies</a>
+        <a href="/#contact" class="desktop-nav-link hover:text-[#70805D] transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Action CTA & Mobile Hamburger -->
+      <div class="flex items-center gap-3">
+        <a href="/case-studies.html" class="hidden sm:inline-flex items-center gap-2 text-xs font-bold text-[#55738D] hover:text-[#2A3B27] px-3.5 py-2 rounded-full border border-[#70805D]/20 transition-all">
+          <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          <span>All Case Studies</span>
+        </a>
+
+        <a href="#inquiry" class="btn-aesthetic-primary text-xs py-2.5 px-5">
+          <span>Start Consultation</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+
+        <button type="button" id="mobileMenuToggle" class="lg:hidden p-2 rounded-xl text-[#2A3B27] hover:bg-[#70805D]/10" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-[#70805D]/15 bg-white/95 backdrop-blur-xl px-4 py-4 space-y-2">
+      <a href="/" class="block px-3 py-2 rounded-lg text-sm font-semibold text-[#2A3B27] hover:bg-[#70805D]/10">Home</a>
+      <a href="/#about" class="block px-3 py-2 rounded-lg text-sm font-semibold text-[#2A3B27] hover:bg-[#70805D]/10">About</a>
+      <a href="/services.html" class="block px-3 py-2 rounded-lg text-sm font-semibold text-[#2A3B27] hover:bg-[#70805D]/10">All Services Directory</a>
+      <a href="/case-studies.html" class="block px-3 py-2 rounded-lg text-sm font-bold text-[#70805D] bg-[#70805D]/10">Case Studies</a>
+      <a href="/#contact" class="block px-3 py-2 rounded-lg text-sm font-semibold text-[#2A3B27] hover:bg-[#70805D]/10">Contact</a>
+    </div>
+  </header>
+
+  <!-- Spacer for fixed navbar -->
+  <div class="h-20 sm:h-24"></div>
+
+  <!-- =========================================================================
+       CASE STUDY SELECTOR BAR (Seamless switching between all project studies)
+       ========================================================================= -->
+  <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 pt-4 pb-2">
+    <div class="flex items-center justify-between gap-3 pb-3 border-b border-[#70805D]/15 overflow-x-auto no-scrollbar">
+      <div class="text-[11px] font-extrabold uppercase tracking-wider text-[#70805D] flex items-center gap-1.5 shrink-0">
+        <i class="fa-solid fa-layer-group"></i>
+        <span>Explore Studies:</span>
+      </div>
+      <div class="flex items-center gap-2 shrink-0" id="csSwitcherPills">
+        <!-- Rendered dynamically by script -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MAIN CASE STUDY CONTAINER (Faithful to User Screenshot Layout)
+       ========================================================================= -->
+  <main class="relative z-10 max-w-4xl mx-auto px-4 sm:px-8 py-8 sm:py-12" id="caseStudyMain">
+
+    <!-- 1. TOP METADATA HEADER -->
+    <div class="flex items-center justify-between text-[11px] sm:text-xs font-bold uppercase tracking-widest text-[#55738D] pb-6 border-b border-[#70805D]/15 reveal-on-scroll">
+      <span id="csTopCategory" class="text-[#70805D]">UX CASE STUDY</span>
+      <span id="csTopAuthor" class="hidden sm:inline text-[#2A3B27]">DESIGN BY MD. SHAKIBUR RAHAMAN</span>
+      <span id="csTopDate">MARCH 2026</span>
+    </div>
+
+    <!-- 2. HERO LOGO & TITLE SECTION -->
+    <div class="text-center pt-10 sm:pt-14 pb-12 sm:pb-16 reveal-on-scroll">
+      
+      <!-- Brand / App Circular Monogram Badge -->
+      <div class="flex justify-center mb-6">
+        <div id="csBrandBadge" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr from-[#E07A5F] to-[#F28C38] flex items-center justify-center text-white font-black text-xl sm:text-2xl shadow-lg shadow-[#E07A5F]/35 border-2 border-white transform transition-transform duration-300 hover:scale-105">
+          fae
+        </div>
+      </div>
+
+      <!-- App Subtitle -->
+      <h3 id="csHeroSubtitle" class="text-lg sm:text-2xl font-bold text-[#1C2B1B] mb-2 tracking-tight">
+        Online Rental App
+      </h3>
+
+      <!-- Huge Bold Hero Title -->
+      <h1 id="csHeroTitle" class="text-4xl sm:text-6xl lg:text-7xl font-black text-[#1C2B1B] tracking-tight uppercase mb-6 leading-tight">
+        UX CASE STUDY
+      </h1>
+
+      <!-- Summary / Tagline -->
+      <p id="csHeroTagline" class="text-sm sm:text-base text-[#4D614A] max-w-2xl mx-auto leading-relaxed font-medium">
+        Fae Rental is platform where you can renting furniture, Appliances &amp; Electronics in an affordable prices
+      </p>
+
+    </div>
+
+    <!-- =========================================================================
+         3. PROBLEM STATEMENT
+         ========================================================================= -->
+    <section class="mb-14 sm:mb-20 reveal-on-scroll">
+      <div class="accent-title-wrap">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1C2B1B] tracking-tight">
+          Problem Statement
+        </h2>
+      </div>
+
+      <p id="csProblemContent" class="text-xs sm:text-sm md:text-[15px] text-[#3A4E37] leading-relaxed max-w-3xl">
+        We found out that a lot of people like Bachelors, Paying Guests, working professionals who relocate need furniture, electronics, and appliances. Because of the high cost and no certainty of staying in a place they avoid buying them. These people need the items for a shorter duration. This app will help them to rent the items for what period they want (a week, a month, a year). This includes renting the refurbished &amp; recycled items.
+      </p>
+    </section>
+
+    <!-- =========================================================================
+         4. THE SOLUTION
+         ========================================================================= -->
+    <section class="mb-14 sm:mb-20 reveal-on-scroll">
+      <div class="accent-title-wrap">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1C2B1B] tracking-tight">
+          The Solution
+        </h2>
+      </div>
+
+      <ul id="csSolutionList" class="cs-bullet-list max-w-3xl space-y-2.5">
+        <li>Introducing a renting platform for furniture, appliances &amp; electronics.</li>
+        <li>The user can choose their desired tenure for renting (Week, Months, or one year).</li>
+        <li>Can easily relocate the rented items from our app for free.</li>
+        <li>Can swap the rented item for upgradation.</li>
+        <li>No delivery charges will be applicable for renting items.</li>
+        <li>Easy cleanup &amp; maintenance.</li>
+      </ul>
+    </section>
+
+    <!-- =========================================================================
+         5. MY ROLE (4-Column Layout)
+         ========================================================================= -->
+    <section class="mb-14 sm:mb-20 reveal-on-scroll">
+      <div class="accent-title-wrap">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1C2B1B] tracking-tight">
+          My Role
+        </h2>
+      </div>
+
+      <div id="csRoleGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-2">
+        
+        <!-- Column 1 -->
+        <div>
+          <ul class="cs-bullet-list">
+            <li>User Interview</li>
+            <li>User Research</li>
+            <li>Competitor Analysis</li>
+          </ul>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <ul class="cs-bullet-list">
+            <li>Affinity Mapping</li>
+            <li>Persona</li>
+            <li>Empathy map</li>
+            <li>Customer Journey map</li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div>
+          <ul class="cs-bullet-list">
+            <li>Card Sorting</li>
+            <li>User Flow</li>
+            <li>Information Architecture</li>
+          </ul>
+        </div>
+
+        <!-- Column 4 -->
+        <div>
+          <ul class="cs-bullet-list">
+            <li>Low Fidelity</li>
+            <li>High Fidelity</li>
+            <li>Usability Testing</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. PROJECT DURATION & TOOLS USED (Side-by-Side Card Grid)
+         ========================================================================= -->
+    <section class="mb-16 sm:mb-24 reveal-on-scroll">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Project Duration -->
+        <div class="md:col-span-5 bg-white/70 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#70805D]/15 shadow-sm">
+          <div class="accent-title-wrap">
+            <h2 class="text-xl sm:text-2xl font-extrabold text-[#1C2B1B] tracking-tight">
+              Project Duration
+            </h2>
+          </div>
+
+          <div class="flex items-baseline gap-10 mt-6" id="csDurationMetrics">
+            <div>
+              <div class="text-4xl sm:text-5xl font-black text-[#1C2B1B] tracking-tight" id="csMetricDuration">14</div>
+              <div class="text-xs font-bold text-[#55738D] mt-1 uppercase tracking-wider">Weeks</div>
+            </div>
+            <div>
+              <div class="text-4xl sm:text-5xl font-black text-[#1C2B1B] tracking-tight" id="csMetricScreens">35+</div>
+              <div class="text-xs font-bold text-[#55738D] mt-1 uppercase tracking-wider">Screens</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Tools Used -->
+        <div class="md:col-span-7 bg-white/70 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#70805D]/15 shadow-sm">
+          <div class="accent-title-wrap">
+            <h2 class="text-xl sm:text-2xl font-extrabold text-[#1C2B1B] tracking-tight">
+              Tools Used
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-3 sm:grid-cols-5 gap-3 mt-4" id="csToolsGrid">
+            
+            <!-- Figma -->
+            <div class="tool-badge-card">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center mb-1.5 shadow-2xs">
+                <svg class="w-6 h-6" viewBox="0 0 38 57" fill="none">
+                  <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
+                  <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
+                  <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
+                  <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
+                  <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
+                </svg>
+              </div>
+              <span class="text-[11px] font-bold text-[#2A3B27]">Figma</span>
+            </div>
+
+            <!-- Photoshop -->
+            <div class="tool-badge-card">
+              <div class="w-9 h-9 rounded-xl bg-[#001E36] flex items-center justify-center text-[#31A8FF] font-black text-xs mb-1.5 shadow-2xs">
+                Ps
+              </div>
+              <span class="text-[11px] font-bold text-[#2A3B27]">Photoshop</span>
+            </div>
+
+            <!-- Miro -->
+            <div class="tool-badge-card">
+              <div class="w-9 h-9 rounded-xl bg-[#FFD02F] flex items-center justify-center text-[#050038] font-black text-xs mb-1.5 shadow-2xs">
+                <i class="fa-solid fa-bolt-lightning text-sm"></i>
+              </div>
+              <span class="text-[11px] font-bold text-[#2A3B27]">Miro</span>
+            </div>
+
+            <!-- Google Forms -->
+            <div class="tool-badge-card">
+              <div class="w-9 h-9 rounded-xl bg-[#7248B9] flex items-center justify-center text-white text-xs mb-1.5 shadow-2xs">
+                <i class="fa-solid fa-list-check"></i>
+              </div>
+              <span class="text-[11px] font-bold text-[#2A3B27] text-center leading-tight">Google Forms</span>
+            </div>
+
+            <!-- Google Sheets -->
+            <div class="tool-badge-card">
+              <div class="w-9 h-9 rounded-xl bg-[#0F9D58] flex items-center justify-center text-white text-xs mb-1.5 shadow-2xs">
+                <i class="fa-solid fa-table-cells"></i>
+              </div>
+              <span class="text-[11px] font-bold text-[#2A3B27] text-center leading-tight">Google Sheets</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. DESIGN PROCESS (5-Stage Pipeline matching the screenshot)
+         ========================================================================= -->
+    <section class="mb-16 sm:mb-24 reveal-on-scroll">
+      <div class="accent-title-wrap">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1C2B1B] tracking-tight">
+          Design Process
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-5 gap-4 sm:gap-2 items-stretch mt-6 relative" id="csProcessSteps">
+        
+        <!-- Step 1: Empathize -->
+        <div class="process-step-box flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-2xl bg-[#E07A5F]/15 border border-[#E07A5F]/30 text-[#E07A5F] flex items-center justify-center text-lg mb-3.5 shadow-xs">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <h4 class="text-sm font-extrabold text-[#1C2B1B] mb-2">Empathize</h4>
+          <div class="text-[11px] text-[#4D614A] leading-relaxed space-y-1">
+            <div>User Interview</div>
+            <div>User Research</div>
+            <div>Competitive Analysis</div>
+          </div>
+        </div>
+
+        <!-- Step 2: Define -->
+        <div class="process-step-box flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-2xl bg-[#55738D]/15 border border-[#55738D]/30 text-[#55738D] flex items-center justify-center text-lg mb-3.5 shadow-xs">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <h4 class="text-sm font-extrabold text-[#1C2B1B] mb-2">Define</h4>
+          <div class="text-[11px] text-[#4D614A] leading-relaxed space-y-1">
+            <div>Affinity Mapping</div>
+            <div>Personas</div>
+            <div>Empathy Map</div>
+            <div>Journey Map</div>
+          </div>
+        </div>
+
+        <!-- Step 3: Ideate -->
+        <div class="process-step-box flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-2xl bg-[#70805D]/15 border border-[#70805D]/30 text-[#70805D] flex items-center justify-center text-lg mb-3.5 shadow-xs">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h4 class="text-sm font-extrabold text-[#1C2B1B] mb-2">Ideate</h4>
+          <div class="text-[11px] text-[#4D614A] leading-relaxed space-y-1">
+            <div>User Flow</div>
+            <div>Card Sorting</div>
+            <div>Information Architecture</div>
+          </div>
+        </div>
+
+        <!-- Step 4: Design -->
+        <div class="process-step-box flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-2xl bg-[#55738D]/15 border border-[#55738D]/30 text-[#55738D] flex items-center justify-center text-lg mb-3.5 shadow-xs">
+            <i class="fa-solid fa-compass-drafting"></i>
+          </div>
+          <h4 class="text-sm font-extrabold text-[#1C2B1B] mb-2">Design</h4>
+          <div class="text-[11px] text-[#4D614A] leading-relaxed space-y-1">
+            <div>Low Fidelity</div>
+            <div>High Fidelity</div>
+          </div>
+        </div>
+
+        <!-- Step 5: Test -->
+        <div class="process-step-box flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-2xl bg-[#E07A5F]/15 border border-[#E07A5F]/30 text-[#E07A5F] flex items-center justify-center text-lg mb-3.5 shadow-xs">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <h4 class="text-sm font-extrabold text-[#1C2B1B] mb-2">Test</h4>
+          <div class="text-[11px] text-[#4D614A] leading-relaxed space-y-1">
+            <div>Usability Testing</div>
+            <div>Implementing Feedback</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. VERIFIED METRICS & KEY TAKEAWAYS
+         ========================================================================= -->
+    <section class="mb-16 sm:mb-24 reveal-on-scroll" id="csMetricsSection">
+      <div class="accent-title-wrap">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1C2B1B] tracking-tight">
+          Verified Outcomes
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6" id="csVerifiedMetricsGrid">
+        <div class="p-5 rounded-2xl bg-white border border-[#70805D]/20 shadow-sm">
+          <div class="text-xs font-bold text-[#70805D] uppercase tracking-wider mb-1">Conversion Surge</div>
+          <div class="text-2xl sm:text-3xl font-black text-[#1C2B1B]">+42% Rental Checkout</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-white border border-[#70805D]/20 shadow-sm">
+          <div class="text-xs font-bold text-[#70805D] uppercase tracking-wider mb-1">Session Duration</div>
+          <div class="text-2xl sm:text-3xl font-black text-[#1C2B1B]">18m High Engagement</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-white border border-[#70805D]/20 shadow-sm">
+          <div class="text-xs font-bold text-[#70805D] uppercase tracking-wider mb-1">Customer CSAT</div>
+          <div class="text-2xl sm:text-3xl font-black text-[#1C2B1B]">94% Approval Rating</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. VISUAL ARTIFACTS / PREVIEW SHOWCASE
+         ========================================================================= -->
+    <section class="mb-16 sm:mb-24 reveal-on-scroll" id="csPreviewSection">
+      <div class="accent-title-wrap">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1C2B1B] tracking-tight">
+          Visual Artifacts &amp; Architecture
+        </h2>
+      </div>
+
+      <div class="rounded-3xl overflow-hidden border border-[#70805D]/20 shadow-xl bg-white mt-6">
+        <img id="csCoverImage" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80" alt="Case study visual architecture" class="w-full h-auto max-h-[500px] object-cover">
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         10. CASE STUDY NAVIGATION (Prev / Next)
+         ========================================================================= -->
+    <div class="flex flex-wrap items-center justify-between gap-4 pt-8 pb-12 border-t border-[#70805D]/15 reveal-on-scroll">
+      <button type="button" id="prevCaseStudyBtn" class="btn-pill-glass text-xs py-2.5 px-5">
+        <i class="fa-solid fa-arrow-left mr-2"></i>
+        <span>Previous Study</span>
+      </button>
+
+      <a href="/case-studies.html" class="text-xs font-bold text-[#55738D] hover:text-[#2A3B27] flex items-center gap-1.5 transition-colors">
+        <i class="fa-solid fa-grid-2"></i>
+        <span>All 7 Case Studies Directory</span>
+      </a>
+
+      <button type="button" id="nextCaseStudyBtn" class="btn-aesthetic-primary text-xs py-2.5 px-5">
+        <span>Next Study</span>
+        <i class="fa-solid fa-arrow-right ml-2"></i>
+      </button>
+    </div>
+
+  </main>
+
+  <!-- =========================================================================
+       11. INQUIRY BRIEF SUBMISSION FORM
+       ========================================================================= -->
+  <section id="inquiry" class="py-20 sm:py-24 border-t border-[#70805D]/15 bg-white relative z-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="px-3.5 py-1 rounded-full bg-[#70805D]/10 border border-[#70805D]/25 text-[11px] font-bold text-[#70805D] tracking-wider uppercase">
+          Design Consultation
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-[#1C2B1B] mt-4 tracking-tight">
+          Want a Bespoke UX Architecture for Your Platform?
+        </h2>
+        <p class="text-xs sm:text-sm text-[#4D614A] mt-2.5 leading-relaxed">
+          Submit your product briefing below. Md. Shakibur Rahaman reviews all briefs personally and responds within 24 hours.
+        </p>
+      </div>
+
+      <form id="caseStudyInquiryForm" class="bg-[#F8F9F6] p-6 sm:p-10 rounded-3xl border border-[#70805D]/20 shadow-sm space-y-6">
+        <div id="csInquiryAlert" class="hidden"></div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-bold text-[#2A3B27] uppercase tracking-wider mb-2">Your Name *</label>
+            <input type="text" id="csLeadName" required placeholder="e.g. Elena Rostova" class="w-full px-4 py-3 rounded-xl bg-white border border-[#70805D]/20 text-xs sm:text-sm text-[#1C2B1B] focus:outline-none focus:border-[#70805D] transition-colors">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-[#2A3B27] uppercase tracking-wider mb-2">Corporate Email *</label>
+            <input type="email" id="csLeadEmail" required placeholder="e.g. elena@company.com" class="w-full px-4 py-3 rounded-xl bg-white border border-[#70805D]/20 text-xs sm:text-sm text-[#1C2B1B] focus:outline-none focus:border-[#70805D] transition-colors">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-bold text-[#2A3B27] uppercase tracking-wider mb-2">Direct Phone / WhatsApp</label>
+            <input type="tel" id="csLeadPhone" placeholder="+880 1XXX-XXXXXX" class="w-full px-4 py-3 rounded-xl bg-white border border-[#70805D]/20 text-xs sm:text-sm text-[#1C2B1B] focus:outline-none focus:border-[#70805D] transition-colors">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-[#2A3B27] uppercase tracking-wider mb-2">Scope Focus</label>
+            <select id="csLeadService" class="w-full px-4 py-3 rounded-xl bg-white border border-[#70805D]/20 text-xs sm:text-sm text-[#1C2B1B] focus:outline-none focus:border-[#70805D] transition-colors">
+              <option value="UX/UI & Product Design">UX/UI &amp; Product Design Architecture</option>
+              <option value="Full-Stack Web Development">Full-Stack Web Development</option>
+              <option value="Visual Identity & Branding">Visual Identity &amp; Branding</option>
+              <option value="Social Media & Meta Ads">Social Media &amp; Meta Ads</option>
+              <option value="Google Ads & Conversion Funnels">Google Ads &amp; Conversion Funnels</option>
+              <option value="Event Activation & 3D Booths">Event Activation &amp; 3D Booths</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-[#2A3B27] uppercase tracking-wider mb-2">Project Brief &amp; Target Timelines *</label>
+          <textarea id="csLeadMessage" rows="4" required placeholder="Describe your product objectives, timeline expectations, and core challenge..." class="w-full px-4 py-3 rounded-xl bg-white border border-[#70805D]/20 text-xs sm:text-sm text-[#1C2B1B] focus:outline-none focus:border-[#70805D] transition-colors"></textarea>
+        </div>
+
+        <button type="submit" id="csSubmitBriefBtn" class="btn-aesthetic-primary w-full py-3.5 text-xs sm:text-sm justify-center">
+          <span>Transmit Executive Briefing</span>
+          <i class="fa-solid fa-paper-plane text-xs"></i>
+        </button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       12. UNIFIED GLOBAL FOOTER
+       ========================================================================= -->
+  <footer class="border-t border-[#70805D]/15 bg-[#F8F9F6] py-14 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-[#70805D] flex items-center justify-center font-black text-white text-xs">
+            SR
+          </div>
+          <div>
+            <div class="text-sm font-bold text-[#1C2B1B]">Md. Shakibur Rahaman</div>
+            <div class="text-[11px] text-[#70805D] font-bold">Strategic Lead &amp; Digital Architect</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 text-xs text-[#55738D] font-semibold">
+          <a href="/" class="hover:text-[#70805D] transition-colors">Home</a>
+          <a href="/services.html" class="hover:text-[#70805D] transition-colors">Services</a>
+          <a href="/case-studies.html" class="hover:text-[#70805D] transition-colors">Case Studies</a>
+          <a href="/#contact" class="hover:text-[#70805D] transition-colors">Contact</a>
+          <a href="/admin" class="hover:text-[#70805D] transition-colors">Admin</a>
+        </div>
+
+        <div class="text-xs text-[#55738D]">
+          &copy; 2026 Md. Shakibur Rahaman. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       CASE STUDY DETAIL SCRIPT & ENGINE
+       ========================================================================= -->
+  <script>
+    // Rich Case Studies Dataset (incorporates user's reference layout + portfolio case studies)
+    const richCaseStudies = [
+      {
+        id: "fae-rental",
+        slug: "online-rental-app",
+        category: "UX CASE STUDY",
+        author: "DESIGN BY MD. SHAKIBUR RAHAMAN",
+        date: "MARCH 2026",
+        badge: "fae",
+        badgeGradient: "from-[#E07A5F] to-[#F28C38]",
+        subtitle: "Online Rental App",
+        heroTitle: "UX CASE STUDY",
+        tagline: "Fae Rental is platform where you can renting furniture, Appliances & Electronics in an affordable prices",
+        problem: "We found out that a lot of people like Bachelors, Paying Guests, working professionals who relocate need furniture, electronics, and appliances. Because of the high cost and no certainty of staying in a place they avoid buying them. These people need the items for a shorter duration. This app will help them to rent the items for what period they want (a week, a month, a year). This includes renting the refurbished & recycled items.",
+        solution: [
+          "Introducing a renting platform for furniture, appliances & electronics.",
+          "The user can choose their desired tenure for renting (Week, Months, or one year).",
+          "Can easily relocate the rented items from our app for free.",
+          "Can swap the rented item for upgradation.",
+          "No delivery charges will be applicable for renting items.",
+          "Easy cleanup & maintenance."
+        ],
+        roles: [
+          ["User Interview", "User Research", "Competitor Analysis"],
+          ["Affinity Mapping", "Persona", "Empathy map", "Customer Journey map"],
+          ["Card Sorting", "User Flow", "Information Architecture"],
+          ["Low Fidelity", "High Fidelity", "Usability Testing"]
+        ],
+        duration: "14",
+        durationUnit: "Weeks",
+        screens: "35+",
+        screensUnit: "Screens",
+        tools: [
+          { name: "Figma", iconType: "svg" },
+          { name: "Photoshop", iconType: "ps" },
+          { name: "Miro", iconType: "miro" },
+          { name: "Google Forms", iconType: "forms" },
+          { name: "Google Sheets", iconType: "sheets" }
+        ],
+        process: [
+          { name: "Empathize", icon: "fa-magnifying-glass", color: "#E07A5F", items: ["User Interview", "User Research", "Competitive Analysis"] },
+          { name: "Define", icon: "fa-user", color: "#55738D", items: ["Affinity Mapping", "Personas", "Empathy Map", "Journey Map"] },
+          { name: "Ideate", icon: "fa-brain", color: "#70805D", items: ["User Flow", "Card Sorting", "Information Architecture"] },
+          { name: "Design", icon: "fa-compass-drafting", color: "#55738D", items: ["Low Fidelity", "High Fidelity"] },
+          { name: "Test", icon: "fa-mobile-screen-button", color: "#E07A5F", items: ["Usability Testing", "Implementing Feedback"] }
+        ],
+        metrics: [
+          { title: "Conversion Surge", stat: "+42% Rental Checkout" },
+          { title: "Session Duration", stat: "18m High Engagement" },
+          { title: "Customer CSAT", stat: "94% Approval Rating" }
+        ],
+        coverImage: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        id: "cs-peninsula",
+        slug: "peninsula-chittagong",
+        category: "WEB DEVELOPMENT & UX",
+        author: "DESIGN BY MD. SHAKIBUR RAHAMAN",
+        date: "JANUARY 2025",
+        badge: "PC",
+        badgeGradient: "from-[#70805D] to-[#2A3B27]",
+        subtitle: "The Peninsula Chittagong",
+        heroTitle: "HOSPITALITY BOOKING ENGINE",
+        tagline: "Transitioning a 4-star luxury landmark from OTA commission dependency to a high-margin Jamstack direct booking engine.",
+        problem: "The Peninsula Chittagong was losing 18–25% in commission fees to third-party travel aggregators (OTAs). Their legacy portal suffered from high mobile checkout abandonment (>65%), sluggish page load speeds exceeding 4.2 seconds, and zero real-time inventory synchronization across multi-currency corporate tiers.",
+        solution: [
+          "Engineered a sub-second headless Jamstack booking engine with direct API connectivity.",
+          "Integrated 3D panoramic 360° virtual room visualizers to build booking confidence.",
+          "Implemented multi-currency real-time payment gateway with zero checkout friction.",
+          "Deployed laser-targeted high-intent Google Search & Performance Max customer acquisition funnels.",
+          "Automated VIP guest concierge notifications via WhatsApp Business API."
+        ],
+        roles: [
+          ["Direct OTA Audit", "Guest Intent Research", "Conversion Funnel Mapping"],
+          ["Corporate Personas", "Multi-Currency Flows", "Checkout Optimization"],
+          ["API Architecture", "Headless CMS Engine", "Serverless Edge Caching"],
+          ["High Fidelity UI", "Cross-Device Testing", "Lighthouse 98+ Speed QA"]
+        ],
+        duration: "12",
+        durationUnit: "Weeks",
+        screens: "42+",
+        screensUnit: "Screens",
+        tools: [
+          { name: "Figma", iconType: "svg" },
+          { name: "VS Code", iconType: "code" },
+          { name: "Node.js", iconType: "node" },
+          { name: "Google Analytics", iconType: "ga4" },
+          { name: "Google Ads", iconType: "gads" }
+        ],
+        process: [
+          { name: "Empathize", icon: "fa-magnifying-glass", color: "#70805D", items: ["OTA Benchmark", "Guest Friction Audit", "Stakeholder Sign-Off"] },
+          { name: "Define", icon: "fa-user", color: "#55738D", items: ["Booking Persona", "Checkout Wireframe", "API Contracts"] },
+          { name: "Ideate", icon: "fa-brain", color: "#70805D", items: ["1-Click Checkout Flow", "Room Visualizer", "Dynamic Pricing Engine"] },
+          { name: "Design", icon: "fa-compass-drafting", color: "#55738D", items: ["Luxury Typography", "Mobile-First UI", "Jamstack Staging"] },
+          { name: "Test", icon: "fa-mobile-screen-button", color: "#70805D", items: ["Sub-Second Latency QA", "Payment Gateway Staging", "Launch Go-Live"] }
+        ],
+        metrics: [
+          { title: "Direct Bookings Surge", stat: "+320% Verified Growth" },
+          { title: "Page Speed Benchmark", stat: "0.8s Sub-Second Speed" },
+          { title: "OTA Margin Saved", stat: "18% Commission Saved" }
+        ],
+        coverImage: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        id: "cs-aarong",
+        slug: "aarong-lifestyle",
+        category: "SOCIAL MEDIA & BRAND ARCHITECTURE",
+        author: "DIRECTED BY MD. SHAKIBUR RAHAMAN",
+        date: "AUGUST 2025",
+        badge: "AR",
+        badgeGradient: "from-[#D97706] to-[#70805D]",
+        subtitle: "Aarong Lifestyle Retail",
+        heroTitle: "OMNICHANNEL GROWTH ENGINE",
+        tagline: "Omnichannel rebrand and high-retention social engine orchestrating viral festive campaigns across digital touchpoints.",
+        problem: "Aarong's digital reach was constrained by generic social media formats with low video retention and declining organic engagement among Gen-Z and millennial shoppers who demanded authentic behind-the-scenes artisan craftsmanship stories.",
+        solution: [
+          "Developed an episodic short-form editorial reel series showcasing rural artisan weaving processes.",
+          "Orchestrated Meta Advantage+ paid retargeting with dynamic product catalog overlays.",
+          "Created an influencer co-creation ecosystem generating over 2.4 million organic video views.",
+          "Unified digital aesthetic guidelines across festive collections with cohesive moodboards."
+        ],
+        roles: [
+          ["Trend Analysis", "Audience Demographic Segmentation", "Creative Auditing"],
+          ["Content Moodboarding", "Artisan Storyboarding", "Video Direction"],
+          ["Meta Ad Architecture", "ROAS Optimization", "Conversion Attribution"],
+          ["Motion Design", "Visual Retouching", "Weekly Sprint Iteration"]
+        ],
+        duration: "16",
+        durationUnit: "Weeks",
+        screens: "60+",
+        screensUnit: "Assets",
+        tools: [
+          { name: "Photoshop", iconType: "ps" },
+          { name: "Premiere Pro", iconType: "video" },
+          { name: "Meta Business", iconType: "meta" },
+          { name: "Figma", iconType: "svg" },
+          { name: "Looker Studio", iconType: "sheets" }
+        ],
+        process: [
+          { name: "Empathize", icon: "fa-magnifying-glass", color: "#D97706", items: ["Consumer Sentiment", "Competitor Review", "Artisan Field Research"] },
+          { name: "Define", icon: "fa-user", color: "#55738D", items: ["Festive Personas", "Editorial Calendar", "Brand Voice Deck"] },
+          { name: "Ideate", icon: "fa-brain", color: "#70805D", items: ["Viral Story Hooks", "Behind-the-Craft Series", "Ad Copy Testing"] },
+          { name: "Design", icon: "fa-compass-drafting", color: "#55738D", items: ["4K Video Production", "Cinematic Reel Edits", "Color Grading"] },
+          { name: "Test", icon: "fa-mobile-screen-button", color: "#D97706", items: ["A/B Thumbnail Testing", "Meta Campaign Scaling", "ROAS Optimization"] }
+        ],
+        metrics: [
+          { title: "Organic Video Views", stat: "2.4M+ Video Views" },
+          { title: "ROAS Performance", stat: "5.8x Return on Ad Spend" },
+          { title: "Community Growth", stat: "+85K Follower Expansion" }
+        ],
+        coverImage: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        id: "cs-beximco",
+        slug: "beximco-group",
+        category: "PUBLIC RELATIONS & MEDIA STRATEGY",
+        author: "STRATEGY BY MD. SHAKIBUR RAHAMAN",
+        date: "NOVEMBER 2025",
+        badge: "BX",
+        badgeGradient: "from-[#55738D] to-[#1C2B1B]",
+        subtitle: "Beximco Group",
+        heroTitle: "ENTERPRISE CORPORATE PR HUB",
+        tagline: "High-stakes corporate reputation management, tier-1 media syndicated press outreach, and ESG transparency architecture.",
+        problem: "Beximco's international institutional sustainability accomplishments and pharmaceutical innovations lacked a unified digital press hub, causing fractured messaging across domestic and international financial publications.",
+        solution: [
+          "Architected an executive digital press portal with real-time embargoed media kit distributions.",
+          "Executed tier-1 national and international media syndications across leading financial publications.",
+          "Established an executive thought-leadership program for corporate C-suite keynotes.",
+          "Implemented 24/7 brand sentiment intelligence telemetry and crisis mitigation protocols."
+        ],
+        roles: [
+          ["Media Sentiment Audit", "Stakeholder Interviews", "Regulatory Governance"],
+          ["Corporate Press Kit", "Crisis Playbook", "ESG Disclosure Hierarchy"],
+          ["Press Syndication", "Journalist Relations", "Embargo Scheduling"],
+          ["Executive Speechwriting", "Press Portal UX", "Performance Analytics"]
+        ],
+        duration: "20",
+        durationUnit: "Weeks",
+        screens: "28+",
+        screensUnit: "Releases",
+        tools: [
+          { name: "Miro", iconType: "miro" },
+          { name: "Google Forms", iconType: "forms" },
+          { name: "Google Sheets", iconType: "sheets" },
+          { name: "Figma", iconType: "svg" },
+          { name: "Photoshop", iconType: "ps" }
+        ],
+        process: [
+          { name: "Empathize", icon: "fa-magnifying-glass", color: "#55738D", items: ["Media Landscape Audit", "C-Suite Alignment", "Sentiment Mapping"] },
+          { name: "Define", icon: "fa-user", color: "#70805D", items: ["Editorial Guidelines", "Crisis Scenarios", "Syndication Matrix"] },
+          { name: "Ideate", icon: "fa-brain", color: "#E07A5F", items: ["Story Angles", "Sustainability Reports", "Executive Op-Eds"] },
+          { name: "Design", icon: "fa-compass-drafting", color: "#55738D", items: ["Digital Press Kit", "Investor Deck", "Interactive Media Portal"] },
+          { name: "Test", icon: "fa-mobile-screen-button", color: "#70805D", items: ["Syndication Rollout", "Coverage Monitoring", "Reach Verification"] }
+        ],
+        metrics: [
+          { title: "Mainstream Media", stat: "40+ Mainstream Features" },
+          { title: "Sentiment Index", stat: "98% Positive Coverage" },
+          { title: "Audience Footprint", stat: "12M+ Syndicated Reach" }
+        ],
+        coverImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        id: "cs-apex",
+        slug: "apex-footwear",
+        category: "EVENT ACTIVATION & 3D EXHIBITION",
+        author: "DIRECTED BY MD. SHAKIBUR RAHAMAN",
+        date: "DECEMBER 2025",
+        badge: "AP",
+        badgeGradient: "from-[#E07A5F] to-[#2A3B27]",
+        subtitle: "Apex Footwear Ltd.",
+        heroTitle: "3D EXPERIENTIAL PAVILION",
+        tagline: "Photorealistic 3D exhibition booth architecture and interactive digital lead generation system at premier footwear summit.",
+        problem: "Traditional trade expo stalls were static, passive, and generated low visitor dwell times, resulting in untracked visitor walkthroughs and poor post-event B2B lead conversion.",
+        solution: [
+          "Rendered a photorealistic 3D exhibition pavilion with architectural lighting and material specifications.",
+          "Engineered interactive touchscreen digital footwear customizers capturing qualified retailer briefs.",
+          "Coordinated turnkey fabrication, audio-visual display sync, and on-site brand ambassador training.",
+          "Automated instant digital catalog deliveries via QR code and WhatsApp integrations."
+        ],
+        roles: [
+          ["Spatial Walkthrough Audit", "Visitor Flow Simulation", "Exhibition Regulations"],
+          ["3D Booth Modeling", "Material & Lighting Renders", "Interactive Touchscreen UX"],
+          ["Fabrication Oversight", "Audio-Visual Engineering", "Lead Capture Logic"],
+          ["On-Site Technical Support", "Visitor Telemetry", "Post-Event Lead Sync"]
+        ],
+        duration: "10",
+        durationUnit: "Weeks",
+        screens: "18+",
+        screensUnit: "3D Renders",
+        tools: [
+          { name: "Figma", iconType: "svg" },
+          { name: "Blender 3D", iconType: "blender" },
+          { name: "Photoshop", iconType: "ps" },
+          { name: "Google Forms", iconType: "forms" },
+          { name: "Google Sheets", iconType: "sheets" }
+        ],
+        process: [
+          { name: "Empathize", icon: "fa-magnifying-glass", color: "#E07A5F", items: ["Floorplan Analysis", "Visitor Congestion Studies", "Brand Guidelines"] },
+          { name: "Define", icon: "fa-user", color: "#55738D", items: ["Booth Spatial Zones", "Product Showcase Pods", "Lead Funnel Goals"] },
+          { name: "Ideate", icon: "fa-brain", color: "#70805D", items: ["3D Conceptual Sketches", "Lighting Hierarchy", "Touchscreen Kiosk UX"] },
+          { name: "Design", icon: "fa-compass-drafting", color: "#55738D", items: ["Blender 3D Renders", "Fabrication Blueprints", "Kiosk Software"] },
+          { name: "Test", icon: "fa-mobile-screen-button", color: "#E07A5F", items: ["Structural QA", "On-Site Fabrication", "Live Expo Lead Capture"] }
+        ],
+        metrics: [
+          { title: "Qualified Leads", stat: "1,450+ Verified B2B Leads" },
+          { title: "Average Dwell Time", stat: "14m Booth Engagement" },
+          { title: "Summit Recognition", stat: "Best Exhibition Pavilion" }
+        ],
+        coverImage: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        id: "cs-novapulse",
+        slug: "novapulse-ai",
+        category: "GRAPHICS & PRODUCT ONBOARDING",
+        author: "DESIGN BY MD. SHAKIBUR RAHAMAN",
+        date: "OCTOBER 2025",
+        badge: "NP",
+        badgeGradient: "from-[#3B82F6] to-[#70805D]",
+        subtitle: "NovaPulse AI Analytics",
+        heroTitle: "SAAS PRODUCT ONBOARDING",
+        tagline: "End-to-end visual identity architecture and 3-step interactive onboarding reducing SaaS churn by 38%.",
+        problem: "NovaPulse's high-tech machine learning analytics dashboard had steep cognitive overhead, causing 54% of trial users to abandon during initial workspace configuration.",
+        solution: [
+          "Redesigned the entire onboarding journey into a progressive disclosure 3-step micro-survey.",
+          "Created modular iconographic design systems and custom dashboard chart components.",
+          "Implemented interactive empty states, animated guidance tooltips, and sample data sandboxes.",
+          "Designed comprehensive brand design guidelines and pitch decks for Seed-round capital raising."
+        ],
+        roles: [
+          ["Churn Heuristic Evaluation", "Cognitive Load Mapping", "Competitor Teardowns"],
+          ["Progressive Disclosure UX", "Trial Onboarding Flow", "Empty State Design"],
+          ["Design System Tokens", "Vector Iconography", "Chart Aesthetics"],
+          ["Figma Prototype Usability", "Developer Handoff", "Mixpanel Funnel QA"]
+        ],
+        duration: "8",
+        durationUnit: "Weeks",
+        screens: "45+",
+        screensUnit: "Components",
+        tools: [
+          { name: "Figma", iconType: "svg" },
+          { name: "Photoshop", iconType: "ps" },
+          { name: "Miro", iconType: "miro" },
+          { name: "Google Forms", iconType: "forms" },
+          { name: "Google Sheets", iconType: "sheets" }
+        ],
+        process: [
+          { name: "Empathize", icon: "fa-magnifying-glass", color: "#3B82F6", items: ["User Drop-Off Analysis", "Customer Session Recordings", "Stakeholder Goals"] },
+          { name: "Define", icon: "fa-user", color: "#55738D", items: ["Data Analyst Personas", "Setup Task Inventory", "Design Token Rules"] },
+          { name: "Ideate", icon: "fa-brain", color: "#70805D", items: ["Micro-Survey Steps", "Instant Value Hooks", "Empty State Visuals"] },
+          { name: "Design", icon: "fa-compass-drafting", color: "#55738D", items: ["High Fidelity Figma Library", "Clickable Prototypes", "Dark/Light Modes"] },
+          { name: "Test", icon: "fa-mobile-screen-button", color: "#3B82F6", items: ["Moderated Usability Tests", "Trial Retention QA", "Production Deployment"] }
+        ],
+        metrics: [
+          { title: "Trial Drop-Off Churn", stat: "-38% Drop-Off Reduction" },
+          { title: "Time-to-Value Setup", stat: "3.5m Accelerated Setup" },
+          { title: "Paid Conversion", stat: "2.8x Trial-to-Paid Lift" }
+        ],
+        coverImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        id: "cs-hotelsarina",
+        slug: "hotel-sarina",
+        category: "GOOGLE ADS & INTENT ACQUISITION",
+        author: "MANAGED BY MD. SHAKIBUR RAHAMAN",
+        date: "FEBRUARY 2026",
+        badge: "HS",
+        badgeGradient: "from-[#D97706] to-[#1C2B1B]",
+        subtitle: "Hotel Sarina Dhaka",
+        heroTitle: "LUXURY INTENT ACQUISITION",
+        tagline: "High-intent Google Search, Display, and Performance Max customer acquisition engine for luxury banquets and private VIP suites.",
+        problem: "Hotel Sarina was experiencing high cost-per-click on broad search terms with minimal attribution to high-ticket corporate banquet and executive suite bookings.",
+        solution: [
+          "Restructured Google Ads account into segmented single-intent ad groups with negative keyword filtering.",
+          "Implemented server-side Google Tag Manager and GA4 enhanced conversion tracking.",
+          "Designed dynamic bespoke landing pages with real-time banquet hall availability calculators.",
+          "Executed Looker Studio executive attribution dashboards tracking exact cost-per-inquiry."
+        ],
+        roles: [
+          ["Keyword Waste Audit", "Intent Mapping", "Competitor Ad Teardown"],
+          ["Landing Page Wireframes", "Value Proposition Copy", "Dynamic Inquiries"],
+          ["Google Ads Account Rebuild", "GA4 Conversion API", "Bid Automation"],
+          ["Multi-Variant Ad Copy QA", "Call Tracking", "Weekly Budget Pacing"]
+        ],
+        duration: "12",
+        durationUnit: "Weeks",
+        screens: "24+",
+        screensUnit: "Campaigns",
+        tools: [
+          { name: "Google Ads", iconType: "gads" },
+          { name: "GA4 Analytics", iconType: "ga4" },
+          { name: "Looker Studio", iconType: "sheets" },
+          { name: "Figma", iconType: "svg" },
+          { name: "Google Sheets", iconType: "sheets" }
+        ],
+        process: [
+          { name: "Empathize", icon: "fa-magnifying-glass", color: "#D97706", items: ["Search Query Audit", "Negative Keyword Mining", "Audience Analysis"] },
+          { name: "Define", icon: "fa-user", color: "#55738D", items: ["High-Net-Worth Personas", "Target ROAS Thresholds", "Attribution Models"] },
+          { name: "Ideate", icon: "fa-brain", color: "#70805D", items: ["Bespoke Landing Pages", "Event Pricing Calculators", "Emotional Ad Copy"] },
+          { name: "Design", icon: "fa-compass-drafting", color: "#55738D", items: ["Landing Page UI", "Responsive Display Creatives", "Conversion API"] },
+          { name: "Test", icon: "fa-mobile-screen-button", color: "#D97706", items: ["A/B Headline Testing", "Smart Bidding Optimization", "Monthly Scaling"] }
+        ],
+        metrics: [
+          { title: "Target Return on Ads", stat: "12.4x Target ROAS" },
+          { title: "Cost Per Inquiry", stat: "-46% Cost Reduction" },
+          { title: "Corporate Inquiries", stat: "+180 High-Value Bookings" }
+        ],
+        coverImage: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+      }
+    ];
+
+    let currentCaseStudyIndex = 0;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initScrollProgressBar();
+      initAmbientCanvas();
+      initScrollReveal();
+      initLeadForm();
+
+      // Read URL query parameter: case-study.html?id=...
+      const urlParams = new URLSearchParams(window.location.search);
+      const requestedId = urlParams.get('id');
+
+      if (requestedId) {
+        const foundIdx = richCaseStudies.findIndex(c => c.id === requestedId || c.slug === requestedId);
+        if (foundIdx !== -1) {
+          currentCaseStudyIndex = foundIdx;
+        }
+      }
+
+      renderSwitcherPills();
+      renderActiveCaseStudy(false);
+
+      // Previous / Next buttons
+      const prevBtn = document.getElementById('prevCaseStudyBtn');
+      const nextBtn = document.getElementById('nextCaseStudyBtn');
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          currentCaseStudyIndex = (currentCaseStudyIndex - 1 + richCaseStudies.length) % richCaseStudies.length;
+          renderActiveCaseStudy(true);
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          currentCaseStudyIndex = (currentCaseStudyIndex + 1) % richCaseStudies.length;
+          renderActiveCaseStudy(true);
+        });
+      }
+
+      // Mobile Menu Toggle
+      const toggle = document.getElementById('mobileMenuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (toggle && mobileMenu) {
+        toggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      }
+    });
+
+    // Render Pills
+    function renderSwitcherPills() {
+      const container = document.getElementById('csSwitcherPills');
+      if (!container) return;
+
+      container.innerHTML = richCaseStudies.map((cs, idx) => `
+        <button type="button" class="cs-switcher-pill ${idx === currentCaseStudyIndex ? 'active' : ''}" data-cs-idx="${idx}">
+          ${escapeHtml(cs.subtitle || cs.heroTitle)}
+        </button>
+      `).join('');
+
+      container.querySelectorAll('.cs-switcher-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.getAttribute('data-cs-idx'), 10);
+          if (idx !== currentCaseStudyIndex) {
+            currentCaseStudyIndex = idx;
+            renderActiveCaseStudy(true);
+          }
+        });
+      });
+    }
+
+    // Render Active Case Study Details into DOM
+    function renderActiveCaseStudy(smoothScrollToTop) {
+      const cs = richCaseStudies[currentCaseStudyIndex];
+      if (!cs) return;
+
+      // Update URL query param without reload
+      const newUrl = `${window.location.pathname}?id=${encodeURIComponent(cs.id)}`;
+      window.history.pushState({ id: cs.id }, '', newUrl);
+
+      // Update pills
+      document.querySelectorAll('.cs-switcher-pill').forEach((b, i) => {
+        if (i === currentCaseStudyIndex) b.classList.add('active');
+        else b.classList.remove('active');
+      });
+
+      // Update Page Title
+      document.title = `${cs.heroTitle} | ${cs.subtitle} | Md. Shakibur Rahaman`;
+
+      // 1. Top Metadata
+      const el = id => document.getElementById(id);
+      if (el('csTopCategory')) el('csTopCategory').textContent = cs.category || 'UX CASE STUDY';
+      if (el('csTopAuthor')) el('csTopAuthor').textContent = cs.author || 'DESIGN BY MD. SHAKIBUR RAHAMAN';
+      if (el('csTopDate')) el('csTopDate').textContent = cs.date || 'MARCH 2026';
+
+      // 2. Hero Section
+      const badge = el('csBrandBadge');
+      if (badge) {
+        badge.textContent = cs.badge || 'SR';
+        badge.className = `w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr ${cs.badgeGradient || 'from-[#E07A5F] to-[#F28C38]'} flex items-center justify-center text-white font-black text-xl sm:text-2xl shadow-lg shadow-[#E07A5F]/35 border-2 border-white transform transition-transform duration-300 hover:scale-105`;
+      }
+
+      if (el('csHeroSubtitle')) el('csHeroSubtitle').textContent = cs.subtitle || '';
+      if (el('csHeroTitle')) el('csHeroTitle').textContent = cs.heroTitle || 'UX CASE STUDY';
+      if (el('csHeroTagline')) el('csHeroTagline').textContent = cs.tagline || '';
+
+      // 3. Problem Statement
+      if (el('csProblemContent')) el('csProblemContent').textContent = cs.problem || '';
+
+      // 4. Solution List
+      const solList = el('csSolutionList');
+      if (solList && cs.solution) {
+        solList.innerHTML = cs.solution.map(s => `<li>${escapeHtml(s)}</li>`).join('');
+      }
+
+      // 5. My Role Grid
+      const roleGrid = el('csRoleGrid');
+      if (roleGrid && cs.roles) {
+        roleGrid.innerHTML = cs.roles.map(colItems => `
+          <div>
+            <ul class="cs-bullet-list">
+              ${colItems.map(item => `<li>${escapeHtml(item)}</li>`).join('')}
+            </ul>
+          </div>
+        `).join('');
+      }
+
+      // 6. Project Duration
+      if (el('csMetricDuration')) el('csMetricDuration').textContent = cs.duration || '14';
+      if (el('csMetricScreens')) el('csMetricScreens').textContent = cs.screens || '35+';
+
+      // 7. Tools Grid
+      const toolsGrid = el('csToolsGrid');
+      if (toolsGrid && cs.tools) {
+        toolsGrid.innerHTML = cs.tools.map(t => {
+          let iconHtml = '';
+          if (t.iconType === 'svg') {
+            iconHtml = `
+              <svg class="w-6 h-6" viewBox="0 0 38 57" fill="none">
+                <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
+                <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
+                <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
+                <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
+                <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
+              </svg>
+            `;
+          } else if (t.iconType === 'ps') {
+            iconHtml = `<div class="w-8 h-8 rounded-lg bg-[#001E36] text-[#31A8FF] font-black text-xs flex items-center justify-center">Ps</div>`;
+          } else if (t.iconType === 'miro') {
+            iconHtml = `<div class="w-8 h-8 rounded-lg bg-[#FFD02F] text-[#050038] font-black text-xs flex items-center justify-center"><i class="fa-solid fa-bolt-lightning text-sm"></i></div>`;
+          } else if (t.iconType === 'forms') {
+            iconHtml = `<div class="w-8 h-8 rounded-lg bg-[#7248B9] text-white text-xs flex items-center justify-center"><i class="fa-solid fa-list-check"></i></div>`;
+          } else if (t.iconType === 'sheets') {
+            iconHtml = `<div class="w-8 h-8 rounded-lg bg-[#0F9D58] text-white text-xs flex items-center justify-center"><i class="fa-solid fa-table-cells"></i></div>`;
+          } else if (t.iconType === 'code') {
+            iconHtml = `<div class="w-8 h-8 rounded-lg bg-[#007ACC] text-white text-xs flex items-center justify-center"><i class="fa-solid fa-code"></i></div>`;
+          } else if (t.iconType === 'blender') {
+            iconHtml = `<div class="w-8 h-8 rounded-lg bg-[#EA7600] text-white text-xs flex items-center justify-center font-black">3D</div>`;
+          } else if (t.iconType === 'ga4' || t.iconType === 'gads') {
+            iconHtml = `<div class="w-8 h-8 rounded-lg bg-[#F9AB00] text-white text-xs flex items-center justify-center"><i class="fa-solid fa-chart-line"></i></div>`;
+          } else {
+            iconHtml = `<div class="w-8 h-8 rounded-lg bg-[#70805D] text-white text-xs flex items-center justify-center"><i class="fa-solid fa-layer-group"></i></div>`;
+          }
+
+          return `
+            <div class="tool-badge-card">
+              <div class="mb-1.5 flex items-center justify-center">${iconHtml}</div>
+              <span class="text-[11px] font-bold text-[#2A3B27] text-center leading-tight">${escapeHtml(t.name)}</span>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // 8. Design Process Pipeline
+      const procGrid = el('csProcessSteps');
+      if (procGrid && cs.process) {
+        procGrid.innerHTML = cs.process.map(p => `
+          <div class="process-step-box flex flex-col items-center text-center">
+            <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-lg mb-3.5 shadow-xs" style="background-color: ${p.color}20; color: ${p.color}; border: 1px solid ${p.color}40;">
+              <i class="fa-solid ${p.icon}"></i>
+            </div>
+            <h4 class="text-sm font-extrabold text-[#1C2B1B] mb-2">${escapeHtml(p.name)}</h4>
+            <div class="text-[11px] text-[#4D614A] leading-relaxed space-y-1">
+              ${(p.items || []).map(it => `<div>${escapeHtml(it)}</div>`).join('')}
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // 9. Verified Metrics
+      const metricsGrid = el('csVerifiedMetricsGrid');
+      if (metricsGrid && cs.metrics) {
+        metricsGrid.innerHTML = cs.metrics.map(m => `
+          <div class="p-5 rounded-2xl bg-white border border-[#70805D]/20 shadow-sm transition-all hover:border-[#70805D]">
+            <div class="text-xs font-bold text-[#70805D] uppercase tracking-wider mb-1">${escapeHtml(m.title)}</div>
+            <div class="text-2xl sm:text-3xl font-black text-[#1C2B1B]">${escapeHtml(m.stat)}</div>
+          </div>
+        `).join('');
+      }
+
+      // 10. Cover Image
+      if (el('csCoverImage') && cs.coverImage) {
+        el('csCoverImage').src = cs.coverImage;
+      }
+
+      if (smoothScrollToTop) {
+        const topAnchor = document.getElementById('caseStudyMain');
+        if (topAnchor) {
+          window.scrollTo({
+            top: topAnchor.offsetTop - 90,
+            behavior: 'smooth'
+          });
+        }
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    // Scroll Progress Bar
+    function initScrollProgressBar() {
+      const bar = document.getElementById('scrollProgressBar');
+      if (!bar) return;
+      window.addEventListener('scroll', () => {
+        const s = window.pageYOffset || document.documentElement.scrollTop;
+        const h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        bar.style.width = (h > 0 ? (s / h) * 100 : 0) + '%';
+      }, { passive: true });
+    }
+
+    // Scroll Reveal Engine
+    function initScrollReveal() {
+      const elements = document.querySelectorAll('.reveal-on-scroll');
+      if (!elements.length) return;
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+        elements.forEach(el => observer.observe(el));
+      } else {
+        elements.forEach(el => el.classList.add('revealed'));
+      }
+    }
+
+    // Ambient Canvas Background
+    function initAmbientCanvas() {
+      const canvas = document.getElementById('ambientCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width = (canvas.width = window.innerWidth);
+      let height = (canvas.height = window.innerHeight);
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      }, { passive: true });
+
+      const particles = Array.from({ length: 30 }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        size: Math.random() * 1.5 + 0.5,
+        vx: (Math.random() - 0.5) * 0.25,
+        vy: (Math.random() - 0.5) * 0.25,
+        alpha: Math.random() * 0.3 + 0.1,
+        color: Math.random() > 0.5 ? '112, 128, 93' : '224, 122, 95'
+      }));
+
+      function render() {
+        ctx.clearRect(0, 0, width, height);
+        particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0) p.x = width;
+          if (p.x > width) p.x = 0;
+          if (p.y < 0) p.y = height;
+          if (p.y > height) p.y = 0;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${p.color}, ${p.alpha})`;
+          ctx.fill();
+        });
+        requestAnimationFrame(render);
+      }
+      requestAnimationFrame(render);
+    }
+
+    // Lead Form Handler
+    function initLeadForm() {
+      const form = document.getElementById('caseStudyInquiryForm');
+      if (!form) return;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('csSubmitBriefBtn');
+        const alertBox = document.getElementById('csInquiryAlert');
+        btn.disabled = true;
+        btn.innerHTML = '<span>Transmitting Brief...</span>';
+
+        const payload = {
+          name: document.getElementById('csLeadName').value.trim(),
+          email: document.getElementById('csLeadEmail').value.trim(),
+          phone: document.getElementById('csLeadPhone').value.trim() || 'N/A',
+          services: document.getElementById('csLeadService').value,
+          message: document.getElementById('csLeadMessage').value.trim(),
+          source: 'Case Study Details Page'
+        };
+
+        try {
+          const res = await fetch('/api/leads', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          const data = await res.json();
+          if (res.ok && data.success) {
+            alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-[#70805D]/15 text-[#2A3B27] border border-[#70805D]/35 block mb-4';
+            alertBox.textContent = `✓ Thank you, ${payload.name}! Your consultation brief has been received. Shakibur will contact you within 24 hours.`;
+            form.reset();
+          } else {
+            throw new Error(data.error || 'Submission failed');
+          }
+        } catch (err) {
+          alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-red-50 text-red-800 border border-red-200 block mb-4';
+          alertBox.textContent = `Error: ${err.message}`;
+        } finally {
+          btn.disabled = false;
+          btn.innerHTML = '<span>Transmit Executive Briefing</span><i class="fa-solid fa-paper-plane text-xs"></i>';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
