@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Event Activation & Exhibition Stalls | Md. Shakibur Rahaman</title>
-  <meta name="description" content="Photorealistic 3D exhibition booth architecture, experiential corporate roadshows, turnkey vendor oversight, and high-dwell footfall engineering.">
+  <meta name="description" content="Architectural exhibition booth blueprints, experiential corporate roadshows, turnkey vendor oversight, and high-dwell footfall engineering.">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -35,25 +35,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body class="bg-[#F8F9F6] text-[#1C2B1B] font-sans antialiased selection:bg-[#70805D] selection:text-white relative overflow-x-hidden min-h-screen">
-  <!-- Top Scroll Progress Bar -->
+<body class="bg-[#F8F9F6] text-[#1C2B1B] font-sans antialiased selection:bg-[#70805D] selection:text-white relative overflow-x-hidden">
+
+  <!-- 0. Top Scroll Progress Bar -->
   <div id="scrollProgressBar"></div>
 
-  <!-- Ambient Light Background Canvas & Mesh -->
+  <!-- 1. Ambient Background Canvas, Animated Mesh & Vignette -->
   <div class="ambient-mesh-glow"></div>
   <canvas id="ambientCanvas"></canvas>
   <div class="ambient-vignette"></div>
 
-  <!-- Header -->
+  <!-- 2. FIXED NAVBAR WITH SERVICES DROPDOWN -->
   <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#F8F9F6]/90 backdrop-blur-2xl border-b border-[#70805D]/15 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
+      <!-- Brand Logo / Monogram -->
       <a href="/" class="flex items-center gap-3.5 group">
         <div class="w-10 h-10 rounded-xl bg-[#70805D] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#70805D]/25">
           SR
         </div>
         <div class="flex flex-col">
-          <span class="font-bold text-[#1C2B1B] tracking-tight text-base sm:text-lg group-hover:text-[#70805D] transition-colors" id="navBrandName">Md. Shakibur Rahaman</span>
+          <span class="font-bold text-[#1C2B1B] tracking-tight text-base sm:text-lg group-hover:text-[#70805D] transition-colors">Md. Shakibur Rahaman</span>
           <span class="text-[10.5px] text-[#70805D] font-bold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
         </div>
       </a>
@@ -63,13 +65,14 @@
         <a href="/" class="desktop-nav-link hover:text-[#70805D] transition-colors">Home</a>
         <a href="/#about" class="desktop-nav-link hover:text-[#70805D] transition-colors">About</a>
         
+        <!-- SERVICES MENU ITEM WITH HOVER SUB-MENU -->
         <div class="services-menu-item relative group">
           <a href="/services.html" class="desktop-nav-link text-[#70805D] font-bold flex items-center gap-1.5 py-1">
             <span>Services</span>
             <i class="fa-solid fa-chevron-down text-[9px] text-[#70805D] transition-transform duration-200 group-hover:rotate-180"></i>
           </a>
           
-                    <!-- 6 Services Hover Sub-Menu Panel -->
+          <!-- 6 Services Hover Sub-Menu Panel -->
           <div class="services-dropdown">
             <div class="flex items-center justify-between pb-3 mb-3 border-b border-[#70805D]/15">
               <span class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider flex items-center gap-2">
@@ -122,7 +125,7 @@
                 <div class="service-sub-icon bg-[#70805D] text-white"><i class="fa-solid fa-cubes"></i></div>
                 <div>
                   <div class="service-sub-title text-[#70805D]">06 Event activation & Exhibition</div>
-                  <div class="service-sub-desc">Expos & 3D spatial builds</div>
+                  <div class="service-sub-desc">Expos & spatial builds</div>
                 </div>
               </a>
             </div>
@@ -139,6 +142,7 @@
 
         <a href="/#projects" class="desktop-nav-link hover:text-[#70805D] transition-colors">Projects</a>
         <a href="/case-studies.html" class="desktop-nav-link hover:text-[#70805D] transition-colors">Case Studies</a>
+        <a href="/#testimonials" class="desktop-nav-link hover:text-[#70805D] transition-colors">Testimonials</a>
         <a href="#inquiry" class="desktop-nav-link hover:text-[#70805D] transition-colors">Contact</a>
       </nav>
 
@@ -156,6 +160,7 @@
     <!-- Mobile Dropdown Menu -->
     <div id="mobileMenu" class="hidden lg:hidden bg-white/98 border-b border-[#70805D]/15 px-6 py-5 space-y-3 shadow-xl">
       <a href="/" class="mobile-link block text-sm font-semibold text-[#4D614A]">Home</a>
+      <a href="/#about" class="mobile-link block text-sm font-semibold text-[#4D614A]">About</a>
       <a href="/services.html" class="mobile-link block text-sm font-bold text-[#70805D]">All 6 Services Directory</a>
       <div class="pt-1 pb-1 border-y border-[#70805D]/10">
         <div class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider py-1">6 Core Services</div>
@@ -165,11 +170,19 @@
           <a href="/services/social-media-marketing.html" class="mobile-link py-1 ">• 03 Social Media</a>
           <a href="/services/public-relations.html" class="mobile-link py-1 ">• 04 PR & Outreach</a>
           <a href="/services/google-ads.html" class="mobile-link py-1 ">• 05 Google Ads</a>
-          <a href="/services/event-activation.html" class="mobile-link py-1 font-bold text-[#70805D]">• 06 3D Events</a>
+          <a href="/services/event-activation.html" class="mobile-link py-1 font-bold text-[#70805D]">• 06 Events & Expos</a>
         </div>
       </div>
       <a href="/#projects" class="mobile-link block text-sm font-semibold text-[#4D614A]">15 Web Projects</a>
-      <a href="#inquiry" class="mobile-link block text-sm font-bold text-[#70805D]">Book Consultation</a>
+      <a href="/case-studies.html" class="mobile-link block text-sm font-semibold text-[#4D614A]">Case Studies</a>
+      <a href="/#testimonials" class="mobile-link block text-sm font-semibold text-[#4D614A]">Testimonials</a>
+      <a href="#inquiry" class="mobile-link block text-sm font-bold text-[#70805D]">Contact</a>
+      <div class="pt-2">
+        <a href="#inquiry" class="mobile-link btn-aesthetic-primary w-full justify-center text-xs py-2.5">
+          <span>Book Consultation</span>
+          <i class="fa-solid fa-paper-plane text-xs"></i>
+        </a>
+      </div>
     </div>
   </header>
 
@@ -179,17 +192,21 @@
   <section id="workflow" class="py-24 border-t border-[#70805D]/15 bg-[#F1F3ED]/50 relative z-10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto mb-12 reveal-on-scroll">
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal-on-scroll">
         <div class="section-tag justify-center mb-3">
-          <i class="fa-solid fa-layer-group"></i>
-          <span>EXECUTION METHODOLOGY</span>
+          <i class="fa-solid fa-cubes text-[#70805D]"></i>
+          <span>EVENT ACTIVATION &amp; EXHIBITION ARCHITECTURE</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C2B1B] tracking-tight">
-          4-Phase Delivery Framework
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C2B1B] tracking-tight mb-4">
+          Architecting Immersive Physical Brand Experiences &amp; Booths
         </h2>
-        <p class="text-xs sm:text-sm text-[#4D614A] mt-2">
-          Transparent, milestone-driven sprint execution ensuring zero surprises and complete executive governance.
+        <p class="text-xs sm:text-sm md:text-base text-[#4D614A] leading-relaxed max-w-2xl mx-auto mb-6">
+          In physical spaces, brand impression is governed by spatial ergonomics, lighting, and dwell time. From millimeter-precise CAD blueprints and interactive kiosk placement to on-site fabrication oversight, we engineer high-traffic trade show pavilions and corporate activations that turn casual foot traffic into closed deals.
         </p>
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#70805D]/25 shadow-2xs text-xs font-bold text-[#2A3B27]">
+          <span class="w-2 h-2 rounded-full bg-[#70805D] animate-pulse"></span>
+          <span>From spatial layout blueprints to turnkey on-site buildout across 4 structured execution phases:</span>
+        </div>
       </div>
 
       <!-- Executive Delivery Framework Cards (Scroll-Driven Auto Reveal) -->
@@ -297,9 +314,9 @@
                   02
                 </div>
                 <div>
-                  <span class="text-[11px] font-black text-[#70805D] tracking-wider uppercase block">Phase 02 • 3D Architecture</span>
+                  <span class="text-[11px] font-black text-[#70805D] tracking-wider uppercase block">Phase 02 • Spatial Architecture</span>
                   <h3 class="text-xl sm:text-2xl font-extrabold text-[#1C2B1B] tracking-tight">
-                    Photorealistic 3D Booth Architecture &amp; Lighting Blueprints
+                    Photorealistic Spatial Booth Architecture &amp; Lighting Blueprints
                   </h3>
                 </div>
               </div>
@@ -315,7 +332,7 @@
 
             <!-- Narrative -->
             <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
-              Engineering multi-angle 3D spatial models in 3ds Max/Blender, lighting rig blueprints, interactive touchscreen kiosk placement, and fabrication joinery schematics.
+              Engineering multi-angle spatial models in 3ds Max/Blender, lighting rig blueprints, interactive touchscreen kiosk placement, and fabrication joinery schematics.
             </p>
 
             <!-- 4 Bento Deliverable Items -->
@@ -325,7 +342,7 @@
                   <i class="fa-solid fa-cube"></i>
                 </div>
                 <div>
-                  <div class="text-xs font-extrabold text-[#1C2B1B]">4K Photorealistic 3D Renders</div>
+                  <div class="text-xs font-extrabold text-[#1C2B1B]">4K Spatial Blueprints &amp; Angles</div>
                   <div class="text-[11.5px] text-[#55738D] mt-0.5">Day/night lighting conditions with human scale entourage</div>
                 </div>
               </div>
@@ -365,10 +382,10 @@
             <div class="mt-6 pt-4 border-t border-[#70805D]/15 flex flex-wrap items-center justify-between gap-3 text-xs">
               <div class="flex items-center gap-2 text-[#1C2B1B] font-bold">
                 <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs"><i class="fa-solid fa-bullseye"></i></span>
-                <span>Tangible Milestone Deliverable: Approved 4K 3D Booth Blueprint &amp; CNC Fabrication Deck</span>
+                <span>Tangible Milestone Deliverable: Approved 4K Spatial Booth Blueprint &amp; CNC Fabrication Deck</span>
               </div>
               <div class="text-[11.5px] text-[#55738D] font-medium flex items-center gap-1.5">
-                <i class="fa-solid fa-file-code text-[#70805D]"></i> 3D CAD/Blender Spatial Deck
+                <i class="fa-solid fa-file-code text-[#70805D]"></i> CAD Spatial Blueprints &amp; Fabrication Deck
               </div>
             </div>
           </div>
@@ -605,9 +622,9 @@
             <div>
               <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Estimated Budget Scope</label>
               <select id="svcLeadBudget" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
-                <option value="Turnkey 3D Exhibition Stall ($3,000 - $8,000+)">Turnkey 3D Exhibition Stall ($3,000 - $8,000+)</option>
+                <option value="Turnkey Exhibition Stall ($3,000 - $8,000+)">Turnkey Exhibition Stall ($3,000 - $8,000+)</option>
                 <option value="Experiential Event Production ($2,000 - $5,000)">Experiential Event Production ($2,000 - $5,000)</option>
-                <option value="3D Architectural Visualization Kit ($1,200 - $2,500)">3D Architectural Visualization Kit ($1,200 - $2,500)</option>
+                <option value="Spatial Architectural Visualization Kit ($1,200 - $2,500)">Spatial Architectural Visualization Kit ($1,200 - $2,500)</option>
               </select>
             </div>
           </div>

@@ -134,7 +134,7 @@
                 <div class="service-sub-icon "><i class="fa-solid fa-cubes"></i></div>
                 <div>
                   <div class="service-sub-title ">06 Event activation & Exhibition</div>
-                  <div class="service-sub-desc">Expos & 3D spatial builds</div>
+                  <div class="service-sub-desc">Expos & spatial builds</div>
                 </div>
               </a>
             </div>
@@ -151,14 +151,14 @@
 
         <a href="/#projects" class="desktop-nav-link hover:text-[#70805D] transition-colors">Projects</a>
         <a href="/case-studies.html" class="desktop-nav-link text-[#70805D] font-bold">Case Studies</a>
-        <a href="/#testimonials" class="desktop-nav-link hover:text-[#70805D] transition-colors">Reviews</a>
-        <a href="#inquiry" class="desktop-nav-link hover:text-[#70805D] transition-colors">Consultation</a>
+        <a href="/#testimonials" class="desktop-nav-link hover:text-[#70805D] transition-colors">Testimonials</a>
+        <a href="#inquiry" class="desktop-nav-link hover:text-[#70805D] transition-colors">Contact</a>
       </nav>
 
       <!-- Right Header Actions -->
       <div class="flex items-center gap-3">
         <a href="#inquiry" class="nav-cta-btn btn-aesthetic-primary text-xs hidden md:inline-flex items-center gap-2">
-          <span>Book Consultation</span>
+          <span>Let's Talk</span>
           <i class="fa-solid fa-arrow-down text-[10px]"></i>
         </a>
         <button id="mobileMenuToggle" aria-label="Toggle Navigation" class="lg:hidden w-10 h-10 rounded-xl bg-white border border-[#70805D]/25 flex items-center justify-center text-[#2A3B27] shadow-sm">
@@ -173,8 +173,15 @@
       <a href="/#about" class="mobile-link block text-sm font-semibold text-[#4D614A] hover:text-[#70805D]">About</a>
       <a href="/services.html" class="mobile-link block text-sm font-semibold text-[#4D614A] hover:text-[#70805D]">Services Directory</a>
       <a href="/#projects" class="mobile-link block text-sm font-semibold text-[#4D614A] hover:text-[#70805D]">15 Web Projects</a>
-      <a href="/case-studies.html" class="mobile-link block text-sm font-bold text-[#70805D]">Case Studies &amp; Works</a>
-      <a href="#inquiry" class="mobile-link block text-sm font-bold text-[#70805D]">Book Consultation</a>
+      <a href="/case-studies.html" class="mobile-link block text-sm font-bold text-[#70805D]">Case Studies</a>
+      <a href="/#testimonials" class="mobile-link block text-sm font-semibold text-[#4D614A] hover:text-[#70805D]">Testimonials</a>
+      <a href="#inquiry" class="mobile-link block text-sm font-semibold text-[#4D614A] hover:text-[#70805D]">Contact</a>
+      <div class="pt-2">
+        <a href="#inquiry" class="mobile-link btn-aesthetic-primary w-full justify-center text-xs py-2.5">
+          <span>Book Consultation</span>
+          <i class="fa-solid fa-paper-plane text-xs"></i>
+        </a>
+      </div>
     </div>
   </header>
 
@@ -236,7 +243,7 @@
           <button class="cs-filter-btn" data-category="Social Media marketing">Social Media</button>
           <button class="cs-filter-btn" data-category="Public relation & Media outreach">PR &amp; Media</button>
           <button class="cs-filter-btn" data-category="Google ads & Intent Scaling">Google Ads</button>
-          <button class="cs-filter-btn" data-category="Event activation & Exhibition">3D Events</button>
+          <button class="cs-filter-btn" data-category="Event activation & Exhibition">Events &amp; Expos</button>
         </div>
       </div>
 
@@ -626,9 +633,9 @@
         `).join('');
 
         return `
-          <div onclick="if (!event.target.closest('button, a')) window.location.href='/case-study.html?id=${encodeURIComponent(cs.id)}'" class="spotlight-card p-0 overflow-hidden flex flex-col justify-between group bg-white border border-[#70805D]/25 rounded-3xl shadow-sm hover:shadow-2xl hover:border-[#70805D] hover:-translate-y-1.5 transition-all duration-500 cursor-pointer">
-            <!-- Cover Visual with Badges -->
-            <div class="relative h-60 sm:h-72 w-full overflow-hidden bg-[#F1F3ED]">
+          <div onclick="if (!event.target.closest('button, a')) window.location.href='/case-study.html?id=${encodeURIComponent(cs.id)}'" class="h-full flex flex-col justify-between group spotlight-card p-0 overflow-hidden bg-white border border-[#70805D]/25 rounded-3xl shadow-sm hover:shadow-2xl hover:border-[#70805D] hover:-translate-y-1.5 transition-all duration-500 cursor-pointer">
+            <!-- Cover Visual with Badges (Strict Fixed Height) -->
+            <div class="relative h-64 sm:h-72 w-full shrink-0 overflow-hidden bg-[#F1F3ED]">
               <img src="${escapeHtml(cs.coverImage || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80')}" alt="${escapeHtml(cs.title)}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" loading="lazy">
               <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent"></div>
 
@@ -651,29 +658,29 @@
               </div>
             </div>
 
-            <!-- Content Body -->
+            <!-- Content Body (Equal Vertical Height) -->
             <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
               <div>
-                <h3 class="text-xl sm:text-2xl font-black text-[#1C2B1B] group-hover:text-[#70805D] transition-colors tracking-tight leading-snug mb-2">
+                <h3 class="text-xl sm:text-2xl font-black text-[#1C2B1B] group-hover:text-[#70805D] transition-colors tracking-tight leading-snug mb-2 line-clamp-2 min-h-[56px]">
                   <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="hover:text-[#70805D] text-inherit no-underline">${escapeHtml(cs.title)}</a>
                 </h3>
-                <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-4">
+                <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-4 line-clamp-2 min-h-[40px]">
                   ${escapeHtml(cs.tagline || cs.challenge || '')}
                 </p>
 
-                <!-- Metrics Pills -->
-                <div class="flex flex-wrap gap-2 mb-4">
+                <!-- Metrics Pills Container -->
+                <div class="flex flex-wrap items-center gap-2 mb-4 min-h-[34px]">
                   ${metricsHtml}
                 </div>
 
-                <!-- Deliverables Tags -->
-                <div class="flex flex-wrap gap-1.5 mb-6 pt-3 border-t border-[#70805D]/15">
+                <!-- Deliverables Tags Container -->
+                <div class="flex flex-wrap items-center gap-1.5 mb-6 pt-3 border-t border-[#70805D]/15 min-h-[42px]">
                   ${deliverablesHtml}
                 </div>
               </div>
 
-              <!-- Card Actions Row -->
-              <div class="pt-4 border-t border-[#70805D]/15 flex items-center justify-between gap-3">
+              <!-- Card Actions Row Pinned to Bottom -->
+              <div class="pt-4 border-t border-[#70805D]/15 flex items-center justify-between gap-3 mt-auto">
                 <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="btn-aesthetic-primary text-xs py-2 px-4 justify-center">
                   <span>Deep Dive Case Study</span>
                   <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>

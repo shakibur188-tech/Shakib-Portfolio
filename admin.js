@@ -213,7 +213,7 @@ window.switchTab = function(tabId) {
     'tab-services': { title: '6 Core Services CMS', sub: 'Manage titles, deliverables, tools, icons, and impact metrics.' },
     'tab-webprojects': { title: '15 Web Projects CMS (Live)', sub: 'Manage client portals, live external URLs, screenshots, and tech stacks.' },
     'tab-casestudies': { title: 'Case Studies & Recent Works CMS', sub: 'Write, edit, feature, and publish comprehensive case studies and measurable results for your audience.' },
-    'tab-creative': { title: 'Creative Media Studio Gallery', sub: 'Branding kits, commercial films, packaging 3D renders, and expo booths.' },
+    'tab-creative': { title: 'Creative Media Studio Gallery', sub: 'Branding kits, commercial films, packaging visual mockups, and expo booths.' },
     'tab-process': { title: '4-Stage Strategic Methodology', sub: 'Discovery, Creative Architecture, Engineering, and Omnichannel Amplification.' },
     'tab-testimonials': { title: 'Client Testimonials CMS', sub: 'Executive client reviews, endorsements, and verified partners.' },
     'tab-seo': { title: 'Global & AI SEO Center', sub: 'Meta tags, Google SERP simulator, GA4, Meta Pixel & /llms.txt standard.' },

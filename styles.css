@@ -1941,3 +1941,24 @@ html, body {
     border-radius: 18px !important;
   }
 }
+
+/* ==========================================================================
+   UNIFORM CARD & THUMBNAIL DIMENSION ENFORCEMENT
+   ========================================================================== */
+#projectsGrid > *,
+#homeCaseStudiesContainer > *,
+#allCaseStudiesGrid > * {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+#projectsGrid img,
+#homeCaseStudiesContainer img,
+#allCaseStudiesGrid img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+

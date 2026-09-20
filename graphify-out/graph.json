@@ -1021,7 +1021,7 @@
       "file_type": "code",
       "norm_label": "escapehtml()",
       "source_file": "app.js",
-      "source_location": "L1253"
+      "source_location": "L1251"
     },
     {
       "id": "app_fetchandhydratecontent",
@@ -1057,7 +1057,7 @@
       "file_type": "code",
       "norm_label": "filterprojectsbycategory()",
       "source_file": "app.js",
-      "source_location": "L866"
+      "source_location": "L864"
     },
     {
       "id": "app_getemergencyfallbackdata",
@@ -1081,7 +1081,7 @@
       "file_type": "code",
       "norm_label": "handlecardmousemove()",
       "source_file": "app.js",
-      "source_location": "L901"
+      "source_location": "L899"
     },
     {
       "id": "app_initambientbackground",
@@ -1129,7 +1129,7 @@
       "file_type": "code",
       "norm_label": "initbeforeaftersliders()",
       "source_file": "app.js",
-      "source_location": "L936"
+      "source_location": "L934"
     },
     {
       "id": "app_initcontactform",
@@ -1141,7 +1141,7 @@
       "file_type": "code",
       "norm_label": "initcontactform()",
       "source_file": "app.js",
-      "source_location": "L1083"
+      "source_location": "L1081"
     },
     {
       "id": "app_initcontactform_showformstatus",
@@ -1153,7 +1153,7 @@
       "file_type": "code",
       "norm_label": "showformstatus()",
       "source_file": "app.js",
-      "source_location": "L1137"
+      "source_location": "L1135"
     },
     {
       "id": "app_initmobilemenu",
@@ -1165,7 +1165,7 @@
       "file_type": "code",
       "norm_label": "initmobilemenu()",
       "source_file": "app.js",
-      "source_location": "L1197"
+      "source_location": "L1195"
     },
     {
       "id": "app_initprojectfilter",
@@ -1177,7 +1177,7 @@
       "file_type": "code",
       "norm_label": "initprojectfilter()",
       "source_file": "app.js",
-      "source_location": "L852"
+      "source_location": "L850"
     },
     {
       "id": "app_initscrolleffects",
@@ -1189,7 +1189,7 @@
       "file_type": "code",
       "norm_label": "initscrolleffects()",
       "source_file": "app.js",
-      "source_location": "L1216"
+      "source_location": "L1214"
     },
     {
       "id": "app_initscrolleffects_handlescroll",
@@ -1201,7 +1201,7 @@
       "file_type": "code",
       "norm_label": "handlescroll()",
       "source_file": "app.js",
-      "source_location": "L1221"
+      "source_location": "L1219"
     },
     {
       "id": "app_initscrollprogressbar",
@@ -1237,7 +1237,7 @@
       "file_type": "code",
       "norm_label": "initscrollreveal()",
       "source_file": "app.js",
-      "source_location": "L912"
+      "source_location": "L910"
     },
     {
       "id": "app_initservicemodal",
@@ -1249,7 +1249,7 @@
       "file_type": "code",
       "norm_label": "initservicemodal()",
       "source_file": "app.js",
-      "source_location": "L993"
+      "source_location": "L991"
     },
     {
       "id": "app_initservicemodal_closemodal",
@@ -1261,7 +1261,7 @@
       "file_type": "code",
       "norm_label": "closemodal()",
       "source_file": "app.js",
-      "source_location": "L1000"
+      "source_location": "L998"
     },
     {
       "id": "app_initspotlightcards",
@@ -1273,7 +1273,7 @@
       "file_type": "code",
       "norm_label": "initspotlightcards()",
       "source_file": "app.js",
-      "source_location": "L892"
+      "source_location": "L890"
     },
     {
       "id": "app_inittypewriter",
@@ -1285,7 +1285,7 @@
       "file_type": "code",
       "norm_label": "inittypewriter()",
       "source_file": "app.js",
-      "source_location": "L1154"
+      "source_location": "L1152"
     },
     {
       "id": "app_inittypewriter_type",
@@ -1297,7 +1297,7 @@
       "file_type": "code",
       "norm_label": "type()",
       "source_file": "app.js",
-      "source_location": "L1163"
+      "source_location": "L1161"
     },
     {
       "id": "app_renderhomecasestudies",
@@ -1309,7 +1309,7 @@
       "file_type": "code",
       "norm_label": "renderhomecasestudies()",
       "source_file": "app.js",
-      "source_location": "L747"
+      "source_location": "L723"
     },
     {
       "id": "app_renderroadmap",
@@ -1321,7 +1321,7 @@
       "file_type": "code",
       "norm_label": "renderroadmap()",
       "source_file": "app.js",
-      "source_location": "L788"
+      "source_location": "L786"
     },
     {
       "id": "app_renderservices",
@@ -1345,7 +1345,7 @@
       "file_type": "code",
       "norm_label": "rendertecharsenal()",
       "source_file": "app.js",
-      "source_location": "L713"
+      "source_location": "L715"
     },
     {
       "id": "app_rendertestimonials",
@@ -1357,7 +1357,7 @@
       "file_type": "code",
       "norm_label": "rendertestimonials()",
       "source_file": "app.js",
-      "source_location": "L816"
+      "source_location": "L814"
     },
     {
       "id": "app_renderwebprojects",
@@ -4743,7 +4743,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L861",
+      "source_location": "L859",
       "weight": 1.0
     },
     {
@@ -4755,7 +4755,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1060",
+      "source_location": "L1058",
       "weight": 1.0
     },
     {
@@ -4767,7 +4767,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L758",
+      "source_location": "L734",
       "weight": 1.0
     },
     {
@@ -4779,7 +4779,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L805",
+      "source_location": "L803",
       "weight": 1.0
     },
     {
@@ -4795,18 +4795,6 @@
       "weight": 1.0
     },
     {
-      "source": "app_rendertecharsenal",
-      "target": "app_escapehtml",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app.js",
-      "source_location": "L739",
-      "weight": 1.0
-    },
-    {
       "source": "app_rendertestimonials",
       "target": "app_escapehtml",
       "relation": "calls",
@@ -4815,7 +4803,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L830",
+      "source_location": "L828",
       "weight": 1.0
     },
     {
@@ -5331,7 +5319,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1083",
+      "source_location": "L1081",
       "weight": 1.0
     },
     {
@@ -5343,7 +5331,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1154",
+      "source_location": "L1152",
       "weight": 1.0
     },
     {
@@ -5355,7 +5343,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1197",
+      "source_location": "L1195",
       "weight": 1.0
     },
     {
@@ -5367,7 +5355,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1216",
+      "source_location": "L1214",
       "weight": 1.0
     },
     {
@@ -5427,7 +5415,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L852",
+      "source_location": "L850",
       "weight": 1.0
     },
     {
@@ -5439,7 +5427,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L892",
+      "source_location": "L890",
       "weight": 1.0
     },
     {
@@ -5451,7 +5439,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L912",
+      "source_location": "L910",
       "weight": 1.0
     },
     {
@@ -5463,7 +5451,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L936",
+      "source_location": "L934",
       "weight": 1.0
     },
     {
@@ -5475,7 +5463,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L993",
+      "source_location": "L991",
       "weight": 1.0
     },
     {
@@ -5487,7 +5475,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1137",
+      "source_location": "L1135",
       "weight": 1.0
     },
     {
@@ -6635,7 +6623,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L1253",
+      "source_location": "L1251",
       "weight": 1.0
     },
     {
@@ -6701,7 +6689,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L713",
+      "source_location": "L715",
       "weight": 1.0
     },
     {
@@ -6712,7 +6700,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L747",
+      "source_location": "L723",
       "weight": 1.0
     },
     {
@@ -6723,7 +6711,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L788",
+      "source_location": "L786",
       "weight": 1.0
     },
     {
@@ -6734,7 +6722,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L816",
+      "source_location": "L814",
       "weight": 1.0
     },
     {
@@ -6745,7 +6733,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L866",
+      "source_location": "L864",
       "weight": 1.0
     },
     {
@@ -6761,6 +6749,17 @@
     },
     {
       "source": "app",
+      "target": "app_handlecardmousemove",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.js",
+      "source_location": "L899",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
       "target": "app_currenttypewritertitles",
       "relation": "contains",
       "_origin": "ast",
@@ -6771,17 +6770,6 @@
       "weight": 1.0
     },
     {
-      "source": "app",
-      "target": "app_handlecardmousemove",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.js",
-      "source_location": "L901",
-      "weight": 1.0
-    },
-    {
       "source": "app_inittypewriter",
       "target": "app_inittypewriter_type",
       "relation": "contains",
@@ -6789,7 +6777,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L1163",
+      "source_location": "L1161",
       "weight": 1.0
     },
     {
@@ -8452,7 +8440,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "app.js",
-      "source_location": "L1249",
+      "source_location": "L1247",
       "weight": 1.0
     },
     {
@@ -8476,7 +8464,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "app.js",
-      "source_location": "L1005",
+      "source_location": "L1003",
       "weight": 1.0
     },
     {
@@ -8488,7 +8476,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "app.js",
-      "source_location": "L896",
+      "source_location": "L894",
       "weight": 1.0
     },
     {
@@ -8541,5 +8529,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0d5002e5fb9e7013b7e76bb0c8c14bcbd370b053"
+  "built_at_commit": "e89b92d3f58035de48b7986f4e9cbcbff94cd3e0"
 }

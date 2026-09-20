@@ -641,48 +641,50 @@ function renderWebProjects(projects) {
   const html = projects.map(proj => {
     const displayUrl = proj.liveUrl.replace(/^https?:\/\//i, '').replace(/\/$/, '');
     const pointsHtml = (proj.points || ['High-speed cloud deployment', 'Core Web Vitals optimized', 'Mobile-first responsive architecture']).slice(0, 3).map(pt => `
-      <li class="bullet-point-item text-xs text-[#4D614A]">
+      <li class="bullet-point-item text-xs text-[#4D614A] flex items-start gap-1.5">
         <i class="fa-solid fa-check text-[9px] text-[#70805D] mt-1 shrink-0"></i>
-        <span>${escapeHtml(pt)}</span>
+        <span class="line-clamp-1">${escapeHtml(pt)}</span>
       </li>
     `).join('');
 
     return `
-      <a href="${escapeHtml(proj.liveUrl)}" target="_blank" rel="noopener noreferrer" class="spotlight-card project-card flex flex-col group reveal-on-scroll cursor-pointer text-left no-underline block bg-white border border-[#70805D]/20" data-category="${escapeHtml(proj.category || 'General')}">
+      <a href="${escapeHtml(proj.liveUrl)}" target="_blank" rel="noopener noreferrer" class="spotlight-card project-card flex flex-col justify-between h-full group reveal-on-scroll cursor-pointer text-left no-underline block bg-white border border-[#70805D]/20 rounded-3xl overflow-hidden shadow-sm hover:border-[#70805D] hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-category="${escapeHtml(proj.category || 'General')}">
         <!-- Browser Mockup Header -->
-        <div class="browser-header">
-          <div class="browser-dot"></div>
-          <div class="browser-dot"></div>
-          <div class="browser-dot"></div>
-          <div class="browser-url-bar">${escapeHtml(displayUrl)}</div>
+        <div class="browser-header shrink-0 flex items-center justify-between px-4 py-2.5 bg-[#F1F3ED]/80 border-b border-[#70805D]/15">
+          <div class="flex items-center gap-1.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-red-400/80 inline-block"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-400/80 inline-block"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400/80 inline-block"></span>
+          </div>
+          <div class="text-[11px] font-mono text-[#55738D] truncate max-w-[180px] bg-white/80 px-2.5 py-0.5 rounded-md border border-[#70805D]/15">${escapeHtml(displayUrl)}</div>
         </div>
 
-        <!-- Image Preview Thumbnail -->
-        <div class="project-thumbnail-wrapper">
-          <img src="${escapeHtml(proj.previewImage)}" alt="${escapeHtml(proj.title)}" class="project-thumbnail" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'">
-          <div class="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent"></div>
-          <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md border border-[#70805D]/30 text-[10px] font-bold text-[#2A3B27] shadow-sm">
+        <!-- Image Preview Thumbnail (Strict Equal Height & Width) -->
+        <div class="relative h-52 w-full shrink-0 overflow-hidden bg-[#F1F3ED]">
+          <img src="${escapeHtml(proj.previewImage)}" alt="${escapeHtml(proj.title)}" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent"></div>
+          <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#70805D]/30 text-[10px] font-extrabold text-[#2A3B27] shadow-sm">
             ${escapeHtml(proj.category)}
           </div>
         </div>
 
-        <!-- Project Details Body -->
+        <!-- Project Details Body (Equal Height & Flex Pinned) -->
         <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between gap-2 mb-2">
+            <div class="flex items-center justify-between gap-2 mb-1.5">
               <span class="text-[11px] text-[#70805D] font-bold uppercase tracking-wider">${escapeHtml(proj.client || 'Enterprise Web')}</span>
             </div>
 
-            <h3 class="text-base sm:text-lg font-bold text-[#1C2B1B] mb-2 leading-snug group-hover:text-[#70805D] transition-colors">
+            <h3 class="text-base sm:text-lg font-bold text-[#1C2B1B] mb-2 leading-snug group-hover:text-[#70805D] transition-colors line-clamp-1 h-6">
               ${escapeHtml(proj.title)}
             </h3>
 
-            <p class="text-xs text-[#55738D] leading-relaxed mb-3">
+            <p class="text-xs text-[#55738D] leading-relaxed mb-3 line-clamp-2 min-h-[36px]">
               ${escapeHtml(proj.highlights || '')}
             </p>
 
             <!-- Project Execution Points -->
-            <div class="pt-2.5 pb-2 border-t border-gray-100">
+            <div class="pt-2.5 pb-2 border-t border-gray-100 min-h-[76px] flex flex-col justify-center">
               <ul class="space-y-1.5">
                 ${pointsHtml}
               </ul>
@@ -690,7 +692,7 @@ function renderWebProjects(projects) {
           </div>
 
           <!-- Direct Live Website Button with Circular Arrow -->
-          <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
+          <div class="pt-3 border-t border-gray-100 flex items-center justify-between mt-auto">
             <span class="text-xs font-bold text-[#2A3B27] group-hover:text-[#70805D] flex items-center gap-2 transition-colors">
               <span>${escapeHtml(proj.ctaText || 'Visit Live Website')}</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-[#70805D] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
@@ -708,41 +710,15 @@ function renderWebProjects(projects) {
 }
 
 /* ==========================================================================
-   6. Render Technologies & Tools Arsenal
+   6. Render Technologies & Tools Arsenal (Preserved for safe no-op)
    ========================================================================== */
 function renderTechArsenal() {
   const container = document.getElementById('techArsenalGrid');
   if (!container) return;
-
-  const stack = [
-    { name: 'HTML5', icon: 'fa-brands fa-html5', color: '#E34F26' },
-    { name: 'CSS3', icon: 'fa-brands fa-css3-alt', color: '#1572B6' },
-    { name: 'JavaScript', icon: 'fa-brands fa-js', color: '#B39200' },
-    { name: 'TypeScript', icon: 'fa-solid fa-code', color: '#3178C6' },
-    { name: 'React', icon: 'fa-brands fa-react', color: '#0088A9' },
-    { name: 'Next.js', icon: 'fa-solid fa-n', color: '#2A3B27' },
-    { name: 'Node.js', icon: 'fa-brands fa-node-js', color: '#43853D' },
-    { name: 'Express.js', icon: 'fa-solid fa-server', color: '#55738D' },
-    { name: 'MongoDB', icon: 'fa-solid fa-database', color: '#3F8A43' },
-    { name: 'Tailwind CSS', icon: 'fa-solid fa-wind', color: '#38BDF8' },
-    { name: 'Git', icon: 'fa-brands fa-git-alt', color: '#F05032' },
-    { name: 'Docker', icon: 'fa-brands fa-docker', color: '#0db7ed' },
-    { name: 'Figma', icon: 'fa-brands fa-figma', color: '#A259FF' },
-    { name: 'Adobe Suite', icon: 'fa-solid fa-palette', color: '#FF0000' },
-    { name: 'Google Ads', icon: 'fa-solid fa-chart-line', color: '#4285F4' },
-    { name: 'GA4 / SEO', icon: 'fa-solid fa-magnifying-glass-chart', color: '#70805D' }
-  ];
-
-  container.innerHTML = stack.map(tech => `
-    <div class="tech-tile reveal-on-scroll">
-      <i class="${tech.icon} tech-tile-icon" style="color: ${tech.color}"></i>
-      <span class="tech-tile-name">${escapeHtml(tech.name)}</span>
-    </div>
-  `).join('');
 }
 
 /* ==========================================================================
-   6.1 Render Featured Case Studies (2x2 Grid on Home Page)
+   6.1 Render Featured Case Studies (2x2 Grid on Home Page with Equal Height & Width)
    ========================================================================== */
 function renderHomeCaseStudies(caseStudies) {
   const container = document.getElementById('homeCaseStudiesContainer');
@@ -760,22 +736,44 @@ function renderHomeCaseStudies(caseStudies) {
     `).join('');
 
     return `
-      <div onclick="window.location.href='/case-study.html?id=${encodeURIComponent(cs.id)}'" class="spotlight-card rounded-3xl bg-white border border-[#70805D]/20 overflow-hidden flex flex-col justify-between shadow-sm hover:border-[#70805D] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group reveal-on-scroll">
-        <div class="p-6 sm:p-7">
-          <div class="flex items-center justify-between gap-3 mb-3">
-            <span class="px-2.5 py-0.5 rounded-full bg-[#70805D]/10 text-[10px] font-bold text-[#70805D] uppercase tracking-wider border border-[#70805D]/20">${escapeHtml(cs.category || 'UX Case Study')}</span>
-            <span class="text-xs font-bold text-[#55738D]">${escapeHtml(cs.year || '2026')}</span>
+      <div onclick="window.location.href='/case-study.html?id=${encodeURIComponent(cs.id)}'" class="spotlight-card rounded-3xl bg-white border border-[#70805D]/20 overflow-hidden flex flex-col justify-between shadow-sm hover:border-[#70805D] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group reveal-on-scroll h-full">
+        <!-- Cover Visual with Badges (Strict Equal Height & Width) -->
+        <div class="relative h-56 sm:h-64 w-full shrink-0 overflow-hidden bg-[#F1F3ED]">
+          <img src="${escapeHtml(cs.coverImage || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80')}" alt="${escapeHtml(cs.title)}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent"></div>
+
+          <!-- Top Pill Badges -->
+          <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
+            <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#70805D]/30 text-[11px] font-extrabold text-[#2A3B27] shadow-sm flex items-center gap-1.5">
+              <i class="fa-solid fa-building text-[#70805D] text-[10px]"></i>
+              <span>${escapeHtml(cs.client || '')}</span>
+            </span>
+            <span class="px-2.5 py-1 rounded-full bg-[#2A3B27]/85 backdrop-blur-md border border-white/20 text-[10.5px] font-bold text-white shadow-sm">
+              ${escapeHtml(cs.year || '2026')}
+            </span>
           </div>
-          <h3 class="text-lg sm:text-xl font-bold text-[#1C2B1B] group-hover:text-[#70805D] transition-colors mb-2 leading-snug">${escapeHtml(cs.title)}</h3>
-          <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-4">${escapeHtml(cs.tagline || cs.challenge || '')}</p>
-          <div class="flex flex-wrap gap-2 mb-2">${metricsHtml}</div>
+
+          <!-- Bottom Category Tag on Image -->
+          <div class="absolute bottom-3.5 left-4">
+            <span class="px-3 py-1 rounded-lg bg-[#70805D] text-white font-extrabold text-[11px] shadow-sm tracking-wide">
+              ${escapeHtml(cs.category || 'Strategic Growth')}
+            </span>
+          </div>
         </div>
-        <div class="p-4 sm:px-7 sm:pb-6 pt-0 border-t border-gray-100 flex items-center justify-between">
-          <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="btn-aesthetic-primary text-xs py-2 px-4 justify-center pointer-events-none">
-            <span>Read UX Case Study</span>
-            <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-          </a>
-          <span class="text-xs font-bold text-[#55738D]">${escapeHtml(cs.client || '')}</span>
+
+        <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg sm:text-xl font-bold text-[#1C2B1B] group-hover:text-[#70805D] transition-colors mb-2 leading-snug line-clamp-2 min-h-[56px]">${escapeHtml(cs.title)}</h3>
+            <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-4 line-clamp-2 min-h-[40px]">${escapeHtml(cs.tagline || cs.challenge || '')}</p>
+            <div class="flex flex-wrap gap-2 mb-2 min-h-[32px]">${metricsHtml}</div>
+          </div>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between mt-auto">
+            <span class="btn-aesthetic-primary text-xs py-2 px-4 justify-center pointer-events-none">
+              <span>Read UX Case Study</span>
+              <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+            </span>
+            <span class="text-xs font-bold text-[#55738D]">${escapeHtml(cs.client || '')}</span>
+          </div>
         </div>
       </div>
     `;

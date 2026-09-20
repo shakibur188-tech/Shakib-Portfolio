@@ -1,17 +1,17 @@
 # Graph Report - shakibur-portfolio-live  (2026-09-21)
 
 ## Corpus Check
-- 38 files · ~135,057 words
+- 38 files · ~138,985 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 11 file(s) not represented in the graph (top: (none) 2, .css 2, .bat 2)
 
 ## Summary
-- 283 nodes · 451 edges · 20 communities (15 shown, 5 thin omitted)
+- 283 nodes · 450 edges · 20 communities (15 shown, 5 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 31 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0d5002e5`
+- Built from commit: `e89b92d3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -135,7 +135,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `server.js` be split into smaller, more focused modules?**
   _Cohesion score 0.06009783368273934 - nodes in this community are weakly interconnected._
 - **Should `app.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.09747899159663866 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0957983193277311 - nodes in this community are weakly interconnected._
 - **Should `Md. Shakibur Rahaman — Executive Portfolio, CMS & Digital Growth Architecture` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `update_navbar_and_about.js` be split into smaller, more focused modules?**
