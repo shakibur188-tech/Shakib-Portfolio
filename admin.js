@@ -102,6 +102,21 @@ function setupEventListeners() {
   const addTypewriterBtn = document.getElementById('addTypewriterBtn');
   if (addTypewriterBtn) addTypewriterBtn.addEventListener('click', addTypewriterPhrase);
 
+  // Menu and Page Figures Add Buttons
+  const addNewMenuItemBtn = document.getElementById('addNewMenuItemBtn');
+  if (addNewMenuItemBtn) addNewMenuItemBtn.addEventListener('click', addNewMenuItem);
+
+  const addNewPageFigureBtn = document.getElementById('addNewPageFigureBtn');
+  if (addNewPageFigureBtn) addNewPageFigureBtn.addEventListener('click', addNewPageFigure);
+
+  // Page switcher pills
+  document.querySelectorAll('.page-pill-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const pageKey = btn.getAttribute('data-page-key');
+      selectPageEditor(pageKey);
+    });
+  });
+
   // Leads Search & Export
   const leadsSearchInput = document.getElementById('leadsSearchInput');
   if (leadsSearchInput) {
@@ -210,6 +225,8 @@ window.switchTab = function(tabId) {
 
   const titleMap = {
     'tab-overview': { title: 'Dashboard Overview', sub: 'Real-time performance metrics, services, and live web portals.' },
+    'tab-menu': { title: 'Header & Menu Navigation Manager', sub: 'Customize navigation items, URLs, header CTA button and top brand identity.' },
+    'tab-pages': { title: 'Page-by-Page Content & Figures CMS', sub: 'Edit hero titles, numbers, years of experience, counters, and action buttons for every page.' },
     'tab-services': { title: '6 Core Services CMS', sub: 'Manage titles, deliverables, tools, icons, and impact metrics.' },
     'tab-webprojects': { title: '15 Web Projects CMS (Live)', sub: 'Manage client portals, live external URLs, screenshots, and tech stacks.' },
     'tab-casestudies': { title: 'Case Studies & Recent Works CMS', sub: 'Write, edit, feature, and publish comprehensive case studies and measurable results for your audience.' },
@@ -586,6 +603,12 @@ function getCaseStudiesFromForms() {
 
 function populateAdminForms(c) {
   if (!c) return;
+
+  // Header & Menu Navigation
+  renderMenuEditor(c.menu);
+
+  // Page-by-Page Content & Figures
+  renderPageByPageEditor(c.pages, activePageEditorKey || 'home');
 
   // 1. 8 Core Services
   renderServicesEditor(c.services || []);
@@ -1156,6 +1179,344 @@ function getTestimonialsFromForms() {
   return list;
 }
 
+// ==========================================
+// 8.1 HEADER & MENU NAVIGATION EDITOR
+// ==========================================
+let currentMenuData = null;
+
+function renderMenuEditor(menu) {
+  currentMenuData = menu || {
+    brand: { name: 'Md. Shakibur Rahaman', avatarText: 'SR', status: 'Available for Q3/Q4 Advisory & Execution' },
+    items: [
+      { id: 'nav-home', label: 'Home', url: '/', isExternal: false, order: 1 },
+      { id: 'nav-about', label: 'About Me', url: '/about.html', isExternal: false, order: 2 },
+      { id: 'nav-services', label: 'Services', url: '/services.html', isExternal: false, order: 3, hasDropdown: true },
+      { id: 'nav-projects', label: '15 Web Projects', url: '/projects.html', isExternal: false, order: 4 },
+      { id: 'nav-casestudies', label: 'Case Studies', url: '/case-studies.html', isExternal: false, order: 5 },
+      { id: 'nav-testimonials', label: 'Testimonials', url: '/testimonials.html', isExternal: false, order: 6 },
+      { id: 'nav-contact', label: 'Contact', url: '/contact.html', isExternal: false, order: 7 }
+    ],
+    ctaButton: { label: "Let's Talk", url: '/contact.html', icon: 'fa-arrow-up-right-from-square', isExternal: false }
+  };
+
+  const brand = currentMenuData.brand || {};
+  setValue('menu_brandName', brand.name || 'Md. Shakibur Rahaman');
+  setValue('menu_brandAvatar', brand.avatarText || 'SR');
+  setValue('menu_brandStatus', brand.status || 'Available for Q3/Q4 Advisory & Execution');
+
+  const cta = currentMenuData.ctaButton || {};
+  setValue('menu_ctaLabel', cta.label || "Let's Talk");
+  setValue('menu_ctaUrl', cta.url || '/contact.html');
+  setValue('menu_ctaIcon', cta.icon || 'fa-arrow-up-right-from-square');
+  const ctaExt = document.getElementById('menu_ctaExternal');
+  if (ctaExt) ctaExt.checked = !!cta.isExternal;
+
+  renderMenuItemsList(currentMenuData.items || []);
+}
+
+function renderMenuItemsList(items) {
+  const container = document.getElementById('menuItemsContainer');
+  if (!container) return;
+
+  container.innerHTML = items.map((item, idx) => `
+    <div class="menu-item-row-card" data-menu-idx="${idx}">
+      <div class="flex-between mb-2">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-bold text-[#70805D] bg-[#70805D]/10 px-2 py-0.5 rounded">#${idx + 1}</span>
+          <span class="text-xs font-bold text-[#2A3B27]">${escapeHtml(item.label || 'Link')}</span>
+          <span class="text-[11px] text-[#55738D] font-mono">${escapeHtml(item.url || '/')}</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <button type="button" class="btn-move-arrow" title="Move Up" onclick="moveMenuItem(${idx}, -1)" ${idx === 0 ? 'disabled' : ''}>▲</button>
+          <button type="button" class="btn-move-arrow" title="Move Down" onclick="moveMenuItem(${idx}, 1)" ${idx === items.length - 1 ? 'disabled' : ''}>▼</button>
+          <button type="button" class="btn-delete-icon ml-2" title="Delete Nav Item" onclick="deleteMenuItem(${idx})">🗑️</button>
+        </div>
+      </div>
+      <div class="form-row-2">
+        <div class="form-group mb-2">
+          <label>Display Label</label>
+          <input type="text" class="admin-input menu-item-label" value="${escapeHtml(item.label || '')}" oninput="markDirty()">
+        </div>
+        <div class="form-group mb-2">
+          <label>Destination URL</label>
+          <input type="text" class="admin-input menu-item-url" value="${escapeHtml(item.url || '')}" oninput="markDirty()">
+        </div>
+      </div>
+      <div class="flex items-center gap-6 mt-1 text-xs">
+        <label class="flex items-center gap-2 cursor-pointer text-[#4D614A] font-semibold">
+          <input type="checkbox" class="admin-checkbox menu-item-dropdown" ${item.hasDropdown ? 'checked' : ''} onchange="markDirty()">
+          <span>Has Services Dropdown</span>
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer text-[#4D614A] font-semibold">
+          <input type="checkbox" class="admin-checkbox menu-item-external" ${item.isExternal ? 'checked' : ''} onchange="markDirty()">
+          <span>External Link (New Tab)</span>
+        </label>
+      </div>
+    </div>
+  `).join('');
+}
+
+window.addNewMenuItem = function() {
+  const currentItems = getMenuItemsFromDOM();
+  currentItems.push({
+    id: 'nav-' + Date.now(),
+    label: 'New Link',
+    url: '/new-page.html',
+    isExternal: false,
+    hasDropdown: false,
+    order: currentItems.length + 1
+  });
+  if (currentMenuData) currentMenuData.items = currentItems;
+  renderMenuItemsList(currentItems);
+  markDirty();
+};
+
+window.deleteMenuItem = function(idx) {
+  const currentItems = getMenuItemsFromDOM();
+  if (confirm(`Remove "${currentItems[idx]?.label || 'this link'}" from the menu?`)) {
+    currentItems.splice(idx, 1);
+    if (currentMenuData) currentMenuData.items = currentItems;
+    renderMenuItemsList(currentItems);
+    markDirty();
+  }
+};
+
+window.moveMenuItem = function(idx, direction) {
+  const currentItems = getMenuItemsFromDOM();
+  const targetIdx = idx + direction;
+  if (targetIdx < 0 || targetIdx >= currentItems.length) return;
+  const temp = currentItems[idx];
+  currentItems[idx] = currentItems[targetIdx];
+  currentItems[targetIdx] = temp;
+  if (currentMenuData) currentMenuData.items = currentItems;
+  renderMenuItemsList(currentItems);
+  markDirty();
+};
+
+function getMenuItemsFromDOM() {
+  const rows = document.querySelectorAll('#menuItemsContainer .menu-item-row-card');
+  const items = [];
+  rows.forEach((row, idx) => {
+    items.push({
+      id: 'nav-' + idx,
+      label: row.querySelector('.menu-item-label')?.value.trim() || '',
+      url: row.querySelector('.menu-item-url')?.value.trim() || '/',
+      hasDropdown: row.querySelector('.menu-item-dropdown')?.checked || false,
+      isExternal: row.querySelector('.menu-item-external')?.checked || false,
+      order: idx + 1
+    });
+  });
+  return items;
+}
+
+function getMenuFromForms() {
+  return {
+    brand: {
+      name: document.getElementById('menu_brandName')?.value.trim() || 'Md. Shakibur Rahaman',
+      avatarText: document.getElementById('menu_brandAvatar')?.value.trim() || 'SR',
+      status: document.getElementById('menu_brandStatus')?.value.trim() || 'Available for Q3/Q4 Advisory & Execution'
+    },
+    ctaButton: {
+      label: document.getElementById('menu_ctaLabel')?.value.trim() || "Let's Talk",
+      url: document.getElementById('menu_ctaUrl')?.value.trim() || '/contact.html',
+      icon: document.getElementById('menu_ctaIcon')?.value.trim() || 'fa-arrow-up-right-from-square',
+      isExternal: document.getElementById('menu_ctaExternal')?.checked || false
+    },
+    items: getMenuItemsFromDOM()
+  };
+}
+
+// ==========================================
+// 8.2 PAGE-BY-PAGE CONTENT & FIGURES EDITOR
+// ==========================================
+let activePageEditorKey = 'home';
+let currentPagesData = null;
+
+function renderPageByPageEditor(pages, selectedKey) {
+  currentPagesData = pages || {};
+  activePageEditorKey = selectedKey || activePageEditorKey || 'home';
+
+  // Update pills active state
+  document.querySelectorAll('.page-pill-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-page-key') === activePageEditorKey);
+  });
+
+  const page = currentPagesData[activePageEditorKey] || {};
+  const indicator = document.getElementById('activePageIndicator');
+  if (indicator) indicator.textContent = `Editing: ${page.pageName || activePageEditorKey}`;
+
+  // Populate fields
+  setValue('page_heroBadge', page.heroBadge || '');
+  setValue('page_heroTitle', page.heroTitle || '');
+  setValue('page_heroSubtitle', page.heroSubtitle || page.heroTagline || '');
+  setValue('page_heroBio', page.heroBio || '');
+
+  setValue('page_primaryBtnLabel', page.primaryBtn?.label || '');
+  setValue('page_primaryBtnUrl', page.primaryBtn?.url || '');
+  setValue('page_secondaryBtnLabel', page.secondaryBtn?.label || '');
+  setValue('page_secondaryBtnUrl', page.secondaryBtn?.url || '');
+
+  setValue('page_ctaHeading', page.bottomCta?.heading || '');
+  setValue('page_ctaSubheading', page.bottomCta?.subheading || '');
+  setValue('page_ctaBtnLabel', page.bottomCta?.btnLabel || '');
+  setValue('page_ctaBtnUrl', page.bottomCta?.btnUrl || '');
+
+  // Render Figures
+  renderPageFigures(page.figures || []);
+}
+
+window.selectPageEditor = function(pageKey) {
+  if (pageKey === activePageEditorKey) return;
+  // Save current form fields to in-memory pages object before switching
+  saveActivePageFormToMemory();
+  activePageEditorKey = pageKey;
+  renderPageByPageEditor(currentPagesData, pageKey);
+};
+
+function saveActivePageFormToMemory() {
+  if (!currentPagesData) currentPagesData = {};
+  const prevPage = currentPagesData[activePageEditorKey] || {};
+
+  currentPagesData[activePageEditorKey] = {
+    ...prevPage,
+    pageName: prevPage.pageName || activePageEditorKey,
+    heroBadge: document.getElementById('page_heroBadge')?.value.trim() || '',
+    heroTitle: document.getElementById('page_heroTitle')?.value.trim() || '',
+    heroSubtitle: document.getElementById('page_heroSubtitle')?.value.trim() || '',
+    heroBio: document.getElementById('page_heroBio')?.value.trim() || '',
+    primaryBtn: {
+      label: document.getElementById('page_primaryBtnLabel')?.value.trim() || '',
+      url: document.getElementById('page_primaryBtnUrl')?.value.trim() || ''
+    },
+    secondaryBtn: {
+      label: document.getElementById('page_secondaryBtnLabel')?.value.trim() || '',
+      url: document.getElementById('page_secondaryBtnUrl')?.value.trim() || ''
+    },
+    figures: getPageFiguresFromDOM(),
+    bottomCta: {
+      heading: document.getElementById('page_ctaHeading')?.value.trim() || '',
+      subheading: document.getElementById('page_ctaSubheading')?.value.trim() || '',
+      btnLabel: document.getElementById('page_ctaBtnLabel')?.value.trim() || '',
+      btnUrl: document.getElementById('page_ctaBtnUrl')?.value.trim() || ''
+    }
+  };
+}
+
+function renderPageFigures(figures) {
+  const container = document.getElementById('pageFiguresContainer');
+  if (!container) return;
+
+  if (!figures || !figures.length) {
+    container.innerHTML = '<div class="empty-state-sm">No figures configured for this page yet. Click "+ Add Figure Metric" above to create one.</div>';
+    return;
+  }
+
+  container.innerHTML = figures.map((fig, idx) => `
+    <div class="figure-item-card" data-fig-idx="${idx}">
+      <div class="flex-between mb-2">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-bold text-[#70805D] bg-[#70805D]/10 px-2 py-0.5 rounded">Figure #${idx + 1}</span>
+          <span class="text-xs font-black text-[#1C2B1B]">${escapeHtml(fig.value || '0')}</span>
+          <span class="text-xs font-semibold text-[#4D614A]">${escapeHtml(fig.label || 'Metric')}</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <button type="button" class="btn-move-arrow" title="Move Up" onclick="movePageFigure(${idx}, -1)" ${idx === 0 ? 'disabled' : ''}>▲</button>
+          <button type="button" class="btn-move-arrow" title="Move Down" onclick="movePageFigure(${idx}, 1)" ${idx === figures.length - 1 ? 'disabled' : ''}>▼</button>
+          <button type="button" class="btn-delete-icon ml-2" title="Delete Figure" onclick="deletePageFigure(${idx})">🗑️</button>
+        </div>
+      </div>
+      <div class="form-row-3 mb-2">
+        <div class="form-group mb-1">
+          <label>Metric Number / Value (e.g. 5+, 15+, 4.8x)</label>
+          <input type="text" class="admin-input fig-value" value="${escapeHtml(fig.value || '')}" placeholder="5+" oninput="markDirty()">
+        </div>
+        <div class="form-group mb-1">
+          <label>Prefix (optional, e.g. $)</label>
+          <input type="text" class="admin-input fig-prefix" value="${escapeHtml(fig.prefix || '')}" placeholder="" oninput="markDirty()">
+        </div>
+        <div class="form-group mb-1">
+          <label>Suffix (e.g. + Years, %, x, +)</label>
+          <input type="text" class="admin-input fig-suffix" value="${escapeHtml(fig.suffix || '')}" placeholder="+ Years" oninput="markDirty()">
+        </div>
+      </div>
+      <div class="form-row-2">
+        <div class="form-group mb-0">
+          <label>Primary Metric Label</label>
+          <input type="text" class="admin-input fig-label" value="${escapeHtml(fig.label || '')}" placeholder="Years Experience" oninput="markDirty()">
+        </div>
+        <div class="form-group mb-0">
+          <label>Sublabel / Context</label>
+          <input type="text" class="admin-input fig-sublabel" value="${escapeHtml(fig.sublabel || '')}" placeholder="Agency Leadership" oninput="markDirty()">
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+window.addNewPageFigure = function() {
+  const currentFigs = getPageFiguresFromDOM();
+  currentFigs.push({
+    id: 'fig-' + Date.now(),
+    value: '10+',
+    prefix: '',
+    suffix: '+',
+    label: 'New Metric',
+    sublabel: 'Verified Achievement'
+  });
+  if (currentPagesData && currentPagesData[activePageEditorKey]) {
+    currentPagesData[activePageEditorKey].figures = currentFigs;
+  }
+  renderPageFigures(currentFigs);
+  markDirty();
+};
+
+window.deletePageFigure = function(idx) {
+  const currentFigs = getPageFiguresFromDOM();
+  if (confirm(`Remove this figure metric?`)) {
+    currentFigs.splice(idx, 1);
+    if (currentPagesData && currentPagesData[activePageEditorKey]) {
+      currentPagesData[activePageEditorKey].figures = currentFigs;
+    }
+    renderPageFigures(currentFigs);
+    markDirty();
+  }
+};
+
+window.movePageFigure = function(idx, direction) {
+  const currentFigs = getPageFiguresFromDOM();
+  const targetIdx = idx + direction;
+  if (targetIdx < 0 || targetIdx >= currentFigs.length) return;
+  const temp = currentFigs[idx];
+  currentFigs[idx] = currentFigs[targetIdx];
+  currentFigs[targetIdx] = temp;
+  if (currentPagesData && currentPagesData[activePageEditorKey]) {
+    currentPagesData[activePageEditorKey].figures = currentFigs;
+  }
+  renderPageFigures(currentFigs);
+  markDirty();
+};
+
+function getPageFiguresFromDOM() {
+  const cards = document.querySelectorAll('#pageFiguresContainer .figure-item-card');
+  const figures = [];
+  cards.forEach((card, idx) => {
+    figures.push({
+      id: 'fig-' + activePageEditorKey + '-' + idx,
+      value: card.querySelector('.fig-value')?.value.trim() || '',
+      prefix: card.querySelector('.fig-prefix')?.value.trim() || '',
+      suffix: card.querySelector('.fig-suffix')?.value.trim() || '',
+      label: card.querySelector('.fig-label')?.value.trim() || '',
+      sublabel: card.querySelector('.fig-sublabel')?.value.trim() || ''
+    });
+  });
+  return figures;
+}
+
+function getPagesFromForms() {
+  saveActivePageFormToMemory();
+  return currentPagesData || {};
+}
+
 /* --- F. Typewriter Phrases Editor --- */
 function renderTypewriterList(phrases) {
   const container = document.getElementById('typewriterList');
@@ -1482,7 +1843,9 @@ function gatherContentFromForms() {
     creativePortfolio: getCreativeFromForms(),
     process: getProcessFromForms(),
     testimonials: getTestimonialsFromForms(),
-    caseStudies: getCaseStudiesFromForms()
+    caseStudies: getCaseStudiesFromForms(),
+    menu: getMenuFromForms(),
+    pages: getPagesFromForms()
   };
 }
 

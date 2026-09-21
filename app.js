@@ -504,7 +504,12 @@ function applyContentToDOM(content) {
     renderTestimonials(content.testimonials);
   }
 
-  // 7. Re-initialize dynamic card mouse events, counters, sliders & scroll reveals
+  // 7. Dynamic Site & Header Navigation Hydration
+  if (window.applySiteHydration) {
+    window.applySiteHydration(content);
+  }
+
+  // 8. Re-initialize dynamic card mouse events, counters, sliders & scroll reveals
   initSpotlightCards();
   initScrollReveal();
   initAnimatedCounters();

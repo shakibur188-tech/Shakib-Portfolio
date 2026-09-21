@@ -373,26 +373,26 @@ a.spotlight-card {
 }
 
 .services-dropdown {
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
-  width: 720px;
-  max-width: calc(100vw - 32px);
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(112, 128, 93, 0.24);
-  border-radius: 22px;
-  box-shadow: 0 25px 50px -12px rgba(42, 59, 39, 0.20), 0 8px 20px -4px rgba(0, 0, 0, 0.06);
-  padding: 16px;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+  position: absolute !important;
+  top: calc(100% + 10px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(8px) !important;
+  width: 720px !important;
+  max-width: calc(100vw - 32px) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(112, 128, 93, 0.24) !important;
+  border-radius: 22px !important;
+  box-shadow: 0 25px 50px -12px rgba(42, 59, 39, 0.20), 0 8px 20px -4px rgba(0, 0, 0, 0.06) !important;
+  padding: 16px !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
   transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
               transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-              visibility 0.25s ease;
-  z-index: 100;
+              visibility 0.25s ease !important;
+  z-index: 100 !important;
 }
 
 .services-menu-item::after {
@@ -405,11 +405,12 @@ a.spotlight-card {
 }
 
 .services-menu-item:hover .services-dropdown,
-.services-menu-item:focus-within .services-dropdown {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
+.services-menu-item:focus-within .services-dropdown,
+.group:hover .services-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(-50%) translateY(0) !important;
 }
 
 .services-dropdown-grid {

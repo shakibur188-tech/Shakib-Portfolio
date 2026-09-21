@@ -1217,6 +1217,14 @@ const server = http.createServer(async (req, res) => {
     safePath = '/index.html';
   } else if (safePath === '/admin' || safePath === '/admin.html') {
     safePath = '/admin.html';
+  } else if (safePath === '/about' || safePath === '/about/' || safePath === '/about.html') {
+    safePath = '/about.html';
+  } else if (safePath === '/projects' || safePath === '/projects/' || safePath === '/projects.html') {
+    safePath = '/projects.html';
+  } else if (safePath === '/testimonials' || safePath === '/testimonials/' || safePath === '/testimonials.html') {
+    safePath = '/testimonials.html';
+  } else if (safePath === '/contact' || safePath === '/contact/' || safePath === '/contact.html') {
+    safePath = '/contact.html';
   } else if (safePath === '/services' || safePath === '/services/' || safePath === '/services.html') {
     safePath = '/services.html';
   } else if (safePath === '/case-studies' || safePath === '/case-studies/' || safePath === '/case-studies.html') {
@@ -1285,7 +1293,7 @@ const server = http.createServer(async (req, res) => {
     applySecurityHeaders(res);
     res.writeHead(200, {
       'Content-Type': contentType,
-      'Cache-Control': ext === '.html' ? 'no-cache' : 'public, max-age=86400'
+      'Cache-Control': (ext === '.html' || ext === '.js' || ext === '.css' || ext === '.json') ? 'no-cache, no-store, must-revalidate' : 'public, max-age=3600'
     });
 
     const stream = fs.createReadStream(targetFilePath);

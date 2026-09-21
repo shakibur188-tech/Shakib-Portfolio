@@ -1,17 +1,17 @@
 # Graph Report - shakibur-portfolio-live  (2026-09-21)
 
 ## Corpus Check
-- 38 files · ~138,985 words
+- 39 files · ~162,442 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 11 file(s) not represented in the graph (top: (none) 2, .css 2, .bat 2)
 
 ## Summary
-- 283 nodes · 450 edges · 20 communities (15 shown, 5 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 31 edges (avg confidence: 0.85)
+- 302 nodes · 485 edges · 21 communities (16 shown, 5 thin omitted)
+- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 33 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e89b92d3`
+- Built from commit: `d3fe67c6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -36,16 +36,17 @@
 - vercel.json
 - rules/graphify.md
 - workflows/graphify.md
+- site-hydration.js
 
 ## God Nodes (most connected - your core abstractions)
 1. `server` - 27 edges
 2. `setupEventListeners()` - 21 edges
 3. `showToast()` - 18 edges
-4. `escapeHtml()` - 16 edges
-5. `populateAdminForms()` - 15 edges
+4. `escapeHtml()` - 18 edges
+5. `populateAdminForms()` - 17 edges
 6. `initFormBuilderEventListeners()` - 15 edges
-7. `applyContentToDOM()` - 12 edges
-8. `gatherContentFromForms()` - 11 edges
+7. `gatherContentFromForms()` - 13 edges
+8. `applyContentToDOM()` - 12 edges
 9. `Md. Shakibur Rahaman — Executive Portfolio, CMS & Digital Growth Architecture` - 10 edges
 10. `loadDashboardData()` - 8 edges
 
@@ -56,11 +57,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (20 total, 5 thin omitted)
+## Communities (21 total, 5 thin omitted)
 
 ### Community 0 - "admin.js"
-Cohesion: 0.09
-Nodes (53): allFormsData, allSubmissionsData, calculateSeoScore(), currentBuilderForm, currentLeads, discardChanges(), downloadSiteBackup(), escapeHtml() (+45 more)
+Cohesion: 0.08
+Nodes (62): allFormsData, allSubmissionsData, calculateSeoScore(), currentBuilderForm, currentLeads, discardChanges(), downloadSiteBackup(), escapeHtml() (+54 more)
 
 ### Community 1 - "server.js"
 Cohesion: 0.06
@@ -118,9 +119,13 @@ Nodes (4): ref_http, http, makeRequest(), runTests()
 Cohesion: 0.40
 Nodes (3): Task-1 (Initial setup and routing), Task-2 (UI implementation and content integration), Task-3 (Analytics, SEO, and deployment)
 
+### Community 20 - "site-hydration.js"
+Cohesion: 0.29
+Nodes (6): animateCounter(), fetchSiteContent(), hydrateFiguresStrip(), hydratePageContent(), initAnimatedCounters(), initHydration()
+
 ## Knowledge Gaps
 - **86 isolated node(s):** `currentLeads`, `allFormsData`, `allSubmissionsData`, `currentBuilderForm`, `currentTypewriterTitles` (+81 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 122 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 125 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -131,7 +136,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **What connects `currentLeads`, `allFormsData`, `allSubmissionsData` to the rest of the system?**
   _86 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `admin.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.09158249158249158 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07837301587301587 - nodes in this community are weakly interconnected._
 - **Should `server.js` be split into smaller, more focused modules?**
   _Cohesion score 0.06009783368273934 - nodes in this community are weakly interconnected._
 - **Should `app.js` be split into smaller, more focused modules?**

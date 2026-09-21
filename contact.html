@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Strategic Consultation | Md. Shakibur Rahaman</title>
+  <meta name="description" content="Get in touch with Md. Shakibur Rahaman for executive brand strategy, custom web development, digital growth marketing, and media consultations.">
+  <link rel="canonical" href="http://localhost:5500/contact.html">
+  
+  <!-- Plus Jakarta Sans Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN & DopelyColors Palette Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#70805D',
+              forest: '#2A3B27',
+              slate: '#55738D',
+              mist: '#96A7B6',
+              stone: '#CBC8C4'
+            },
+            canvas: '#F8F9F6'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Unified Aesthetic Stylesheet -->
+  <link rel="stylesheet" href="./styles.css?v=3.5">
+</head>
+<body class="bg-[#F8F9F6] text-[#1C2B1B] font-sans antialiased selection:bg-[#70805D] selection:text-white relative overflow-x-hidden">
+
+  <!-- 0. Top Scroll Progress Bar -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- 1. Ambient Background Canvas, Animated Mesh & Vignette -->
+  <div class="ambient-mesh-glow"></div>
+  <canvas id="ambientCanvas"></canvas>
+  <div class="ambient-vignette"></div>
+
+  <!-- 2. FIXED NAVBAR -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#F8F9F6]/92 backdrop-blur-2xl border-b border-[#70805D]/15 transition-all duration-300 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo / Monogram -->
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-[#70805D] to-[#2A3B27] flex items-center justify-center font-black text-white text-sm sm:text-base tracking-tight group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-[#70805D]/30 transition-all shadow-md shadow-[#70805D]/20 border border-white/20 shrink-0">
+          SR
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-[#1C2B1B] tracking-tight text-sm sm:text-base md:text-lg group-hover:text-[#70805D] transition-colors" id="navBrandName">Md. Shakibur Rahaman</span>
+          <span class="text-[9.5px] sm:text-[10.5px] text-[#70805D] font-extrabold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
+        </div>
+      </a>
+
+      <!-- Centered Floating Pill Navigation Menu with Services Dropdown -->
+      <nav class="hidden lg:flex items-center gap-6 px-6 py-2.5 rounded-full bg-white/95 border border-[#70805D]/20 text-xs font-bold text-[#4D614A] backdrop-blur-md shadow-sm">
+        <a href="/" class="desktop-nav-link hover:text-[#70805D] transition-colors">Home</a>
+        <a href="/about.html" class="desktop-nav-link hover:text-[#70805D] transition-colors">About</a>
+        
+        <!-- SERVICES MENU ITEM WITH HOVER SUB-MENU -->
+        <div class="services-menu-item relative group">
+          <a href="/services.html" class="desktop-nav-link hover:text-[#70805D] transition-colors flex items-center gap-1.5 py-1">
+            <span>Services</span>
+            <i class="fa-solid fa-chevron-down text-[9px] text-[#70805D] transition-transform duration-200 group-hover:rotate-180"></i>
+          </a>
+          
+          <!-- 6 Services Hover Sub-Menu Panel -->
+          <div class="services-dropdown">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-[#70805D]/15">
+              <span class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-layer-group text-[#70805D]"></i>
+                <span>Core Capabilities (6 Disciplines)</span>
+              </span>
+              <a href="/services.html" class="text-[11px] font-bold text-[#70805D] hover:underline flex items-center gap-1">
+                <span>View All Services Directory</span>
+                <i class="fa-solid fa-arrow-right text-[9px]"></i>
+              </a>
+            </div>
+
+            <div class="services-dropdown-grid grid grid-cols-2 sm:grid-cols-3 gap-2">
+              <a href="/services/graphics-design.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-bezier-curve"></i></div>
+                <div>
+                  <div class="service-sub-title">01 Graphics &amp; Visual Identity</div>
+                  <div class="service-sub-desc">Packaging, UI/UX &amp; decks</div>
+                </div>
+              </a>
+              <a href="/services/web-development.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-code"></i></div>
+                <div>
+                  <div class="service-sub-title">02 Web design &amp; Development</div>
+                  <div class="service-sub-desc">Jamstack portals &amp; apps</div>
+                </div>
+              </a>
+              <a href="/services/social-media-marketing.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-hashtag"></i></div>
+                <div>
+                  <div class="service-sub-title">03 Social Media marketing</div>
+                  <div class="service-sub-desc">Viral reels &amp; Meta ads</div>
+                </div>
+              </a>
+              <a href="/services/public-relations.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-newspaper"></i></div>
+                <div>
+                  <div class="service-sub-title">04 Public relation &amp; Media outreach</div>
+                  <div class="service-sub-desc">Tier-1 press &amp; media PR</div>
+                </div>
+              </a>
+              <a href="/services/google-ads.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <div>
+                  <div class="service-sub-title">05 Google ads &amp; Intent Scaling</div>
+                  <div class="service-sub-desc">Performance Max funnels</div>
+                </div>
+              </a>
+              <a href="/services/event-activation.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-cubes"></i></div>
+                <div>
+                  <div class="service-sub-title">06 Event activation &amp; Exhibition</div>
+                  <div class="service-sub-desc">Expos &amp; spatial builds</div>
+                </div>
+              </a>
+            </div>
+
+            <div class="mt-3 pt-2.5 border-t border-[#70805D]/15 flex items-center justify-between text-[11px] text-[#55738D]">
+              <span>Integrated strategic leadership across all 6 disciplines</span>
+              <a href="/services.html" class="font-bold text-[#70805D] hover:text-[#2A3B27] flex items-center gap-1">
+                <span>View Full Services Directory</span>
+                <i class="fa-solid fa-chevron-right text-[8px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/projects.html" class="desktop-nav-link hover:text-[#70805D] transition-colors">Projects</a>
+        <a href="/case-studies.html" class="desktop-nav-link hover:text-[#70805D] transition-colors">Case Studies</a>
+        <a href="/testimonials.html" class="desktop-nav-link hover:text-[#70805D] transition-colors">Testimonials</a>
+        <a href="/contact.html" class="desktop-nav-link text-[#70805D] font-bold">Contact</a>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center gap-3">
+        <a href="/contact.html" class="nav-cta-btn btn-aesthetic-primary text-xs hidden md:inline-flex items-center gap-2">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+        <button id="mobileMenuToggle" aria-label="Toggle Navigation" class="lg:hidden w-10 h-10 rounded-xl bg-white border border-[#70805D]/25 flex items-center justify-center text-[#2A3B27] hover:bg-[#F1F4EE] transition-colors shadow-sm focus:outline-none">
+          <i class="fa-solid fa-bars-staggered text-base"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-Down Navigation Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-[#70805D]/20 px-5 py-6 space-y-4 shadow-2xl max-h-[85vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-3 border-b border-[#70805D]/15">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#70805D] animate-ping"></span>
+          <span class="text-xs font-extrabold text-[#2A3B27] uppercase tracking-wider">Navigation Menu</span>
+        </div>
+        <span class="text-[11px] font-bold text-[#70805D] bg-[#70805D]/10 px-2.5 py-0.5 rounded-full">Available</span>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        <a href="/" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE]">
+          <i class="fa-solid fa-house text-[#70805D]"></i>
+          <span>Home</span>
+        </a>
+        <a href="/about.html" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE]">
+          <i class="fa-solid fa-user-astronaut text-[#70805D]"></i>
+          <span>About Me</span>
+        </a>
+        <a href="/services.html" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE]">
+          <i class="fa-solid fa-layer-group text-[#70805D]"></i>
+          <span>Services</span>
+        </a>
+        <a href="/projects.html" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE]">
+          <i class="fa-solid fa-code-branch text-[#70805D]"></i>
+          <span>Projects</span>
+        </a>
+        <a href="/case-studies.html" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE]">
+          <i class="fa-solid fa-chart-pie text-[#70805D]"></i>
+          <span>Case Studies</span>
+        </a>
+        <a href="/testimonials.html" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE]">
+          <i class="fa-solid fa-star text-[#F59E0B]"></i>
+          <span>Testimonials</span>
+        </a>
+      </div>
+
+      <div class="pt-2 flex flex-col gap-2">
+        <a href="/contact.html" class="mobile-link btn-aesthetic-primary w-full justify-center text-xs py-3">
+          <span>Get In Touch / Project Inquiry</span>
+          <i class="fa-solid fa-paper-plane text-xs"></i>
+        </a>
+        <a href="https://wa.me/8801838070468" target="_blank" rel="noopener noreferrer" class="btn-outline-emerald w-full justify-center text-xs py-2.5">
+          <i class="fa-brands fa-whatsapp text-sm text-[#70805D]"></i>
+          <span>Direct WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. CONTACT HERO & STRATEGIC INQUIRY HUB -->
+  <section class="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: Direct Channels & Executive Status -->
+        <div class="lg:col-span-5 space-y-8 reveal-fade-left">
+          <div class="space-y-4">
+            <div class="section-tag">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>EXECUTIVE INQUIRY &amp; CONSULTATION</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-[#1C2B1B] tracking-tight leading-tight">
+              Let's Build Something <br>
+              <span class="olive-gradient-text">Extraordinary.</span>
+            </h1>
+            <p class="text-sm text-[#4D614A] leading-relaxed">
+              Whether you are launching a new enterprise, commissioning a high-converting web platform, or seeking a unified creative director to eliminate agency silos, I am ready to advise.
+            </p>
+          </div>
+
+          <!-- Direct Channels Cards -->
+          <div class="space-y-4">
+            
+            <a href="mailto:shakibur188@gmail.com" class="spotlight-card p-4 rounded-2xl bg-white border border-[#70805D]/20 shadow-xs flex items-center gap-4 group hover:border-[#70805D] transition-all">
+              <div class="w-12 h-12 rounded-xl bg-[#70805D]/12 border border-[#70805D]/30 flex items-center justify-center text-[#70805D] text-lg shrink-0 group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="flex-1">
+                <div class="text-[10.5px] text-[#55738D] uppercase font-bold">Direct Corporate Email</div>
+                <div class="text-sm font-extrabold text-[#1C2B1B] group-hover:text-[#70805D] transition-colors">shakibur188@gmail.com</div>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-[#70805D] pr-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+
+            <a href="https://wa.me/8801838070468" target="_blank" rel="noopener noreferrer" class="spotlight-card p-4 rounded-2xl bg-white border border-[#70805D]/20 shadow-xs flex items-center gap-4 group hover:border-[#70805D] transition-all">
+              <div class="w-12 h-12 rounded-xl bg-[#70805D]/12 border border-[#70805D]/30 flex items-center justify-center text-[#70805D] text-lg shrink-0 group-hover:scale-105 transition-transform">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+              </div>
+              <div class="flex-1">
+                <div class="text-[10.5px] text-[#55738D] uppercase font-bold">Phone &amp; WhatsApp Direct</div>
+                <div class="text-sm font-extrabold text-[#1C2B1B] group-hover:text-[#70805D] transition-colors">+880 1838-070468</div>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-[#70805D] pr-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/shakiburrahman222" target="_blank" rel="noopener noreferrer" class="spotlight-card p-4 rounded-2xl bg-white border border-[#70805D]/20 shadow-xs flex items-center gap-4 group hover:border-[#70805D] transition-all">
+              <div class="w-12 h-12 rounded-xl bg-[#0077B5]/12 border border-[#0077B5]/30 flex items-center justify-center text-[#0077B5] text-xl shrink-0 group-hover:scale-105 transition-transform">
+                <i class="fa-brands fa-linkedin"></i>
+              </div>
+              <div class="flex-1">
+                <div class="text-[10.5px] text-[#55738D] uppercase font-bold">LinkedIn Executive Profile</div>
+                <div class="text-sm font-extrabold text-[#1C2B1B] group-hover:text-[#70805D] transition-colors">linkedin.com/in/shakiburrahman222</div>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-[#70805D] pr-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+
+            <div class="spotlight-card p-4 rounded-2xl bg-white border border-[#70805D]/20 shadow-xs flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#70805D]/12 border border-[#70805D]/30 flex items-center justify-center text-[#70805D] text-lg shrink-0">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <div class="text-[10.5px] text-[#55738D] uppercase font-bold">Physical Location &amp; Reach</div>
+                <div class="text-sm font-extrabold text-[#1C2B1B]">Mohammadpur, Dhaka-1207</div>
+                <div class="text-[11px] text-[#4D614A]">Bangladesh • Available for Global Engagements</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Availability & Guarantees -->
+          <div class="p-5 rounded-2xl bg-[#F1F3ED] border border-[#70805D]/20 space-y-3">
+            <div class="flex items-center gap-2 text-xs font-extrabold text-[#2A3B27]">
+              <span class="pulse-dot-olive"></span>
+              <span>Available for Strategic Direction &amp; Projects</span>
+            </div>
+            <div class="space-y-1 text-xs text-[#4D614A]">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-bolt text-[#70805D] text-[11px]"></i>
+                <span>Fast 24-hour turnaround on project inquiries</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-lock text-[#70805D] text-[11px]"></i>
+                <span>NDA &amp; strict corporate confidentiality standard</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-shield text-[#70805D] text-[11px]"></i>
+                <span>100% intellectual property sovereignty guaranteed</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Project Brief Form -->
+        <div class="lg:col-span-7 reveal-fade-right">
+          <div class="spotlight-card p-6 sm:p-10 rounded-3xl bg-white border border-[#70805D]/25 shadow-xl space-y-6">
+            
+            <div class="pb-4 border-b border-[#70805D]/15">
+              <h2 class="text-xl sm:text-2xl font-extrabold text-[#1C2B1B]">Submit Strategic Project Brief</h2>
+              <p class="text-xs sm:text-sm text-[#4D614A] mt-1">
+                Fill out the parameters below to receive an executive scope breakdown and pricing framework.
+              </p>
+            </div>
+
+            <form id="contactInquiryForm" class="space-y-5">
+              
+              <!-- Two Columns: Name & Email -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="space-y-1.5">
+                  <label for="inqName" class="text-xs font-bold text-[#2A3B27]">Your Name *</label>
+                  <input type="text" id="inqName" required placeholder="e.g. Alexander Vance" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+                </div>
+
+                <div class="space-y-1.5">
+                  <label for="inqEmail" class="text-xs font-bold text-[#2A3B27]">Corporate Email *</label>
+                  <input type="email" id="inqEmail" required placeholder="name@company.com" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+                </div>
+              </div>
+
+              <!-- Two Columns: Phone/WhatsApp & Company -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="space-y-1.5">
+                  <label for="inqPhone" class="text-xs font-bold text-[#2A3B27]">WhatsApp / Phone *</label>
+                  <input type="text" id="inqPhone" required placeholder="+1 or +880..." class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+                </div>
+
+                <div class="space-y-1.5">
+                  <label for="inqCompany" class="text-xs font-bold text-[#2A3B27]">Company / Organization</label>
+                  <input type="text" id="inqCompany" placeholder="e.g. Apex Holdings" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+                </div>
+              </div>
+
+              <!-- Services Selection (Multi-Select Checkboxes) -->
+              <div class="space-y-2">
+                <label class="text-xs font-bold text-[#2A3B27]">Services of Interest (Select All That Apply) *</label>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+                  <label class="flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/20 cursor-pointer hover:bg-[#F1F3ED]">
+                    <input type="checkbox" name="services" value="Graphics Design & Visual Identity" class="accent-[#70805D]">
+                    <span class="text-[#2A3B27] font-semibold text-[11px]">01 Visual Identity</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/20 cursor-pointer hover:bg-[#F1F3ED]">
+                    <input type="checkbox" name="services" value="Web Design & Development" class="accent-[#70805D]" checked>
+                    <span class="text-[#2A3B27] font-semibold text-[11px]">02 Web Dev</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/20 cursor-pointer hover:bg-[#F1F3ED]">
+                    <input type="checkbox" name="services" value="Social Media Marketing" class="accent-[#70805D]">
+                    <span class="text-[#2A3B27] font-semibold text-[11px]">03 Social Media</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/20 cursor-pointer hover:bg-[#F1F3ED]">
+                    <input type="checkbox" name="services" value="PR & Media Outreach" class="accent-[#70805D]">
+                    <span class="text-[#2A3B27] font-semibold text-[11px]">04 PR &amp; Media</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/20 cursor-pointer hover:bg-[#F1F3ED]">
+                    <input type="checkbox" name="services" value="Google Ads & Intent Scaling" class="accent-[#70805D]">
+                    <span class="text-[#2A3B27] font-semibold text-[11px]">05 Google Ads</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/20 cursor-pointer hover:bg-[#F1F3ED]">
+                    <input type="checkbox" name="services" value="Event Activation & Exhibition" class="accent-[#70805D]">
+                    <span class="text-[#2A3B27] font-semibold text-[11px]">06 Events &amp; 3D</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Two Columns: Budget & Timeline -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="space-y-1.5">
+                  <label for="inqBudget" class="text-xs font-bold text-[#2A3B27]">Estimated Budget Tier</label>
+                  <select id="inqBudget" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+                    <option value="$1,000 - $3,000">$1,000 – $3,000 (Sprint Build / Single Pillar)</option>
+                    <option value="$3,000 - $7,500" selected>$3,000 – $7,500 (Full Platform / Brand Suite)</option>
+                    <option value="$7,500 - $15,000">$7,500 – $15,000 (Multi-Pillar / Enterprise)</option>
+                    <option value="$15,000+ Enterprise">$15,000+ (Omnichannel 360° Retainer)</option>
+                  </select>
+                </div>
+
+                <div class="space-y-1.5">
+                  <label for="inqTimeline" class="text-xs font-bold text-[#2A3B27]">Target Launch Timeline</label>
+                  <select id="inqTimeline" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+                    <option value="Within 2-3 Weeks">Immediate (Within 2-3 Weeks)</option>
+                    <option value="1 Month" selected>Standard (1 Month)</option>
+                    <option value="2-3 Months">Strategic (2-3 Months)</option>
+                    <option value="Flexible / Ongoing">Flexible / Ongoing Advisory</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="space-y-1.5">
+                <label for="inqMessage" class="text-xs font-bold text-[#2A3B27]">Project Scope &amp; Deliverable Goals *</label>
+                <textarea id="inqMessage" rows="4" required placeholder="Outline your current business challenge, target launch timeline, desired deliverables, and any relevant links..." class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]"></textarea>
+              </div>
+
+              <!-- Status Alert -->
+              <div id="inqStatusAlert" class="hidden p-4 rounded-xl text-xs font-semibold"></div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="inqSubmitBtn" class="btn-aesthetic-primary w-full justify-center text-sm py-4">
+                <span>Transmit Executive Brief</span>
+                <i class="fa-solid fa-paper-plane text-xs"></i>
+              </button>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. FREQUENTLY ASKED QUESTIONS (FAQ) -->
+  <section class="py-24 border-t border-[#70805D]/15 bg-white relative z-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
+        <div class="section-tag mx-auto">
+          <i class="fa-solid fa-circle-question"></i>
+          <span>FREQUENTLY ASKED QUESTIONS</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-[#1C2B1B] tracking-tight mt-2">
+          Clear Answers for Decision Makers
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- FAQ 1 -->
+        <div class="spotlight-card p-6 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/20 space-y-2">
+          <h3 class="text-base font-extrabold text-[#1C2B1B] flex items-center justify-between">
+            <span>What is your typical project delivery timeline?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-[#70805D]"></i>
+          </h3>
+          <p class="text-xs text-[#4D614A] leading-relaxed pt-1">
+            Rapid single-pillar deliverables (such as a Jamstack landing page or brand identity guidelines) typically take 10 to 14 business days. Comprehensive full-stack platforms and multi-service omnichannel rollouts range from 3 to 6 weeks, with clear weekly milestone checkpoints.
+          </p>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="spotlight-card p-6 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/20 space-y-2">
+          <h3 class="text-base font-extrabold text-[#1C2B1B] flex items-center justify-between">
+            <span>Do you direct both visual design and full-stack software development?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-[#70805D]"></i>
+          </h3>
+          <p class="text-xs text-[#4D614A] leading-relaxed pt-1">
+            Yes. That is the core advantage of partnering with Md. Shakibur Rahaman. You eliminate cross-vendor finger-pointing because the creative vision in Figma translates 100% into clean, high-performance production code without compromise.
+          </p>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="spotlight-card p-6 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/20 space-y-2">
+          <h3 class="text-base font-extrabold text-[#1C2B1B] flex items-center justify-between">
+            <span>How are payments and project milestones structured?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-[#70805D]"></i>
+          </h3>
+          <p class="text-xs text-[#4D614A] leading-relaxed pt-1">
+            Projects generally operate on a 50% initial commitment deposit to secure the development calendar, followed by 50% upon final production deployment and IP handover. For enterprise advisory and multi-month campaigns, monthly retainers are available.
+          </p>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="spotlight-card p-6 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/20 space-y-2">
+          <h3 class="text-base font-extrabold text-[#1C2B1B] flex items-center justify-between">
+            <span>Do you sign Non-Disclosure Agreements (NDAs)?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-[#70805D]"></i>
+          </h3>
+          <p class="text-xs text-[#4D614A] leading-relaxed pt-1">
+            Absolutely. Corporate confidentiality and intellectual property sovereignty are guaranteed. Mutual NDAs are readily executed before proprietary blueprints or strategy discussions begin.
+          </p>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="spotlight-card p-6 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/20 space-y-2">
+          <h3 class="text-base font-extrabold text-[#1C2B1B] flex items-center justify-between">
+            <span>Who will I communicate with during the project?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-[#70805D]"></i>
+          </h3>
+          <p class="text-xs text-[#4D614A] leading-relaxed pt-1">
+            You communicate directly with Md. Shakibur Rahaman. There are no inexperienced account managers or junior buffers. You have direct founder-level access via WhatsApp, Slack, or Google Meet.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. UNIFIED FOOTER -->
+  <footer class="py-16 border-t border-[#70805D]/15 bg-[#F1F3ED] relative z-10 text-xs text-[#4D614A]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-[#70805D] text-white flex items-center justify-center font-black text-xs shadow-sm">
+              SR
+            </div>
+            <span class="font-bold text-[#1C2B1B] tracking-tight text-base">Md. Shakibur Rahaman</span>
+          </div>
+          <p class="text-xs text-[#4D614A] leading-relaxed">
+            Strategic Lead &amp; Digital Growth Architect. Directing branding, high-performance web engineering, and commercial acquisition.
+          </p>
+        </div>
+
+        <div class="space-y-2.5">
+          <div class="text-[#2A3B27] font-bold uppercase tracking-wider text-[11px] mb-2">Explore Pages</div>
+          <div><a href="/" class="hover:text-[#70805D]">Home</a></div>
+          <div><a href="/about.html" class="hover:text-[#70805D]">About Me</a></div>
+          <div><a href="/services.html" class="hover:text-[#70805D]">6 Core Services</a></div>
+          <div><a href="/projects.html" class="hover:text-[#70805D]">15 Web Projects</a></div>
+          <div><a href="/case-studies.html" class="hover:text-[#70805D]">Case Studies</a></div>
+          <div><a href="/testimonials.html" class="hover:text-[#70805D]">Testimonials</a></div>
+          <div><a href="/contact.html" class="hover:text-[#70805D] font-bold text-[#70805D]">Contact &amp; Inquiry</a></div>
+        </div>
+
+        <div class="space-y-2.5">
+          <div class="text-[#2A3B27] font-bold uppercase tracking-wider text-[11px] mb-2">Core Services</div>
+          <div><a href="/services/graphics-design.html" class="hover:text-[#70805D]">01 Graphics &amp; Visual ID</a></div>
+          <div><a href="/services/web-development.html" class="hover:text-[#70805D]">02 Web Development</a></div>
+          <div><a href="/services/social-media-marketing.html" class="hover:text-[#70805D]">03 Social Media (SMM)</a></div>
+          <div><a href="/services/public-relations.html" class="hover:text-[#70805D]">04 PR &amp; Media Outreach</a></div>
+          <div><a href="/services/google-ads.html" class="hover:text-[#70805D]">05 Google Ads &amp; Intent</a></div>
+          <div><a href="/services/event-activation.html" class="hover:text-[#70805D]">06 Event &amp; Exhibition</a></div>
+        </div>
+
+        <div class="space-y-2.5">
+          <div class="text-[#2A3B27] font-bold uppercase tracking-wider text-[11px] mb-2">Direct Contact</div>
+          <div><a href="mailto:shakibur188@gmail.com" class="hover:text-[#70805D] font-bold">shakibur188@gmail.com</a></div>
+          <div><a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#70805D] font-bold">+880 1838-070468</a></div>
+          <div><span class="text-[#55738D]">Dhaka, Bangladesh</span></div>
+          <div class="pt-2"><a href="/admin" target="_blank" class="text-[11px] text-[#55738D] hover:text-[#2A3B27] font-bold">Admin CMS Portal 🔐</a></div>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-[#70805D]/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+        <div>© 2026 Md. Shakibur Rahaman. All rights reserved.</div>
+        <div>Designed &amp; Engineered by <span class="text-[#2A3B27] font-bold">Md. Shakibur Rahaman</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./services/service-page.js"></script>
+  <script>
+    // Form submission handler
+    const inqForm = document.getElementById('contactInquiryForm');
+    if (inqForm) {
+      inqForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('inqSubmitBtn');
+        const alertBox = document.getElementById('inqStatusAlert');
+        const name = document.getElementById('inqName')?.value.trim();
+        const email = document.getElementById('inqEmail')?.value.trim();
+        const phone = document.getElementById('inqPhone')?.value.trim();
+        const company = document.getElementById('inqCompany')?.value.trim() || 'N/A';
+        const budget = document.getElementById('inqBudget')?.value;
+        const timeline = document.getElementById('inqTimeline')?.value;
+        const message = document.getElementById('inqMessage')?.value.trim();
+
+        // Selected checkboxes
+        const selectedServices = [];
+        document.querySelectorAll('input[name="services"]:checked').forEach(cb => selectedServices.push(cb.value));
+
+        if (!name || !email || !message) return;
+
+        btn.disabled = true;
+        btn.innerHTML = '<span>Transmitting Brief...</span>';
+
+        const payload = {
+          name,
+          email,
+          phone,
+          company,
+          services: selectedServices.join(', '),
+          budget,
+          timeline,
+          message,
+          date: new Date().toISOString()
+        };
+
+        try {
+          const res = await fetch('/api/leads', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+
+          alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-[#70805D]/15 text-[#2A3B27] border border-[#70805D]/35 block';
+          alertBox.innerHTML = `✅ <strong>Thank you, ${name}!</strong> Your strategic inquiry has been received. Shakibur will review your parameters and respond within 24 business hours. You may also connect instantly on WhatsApp at <a href="https://wa.me/8801838070468" target="_blank" class="underline font-bold">+880 1838-070468</a>.`;
+          inqForm.reset();
+        } catch (err) {
+          alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-[#70805D]/15 text-[#2A3B27] border border-[#70805D]/35 block';
+          alertBox.innerHTML = `✅ <strong>Brief Transmitted!</strong> You can also connect directly with Shakibur on WhatsApp at <a href="https://wa.me/8801838070468" target="_blank" class="underline font-bold">+880 1838-070468</a>.`;
+        } finally {
+          btn.disabled = false;
+          btn.innerHTML = '<span>Transmit Executive Brief</span><i class="fa-solid fa-paper-plane text-xs"></i>';
+        }
+      });
+    }
+  </script>
+  <script src="/site-hydration.js?v=3.5"></script>
+</body>
+</html>

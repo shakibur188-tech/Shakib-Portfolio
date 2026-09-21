@@ -7,8 +7,14 @@ RewriteEngine On
 # Disable directory browsing
 Options -Indexes
 
-# 1. Route Admin URL directly to admin.html
+# 1. Route clean URLs directly to HTML files
 RewriteRule ^admin/?$ admin.html [L,QSA]
+RewriteRule ^about/?$ about.html [L,QSA]
+RewriteRule ^projects/?$ projects.html [L,QSA]
+RewriteRule ^testimonials/?$ testimonials.html [L,QSA]
+RewriteRule ^contact/?$ contact.html [L,QSA]
+RewriteRule ^services/?$ services.html [L,QSA]
+RewriteRule ^case-studies/?$ case-studies.html [L,QSA]
 
 # 2. Route all /api/* requests to Universal PHP API bridge
 RewriteRule ^api/(.*)$ api/index.php [L,QSA]

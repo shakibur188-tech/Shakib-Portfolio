@@ -64,6 +64,14 @@
           <span class="nav-icon">📊</span>
           <span class="nav-label">Dashboard Overview</span>
         </button>
+        <button class="nav-item" data-tab="tab-menu">
+          <span class="nav-icon">🧭</span>
+          <span class="nav-label">Header &amp; Menu Nav</span>
+        </button>
+        <button class="nav-item" data-tab="tab-pages">
+          <span class="nav-icon">📄</span>
+          <span class="nav-label">Page Figures &amp; Actions</span>
+        </button>
         <button class="nav-item" data-tab="tab-services">
           <span class="nav-icon">✨</span>
           <span class="nav-label">6 Core Services</span>
@@ -192,21 +200,29 @@
               <h3>🚀 Fast Jump Navigation</h3>
               <p class="section-desc">Quick shortcuts to manage your 6 services and 15 live web portals:</p>
               <div class="quick-links-grid">
+                <button class="quick-link-btn" onclick="switchTab('tab-menu')">
+                  <span>🧭 Header &amp; Menu Nav</span>
+                  <small>Manage navbar links, destination URLs &amp; CTA button</small>
+                </button>
+                <button class="quick-link-btn" onclick="switchTab('tab-pages')">
+                  <span>📄 Page Figures &amp; Actions</span>
+                  <small>Edit numbers, years of exp, counters &amp; buttons</small>
+                </button>
                 <button class="quick-link-btn" onclick="switchTab('tab-services')">
                   <span>✨ 6 Core Services CMS</span>
-                  <small>Branding, Graphics, Web Dev, SMM, Photo/Video, etc.</small>
+                  <small>Branding, Graphics, Web Dev, SMM, etc.</small>
                 </button>
                 <button class="quick-link-btn" onclick="switchTab('tab-webprojects')">
                   <span>💻 15 Web Projects CMS</span>
-                  <small>Edit titles, live links, categories & metrics</small>
+                  <small>Edit titles, live links, categories &amp; metrics</small>
                 </button>
                 <button class="quick-link-btn" onclick="switchTab('tab-seo')">
-                  <span>🔍 Global & AI SEO Center</span>
-                  <small>Page title, keywords, /llms.txt & schema</small>
+                  <span>🔍 Global &amp; AI SEO Center</span>
+                  <small>Page title, keywords, /llms.txt &amp; schema</small>
                 </button>
                 <button class="quick-link-btn" onclick="switchTab('tab-leads')">
                   <span>📬 Inquiries Inbox</span>
-                  <small>Review project briefs & export to CSV</small>
+                  <small>Review project briefs &amp; export to CSV</small>
                 </button>
               </div>
             </div>
@@ -218,6 +234,183 @@
               </div>
               <div id="overviewRecentLeads" class="recent-leads-list">
                 <div class="empty-state-sm">No new inquiries yet. Submissions from the contact form will appear here.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB: HEADER & MENU NAVIGATION MANAGER -->
+        <section id="tab-menu" class="tab-pane">
+          <!-- Brand Identity in Header -->
+          <div class="card-form glass-panel mb-6">
+            <h3>🧭 Header Brand Identity &amp; Status Badge</h3>
+            <p class="section-desc">Manage the brand name, avatar badge, and availability status text displayed on all site navigation bars:</p>
+            <div class="form-row-3">
+              <div class="form-group">
+                <label>Brand Display Name</label>
+                <input type="text" id="menu_brandName" class="admin-input" placeholder="Md. Shakibur Rahaman">
+              </div>
+              <div class="form-group">
+                <label>Avatar Initials / Icon</label>
+                <input type="text" id="menu_brandAvatar" class="admin-input" placeholder="SR">
+              </div>
+              <div class="form-group">
+                <label>Status Pill Text</label>
+                <input type="text" id="menu_brandStatus" class="admin-input" placeholder="Available for Q3/Q4 Advisory &amp; Execution">
+              </div>
+            </div>
+          </div>
+
+          <!-- Header CTA Button -->
+          <div class="card-form glass-panel mb-6">
+            <h3>🔘 Header Call-To-Action (CTA) Button</h3>
+            <p class="section-desc">Configure the primary action button located at the top-right of every page navbar:</p>
+            <div class="form-row-3">
+              <div class="form-group">
+                <label>Button Label / Text</label>
+                <input type="text" id="menu_ctaLabel" class="admin-input" placeholder="Let's Talk">
+              </div>
+              <div class="form-group">
+                <label>Destination URL / Link</label>
+                <input type="text" id="menu_ctaUrl" class="admin-input" placeholder="/contact.html">
+              </div>
+              <div class="form-group">
+                <label>FontAwesome Icon Class</label>
+                <input type="text" id="menu_ctaIcon" class="admin-input" placeholder="fa-arrow-up-right-from-square">
+              </div>
+            </div>
+            <div class="flex items-center gap-2 mt-2">
+              <input type="checkbox" id="menu_ctaExternal" class="admin-checkbox">
+              <label for="menu_ctaExternal" class="text-xs cursor-pointer select-none text-[#2A3B27] font-semibold">Open button link in new browser tab</label>
+            </div>
+          </div>
+
+          <!-- Header Navigation Links Manager -->
+          <div class="card-form glass-panel">
+            <div class="flex-between mb-4">
+              <div>
+                <h3>🔗 Header Navigation Links Manager</h3>
+                <p class="section-desc">Reorder, rename, change destination URLs, or add/remove links from the header menu.</p>
+              </div>
+              <button type="button" id="addNewMenuItemBtn" class="btn-primary-gold">
+                <span>+ Add Nav Link</span>
+              </button>
+            </div>
+            <div id="menuItemsContainer" class="cases-accordion-list"></div>
+          </div>
+        </section>
+
+        <!-- TAB: PAGE-BY-PAGE & FIGURES CMS -->
+        <section id="tab-pages" class="tab-pane">
+          <!-- Page Selector Pills -->
+          <div class="card-form glass-panel mb-6">
+            <div class="flex-between mb-3">
+              <div>
+                <h3>📄 Page-by-Page Content &amp; Figures Editor</h3>
+                <p class="section-desc">Select any page below to customize its hero badge, title, subtitle, figures/metrics (e.g. years of experience), and action buttons:</p>
+              </div>
+              <span class="text-xs font-bold text-[#70805D] bg-[#70805D]/10 px-3 py-1 rounded-full" id="activePageIndicator">Editing: Home Page</span>
+            </div>
+            <div class="page-selector-pill-row flex flex-wrap gap-2" id="pagePillsContainer">
+              <button type="button" class="page-pill-btn active" data-page-key="home">🏠 Home Page</button>
+              <button type="button" class="page-pill-btn" data-page-key="about">👤 About Me</button>
+              <button type="button" class="page-pill-btn" data-page-key="services">✨ Services Directory</button>
+              <button type="button" class="page-pill-btn" data-page-key="projects">💻 15 Web Projects</button>
+              <button type="button" class="page-pill-btn" data-page-key="caseStudies">💼 Case Studies</button>
+              <button type="button" class="page-pill-btn" data-page-key="testimonials">⭐ Testimonials</button>
+              <button type="button" class="page-pill-btn" data-page-key="contact">📬 Contact &amp; Inquiry</button>
+            </div>
+          </div>
+
+          <!-- Hero & Page Identity -->
+          <div class="card-form glass-panel mb-6">
+            <h3>🏷️ Hero Header &amp; Identity</h3>
+            <p class="section-desc">The primary hero heading, badge, and intro text displayed at the top of the selected page:</p>
+            <div class="form-group">
+              <label>Hero Eyebrow / Tag Badge</label>
+              <input type="text" id="page_heroBadge" class="admin-input" placeholder="PORTFOLIO CASE STUDIES &amp; RECENT WORKS">
+            </div>
+            <div class="form-group">
+              <label>Main Page Title (H1)</label>
+              <input type="text" id="page_heroTitle" class="admin-input" placeholder="Page Main Title">
+            </div>
+            <div class="form-group">
+              <label>Hero Subtitle / Tagline</label>
+              <textarea id="page_heroSubtitle" class="admin-textarea" rows="2" placeholder="Page subtitle or tagline"></textarea>
+            </div>
+            <div class="form-group mb-0">
+              <label>Extended Narrative / Bio</label>
+              <textarea id="page_heroBio" class="admin-textarea" rows="3" placeholder="Detailed introductory paragraph"></textarea>
+            </div>
+          </div>
+
+          <!-- Page Action Buttons -->
+          <div class="card-form glass-panel mb-6">
+            <h3>🔘 Hero Action Buttons &amp; Links</h3>
+            <p class="section-desc">Configure the primary and secondary call-to-action buttons for the selected page:</p>
+            <div class="form-row-2">
+              <div class="p-4 rounded-xl bg-[#F8F9F6] border border-[#70805D]/20">
+                <h4 class="text-xs font-bold text-[#2A3B27] mb-3 uppercase tracking-wider">Primary Button</h4>
+                <div class="form-group">
+                  <label>Button Text / Label</label>
+                  <input type="text" id="page_primaryBtnLabel" class="admin-input" placeholder="e.g. Explore All 6 Services">
+                </div>
+                <div class="form-group mb-0">
+                  <label>Destination URL / Action</label>
+                  <input type="text" id="page_primaryBtnUrl" class="admin-input" placeholder="e.g. /services.html">
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-[#F8F9F6] border border-[#70805D]/20">
+                <h4 class="text-xs font-bold text-[#2A3B27] mb-3 uppercase tracking-wider">Secondary Button</h4>
+                <div class="form-group">
+                  <label>Button Text / Label</label>
+                  <input type="text" id="page_secondaryBtnLabel" class="admin-input" placeholder="e.g. View 15 Web Projects">
+                </div>
+                <div class="form-group mb-0">
+                  <label>Destination URL / Action</label>
+                  <input type="text" id="page_secondaryBtnUrl" class="admin-input" placeholder="e.g. /projects.html">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Page Figures & Counters Manager -->
+          <div class="card-form glass-panel mb-6">
+            <div class="flex-between mb-4">
+              <div>
+                <h3>📊 Key Figures, Numbers &amp; Counters Manager</h3>
+                <p class="section-desc">Directly edit all quantitative numbers, years of experience, multipliers, and live statistics shown on this page.</p>
+              </div>
+              <button type="button" id="addNewPageFigureBtn" class="btn-primary-gold">
+                <span>+ Add Figure Metric</span>
+              </button>
+            </div>
+            <div id="pageFiguresContainer" class="cases-accordion-list"></div>
+          </div>
+
+          <!-- Bottom CTA Banner -->
+          <div class="card-form glass-panel">
+            <h3>📢 Bottom Page CTA Banner</h3>
+            <p class="section-desc">Customize the call-to-action banner shown before the footer on this page:</p>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label>Banner Heading</label>
+                <input type="text" id="page_ctaHeading" class="admin-input" placeholder="Ready to Architect High-Impact Growth?">
+              </div>
+              <div class="form-group">
+                <label>Banner Subheading</label>
+                <input type="text" id="page_ctaSubheading" class="admin-input" placeholder="Let's build scalable digital assets.">
+              </div>
+            </div>
+            <div class="form-row-2">
+              <div class="form-group mb-0">
+                <label>Banner Button Text</label>
+                <input type="text" id="page_ctaBtnLabel" class="admin-input" placeholder="Schedule Strategy Call">
+              </div>
+              <div class="form-group mb-0">
+                <label>Banner Button URL</label>
+                <input type="text" id="page_ctaBtnUrl" class="admin-input" placeholder="/contact.html">
               </div>
             </div>
           </div>

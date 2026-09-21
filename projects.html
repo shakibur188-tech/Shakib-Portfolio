@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>15 Production Web Projects | Md. Shakibur Rahaman</title>
+  <meta name="description" content="Explore 15 live production web platforms engineered by Md. Shakibur Rahaman across luxury hospitality, headless e-commerce, corporate B2B, and SaaS applications.">
+  <link rel="canonical" href="http://localhost:5500/projects.html">
+  
+  <!-- Plus Jakarta Sans Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN & DopelyColors Palette Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#70805D',
+              forest: '#2A3B27',
+              slate: '#55738D',
+              mist: '#96A7B6',
+              stone: '#CBC8C4'
+            },
+            canvas: '#F8F9F6'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Unified Aesthetic Stylesheet -->
+  <link rel="stylesheet" href="./styles.css?v=3.5">
+</head>
+<body class="bg-[#F8F9F6] text-[#1C2B1B] font-sans antialiased selection:bg-[#70805D] selection:text-white relative overflow-x-hidden">
+
+  <!-- 0. Top Scroll Progress Bar -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- 1. Ambient Background Canvas, Animated Mesh & Vignette -->
+  <div class="ambient-mesh-glow"></div>
+  <canvas id="ambientCanvas"></canvas>
+  <div class="ambient-vignette"></div>
+
+  <!-- 2. FIXED NAVBAR -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#F8F9F6]/92 backdrop-blur-2xl border-b border-[#70805D]/15 transition-all duration-300 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo / Monogram -->
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-[#70805D] to-[#2A3B27] flex items-center justify-center font-black text-white text-sm sm:text-base tracking-tight group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-[#70805D]/30 transition-all shadow-md shadow-[#70805D]/20 border border-white/20 shrink-0">
+          SR
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-[#1C2B1B] tracking-tight text-sm sm:text-base md:text-lg group-hover:text-[#70805D] transition-colors" id="navBrandName">Md. Shakibur Rahaman</span>
+          <span class="text-[9.5px] sm:text-[10.5px] text-[#70805D] font-extrabold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
+        </div>
+      </a>
+
+      <!-- Centered Floating Pill Navigation Menu with Services Dropdown -->
+      <nav class="hidden lg:flex items-center gap-6 px-6 py-2.5 rounded-full bg-white/95 border border-[#70805D]/20 text-xs font-bold text-[#4D614A] backdrop-blur-md shadow-sm">
+        <a href="/" class="desktop-nav-link hover:text-[#70805D] transition-colors">Home</a>
+        <a href="/about.html" class="desktop-nav-link hover:text-[#70805D] transition-colors">About</a>
+        
+        <!-- SERVICES MENU ITEM WITH HOVER SUB-MENU -->
+        <div class="services-menu-item relative group">
+          <a href="/services.html" class="desktop-nav-link hover:text-[#70805D] transition-colors flex items-center gap-1.5 py-1">
+            <span>Services</span>
+            <i class="fa-solid fa-chevron-down text-[9px] text-[#70805D] transition-transform duration-200 group-hover:rotate-180"></i>
+          </a>
+          
+          <!-- 6 Services Hover Sub-Menu Panel -->
+          <div class="services-dropdown">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-[#70805D]/15">
+              <span class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-layer-group text-[#70805D]"></i>
+                <span>Core Capabilities (6 Disciplines)</span>
+              </span>
+              <a href="/services.html" class="text-[11px] font-bold text-[#70805D] hover:underline flex items-center gap-1">
+                <span>View All Services Directory</span>
+                <i class="fa-solid fa-arrow-right text-[9px]"></i>
+              </a>
+            </div>
+
+            <div class="services-dropdown-grid grid grid-cols-2 sm:grid-cols-3 gap-2">
+              <a href="/services/graphics-design.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-bezier-curve"></i></div>
+                <div>
+                  <div class="service-sub-title">01 Graphics &amp; Visual Identity</div>
+                  <div class="service-sub-desc">Packaging, UI/UX &amp; decks</div>
+                </div>
+              </a>
+              <a href="/services/web-development.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-code"></i></div>
+                <div>
+                  <div class="service-sub-title">02 Web design &amp; Development</div>
+                  <div class="service-sub-desc">Jamstack portals &amp; apps</div>
+                </div>
+              </a>
+              <a href="/services/social-media-marketing.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-hashtag"></i></div>
+                <div>
+                  <div class="service-sub-title">03 Social Media marketing</div>
+                  <div class="service-sub-desc">Viral reels &amp; Meta ads</div>
+                </div>
+              </a>
+              <a href="/services/public-relations.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-newspaper"></i></div>
+                <div>
+                  <div class="service-sub-title">04 Public relation &amp; Media outreach</div>
+                  <div class="service-sub-desc">Tier-1 press &amp; media PR</div>
+                </div>
+              </a>
+              <a href="/services/google-ads.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <div>
+                  <div class="service-sub-title">05 Google ads &amp; Intent Scaling</div>
+                  <div class="service-sub-desc">Performance Max funnels</div>
+                </div>
+              </a>
+              <a href="/services/event-activation.html" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-cubes"></i></div>
+                <div>
+                  <div class="service-sub-title">06 Event activation &amp; Exhibition</div>
+                  <div class="service-sub-desc">Expos &amp; spatial builds</div>
+                </div>
+              </a>
+            </div>
+
+            <div class="mt-3 pt-2.5 border-t border-[#70805D]/15 flex items-center justify-between text-[11px] text-[#55738D]">
+              <span>Integrated strategic leadership across all 6 disciplines</span>
+              <a href="/services.html" class="font-bold text-[#70805D] hover:text-[#2A3B27] flex items-center gap-1">
+                <span>View Full Services Directory</span>
+                <i class="fa-solid fa-chevron-right text-[8px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/projects.html" class="desktop-nav-link text-[#70805D] font-bold">Projects</a>
+        <a href="/case-studies.html" class="desktop-nav-link hover:text-[#70805D] transition-colors">Case Studies</a>
+        <a href="/testimonials.html" class="desktop-nav-link hover:text-[#70805D] transition-colors">Testimonials</a>
+        <a href="/contact.html" class="desktop-nav-link hover:text-[#70805D] transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center gap-3">
+        <a href="/contact.html" class="nav-cta-btn btn-aesthetic-primary text-xs hidden md:inline-flex items-center gap-2">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+        <button id="mobileMenuToggle" aria-label="Toggle Navigation" class="lg:hidden w-10 h-10 rounded-xl bg-white border border-[#70805D]/25 flex items-center justify-center text-[#2A3B27] hover:bg-[#F1F4EE] transition-colors shadow-sm focus:outline-none">
+          <i class="fa-solid fa-bars-staggered text-base"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-Down Navigation Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-[#70805D]/20 px-5 py-6 space-y-4 shadow-2xl max-h-[85vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-3 border-b border-[#70805D]/15">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#70805D] animate-ping"></span>
+          <span class="text-xs font-extrabold text-[#2A3B27] uppercase tracking-wider">Navigation Menu</span>
+        </div>
+        <span class="text-[11px] font-bold text-[#70805D] bg-[#70805D]/10 px-2.5 py-0.5 rounded-full">Available</span>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        <a href="/" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE]">
+          <i class="fa-solid fa-house text-[#70805D]"></i>
+          <span>Home</span>
+        </a>
+        <a href="/about.html" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE]">
+          <i class="fa-solid fa-user-astronaut text-[#70805D]"></i>
+          <span>About Me</span>
+        </a>
+        <a href="/services.html" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE]">
+          <i class="fa-solid fa-layer-group text-[#70805D]"></i>
+          <span>Services</span>
+        </a>
+        <a href="/projects.html" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#70805D]/15 border border-[#70805D]/30 text-xs font-bold text-[#2A3B27]">
+          <i class="fa-solid fa-code-branch text-[#70805D]"></i>
+          <span>Projects</span>
+        </a>
+        <a href="/case-studies.html" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE]">
+          <i class="fa-solid fa-chart-pie text-[#70805D]"></i>
+          <span>Case Studies</span>
+        </a>
+        <a href="/testimonials.html" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE]">
+          <i class="fa-solid fa-star text-[#F59E0B]"></i>
+          <span>Testimonials</span>
+        </a>
+      </div>
+
+      <div class="pt-2 flex flex-col gap-2">
+        <a href="/contact.html" class="mobile-link btn-aesthetic-primary w-full justify-center text-xs py-3">
+          <span>Get In Touch / Project Inquiry</span>
+          <i class="fa-solid fa-paper-plane text-xs"></i>
+        </a>
+        <a href="https://wa.me/8801838070468" target="_blank" rel="noopener noreferrer" class="btn-outline-emerald w-full justify-center text-xs py-2.5">
+          <i class="fa-brands fa-whatsapp text-sm text-[#70805D]"></i>
+          <span>Direct WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. PROJECTS HERO SECTION -->
+  <section class="relative pt-36 pb-16 md:pt-44 md:pb-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6 reveal-fade-up">
+      
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#70805D]/12 border border-[#70805D]/30 text-[#2A3B27] text-xs font-bold">
+        <i class="fa-solid fa-code-branch text-[#70805D]"></i>
+        <span>15 PRODUCTION PLATFORMS DEPLOYED</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-[#1C2B1B] tracking-tight leading-[1.1] max-w-4xl mx-auto">
+        High-Performance Web Platforms &amp; <br>
+        <span class="olive-gradient-text">Commercial Flagships.</span>
+      </h1>
+
+      <p class="text-sm sm:text-base text-[#4D614A] max-w-2xl mx-auto leading-relaxed">
+        15 live production web applications engineered for luxury hospitality, headless e-commerce, corporate B2B, and SaaS ecosystems. Designed for sub-second speed, flawless responsiveness, and verified commercial lift.
+      </p>
+
+      <!-- Key Stat Counters Strip -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto pt-6">
+        <div class="spotlight-card p-4 text-center bg-white border border-[#70805D]/20 rounded-2xl shadow-xs">
+          <div class="text-2xl sm:text-3xl font-extrabold text-[#2A3B27]" data-counter-target="15" data-counter-suffix="+">15+</div>
+          <div class="text-[11px] text-[#55738D] uppercase mt-1 font-bold">Live Production Portals</div>
+        </div>
+        <div class="spotlight-card p-4 text-center bg-white border border-[#70805D]/20 rounded-2xl shadow-xs">
+          <div class="text-2xl sm:text-3xl font-extrabold text-[#2A3B27]" data-counter-target="0.8" data-counter-suffix="s">0.8s</div>
+          <div class="text-[11px] text-[#55738D] uppercase mt-1 font-bold">Sub-Second TTFB Latency</div>
+        </div>
+        <div class="spotlight-card p-4 text-center bg-white border border-[#70805D]/20 rounded-2xl shadow-xs">
+          <div class="text-2xl sm:text-3xl font-extrabold text-[#2A3B27]" data-counter-target="98" data-counter-suffix="/100">98/100</div>
+          <div class="text-[11px] text-[#55738D] uppercase mt-1 font-bold">Google PageSpeed Score</div>
+        </div>
+        <div class="spotlight-card p-4 text-center bg-white border border-[#70805D]/20 rounded-2xl shadow-xs">
+          <div class="text-2xl sm:text-3xl font-extrabold text-[#2A3B27]" data-counter-target="100" data-counter-suffix="%">100%</div>
+          <div class="text-[11px] text-[#55738D] uppercase mt-1 font-bold">Clean Code &amp; IP Handover</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. FILTER BAR & 15 PROJECTS GRID -->
+  <section class="py-16 border-t border-[#70805D]/15 bg-white relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Category Filter Pills -->
+      <div id="projectFilterBar" class="flex flex-wrap items-center justify-center gap-2 mb-12 overflow-x-auto pb-2 no-scrollbar reveal-on-scroll">
+        <button class="filter-btn active" data-category="all">All Projects (15)</button>
+        <button class="filter-btn" data-category="Hospitality & Booking">Hospitality &amp; Booking (5)</button>
+        <button class="filter-btn" data-category="E-Commerce">E-Commerce Flagships (3)</button>
+        <button class="filter-btn" data-category="Corporate / B2B">Corporate / B2B (4)</button>
+        <button class="filter-btn" data-category="Web Apps / SaaS">Web Apps / SaaS (2)</button>
+        <button class="filter-btn" data-category="Creative Portfolios">Creative Portfolios (1)</button>
+      </div>
+
+      <!-- 15 Web Projects Grid -->
+      <div id="fullProjectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-grid">
+
+        <!-- Project 1: Hotel Sarina -->
+        <div class="project-card spotlight-card bg-[#F8F9F6] border border-[#70805D]/20 rounded-3xl overflow-hidden shadow-sm flex flex-col group" data-category="Hospitality & Booking">
+          <div class="relative h-56 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Hotel Sarina Dhaka" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#1C2B1B]/80 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10.5px] font-bold">
+              Hospitality &amp; Booking
+            </div>
+            <div class="absolute top-3 right-3 bg-[#70805D] text-white px-2.5 py-1 rounded-full text-[10px] font-extrabold shadow-sm">
+              +320% Direct Bookings
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="text-[11px] font-bold text-[#55738D] uppercase tracking-wider">Hotel Sarina Dhaka</div>
+              <h3 class="text-lg font-extrabold text-[#1C2B1B] mt-1 group-hover:text-[#70805D] transition-colors">
+                5-Star Luxury Booking &amp; Dining Portal
+              </h3>
+              <p class="text-xs text-[#4D614A] mt-2 leading-relaxed">
+                Direct OTA-bypassing booking engine, banquet reservation suite, and real-time room availability matrix for diplomatic guests.
+              </p>
+            </div>
+            <div class="space-y-3 pt-2 border-t border-[#70805D]/15">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Next.js</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Tailwind CSS</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Node.js API</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">PostgreSQL</span>
+              </div>
+              <div class="flex items-center justify-between text-xs pt-1">
+                <span class="text-[11px] font-extrabold text-[#70805D]">Sub-Second Speed</span>
+                <a href="https://sarinadhaka.example.com" target="_blank" rel="noopener noreferrer" class="font-bold text-[#2A3B27] hover:text-[#70805D] flex items-center gap-1">
+                  <span>Visit Live Website</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: LuxeHaven -->
+        <div class="project-card spotlight-card bg-[#F8F9F6] border border-[#70805D]/20 rounded-3xl overflow-hidden shadow-sm flex flex-col group" data-category="Corporate / B2B">
+          <div class="relative h-56 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="LuxeHaven Interiors" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#1C2B1B]/80 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10.5px] font-bold">
+              Corporate / B2B
+            </div>
+            <div class="absolute top-3 right-3 bg-[#70805D] text-white px-2.5 py-1 rounded-full text-[10px] font-extrabold shadow-sm">
+              4.8x Quote Inquiries
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="text-[11px] font-bold text-[#55738D] uppercase tracking-wider">LuxeHaven Architecture</div>
+              <h3 class="text-lg font-extrabold text-[#1C2B1B] mt-1 group-hover:text-[#70805D] transition-colors">
+                Architectural Design &amp; Fitout Studio
+              </h3>
+              <p class="text-xs text-[#4D614A] mt-2 leading-relaxed">
+                Interactive 3D project gallery, before/after renovation sliders, and instant square-footage estimation cost calculator.
+              </p>
+            </div>
+            <div class="space-y-3 pt-2 border-t border-[#70805D]/15">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">React</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Three.js</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Tailwind CSS</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Framer Motion</span>
+              </div>
+              <div class="flex items-center justify-between text-xs pt-1">
+                <span class="text-[11px] font-extrabold text-[#70805D]">Sub-Second Speed</span>
+                <a href="https://luxehaven-interiors.example.com" target="_blank" rel="noopener noreferrer" class="font-bold text-[#2A3B27] hover:text-[#70805D] flex items-center gap-1">
+                  <span>Visit Live Website</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Prestige VIP Club -->
+        <div class="project-card spotlight-card bg-[#F8F9F6] border border-[#70805D]/20 rounded-3xl overflow-hidden shadow-sm flex flex-col group" data-category="Hospitality & Booking">
+          <div class="relative h-56 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80" alt="Prestige VIP Club" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#1C2B1B]/80 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10.5px] font-bold">
+              Hospitality &amp; Booking
+            </div>
+            <div class="absolute top-3 right-3 bg-[#70805D] text-white px-2.5 py-1 rounded-full text-[10px] font-extrabold shadow-sm">
+              1,200+ Members
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="text-[11px] font-bold text-[#55738D] uppercase tracking-wider">Prestige Hospitality Group</div>
+              <h3 class="text-lg font-extrabold text-[#1C2B1B] mt-1 group-hover:text-[#70805D] transition-colors">
+                Members-Only Private Concierge &amp; Club
+              </h3>
+              <p class="text-xs text-[#4D614A] mt-2 leading-relaxed">
+                Gated tier-based membership verification, encrypted event ticket passes, and private lounge table reservations.
+              </p>
+            </div>
+            <div class="space-y-3 pt-2 border-t border-[#70805D]/15">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Vue 3</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Express.js</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">JWT Auth</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Stripe</span>
+              </div>
+              <div class="flex items-center justify-between text-xs pt-1">
+                <span class="text-[11px] font-extrabold text-[#70805D]">Sub-Second Speed</span>
+                <a href="https://prestige-vip.example.com" target="_blank" rel="noopener noreferrer" class="font-bold text-[#2A3B27] hover:text-[#70805D] flex items-center gap-1">
+                  <span>Visit Live Website</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: GlobalEd Pathways -->
+        <div class="project-card spotlight-card bg-[#F8F9F6] border border-[#70805D]/20 rounded-3xl overflow-hidden shadow-sm flex flex-col group" data-category="Corporate / B2B">
+          <div class="relative h-56 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="GlobalEd Pathways" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#1C2B1B]/80 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10.5px] font-bold">
+              Corporate / B2B
+            </div>
+            <div class="absolute top-3 right-3 bg-[#70805D] text-white px-2.5 py-1 rounded-full text-[10px] font-extrabold shadow-sm">
+              4,000+ Students Guided
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="text-[11px] font-bold text-[#55738D] uppercase tracking-wider">GlobalEd Consultancy Ltd.</div>
+              <h3 class="text-lg font-extrabold text-[#1C2B1B] mt-1 group-hover:text-[#70805D] transition-colors">
+                International Study Abroad Portal
+              </h3>
+              <p class="text-xs text-[#4D614A] mt-2 leading-relaxed">
+                University course search database, intake assessment calculator, and automated student counselor lead matching.
+              </p>
+            </div>
+            <div class="space-y-3 pt-2 border-t border-[#70805D]/15">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">React</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">PHP</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">MySQL</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Bootstrap 5</span>
+              </div>
+              <div class="flex items-center justify-between text-xs pt-1">
+                <span class="text-[11px] font-extrabold text-[#70805D]">Sub-Second Speed</span>
+                <a href="https://globaled-pathways.example.com" target="_blank" rel="noopener noreferrer" class="font-bold text-[#2A3B27] hover:text-[#70805D] flex items-center gap-1">
+                  <span>Visit Live Website</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Apex Recruitment Hub -->
+        <div class="project-card spotlight-card bg-[#F8F9F6] border border-[#70805D]/20 rounded-3xl overflow-hidden shadow-sm flex flex-col group" data-category="Corporate / B2B">
+          <div class="relative h-56 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Apex Recruitment Hub" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#1C2B1B]/80 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10.5px] font-bold">
+              Corporate / B2B
+            </div>
+            <div class="absolute top-3 right-3 bg-[#70805D] text-white px-2.5 py-1 rounded-full text-[10px] font-extrabold shadow-sm">
+              65+ Corporate Clients
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="text-[11px] font-bold text-[#55738D] uppercase tracking-wider">Apex Manpower &amp; Recruitment</div>
+              <h3 class="text-lg font-extrabold text-[#1C2B1B] mt-1 group-hover:text-[#70805D] transition-colors">
+                Executive Search &amp; B2B Staffing Platform
+              </h3>
+              <p class="text-xs text-[#4D614A] mt-2 leading-relaxed">
+                B2B employer job requisition posting, candidate resume parser, and real-time interview coordination pipeline.
+              </p>
+            </div>
+            <div class="space-y-3 pt-2 border-t border-[#70805D]/15">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Next.js</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Tailwind CSS</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">PostgreSQL</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Prisma</span>
+              </div>
+              <div class="flex items-center justify-between text-xs pt-1">
+                <span class="text-[11px] font-extrabold text-[#70805D]">Sub-Second Speed</span>
+                <a href="https://apex-recruitment.example.com" target="_blank" rel="noopener noreferrer" class="font-bold text-[#2A3B27] hover:text-[#70805D] flex items-center gap-1">
+                  <span>Visit Live Website</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: WanderLuxe Expeditions -->
+        <div class="project-card spotlight-card bg-[#F8F9F6] border border-[#70805D]/20 rounded-3xl overflow-hidden shadow-sm flex flex-col group" data-category="Hospitality & Booking">
+          <div class="relative h-56 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="WanderLuxe Expeditions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#1C2B1B]/80 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10.5px] font-bold">
+              Hospitality &amp; Booking
+            </div>
+            <div class="absolute top-3 right-3 bg-[#70805D] text-white px-2.5 py-1 rounded-full text-[10px] font-extrabold shadow-sm">
+              210+ Booked Trips
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="text-[11px] font-bold text-[#55738D] uppercase tracking-wider">WanderLuxe Travel Group</div>
+              <h3 class="text-lg font-extrabold text-[#1C2B1B] mt-1 group-hover:text-[#70805D] transition-colors">
+                Premium Travel &amp; Tour Operator
+              </h3>
+              <p class="text-xs text-[#4D614A] mt-2 leading-relaxed">
+                Dynamic package itinerary builder, flight/visa inquiry engine, and multi-currency international payments.
+              </p>
+            </div>
+            <div class="space-y-3 pt-2 border-t border-[#70805D]/15">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">WordPress</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">WooCommerce</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Custom Booking</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Stripe</span>
+              </div>
+              <div class="flex items-center justify-between text-xs pt-1">
+                <span class="text-[11px] font-extrabold text-[#70805D]">Sub-Second Speed</span>
+                <a href="https://wanderluxe-travel.example.com" target="_blank" rel="noopener noreferrer" class="font-bold text-[#2A3B27] hover:text-[#70805D] flex items-center gap-1">
+                  <span>Visit Live Website</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7: Aura Studio Fashion -->
+        <div class="project-card spotlight-card bg-[#F8F9F6] border border-[#70805D]/20 rounded-3xl overflow-hidden shadow-sm flex flex-col group" data-category="E-Commerce">
+          <div class="relative h-56 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Aura Studio Fashion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#1C2B1B]/80 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10.5px] font-bold">
+              E-Commerce
+            </div>
+            <div class="absolute top-3 right-3 bg-[#70805D] text-white px-2.5 py-1 rounded-full text-[10px] font-extrabold shadow-sm">
+              12.4x Peak ROAS
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="text-[11px] font-bold text-[#55738D] uppercase tracking-wider">Aura Luxury Apparel</div>
+              <h3 class="text-lg font-extrabold text-[#1C2B1B] mt-1 group-hover:text-[#70805D] transition-colors">
+                D2C E-Commerce Flagship Store
+              </h3>
+              <p class="text-xs text-[#4D614A] mt-2 leading-relaxed">
+                Modern headless e-commerce store with instant product filtering, dynamic cart recovery, and 1-click checkout.
+              </p>
+            </div>
+            <div class="space-y-3 pt-2 border-t border-[#70805D]/15">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Shopify Liquid</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Hydrogen</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Tailwind CSS</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Klaviyo</span>
+              </div>
+              <div class="flex items-center justify-between text-xs pt-1">
+                <span class="text-[11px] font-extrabold text-[#70805D]">Sub-Second Speed</span>
+                <a href="https://aura-fashion.example.com" target="_blank" rel="noopener noreferrer" class="font-bold text-[#2A3B27] hover:text-[#70805D] flex items-center gap-1">
+                  <span>Visit Live Website</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8: UrbanBite Gourmet -->
+        <div class="project-card spotlight-card bg-[#F8F9F6] border border-[#70805D]/20 rounded-3xl overflow-hidden shadow-sm flex flex-col group" data-category="E-Commerce">
+          <div class="relative h-56 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="UrbanBite Gourmet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#1C2B1B]/80 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10.5px] font-bold">
+              E-Commerce
+            </div>
+            <div class="absolute top-3 right-3 bg-[#70805D] text-white px-2.5 py-1 rounded-full text-[10px] font-extrabold shadow-sm">
+              15-Min Fast Dispatch
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="text-[11px] font-bold text-[#55738D] uppercase tracking-wider">UrbanBite Food Labs</div>
+              <h3 class="text-lg font-extrabold text-[#1C2B1B] mt-1 group-hover:text-[#70805D] transition-colors">
+                Artisanal Cloud Kitchen &amp; Delivery
+              </h3>
+              <p class="text-xs text-[#4D614A] mt-2 leading-relaxed">
+                Real-time kitchen order dispatch, interactive dish customization, and live rider tracking.
+              </p>
+            </div>
+            <div class="space-y-3 pt-2 border-t border-[#70805D]/15">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">React</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Firebase</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Tailwind CSS</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Google Maps</span>
+              </div>
+              <div class="flex items-center justify-between text-xs pt-1">
+                <span class="text-[11px] font-extrabold text-[#70805D]">Sub-Second Speed</span>
+                <a href="https://urbanbite-delivery.example.com" target="_blank" rel="noopener noreferrer" class="font-bold text-[#2A3B27] hover:text-[#70805D] flex items-center gap-1">
+                  <span>Visit Live Website</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 9: NovaPulse SaaS -->
+        <div class="project-card spotlight-card bg-[#F8F9F6] border border-[#70805D]/20 rounded-3xl overflow-hidden shadow-sm flex flex-col group" data-category="Web Apps / SaaS">
+          <div class="relative h-56 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="NovaPulse SaaS" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#1C2B1B]/80 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10.5px] font-bold">
+              Web Apps / SaaS
+            </div>
+            <div class="absolute top-3 right-3 bg-[#70805D] text-white px-2.5 py-1 rounded-full text-[10px] font-extrabold shadow-sm">
+              10k+ Monthly Events
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="text-[11px] font-bold text-[#55738D] uppercase tracking-wider">NovaPulse Technologies</div>
+              <h3 class="text-lg font-extrabold text-[#1C2B1B] mt-1 group-hover:text-[#70805D] transition-colors">
+                AI-Powered Social Analytics Dashboard
+              </h3>
+              <p class="text-xs text-[#4D614A] mt-2 leading-relaxed">
+                Multi-platform social engagement analytics, automated performance reports, and AI caption recommendations.
+              </p>
+            </div>
+            <div class="space-y-3 pt-2 border-t border-[#70805D]/15">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Next.js</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Tailwind CSS</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Recharts</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Node.js</span>
+              </div>
+              <div class="flex items-center justify-between text-xs pt-1">
+                <span class="text-[11px] font-extrabold text-[#70805D]">Sub-Second Speed</span>
+                <a href="https://novapulse-saas.example.com" target="_blank" rel="noopener noreferrer" class="font-bold text-[#2A3B27] hover:text-[#70805D] flex items-center gap-1">
+                  <span>Visit Live Website</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 10: Veritas Law Chambers -->
+        <div class="project-card spotlight-card bg-[#F8F9F6] border border-[#70805D]/20 rounded-3xl overflow-hidden shadow-sm flex flex-col group" data-category="Corporate / B2B">
+          <div class="relative h-56 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Veritas Law Chambers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#1C2B1B]/80 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10.5px] font-bold">
+              Corporate / B2B
+            </div>
+            <div class="absolute top-3 right-3 bg-[#70805D] text-white px-2.5 py-1 rounded-full text-[10px] font-extrabold shadow-sm">
+              Top 3 Google Rank
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="text-[11px] font-bold text-[#55738D] uppercase tracking-wider">Veritas Legal Group</div>
+              <h3 class="text-lg font-extrabold text-[#1C2B1B] mt-1 group-hover:text-[#70805D] transition-colors">
+                Corporate Legal Advisory Firm
+              </h3>
+              <p class="text-xs text-[#4D614A] mt-2 leading-relaxed">
+                Authoritative bilingual corporate presence, legal practice areas breakdown, and confidential consultation portal.
+              </p>
+            </div>
+            <div class="space-y-3 pt-2 border-t border-[#70805D]/15">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">HTML5 / Tailwind</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Alpine.js</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">PHP</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Schema.org</span>
+              </div>
+              <div class="flex items-center justify-between text-xs pt-1">
+                <span class="text-[11px] font-extrabold text-[#70805D]">Sub-Second Speed</span>
+                <a href="https://veritas-legal.example.com" target="_blank" rel="noopener noreferrer" class="font-bold text-[#2A3B27] hover:text-[#70805D] flex items-center gap-1">
+                  <span>Visit Live Website</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 11: Zenith Health Clinics -->
+        <div class="project-card spotlight-card bg-[#F8F9F6] border border-[#70805D]/20 rounded-3xl overflow-hidden shadow-sm flex flex-col group" data-category="Hospitality & Booking">
+          <div class="relative h-56 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="Zenith Health Clinics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#1C2B1B]/80 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10.5px] font-bold">
+              Hospitality &amp; Booking
+            </div>
+            <div class="absolute top-3 right-3 bg-[#70805D] text-white px-2.5 py-1 rounded-full text-[10px] font-extrabold shadow-sm">
+              99.9% Uptime
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="text-[11px] font-bold text-[#55738D] uppercase tracking-wider">Zenith Healthcare Network</div>
+              <h3 class="text-lg font-extrabold text-[#1C2B1B] mt-1 group-hover:text-[#70805D] transition-colors">
+                Telemedicine &amp; Appointment Suite
+              </h3>
+              <p class="text-xs text-[#4D614A] mt-2 leading-relaxed">
+                Doctor directory by specialty, instant video consultation booking, and electronic medical prescription viewer.
+              </p>
+            </div>
+            <div class="space-y-3 pt-2 border-t border-[#70805D]/15">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">React</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Node.js</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">WebRTC</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">PostgreSQL</span>
+              </div>
+              <div class="flex items-center justify-between text-xs pt-1">
+                <span class="text-[11px] font-extrabold text-[#70805D]">Sub-Second Speed</span>
+                <a href="https://zenith-health.example.com" target="_blank" rel="noopener noreferrer" class="font-bold text-[#2A3B27] hover:text-[#70805D] flex items-center gap-1">
+                  <span>Visit Live Website</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 12: Prism Creative Collective -->
+        <div class="project-card spotlight-card bg-[#F8F9F6] border border-[#70805D]/20 rounded-3xl overflow-hidden shadow-sm flex flex-col group" data-category="Creative Portfolios">
+          <div class="relative h-56 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80" alt="Prism Creative Collective" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#1C2B1B]/80 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10.5px] font-bold">
+              Creative Portfolios
+            </div>
+            <div class="absolute top-3 right-3 bg-[#70805D] text-white px-2.5 py-1 rounded-full text-[10px] font-extrabold shadow-sm">
+              Awwwards Nominee
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="text-[11px] font-bold text-[#55738D] uppercase tracking-wider">Prism Studio</div>
+              <h3 class="text-lg font-extrabold text-[#1C2B1B] mt-1 group-hover:text-[#70805D] transition-colors">
+                Multimedia Production Agency
+              </h3>
+              <p class="text-xs text-[#4D614A] mt-2 leading-relaxed">
+                Award-winning fluid motion animations, 4K commercial video reel player, and case study visual deep dives.
+              </p>
+            </div>
+            <div class="space-y-3 pt-2 border-t border-[#70805D]/15">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Next.js</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">GSAP</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Tailwind CSS</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Vimeo API</span>
+              </div>
+              <div class="flex items-center justify-between text-xs pt-1">
+                <span class="text-[11px] font-extrabold text-[#70805D]">Sub-Second Speed</span>
+                <a href="https://prism-studio.example.com" target="_blank" rel="noopener noreferrer" class="font-bold text-[#2A3B27] hover:text-[#70805D] flex items-center gap-1">
+                  <span>Visit Live Website</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 13: EstatePrime Properties -->
+        <div class="project-card spotlight-card bg-[#F8F9F6] border border-[#70805D]/20 rounded-3xl overflow-hidden shadow-sm flex flex-col group" data-category="Corporate / B2B">
+          <div class="relative h-56 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="EstatePrime Properties" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#1C2B1B]/80 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10.5px] font-bold">
+              Corporate / B2B
+            </div>
+            <div class="absolute top-3 right-3 bg-[#70805D] text-white px-2.5 py-1 rounded-full text-[10px] font-extrabold shadow-sm">
+              $45M+ Listings
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="text-[11px] font-bold text-[#55738D] uppercase tracking-wider">EstatePrime Developments</div>
+              <h3 class="text-lg font-extrabold text-[#1C2B1B] mt-1 group-hover:text-[#70805D] transition-colors">
+                High-End Real Estate Portal
+              </h3>
+              <p class="text-xs text-[#4D614A] mt-2 leading-relaxed">
+                Neighborhood walkthrough map, drone aerial video tour embeds, and VIP private inspection scheduling engine.
+              </p>
+            </div>
+            <div class="space-y-3 pt-2 border-t border-[#70805D]/15">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">React</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Mapbox GL</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Tailwind CSS</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Node.js</span>
+              </div>
+              <div class="flex items-center justify-between text-xs pt-1">
+                <span class="text-[11px] font-extrabold text-[#70805D]">Sub-Second Speed</span>
+                <a href="https://estateprime-realty.example.com" target="_blank" rel="noopener noreferrer" class="font-bold text-[#2A3B27] hover:text-[#70805D] flex items-center gap-1">
+                  <span>Visit Live Website</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 14: ChronoCraft Horology -->
+        <div class="project-card spotlight-card bg-[#F8F9F6] border border-[#70805D]/20 rounded-3xl overflow-hidden shadow-sm flex flex-col group" data-category="E-Commerce">
+          <div class="relative h-56 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80" alt="ChronoCraft Horology" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#1C2B1B]/80 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10.5px] font-bold">
+              E-Commerce
+            </div>
+            <div class="absolute top-3 right-3 bg-[#70805D] text-white px-2.5 py-1 rounded-full text-[10px] font-extrabold shadow-sm">
+              3.8x Conversion Rate
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="text-[11px] font-bold text-[#55738D] uppercase tracking-wider">ChronoCraft Timepieces</div>
+              <h3 class="text-lg font-extrabold text-[#1C2B1B] mt-1 group-hover:text-[#70805D] transition-colors">
+                Heritage Luxury Watch Store
+              </h3>
+              <p class="text-xs text-[#4D614A] mt-2 leading-relaxed">
+                360° product interactive 3D rotation, serial number warranty authenticator, and insured global delivery tracking.
+              </p>
+            </div>
+            <div class="space-y-3 pt-2 border-t border-[#70805D]/15">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Shopify Plus</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Three.js</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Tailwind CSS</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Algolia</span>
+              </div>
+              <div class="flex items-center justify-between text-xs pt-1">
+                <span class="text-[11px] font-extrabold text-[#70805D]">Sub-Second Speed</span>
+                <a href="https://chronocraft-watches.example.com" target="_blank" rel="noopener noreferrer" class="font-bold text-[#2A3B27] hover:text-[#70805D] flex items-center gap-1">
+                  <span>Visit Live Website</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 15: EchoSound Festival -->
+        <div class="project-card spotlight-card bg-[#F8F9F6] border border-[#70805D]/20 rounded-3xl overflow-hidden shadow-sm flex flex-col group" data-category="Hospitality & Booking">
+          <div class="relative h-56 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80" alt="EchoSound Festival" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#1C2B1B]/80 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10.5px] font-bold">
+              Hospitality &amp; Booking
+            </div>
+            <div class="absolute top-3 right-3 bg-[#70805D] text-white px-2.5 py-1 rounded-full text-[10px] font-extrabold shadow-sm">
+              5,000+ Tickets Sold
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="text-[11px] font-bold text-[#55738D] uppercase tracking-wider">EchoLive Entertainment</div>
+              <h3 class="text-lg font-extrabold text-[#1C2B1B] mt-1 group-hover:text-[#70805D] transition-colors">
+                Live Concert &amp; Event Ticket Engine
+              </h3>
+              <p class="text-xs text-[#4D614A] mt-2 leading-relaxed">
+                Interactive festival venue map, tiered VIP ticket sales, and instant automated QR e-ticket generation.
+              </p>
+            </div>
+            <div class="space-y-3 pt-2 border-t border-[#70805D]/15">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">React</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Tailwind CSS</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">Stripe Connect</span>
+                <span class="px-2 py-0.5 rounded bg-white border border-[#70805D]/20 text-[10px] font-bold text-[#2A3B27]">QR Scanner</span>
+              </div>
+              <div class="flex items-center justify-between text-xs pt-1">
+                <span class="text-[11px] font-extrabold text-[#70805D]">Sub-Second Speed</span>
+                <a href="https://echosound-festival.example.com" target="_blank" rel="noopener noreferrer" class="font-bold text-[#2A3B27] hover:text-[#70805D] flex items-center gap-1">
+                  <span>Visit Live Website</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. COMMISSION CTA STRIP -->
+  <section class="py-20 border-t border-[#70805D]/15 bg-gradient-to-br from-[#2A3B27] to-[#1C2B1B] text-white relative z-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white text-xs font-bold backdrop-blur-md border border-white/15">
+        <span class="pulse-dot-olive"></span>
+        <span>High-Performance Architecture</span>
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">
+        Need a High-Converting Web Platform for Your Brand?
+      </h2>
+      <p class="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed">
+        Let's engineer a bespoke, lightning-fast digital asset tailored to your business model. Sub-second load speeds, clean modern design, and 100% IP ownership.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+        <a href="/contact.html" class="px-8 py-3.5 rounded-full bg-[#70805D] hover:bg-[#82946C] text-white text-sm font-bold shadow-lg shadow-[#70805D]/30 transition-all">
+          <span>Commission a Website</span>
+        </a>
+        <a href="https://wa.me/8801838070468" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm font-bold border border-white/20 backdrop-blur-md transition-all flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-base text-[#96A7B6]"></i>
+          <span>Direct WhatsApp Chat</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. UNIFIED FOOTER -->
+  <footer class="py-16 border-t border-[#70805D]/15 bg-[#F1F3ED] relative z-10 text-xs text-[#4D614A]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-[#70805D] text-white flex items-center justify-center font-black text-xs shadow-sm">
+              SR
+            </div>
+            <span class="font-bold text-[#1C2B1B] tracking-tight text-base">Md. Shakibur Rahaman</span>
+          </div>
+          <p class="text-xs text-[#4D614A] leading-relaxed">
+            Strategic Lead &amp; Digital Growth Architect. Directing branding, high-performance web engineering, and commercial acquisition.
+          </p>
+        </div>
+
+        <div class="space-y-2.5">
+          <div class="text-[#2A3B27] font-bold uppercase tracking-wider text-[11px] mb-2">Explore Pages</div>
+          <div><a href="/" class="hover:text-[#70805D]">Home</a></div>
+          <div><a href="/about.html" class="hover:text-[#70805D]">About Me</a></div>
+          <div><a href="/services.html" class="hover:text-[#70805D]">6 Core Services</a></div>
+          <div><a href="/projects.html" class="hover:text-[#70805D] font-bold text-[#70805D]">15 Web Projects</a></div>
+          <div><a href="/case-studies.html" class="hover:text-[#70805D]">Case Studies</a></div>
+          <div><a href="/testimonials.html" class="hover:text-[#70805D]">Testimonials</a></div>
+          <div><a href="/contact.html" class="hover:text-[#70805D]">Contact &amp; Inquiry</a></div>
+        </div>
+
+        <div class="space-y-2.5">
+          <div class="text-[#2A3B27] font-bold uppercase tracking-wider text-[11px] mb-2">Core Services</div>
+          <div><a href="/services/graphics-design.html" class="hover:text-[#70805D]">01 Graphics &amp; Visual ID</a></div>
+          <div><a href="/services/web-development.html" class="hover:text-[#70805D]">02 Web Development</a></div>
+          <div><a href="/services/social-media-marketing.html" class="hover:text-[#70805D]">03 Social Media (SMM)</a></div>
+          <div><a href="/services/public-relations.html" class="hover:text-[#70805D]">04 PR &amp; Media Outreach</a></div>
+          <div><a href="/services/google-ads.html" class="hover:text-[#70805D]">05 Google Ads &amp; Intent</a></div>
+          <div><a href="/services/event-activation.html" class="hover:text-[#70805D]">06 Event &amp; Exhibition</a></div>
+        </div>
+
+        <div class="space-y-2.5">
+          <div class="text-[#2A3B27] font-bold uppercase tracking-wider text-[11px] mb-2">Direct Contact</div>
+          <div><a href="mailto:shakibur188@gmail.com" class="hover:text-[#70805D] font-bold">shakibur188@gmail.com</a></div>
+          <div><a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#70805D] font-bold">+880 1838-070468</a></div>
+          <div><span class="text-[#55738D]">Dhaka, Bangladesh</span></div>
+          <div class="pt-2"><a href="/admin" target="_blank" class="text-[11px] text-[#55738D] hover:text-[#2A3B27] font-bold">Admin CMS Portal 🔐</a></div>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-[#70805D]/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+        <div>© 2026 Md. Shakibur Rahaman. All rights reserved.</div>
+        <div>Designed &amp; Engineered by <span class="text-[#2A3B27] font-bold">Md. Shakibur Rahaman</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./services/service-page.js"></script>
+  <script>
+    // Interactive Category Filter Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('#projectFilterBar .filter-btn');
+      const cards = document.querySelectorAll('#fullProjectsGrid .project-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const category = btn.getAttribute('data-category');
+
+          cards.forEach(card => {
+            const cardCat = card.getAttribute('data-category');
+            if (category === 'all' || cardCat.includes(category) || (category === 'E-Commerce' && cardCat.includes('E-Commerce')) || (category === 'Corporate / B2B' && cardCat.includes('Corporate'))) {
+              card.style.display = 'flex';
+              card.style.opacity = '1';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+  <script src="/site-hydration.js?v=3.5"></script>
+</body>
+</html>
