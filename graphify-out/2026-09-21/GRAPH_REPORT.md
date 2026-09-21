@@ -1,7 +1,7 @@
 # Graph Report - shakibur-portfolio-live  (2026-09-21)
 
 ## Corpus Check
-- 39 files · ~162,701 words
+- 39 files · ~162,442 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 11 file(s) not represented in the graph (top: (none) 2, .css 2, .bat 2)
 

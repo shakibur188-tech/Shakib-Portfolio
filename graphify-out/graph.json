@@ -4,6 +4,18 @@
   "graph": {},
   "nodes": [
     {
+      "id": "admin_addfieldtobuilder",
+      "label": "addFieldToBuilder()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "addfieldtobuilder()",
+      "source_file": "admin.js",
+      "source_location": "L2839"
+    },
+    {
       "id": "admin_calculateseoscore",
       "label": "calculateSeoScore()",
       "_callable": true,
@@ -13,7 +25,31 @@
       "file_type": "code",
       "norm_label": "calculateseoscore()",
       "source_file": "admin.js",
-      "source_location": "L1725"
+      "source_location": "L1724"
+    },
+    {
+      "id": "admin_closeembedmodal",
+      "label": "closeEmbedModal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "closeembedmodal()",
+      "source_file": "admin.js",
+      "source_location": "L3087"
+    },
+    {
+      "id": "admin_closetemplatemodal",
+      "label": "closeTemplateModal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "closetemplatemodal()",
+      "source_file": "admin.js",
+      "source_location": "L2696"
     },
     {
       "id": "admin_discardchanges",
@@ -25,7 +61,7 @@
       "file_type": "code",
       "norm_label": "discardchanges()",
       "source_file": "admin.js",
-      "source_location": "L1906"
+      "source_location": "L1905"
     },
     {
       "id": "admin_downloadsitebackup",
@@ -37,7 +73,7 @@
       "file_type": "code",
       "norm_label": "downloadsitebackup()",
       "source_file": "admin.js",
-      "source_location": "L1929"
+      "source_location": "L1928"
     },
     {
       "id": "admin_escapehtml",
@@ -49,7 +85,7 @@
       "file_type": "code",
       "norm_label": "escapehtml()",
       "source_file": "admin.js",
-      "source_location": "L2002"
+      "source_location": "L2001"
     },
     {
       "id": "admin_exportleadscsv",
@@ -61,7 +97,19 @@
       "file_type": "code",
       "norm_label": "exportleadscsv()",
       "source_file": "admin.js",
-      "source_location": "L1677"
+      "source_location": "L1676"
+    },
+    {
+      "id": "admin_exportsubmissionscsv",
+      "label": "exportSubmissionsCsv()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "exportsubmissionscsv()",
+      "source_file": "admin.js",
+      "source_location": "L3226"
     },
     {
       "id": "admin_filterleads",
@@ -73,7 +121,19 @@
       "file_type": "code",
       "norm_label": "filterleads()",
       "source_file": "admin.js",
-      "source_location": "L1662"
+      "source_location": "L1661"
+    },
+    {
+      "id": "admin_filtersubmissionslocal",
+      "label": "filterSubmissionsLocal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "filtersubmissionslocal()",
+      "source_file": "admin.js",
+      "source_location": "L3129"
     },
     {
       "id": "admin_gathercontentfromforms",
@@ -85,7 +145,7 @@
       "file_type": "code",
       "norm_label": "gathercontentfromforms()",
       "source_file": "admin.js",
-      "source_location": "L1786"
+      "source_location": "L1785"
     },
     {
       "id": "admin_getcasestudiesfromforms",
@@ -121,7 +181,7 @@
       "file_type": "code",
       "norm_label": "getmenufromforms()",
       "source_file": "admin.js",
-      "source_location": "L1312"
+      "source_location": "L1311"
     },
     {
       "id": "admin_getmenuitemsfromdom",
@@ -133,7 +193,7 @@
       "file_type": "code",
       "norm_label": "getmenuitemsfromdom()",
       "source_file": "admin.js",
-      "source_location": "L1296"
+      "source_location": "L1295"
     },
     {
       "id": "admin_getpagefiguresfromdom",
@@ -145,7 +205,7 @@
       "file_type": "code",
       "norm_label": "getpagefiguresfromdom()",
       "source_file": "admin.js",
-      "source_location": "L1499"
+      "source_location": "L1498"
     },
     {
       "id": "admin_getpagesfromforms",
@@ -157,7 +217,7 @@
       "file_type": "code",
       "norm_label": "getpagesfromforms()",
       "source_file": "admin.js",
-      "source_location": "L1515"
+      "source_location": "L1514"
     },
     {
       "id": "admin_getprocessfromforms",
@@ -193,7 +253,7 @@
       "file_type": "code",
       "norm_label": "getstatsfromforms()",
       "source_file": "admin.js",
-      "source_location": "L1575"
+      "source_location": "L1574"
     },
     {
       "id": "admin_gettestimonialsfromforms",
@@ -217,7 +277,7 @@
       "file_type": "code",
       "norm_label": "gettypewriterphrases()",
       "source_file": "admin.js",
-      "source_location": "L1546"
+      "source_location": "L1545"
     },
     {
       "id": "admin_getwebprojectsfromforms",
@@ -241,7 +301,7 @@
       "file_type": "code",
       "norm_label": "handlebrainstormaiideas()",
       "source_file": "admin.js",
-      "source_location": "L2302"
+      "source_location": "L2301"
     },
     {
       "id": "admin_handlechangepassword",
@@ -265,7 +325,7 @@
       "file_type": "code",
       "norm_label": "handlecopypresetchange()",
       "source_file": "admin.js",
-      "source_location": "L2157"
+      "source_location": "L2156"
     },
     {
       "id": "admin_handlefactoryreset",
@@ -277,7 +337,7 @@
       "file_type": "code",
       "norm_label": "handlefactoryreset()",
       "source_file": "admin.js",
-      "source_location": "L1970"
+      "source_location": "L1969"
     },
     {
       "id": "admin_handlegenerateaiimage",
@@ -289,7 +349,7 @@
       "file_type": "code",
       "norm_label": "handlegenerateaiimage()",
       "source_file": "admin.js",
-      "source_location": "L2229"
+      "source_location": "L2228"
     },
     {
       "id": "admin_handlegenerateaitext",
@@ -301,7 +361,7 @@
       "file_type": "code",
       "norm_label": "handlegenerateaitext()",
       "source_file": "admin.js",
-      "source_location": "L2175"
+      "source_location": "L2174"
     },
     {
       "id": "admin_handlelogin",
@@ -337,7 +397,7 @@
       "file_type": "code",
       "norm_label": "handlerestorebackup()",
       "source_file": "admin.js",
-      "source_location": "L1948"
+      "source_location": "L1947"
     },
     {
       "id": "admin_handlesaveaiconfig",
@@ -349,7 +409,7 @@
       "file_type": "code",
       "norm_label": "handlesaveaiconfig()",
       "source_file": "admin.js",
-      "source_location": "L2068"
+      "source_location": "L2067"
     },
     {
       "id": "admin_handletestaiconnection",
@@ -361,7 +421,19 @@
       "file_type": "code",
       "norm_label": "handletestaiconnection()",
       "source_file": "admin.js",
-      "source_location": "L2116"
+      "source_location": "L2115"
+    },
+    {
+      "id": "admin_initformbuildereventlisteners",
+      "label": "initFormBuilderEventListeners()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "initformbuildereventlisteners()",
+      "source_file": "admin.js",
+      "source_location": "L2382"
     },
     {
       "id": "admin_loadaistudiostatus",
@@ -373,7 +445,7 @@
       "file_type": "code",
       "norm_label": "loadaistudiostatus()",
       "source_file": "admin.js",
-      "source_location": "L2026"
+      "source_location": "L2025"
     },
     {
       "id": "admin_loaddashboarddata",
@@ -388,6 +460,18 @@
       "source_location": "L334"
     },
     {
+      "id": "admin_loadformsdata",
+      "label": "loadFormsData()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "loadformsdata()",
+      "source_file": "admin.js",
+      "source_location": "L2561"
+    },
+    {
       "id": "admin_loadleads",
       "label": "loadLeads()",
       "_callable": true,
@@ -400,6 +484,18 @@
       "source_location": "L351"
     },
     {
+      "id": "admin_loadsubmissions",
+      "label": "loadSubmissions()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "loadsubmissions()",
+      "source_file": "admin.js",
+      "source_location": "L3110"
+    },
+    {
       "id": "admin_markdirty",
       "label": "markDirty()",
       "_callable": true,
@@ -409,7 +505,19 @@
       "file_type": "code",
       "norm_label": "markdirty()",
       "source_file": "admin.js",
-      "source_location": "L1914"
+      "source_location": "L1913"
+    },
+    {
+      "id": "admin_openformbuilder",
+      "label": "openFormBuilder()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "openformbuilder()",
+      "source_file": "admin.js",
+      "source_location": "L2710"
     },
     {
       "id": "admin_populateadminforms",
@@ -422,6 +530,30 @@
       "norm_label": "populateadminforms()",
       "source_file": "admin.js",
       "source_location": "L604"
+    },
+    {
+      "id": "admin_populatesubmissionsformfilter",
+      "label": "populateSubmissionsFormFilter()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "populatesubmissionsformfilter()",
+      "source_file": "admin.js",
+      "source_location": "L3091"
+    },
+    {
+      "id": "admin_renderbuilderfields",
+      "label": "renderBuilderFields()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "renderbuilderfields()",
+      "source_file": "admin.js",
+      "source_location": "L2741"
     },
     {
       "id": "admin_rendercasestudieseditor",
@@ -448,6 +580,18 @@
       "source_location": "L987"
     },
     {
+      "id": "admin_rendercustomformstable",
+      "label": "renderCustomFormsTable()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "rendercustomformstable()",
+      "source_file": "admin.js",
+      "source_location": "L2971"
+    },
+    {
       "id": "admin_renderleads",
       "label": "renderLeads()",
       "_callable": true,
@@ -457,7 +601,7 @@
       "file_type": "code",
       "norm_label": "renderleads()",
       "source_file": "admin.js",
-      "source_location": "L1591"
+      "source_location": "L1590"
     },
     {
       "id": "admin_rendermenueditor",
@@ -481,7 +625,7 @@
       "file_type": "code",
       "norm_label": "rendermenuitemslist()",
       "source_file": "admin.js",
-      "source_location": "L1217"
+      "source_location": "L1216"
     },
     {
       "id": "admin_renderpagebypageeditor",
@@ -493,7 +637,7 @@
       "file_type": "code",
       "norm_label": "renderpagebypageeditor()",
       "source_file": "admin.js",
-      "source_location": "L1335"
+      "source_location": "L1334"
     },
     {
       "id": "admin_renderpagefigures",
@@ -505,7 +649,7 @@
       "file_type": "code",
       "norm_label": "renderpagefigures()",
       "source_file": "admin.js",
-      "source_location": "L1405"
+      "source_location": "L1404"
     },
     {
       "id": "admin_renderprocesseditor",
@@ -541,7 +685,31 @@
       "file_type": "code",
       "norm_label": "renderstatseditor()",
       "source_file": "admin.js",
-      "source_location": "L1552"
+      "source_location": "L1551"
+    },
+    {
+      "id": "admin_rendersubmissionslist",
+      "label": "renderSubmissionsList()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "rendersubmissionslist()",
+      "source_file": "admin.js",
+      "source_location": "L3144"
+    },
+    {
+      "id": "admin_rendertemplategallery",
+      "label": "renderTemplateGallery()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "rendertemplategallery()",
+      "source_file": "admin.js",
+      "source_location": "L2595"
     },
     {
       "id": "admin_rendertestimonialseditor",
@@ -565,7 +733,7 @@
       "file_type": "code",
       "norm_label": "rendertypewriterlist()",
       "source_file": "admin.js",
-      "source_location": "L1521"
+      "source_location": "L1520"
     },
     {
       "id": "admin_renderwebprojectseditor",
@@ -589,7 +757,7 @@
       "file_type": "code",
       "norm_label": "resetdirty()",
       "source_file": "admin.js",
-      "source_location": "L1920"
+      "source_location": "L1919"
     },
     {
       "id": "admin_saveactivepageformtomemory",
@@ -601,7 +769,7 @@
       "file_type": "code",
       "norm_label": "saveactivepageformtomemory()",
       "source_file": "admin.js",
-      "source_location": "L1376"
+      "source_location": "L1375"
     },
     {
       "id": "admin_saveandpublish",
@@ -613,7 +781,19 @@
       "file_type": "code",
       "norm_label": "saveandpublish()",
       "source_file": "admin.js",
-      "source_location": "L1855"
+      "source_location": "L1854"
+    },
+    {
+      "id": "admin_savebuilderform",
+      "label": "saveBuilderForm()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "savebuilderform()",
+      "source_file": "admin.js",
+      "source_location": "L2926"
     },
     {
       "id": "admin_setupeventlisteners",
@@ -673,7 +853,31 @@
       "file_type": "code",
       "norm_label": "showtoast()",
       "source_file": "admin.js",
-      "source_location": "L1990"
+      "source_location": "L1989"
+    },
+    {
+      "id": "admin_switchformsubtab",
+      "label": "switchFormSubtab()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "switchformsubtab()",
+      "source_file": "admin.js",
+      "source_location": "L2542"
+    },
+    {
+      "id": "admin_syncbuildermetadata",
+      "label": "syncBuilderMetadata()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "syncbuildermetadata()",
+      "source_file": "admin.js",
+      "source_location": "L2730"
     },
     {
       "id": "admin_updategoogleserppreview",
@@ -685,7 +889,19 @@
       "file_type": "code",
       "norm_label": "updategoogleserppreview()",
       "source_file": "admin.js",
-      "source_location": "L1704"
+      "source_location": "L1703"
+    },
+    {
+      "id": "admin_updateliveformpreview",
+      "label": "updateLiveFormPreview()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "admin.js",
+      "file_type": "code",
+      "norm_label": "updateliveformpreview()",
+      "source_file": "admin.js",
+      "source_location": "L2869"
     },
     {
       "id": "admin_updateoverviewstats",
@@ -1129,7 +1345,7 @@
       "file_type": "code",
       "norm_label": "escapehtml()",
       "source_file": "app.js",
-      "source_location": "L1256"
+      "source_location": "L1259"
     },
     {
       "id": "app_fetchandhydratecontent",
@@ -1165,7 +1381,7 @@
       "file_type": "code",
       "norm_label": "filterprojectsbycategory()",
       "source_file": "app.js",
-      "source_location": "L869"
+      "source_location": "L872"
     },
     {
       "id": "app_getemergencyfallbackdata",
@@ -1189,7 +1405,7 @@
       "file_type": "code",
       "norm_label": "handlecardmousemove()",
       "source_file": "app.js",
-      "source_location": "L904"
+      "source_location": "L907"
     },
     {
       "id": "app_initambientbackground",
@@ -1237,7 +1453,7 @@
       "file_type": "code",
       "norm_label": "initbeforeaftersliders()",
       "source_file": "app.js",
-      "source_location": "L939"
+      "source_location": "L942"
     },
     {
       "id": "app_initcontactform",
@@ -1249,7 +1465,7 @@
       "file_type": "code",
       "norm_label": "initcontactform()",
       "source_file": "app.js",
-      "source_location": "L1086"
+      "source_location": "L1089"
     },
     {
       "id": "app_initcontactform_showformstatus",
@@ -1261,7 +1477,7 @@
       "file_type": "code",
       "norm_label": "showformstatus()",
       "source_file": "app.js",
-      "source_location": "L1140"
+      "source_location": "L1143"
     },
     {
       "id": "app_initmobilemenu",
@@ -1273,7 +1489,7 @@
       "file_type": "code",
       "norm_label": "initmobilemenu()",
       "source_file": "app.js",
-      "source_location": "L1200"
+      "source_location": "L1203"
     },
     {
       "id": "app_initprojectfilter",
@@ -1285,7 +1501,7 @@
       "file_type": "code",
       "norm_label": "initprojectfilter()",
       "source_file": "app.js",
-      "source_location": "L855"
+      "source_location": "L858"
     },
     {
       "id": "app_initscrolleffects",
@@ -1297,7 +1513,7 @@
       "file_type": "code",
       "norm_label": "initscrolleffects()",
       "source_file": "app.js",
-      "source_location": "L1219"
+      "source_location": "L1222"
     },
     {
       "id": "app_initscrolleffects_handlescroll",
@@ -1309,7 +1525,7 @@
       "file_type": "code",
       "norm_label": "handlescroll()",
       "source_file": "app.js",
-      "source_location": "L1224"
+      "source_location": "L1227"
     },
     {
       "id": "app_initscrollprogressbar",
@@ -1345,7 +1561,7 @@
       "file_type": "code",
       "norm_label": "initscrollreveal()",
       "source_file": "app.js",
-      "source_location": "L915"
+      "source_location": "L918"
     },
     {
       "id": "app_initservicemodal",
@@ -1357,7 +1573,7 @@
       "file_type": "code",
       "norm_label": "initservicemodal()",
       "source_file": "app.js",
-      "source_location": "L996"
+      "source_location": "L999"
     },
     {
       "id": "app_initservicemodal_closemodal",
@@ -1369,7 +1585,7 @@
       "file_type": "code",
       "norm_label": "closemodal()",
       "source_file": "app.js",
-      "source_location": "L1003"
+      "source_location": "L1006"
     },
     {
       "id": "app_initspotlightcards",
@@ -1381,7 +1597,7 @@
       "file_type": "code",
       "norm_label": "initspotlightcards()",
       "source_file": "app.js",
-      "source_location": "L895"
+      "source_location": "L898"
     },
     {
       "id": "app_inittypewriter",
@@ -1393,7 +1609,7 @@
       "file_type": "code",
       "norm_label": "inittypewriter()",
       "source_file": "app.js",
-      "source_location": "L1157"
+      "source_location": "L1160"
     },
     {
       "id": "app_inittypewriter_type",
@@ -1405,7 +1621,7 @@
       "file_type": "code",
       "norm_label": "type()",
       "source_file": "app.js",
-      "source_location": "L1166"
+      "source_location": "L1169"
     },
     {
       "id": "app_renderhomecasestudies",
@@ -1417,7 +1633,7 @@
       "file_type": "code",
       "norm_label": "renderhomecasestudies()",
       "source_file": "app.js",
-      "source_location": "L728"
+      "source_location": "L731"
     },
     {
       "id": "app_renderroadmap",
@@ -1429,7 +1645,7 @@
       "file_type": "code",
       "norm_label": "renderroadmap()",
       "source_file": "app.js",
-      "source_location": "L791"
+      "source_location": "L794"
     },
     {
       "id": "app_renderservices",
@@ -1453,7 +1669,7 @@
       "file_type": "code",
       "norm_label": "rendertecharsenal()",
       "source_file": "app.js",
-      "source_location": "L720"
+      "source_location": "L723"
     },
     {
       "id": "app_rendertestimonials",
@@ -1465,7 +1681,7 @@
       "file_type": "code",
       "norm_label": "rendertestimonials()",
       "source_file": "app.js",
-      "source_location": "L819"
+      "source_location": "L822"
     },
     {
       "id": "app_renderwebprojects",
@@ -1489,7 +1705,7 @@
       "file_type": "code",
       "norm_label": "animatecounter()",
       "source_file": "site-hydration.js",
-      "source_location": "L293"
+      "source_location": "L309"
     },
     {
       "id": "site_hydration_animatecounter_update",
@@ -1501,7 +1717,7 @@
       "file_type": "code",
       "norm_label": "update()",
       "source_file": "site-hydration.js",
-      "source_location": "L303"
+      "source_location": "L319"
     },
     {
       "id": "site_hydration_detectcurrentpagekey",
@@ -1537,7 +1753,7 @@
       "file_type": "code",
       "norm_label": "hydratefiguresstrip()",
       "source_file": "site-hydration.js",
-      "source_location": "L209"
+      "source_location": "L225"
     },
     {
       "id": "site_hydration_hydrateheadermenu",
@@ -1561,7 +1777,7 @@
       "file_type": "code",
       "norm_label": "hydratepagecontent()",
       "source_file": "site-hydration.js",
-      "source_location": "L122"
+      "source_location": "L138"
     },
     {
       "id": "site_hydration_initanimatedcounters",
@@ -1573,7 +1789,7 @@
       "file_type": "code",
       "norm_label": "initanimatedcounters()",
       "source_file": "site-hydration.js",
-      "source_location": "L273"
+      "source_location": "L289"
     },
     {
       "id": "site_hydration_inithydration",
@@ -1585,223 +1801,67 @@
       "file_type": "code",
       "norm_label": "inithydration()",
       "source_file": "site-hydration.js",
-      "source_location": "L328"
+      "source_location": "L344"
     },
     {
-      "id": "admin_addfieldtobuilder",
-      "label": "addFieldToBuilder()",
+      "id": "scratch_clean_all_nav_gethtmlfiles",
+      "label": "getHtmlFiles()",
       "_callable": true,
       "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
+      "community": 23,
+      "community_name": "clean_all_nav.js",
       "file_type": "code",
-      "norm_label": "addfieldtobuilder()",
-      "source_file": "admin.js",
-      "source_location": "L2840"
+      "norm_label": "gethtmlfiles()",
+      "source_file": "scratch/clean_all_nav.js",
+      "source_location": "L4"
     },
     {
-      "id": "admin_closeembedmodal",
-      "label": "closeEmbedModal()",
+      "id": "scratch_find_15_web_gethtmlfiles",
+      "label": "getHtmlFiles()",
       "_callable": true,
       "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
+      "community": 24,
+      "community_name": "find_15_web.js",
       "file_type": "code",
-      "norm_label": "closeembedmodal()",
-      "source_file": "admin.js",
-      "source_location": "L3088"
+      "norm_label": "gethtmlfiles()",
+      "source_file": "scratch/find_15_web.js",
+      "source_location": "L4"
     },
     {
-      "id": "admin_closetemplatemodal",
-      "label": "closeTemplateModal()",
+      "id": "scratch_find_testimonials_gethtmlfiles",
+      "label": "getHtmlFiles()",
       "_callable": true,
       "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
+      "community": 25,
+      "community_name": "find_testimonials.js",
       "file_type": "code",
-      "norm_label": "closetemplatemodal()",
-      "source_file": "admin.js",
-      "source_location": "L2697"
+      "norm_label": "gethtmlfiles()",
+      "source_file": "scratch/find_testimonials.js",
+      "source_location": "L4"
     },
     {
-      "id": "admin_exportsubmissionscsv",
-      "label": "exportSubmissionsCsv()",
+      "id": "scratch_scan_html_gethtmlfiles",
+      "label": "getHtmlFiles()",
       "_callable": true,
       "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
+      "community": 26,
+      "community_name": "scan_html.js",
       "file_type": "code",
-      "norm_label": "exportsubmissionscsv()",
-      "source_file": "admin.js",
-      "source_location": "L3227"
+      "norm_label": "gethtmlfiles()",
+      "source_file": "scratch/scan_html.js",
+      "source_location": "L4"
     },
     {
-      "id": "admin_filtersubmissionslocal",
-      "label": "filterSubmissionsLocal()",
+      "id": "scratch_test_live_test",
+      "label": "test()",
       "_callable": true,
       "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
+      "community": 27,
+      "community_name": "test_live.js",
       "file_type": "code",
-      "norm_label": "filtersubmissionslocal()",
-      "source_file": "admin.js",
-      "source_location": "L3130"
-    },
-    {
-      "id": "admin_initformbuildereventlisteners",
-      "label": "initFormBuilderEventListeners()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
-      "file_type": "code",
-      "norm_label": "initformbuildereventlisteners()",
-      "source_file": "admin.js",
-      "source_location": "L2383"
-    },
-    {
-      "id": "admin_loadformsdata",
-      "label": "loadFormsData()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
-      "file_type": "code",
-      "norm_label": "loadformsdata()",
-      "source_file": "admin.js",
-      "source_location": "L2562"
-    },
-    {
-      "id": "admin_loadsubmissions",
-      "label": "loadSubmissions()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
-      "file_type": "code",
-      "norm_label": "loadsubmissions()",
-      "source_file": "admin.js",
-      "source_location": "L3111"
-    },
-    {
-      "id": "admin_openformbuilder",
-      "label": "openFormBuilder()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
-      "file_type": "code",
-      "norm_label": "openformbuilder()",
-      "source_file": "admin.js",
-      "source_location": "L2711"
-    },
-    {
-      "id": "admin_populatesubmissionsformfilter",
-      "label": "populateSubmissionsFormFilter()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
-      "file_type": "code",
-      "norm_label": "populatesubmissionsformfilter()",
-      "source_file": "admin.js",
-      "source_location": "L3092"
-    },
-    {
-      "id": "admin_renderbuilderfields",
-      "label": "renderBuilderFields()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
-      "file_type": "code",
-      "norm_label": "renderbuilderfields()",
-      "source_file": "admin.js",
-      "source_location": "L2742"
-    },
-    {
-      "id": "admin_rendercustomformstable",
-      "label": "renderCustomFormsTable()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
-      "file_type": "code",
-      "norm_label": "rendercustomformstable()",
-      "source_file": "admin.js",
-      "source_location": "L2972"
-    },
-    {
-      "id": "admin_rendersubmissionslist",
-      "label": "renderSubmissionsList()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
-      "file_type": "code",
-      "norm_label": "rendersubmissionslist()",
-      "source_file": "admin.js",
-      "source_location": "L3145"
-    },
-    {
-      "id": "admin_rendertemplategallery",
-      "label": "renderTemplateGallery()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
-      "file_type": "code",
-      "norm_label": "rendertemplategallery()",
-      "source_file": "admin.js",
-      "source_location": "L2596"
-    },
-    {
-      "id": "admin_savebuilderform",
-      "label": "saveBuilderForm()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
-      "file_type": "code",
-      "norm_label": "savebuilderform()",
-      "source_file": "admin.js",
-      "source_location": "L2927"
-    },
-    {
-      "id": "admin_switchformsubtab",
-      "label": "switchFormSubtab()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
-      "file_type": "code",
-      "norm_label": "switchformsubtab()",
-      "source_file": "admin.js",
-      "source_location": "L2543"
-    },
-    {
-      "id": "admin_syncbuildermetadata",
-      "label": "syncBuilderMetadata()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
-      "file_type": "code",
-      "norm_label": "syncbuildermetadata()",
-      "source_file": "admin.js",
-      "source_location": "L2731"
-    },
-    {
-      "id": "admin_updateliveformpreview",
-      "label": "updateLiveFormPreview()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "initFormBuilderEventListeners",
-      "file_type": "code",
-      "norm_label": "updateliveformpreview()",
-      "source_file": "admin.js",
-      "source_location": "L2870"
+      "norm_label": "test()",
+      "source_file": "scratch/test_live.js",
+      "source_location": "L1"
     },
     {
       "id": "services_service_page_initambientcanvas",
@@ -2063,7 +2123,7 @@
       "file_type": "code",
       "norm_label": "allformsdata",
       "source_file": "admin.js",
-      "source_location": "L2364"
+      "source_location": "L2363"
     },
     {
       "id": "admin_allsubmissionsdata",
@@ -2074,7 +2134,7 @@
       "file_type": "code",
       "norm_label": "allsubmissionsdata",
       "source_file": "admin.js",
-      "source_location": "L2365"
+      "source_location": "L2364"
     },
     {
       "id": "admin_currentbuilderform",
@@ -2085,7 +2145,7 @@
       "file_type": "code",
       "norm_label": "currentbuilderform",
       "source_file": "admin.js",
-      "source_location": "L2366"
+      "source_location": "L2365"
     },
     {
       "id": "admin_currentleads",
@@ -2806,6 +2866,314 @@
       "source_location": "L1"
     },
     {
+      "id": "fix_admin_css",
+      "label": "fix_admin_css.js",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "ref_path",
+      "file_type": "code",
+      "norm_label": "fix_admin_css.js",
+      "source_file": "fix_admin_css.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "fix_admin_css_css",
+      "label": "css",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "ref_path",
+      "file_type": "code",
+      "norm_label": "css",
+      "source_file": "fix_admin_css.js",
+      "source_location": "L5"
+    },
+    {
+      "id": "fix_admin_css_csspath",
+      "label": "cssPath",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "ref_path",
+      "file_type": "code",
+      "norm_label": "csspath",
+      "source_file": "fix_admin_css.js",
+      "source_location": "L4"
+    },
+    {
+      "id": "fix_admin_css_fs",
+      "label": "fs",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "ref_path",
+      "file_type": "code",
+      "norm_label": "fs",
+      "source_file": "fix_admin_css.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "fix_admin_css_path",
+      "label": "path",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "ref_path",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "fix_admin_css.js",
+      "source_location": "L2"
+    },
+    {
+      "id": "update_styles_responsive",
+      "label": "update_styles_responsive.js",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "ref_fs",
+      "file_type": "code",
+      "norm_label": "update_styles_responsive.js",
+      "source_file": "update_styles_responsive.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "update_styles_responsive_css",
+      "label": "css",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "ref_fs",
+      "file_type": "code",
+      "norm_label": "css",
+      "source_file": "update_styles_responsive.js",
+      "source_location": "L5"
+    },
+    {
+      "id": "update_styles_responsive_csspath",
+      "label": "cssPath",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "ref_fs",
+      "file_type": "code",
+      "norm_label": "csspath",
+      "source_file": "update_styles_responsive.js",
+      "source_location": "L4"
+    },
+    {
+      "id": "update_styles_responsive_fs",
+      "label": "fs",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "ref_fs",
+      "file_type": "code",
+      "norm_label": "fs",
+      "source_file": "update_styles_responsive.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "update_styles_responsive_path",
+      "label": "path",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "ref_fs",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "update_styles_responsive.js",
+      "source_location": "L2"
+    },
+    {
+      "id": "scratch_clean_all_nav",
+      "label": "clean_all_nav.js",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "clean_all_nav.js",
+      "file_type": "code",
+      "norm_label": "clean_all_nav.js",
+      "source_file": "scratch/clean_all_nav.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scratch_clean_all_nav_admincontent",
+      "label": "adminContent",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "clean_all_nav.js",
+      "file_type": "code",
+      "norm_label": "admincontent",
+      "source_file": "scratch/clean_all_nav.js",
+      "source_location": "L55"
+    },
+    {
+      "id": "scratch_clean_all_nav_fs",
+      "label": "fs",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "clean_all_nav.js",
+      "file_type": "code",
+      "norm_label": "fs",
+      "source_file": "scratch/clean_all_nav.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scratch_clean_all_nav_htmlfiles",
+      "label": "htmlFiles",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "clean_all_nav.js",
+      "file_type": "code",
+      "norm_label": "htmlfiles",
+      "source_file": "scratch/clean_all_nav.js",
+      "source_location": "L21"
+    },
+    {
+      "id": "scratch_clean_all_nav_path",
+      "label": "path",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "clean_all_nav.js",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "scratch/clean_all_nav.js",
+      "source_location": "L2"
+    },
+    {
+      "id": "scratch_find_15_web",
+      "label": "find_15_web.js",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "find_15_web.js",
+      "file_type": "code",
+      "norm_label": "find_15_web.js",
+      "source_file": "scratch/find_15_web.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scratch_find_15_web_fs",
+      "label": "fs",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "find_15_web.js",
+      "file_type": "code",
+      "norm_label": "fs",
+      "source_file": "scratch/find_15_web.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scratch_find_15_web_htmlfiles",
+      "label": "htmlFiles",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "find_15_web.js",
+      "file_type": "code",
+      "norm_label": "htmlfiles",
+      "source_file": "scratch/find_15_web.js",
+      "source_location": "L21"
+    },
+    {
+      "id": "scratch_find_15_web_path",
+      "label": "path",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "find_15_web.js",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "scratch/find_15_web.js",
+      "source_location": "L2"
+    },
+    {
+      "id": "scratch_find_testimonials",
+      "label": "find_testimonials.js",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "find_testimonials.js",
+      "file_type": "code",
+      "norm_label": "find_testimonials.js",
+      "source_file": "scratch/find_testimonials.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scratch_find_testimonials_fs",
+      "label": "fs",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "find_testimonials.js",
+      "file_type": "code",
+      "norm_label": "fs",
+      "source_file": "scratch/find_testimonials.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scratch_find_testimonials_htmlfiles",
+      "label": "htmlFiles",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "find_testimonials.js",
+      "file_type": "code",
+      "norm_label": "htmlfiles",
+      "source_file": "scratch/find_testimonials.js",
+      "source_location": "L21"
+    },
+    {
+      "id": "scratch_find_testimonials_path",
+      "label": "path",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "find_testimonials.js",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "scratch/find_testimonials.js",
+      "source_location": "L2"
+    },
+    {
+      "id": "scratch_scan_html",
+      "label": "scan_html.js",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "scan_html.js",
+      "file_type": "code",
+      "norm_label": "scan_html.js",
+      "source_file": "scratch/scan_html.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scratch_scan_html_fs",
+      "label": "fs",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "scan_html.js",
+      "file_type": "code",
+      "norm_label": "fs",
+      "source_file": "scratch/scan_html.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scratch_scan_html_htmlfiles",
+      "label": "htmlFiles",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "scan_html.js",
+      "file_type": "code",
+      "norm_label": "htmlfiles",
+      "source_file": "scratch/scan_html.js",
+      "source_location": "L21"
+    },
+    {
+      "id": "scratch_scan_html_path",
+      "label": "path",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "scan_html.js",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "scratch/scan_html.js",
+      "source_location": "L2"
+    },
+    {
+      "id": "scratch_test_live",
+      "label": "test_live.js",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "test_live.js",
+      "file_type": "code",
+      "norm_label": "test_live.js",
+      "source_file": "scratch/test_live.js",
+      "source_location": "L1"
+    },
+    {
       "id": "readme",
       "label": "README.md",
       "_origin": "ast",
@@ -3046,61 +3414,6 @@
       "source_location": "L76"
     },
     {
-      "id": "fix_admin_css",
-      "label": "fix_admin_css.js",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "update_navbar_and_about.js",
-      "file_type": "code",
-      "norm_label": "fix_admin_css.js",
-      "source_file": "fix_admin_css.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "fix_admin_css_css",
-      "label": "css",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "update_navbar_and_about.js",
-      "file_type": "code",
-      "norm_label": "css",
-      "source_file": "fix_admin_css.js",
-      "source_location": "L5"
-    },
-    {
-      "id": "fix_admin_css_csspath",
-      "label": "cssPath",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "update_navbar_and_about.js",
-      "file_type": "code",
-      "norm_label": "csspath",
-      "source_file": "fix_admin_css.js",
-      "source_location": "L4"
-    },
-    {
-      "id": "fix_admin_css_fs",
-      "label": "fs",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "update_navbar_and_about.js",
-      "file_type": "code",
-      "norm_label": "fs",
-      "source_file": "fix_admin_css.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "fix_admin_css_path",
-      "label": "path",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "update_navbar_and_about.js",
-      "file_type": "code",
-      "norm_label": "path",
-      "source_file": "fix_admin_css.js",
-      "source_location": "L2"
-    },
-    {
       "id": "update_navbar_and_about",
       "label": "update_navbar_and_about.js",
       "_origin": "ast",
@@ -3178,59 +3491,136 @@
       "source_location": "L346"
     },
     {
-      "id": "update_styles_responsive",
-      "label": "update_styles_responsive.js",
+      "id": "scratch_test_home_projects",
+      "label": "test_home_projects.js",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "update_navbar_and_about.js",
+      "community": 5,
+      "community_name": "test_home_projects.js",
       "file_type": "code",
-      "norm_label": "update_styles_responsive.js",
-      "source_file": "update_styles_responsive.js",
+      "norm_label": "test_home_projects.js",
+      "source_file": "scratch/test_home_projects.js",
       "source_location": "L1"
     },
     {
-      "id": "update_styles_responsive_css",
-      "label": "css",
+      "id": "scratch_test_home_projects_appjs",
+      "label": "appJs",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "update_navbar_and_about.js",
+      "community": 5,
+      "community_name": "test_home_projects.js",
       "file_type": "code",
-      "norm_label": "css",
-      "source_file": "update_styles_responsive.js",
-      "source_location": "L5"
+      "norm_label": "appjs",
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L15"
     },
     {
-      "id": "update_styles_responsive_csspath",
-      "label": "cssPath",
+      "id": "scratch_test_home_projects_content",
+      "label": "content",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "update_navbar_and_about.js",
+      "community": 5,
+      "community_name": "test_home_projects.js",
       "file_type": "code",
-      "norm_label": "csspath",
-      "source_file": "update_styles_responsive.js",
+      "norm_label": "content",
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L25"
+    },
+    {
+      "id": "scratch_test_home_projects_fs",
+      "label": "fs",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "test_home_projects.js",
+      "file_type": "code",
+      "norm_label": "fs",
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scratch_test_home_projects_hasfullgrid",
+      "label": "hasFullGrid",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "test_home_projects.js",
+      "file_type": "code",
+      "norm_label": "hasfullgrid",
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L21"
+    },
+    {
+      "id": "scratch_test_home_projects_hasprojectsgrid",
+      "label": "hasProjectsGrid",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "test_home_projects.js",
+      "file_type": "code",
+      "norm_label": "hasprojectsgrid",
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L7"
+    },
+    {
+      "id": "scratch_test_home_projects_hasslice6",
+      "label": "hasSlice6",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "test_home_projects.js",
+      "file_type": "code",
+      "norm_label": "hasslice6",
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L16"
+    },
+    {
+      "id": "scratch_test_home_projects_hastestimonialsinmenu",
+      "label": "hasTestimonialsInMenu",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "test_home_projects.js",
+      "file_type": "code",
+      "norm_label": "hastestimonialsinmenu",
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L29"
+    },
+    {
+      "id": "scratch_test_home_projects_hasviewallbtn",
+      "label": "hasViewAllBtn",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "test_home_projects.js",
+      "file_type": "code",
+      "norm_label": "hasviewallbtn",
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L11"
+    },
+    {
+      "id": "scratch_test_home_projects_indexhtml",
+      "label": "indexHtml",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "test_home_projects.js",
+      "file_type": "code",
+      "norm_label": "indexhtml",
+      "source_file": "scratch/test_home_projects.js",
       "source_location": "L4"
     },
     {
-      "id": "update_styles_responsive_fs",
-      "label": "fs",
+      "id": "scratch_test_home_projects_menulabels",
+      "label": "menuLabels",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "update_navbar_and_about.js",
+      "community": 5,
+      "community_name": "test_home_projects.js",
       "file_type": "code",
-      "norm_label": "fs",
-      "source_file": "update_styles_responsive.js",
-      "source_location": "L1"
+      "norm_label": "menulabels",
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L26"
     },
     {
-      "id": "update_styles_responsive_path",
-      "label": "path",
+      "id": "scratch_test_home_projects_projectshtml",
+      "label": "projectsHtml",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "update_navbar_and_about.js",
+      "community": 5,
+      "community_name": "test_home_projects.js",
       "file_type": "code",
-      "norm_label": "path",
-      "source_file": "update_styles_responsive.js",
-      "source_location": "L2"
+      "norm_label": "projectshtml",
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L20"
     },
     {
       "id": "services_service_page",
@@ -3544,26 +3934,26 @@
       "type": "external"
     },
     {
-      "id": "ref_fs",
-      "label": "ref_fs",
+      "id": "ref_path",
+      "label": "ref_path",
       "_origin": "semantic",
-      "community": 4,
-      "community_name": "update_navbar_and_about.js",
+      "community": 21,
+      "community_name": "ref_path",
       "external": true,
       "file_type": "concept",
-      "norm_label": "ref_fs",
+      "norm_label": "ref_path",
       "source_file": "",
       "type": "external"
     },
     {
-      "id": "ref_path",
-      "label": "ref_path",
+      "id": "ref_fs",
+      "label": "ref_fs",
       "_origin": "semantic",
-      "community": 4,
-      "community_name": "update_navbar_and_about.js",
+      "community": 22,
+      "community_name": "ref_fs",
       "external": true,
       "file_type": "concept",
-      "norm_label": "ref_path",
+      "norm_label": "ref_fs",
       "source_file": "",
       "type": "external"
     }
@@ -3578,7 +3968,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2850",
+      "source_location": "L2849",
       "weight": 1.0
     },
     {
@@ -3590,7 +3980,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2851",
+      "source_location": "L2850",
       "weight": 1.0
     },
     {
@@ -3602,7 +3992,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1908",
+      "source_location": "L1907",
       "weight": 1.0
     },
     {
@@ -3614,7 +4004,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1909",
+      "source_location": "L1908",
       "weight": 1.0
     },
     {
@@ -3626,7 +4016,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1910",
+      "source_location": "L1909",
       "weight": 1.0
     },
     {
@@ -3638,7 +4028,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1930",
+      "source_location": "L1929",
       "weight": 1.0
     },
     {
@@ -3650,7 +4040,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1945",
+      "source_location": "L1944",
       "weight": 1.0
     },
     {
@@ -3662,7 +4052,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1664",
+      "source_location": "L1663",
       "weight": 1.0
     },
     {
@@ -3674,7 +4064,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L3132",
+      "source_location": "L3131",
       "weight": 1.0
     },
     {
@@ -3686,7 +4076,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1839",
+      "source_location": "L1838",
       "weight": 1.0
     },
     {
@@ -3698,7 +4088,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1840",
+      "source_location": "L1839",
       "weight": 1.0
     },
     {
@@ -3710,7 +4100,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1841",
+      "source_location": "L1840",
       "weight": 1.0
     },
     {
@@ -3722,7 +4112,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1842",
+      "source_location": "L1841",
       "weight": 1.0
     },
     {
@@ -3734,7 +4124,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1843",
+      "source_location": "L1842",
       "weight": 1.0
     },
     {
@@ -3746,7 +4136,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1844",
+      "source_location": "L1843",
       "weight": 1.0
     },
     {
@@ -3758,7 +4148,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1845",
+      "source_location": "L1844",
       "weight": 1.0
     },
     {
@@ -3770,7 +4160,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1846",
+      "source_location": "L1845",
       "weight": 1.0
     },
     {
@@ -3782,7 +4172,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1847",
+      "source_location": "L1846",
       "weight": 1.0
     },
     {
@@ -3794,7 +4184,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1848",
+      "source_location": "L1847",
       "weight": 1.0
     },
     {
@@ -3806,7 +4196,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1325",
+      "source_location": "L1324",
       "weight": 1.0
     },
     {
@@ -3818,7 +4208,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1516",
+      "source_location": "L1515",
       "weight": 1.0
     },
     {
@@ -3830,7 +4220,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2345",
+      "source_location": "L2344",
       "weight": 1.0
     },
     {
@@ -3854,7 +4244,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1978",
+      "source_location": "L1977",
       "weight": 1.0
     },
     {
@@ -3866,7 +4256,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1979",
+      "source_location": "L1978",
       "weight": 1.0
     },
     {
@@ -3878,7 +4268,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2241",
+      "source_location": "L2240",
       "weight": 1.0
     },
     {
@@ -3890,7 +4280,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2184",
+      "source_location": "L2183",
       "weight": 1.0
     },
     {
@@ -3962,7 +4352,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1957",
+      "source_location": "L1956",
       "weight": 1.0
     },
     {
@@ -3974,7 +4364,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1958",
+      "source_location": "L1957",
       "weight": 1.0
     },
     {
@@ -3986,7 +4376,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1959",
+      "source_location": "L1958",
       "weight": 1.0
     },
     {
@@ -3998,7 +4388,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2100",
+      "source_location": "L2099",
       "weight": 1.0
     },
     {
@@ -4010,12 +4400,24 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2102",
+      "source_location": "L2101",
       "weight": 1.0
     },
     {
       "source": "admin_handletestaiconnection",
       "target": "admin_showtoast",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "admin.js",
+      "source_location": "L2141",
+      "weight": 1.0
+    },
+    {
+      "source": "admin_handletestaiconnection",
+      "target": "admin_loadaistudiostatus",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4023,18 +4425,6 @@
       "context": "call",
       "source_file": "admin.js",
       "source_location": "L2142",
-      "weight": 1.0
-    },
-    {
-      "source": "admin_handletestaiconnection",
-      "target": "admin_loadaistudiostatus",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "admin.js",
-      "source_location": "L2143",
       "weight": 1.0
     },
     {
@@ -4046,7 +4436,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2388",
+      "source_location": "L2387",
       "weight": 1.0
     },
     {
@@ -4058,7 +4448,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2400",
+      "source_location": "L2399",
       "weight": 1.0
     },
     {
@@ -4070,7 +4460,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2417",
+      "source_location": "L2416",
       "weight": 1.0
     },
     {
@@ -4082,7 +4472,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2450",
+      "source_location": "L2449",
       "weight": 1.0
     },
     {
@@ -4094,7 +4484,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2451",
+      "source_location": "L2450",
       "weight": 1.0
     },
     {
@@ -4106,7 +4496,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2504",
+      "source_location": "L2503",
       "weight": 1.0
     },
     {
@@ -4118,7 +4508,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2525",
+      "source_location": "L2524",
       "weight": 1.0
     },
     {
@@ -4130,7 +4520,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2532",
+      "source_location": "L2531",
       "weight": 1.0
     },
     {
@@ -4202,7 +4592,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2574",
+      "source_location": "L2573",
       "weight": 1.0
     },
     {
@@ -4214,7 +4604,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2575",
+      "source_location": "L2574",
       "weight": 1.0
     },
     {
@@ -4226,7 +4616,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2576",
+      "source_location": "L2575",
       "weight": 1.0
     },
     {
@@ -4262,7 +4652,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L3120",
+      "source_location": "L3119",
       "weight": 1.0
     },
     {
@@ -4274,7 +4664,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L3121",
+      "source_location": "L3120",
       "weight": 1.0
     },
     {
@@ -4286,7 +4676,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2726",
+      "source_location": "L2725",
       "weight": 1.0
     },
     {
@@ -4298,7 +4688,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2727",
+      "source_location": "L2726",
       "weight": 1.0
     },
     {
@@ -4310,7 +4700,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2728",
+      "source_location": "L2727",
       "weight": 1.0
     },
     {
@@ -4478,7 +4868,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2769",
+      "source_location": "L2768",
       "weight": 1.0
     },
     {
@@ -4514,7 +4904,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2998",
+      "source_location": "L2997",
       "weight": 1.0
     },
     {
@@ -4526,7 +4916,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1606",
+      "source_location": "L1605",
       "weight": 1.0
     },
     {
@@ -4538,7 +4928,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1203",
+      "source_location": "L1202",
       "weight": 1.0
     },
     {
@@ -4550,7 +4940,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1214",
+      "source_location": "L1213",
       "weight": 1.0
     },
     {
@@ -4562,7 +4952,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1226",
+      "source_location": "L1225",
       "weight": 1.0
     },
     {
@@ -4574,7 +4964,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1349",
+      "source_location": "L1348",
       "weight": 1.0
     },
     {
@@ -4586,7 +4976,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1365",
+      "source_location": "L1364",
       "weight": 1.0
     },
     {
@@ -4598,7 +4988,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1419",
+      "source_location": "L1418",
       "weight": 1.0
     },
     {
@@ -4634,7 +5024,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1561",
+      "source_location": "L1560",
       "weight": 1.0
     },
     {
@@ -4646,7 +5036,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L3174",
+      "source_location": "L3173",
       "weight": 1.0
     },
     {
@@ -4658,7 +5048,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2630",
+      "source_location": "L2629",
       "weight": 1.0
     },
     {
@@ -4682,7 +5072,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1527",
+      "source_location": "L1526",
       "weight": 1.0
     },
     {
@@ -4706,7 +5096,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1395",
+      "source_location": "L1394",
       "weight": 1.0
     },
     {
@@ -4718,7 +5108,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1868",
+      "source_location": "L1867",
       "weight": 1.0
     },
     {
@@ -4730,7 +5120,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1885",
+      "source_location": "L1884",
       "weight": 1.0
     },
     {
@@ -4742,7 +5132,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1886",
+      "source_location": "L1885",
       "weight": 1.0
     },
     {
@@ -4754,7 +5144,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L1887",
+      "source_location": "L1886",
       "weight": 1.0
     },
     {
@@ -4766,7 +5156,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2928",
+      "source_location": "L2927",
       "weight": 1.0
     },
     {
@@ -4778,7 +5168,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2931",
+      "source_location": "L2930",
       "weight": 1.0
     },
     {
@@ -4790,7 +5180,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2957",
+      "source_location": "L2956",
       "weight": 1.0
     },
     {
@@ -4802,7 +5192,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2958",
+      "source_location": "L2957",
       "weight": 1.0
     },
     {
@@ -4862,7 +5252,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2554",
+      "source_location": "L2553",
       "weight": 1.0
     },
     {
@@ -4874,7 +5264,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2556",
+      "source_location": "L2555",
       "weight": 1.0
     },
     {
@@ -4886,7 +5276,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2558",
+      "source_location": "L2557",
       "weight": 1.0
     },
     {
@@ -4898,7 +5288,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2878",
+      "source_location": "L2877",
       "weight": 1.0
     },
     {
@@ -5126,7 +5516,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L864",
+      "source_location": "L867",
       "weight": 1.0
     },
     {
@@ -5138,7 +5528,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1063",
+      "source_location": "L1066",
       "weight": 1.0
     },
     {
@@ -5150,7 +5540,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L739",
+      "source_location": "L742",
       "weight": 1.0
     },
     {
@@ -5162,7 +5552,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L808",
+      "source_location": "L811",
       "weight": 1.0
     },
     {
@@ -5186,7 +5576,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L833",
+      "source_location": "L836",
       "weight": 1.0
     },
     {
@@ -5198,7 +5588,55 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L651",
+      "source_location": "L654",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_clean_all_nav_gethtmlfiles",
+      "target": "scratch_clean_all_nav_gethtmlfiles",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scratch/clean_all_nav.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_find_15_web_gethtmlfiles",
+      "target": "scratch_find_15_web_gethtmlfiles",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scratch/find_15_web.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_find_testimonials_gethtmlfiles",
+      "target": "scratch_find_testimonials_gethtmlfiles",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scratch/find_testimonials.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_scan_html_gethtmlfiles",
+      "target": "scratch_scan_html_gethtmlfiles",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scratch/scan_html.js",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -5618,7 +6056,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L270",
+      "source_location": "L286",
       "weight": 1.0
     },
     {
@@ -5630,7 +6068,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L188",
+      "source_location": "L204",
       "weight": 1.0
     },
     {
@@ -5642,7 +6080,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L281",
+      "source_location": "L297",
       "weight": 1.0
     },
     {
@@ -5654,7 +6092,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L329",
+      "source_location": "L345",
       "weight": 1.0
     },
     {
@@ -5678,7 +6116,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "admin.js",
-      "source_location": "L2026",
+      "source_location": "L2025",
       "weight": 1.0
     },
     {
@@ -5750,7 +6188,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1086",
+      "source_location": "L1089",
       "weight": 1.0
     },
     {
@@ -5762,7 +6200,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1157",
+      "source_location": "L1160",
       "weight": 1.0
     },
     {
@@ -5774,19 +6212,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1200",
-      "weight": 1.0
-    },
-    {
-      "source": "app",
-      "target": "app_initscrolleffects",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app.js",
-      "source_location": "L1219",
+      "source_location": "L1203",
       "weight": 1.0
     },
     {
@@ -5799,6 +6225,18 @@
       "context": "call",
       "source_file": "app.js",
       "source_location": "L122",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_initscrolleffects",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app.js",
+      "source_location": "L1222",
       "weight": 1.0
     },
     {
@@ -5846,7 +6284,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L855",
+      "source_location": "L858",
       "weight": 1.0
     },
     {
@@ -5858,7 +6296,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L895",
+      "source_location": "L898",
       "weight": 1.0
     },
     {
@@ -5870,7 +6308,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L915",
+      "source_location": "L918",
       "weight": 1.0
     },
     {
@@ -5882,7 +6320,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L939",
+      "source_location": "L942",
       "weight": 1.0
     },
     {
@@ -5894,7 +6332,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L996",
+      "source_location": "L999",
       "weight": 1.0
     },
     {
@@ -5906,7 +6344,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1140",
+      "source_location": "L1143",
       "weight": 1.0
     },
     {
@@ -6062,7 +6500,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L122",
+      "source_location": "L138",
       "weight": 1.0
     },
     {
@@ -6111,6 +6549,114 @@
       "context": "import",
       "source_file": "fix_admin_css.js",
       "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_clean_all_nav",
+      "target": "ref_fs",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scratch/clean_all_nav.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_clean_all_nav",
+      "target": "ref_path",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scratch/clean_all_nav.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_find_15_web",
+      "target": "ref_fs",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scratch/find_15_web.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_find_15_web",
+      "target": "ref_path",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scratch/find_15_web.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_find_testimonials",
+      "target": "ref_fs",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scratch/find_testimonials.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_find_testimonials",
+      "target": "ref_path",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scratch/find_testimonials.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_scan_html",
+      "target": "ref_fs",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scratch/scan_html.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_scan_html",
+      "target": "ref_path",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scratch/scan_html.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_test_home_projects",
+      "target": "ref_fs",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -6342,7 +6888,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1217",
+      "source_location": "L1216",
       "weight": 1.0
     },
     {
@@ -6353,7 +6899,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1296",
+      "source_location": "L1295",
       "weight": 1.0
     },
     {
@@ -6364,7 +6910,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1312",
+      "source_location": "L1311",
       "weight": 1.0
     },
     {
@@ -6375,7 +6921,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1335",
+      "source_location": "L1334",
       "weight": 1.0
     },
     {
@@ -6386,7 +6932,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1376",
+      "source_location": "L1375",
       "weight": 1.0
     },
     {
@@ -6397,7 +6943,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1405",
+      "source_location": "L1404",
       "weight": 1.0
     },
     {
@@ -6408,7 +6954,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1499",
+      "source_location": "L1498",
       "weight": 1.0
     },
     {
@@ -6419,7 +6965,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1515",
+      "source_location": "L1514",
       "weight": 1.0
     },
     {
@@ -6430,7 +6976,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1521",
+      "source_location": "L1520",
       "weight": 1.0
     },
     {
@@ -6441,7 +6987,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1546",
+      "source_location": "L1545",
       "weight": 1.0
     },
     {
@@ -6452,7 +6998,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1552",
+      "source_location": "L1551",
       "weight": 1.0
     },
     {
@@ -6463,7 +7009,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1575",
+      "source_location": "L1574",
       "weight": 1.0
     },
     {
@@ -6474,7 +7020,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1591",
+      "source_location": "L1590",
       "weight": 1.0
     },
     {
@@ -6485,7 +7031,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1662",
+      "source_location": "L1661",
       "weight": 1.0
     },
     {
@@ -6496,7 +7042,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1677",
+      "source_location": "L1676",
       "weight": 1.0
     },
     {
@@ -6507,7 +7053,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1704",
+      "source_location": "L1703",
       "weight": 1.0
     },
     {
@@ -6518,7 +7064,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1725",
+      "source_location": "L1724",
       "weight": 1.0
     },
     {
@@ -6529,7 +7075,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1786",
+      "source_location": "L1785",
       "weight": 1.0
     },
     {
@@ -6540,7 +7086,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1855",
+      "source_location": "L1854",
       "weight": 1.0
     },
     {
@@ -6551,7 +7097,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1906",
+      "source_location": "L1905",
       "weight": 1.0
     },
     {
@@ -6562,7 +7108,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1914",
+      "source_location": "L1913",
       "weight": 1.0
     },
     {
@@ -6573,7 +7119,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1920",
+      "source_location": "L1919",
       "weight": 1.0
     },
     {
@@ -6584,7 +7130,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1929",
+      "source_location": "L1928",
       "weight": 1.0
     },
     {
@@ -6595,7 +7141,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1948",
+      "source_location": "L1947",
       "weight": 1.0
     },
     {
@@ -6606,7 +7152,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1970",
+      "source_location": "L1969",
       "weight": 1.0
     },
     {
@@ -6617,7 +7163,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L1990",
+      "source_location": "L1989",
       "weight": 1.0
     },
     {
@@ -6628,7 +7174,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2002",
+      "source_location": "L2001",
       "weight": 1.0
     },
     {
@@ -6639,7 +7185,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2068",
+      "source_location": "L2067",
       "weight": 1.0
     },
     {
@@ -6650,7 +7196,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2116",
+      "source_location": "L2115",
       "weight": 1.0
     },
     {
@@ -6661,7 +7207,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2157",
+      "source_location": "L2156",
       "weight": 1.0
     },
     {
@@ -6672,7 +7218,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2175",
+      "source_location": "L2174",
       "weight": 1.0
     },
     {
@@ -6683,7 +7229,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2229",
+      "source_location": "L2228",
       "weight": 1.0
     },
     {
@@ -6694,7 +7240,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2302",
+      "source_location": "L2301",
       "weight": 1.0
     },
     {
@@ -6705,7 +7251,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2364",
+      "source_location": "L2363",
       "weight": 1.0
     },
     {
@@ -6716,7 +7262,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2365",
+      "source_location": "L2364",
       "weight": 1.0
     },
     {
@@ -6727,7 +7273,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2366",
+      "source_location": "L2365",
       "weight": 1.0
     },
     {
@@ -6738,7 +7284,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2383",
+      "source_location": "L2382",
       "weight": 1.0
     },
     {
@@ -6749,7 +7295,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2543",
+      "source_location": "L2542",
       "weight": 1.0
     },
     {
@@ -6760,7 +7306,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2562",
+      "source_location": "L2561",
       "weight": 1.0
     },
     {
@@ -6782,7 +7328,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2596",
+      "source_location": "L2595",
       "weight": 1.0
     },
     {
@@ -6793,7 +7339,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2697",
+      "source_location": "L2696",
       "weight": 1.0
     },
     {
@@ -6804,7 +7350,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2711",
+      "source_location": "L2710",
       "weight": 1.0
     },
     {
@@ -6815,7 +7361,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2731",
+      "source_location": "L2730",
       "weight": 1.0
     },
     {
@@ -6826,7 +7372,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2742",
+      "source_location": "L2741",
       "weight": 1.0
     },
     {
@@ -6837,7 +7383,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2840",
+      "source_location": "L2839",
       "weight": 1.0
     },
     {
@@ -6848,7 +7394,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2870",
+      "source_location": "L2869",
       "weight": 1.0
     },
     {
@@ -6859,7 +7405,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2927",
+      "source_location": "L2926",
       "weight": 1.0
     },
     {
@@ -6881,7 +7427,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L2972",
+      "source_location": "L2971",
       "weight": 1.0
     },
     {
@@ -6903,7 +7449,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L3088",
+      "source_location": "L3087",
       "weight": 1.0
     },
     {
@@ -6914,7 +7460,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L3092",
+      "source_location": "L3091",
       "weight": 1.0
     },
     {
@@ -6925,7 +7471,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L3111",
+      "source_location": "L3110",
       "weight": 1.0
     },
     {
@@ -6936,7 +7482,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L3130",
+      "source_location": "L3129",
       "weight": 1.0
     },
     {
@@ -6947,7 +7493,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L3145",
+      "source_location": "L3144",
       "weight": 1.0
     },
     {
@@ -6958,7 +7504,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "admin.js",
-      "source_location": "L3227",
+      "source_location": "L3226",
       "weight": 1.0
     },
     {
@@ -7189,7 +7735,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L1256",
+      "source_location": "L1259",
       "weight": 1.0
     },
     {
@@ -7255,7 +7801,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L720",
+      "source_location": "L723",
       "weight": 1.0
     },
     {
@@ -7266,7 +7812,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L728",
+      "source_location": "L731",
       "weight": 1.0
     },
     {
@@ -7277,7 +7823,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L791",
+      "source_location": "L794",
       "weight": 1.0
     },
     {
@@ -7288,18 +7834,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L819",
-      "weight": 1.0
-    },
-    {
-      "source": "app",
-      "target": "app_filterprojectsbycategory",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.js",
-      "source_location": "L869",
+      "source_location": "L822",
       "weight": 1.0
     },
     {
@@ -7311,6 +7846,17 @@
       "confidence_score": 1.0,
       "source_file": "app.js",
       "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_filterprojectsbycategory",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.js",
+      "source_location": "L872",
       "weight": 1.0
     },
     {
@@ -7332,7 +7878,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L904",
+      "source_location": "L907",
       "weight": 1.0
     },
     {
@@ -7343,7 +7889,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L1166",
+      "source_location": "L1169",
       "weight": 1.0
     },
     {
@@ -7963,6 +8509,325 @@
       "weight": 1.0
     },
     {
+      "source": "scratch_clean_all_nav",
+      "target": "scratch_clean_all_nav_fs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/clean_all_nav.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_clean_all_nav",
+      "target": "scratch_clean_all_nav_path",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/clean_all_nav.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_clean_all_nav",
+      "target": "scratch_clean_all_nav_htmlfiles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/clean_all_nav.js",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_clean_all_nav",
+      "target": "scratch_clean_all_nav_gethtmlfiles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/clean_all_nav.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_clean_all_nav",
+      "target": "scratch_clean_all_nav_admincontent",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/clean_all_nav.js",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_find_15_web",
+      "target": "scratch_find_15_web_fs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/find_15_web.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_find_15_web",
+      "target": "scratch_find_15_web_path",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/find_15_web.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_find_15_web",
+      "target": "scratch_find_15_web_htmlfiles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/find_15_web.js",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_find_15_web",
+      "target": "scratch_find_15_web_gethtmlfiles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/find_15_web.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_find_testimonials",
+      "target": "scratch_find_testimonials_fs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/find_testimonials.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_find_testimonials",
+      "target": "scratch_find_testimonials_path",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/find_testimonials.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_find_testimonials",
+      "target": "scratch_find_testimonials_htmlfiles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/find_testimonials.js",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_find_testimonials",
+      "target": "scratch_find_testimonials_gethtmlfiles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/find_testimonials.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_scan_html",
+      "target": "scratch_scan_html_fs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/scan_html.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_scan_html",
+      "target": "scratch_scan_html_path",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/scan_html.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_scan_html",
+      "target": "scratch_scan_html_htmlfiles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/scan_html.js",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_scan_html",
+      "target": "scratch_scan_html_gethtmlfiles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/scan_html.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_test_home_projects",
+      "target": "scratch_test_home_projects_fs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_test_home_projects",
+      "target": "scratch_test_home_projects_hasviewallbtn",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_test_home_projects",
+      "target": "scratch_test_home_projects_appjs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_test_home_projects",
+      "target": "scratch_test_home_projects_hasslice6",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_test_home_projects",
+      "target": "scratch_test_home_projects_projectshtml",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_test_home_projects",
+      "target": "scratch_test_home_projects_hasfullgrid",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_test_home_projects",
+      "target": "scratch_test_home_projects_content",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_test_home_projects",
+      "target": "scratch_test_home_projects_menulabels",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_test_home_projects",
+      "target": "scratch_test_home_projects_hastestimonialsinmenu",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_test_home_projects",
+      "target": "scratch_test_home_projects_indexhtml",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_test_home_projects",
+      "target": "scratch_test_home_projects_hasprojectsgrid",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/test_home_projects.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "scratch_test_live",
+      "target": "scratch_test_live_test",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scratch/test_live.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "serve",
       "target": "serve_read_requestbody",
       "relation": "contains",
@@ -8520,7 +9385,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "site-hydration.js",
-      "source_location": "L209",
+      "source_location": "L225",
       "weight": 1.0
     },
     {
@@ -8531,7 +9396,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "site-hydration.js",
-      "source_location": "L273",
+      "source_location": "L289",
       "weight": 1.0
     },
     {
@@ -8542,7 +9407,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "site-hydration.js",
-      "source_location": "L293",
+      "source_location": "L309",
       "weight": 1.0
     },
     {
@@ -8774,7 +9639,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "admin.js",
-      "source_location": "L2442",
+      "source_location": "L2441",
       "weight": 1.0
     },
     {
@@ -8786,7 +9651,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "admin.js",
-      "source_location": "L2459",
+      "source_location": "L2458",
       "weight": 1.0
     },
     {
@@ -8798,7 +9663,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "admin.js",
-      "source_location": "L2472",
+      "source_location": "L2471",
       "weight": 1.0
     },
     {
@@ -8810,7 +9675,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "admin.js",
-      "source_location": "L2493",
+      "source_location": "L2492",
       "weight": 1.0
     },
     {
@@ -8822,7 +9687,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "admin.js",
-      "source_location": "L2539",
+      "source_location": "L2538",
       "weight": 1.0
     },
     {
@@ -9050,7 +9915,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "app.js",
-      "source_location": "L1252",
+      "source_location": "L1255",
       "weight": 1.0
     },
     {
@@ -9074,7 +9939,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "app.js",
-      "source_location": "L1008",
+      "source_location": "L1011",
       "weight": 1.0
     },
     {
@@ -9086,7 +9951,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "app.js",
-      "source_location": "L899",
+      "source_location": "L902",
       "weight": 1.0
     },
     {
@@ -9146,7 +10011,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "site-hydration.js",
-      "source_location": "L336",
+      "source_location": "L352",
       "weight": 1.0
     },
     {
@@ -9158,10 +10023,10 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "site-hydration.js",
-      "source_location": "L318",
+      "source_location": "L334",
       "weight": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d3fe67c67ec50a1449ac420e23dd9362ab827804"
+  "built_at_commit": "f5fffc657ba0e9997dbc4f490e1a2e8bde4cd41e"
 }

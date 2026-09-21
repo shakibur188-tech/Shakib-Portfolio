@@ -158,7 +158,6 @@
 
         <a href="/projects.html" class="desktop-nav-link hover:text-[#70805D] transition-colors">Projects</a>
         <a href="/case-studies.html" class="desktop-nav-link hover:text-[#70805D] transition-colors">Case Studies</a>
-        <a href="/testimonials.html" class="desktop-nav-link hover:text-[#70805D] transition-colors">Testimonials</a>
         <a href="/contact.html" class="desktop-nav-link hover:text-[#70805D] transition-colors">Contact</a>
       </nav>
 
@@ -205,9 +204,9 @@
           <i class="fa-solid fa-chart-pie text-[#70805D]"></i>
           <span>Case Studies</span>
         </a>
-        <a href="/testimonials.html" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE]">
-          <i class="fa-solid fa-star text-[#F59E0B]"></i>
-          <span>Testimonials</span>
+        <a href="/contact.html" class="mobile-link flex items-center gap-2 p-2.5 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE]">
+          <i class="fa-solid fa-envelope text-[#70805D]"></i>
+          <span>Contact</span>
         </a>
       </div>
 
@@ -301,8 +300,8 @@
               <span>Explore All 6 Services</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
-            <a href="#projects" class="btn-pill-glass">
-              <span>View 15 Web Projects</span>
+            <a href="/projects.html" class="btn-pill-glass">
+              <span>View Projects</span>
               <i class="fa-solid fa-code text-xs text-[#70805D]"></i>
             </a>
           </div>
@@ -564,30 +563,29 @@
           <h2 class="text-3xl sm:text-5xl font-extrabold text-[#1C2B1B] tracking-tight mt-1">
             A Few Things I've Built
           </h2>
-          <p class="text-xs sm:text-sm text-[#4D614A] mt-2">
-            15 production web platforms engineered for maximum conversion, speed, and real-world commercial results.
+          <p class="text-xs sm:text-sm text-[#4D614A] mt-2 max-w-2xl">
+            Selected client web platforms engineered for maximum conversion, speed, and real-world commercial results. Explore the first 6 featured builds below or visit the Projects page for all platforms.
           </p>
         </div>
 
-        <a href="#contact" class="btn-outline-emerald self-start md:self-auto text-xs">
-          <span>Commission a Website</span>
-          <i class="fa-solid fa-arrow-right text-xs"></i>
+        <a href="/projects.html" class="btn-aesthetic-primary text-xs self-start md:self-auto">
+          <span>View All Projects</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
         </a>
       </div>
 
-      <!-- Category Filter Pills -->
-      <div id="projectFilterBar" class="flex flex-wrap items-center gap-2 mb-10 overflow-x-auto pb-2 no-scrollbar reveal-on-scroll">
-        <button class="filter-btn active" data-category="all">All Projects (15)</button>
-        <button class="filter-btn" data-category="Hospitality">Hospitality &amp; Booking</button>
-        <button class="filter-btn" data-category="E-Commerce">E-Commerce Flagships</button>
-        <button class="filter-btn" data-category="Corporate">Corporate &amp; B2B</button>
-        <button class="filter-btn" data-category="Web Apps">Web Apps / SaaS</button>
-        <button class="filter-btn" data-category="Creative">Creative Portfolios</button>
+      <!-- 6 Featured Web Projects Grid -->
+      <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-grid">
+        <!-- Hydrated dynamically by app.js (first 6 projects) with 3 points each -->
       </div>
 
-      <!-- 15 Web Projects Grid -->
-      <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-grid">
-        <!-- Hydrated dynamically by app.js with 3 points each -->
+      <!-- Bottom Explore All Projects Callout -->
+      <div class="mt-14 text-center reveal-on-scroll">
+        <a href="/projects.html" class="btn-outline-emerald text-xs py-3 px-8 inline-flex items-center gap-2.5">
+          <i class="fa-solid fa-layer-group text-[#70805D]"></i>
+          <span>Explore All Projects &amp; Live Deployments</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
       </div>
 
     </div>
@@ -945,7 +943,7 @@
           <div><a href="/" class="hover:text-[#70805D] transition-colors">Home</a></div>
           <div><a href="/about.html" class="hover:text-[#70805D] transition-colors">About Me</a></div>
           <div><a href="/services.html" class="hover:text-[#70805D] transition-colors">Services Directory</a></div>
-          <div><a href="/projects.html" class="hover:text-[#70805D] transition-colors">15 Web Projects</a></div>
+          <div><a href="/projects.html" class="hover:text-[#70805D] transition-colors">Projects</a></div>
           <div><a href="/case-studies.html" class="hover:text-[#70805D] transition-colors">Case Studies &amp; Works</a></div>
           <div><a href="/testimonials.html" class="hover:text-[#70805D] transition-colors">Client Testimonials</a></div>
           <div><a href="/contact.html" class="hover:text-[#70805D] transition-colors">Contact &amp; Brief</a></div>

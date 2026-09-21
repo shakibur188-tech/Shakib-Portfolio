@@ -771,7 +771,7 @@
       },
       {
         "id": "nav-projects",
-        "label": "15 Web Projects",
+        "label": "Projects",
         "url": "/projects.html",
         "isExternal": false,
         "order": 4
@@ -784,18 +784,11 @@
         "order": 5
       },
       {
-        "id": "nav-testimonials",
-        "label": "Testimonials",
-        "url": "/testimonials.html",
-        "isExternal": false,
-        "order": 6
-      },
-      {
         "id": "nav-contact",
         "label": "Contact",
         "url": "/contact.html",
         "isExternal": false,
-        "order": 7
+        "order": 6
       }
     ],
     "ctaButton": {
@@ -817,7 +810,7 @@
         "url": "/services.html"
       },
       "secondaryBtn": {
-        "label": "View 15 Web Projects",
+        "label": "View Projects",
         "url": "/projects.html"
       },
       "figures": [
@@ -972,7 +965,7 @@
       }
     },
     "projects": {
-      "pageName": "15 Web Projects",
+      "pageName": "Projects",
       "heroBadge": "PRODUCTION-GRADE CLIENT PLATFORMS",
       "heroTitle": "High-Performance Digital Platforms & Scalable Architectures",
       "heroSubtitle": "15+ live web solutions engineered with modern responsive frameworks, conversion-driven UX, and high-speed uptime.",

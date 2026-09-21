@@ -69,7 +69,16 @@
       const desktopNav = document.querySelector('header nav.hidden.lg\\:flex, header nav');
       if (desktopNav) {
         const currentPath = window.location.pathname;
-        const navLinks = desktopNav.querySelectorAll('.desktop-nav-link');
+        const allNavLinks = Array.from(desktopNav.querySelectorAll('.desktop-nav-link'));
+
+        // Ensure testimonials is removed/hidden from header navigation
+        allNavLinks.forEach(link => {
+          if (link.getAttribute('href') === '/testimonials.html') {
+            link.style.display = 'none';
+          }
+        });
+
+        const navLinks = allNavLinks.filter(link => link.style.display !== 'none');
 
         if (navLinks && navLinks.length >= menu.items.length) {
           // Update in-place to NEVER disturb .services-dropdown layout
@@ -105,7 +114,14 @@
       // 4. Mobile Menu Links (In-Place Safe Hydration)
       const mobileNavGrid = document.querySelector('#mobileMenu .grid');
       if (mobileNavGrid) {
-        const mobileLinks = mobileNavGrid.querySelectorAll('.mobile-link');
+        const allMobileLinks = Array.from(mobileNavGrid.querySelectorAll('.mobile-link'));
+        allMobileLinks.forEach(link => {
+          if (link.getAttribute('href') === '/testimonials.html') {
+            link.style.display = 'none';
+          }
+        });
+
+        const mobileLinks = allMobileLinks.filter(link => link.style.display !== 'none');
         if (mobileLinks && mobileLinks.length >= menu.items.length) {
           menu.items.forEach((item, idx) => {
             const link = mobileLinks[idx];

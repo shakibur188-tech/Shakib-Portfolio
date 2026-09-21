@@ -643,7 +643,10 @@ function renderWebProjects(projects) {
   const container = document.getElementById('projectsGrid');
   if (!container) return;
 
-  const html = projects.map(proj => {
+  // On home page, display only the first 6 featured projects
+  const displayProjects = projects.slice(0, 6);
+
+  const html = displayProjects.map(proj => {
     const displayUrl = proj.liveUrl.replace(/^https?:\/\//i, '').replace(/\/$/, '');
     const pointsHtml = (proj.points || ['High-speed cloud deployment', 'Core Web Vitals optimized', 'Mobile-first responsive architecture']).slice(0, 3).map(pt => `
       <li class="bullet-point-item text-xs text-[#4D614A] flex items-start gap-1.5">

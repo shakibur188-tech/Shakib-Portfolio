@@ -228,7 +228,7 @@ window.switchTab = function(tabId) {
     'tab-menu': { title: 'Header & Menu Navigation Manager', sub: 'Customize navigation items, URLs, header CTA button and top brand identity.' },
     'tab-pages': { title: 'Page-by-Page Content & Figures CMS', sub: 'Edit hero titles, numbers, years of experience, counters, and action buttons for every page.' },
     'tab-services': { title: '6 Core Services CMS', sub: 'Manage titles, deliverables, tools, icons, and impact metrics.' },
-    'tab-webprojects': { title: '15 Web Projects CMS (Live)', sub: 'Manage client portals, live external URLs, screenshots, and tech stacks.' },
+    'tab-webprojects': { title: 'Projects CMS (Live)', sub: 'Manage client portals, live external URLs, screenshots, and tech stacks.' },
     'tab-casestudies': { title: 'Case Studies & Recent Works CMS', sub: 'Write, edit, feature, and publish comprehensive case studies and measurable results for your audience.' },
     'tab-creative': { title: 'Creative Media Studio Gallery', sub: 'Branding kits, commercial films, packaging visual mockups, and expo booths.' },
     'tab-process': { title: '4-Stage Strategic Methodology', sub: 'Discovery, Creative Architecture, Engineering, and Omnichannel Amplification.' },
@@ -1191,10 +1191,9 @@ function renderMenuEditor(menu) {
       { id: 'nav-home', label: 'Home', url: '/', isExternal: false, order: 1 },
       { id: 'nav-about', label: 'About Me', url: '/about.html', isExternal: false, order: 2 },
       { id: 'nav-services', label: 'Services', url: '/services.html', isExternal: false, order: 3, hasDropdown: true },
-      { id: 'nav-projects', label: '15 Web Projects', url: '/projects.html', isExternal: false, order: 4 },
+      { id: 'nav-projects', label: 'Projects', url: '/projects.html', isExternal: false, order: 4 },
       { id: 'nav-casestudies', label: 'Case Studies', url: '/case-studies.html', isExternal: false, order: 5 },
-      { id: 'nav-testimonials', label: 'Testimonials', url: '/testimonials.html', isExternal: false, order: 6 },
-      { id: 'nav-contact', label: 'Contact', url: '/contact.html', isExternal: false, order: 7 }
+      { id: 'nav-contact', label: 'Contact', url: '/contact.html', isExternal: false, order: 6 }
     ],
     ctaButton: { label: "Let's Talk", url: '/contact.html', icon: 'fa-arrow-up-right-from-square', isExternal: false }
   };
