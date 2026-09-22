@@ -158,29 +158,91 @@
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 border-b border-[#70805D]/15 px-6 py-5 space-y-3 shadow-xl">
-      <a href="/" class="mobile-link block text-sm font-semibold text-[#4D614A]">Home</a>
-      <a href="/about.html" class="mobile-link block text-sm font-semibold text-[#4D614A]">About Me</a>
-      <a href="/services.html" class="mobile-link block text-sm font-bold text-[#70805D]">All 6 Services Directory</a>
-      <div class="pt-1 pb-1 border-y border-[#70805D]/10">
-        <div class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider py-1">6 Core Services</div>
-        <div class="grid grid-cols-2 gap-1 pt-1 text-xs text-[#4D614A]">
-          <a href="/services/graphics-design.html" class="mobile-link py-1 ">• 01 Graphics</a>
-          <a href="/services/web-development.html" class="mobile-link py-1 ">• 02 Web Dev</a>
-          <a href="/services/social-media-marketing.html" class="mobile-link py-1 ">• 03 Social Media</a>
-          <a href="/services/public-relations.html" class="mobile-link py-1 ">• 04 PR &amp; Outreach</a>
-          <a href="/services/google-ads.html" class="mobile-link py-1 ">• 05 Google Ads</a>
-          <a href="/services/event-activation.html" class="mobile-link py-1 font-bold text-[#70805D]">• 06 Events &amp; Expos</a>
+    
+    <!-- Mobile Slide-Down Navigation Menu (Clean, App-like Aesthetic) -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-[#70805D]/20 px-4 py-5 shadow-2xl max-h-[85vh] overflow-y-auto">
+      
+      <!-- Top Status Banner -->
+      <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#F8F9F6] border border-[#70805D]/15 mb-3">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-[11px] font-black text-[#1C2B1B] uppercase tracking-wider">Navigation Menu</span>
         </div>
+        <span class="text-[10px] font-bold text-[#70805D] bg-[#70805D]/10 px-2 py-0.5 rounded-full">Available for Projects</span>
       </div>
-      <a href="/projects.html" class="mobile-link block text-sm font-semibold text-[#4D614A]">Projects</a>
-      <a href="/case-studies.html" class="mobile-link block text-sm font-semibold text-[#4D614A]">Case Studies</a>
-      <a href="/offers.html" class="mobile-link block text-sm font-semibold text-[#4D614A] hover:text-[#70805D]">Offers</a>
-      <a href="/contact.html" class="mobile-link block text-sm font-semibold text-[#4D614A]">Contact &amp; Inquiry</a>
-      <div class="pt-2">
-        <a href="#inquiry" class="mobile-link btn-aesthetic-primary w-full justify-center text-xs py-2.5">
-          <span>Book Consultation</span>
-          <i class="fa-solid fa-paper-plane text-xs"></i>
+
+      <!-- Main Navigation Items (Vertical List with Clean Icons & Chevron Arrows) -->
+      <div class="space-y-1">
+        <a href="/" class="mobile-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE] hover:text-[#70805D] transition-all">
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-lg bg-[#70805D]/10 flex items-center justify-center text-[#70805D] text-xs"><i class="fa-solid fa-house"></i></span>
+            <span>Home</span>
+          </div>
+          <i class="fa-solid fa-chevron-right text-[10px] text-[#70805D]/50"></i>
+        </a>
+
+        <a href="/about.html" class="mobile-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE] hover:text-[#70805D] transition-all">
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-lg bg-[#70805D]/10 flex items-center justify-center text-[#70805D] text-xs"><i class="fa-solid fa-user-astronaut"></i></span>
+            <span>About Me</span>
+          </div>
+          <i class="fa-solid fa-chevron-right text-[10px] text-[#70805D]/50"></i>
+        </a>
+
+        <a href="/services.html" class="mobile-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold bg-[#70805D]/15 text-[#2A3B27] transition-all">
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-lg bg-[#70805D]/10 flex items-center justify-center text-[#70805D] text-xs"><i class="fa-solid fa-layer-group"></i></span>
+            <span>Services</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="text-[9.5px] font-bold bg-[#70805D]/10 text-[#70805D] px-2 py-0.5 rounded-md">6 Disciplines</span>
+            <i class="fa-solid fa-chevron-right text-[10px] text-[#70805D]/50"></i>
+          </div>
+        </a>
+
+        <a href="/projects.html" class="mobile-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE] hover:text-[#70805D] transition-all">
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-lg bg-[#70805D]/10 flex items-center justify-center text-[#70805D] text-xs"><i class="fa-solid fa-code-branch"></i></span>
+            <span>Projects</span>
+          </div>
+          <i class="fa-solid fa-chevron-right text-[10px] text-[#70805D]/50"></i>
+        </a>
+
+        <a href="/case-studies.html" class="mobile-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE] hover:text-[#70805D] transition-all">
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-lg bg-[#70805D]/10 flex items-center justify-center text-[#70805D] text-xs"><i class="fa-solid fa-chart-pie"></i></span>
+            <span>Case Studies</span>
+          </div>
+          <i class="fa-solid fa-chevron-right text-[10px] text-[#70805D]/50"></i>
+        </a>
+
+        <!-- Highlighted Offers Item -->
+        <a href="/offers.html" class="mobile-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-black text-[#2A3B27] bg-[#70805D]/12 border border-[#70805D]/25 hover:bg-[#70805D]/20 transition-all shadow-2xs">
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-lg bg-[#70805D] text-white flex items-center justify-center text-xs shadow-xs"><i class="fa-solid fa-tags"></i></span>
+            <span>Offers &amp; Packages</span>
+          </div>
+          <span class="text-[9.5px] font-black bg-[#70805D] text-white px-2 py-0.5 rounded-full shadow-2xs">⭐ Zero-Risk</span>
+        </a>
+
+        <a href="/contact.html" class="mobile-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold text-[#1C2B1B] hover:bg-[#F1F4EE] hover:text-[#70805D] transition-all">
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-lg bg-[#70805D]/10 flex items-center justify-center text-[#70805D] text-xs"><i class="fa-solid fa-envelope"></i></span>
+            <span>Contact &amp; Inquiry</span>
+          </div>
+          <i class="fa-solid fa-chevron-right text-[10px] text-[#70805D]/50"></i>
+        </a>
+      </div>
+
+      <!-- Action Buttons at bottom -->
+      <div class="pt-3 border-t border-[#70805D]/15 flex flex-col gap-2">
+        <a href="/contact.html" class="mobile-link btn-aesthetic-primary w-full justify-center text-xs py-2.5 shadow-sm">
+          <span>Book Strategic Consultation</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+        <a href="https://wa.me/8801838070468" target="_blank" rel="noopener noreferrer" class="btn-outline-emerald w-full justify-center text-xs py-2">
+          <i class="fa-brands fa-whatsapp text-sm text-[#70805D]"></i>
+          <span>Direct WhatsApp (+880 1838-070468)</span>
         </a>
       </div>
     </div>

@@ -541,10 +541,6 @@ function renderServices(services) {
       </li>
     `).join('');
 
-    const toolsHtml = (svc.tools || []).slice(0, 4).map(t => `
-      <span class="px-2 py-0.5 rounded-md bg-[#F1F3ED] text-[10.5px] text-[#2A3B27] border border-[#70805D]/25 font-bold">${escapeHtml(t)}</span>
-    `).join('');
-
     const slug = svc.slug || svc.id;
     // Link to dedicated individual service page with fallback to services directory
     const pageUrl = `/services/${slug}.html`;
@@ -594,12 +590,8 @@ function renderServices(services) {
           </div>
 
           <!-- Card Footer -->
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-5">
-              ${toolsHtml}
-            </div>
-
-            <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+          <div class="pt-3 border-t border-gray-100">
+            <div class="flex items-center justify-between">
               <span class="text-xs font-bold text-[#2A3B27] group-hover:text-[#70805D] flex items-center gap-2 transition-colors">
                 <span>View Dedicated Service Page</span>
                 <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform text-[#70805D]"></i>

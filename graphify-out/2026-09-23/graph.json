@@ -1213,7 +1213,7 @@
       "file_type": "code",
       "norm_label": "escapehtml()",
       "source_file": "app.js",
-      "source_location": "L1259"
+      "source_location": "L1240"
     },
     {
       "id": "app_fetchandhydratecontent",
@@ -1249,7 +1249,7 @@
       "file_type": "code",
       "norm_label": "filterprojectsbycategory()",
       "source_file": "app.js",
-      "source_location": "L872"
+      "source_location": "L853"
     },
     {
       "id": "app_getemergencyfallbackdata",
@@ -1273,7 +1273,7 @@
       "file_type": "code",
       "norm_label": "handlecardmousemove()",
       "source_file": "app.js",
-      "source_location": "L907"
+      "source_location": "L888"
     },
     {
       "id": "app_initambientbackground",
@@ -1321,7 +1321,7 @@
       "file_type": "code",
       "norm_label": "initbeforeaftersliders()",
       "source_file": "app.js",
-      "source_location": "L942"
+      "source_location": "L923"
     },
     {
       "id": "app_initcontactform",
@@ -1333,7 +1333,7 @@
       "file_type": "code",
       "norm_label": "initcontactform()",
       "source_file": "app.js",
-      "source_location": "L1089"
+      "source_location": "L1070"
     },
     {
       "id": "app_initcontactform_showformstatus",
@@ -1345,7 +1345,7 @@
       "file_type": "code",
       "norm_label": "showformstatus()",
       "source_file": "app.js",
-      "source_location": "L1143"
+      "source_location": "L1124"
     },
     {
       "id": "app_initmobilemenu",
@@ -1357,7 +1357,7 @@
       "file_type": "code",
       "norm_label": "initmobilemenu()",
       "source_file": "app.js",
-      "source_location": "L1203"
+      "source_location": "L1184"
     },
     {
       "id": "app_initprojectfilter",
@@ -1369,7 +1369,7 @@
       "file_type": "code",
       "norm_label": "initprojectfilter()",
       "source_file": "app.js",
-      "source_location": "L858"
+      "source_location": "L839"
     },
     {
       "id": "app_initscrolleffects",
@@ -1381,7 +1381,7 @@
       "file_type": "code",
       "norm_label": "initscrolleffects()",
       "source_file": "app.js",
-      "source_location": "L1222"
+      "source_location": "L1203"
     },
     {
       "id": "app_initscrolleffects_handlescroll",
@@ -1393,7 +1393,7 @@
       "file_type": "code",
       "norm_label": "handlescroll()",
       "source_file": "app.js",
-      "source_location": "L1227"
+      "source_location": "L1208"
     },
     {
       "id": "app_initscrollprogressbar",
@@ -1429,7 +1429,7 @@
       "file_type": "code",
       "norm_label": "initscrollreveal()",
       "source_file": "app.js",
-      "source_location": "L918"
+      "source_location": "L899"
     },
     {
       "id": "app_initservicemodal",
@@ -1441,7 +1441,7 @@
       "file_type": "code",
       "norm_label": "initservicemodal()",
       "source_file": "app.js",
-      "source_location": "L999"
+      "source_location": "L980"
     },
     {
       "id": "app_initservicemodal_closemodal",
@@ -1453,7 +1453,7 @@
       "file_type": "code",
       "norm_label": "closemodal()",
       "source_file": "app.js",
-      "source_location": "L1006"
+      "source_location": "L987"
     },
     {
       "id": "app_initspotlightcards",
@@ -1465,7 +1465,7 @@
       "file_type": "code",
       "norm_label": "initspotlightcards()",
       "source_file": "app.js",
-      "source_location": "L898"
+      "source_location": "L879"
     },
     {
       "id": "app_inittypewriter",
@@ -1477,7 +1477,7 @@
       "file_type": "code",
       "norm_label": "inittypewriter()",
       "source_file": "app.js",
-      "source_location": "L1160"
+      "source_location": "L1141"
     },
     {
       "id": "app_inittypewriter_type",
@@ -1489,7 +1489,7 @@
       "file_type": "code",
       "norm_label": "type()",
       "source_file": "app.js",
-      "source_location": "L1169"
+      "source_location": "L1150"
     },
     {
       "id": "app_renderhomecasestudies",
@@ -1501,7 +1501,7 @@
       "file_type": "code",
       "norm_label": "renderhomecasestudies()",
       "source_file": "app.js",
-      "source_location": "L731"
+      "source_location": "L712"
     },
     {
       "id": "app_renderroadmap",
@@ -1513,7 +1513,7 @@
       "file_type": "code",
       "norm_label": "renderroadmap()",
       "source_file": "app.js",
-      "source_location": "L794"
+      "source_location": "L775"
     },
     {
       "id": "app_renderservices",
@@ -1537,7 +1537,7 @@
       "file_type": "code",
       "norm_label": "rendertecharsenal()",
       "source_file": "app.js",
-      "source_location": "L723"
+      "source_location": "L704"
     },
     {
       "id": "app_rendertestimonials",
@@ -1549,7 +1549,7 @@
       "file_type": "code",
       "norm_label": "rendertestimonials()",
       "source_file": "app.js",
-      "source_location": "L822"
+      "source_location": "L803"
     },
     {
       "id": "app_renderwebprojects",
@@ -1561,7 +1561,7 @@
       "file_type": "code",
       "norm_label": "renderwebprojects()",
       "source_file": "app.js",
-      "source_location": "L642"
+      "source_location": "L623"
     },
     {
       "id": "site_hydration_animatecounter",
@@ -1669,7 +1669,7 @@
       "file_type": "code",
       "norm_label": "inithydration()",
       "source_file": "site-hydration.js",
-      "source_location": "L532"
+      "source_location": "L561"
     },
     {
       "id": "site_hydration_initwhatsappfloatingwidget",
@@ -1684,16 +1684,28 @@
       "source_location": "L341"
     },
     {
-      "id": "site_hydration_initwhatsappfloatingwidget_togglepopup",
-      "label": "togglePopup()",
+      "id": "site_hydration_initwhatsappfloatingwidget_closepopup",
+      "label": "closePopup()",
       "_callable": true,
       "_origin": "ast",
       "community": 20,
       "community_name": "site-hydration.js",
       "file_type": "code",
-      "norm_label": "togglepopup()",
+      "norm_label": "closepopup()",
       "source_file": "site-hydration.js",
-      "source_location": "L441"
+      "source_location": "L447"
+    },
+    {
+      "id": "site_hydration_initwhatsappfloatingwidget_openpopup",
+      "label": "openPopup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "site-hydration.js",
+      "file_type": "code",
+      "norm_label": "openpopup()",
+      "source_file": "site-hydration.js",
+      "source_location": "L443"
     },
     {
       "id": "admin_addfieldtobuilder",
@@ -6005,7 +6017,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L867",
+      "source_location": "L848",
       "weight": 1.0
     },
     {
@@ -6017,7 +6029,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1066",
+      "source_location": "L1047",
       "weight": 1.0
     },
     {
@@ -6029,7 +6041,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L742",
+      "source_location": "L723",
       "weight": 1.0
     },
     {
@@ -6041,7 +6053,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L811",
+      "source_location": "L792",
       "weight": 1.0
     },
     {
@@ -6065,7 +6077,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L836",
+      "source_location": "L817",
       "weight": 1.0
     },
     {
@@ -6077,7 +6089,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L654",
+      "source_location": "L635",
       "weight": 1.0
     },
     {
@@ -6581,7 +6593,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L533",
+      "source_location": "L562",
       "weight": 1.0
     },
     {
@@ -6593,7 +6605,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L534",
+      "source_location": "L563",
       "weight": 1.0
     },
     {
@@ -6689,7 +6701,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1089",
+      "source_location": "L1070",
       "weight": 1.0
     },
     {
@@ -6701,12 +6713,24 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1160",
+      "source_location": "L1141",
       "weight": 1.0
     },
     {
       "source": "app",
       "target": "app_initmobilemenu",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app.js",
+      "source_location": "L1184",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_initscrolleffects",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6726,18 +6750,6 @@
       "context": "call",
       "source_file": "app.js",
       "source_location": "L122",
-      "weight": 1.0
-    },
-    {
-      "source": "app",
-      "target": "app_initscrolleffects",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app.js",
-      "source_location": "L1222",
       "weight": 1.0
     },
     {
@@ -6785,7 +6797,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L858",
+      "source_location": "L839",
       "weight": 1.0
     },
     {
@@ -6797,7 +6809,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L898",
+      "source_location": "L879",
       "weight": 1.0
     },
     {
@@ -6809,7 +6821,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L918",
+      "source_location": "L899",
       "weight": 1.0
     },
     {
@@ -6821,7 +6833,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L942",
+      "source_location": "L923",
       "weight": 1.0
     },
     {
@@ -6833,7 +6845,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L999",
+      "source_location": "L980",
       "weight": 1.0
     },
     {
@@ -6845,7 +6857,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1143",
+      "source_location": "L1124",
       "weight": 1.0
     },
     {
@@ -7026,6 +7038,30 @@
       "context": "call",
       "source_file": "site-hydration.js",
       "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration_initwhatsappfloatingwidget",
+      "target": "site_hydration_initwhatsappfloatingwidget_openpopup",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "site-hydration.js",
+      "source_location": "L443",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration_initwhatsappfloatingwidget",
+      "target": "site_hydration_initwhatsappfloatingwidget_closepopup",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "site-hydration.js",
+      "source_location": "L447",
       "weight": 1.0
     },
     {
@@ -8432,7 +8468,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L1259",
+      "source_location": "L1240",
       "weight": 1.0
     },
     {
@@ -8487,7 +8523,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L642",
+      "source_location": "L623",
       "weight": 1.0
     },
     {
@@ -8498,7 +8534,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L723",
+      "source_location": "L704",
       "weight": 1.0
     },
     {
@@ -8509,7 +8545,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L731",
+      "source_location": "L712",
       "weight": 1.0
     },
     {
@@ -8520,7 +8556,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L794",
+      "source_location": "L775",
       "weight": 1.0
     },
     {
@@ -8531,7 +8567,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L822",
+      "source_location": "L803",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_filterprojectsbycategory",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.js",
+      "source_location": "L853",
       "weight": 1.0
     },
     {
@@ -8547,13 +8594,13 @@
     },
     {
       "source": "app",
-      "target": "app_filterprojectsbycategory",
+      "target": "app_handlecardmousemove",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L872",
+      "source_location": "L888",
       "weight": 1.0
     },
     {
@@ -8568,17 +8615,6 @@
       "weight": 1.0
     },
     {
-      "source": "app",
-      "target": "app_handlecardmousemove",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.js",
-      "source_location": "L907",
-      "weight": 1.0
-    },
-    {
       "source": "app_inittypewriter",
       "target": "app_inittypewriter_type",
       "relation": "contains",
@@ -8586,7 +8622,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L1169",
+      "source_location": "L1150",
       "weight": 1.0
     },
     {
@@ -10788,7 +10824,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "app.js",
-      "source_location": "L1255",
+      "source_location": "L1236",
       "weight": 1.0
     },
     {
@@ -10812,7 +10848,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "app.js",
-      "source_location": "L1011",
+      "source_location": "L992",
       "weight": 1.0
     },
     {
@@ -10824,7 +10860,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "app.js",
-      "source_location": "L902",
+      "source_location": "L883",
       "weight": 1.0
     },
     {
@@ -10884,7 +10920,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "site-hydration.js",
-      "source_location": "L541",
+      "source_location": "L570",
       "weight": 1.0
     },
     {
@@ -10898,20 +10934,8 @@
       "source_file": "site-hydration.js",
       "source_location": "L335",
       "weight": 1.0
-    },
-    {
-      "source": "site_hydration_initwhatsappfloatingwidget",
-      "target": "site_hydration_initwhatsappfloatingwidget_togglepopup",
-      "relation": "indirect_call",
-      "_origin": "ast",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "context": "argument",
-      "source_file": "site-hydration.js",
-      "source_location": "L453",
-      "weight": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a7d129d3d35319294c6048a67d0df9308de21ff0"
+  "built_at_commit": "84ee8f8024e63fc193ab24f71acff1d0b6527161"
 }

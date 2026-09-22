@@ -113,22 +113,25 @@
       }
 
       // 4. Mobile Menu Links (In-Place Safe Hydration)
-      const mobileNavGrid = document.querySelector('#mobileMenu .grid');
-      if (mobileNavGrid) {
-        const allMobileLinks = Array.from(mobileNavGrid.querySelectorAll('.mobile-link'));
+      const allMobileLinks = Array.from(document.querySelectorAll('#mobileMenu a.mobile-link'));
+      if (allMobileLinks.length) {
         allMobileLinks.forEach(link => {
           if (link.getAttribute('href') === '/testimonials.html') {
             link.style.display = 'none';
           }
         });
 
-        const mobileLinks = allMobileLinks.filter(link => link.style.display !== 'none');
-        if (mobileLinks && mobileLinks.length >= menu.items.length) {
+        const mobileNavLinks = allMobileLinks.filter(link => {
+          const href = link.getAttribute('href');
+          return href && !href.startsWith('https://wa.me') && !link.classList.contains('btn-aesthetic-primary') && link.style.display !== 'none';
+        });
+
+        if (mobileNavLinks && mobileNavLinks.length >= menu.items.length) {
           menu.items.forEach((item, idx) => {
-            const link = mobileLinks[idx];
+            const link = mobileNavLinks[idx];
             if (!link) return;
             if (item.url) link.setAttribute('href', item.url);
-            const span = link.querySelector('span');
+            const span = link.querySelector('div > span:last-child') || link.querySelector('span');
             if (span && item.label) span.textContent = item.label;
           });
         }
