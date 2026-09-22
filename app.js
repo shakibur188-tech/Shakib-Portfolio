@@ -1175,7 +1175,15 @@ function initTypewriter() {
    ========================================================================== */
 function initMobileMenu() {
   const toggleBtn = document.getElementById('mobileMenuToggle');
+  const drawer = document.getElementById('mobileDrawer');
+  const backdrop = document.getElementById('mobileBackdrop');
   const menu = document.getElementById('mobileMenu');
+
+  if (toggleBtn && drawer && backdrop) {
+    // Handled globally by site-hydration.js
+    return;
+  }
+
   if (!toggleBtn || !menu) return;
 
   toggleBtn.addEventListener('click', () => {

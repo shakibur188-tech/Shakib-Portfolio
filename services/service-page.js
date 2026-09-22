@@ -294,7 +294,15 @@ function initServiceLeadForm() {
    ========================================================================== */
 function initMobileNav() {
   const toggleBtn = document.getElementById('mobileMenuToggle') || document.getElementById('svcMobileToggle');
+  const drawer = document.getElementById('mobileDrawer');
+  const backdrop = document.getElementById('mobileBackdrop');
   const menu = document.getElementById('mobileMenu') || document.getElementById('svcMobileMenu');
+
+  if (toggleBtn && drawer && backdrop) {
+    // Handled globally by site-hydration.js
+    return;
+  }
+
   if (!toggleBtn || !menu) return;
 
   toggleBtn.addEventListener('click', () => {

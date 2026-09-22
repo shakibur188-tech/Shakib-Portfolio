@@ -1213,7 +1213,7 @@
       "file_type": "code",
       "norm_label": "escapehtml()",
       "source_file": "app.js",
-      "source_location": "L1240"
+      "source_location": "L1232"
     },
     {
       "id": "app_fetchandhydratecontent",
@@ -1249,7 +1249,7 @@
       "file_type": "code",
       "norm_label": "filterprojectsbycategory()",
       "source_file": "app.js",
-      "source_location": "L853"
+      "source_location": "L845"
     },
     {
       "id": "app_getemergencyfallbackdata",
@@ -1273,7 +1273,7 @@
       "file_type": "code",
       "norm_label": "handlecardmousemove()",
       "source_file": "app.js",
-      "source_location": "L888"
+      "source_location": "L880"
     },
     {
       "id": "app_initambientbackground",
@@ -1321,7 +1321,7 @@
       "file_type": "code",
       "norm_label": "initbeforeaftersliders()",
       "source_file": "app.js",
-      "source_location": "L923"
+      "source_location": "L915"
     },
     {
       "id": "app_initcontactform",
@@ -1333,7 +1333,7 @@
       "file_type": "code",
       "norm_label": "initcontactform()",
       "source_file": "app.js",
-      "source_location": "L1070"
+      "source_location": "L1062"
     },
     {
       "id": "app_initcontactform_showformstatus",
@@ -1345,7 +1345,7 @@
       "file_type": "code",
       "norm_label": "showformstatus()",
       "source_file": "app.js",
-      "source_location": "L1124"
+      "source_location": "L1116"
     },
     {
       "id": "app_initmobilemenu",
@@ -1357,7 +1357,7 @@
       "file_type": "code",
       "norm_label": "initmobilemenu()",
       "source_file": "app.js",
-      "source_location": "L1184"
+      "source_location": "L1176"
     },
     {
       "id": "app_initprojectfilter",
@@ -1369,7 +1369,7 @@
       "file_type": "code",
       "norm_label": "initprojectfilter()",
       "source_file": "app.js",
-      "source_location": "L839"
+      "source_location": "L831"
     },
     {
       "id": "app_initscrolleffects",
@@ -1381,7 +1381,7 @@
       "file_type": "code",
       "norm_label": "initscrolleffects()",
       "source_file": "app.js",
-      "source_location": "L1203"
+      "source_location": "L1195"
     },
     {
       "id": "app_initscrolleffects_handlescroll",
@@ -1393,7 +1393,7 @@
       "file_type": "code",
       "norm_label": "handlescroll()",
       "source_file": "app.js",
-      "source_location": "L1208"
+      "source_location": "L1200"
     },
     {
       "id": "app_initscrollprogressbar",
@@ -1429,7 +1429,7 @@
       "file_type": "code",
       "norm_label": "initscrollreveal()",
       "source_file": "app.js",
-      "source_location": "L899"
+      "source_location": "L891"
     },
     {
       "id": "app_initservicemodal",
@@ -1441,7 +1441,7 @@
       "file_type": "code",
       "norm_label": "initservicemodal()",
       "source_file": "app.js",
-      "source_location": "L980"
+      "source_location": "L972"
     },
     {
       "id": "app_initservicemodal_closemodal",
@@ -1453,7 +1453,7 @@
       "file_type": "code",
       "norm_label": "closemodal()",
       "source_file": "app.js",
-      "source_location": "L987"
+      "source_location": "L979"
     },
     {
       "id": "app_initspotlightcards",
@@ -1465,7 +1465,7 @@
       "file_type": "code",
       "norm_label": "initspotlightcards()",
       "source_file": "app.js",
-      "source_location": "L879"
+      "source_location": "L871"
     },
     {
       "id": "app_inittypewriter",
@@ -1477,7 +1477,7 @@
       "file_type": "code",
       "norm_label": "inittypewriter()",
       "source_file": "app.js",
-      "source_location": "L1141"
+      "source_location": "L1133"
     },
     {
       "id": "app_inittypewriter_type",
@@ -1489,7 +1489,7 @@
       "file_type": "code",
       "norm_label": "type()",
       "source_file": "app.js",
-      "source_location": "L1150"
+      "source_location": "L1142"
     },
     {
       "id": "app_renderhomecasestudies",
@@ -1501,7 +1501,7 @@
       "file_type": "code",
       "norm_label": "renderhomecasestudies()",
       "source_file": "app.js",
-      "source_location": "L712"
+      "source_location": "L704"
     },
     {
       "id": "app_renderroadmap",
@@ -1513,7 +1513,7 @@
       "file_type": "code",
       "norm_label": "renderroadmap()",
       "source_file": "app.js",
-      "source_location": "L775"
+      "source_location": "L767"
     },
     {
       "id": "app_renderservices",
@@ -1537,7 +1537,7 @@
       "file_type": "code",
       "norm_label": "rendertecharsenal()",
       "source_file": "app.js",
-      "source_location": "L704"
+      "source_location": "L696"
     },
     {
       "id": "app_rendertestimonials",
@@ -1549,7 +1549,7 @@
       "file_type": "code",
       "norm_label": "rendertestimonials()",
       "source_file": "app.js",
-      "source_location": "L803"
+      "source_location": "L795"
     },
     {
       "id": "app_renderwebprojects",
@@ -1561,7 +1561,7 @@
       "file_type": "code",
       "norm_label": "renderwebprojects()",
       "source_file": "app.js",
-      "source_location": "L623"
+      "source_location": "L615"
     },
     {
       "id": "site_hydration_animatecounter",
@@ -1573,7 +1573,7 @@
       "file_type": "code",
       "norm_label": "animatecounter()",
       "source_file": "site-hydration.js",
-      "source_location": "L310"
+      "source_location": "L313"
     },
     {
       "id": "site_hydration_animatecounter_update",
@@ -1585,7 +1585,7 @@
       "file_type": "code",
       "norm_label": "update()",
       "source_file": "site-hydration.js",
-      "source_location": "L320"
+      "source_location": "L323"
     },
     {
       "id": "site_hydration_detectcurrentpagekey",
@@ -1621,7 +1621,7 @@
       "file_type": "code",
       "norm_label": "hydratefiguresstrip()",
       "source_file": "site-hydration.js",
-      "source_location": "L226"
+      "source_location": "L229"
     },
     {
       "id": "site_hydration_hydrateheadermenu",
@@ -1645,7 +1645,7 @@
       "file_type": "code",
       "norm_label": "hydratepagecontent()",
       "source_file": "site-hydration.js",
-      "source_location": "L139"
+      "source_location": "L142"
     },
     {
       "id": "site_hydration_initanimatedcounters",
@@ -1657,7 +1657,7 @@
       "file_type": "code",
       "norm_label": "initanimatedcounters()",
       "source_file": "site-hydration.js",
-      "source_location": "L290"
+      "source_location": "L293"
     },
     {
       "id": "site_hydration_inithydration",
@@ -1669,7 +1669,7 @@
       "file_type": "code",
       "norm_label": "inithydration()",
       "source_file": "site-hydration.js",
-      "source_location": "L561"
+      "source_location": "L564"
     },
     {
       "id": "site_hydration_initwhatsappfloatingwidget",
@@ -1681,7 +1681,7 @@
       "file_type": "code",
       "norm_label": "initwhatsappfloatingwidget()",
       "source_file": "site-hydration.js",
-      "source_location": "L341"
+      "source_location": "L344"
     },
     {
       "id": "site_hydration_initwhatsappfloatingwidget_closepopup",
@@ -1693,7 +1693,7 @@
       "file_type": "code",
       "norm_label": "closepopup()",
       "source_file": "site-hydration.js",
-      "source_location": "L447"
+      "source_location": "L450"
     },
     {
       "id": "site_hydration_initwhatsappfloatingwidget_openpopup",
@@ -1705,7 +1705,7 @@
       "file_type": "code",
       "norm_label": "openpopup()",
       "source_file": "site-hydration.js",
-      "source_location": "L443"
+      "source_location": "L446"
     },
     {
       "id": "admin_addfieldtobuilder",
@@ -6017,7 +6017,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L848",
+      "source_location": "L840",
       "weight": 1.0
     },
     {
@@ -6029,7 +6029,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1047",
+      "source_location": "L1039",
       "weight": 1.0
     },
     {
@@ -6041,7 +6041,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L723",
+      "source_location": "L715",
       "weight": 1.0
     },
     {
@@ -6053,7 +6053,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L792",
+      "source_location": "L784",
       "weight": 1.0
     },
     {
@@ -6077,7 +6077,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L817",
+      "source_location": "L809",
       "weight": 1.0
     },
     {
@@ -6089,7 +6089,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L635",
+      "source_location": "L627",
       "weight": 1.0
     },
     {
@@ -6557,7 +6557,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L287",
+      "source_location": "L290",
       "weight": 1.0
     },
     {
@@ -6569,7 +6569,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L205",
+      "source_location": "L208",
       "weight": 1.0
     },
     {
@@ -6581,7 +6581,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L298",
+      "source_location": "L301",
       "weight": 1.0
     },
     {
@@ -6593,7 +6593,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L562",
+      "source_location": "L565",
       "weight": 1.0
     },
     {
@@ -6605,7 +6605,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L563",
+      "source_location": "L566",
       "weight": 1.0
     },
     {
@@ -6701,7 +6701,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1070",
+      "source_location": "L1062",
       "weight": 1.0
     },
     {
@@ -6713,7 +6713,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1141",
+      "source_location": "L1133",
       "weight": 1.0
     },
     {
@@ -6725,7 +6725,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1184",
+      "source_location": "L1176",
       "weight": 1.0
     },
     {
@@ -6737,7 +6737,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1203",
+      "source_location": "L1195",
       "weight": 1.0
     },
     {
@@ -6797,7 +6797,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L839",
+      "source_location": "L831",
       "weight": 1.0
     },
     {
@@ -6809,7 +6809,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L879",
+      "source_location": "L871",
       "weight": 1.0
     },
     {
@@ -6821,7 +6821,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L899",
+      "source_location": "L891",
       "weight": 1.0
     },
     {
@@ -6833,7 +6833,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L923",
+      "source_location": "L915",
       "weight": 1.0
     },
     {
@@ -6845,7 +6845,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L980",
+      "source_location": "L972",
       "weight": 1.0
     },
     {
@@ -6857,7 +6857,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1124",
+      "source_location": "L1116",
       "weight": 1.0
     },
     {
@@ -7013,7 +7013,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L139",
+      "source_location": "L142",
       "weight": 1.0
     },
     {
@@ -7049,7 +7049,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L443",
+      "source_location": "L446",
       "weight": 1.0
     },
     {
@@ -7061,7 +7061,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L447",
+      "source_location": "L450",
       "weight": 1.0
     },
     {
@@ -8468,7 +8468,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L1240",
+      "source_location": "L1232",
       "weight": 1.0
     },
     {
@@ -8523,7 +8523,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L623",
+      "source_location": "L615",
       "weight": 1.0
     },
     {
@@ -8534,7 +8534,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L704",
+      "source_location": "L696",
       "weight": 1.0
     },
     {
@@ -8545,7 +8545,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L712",
+      "source_location": "L704",
       "weight": 1.0
     },
     {
@@ -8556,7 +8556,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L775",
+      "source_location": "L767",
       "weight": 1.0
     },
     {
@@ -8567,7 +8567,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L803",
+      "source_location": "L795",
       "weight": 1.0
     },
     {
@@ -8578,7 +8578,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L853",
+      "source_location": "L845",
       "weight": 1.0
     },
     {
@@ -8600,7 +8600,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L888",
+      "source_location": "L880",
       "weight": 1.0
     },
     {
@@ -8622,7 +8622,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L1150",
+      "source_location": "L1142",
       "weight": 1.0
     },
     {
@@ -10283,7 +10283,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "site-hydration.js",
-      "source_location": "L226",
+      "source_location": "L229",
       "weight": 1.0
     },
     {
@@ -10294,7 +10294,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "site-hydration.js",
-      "source_location": "L290",
+      "source_location": "L293",
       "weight": 1.0
     },
     {
@@ -10305,7 +10305,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "site-hydration.js",
-      "source_location": "L310",
+      "source_location": "L313",
       "weight": 1.0
     },
     {
@@ -10316,7 +10316,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "site-hydration.js",
-      "source_location": "L341",
+      "source_location": "L344",
       "weight": 1.0
     },
     {
@@ -10824,7 +10824,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "app.js",
-      "source_location": "L1236",
+      "source_location": "L1228",
       "weight": 1.0
     },
     {
@@ -10848,7 +10848,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "app.js",
-      "source_location": "L992",
+      "source_location": "L984",
       "weight": 1.0
     },
     {
@@ -10860,7 +10860,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "app.js",
-      "source_location": "L883",
+      "source_location": "L875",
       "weight": 1.0
     },
     {
@@ -10920,7 +10920,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "site-hydration.js",
-      "source_location": "L570",
+      "source_location": "L573",
       "weight": 1.0
     },
     {
@@ -10932,10 +10932,10 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "site-hydration.js",
-      "source_location": "L335",
+      "source_location": "L338",
       "weight": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "84ee8f8024e63fc193ab24f71acff1d0b6527161"
+  "built_at_commit": "71df7fe6462b560bc0a91ecdd74c315c6a27321b"
 }

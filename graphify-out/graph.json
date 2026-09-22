@@ -1213,7 +1213,7 @@
       "file_type": "code",
       "norm_label": "escapehtml()",
       "source_file": "app.js",
-      "source_location": "L1232"
+      "source_location": "L1240"
     },
     {
       "id": "app_fetchandhydratecontent",
@@ -1381,7 +1381,7 @@
       "file_type": "code",
       "norm_label": "initscrolleffects()",
       "source_file": "app.js",
-      "source_location": "L1195"
+      "source_location": "L1203"
     },
     {
       "id": "app_initscrolleffects_handlescroll",
@@ -1393,7 +1393,7 @@
       "file_type": "code",
       "norm_label": "handlescroll()",
       "source_file": "app.js",
-      "source_location": "L1200"
+      "source_location": "L1208"
     },
     {
       "id": "app_initscrollprogressbar",
@@ -1573,7 +1573,7 @@
       "file_type": "code",
       "norm_label": "animatecounter()",
       "source_file": "site-hydration.js",
-      "source_location": "L313"
+      "source_location": "L346"
     },
     {
       "id": "site_hydration_animatecounter_update",
@@ -1585,7 +1585,7 @@
       "file_type": "code",
       "norm_label": "update()",
       "source_file": "site-hydration.js",
-      "source_location": "L323"
+      "source_location": "L356"
     },
     {
       "id": "site_hydration_detectcurrentpagekey",
@@ -1597,7 +1597,7 @@
       "file_type": "code",
       "norm_label": "detectcurrentpagekey()",
       "source_file": "site-hydration.js",
-      "source_location": "L25"
+      "source_location": "L58"
     },
     {
       "id": "site_hydration_fetchsitecontent",
@@ -1609,7 +1609,19 @@
       "file_type": "code",
       "norm_label": "fetchsitecontent()",
       "source_file": "site-hydration.js",
-      "source_location": "L9"
+      "source_location": "L28"
+    },
+    {
+      "id": "site_hydration_getcachedsitecontent",
+      "label": "getCachedSiteContent()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "site-hydration.js",
+      "file_type": "code",
+      "norm_label": "getcachedsitecontent()",
+      "source_file": "site-hydration.js",
+      "source_location": "L12"
     },
     {
       "id": "site_hydration_hydratefiguresstrip",
@@ -1621,7 +1633,7 @@
       "file_type": "code",
       "norm_label": "hydratefiguresstrip()",
       "source_file": "site-hydration.js",
-      "source_location": "L229"
+      "source_location": "L262"
     },
     {
       "id": "site_hydration_hydrateheadermenu",
@@ -1633,7 +1645,7 @@
       "file_type": "code",
       "norm_label": "hydrateheadermenu()",
       "source_file": "site-hydration.js",
-      "source_location": "L37"
+      "source_location": "L70"
     },
     {
       "id": "site_hydration_hydratepagecontent",
@@ -1645,7 +1657,7 @@
       "file_type": "code",
       "norm_label": "hydratepagecontent()",
       "source_file": "site-hydration.js",
-      "source_location": "L142"
+      "source_location": "L175"
     },
     {
       "id": "site_hydration_initanimatedcounters",
@@ -1657,7 +1669,7 @@
       "file_type": "code",
       "norm_label": "initanimatedcounters()",
       "source_file": "site-hydration.js",
-      "source_location": "L293"
+      "source_location": "L326"
     },
     {
       "id": "site_hydration_inithydration",
@@ -1669,7 +1681,67 @@
       "file_type": "code",
       "norm_label": "inithydration()",
       "source_file": "site-hydration.js",
-      "source_location": "L564"
+      "source_location": "L712"
+    },
+    {
+      "id": "site_hydration_initinstantpagetransitions",
+      "label": "initInstantPageTransitions()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "site-hydration.js",
+      "file_type": "code",
+      "norm_label": "initinstantpagetransitions()",
+      "source_file": "site-hydration.js",
+      "source_location": "L646"
+    },
+    {
+      "id": "site_hydration_initinstantpagetransitions_prefetchurl",
+      "label": "prefetchUrl()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "site-hydration.js",
+      "file_type": "code",
+      "norm_label": "prefetchurl()",
+      "source_file": "site-hydration.js",
+      "source_location": "L649"
+    },
+    {
+      "id": "site_hydration_initmobiledrawer",
+      "label": "initMobileDrawer()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "site-hydration.js",
+      "file_type": "code",
+      "norm_label": "initmobiledrawer()",
+      "source_file": "site-hydration.js",
+      "source_location": "L586"
+    },
+    {
+      "id": "site_hydration_initmobiledrawer_closedrawer",
+      "label": "closeDrawer()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "site-hydration.js",
+      "file_type": "code",
+      "norm_label": "closedrawer()",
+      "source_file": "site-hydration.js",
+      "source_location": "L601"
+    },
+    {
+      "id": "site_hydration_initmobiledrawer_opendrawer",
+      "label": "openDrawer()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "site-hydration.js",
+      "file_type": "code",
+      "norm_label": "opendrawer()",
+      "source_file": "site-hydration.js",
+      "source_location": "L594"
     },
     {
       "id": "site_hydration_initwhatsappfloatingwidget",
@@ -1681,7 +1753,7 @@
       "file_type": "code",
       "norm_label": "initwhatsappfloatingwidget()",
       "source_file": "site-hydration.js",
-      "source_location": "L344"
+      "source_location": "L377"
     },
     {
       "id": "site_hydration_initwhatsappfloatingwidget_closepopup",
@@ -1693,7 +1765,7 @@
       "file_type": "code",
       "norm_label": "closepopup()",
       "source_file": "site-hydration.js",
-      "source_location": "L450"
+      "source_location": "L483"
     },
     {
       "id": "site_hydration_initwhatsappfloatingwidget_openpopup",
@@ -1705,7 +1777,19 @@
       "file_type": "code",
       "norm_label": "openpopup()",
       "source_file": "site-hydration.js",
-      "source_location": "L446"
+      "source_location": "L479"
+    },
+    {
+      "id": "site_hydration_setcachedsitecontent",
+      "label": "setCachedSiteContent()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "site-hydration.js",
+      "file_type": "code",
+      "norm_label": "setcachedsitecontent()",
+      "source_file": "site-hydration.js",
+      "source_location": "L20"
     },
     {
       "id": "admin_addfieldtobuilder",
@@ -2101,7 +2185,7 @@
       "file_type": "code",
       "norm_label": "initbentocards()",
       "source_file": "services/service-page.js",
-      "source_location": "L369"
+      "source_location": "L377"
     },
     {
       "id": "services_service_page_initflipcards",
@@ -2125,7 +2209,7 @@
       "file_type": "code",
       "norm_label": "initinteractiveworkflow()",
       "source_file": "services/service-page.js",
-      "source_location": "L314"
+      "source_location": "L322"
     },
     {
       "id": "services_service_page_initinteractiveworkflow_onscrollspy",
@@ -2137,7 +2221,7 @@
       "file_type": "code",
       "norm_label": "onscrollspy()",
       "source_file": "services/service-page.js",
-      "source_location": "L339"
+      "source_location": "L347"
     },
     {
       "id": "services_service_page_initinteractiveworkflow_updateactiveui",
@@ -2149,7 +2233,7 @@
       "file_type": "code",
       "norm_label": "updateactiveui()",
       "source_file": "services/service-page.js",
-      "source_location": "L323"
+      "source_location": "L331"
     },
     {
       "id": "services_service_page_initmobilenav",
@@ -2173,7 +2257,7 @@
       "file_type": "code",
       "norm_label": "initperspectiverow()",
       "source_file": "services/service-page.js",
-      "source_location": "L390"
+      "source_location": "L398"
     },
     {
       "id": "services_service_page_initscrollprogressbar",
@@ -6545,7 +6629,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "services/service-page.js",
-      "source_location": "L358",
+      "source_location": "L366",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration_fetchsitecontent",
+      "target": "site_hydration_getcachedsitecontent",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "site-hydration.js",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration_fetchsitecontent",
+      "target": "site_hydration_setcachedsitecontent",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "site-hydration.js",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -6557,7 +6665,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L290",
+      "source_location": "L323",
       "weight": 1.0
     },
     {
@@ -6569,7 +6677,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L208",
+      "source_location": "L241",
       "weight": 1.0
     },
     {
@@ -6581,7 +6689,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L301",
+      "source_location": "L334",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration_inithydration",
+      "target": "site_hydration_initmobiledrawer",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "site-hydration.js",
+      "source_location": "L713",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration_inithydration",
+      "target": "site_hydration_initinstantpagetransitions",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "site-hydration.js",
+      "source_location": "L714",
       "weight": 1.0
     },
     {
@@ -6593,7 +6725,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L565",
+      "source_location": "L715",
       "weight": 1.0
     },
     {
@@ -6605,7 +6737,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L566",
+      "source_location": "L718",
       "weight": 1.0
     },
     {
@@ -6737,7 +6869,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L1195",
+      "source_location": "L1203",
       "weight": 1.0
     },
     {
@@ -6953,7 +7085,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "services/service-page.js",
-      "source_location": "L314",
+      "source_location": "L322",
       "weight": 1.0
     },
     {
@@ -6965,7 +7097,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "services/service-page.js",
-      "source_location": "L369",
+      "source_location": "L377",
       "weight": 1.0
     },
     {
@@ -6977,7 +7109,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "services/service-page.js",
-      "source_location": "L390",
+      "source_location": "L398",
       "weight": 1.0
     },
     {
@@ -7001,7 +7133,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "services/service-page.js",
-      "source_location": "L323",
+      "source_location": "L331",
       "weight": 1.0
     },
     {
@@ -7013,7 +7145,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L142",
+      "source_location": "L175",
       "weight": 1.0
     },
     {
@@ -7025,7 +7157,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L25",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -7037,7 +7169,43 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L37",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration_initinstantpagetransitions",
+      "target": "site_hydration_initinstantpagetransitions_prefetchurl",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "site-hydration.js",
+      "source_location": "L649",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration_initmobiledrawer",
+      "target": "site_hydration_initmobiledrawer_opendrawer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "site-hydration.js",
+      "source_location": "L594",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration_initmobiledrawer",
+      "target": "site_hydration_initmobiledrawer_closedrawer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "site-hydration.js",
+      "source_location": "L601",
       "weight": 1.0
     },
     {
@@ -7049,7 +7217,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L446",
+      "source_location": "L479",
       "weight": 1.0
     },
     {
@@ -7061,7 +7229,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L450",
+      "source_location": "L483",
       "weight": 1.0
     },
     {
@@ -8468,7 +8636,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L1232",
+      "source_location": "L1240",
       "weight": 1.0
     },
     {
@@ -10277,46 +10445,35 @@
     },
     {
       "source": "site_hydration",
+      "target": "site_hydration_getcachedsitecontent",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "site-hydration.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration",
+      "target": "site_hydration_setcachedsitecontent",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "site-hydration.js",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration",
       "target": "site_hydration_hydratefiguresstrip",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "site-hydration.js",
-      "source_location": "L229",
-      "weight": 1.0
-    },
-    {
-      "source": "site_hydration",
-      "target": "site_hydration_initanimatedcounters",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "site-hydration.js",
-      "source_location": "L293",
-      "weight": 1.0
-    },
-    {
-      "source": "site_hydration",
-      "target": "site_hydration_animatecounter",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "site-hydration.js",
-      "source_location": "L313",
-      "weight": 1.0
-    },
-    {
-      "source": "site_hydration",
-      "target": "site_hydration_initwhatsappfloatingwidget",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "site-hydration.js",
-      "source_location": "L344",
+      "source_location": "L262",
       "weight": 1.0
     },
     {
@@ -10327,7 +10484,62 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "site-hydration.js",
-      "source_location": "L9",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration",
+      "target": "site_hydration_initanimatedcounters",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "site-hydration.js",
+      "source_location": "L326",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration",
+      "target": "site_hydration_animatecounter",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "site-hydration.js",
+      "source_location": "L346",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration",
+      "target": "site_hydration_initwhatsappfloatingwidget",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "site-hydration.js",
+      "source_location": "L377",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration",
+      "target": "site_hydration_initmobiledrawer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "site-hydration.js",
+      "source_location": "L586",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration",
+      "target": "site_hydration_initinstantpagetransitions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "site-hydration.js",
+      "source_location": "L646",
       "weight": 1.0
     },
     {
@@ -10824,7 +11036,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "app.js",
-      "source_location": "L1228",
+      "source_location": "L1236",
       "weight": 1.0
     },
     {
@@ -10896,7 +11108,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "services/service-page.js",
-      "source_location": "L362",
+      "source_location": "L370",
       "weight": 1.0
     },
     {
@@ -10920,7 +11132,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "site-hydration.js",
-      "source_location": "L573",
+      "source_location": "L724",
       "weight": 1.0
     },
     {
@@ -10932,10 +11144,10 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "site-hydration.js",
-      "source_location": "L338",
+      "source_location": "L371",
       "weight": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "71df7fe6462b560bc0a91ecdd74c315c6a27321b"
+  "built_at_commit": "620ac9c3827a5d1498c4b527392f9146c9498195"
 }
