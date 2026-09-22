@@ -15,6 +15,7 @@ RewriteRule ^testimonials/?$ testimonials.html [L,QSA]
 RewriteRule ^contact/?$ contact.html [L,QSA]
 RewriteRule ^services/?$ services.html [L,QSA]
 RewriteRule ^case-studies/?$ case-studies.html [L,QSA]
+RewriteRule ^offers/?$ offers.html [L,QSA]
 
 # 2. Route all /api/* requests to Universal PHP API bridge
 RewriteRule ^api/(.*)$ api/index.php [L,QSA]

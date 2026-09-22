@@ -1969,7 +1969,7 @@
       "file_type": "code",
       "norm_label": "featurevalue()",
       "source_file": "components/PricingSection.jsx",
-      "source_location": "L10"
+      "source_location": "L7"
     },
     {
       "id": "components_pricingsection_pricingcard",
@@ -1981,7 +1981,7 @@
       "file_type": "code",
       "norm_label": "pricingcard()",
       "source_file": "components/PricingSection.jsx",
-      "source_location": "L38"
+      "source_location": "L35"
     },
     {
       "id": "components_pricingsection_pricingsection",
@@ -1993,7 +1993,7 @@
       "file_type": "code",
       "norm_label": "pricingsection()",
       "source_file": "components/PricingSection.jsx",
-      "source_location": "L189"
+      "source_location": "L186"
     },
     {
       "id": "components_pricingsection_promobanner",
@@ -2005,19 +2005,7 @@
       "file_type": "code",
       "norm_label": "promobanner()",
       "source_file": "components/PricingSection.jsx",
-      "source_location": "L161"
-    },
-    {
-      "id": "components_pricingtable_pricingtable",
-      "label": "PricingTable()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "PricingSection.jsx",
-      "file_type": "code",
-      "norm_label": "pricingtable()",
-      "source_file": "components/PricingTable.jsx",
-      "source_location": "L3"
+      "source_location": "L158"
     },
     {
       "id": "services_service_page_initambientcanvas",
@@ -3724,17 +3712,6 @@
       "source_location": "L1"
     },
     {
-      "id": "components_pricingtable",
-      "label": "PricingTable.jsx",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "PricingSection.jsx",
-      "file_type": "code",
-      "norm_label": "pricingtable.jsx",
-      "source_file": "components/PricingTable.jsx",
-      "source_location": "L1"
-    },
-    {
       "id": "update_navbar_and_about",
       "label": "update_navbar_and_about.js",
       "_origin": "ast",
@@ -4281,7 +4258,6 @@
     {
       "id": "ref_react",
       "label": "ref_react",
-      "_origin": "semantic",
       "community": 32,
       "community_name": "PricingSection.jsx",
       "external": true,
@@ -6994,30 +6970,6 @@
     },
     {
       "source": "components_pricingsection",
-      "target": "components_pricingtable",
-      "relation": "re_exports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "export",
-      "source_file": "components/PricingSection.jsx",
-      "source_location": "L4",
-      "weight": 1.0
-    },
-    {
-      "source": "components_pricingsection",
-      "target": "components_pricingtable_pricingtable",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "components/PricingSection.jsx",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "components_pricingsection",
       "target": "ref_react",
       "relation": "imports_from",
       "_origin": "ast",
@@ -7025,18 +6977,6 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "components/PricingSection.jsx",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "components_pricingtable",
-      "target": "ref_react",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "components/PricingTable.jsx",
       "source_location": "L1",
       "weight": 1.0
     },
@@ -8599,24 +8539,13 @@
     },
     {
       "source": "components_pricingsection",
-      "target": "components_pricingsection_featurevalue",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "components/PricingSection.jsx",
-      "source_location": "L10",
-      "weight": 1.0
-    },
-    {
-      "source": "components_pricingsection",
       "target": "components_pricingsection_promobanner",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/PricingSection.jsx",
-      "source_location": "L161",
+      "source_location": "L158",
       "weight": 1.0
     },
     {
@@ -8627,7 +8556,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/PricingSection.jsx",
-      "source_location": "L189",
+      "source_location": "L186",
       "weight": 1.0
     },
     {
@@ -8638,18 +8567,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/PricingSection.jsx",
-      "source_location": "L38",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
-      "source": "components_pricingtable",
-      "target": "components_pricingtable_pricingtable",
+      "source": "components_pricingsection",
+      "target": "components_pricingsection_featurevalue",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "components/PricingTable.jsx",
-      "source_location": "L3",
+      "source_file": "components/PricingSection.jsx",
+      "source_location": "L7",
       "weight": 1.0
     },
     {

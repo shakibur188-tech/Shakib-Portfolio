@@ -1229,6 +1229,8 @@ const server = http.createServer(async (req, res) => {
     safePath = '/services.html';
   } else if (safePath === '/case-studies' || safePath === '/case-studies/' || safePath === '/case-studies.html') {
     safePath = '/case-studies.html';
+  } else if (safePath === '/offers' || safePath === '/offers/' || safePath === '/offers.html') {
+    safePath = '/offers.html';
   } else if (safePath === '/form' || safePath === '/form.html' || safePath.startsWith('/form/')) {
     safePath = '/form.html';
   }

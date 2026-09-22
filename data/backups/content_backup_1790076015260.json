@@ -742,800 +742,580 @@
   ],
   "offers": [
     {
-      "id": "plan-starter",
-      "title": "Starter",
-      "subtitle": "12-Month EMI",
+      "id": "plan-startup",
+      "title": "Startup",
+      "subtitle": "Best for new sellers & early-stage ventures",
       "category": "monthly",
-      "categoryLabel": "12-Month EMI",
-      "badge": "12-Month EMI",
+      "categoryLabel": "Starter Tier",
+      "badge": "Starter Tier",
       "timeline": "/month",
       "price": "৳ 3,000",
-      "originalPrice": "",
+      "originalPrice": "৳ 5,000",
       "period": "/month",
       "subtext": "Total ৳ 36,000 in 12 Months",
-      "description": "12-Month EMI",
+      "description": "Best for new sellers & early-stage ventures",
       "deliverables": [
-        "Fast Loading Website: Less than 1 second",
-        "Responsive Layout: Mobile friendly responsive website",
-        "FREE .COM Domain: Free  |$15 Value",
-        "FREE 10 GB NVMe SSD Storage: Included |$22 Value",
-        "FREE  SSL Certificate: Free  |$8 Value",
-        "Unlimited Bandwidth & 99.9% Uptime: 99.9% Uptime",
-        "Payment Terms: ৳ 3,000 /month",
-        "Total Cost: ৳ 36,000 in 12 Months",
-        "Admin / Backend Access: Admin access",
-        "Customer Login: Secured + Gmail",
-        "Payment Gateway",
-        "Abandoned Cart",
-        "Unlimited Business Emails: 2 Email  |Unlimited creation After final payment",
-        "cPanel Handover: After 12 Month"
+        "FREE .COM Domain  +  SSL",
+        "High-Speed NVMe Storage: 10 GB",
+        "Corporate Email Accounts: 2 Emails",
+        "Payment Gateway Integration",
+        "Page Load Speed: < 1s",
+        "Incomplete Order Tracking",
+        "Automated WhatsApp Bot",
+        "Dedicated Ad Creative Sprints",
+        "24/7 Priority Support"
       ],
       "features": [
         {
-          "title": "Fast Loading Website",
-          "type": "text",
-          "value": "Less than 1 second"
+          "title": "FREE .COM Domain  +  SSL",
+          "type": "cross",
+          "value": ""
         },
         {
-          "title": "Responsive Layout",
+          "title": "High-Speed NVMe Storage",
           "type": "text",
-          "value": "Mobile friendly responsive website"
+          "value": "10 GB"
         },
         {
-          "title": "FREE .COM Domain",
+          "title": "Corporate Email Accounts",
           "type": "text",
-          "value": "Free  |$15 Value"
+          "value": "2 Emails"
         },
         {
-          "title": "FREE 10 GB NVMe SSD Storage",
-          "type": "text",
-          "value": "Included |$22 Value"
-        },
-        {
-          "title": "FREE  SSL Certificate",
-          "type": "text",
-          "value": "Free  |$8 Value"
-        },
-        {
-          "title": "Unlimited Bandwidth & 99.9% Uptime",
-          "type": "text",
-          "value": "99.9% Uptime"
-        },
-        {
-          "title": "Payment Terms",
-          "type": "text",
-          "value": "৳ 3,000 /month"
-        },
-        {
-          "title": "Total Cost",
-          "type": "text",
-          "value": "৳ 36,000 in 12 Months"
-        },
-        {
-          "title": "Admin / Backend Access",
-          "type": "text",
-          "value": "Admin access"
-        },
-        {
-          "title": "Customer Login",
-          "type": "text",
-          "value": "Secured + Gmail"
-        },
-        {
-          "title": "Payment Gateway",
+          "title": "Payment Gateway Integration",
           "type": "checkmark",
           "value": ""
         },
         {
-          "title": "Abandoned Cart",
-          "type": "checkmark",
+          "title": "Page Load Speed",
+          "type": "text",
+          "value": "< 1s"
+        },
+        {
+          "title": "Incomplete Order Tracking",
+          "type": "cross",
           "value": ""
         },
         {
-          "title": "Unlimited Business Emails",
-          "type": "text",
-          "value": "2 Email  |Unlimited creation After final payment"
+          "title": "Automated WhatsApp Bot",
+          "type": "cross",
+          "value": ""
         },
         {
-          "title": "cPanel Handover",
-          "type": "text",
-          "value": "After 12 Month"
+          "title": "Dedicated Ad Creative Sprints",
+          "type": "cross",
+          "value": ""
+        },
+        {
+          "title": "24/7 Priority Support",
+          "type": "checkmark",
+          "value": ""
         }
       ],
       "active": true,
       "highlight": false,
       "icon": "🚀",
       "ctaText": "Get Started →",
-      "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20get%20started%20with%20the%20Starter%20Plan%20(12-Month%20EMI%20-%203,000%20BDT/mo)"
+      "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20get%20started%20with%20the%20Startup%20Plan%20(3,000%20BDT/mo)"
     },
     {
       "id": "plan-momentum",
       "title": "Momentum",
-      "subtitle": "9-Month EMI",
+      "subtitle": "Best for growing businesses & scaling brands",
       "category": "monthly",
-      "categoryLabel": "9-Month EMI",
-      "badge": "⭐ Best Value (EMI)",
+      "categoryLabel": "🔥 Most Popular",
+      "badge": "🔥 Most Popular",
       "timeline": "/month",
-      "price": "৳ 3,800",
-      "originalPrice": "",
+      "price": "৳ 7,500",
+      "originalPrice": "৳ 11,000",
       "period": "/month",
-      "subtext": "Total ৳ 34,200 in 9 Months",
-      "description": "9-Month EMI",
+      "subtext": "Save 30% Net on Annual Billing",
+      "description": "Best for growing businesses & scaling brands",
       "deliverables": [
-        "Fast Loading Website: Less than 1 second",
-        "Responsive Layout: Mobile friendly responsive website",
-        "FREE .COM Domain: Free  |$15 Value",
-        "10 GB NVMe SSD Storage: Included ($22 Value)",
-        "Premium SSL Certificate: Free ($8 Value)",
-        "Unlimited Bandwidth & 99.9% Uptime: 99.9% Uptime",
-        "Payment Terms: ৳ 3,800 /month",
-        "Total Cost: ৳ 34,200 in 9 Months",
-        "Admin / Backend Access: Admin access",
-        "Customer Login: Secured + Gmail",
-        "Payment Gateway",
-        "Abandoned Cart",
-        "Unlimited Business Emails: 2 Email (Unlimited creation After final payment)",
-        "cPanel Handover: After 9 Month"
+        "FREE .COM Domain + SSL",
+        "High-Speed NVMe Storage: 35 GB",
+        "Corporate Email Accounts: 5 Emails",
+        "Payment Gateway + bKash/Nagad",
+        "Incomplete Order Tracking",
+        "Automated WhatsApp Bot",
+        "Meta Pixel & CAPI Server Tracking",
+        "Page Load Speed: < 0.8s",
+        "Weekly ROAS Analytics: Included"
       ],
       "features": [
         {
-          "title": "Fast Loading Website",
-          "type": "text",
-          "value": "Less than 1 second"
-        },
-        {
-          "title": "Responsive Layout",
-          "type": "text",
-          "value": "Mobile friendly responsive website"
-        },
-        {
-          "title": "FREE .COM Domain",
-          "type": "text",
-          "value": "Free  |$15 Value"
-        },
-        {
-          "title": "10 GB NVMe SSD Storage",
-          "type": "text",
-          "value": "Included ($22 Value)"
-        },
-        {
-          "title": "Premium SSL Certificate",
-          "type": "text",
-          "value": "Free ($8 Value)"
-        },
-        {
-          "title": "Unlimited Bandwidth & 99.9% Uptime",
-          "type": "text",
-          "value": "99.9% Uptime"
-        },
-        {
-          "title": "Payment Terms",
-          "type": "text",
-          "value": "৳ 3,800 /month"
-        },
-        {
-          "title": "Total Cost",
-          "type": "text",
-          "value": "৳ 34,200 in 9 Months"
-        },
-        {
-          "title": "Admin / Backend Access",
-          "type": "text",
-          "value": "Admin access"
-        },
-        {
-          "title": "Customer Login",
-          "type": "text",
-          "value": "Secured + Gmail"
-        },
-        {
-          "title": "Payment Gateway",
+          "title": "FREE .COM Domain + SSL",
           "type": "checkmark",
           "value": ""
         },
         {
-          "title": "Abandoned Cart",
+          "title": "High-Speed NVMe Storage",
+          "type": "text",
+          "value": "35 GB"
+        },
+        {
+          "title": "Corporate Email Accounts",
+          "type": "text",
+          "value": "5 Emails"
+        },
+        {
+          "title": "Payment Gateway + bKash/Nagad",
           "type": "checkmark",
           "value": ""
         },
         {
-          "title": "Unlimited Business Emails",
-          "type": "text",
-          "value": "2 Email (Unlimited creation After final payment)"
+          "title": "Incomplete Order Tracking",
+          "type": "checkmark",
+          "value": ""
         },
         {
-          "title": "cPanel Handover",
+          "title": "Automated WhatsApp Bot",
+          "type": "checkmark",
+          "value": ""
+        },
+        {
+          "title": "Meta Pixel & CAPI Server Tracking",
+          "type": "checkmark",
+          "value": ""
+        },
+        {
+          "title": "Page Load Speed",
           "type": "text",
-          "value": "After 9 Month"
+          "value": "< 0.8s"
+        },
+        {
+          "title": "Weekly ROAS Analytics",
+          "type": "text",
+          "value": "Included"
         }
       ],
       "active": true,
       "highlight": true,
       "icon": "⚡",
-      "ctaText": "Claim Offer →",
-      "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20get%20started%20with%20the%20Momentum%20Plan%20(9-Month%20EMI%20-%203,800%20BDT/mo)"
+      "ctaText": "Start Scaling Now →",
+      "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20get%20started%20with%20the%20Momentum%20Plan%20(7,500%20BDT/mo)"
     },
     {
       "id": "plan-accelerate",
       "title": "Accelerate",
-      "subtitle": "6-Month EMI",
+      "subtitle": "High-volume e-commerce & multi-channel funnels",
       "category": "monthly",
-      "categoryLabel": "6-Month EMI",
-      "badge": "6-Month EMI",
+      "categoryLabel": "High ROI",
+      "badge": "High ROI",
       "timeline": "/month",
-      "price": "৳ 5,425",
-      "originalPrice": "",
+      "price": "৳ 15,000",
+      "originalPrice": "৳ 22,000",
       "period": "/month",
-      "subtext": "Total ৳ 32,550 in 6 Months",
-      "description": "6-Month EMI",
+      "subtext": "Complete Omnichannel Acquisition Suite",
+      "description": "High-volume e-commerce & multi-channel funnels",
       "deliverables": [
-        "Fast Loading Website: Less than 1 second",
-        "Responsive Layout: Mobile friendly responsive website",
-        "FREE .COM Domain: Free ($15 Value)",
-        "10 GB NVMe SSD Storage: Included ($22 Value)",
-        "Premium SSL Certificate: Free ($8 Value)",
-        "Unlimited Bandwidth & 99.9% Uptime: 99.9% Uptime",
-        "Payment Terms: ৳ 5,425 /month",
-        "Total Cost: ৳ 32,550 in 6 Months",
-        "Admin / Backend Access: Admin access",
-        "Customer Login: Secured + Gmail",
-        "Payment Gateway",
-        "Abandoned Cart",
-        "Unlimited Business Emails: 2 Email (Unlimited creation After final payment)",
-        "cPanel Handover: After 6 Month"
+        "Custom Domain & Cloudflare Pro",
+        "High-Speed NVMe Storage: 100 GB",
+        "Corporate Email Accounts: Unlimited",
+        "Full Checkout & Multi-Currency",
+        "Incomplete Order Recovery Funnel: Automated",
+        "Google Ads & P-Max Management",
+        "Dedicated Custom Ad Creatives: 12 / mo",
+        "Page Load Speed: < 0.5s",
+        "Direct Bi-Weekly Strategy Debrief"
       ],
       "features": [
         {
-          "title": "Fast Loading Website",
-          "type": "text",
-          "value": "Less than 1 second"
-        },
-        {
-          "title": "Responsive Layout",
-          "type": "text",
-          "value": "Mobile friendly responsive website"
-        },
-        {
-          "title": "FREE .COM Domain",
-          "type": "text",
-          "value": "Free ($15 Value)"
-        },
-        {
-          "title": "10 GB NVMe SSD Storage",
-          "type": "text",
-          "value": "Included ($22 Value)"
-        },
-        {
-          "title": "Premium SSL Certificate",
-          "type": "text",
-          "value": "Free ($8 Value)"
-        },
-        {
-          "title": "Unlimited Bandwidth & 99.9% Uptime",
-          "type": "text",
-          "value": "99.9% Uptime"
-        },
-        {
-          "title": "Payment Terms",
-          "type": "text",
-          "value": "৳ 5,425 /month"
-        },
-        {
-          "title": "Total Cost",
-          "type": "text",
-          "value": "৳ 32,550 in 6 Months"
-        },
-        {
-          "title": "Admin / Backend Access",
-          "type": "text",
-          "value": "Admin access"
-        },
-        {
-          "title": "Customer Login",
-          "type": "text",
-          "value": "Secured + Gmail"
-        },
-        {
-          "title": "Payment Gateway",
+          "title": "Custom Domain & Cloudflare Pro",
           "type": "checkmark",
           "value": ""
         },
         {
-          "title": "Abandoned Cart",
+          "title": "High-Speed NVMe Storage",
+          "type": "text",
+          "value": "100 GB"
+        },
+        {
+          "title": "Corporate Email Accounts",
+          "type": "text",
+          "value": "Unlimited"
+        },
+        {
+          "title": "Full Checkout & Multi-Currency",
           "type": "checkmark",
           "value": ""
         },
         {
-          "title": "Unlimited Business Emails",
+          "title": "Incomplete Order Recovery Funnel",
           "type": "text",
-          "value": "2 Email (Unlimited creation After final payment)"
+          "value": "Automated"
         },
         {
-          "title": "cPanel Handover",
+          "title": "Google Ads & P-Max Management",
+          "type": "checkmark",
+          "value": ""
+        },
+        {
+          "title": "Dedicated Custom Ad Creatives",
           "type": "text",
-          "value": "After 6 Month"
+          "value": "12 / mo"
+        },
+        {
+          "title": "Page Load Speed",
+          "type": "text",
+          "value": "< 0.5s"
+        },
+        {
+          "title": "Direct Bi-Weekly Strategy Debrief",
+          "type": "checkmark",
+          "value": ""
         }
       ],
       "active": true,
       "highlight": false,
       "icon": "💎",
-      "ctaText": "Get Started →",
-      "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20get%20started%20with%20the%20Accelerate%20Plan%20(6-Month%20EMI%20-%205,425%20BDT/mo)"
+      "ctaText": "Accelerate Growth →",
+      "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20get%20started%20with%20the%20Accelerate%20Plan%20(15,000%20BDT/mo)"
     },
     {
       "id": "plan-founder",
-      "title": "Founder",
-      "subtitle": "Pay in Full",
+      "title": "Founder / Enterprise",
+      "subtitle": "Bespoke digital architecture & fractional direction",
       "category": "custom",
-      "categoryLabel": "Best Value",
-      "badge": "⭐ Best Value (Pay in Full)",
-      "timeline": "One-time",
+      "categoryLabel": "Custom Scope",
+      "badge": "Custom Scope",
+      "timeline": "one-time",
       "price": "৳ 25,000",
-      "originalPrice": "৳ 36,000",
-      "period": "One-time",
-      "subtext": "৳ 25,000 One-time (Save 30% Net)",
-      "description": "Pay in Full",
+      "originalPrice": "৳ 40,000",
+      "period": "one-time",
+      "subtext": "Or ৳ 35,000/mo Fractional Partner Retainer",
+      "description": "Bespoke digital architecture & fractional direction",
       "deliverables": [
-        "Fast Loading Website: Less than 1 second",
-        "Responsive Layout: Mobile friendly responsive website",
-        "FREE .COM Domain: Free ($15 Value)",
-        "10 GB NVMe SSD Storage: Included ($22 Value)",
-        "Premium SSL Certificate: Free ($8 Value)",
-        "Unlimited Bandwidth & 99.9% Uptime: 99.9% Uptime",
-        "Payment Terms: ৳ 25,000 One-time",
-        "Total Cost: ৳ 25,000 (Save 30% Net)",
-        "Admin / Backend Access: Master admin",
-        "Customer Login: Secured + Gmail",
-        "Payment Gateway",
-        "Abandoned Cart",
-        "Unlimited Business Emails: Unlimited (Immediate)",
-        "cPanel Handover: Day 1 (Immediate)"
+        "Bespoke Jamstack Web Platform",
+        "Server Architecture & CDN: Enterprise",
+        "Tier-1 Media & PR Placement: Included",
+        "Omnichannel Ad Scaling Engine",
+        "Conversion Rate Optimization (CRO)",
+        "3D Product Visuals & Identity Kit",
+        "Dedicated Growth Director: Direct VIP",
+        "SLA & Uptime Guarantee: 99.99%",
+        "24/7 WhatsApp & Phone Access"
       ],
       "features": [
         {
-          "title": "Fast Loading Website",
-          "type": "text",
-          "value": "Less than 1 second"
-        },
-        {
-          "title": "Responsive Layout",
-          "type": "text",
-          "value": "Mobile friendly responsive website"
-        },
-        {
-          "title": "FREE .COM Domain",
-          "type": "text",
-          "value": "Free ($15 Value)"
-        },
-        {
-          "title": "10 GB NVMe SSD Storage",
-          "type": "text",
-          "value": "Included ($22 Value)"
-        },
-        {
-          "title": "Premium SSL Certificate",
-          "type": "text",
-          "value": "Free ($8 Value)"
-        },
-        {
-          "title": "Unlimited Bandwidth & 99.9% Uptime",
-          "type": "text",
-          "value": "99.9% Uptime"
-        },
-        {
-          "title": "Payment Terms",
-          "type": "text",
-          "value": "৳ 25,000 One-time"
-        },
-        {
-          "title": "Total Cost",
-          "type": "text",
-          "value": "৳ 25,000 (Save 30% Net)"
-        },
-        {
-          "title": "Admin / Backend Access",
-          "type": "text",
-          "value": "Master admin"
-        },
-        {
-          "title": "Customer Login",
-          "type": "text",
-          "value": "Secured + Gmail"
-        },
-        {
-          "title": "Payment Gateway",
+          "title": "Bespoke Jamstack Web Platform",
           "type": "checkmark",
           "value": ""
         },
         {
-          "title": "Abandoned Cart",
+          "title": "Server Architecture & CDN",
+          "type": "text",
+          "value": "Enterprise"
+        },
+        {
+          "title": "Tier-1 Media & PR Placement",
+          "type": "text",
+          "value": "Included"
+        },
+        {
+          "title": "Omnichannel Ad Scaling Engine",
           "type": "checkmark",
           "value": ""
         },
         {
-          "title": "Unlimited Business Emails",
-          "type": "text",
-          "value": "Unlimited (Immediate)"
+          "title": "Conversion Rate Optimization (CRO)",
+          "type": "checkmark",
+          "value": ""
         },
         {
-          "title": "cPanel Handover",
+          "title": "3D Product Visuals & Identity Kit",
+          "type": "checkmark",
+          "value": ""
+        },
+        {
+          "title": "Dedicated Growth Director",
           "type": "text",
-          "value": "Day 1 (Immediate)"
+          "value": "Direct VIP"
+        },
+        {
+          "title": "SLA & Uptime Guarantee",
+          "type": "text",
+          "value": "99.99%"
+        },
+        {
+          "title": "24/7 WhatsApp & Phone Access",
+          "type": "checkmark",
+          "value": ""
         }
       ],
       "active": true,
-      "highlight": true,
+      "highlight": false,
       "icon": "👑",
-      "ctaText": "Claim Offer →",
-      "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20claim%20the%20Founder%20Package%20(Pay%20in%20Full%20-%2025,000%20BDT%20One-time)"
+      "ctaText": "Talk to Shakibur →",
+      "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20discuss%20the%20Founder/Enterprise%20Package"
     }
   ],
   "pricingOffers": {
     "promoBanner": {
       "enabled": true,
-      "text": "🔥 Flash Promo: Zero-Risk E-Commerce Packages with Free .COM Domain, 10GB NVMe & SSL Bundle!",
-      "linkText": "Explore Plans →",
+      "text": "🔥 Flash Promo: Get up to ৳ 3,000 in Free Infrastructure & Strategic Audit Value This Week!",
+      "linkText": "Claim Promo →",
       "linkUrl": "#pricing-plans"
     },
     "sectionHeader": {
-      "tag": "ZERO-RISK E-COMMERCE PACKAGES",
-      "title": "Zero-Risk E-Commerce Packages",
-      "subtitle": "Choose your flexible EMI plan or pay upfront to save 30%."
+      "tag": "TRANSPARENT PRICING & VALUE PACKAGES",
+      "title": "Predictable, High-Impact Growth Architecture",
+      "subtitle": "Select a high-velocity monthly tier or fixed-scope milestone build. 100% transparent deliverables with zero hidden lock-ins."
     },
     "plans": [
       {
-        "id": "plan-starter",
-        "active": true,
-        "order": 1,
+        "id": "plan-startup",
+        "title": "Startup",
+        "subtitle": "Best for new sellers & early-stage ventures",
+        "badge": "Starter Tier",
         "icon": "🚀",
-        "title": "Starter",
-        "subtitle": "12-Month EMI",
+        "order": 1,
+        "active": true,
         "highlight": false,
-        "badge": "12-Month EMI",
         "currency": "৳",
         "price": "3,000",
-        "originalPrice": "",
+        "originalPrice": "5,000",
         "period": "/month",
         "subtext": "Total ৳ 36,000 in 12 Months",
-        "ctaText": "Get Started",
-        "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20get%20started%20with%20the%20Starter%20Plan%20(12-Month%20EMI%20-%203,000%20BDT/mo)",
+        "ctaText": "Get Started →",
+        "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20get%20started%20with%20the%20Startup%20Plan%20(3,000%20BDT/mo)",
         "features": [
           {
-            "title": "Fast Loading Website",
-            "type": "text",
-            "value": "Less than 1 second"
+            "title": "FREE .COM Domain  +  SSL",
+            "type": "cross",
+            "value": ""
           },
           {
-            "title": "Responsive Layout",
+            "title": "High-Speed NVMe Storage",
             "type": "text",
-            "value": "Mobile friendly responsive website"
+            "value": "10 GB"
           },
           {
-            "title": "FREE .COM Domain",
+            "title": "Corporate Email Accounts",
             "type": "text",
-            "value": "Free ($15 Value)"
+            "value": "2 Emails"
           },
           {
-            "title": "10 GB NVMe SSD Storage",
-            "type": "text",
-            "value": "Included ($22 Value)"
-          },
-          {
-            "title": "Premium SSL Certificate",
-            "type": "text",
-            "value": "Free ($8 Value)"
-          },
-          {
-            "title": "Unlimited Bandwidth & 99.9% Uptime",
-            "type": "text",
-            "value": "99.9% Uptime"
-          },
-          {
-            "title": "Payment Terms",
-            "type": "text",
-            "value": "৳ 3,000 /month"
-          },
-          {
-            "title": "Total Cost",
-            "type": "text",
-            "value": "৳ 36,000 in 12 Months"
-          },
-          {
-            "title": "Admin / Backend Access",
-            "type": "text",
-            "value": "Admin access"
-          },
-          {
-            "title": "Customer Login",
-            "type": "text",
-            "value": "Secured + Gmail"
-          },
-          {
-            "title": "Payment Gateway",
+            "title": "Payment Gateway Integration",
             "type": "checkmark",
-            "value": "Included"
+            "value": ""
           },
           {
-            "title": "Abandoned Cart",
+            "title": "Page Load Speed",
+            "type": "text",
+            "value": "< 1s"
+          },
+          {
+            "title": "Incomplete Order Tracking",
+            "type": "cross",
+            "value": ""
+          },
+          {
+            "title": "Automated WhatsApp Bot",
+            "type": "cross",
+            "value": ""
+          },
+          {
+            "title": "Dedicated Ad Creative Sprints",
+            "type": "cross",
+            "value": ""
+          },
+          {
+            "title": "24/7 Priority Support",
             "type": "checkmark",
-            "value": "Included"
-          },
-          {
-            "title": "Unlimited Business Emails",
-            "type": "text",
-            "value": "2 Email (Unlimited creation After final payment)"
-          },
-          {
-            "title": "cPanel Handover",
-            "type": "text",
-            "value": "After 12 Month"
+            "value": ""
           }
         ]
       },
       {
         "id": "plan-momentum",
-        "active": true,
-        "order": 2,
-        "icon": "⚡",
         "title": "Momentum",
-        "subtitle": "9-Month EMI",
+        "subtitle": "Best for growing businesses & scaling brands",
+        "badge": "🔥 Most Popular",
+        "icon": "⚡",
+        "order": 2,
+        "active": true,
         "highlight": true,
-        "badge": "⭐ Best Value (EMI)",
         "currency": "৳",
-        "price": "3,800",
-        "originalPrice": "",
+        "price": "7,500",
+        "originalPrice": "11,000",
         "period": "/month",
-        "subtext": "Total ৳ 34,200 in 9 Months",
-        "ctaText": "Claim Offer →",
-        "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20get%20started%20with%20the%20Momentum%20Plan%20(9-Month%20EMI%20-%203,800%20BDT/mo)",
+        "subtext": "Save 30% Net on Annual Billing",
+        "ctaText": "Start Scaling Now →",
+        "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20get%20started%20with%20the%20Momentum%20Plan%20(7,500%20BDT/mo)",
         "features": [
           {
-            "title": "Fast Loading Website",
-            "type": "text",
-            "value": "Less than 1 second"
-          },
-          {
-            "title": "Responsive Layout",
-            "type": "text",
-            "value": "Mobile friendly responsive website"
-          },
-          {
-            "title": "FREE .COM Domain",
-            "type": "text",
-            "value": "Free ($15 Value)"
-          },
-          {
-            "title": "10 GB NVMe SSD Storage",
-            "type": "text",
-            "value": "Included ($22 Value)"
-          },
-          {
-            "title": "Premium SSL Certificate",
-            "type": "text",
-            "value": "Free ($8 Value)"
-          },
-          {
-            "title": "Unlimited Bandwidth & 99.9% Uptime",
-            "type": "text",
-            "value": "99.9% Uptime"
-          },
-          {
-            "title": "Payment Terms",
-            "type": "text",
-            "value": "৳ 3,800 /month"
-          },
-          {
-            "title": "Total Cost",
-            "type": "text",
-            "value": "৳ 34,200 in 9 Months"
-          },
-          {
-            "title": "Admin / Backend Access",
-            "type": "text",
-            "value": "Admin access"
-          },
-          {
-            "title": "Customer Login",
-            "type": "text",
-            "value": "Secured + Gmail"
-          },
-          {
-            "title": "Payment Gateway",
+            "title": "FREE .COM Domain + SSL",
             "type": "checkmark",
-            "value": "Included"
+            "value": ""
           },
           {
-            "title": "Abandoned Cart",
+            "title": "High-Speed NVMe Storage",
+            "type": "text",
+            "value": "35 GB"
+          },
+          {
+            "title": "Corporate Email Accounts",
+            "type": "text",
+            "value": "5 Emails"
+          },
+          {
+            "title": "Payment Gateway + bKash/Nagad",
             "type": "checkmark",
+            "value": ""
+          },
+          {
+            "title": "Incomplete Order Tracking",
+            "type": "checkmark",
+            "value": ""
+          },
+          {
+            "title": "Automated WhatsApp Bot",
+            "type": "checkmark",
+            "value": ""
+          },
+          {
+            "title": "Meta Pixel & CAPI Server Tracking",
+            "type": "checkmark",
+            "value": ""
+          },
+          {
+            "title": "Page Load Speed",
+            "type": "text",
+            "value": "< 0.8s"
+          },
+          {
+            "title": "Weekly ROAS Analytics",
+            "type": "text",
             "value": "Included"
-          },
-          {
-            "title": "Unlimited Business Emails",
-            "type": "text",
-            "value": "2 Email (Unlimited creation After final payment)"
-          },
-          {
-            "title": "cPanel Handover",
-            "type": "text",
-            "value": "After 9 Month"
           }
         ]
       },
       {
         "id": "plan-accelerate",
-        "active": true,
-        "order": 3,
-        "icon": "💎",
         "title": "Accelerate",
-        "subtitle": "6-Month EMI",
+        "subtitle": "High-volume e-commerce & multi-channel funnels",
+        "badge": "High ROI",
+        "icon": "💎",
+        "order": 3,
+        "active": true,
         "highlight": false,
-        "badge": "6-Month EMI",
         "currency": "৳",
-        "price": "5,425",
-        "originalPrice": "",
+        "price": "15,000",
+        "originalPrice": "22,000",
         "period": "/month",
-        "subtext": "Total ৳ 32,550 in 6 Months",
-        "ctaText": "Get Started",
-        "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20get%20started%20with%20the%20Accelerate%20Plan%20(6-Month%20EMI%20-%205,425%20BDT/mo)",
+        "subtext": "Complete Omnichannel Acquisition Suite",
+        "ctaText": "Accelerate Growth →",
+        "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20get%20started%20with%20the%20Accelerate%20Plan%20(15,000%20BDT/mo)",
         "features": [
           {
-            "title": "Fast Loading Website",
-            "type": "text",
-            "value": "Less than 1 second"
-          },
-          {
-            "title": "Responsive Layout",
-            "type": "text",
-            "value": "Mobile friendly responsive website"
-          },
-          {
-            "title": "FREE .COM Domain",
-            "type": "text",
-            "value": "Free ($15 Value)"
-          },
-          {
-            "title": "10 GB NVMe SSD Storage",
-            "type": "text",
-            "value": "Included ($22 Value)"
-          },
-          {
-            "title": "Premium SSL Certificate",
-            "type": "text",
-            "value": "Free ($8 Value)"
-          },
-          {
-            "title": "Unlimited Bandwidth & 99.9% Uptime",
-            "type": "text",
-            "value": "99.9% Uptime"
-          },
-          {
-            "title": "Payment Terms",
-            "type": "text",
-            "value": "৳ 5,425 /month"
-          },
-          {
-            "title": "Total Cost",
-            "type": "text",
-            "value": "৳ 32,550 in 6 Months"
-          },
-          {
-            "title": "Admin / Backend Access",
-            "type": "text",
-            "value": "Admin access"
-          },
-          {
-            "title": "Customer Login",
-            "type": "text",
-            "value": "Secured + Gmail"
-          },
-          {
-            "title": "Payment Gateway",
+            "title": "Custom Domain & Cloudflare Pro",
             "type": "checkmark",
-            "value": "Included"
+            "value": ""
           },
           {
-            "title": "Abandoned Cart",
+            "title": "High-Speed NVMe Storage",
+            "type": "text",
+            "value": "100 GB"
+          },
+          {
+            "title": "Corporate Email Accounts",
+            "type": "text",
+            "value": "Unlimited"
+          },
+          {
+            "title": "Full Checkout & Multi-Currency",
             "type": "checkmark",
-            "value": "Included"
+            "value": ""
           },
           {
-            "title": "Unlimited Business Emails",
+            "title": "Incomplete Order Recovery Funnel",
             "type": "text",
-            "value": "2 Email (Unlimited creation After final payment)"
+            "value": "Automated"
           },
           {
-            "title": "cPanel Handover",
+            "title": "Google Ads & P-Max Management",
+            "type": "checkmark",
+            "value": ""
+          },
+          {
+            "title": "Dedicated Custom Ad Creatives",
             "type": "text",
-            "value": "After 6 Month"
+            "value": "12 / mo"
+          },
+          {
+            "title": "Page Load Speed",
+            "type": "text",
+            "value": "< 0.5s"
+          },
+          {
+            "title": "Direct Bi-Weekly Strategy Debrief",
+            "type": "checkmark",
+            "value": ""
           }
         ]
       },
       {
         "id": "plan-founder",
-        "active": true,
-        "order": 4,
+        "title": "Founder / Enterprise",
+        "subtitle": "Bespoke digital architecture & fractional direction",
+        "badge": "Custom Scope",
         "icon": "👑",
-        "title": "Founder",
-        "subtitle": "Pay in Full",
-        "highlight": true,
-        "badge": "⭐ Best Value (Pay in Full)",
+        "order": 4,
+        "active": true,
+        "highlight": false,
         "currency": "৳",
         "price": "25,000",
-        "originalPrice": "36,000",
-        "period": "One-time",
-        "subtext": "৳ 25,000 One-time (Save 30% Net)",
-        "ctaText": "Claim Offer →",
-        "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20claim%20the%20Founder%20Package%20(Pay%20in%20Full%20-%2025,000%20BDT%20One-time)",
+        "originalPrice": "40,000",
+        "period": "one-time",
+        "subtext": "Or ৳ 35,000/mo Fractional Partner Retainer",
+        "ctaText": "Talk to Shakibur →",
+        "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20discuss%20the%20Founder/Enterprise%20Package",
         "features": [
           {
-            "title": "Fast Loading Website",
-            "type": "text",
-            "value": "Less than 1 second"
-          },
-          {
-            "title": "Responsive Layout",
-            "type": "text",
-            "value": "Mobile friendly responsive website"
-          },
-          {
-            "title": "FREE .COM Domain",
-            "type": "text",
-            "value": "Free ($15 Value)"
-          },
-          {
-            "title": "10 GB NVMe SSD Storage",
-            "type": "text",
-            "value": "Included ($22 Value)"
-          },
-          {
-            "title": "Premium SSL Certificate",
-            "type": "text",
-            "value": "Free ($8 Value)"
-          },
-          {
-            "title": "Unlimited Bandwidth & 99.9% Uptime",
-            "type": "text",
-            "value": "99.9% Uptime"
-          },
-          {
-            "title": "Payment Terms",
-            "type": "text",
-            "value": "৳ 25,000 One-time"
-          },
-          {
-            "title": "Total Cost",
-            "type": "text",
-            "value": "৳ 25,000 (Save 30% Net)"
-          },
-          {
-            "title": "Admin / Backend Access",
-            "type": "text",
-            "value": "Master admin"
-          },
-          {
-            "title": "Customer Login",
-            "type": "text",
-            "value": "Secured + Gmail"
-          },
-          {
-            "title": "Payment Gateway",
+            "title": "Bespoke Jamstack Web Platform",
             "type": "checkmark",
+            "value": ""
+          },
+          {
+            "title": "Server Architecture & CDN",
+            "type": "text",
+            "value": "Enterprise"
+          },
+          {
+            "title": "Tier-1 Media & PR Placement",
+            "type": "text",
             "value": "Included"
           },
           {
-            "title": "Abandoned Cart",
+            "title": "Omnichannel Ad Scaling Engine",
             "type": "checkmark",
-            "value": "Included"
+            "value": ""
           },
           {
-            "title": "Unlimited Business Emails",
-            "type": "text",
-            "value": "Unlimited (Immediate)"
+            "title": "Conversion Rate Optimization (CRO)",
+            "type": "checkmark",
+            "value": ""
           },
           {
-            "title": "cPanel Handover",
+            "title": "3D Product Visuals & Identity Kit",
+            "type": "checkmark",
+            "value": ""
+          },
+          {
+            "title": "Dedicated Growth Director",
             "type": "text",
-            "value": "Day 1 (Immediate)"
+            "value": "Direct VIP"
+          },
+          {
+            "title": "SLA & Uptime Guarantee",
+            "type": "text",
+            "value": "99.99%"
+          },
+          {
+            "title": "24/7 WhatsApp & Phone Access",
+            "type": "checkmark",
+            "value": ""
           }
         ]
       }

@@ -1902,3 +1902,64 @@ input:checked + .slider.round:before {
   cursor: not-allowed;
 }
 
+/* Feature Repeater in Pricing CMS */
+.feature-repeater-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #F8F9F6;
+  border: 1px solid rgba(112, 128, 93, 0.16);
+  border-radius: 12px;
+  margin-bottom: 6px;
+  transition: all 0.2s ease;
+}
+.feature-repeater-row:hover {
+  background: #FFFFFF;
+  border-color: rgba(112, 128, 93, 0.35);
+}
+.feature-type-select {
+  width: 140px;
+  flex-shrink: 0;
+}
+.feature-value-input {
+  width: 130px;
+  flex-shrink: 0;
+}
+.feature-type-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.feature-type-badge.checkmark {
+  background: rgba(112, 128, 93, 0.15);
+  color: #70805D;
+}
+.feature-type-badge.cross {
+  background: #F1F4EE;
+  color: #94A3B8;
+}
+.feature-type-badge.text {
+  background: rgba(85, 115, 141, 0.15);
+  color: #55738D;
+}
+.icon-picker-btn {
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  border: 1px solid rgba(112, 128, 93, 0.2);
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+.icon-picker-btn:hover {
+  border-color: #70805D;
+  background: #F1F4EE;
+}
+

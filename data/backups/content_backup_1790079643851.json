@@ -757,9 +757,9 @@
       "deliverables": [
         "Fast Loading Website: Less than 1 second",
         "Responsive Layout: Mobile friendly responsive website",
-        "FREE .COM Domain: Free  |$15 Value",
-        "FREE 10 GB NVMe SSD Storage: Included |$22 Value",
-        "FREE  SSL Certificate: Free  |$8 Value",
+        "FREE .COM Domain: Free ($15 Value)",
+        "10 GB NVMe SSD Storage: Included |$22 Value",
+        "Premium SSL Certificate: Free ($8 Value)",
         "Unlimited Bandwidth & 99.9% Uptime: 99.9% Uptime",
         "Payment Terms: ৳ 3,000 /month",
         "Total Cost: ৳ 36,000 in 12 Months",
@@ -767,7 +767,7 @@
         "Customer Login: Secured + Gmail",
         "Payment Gateway",
         "Abandoned Cart",
-        "Unlimited Business Emails: 2 Email  |Unlimited creation After final payment",
+        "Unlimited Business Emails: 2 Email (Unlimited creation After final payment)",
         "cPanel Handover: After 12 Month"
       ],
       "features": [
@@ -784,17 +784,17 @@
         {
           "title": "FREE .COM Domain",
           "type": "text",
-          "value": "Free  |$15 Value"
+          "value": "Free ($15 Value)"
         },
         {
-          "title": "FREE 10 GB NVMe SSD Storage",
+          "title": "10 GB NVMe SSD Storage",
           "type": "text",
           "value": "Included |$22 Value"
         },
         {
-          "title": "FREE  SSL Certificate",
+          "title": "Premium SSL Certificate",
           "type": "text",
-          "value": "Free  |$8 Value"
+          "value": "Free ($8 Value)"
         },
         {
           "title": "Unlimited Bandwidth & 99.9% Uptime",
@@ -834,7 +834,7 @@
         {
           "title": "Unlimited Business Emails",
           "type": "text",
-          "value": "2 Email  |Unlimited creation After final payment"
+          "value": "2 Email (Unlimited creation After final payment)"
         },
         {
           "title": "cPanel Handover",
@@ -854,7 +854,7 @@
       "subtitle": "9-Month EMI",
       "category": "monthly",
       "categoryLabel": "9-Month EMI",
-      "badge": "⭐ Best Value (EMI)",
+      "badge": "9-Month EMI",
       "timeline": "/month",
       "price": "৳ 3,800",
       "originalPrice": "",
@@ -864,7 +864,7 @@
       "deliverables": [
         "Fast Loading Website: Less than 1 second",
         "Responsive Layout: Mobile friendly responsive website",
-        "FREE .COM Domain: Free  |$15 Value",
+        "FREE .COM Domain: Free ($15 Value)",
         "10 GB NVMe SSD Storage: Included ($22 Value)",
         "Premium SSL Certificate: Free ($8 Value)",
         "Unlimited Bandwidth & 99.9% Uptime: 99.9% Uptime",
@@ -891,7 +891,7 @@
         {
           "title": "FREE .COM Domain",
           "type": "text",
-          "value": "Free  |$15 Value"
+          "value": "Free ($15 Value)"
         },
         {
           "title": "10 GB NVMe SSD Storage",
@@ -950,9 +950,9 @@
         }
       ],
       "active": true,
-      "highlight": true,
+      "highlight": false,
       "icon": "⚡",
-      "ctaText": "Claim Offer →",
+      "ctaText": "Get Started →",
       "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20get%20started%20with%20the%20Momentum%20Plan%20(9-Month%20EMI%20-%203,800%20BDT/mo)"
     },
     {
@@ -1068,7 +1068,7 @@
       "subtitle": "Pay in Full",
       "category": "custom",
       "categoryLabel": "Best Value",
-      "badge": "⭐ Best Value (Pay in Full)",
+      "badge": "Best Value",
       "timeline": "One-time",
       "price": "৳ 25,000",
       "originalPrice": "৳ 36,000",
@@ -1185,19 +1185,19 @@
     "plans": [
       {
         "id": "plan-starter",
-        "active": true,
-        "order": 1,
-        "icon": "🚀",
         "title": "Starter",
         "subtitle": "12-Month EMI",
-        "highlight": false,
         "badge": "12-Month EMI",
+        "icon": "🚀",
+        "order": 1,
+        "active": true,
+        "highlight": false,
         "currency": "৳",
         "price": "3,000",
         "originalPrice": "",
         "period": "/month",
         "subtext": "Total ৳ 36,000 in 12 Months",
-        "ctaText": "Get Started",
+        "ctaText": "Get Started →",
         "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20get%20started%20with%20the%20Starter%20Plan%20(12-Month%20EMI%20-%203,000%20BDT/mo)",
         "features": [
           {
@@ -1218,7 +1218,7 @@
           {
             "title": "10 GB NVMe SSD Storage",
             "type": "text",
-            "value": "Included ($22 Value)"
+            "value": "Included |$22 Value"
           },
           {
             "title": "Premium SSL Certificate",
@@ -1253,12 +1253,12 @@
           {
             "title": "Payment Gateway",
             "type": "checkmark",
-            "value": "Included"
+            "value": ""
           },
           {
             "title": "Abandoned Cart",
             "type": "checkmark",
-            "value": "Included"
+            "value": ""
           },
           {
             "title": "Unlimited Business Emails",
@@ -1274,19 +1274,19 @@
       },
       {
         "id": "plan-momentum",
-        "active": true,
-        "order": 2,
-        "icon": "⚡",
         "title": "Momentum",
         "subtitle": "9-Month EMI",
-        "highlight": true,
-        "badge": "⭐ Best Value (EMI)",
+        "badge": "9-Month EMI",
+        "icon": "⚡",
+        "order": 2,
+        "active": true,
+        "highlight": false,
         "currency": "৳",
         "price": "3,800",
         "originalPrice": "",
         "period": "/month",
         "subtext": "Total ৳ 34,200 in 9 Months",
-        "ctaText": "Claim Offer →",
+        "ctaText": "Get Started →",
         "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20get%20started%20with%20the%20Momentum%20Plan%20(9-Month%20EMI%20-%203,800%20BDT/mo)",
         "features": [
           {
@@ -1342,12 +1342,12 @@
           {
             "title": "Payment Gateway",
             "type": "checkmark",
-            "value": "Included"
+            "value": ""
           },
           {
             "title": "Abandoned Cart",
             "type": "checkmark",
-            "value": "Included"
+            "value": ""
           },
           {
             "title": "Unlimited Business Emails",
@@ -1363,19 +1363,19 @@
       },
       {
         "id": "plan-accelerate",
-        "active": true,
-        "order": 3,
-        "icon": "💎",
         "title": "Accelerate",
         "subtitle": "6-Month EMI",
-        "highlight": false,
         "badge": "6-Month EMI",
+        "icon": "💎",
+        "order": 3,
+        "active": true,
+        "highlight": false,
         "currency": "৳",
         "price": "5,425",
         "originalPrice": "",
         "period": "/month",
         "subtext": "Total ৳ 32,550 in 6 Months",
-        "ctaText": "Get Started",
+        "ctaText": "Get Started →",
         "ctaLink": "https://wa.me/8801838070468?text=Hi%20Shakibur%2C%20I%20want%20to%20get%20started%20with%20the%20Accelerate%20Plan%20(6-Month%20EMI%20-%205,425%20BDT/mo)",
         "features": [
           {
@@ -1431,12 +1431,12 @@
           {
             "title": "Payment Gateway",
             "type": "checkmark",
-            "value": "Included"
+            "value": ""
           },
           {
             "title": "Abandoned Cart",
             "type": "checkmark",
-            "value": "Included"
+            "value": ""
           },
           {
             "title": "Unlimited Business Emails",
@@ -1452,13 +1452,13 @@
       },
       {
         "id": "plan-founder",
-        "active": true,
-        "order": 4,
-        "icon": "👑",
         "title": "Founder",
         "subtitle": "Pay in Full",
+        "badge": "Best Value",
+        "icon": "👑",
+        "order": 4,
+        "active": true,
         "highlight": true,
-        "badge": "⭐ Best Value (Pay in Full)",
         "currency": "৳",
         "price": "25,000",
         "originalPrice": "36,000",
@@ -1520,12 +1520,12 @@
           {
             "title": "Payment Gateway",
             "type": "checkmark",
-            "value": "Included"
+            "value": ""
           },
           {
             "title": "Abandoned Cart",
             "type": "checkmark",
-            "value": "Included"
+            "value": ""
           },
           {
             "title": "Unlimited Business Emails",

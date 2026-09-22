@@ -123,6 +123,14 @@ function setupEventListeners() {
     leadsSearchInput.addEventListener('input', (e) => filterLeads(e.target.value));
   }
 
+    const addNewOfferBtn = document.getElementById('addNewOfferBtn');
+  if (addNewOfferBtn) addNewOfferBtn.addEventListener('click', addNewOffer);
+
+  const offersAdminSearch = document.getElementById('offersAdminSearch');
+  if (offersAdminSearch) {
+    offersAdminSearch.addEventListener('input', (e) => filterOffersAdmin(e.target.value));
+  }
+
   const exportLeadsCsvBtn = document.getElementById('exportLeadsCsvBtn');
   if (exportLeadsCsvBtn) exportLeadsCsvBtn.addEventListener('click', exportLeadsCsv);
 
@@ -230,6 +238,7 @@ window.switchTab = function(tabId) {
     'tab-services': { title: '6 Core Services CMS', sub: 'Manage titles, deliverables, tools, icons, and impact metrics.' },
     'tab-webprojects': { title: 'Projects CMS (Live)', sub: 'Manage client portals, live external URLs, screenshots, and tech stacks.' },
     'tab-casestudies': { title: 'Case Studies & Recent Works CMS', sub: 'Write, edit, feature, and publish comprehensive case studies and measurable results for your audience.' },
+    'tab-offers': { title: 'Offers & Growth Packages CMS', sub: 'Create, edit, reorder, and configure public growth packages, pricing tiers, deliverables checklist, and bonuses.' },
     'tab-creative': { title: 'Creative Media Studio Gallery', sub: 'Branding kits, commercial films, packaging visual mockups, and expo booths.' },
     'tab-process': { title: '4-Stage Strategic Methodology', sub: 'Discovery, Creative Architecture, Engineering, and Omnichannel Amplification.' },
     'tab-testimonials': { title: 'Client Testimonials CMS', sub: 'Executive client reviews, endorsements, and verified partners.' },
@@ -367,6 +376,10 @@ function updateOverviewStats() {
   const leadsCount = currentLeads ? currentLeads.length : 0;
   const servicesCount = currentContent && currentContent.services ? currentContent.services.length : 8;
   const projectsCount = currentContent && currentContent.webProjects ? currentContent.webProjects.length : 15;
+  const offersCount = currentContent && currentContent.offers ? currentContent.offers.length : 6;
+
+  const offersBadge = document.getElementById('offersBadge');
+  if (offersBadge) offersBadge.textContent = offersCount;
 
   const leadsBadge = document.getElementById('leadsBadge');
   if (leadsBadge) leadsBadge.textContent = leadsCount;
@@ -625,6 +638,7 @@ function populateAdminForms(c) {
   // 5. Testimonials
   renderTestimonialsEditor(c.testimonials || []);
   renderCaseStudiesEditor(c.caseStudies || []);
+  renderPricingOffersEditor(c.pricingOffers, c.offers || []);
 
   // 6. SEO Center
   const seo = c.seo || {};
@@ -1843,6 +1857,8 @@ function gatherContentFromForms() {
     process: getProcessFromForms(),
     testimonials: getTestimonialsFromForms(),
     caseStudies: getCaseStudiesFromForms(),
+    offers: getOffersFromForms(),
+    pricingOffers: getPricingOffersFromForms(),
     menu: getMenuFromForms(),
     pages: getPagesFromForms()
   };
@@ -3229,3 +3245,547 @@ function exportSubmissionsCsv() {
   window.open(`/api/forms/submissions/export${query}`, '_blank');
 }
 
+
+
+/* ==========================================================================
+   OFFERS & SAAS PRICING CMS ENGINE (100% DYNAMIC CRUD & REPEATER)
+   ========================================================================== */
+
+let currentPricingPlans = [];
+
+function renderPricingOffersEditor(pricingOffers, fallbackOffers) {
+  const pData = pricingOffers || {};
+  const banner = pData.promoBanner || {};
+  const header = pData.sectionHeader || {};
+
+  // 1. Populate Global Promo Banner
+  const bannerToggle = document.getElementById('pricing_bannerEnabled');
+  if (bannerToggle) bannerToggle.checked = banner.enabled === true || banner.enabled === 'true';
+  setValue('pricing_bannerText', banner.text || '');
+  setValue('pricing_bannerLinkText', banner.linkText || '');
+  setValue('pricing_bannerLinkUrl', banner.linkUrl || '#pricing-plans');
+
+  // 2. Populate Section Header
+  setValue('pricing_headerTag', header.tag || 'TRANSPARENT PRICING & VALUE PACKAGES');
+  setValue('pricing_headerTitle', header.title || 'Predictable, High-Impact Growth Architecture');
+  setValue('pricing_headerSubtitle', header.subtitle || 'Select a high-velocity monthly tier or fixed-scope milestone build. 100% transparent deliverables with zero hidden lock-ins.');
+
+  // 3. Normalize Plans Array
+  let plans = (pData.plans && pData.plans.length > 0) ? pData.plans : (fallbackOffers || []);
+  if (!plans || plans.length === 0) {
+    plans = [
+      {
+        id: 'plan-startup',
+        active: true,
+        order: 1,
+        icon: '🚀',
+        title: 'Startup',
+        subtitle: 'Best for new sellers & early-stage ventures',
+        highlight: false,
+        badge: 'Starter Tier',
+        currency: '৳',
+        price: '3,000',
+        originalPrice: '5,000',
+        period: '/month',
+        subtext: 'Total ৳ 36,000 in 12 Months',
+        ctaText: 'Get Started →',
+        ctaLink: '',
+        features: [
+          { title: 'FREE .COM Domain & DNS', type: 'checkmark', value: '' },
+          { title: 'High-Speed NVMe Storage', type: 'text', value: '10 GB' },
+          { title: 'Corporate Email Accounts', type: 'text', value: '2 Emails' },
+          { title: 'Payment Gateway Integration', type: 'checkmark', value: '' },
+          { title: 'Incomplete Order Tracking', type: 'cross', value: '' },
+          { title: '24/7 Priority Support', type: 'checkmark', value: '' }
+        ]
+      }
+    ];
+  }
+
+  currentPricingPlans = JSON.parse(JSON.stringify(plans));
+  renderPlansCardsList(currentPricingPlans);
+}
+
+// Backwards compatibility alias
+function renderOffersEditor(offers) {
+  renderPricingOffersEditor(currentContent?.pricingOffers, offers);
+}
+
+function renderPlansCardsList(plans) {
+  const container = document.getElementById('offersEditorContainer');
+  if (!container) return;
+
+  const countBadge = document.getElementById('offersBadge');
+  const countLabel = document.getElementById('offersAdminCount');
+  if (countBadge) countBadge.textContent = plans.length;
+  if (countLabel) countLabel.textContent = `${plans.length} pricing plans loaded`;
+
+  if (!plans || plans.length === 0) {
+    container.innerHTML = '<div class="empty-state">No pricing plans configured yet. Click "+ Add New Plan" to create one.</div>';
+    return;
+  }
+
+  const presetIcons = ['🚀', '⚡', '💎', '👑', '🎯', '🔥', '🛠️', '💼', '📈', '🏆'];
+
+  container.innerHTML = plans.map((p, pIdx) => {
+    const isActive = p.active !== false;
+    const isHighlight = p.highlight === true || p.highlight === 'true';
+    const features = Array.isArray(p.features) ? p.features : [];
+
+    const iconButtonsHtml = presetIcons.map(ic => `
+      <button type="button" class="icon-picker-btn ${p.icon === ic ? 'border-green-600 bg-green-50' : ''}" onclick="setPlanIcon(${pIdx}, '${ic}')">${ic}</button>
+    `).join('');
+
+    const featuresRowsHtml = renderFeaturesRepeaterHtml(pIdx, features);
+
+    return `
+      <div class="case-item-card plan-admin-card ${isActive ? '' : 'opacity-70'} ${isHighlight ? 'border-2 border-[#70805D]' : ''}" data-plan-idx="${pIdx}">
+        
+        <!-- Accordion Header -->
+        <div class="case-header-row" onclick="toggleAccordion(this)">
+          <div class="case-header-left">
+            <span class="text-xl w-8 h-8 rounded-lg bg-[#F8F9F6] border border-[#70805D]/20 flex items-center justify-center shrink-0">
+              ${escapeHtml(p.icon || '🚀')}
+            </span>
+            <span class="case-title-txt font-bold">${escapeHtml(p.title || 'Untitled Plan')}</span>
+            <span class="text-xs font-black text-[#2A3B27] bg-[#70805D]/15 px-2.5 py-0.5 rounded-full border border-[#70805D]/30">
+              ${escapeHtml(p.currency || '৳')} ${escapeHtml(p.price || '0')} ${escapeHtml(p.period || '')}
+            </span>
+            ${isHighlight ? '<span class="text-[10.5px] font-black text-amber-700 bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-300">⭐ POPULAR / HIGHLIGHT</span>' : ''}
+            ${!isActive ? '<span class="text-[10px] font-bold text-red-400 bg-red-950/40 px-2 py-0.5 rounded border border-red-800">DRAFT / HIDDEN</span>' : ''}
+          </div>
+          <div class="flex-gap align-center">
+            <button type="button" class="btn-move-arrow" title="Move Up" onclick="event.stopPropagation(); movePlan(${pIdx}, -1);" ${pIdx === 0 ? 'disabled' : ''}>▲</button>
+            <button type="button" class="btn-move-arrow" title="Move Down" onclick="event.stopPropagation(); movePlan(${pIdx}, 1);" ${pIdx === plans.length - 1 ? 'disabled' : ''}>▼</button>
+            <button type="button" class="btn-delete-icon" title="Delete Plan" onclick="event.stopPropagation(); deletePlan(${pIdx});">🗑️</button>
+            <span class="accordion-arrow">▼</span>
+          </div>
+        </div>
+
+        <!-- Accordion Body Content -->
+        <div class="case-body-content hidden">
+          <input type="hidden" class="plan-id" value="${escapeHtml(p.id || ('plan-' + (pIdx + 1)))}">
+
+          <!-- Row 1: Plan Title, Subtitle, Active & Highlight Toggles -->
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>Plan Name / Heading * (e.g. Startup, Momentum, Accelerate, Founder)</label>
+              <input type="text" class="admin-input plan-title font-bold" value="${escapeHtml(p.title)}" placeholder="e.g. Startup" oninput="markDirty()">
+            </div>
+            <div class="form-group">
+              <label>Audience Subtitle / Tagline (e.g. Best for new sellers, Best for growing brands)</label>
+              <input type="text" class="admin-input plan-subtitle" value="${escapeHtml(p.subtitle || '')}" placeholder="e.g. Best for new sellers & early-stage ventures" oninput="markDirty()">
+            </div>
+          </div>
+
+          <!-- Row 2: Status & Highlight Controls -->
+          <div class="form-row-3">
+            <div class="form-group">
+              <label>Badge Text (e.g. Starter Tier, 🔥 Most Popular, High ROI)</label>
+              <input type="text" class="admin-input plan-badge" value="${escapeHtml(p.badge || '')}" placeholder="🔥 Most Popular" oninput="markDirty()">
+            </div>
+            <div class="form-group">
+              <label>Order Index</label>
+              <input type="number" class="admin-input plan-order" value="${p.order || (pIdx + 1)}" min="1" oninput="markDirty()">
+            </div>
+            <div class="form-group" style="display:flex; flex-direction:column; justify-content:center; gap:6px; margin-top:8px;">
+              <label class="flex items-center gap-2 cursor-pointer font-bold text-xs text-[#2A3B27]">
+                <input type="checkbox" class="admin-checkbox plan-active" ${isActive ? 'checked' : ''} onchange="markDirty()">
+                <span>Active on Live Site</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer font-bold text-xs text-amber-700">
+                <input type="checkbox" class="admin-checkbox plan-highlight" ${isHighlight ? 'checked' : ''} onchange="markDirty()">
+                <span>⭐ Highlight Card (Featured Border)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Row 3: Icon Selector -->
+          <div class="form-group">
+            <label>Card Icon (Choose a preset or enter emoji/text)</label>
+            <div class="flex items-center gap-2 mb-2 flex-wrap">
+              ${iconButtonsHtml}
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="text" class="admin-input plan-icon text-center text-lg" style="width:70px;" value="${escapeHtml(p.icon || '🚀')}" placeholder="🚀" oninput="markDirty()">
+              <small class="text-dim">Enter any emoji (e.g. 🚀, ⚡, 💎, 👑, 🎯) or custom badge symbol.</small>
+            </div>
+          </div>
+
+          <!-- Row 4: Pricing Display -->
+          <div class="form-row-4" style="display:grid; grid-template-columns: 80px 1fr 1fr 1fr; gap:12px;">
+            <div class="form-group">
+              <label>Currency</label>
+              <input type="text" class="admin-input plan-currency text-center font-bold" value="${escapeHtml(p.currency || '৳')}" placeholder="৳" oninput="markDirty()">
+            </div>
+            <div class="form-group">
+              <label>Primary Price *</label>
+              <input type="text" class="admin-input plan-price font-bold" value="${escapeHtml(p.price || '0')}" placeholder="3,000" oninput="markDirty()">
+            </div>
+            <div class="form-group">
+              <label>Original Price (Strikethrough)</label>
+              <input type="text" class="admin-input plan-origPrice" value="${escapeHtml(p.originalPrice || '')}" placeholder="5,000" oninput="markDirty()">
+            </div>
+            <div class="form-group">
+              <label>Billing Cycle / Period</label>
+              <input type="text" class="admin-input plan-period" value="${escapeHtml(p.period || '/month')}" placeholder="/month or one-time" oninput="markDirty()">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Secondary Subtext / Note (e.g. Total ৳ 36,000 in 12 Months or Save 30% Net on Annual Billing)</label>
+            <input type="text" class="admin-input plan-subtext" value="${escapeHtml(p.subtext || '')}" placeholder="Total ৳ 36,000 in 12 Months" oninput="markDirty()">
+          </div>
+
+          <!-- Row 5: CTA Action -->
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>CTA Button Label</label>
+              <input type="text" class="admin-input plan-ctaText font-bold" value="${escapeHtml(p.ctaText || 'Get Started →')}" placeholder="Get Started →" oninput="markDirty()">
+            </div>
+            <div class="form-group">
+              <label>CTA Destination Link (WhatsApp Link or Custom URL)</label>
+              <input type="text" class="admin-input plan-ctaLink font-mono text-xs" value="${escapeHtml(p.ctaLink || '')}" placeholder="https://wa.me/8801838070468?text=..." oninput="markDirty()">
+            </div>
+          </div>
+
+          <!-- Row 6: Dynamic Feature Repeater (Add, Edit, Delete, Reorder) -->
+          <div class="p-4 rounded-2xl bg-[#F8F9F6] border border-[#70805D]/20 mt-4 mb-2">
+            <div class="flex-between mb-3">
+              <div>
+                <strong class="text-xs text-[#2A3B27] uppercase tracking-wider block">📋 Dynamic Features Repeater</strong>
+                <span class="text-[11px] text-[#55738D]">Configure unlimited feature rows. Select Checkmark (✓), Cross (✕), or Custom Text (e.g. "10 GB", "2 Emails").</span>
+              </div>
+              <button type="button" class="btn-secondary-sm" onclick="addFeatureRow(${pIdx})">+ Add Feature Row</button>
+            </div>
+
+            <div id="featuresRepeaterContainer_${pIdx}" class="features-repeater-list">
+              ${featuresRowsHtml}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderFeaturesRepeaterHtml(planIdx, features) {
+  if (!features || features.length === 0) {
+    return `<div class="empty-features text-xs text-slate-400 p-2 text-center">No features added yet. Click "+ Add Feature Row" above.</div>`;
+  }
+
+  return features.map((f, fIdx) => {
+    const fType = f.type || 'checkmark';
+    const isText = fType === 'text';
+
+    return `
+      <div class="feature-repeater-row" data-feat-idx="${fIdx}">
+        
+        <!-- Type Badge Indicator -->
+        <span class="feature-type-badge ${fType}">
+          ${fType === 'checkmark' ? '✓' : fType === 'cross' ? '✕' : 'T'}
+        </span>
+
+        <!-- Feature Title Input -->
+        <input type="text" class="admin-input feat-title text-xs" style="flex:1;" value="${escapeHtml(f.title || '')}" placeholder="Feature Title (e.g. FREE .COM Domain, Payment Gateway)" oninput="markDirty()">
+
+        <!-- Display Type Dropdown -->
+        <select class="admin-select feat-type feature-type-select text-xs font-semibold" onchange="onFeatureTypeChange(this, ${planIdx}, ${fIdx})">
+          <option value="checkmark" ${fType === 'checkmark' ? 'selected' : ''}>✓ Checkmark (True)</option>
+          <option value="cross" ${fType === 'cross' ? 'selected' : ''}>✕ Cross (False)</option>
+          <option value="text" ${fType === 'text' ? 'selected' : ''}>Custom Text Value</option>
+        </select>
+
+        <!-- Custom Text Value (Visible when type is text) -->
+        <input type="text" class="admin-input feat-value feature-value-input text-xs font-bold ${isText ? '' : 'hidden'}" value="${escapeHtml(f.value || '')}" placeholder="Value (e.g. 10 GB, 2 Emails)" oninput="markDirty()">
+
+        <!-- Move Up / Down Buttons -->
+        <button type="button" class="btn-move-arrow" title="Move Up" onclick="moveFeatureRow(${planIdx}, ${fIdx}, -1)" ${fIdx === 0 ? 'disabled' : ''}>▲</button>
+        <button type="button" class="btn-move-arrow" title="Move Down" onclick="moveFeatureRow(${planIdx}, ${fIdx}, 1)" ${fIdx === features.length - 1 ? 'disabled' : ''}>▼</button>
+
+        <!-- Delete Feature Row -->
+        <button type="button" class="btn-delete-icon" title="Remove Feature" onclick="deleteFeatureRow(${planIdx}, ${fIdx})">✕</button>
+      </div>
+    `;
+  }).join('');
+}
+
+window.setPlanIcon = function(planIdx, icon) {
+  const card = document.querySelector(`[data-plan-idx="${planIdx}"]`);
+  if (card) {
+    const input = card.querySelector('.plan-icon');
+    if (input) {
+      input.value = icon;
+      markDirty();
+    }
+  }
+};
+
+window.onFeatureTypeChange = function(selectEl, planIdx, featIdx) {
+  const row = selectEl.closest('.feature-repeater-row');
+  if (!row) return;
+
+  const valInput = row.querySelector('.feat-value');
+  const badge = row.querySelector('.feature-type-badge');
+  const type = selectEl.value;
+
+  if (valInput) {
+    if (type === 'text') {
+      valInput.classList.remove('hidden');
+      valInput.focus();
+    } else {
+      valInput.classList.add('hidden');
+    }
+  }
+
+  if (badge) {
+    badge.className = 'feature-type-badge ' + type;
+    badge.textContent = type === 'checkmark' ? '✓' : type === 'cross' ? '✕' : 'T';
+  }
+
+  markDirty();
+};
+
+window.addFeatureRow = function(planIdx) {
+  const plans = getPricingOffersFromForms().plans;
+  if (!plans[planIdx]) return;
+  if (!Array.isArray(plans[planIdx].features)) plans[planIdx].features = [];
+
+  plans[planIdx].features.push({
+    title: 'New Feature Item',
+    type: 'checkmark',
+    value: ''
+  });
+
+  currentPricingPlans = plans;
+  renderPlansCardsList(plans);
+  markDirty();
+
+  // Open the accordion of this card so user sees the added row immediately
+  const card = document.querySelector(`[data-plan-idx="${planIdx}"] .case-body-content`);
+  if (card) card.classList.remove('hidden');
+};
+
+window.deleteFeatureRow = function(planIdx, featIdx) {
+  const plans = getPricingOffersFromForms().plans;
+  if (!plans[planIdx] || !plans[planIdx].features) return;
+
+  plans[planIdx].features.splice(featIdx, 1);
+  currentPricingPlans = plans;
+  renderPlansCardsList(plans);
+  markDirty();
+
+  const card = document.querySelector(`[data-plan-idx="${planIdx}"] .case-body-content`);
+  if (card) card.classList.remove('hidden');
+};
+
+window.moveFeatureRow = function(planIdx, featIdx, dir) {
+  const plans = getPricingOffersFromForms().plans;
+  if (!plans[planIdx] || !plans[planIdx].features) return;
+
+  const feats = plans[planIdx].features;
+  const targetIdx = featIdx + dir;
+  if (targetIdx < 0 || targetIdx >= feats.length) return;
+
+  const temp = feats[featIdx];
+  feats[featIdx] = feats[targetIdx];
+  feats[targetIdx] = temp;
+
+  currentPricingPlans = plans;
+  renderPlansCardsList(plans);
+  markDirty();
+
+  const card = document.querySelector(`[data-plan-idx="${planIdx}"] .case-body-content`);
+  if (card) card.classList.remove('hidden');
+};
+
+window.addNewPlan = function() {
+  const plans = getPricingOffersFromForms().plans;
+  plans.unshift({
+    id: 'plan-' + Date.now(),
+    active: true,
+    order: plans.length + 1,
+    icon: '⚡',
+    title: 'New Growth Plan',
+    subtitle: 'Best for scaling brands & commercial funnels',
+    highlight: false,
+    badge: 'Special Tier',
+    currency: '৳',
+    price: '5,000',
+    originalPrice: '8,000',
+    period: '/month',
+    subtext: 'Transparent Deliverables & No Setup Fee',
+    ctaText: 'Get Started →',
+    ctaLink: '',
+    features: [
+      { title: 'FREE .COM Domain & Setup', type: 'checkmark', value: '' },
+      { title: 'High-Speed NVMe Storage', type: 'text', value: '25 GB' },
+      { title: 'Corporate Email Accounts', type: 'text', value: '3 Emails' },
+      { title: 'Payment Gateway Integration', type: 'checkmark', value: '' },
+      { title: 'Incomplete Order Tracking', type: 'checkmark', value: '' },
+      { title: '24/7 Priority Support', type: 'checkmark', value: '' }
+    ]
+  });
+
+  currentPricingPlans = plans;
+  renderPlansCardsList(plans);
+  markDirty();
+};
+
+window.addNewOffer = window.addNewPlan; // alias
+
+window.deletePlan = function(idx) {
+  if (confirm('Are you sure you want to delete this pricing plan?')) {
+    const plans = getPricingOffersFromForms().plans;
+    plans.splice(idx, 1);
+    currentPricingPlans = plans;
+    renderPlansCardsList(plans);
+    markDirty();
+  }
+};
+
+window.deleteOffer = window.deletePlan; // alias
+
+window.movePlan = function(idx, dir) {
+  const plans = getPricingOffersFromForms().plans;
+  const targetIdx = idx + dir;
+  if (targetIdx < 0 || targetIdx >= plans.length) return;
+
+  const temp = plans[idx];
+  plans[idx] = plans[targetIdx];
+  plans[targetIdx] = temp;
+
+  // re-assign order
+  plans.forEach((p, i) => { p.order = i + 1; });
+
+  currentPricingPlans = plans;
+  renderPlansCardsList(plans);
+  markDirty();
+};
+
+window.moveOffer = window.movePlan; // alias
+
+function getPricingOffersFromForms() {
+  const bannerEnabled = document.getElementById('pricing_bannerEnabled')?.checked === true;
+  const bannerText = document.getElementById('pricing_bannerText')?.value.trim() || '';
+  const bannerLinkText = document.getElementById('pricing_bannerLinkText')?.value.trim() || '';
+  const bannerLinkUrl = document.getElementById('pricing_bannerLinkUrl')?.value.trim() || '#pricing-plans';
+
+  const headerTag = document.getElementById('pricing_headerTag')?.value.trim() || 'TRANSPARENT PRICING & VALUE PACKAGES';
+  const headerTitle = document.getElementById('pricing_headerTitle')?.value.trim() || 'Predictable, High-Impact Growth Architecture';
+  const headerSubtitle = document.getElementById('pricing_headerSubtitle')?.value.trim() || 'Select a high-velocity monthly tier or fixed-scope milestone build. 100% transparent deliverables with zero hidden lock-ins.';
+
+  const cards = document.querySelectorAll('#offersEditorContainer .plan-admin-card');
+  const plans = [];
+
+  cards.forEach((card, idx) => {
+    const id = card.querySelector('.plan-id')?.value || ('plan-' + (idx + 1));
+    const title = card.querySelector('.plan-title')?.value.trim() || 'Untitled Plan';
+    const subtitle = card.querySelector('.plan-subtitle')?.value.trim() || '';
+    const badge = card.querySelector('.plan-badge')?.value.trim() || '';
+    const icon = card.querySelector('.plan-icon')?.value.trim() || '🚀';
+    const order = parseInt(card.querySelector('.plan-order')?.value, 10) || (idx + 1);
+    const active = card.querySelector('.plan-active')?.checked !== false;
+    const highlight = card.querySelector('.plan-highlight')?.checked === true;
+    const currency = card.querySelector('.plan-currency')?.value.trim() || '৳';
+    const price = card.querySelector('.plan-price')?.value.trim() || '0';
+    const originalPrice = card.querySelector('.plan-origPrice')?.value.trim() || '';
+    const period = card.querySelector('.plan-period')?.value.trim() || '/month';
+    const subtext = card.querySelector('.plan-subtext')?.value.trim() || '';
+    const ctaText = card.querySelector('.plan-ctaText')?.value.trim() || 'Get Started →';
+    const ctaLink = card.querySelector('.plan-ctaLink')?.value.trim() || '';
+
+    // Collect feature repeater rows
+    const featureRows = card.querySelectorAll('.feature-repeater-row');
+    const features = [];
+    featureRows.forEach(row => {
+      const fTitle = row.querySelector('.feat-title')?.value.trim() || '';
+      const fType = row.querySelector('.feat-type')?.value || 'checkmark';
+      const fValue = row.querySelector('.feat-value')?.value.trim() || '';
+      if (fTitle) {
+        features.push({
+          title: fTitle,
+          type: fType,
+          value: fType === 'text' ? fValue : ''
+        });
+      }
+    });
+
+    plans.push({
+      id,
+      title,
+      subtitle,
+      badge,
+      icon,
+      order,
+      active,
+      highlight,
+      currency,
+      price,
+      originalPrice,
+      period,
+      subtext,
+      ctaText,
+      ctaLink,
+      features
+    });
+  });
+
+  return {
+    promoBanner: {
+      enabled: bannerEnabled,
+      text: bannerText,
+      linkText: bannerLinkText,
+      linkUrl: bannerLinkUrl
+    },
+    sectionHeader: {
+      tag: headerTag,
+      title: headerTitle,
+      subtitle: headerSubtitle
+    },
+    plans
+  };
+}
+
+function getOffersFromForms() {
+  const pOffers = getPricingOffersFromForms();
+  return pOffers.plans.map(p => ({
+    id: p.id,
+    title: p.title,
+    subtitle: p.subtitle,
+    category: (p.period || '').includes('month') ? 'monthly' : 'custom',
+    categoryLabel: p.badge || 'Growth Package',
+    badge: p.badge,
+    timeline: p.period || 'Sprint',
+    price: `${p.currency} ${p.price}`,
+    originalPrice: p.originalPrice ? `${p.currency} ${p.originalPrice}` : '',
+    period: p.period,
+    subtext: p.subtext,
+    description: p.subtitle,
+    deliverables: p.features.map(f => f.type === 'text' && f.value ? `${f.title}: ${f.value}` : f.title),
+    features: p.features,
+    active: p.active,
+    highlight: p.highlight,
+    icon: p.icon,
+    ctaText: p.ctaText,
+    ctaLink: p.ctaLink
+  }));
+}
+
+function filterOffersAdmin(query) {
+  const q = (query || '').toLowerCase().trim();
+  const cards = document.querySelectorAll('#offersEditorContainer .plan-admin-card');
+  let visibleCount = 0;
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    if (!q || text.includes(q)) {
+      card.style.display = '';
+      visibleCount++;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+  const countLabel = document.getElementById('offersAdminCount');
+  if (countLabel) countLabel.textContent = `${visibleCount} of ${cards.length} pricing plans visible`;
+}

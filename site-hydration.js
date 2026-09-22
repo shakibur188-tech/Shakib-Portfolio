@@ -24,12 +24,13 @@
 
   function detectCurrentPageKey() {
     const path = window.location.pathname.toLowerCase();
-    if (path.includes('about.html')) return 'about';
-    if (path.includes('services.html') || path.includes('/services/index.html')) return 'services';
-    if (path.includes('projects.html')) return 'projects';
-    if (path.includes('case-studies.html') || path.includes('case-study.html')) return 'caseStudies';
-    if (path.includes('testimonials.html')) return 'testimonials';
-    if (path.includes('contact.html')) return 'contact';
+    if (path.includes('about.html') || path.endsWith('/about')) return 'about';
+    if (path.includes('services.html') || path.includes('/services/') || path.endsWith('/services')) return 'services';
+    if (path.includes('projects.html') || path.endsWith('/projects')) return 'projects';
+    if (path.includes('case-studies.html') || path.includes('case-study.html') || path.endsWith('/case-studies')) return 'caseStudies';
+    if (path.includes('offers.html') || path.endsWith('/offers')) return 'offers';
+    if (path.includes('testimonials.html') || path.endsWith('/testimonials')) return 'testimonials';
+    if (path.includes('contact.html') || path.endsWith('/contact')) return 'contact';
     return 'home';
   }
 
@@ -339,6 +340,13 @@
     if (content.menu) hydrateHeaderMenu(content.menu);
     const pageKey = detectCurrentPageKey();
     if (content.pages) hydratePageContent(pageKey, content.pages);
+    if (pageKey === 'offers') {
+      if (typeof window.renderPricingOffers === 'function') {
+        window.renderPricingOffers(content);
+      } else if (typeof window.renderOffersList === 'function') {
+        window.renderOffersList(content.offers || []);
+      }
+    }
   };
 
   async function initHydration() {

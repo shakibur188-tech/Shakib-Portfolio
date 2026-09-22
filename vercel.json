@@ -8,6 +8,7 @@
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/services", "destination": "/services.html" },
     { "source": "/case-studies", "destination": "/case-studies.html" },
+    { "source": "/offers", "destination": "/offers.html" },
     { "source": "/(.*)", "destination": "/$1" }
   ]
 }

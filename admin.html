@@ -85,6 +85,11 @@
           <span class="nav-label">Case Studies & Recent Works</span>
           <span id="caseStudiesBadge" class="nav-badge">7</span>
         </button>
+        <button class="nav-item" data-tab="tab-offers">
+          <span class="nav-icon">🏷️</span>
+          <span class="nav-label">Offers &amp; Packages</span>
+          <span id="offersBadge" class="nav-badge">6</span>
+        </button>
         <button class="nav-item" data-tab="tab-creative">
           <span class="nav-icon">🎨</span>
           <span class="nav-label">Creative Media Studio</span>
@@ -187,6 +192,13 @@
               </div>
             </div>
             <div class="stat-widget glass-panel">
+              <div class="widget-icon">🏷️</div>
+              <div class="widget-data">
+                <span class="widget-value" style="color:#EAB308;" id="overviewOffersCount">6</span>
+                <span class="widget-label">Growth Packages Live</span>
+              </div>
+            </div>
+            <div class="stat-widget glass-panel">
               <div class="widget-icon">🔍</div>
               <div class="widget-data">
                 <span class="widget-value" style="color:#10B981;">100% Ready</span>
@@ -198,8 +210,12 @@
           <div class="overview-split">
             <div class="overview-card glass-panel">
               <h3>🚀 Fast Jump Navigation</h3>
-              <p class="section-desc">Quick shortcuts to manage your 6 services and 15 live web portals:</p>
+              <p class="section-desc">Quick shortcuts to manage your 6 services, offers, and live web portals:</p>
               <div class="quick-links-grid">
+                <button class="quick-link-btn" onclick="switchTab('tab-offers')">
+                  <span>🏷️ Offers &amp; Packages CMS</span>
+                  <small>Manage pricing packages, bonuses &amp; deliverables</small>
+                </button>
                 <button class="quick-link-btn" onclick="switchTab('tab-menu')">
                   <span>🧭 Header &amp; Menu Nav</span>
                   <small>Manage navbar links, destination URLs &amp; CTA button</small>
@@ -465,6 +481,83 @@
             </div>
 
             <div id="caseStudiesEditorContainer" class="cases-accordion-list"></div>
+          </div>
+        </section>
+
+        <!-- TAB: OFFERS & PRICING CMS -->
+        <section id="tab-offers" class="tab-pane">
+          <!-- A. GLOBAL PROMO BANNER SETTINGS -->
+          <div class="card-form glass-panel mb-6">
+            <div class="flex-between mb-3">
+              <div>
+                <h3>⚡ Global Promo Banner Settings</h3>
+                <p class="section-desc">Display a high-visibility flash announcement banner above the pricing grid for limited-time offers.</p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="pricing_bannerEnabled" onchange="markDirty()">
+                <span class="slider round"></span>
+              </label>
+            </div>
+
+            <div class="form-group mb-3">
+              <label>Promo Announcement Text (String / Rich Text)</label>
+              <input type="text" id="pricing_bannerText" class="admin-input" placeholder="e.g. 🔥 Flash Promo: Get up to ৳ 3,000 in Free Infrastructure Value This Week!" oninput="markDirty()">
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group mb-0">
+                <label>Banner Action Button Text (Optional)</label>
+                <input type="text" id="pricing_bannerLinkText" class="admin-input" placeholder="e.g. Claim Promo →" oninput="markDirty()">
+              </div>
+              <div class="form-group mb-0">
+                <label>Banner Action Destination URL</label>
+                <input type="text" id="pricing_bannerLinkUrl" class="admin-input" placeholder="e.g. #pricing-plans or https://wa.me/..." oninput="markDirty()">
+              </div>
+            </div>
+          </div>
+
+          <!-- B. SECTION HEADER SETTINGS -->
+          <div class="card-form glass-panel mb-6">
+            <div class="flex-between mb-3">
+              <div>
+                <h3>🏷️ Pricing Section Header &amp; Value Proposition</h3>
+                <p class="section-desc">Configure the main heading, tag pill, and contextual subtitle shown above the pricing cards.</p>
+              </div>
+            </div>
+
+            <div class="form-row-3">
+              <div class="form-group">
+                <label>Tag / Category Badge</label>
+                <input type="text" id="pricing_headerTag" class="admin-input" placeholder="TRANSPARENT PRICING & VALUE PACKAGES" oninput="markDirty()">
+              </div>
+              <div class="form-group" style="grid-column: span 2;">
+                <label>Section Heading Title</label>
+                <input type="text" id="pricing_headerTitle" class="admin-input font-bold" placeholder="Predictable, High-Impact Growth Architecture" oninput="markDirty()">
+              </div>
+            </div>
+
+            <div class="form-group mb-0">
+              <label>Section Subtitle / Description</label>
+              <input type="text" id="pricing_headerSubtitle" class="admin-input" placeholder="Select a high-velocity monthly tier or fixed-scope milestone build. 100% transparent deliverables with zero hidden lock-ins." oninput="markDirty()">
+            </div>
+          </div>
+
+          <!-- C. PLANS & DYNAMIC FEATURE REPEATER CMS -->
+          <div class="card-form glass-panel">
+            <div class="flex-between mb-4">
+              <div>
+                <h3>📦 Manage Pricing Plans &amp; Dynamic Features</h3>
+                <p class="section-desc">Add, edit, reorder, and configure SaaS pricing cards with custom icons, pricing, highlight badges, and dynamic feature repeaters (checkmarks, crosses, text values).</p>
+              </div>
+              <button type="button" id="addNewOfferBtn" class="btn-primary-sm">+ Add New Plan</button>
+            </div>
+
+            <div class="flex-between gap-3 mb-4">
+              <input type="text" id="offersAdminSearch" class="admin-input text-xs" style="max-width:320px;" placeholder="Search plans by title, subtitle, or price...">
+              <span class="text-xs text-slate-400 font-bold" id="offersAdminCount">4 pricing plans loaded</span>
+            </div>
+
+            <div id="offersEditorContainer" class="cases-accordion-list"></div>
           </div>
         </section>
 
