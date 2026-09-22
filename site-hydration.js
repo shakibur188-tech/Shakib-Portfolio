@@ -335,6 +335,186 @@
     requestAnimationFrame(update);
   }
 
+  // -------------------------------------------------------------
+  // Floating WhatsApp Interactive Widget & Inquiry Modal
+  // -------------------------------------------------------------
+  function initWhatsAppFloatingWidget() {
+    if (document.getElementById('floatingWhatsAppWidget')) return;
+
+    // Create Widget Container
+    const widget = document.createElement('div');
+    widget.id = 'floatingWhatsAppWidget';
+    widget.className = 'fixed bottom-6 right-6 z-[9999] font-sans antialiased';
+
+    widget.innerHTML = `
+      <!-- WhatsApp Popup Chat Card -->
+      <div id="waPopupCard" class="hidden absolute bottom-16 right-0 w-[340px] max-w-[calc(100vw-32px)] bg-white rounded-3xl shadow-2xl border border-[#70805D]/20 overflow-hidden transition-all duration-300 transform origin-bottom-right mb-2 ring-1 ring-black/10">
+        
+        <!-- Header -->
+        <div class="p-4 bg-gradient-to-r from-[#1C2B1B] via-[#2A3B27] to-[#1C2B1B] text-white flex items-center justify-between border-b border-white/10">
+          <div class="flex items-center gap-3">
+            <div class="relative">
+              <img src="/assets/shakibur.jpg" alt="Md. Shakibur Rahaman" class="w-11 h-11 rounded-full object-cover border-2 border-[#25D366] shadow-sm" onerror="this.src='/assets/avatar-placeholder.png'">
+              <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-[#25D366] ring-2 ring-[#1C2B1B]"></span>
+            </div>
+            <div>
+              <div class="text-xs font-black text-white tracking-wide">Md. Shakibur Rahaman</div>
+              <div class="text-[10px] text-emerald-400 font-bold flex items-center gap-1 mt-0.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse"></span>
+                <span>Online | Instant Response</span>
+              </div>
+            </div>
+          </div>
+          <button type="button" id="waCloseBtn" class="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xs transition-colors focus:outline-none" aria-label="Close Chat">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <!-- Chat Bubble Intro -->
+        <div class="p-4 bg-[#F8F9F6] border-b border-[#70805D]/10">
+          <div class="p-3 rounded-2xl bg-white border border-[#70805D]/15 text-xs text-[#2A3B27] shadow-2xs leading-relaxed">
+            👋 <strong>Hi there!</strong> Ready to scale your brand or need custom strategic direction? Share your details below to connect with <strong>Mr. Shakib</strong> directly on WhatsApp.
+          </div>
+        </div>
+
+        <!-- Form Body -->
+        <form id="waInquiryForm" class="p-4 space-y-3 bg-white">
+          <div>
+            <label class="block text-[10.5px] font-black uppercase tracking-wider text-[#2A3B27] mb-1">Your Name *</label>
+            <input type="text" id="waInputName" required placeholder="e.g. John Doe" class="w-full px-3 py-2 text-xs rounded-xl border border-[#70805D]/25 focus:border-[#70805D] focus:ring-2 focus:ring-[#70805D]/20 outline-none text-[#1C2B1B] bg-[#F8F9F6] focus:bg-white transition-all">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div>
+              <label class="block text-[10.5px] font-black uppercase tracking-wider text-[#2A3B27] mb-1">Contact / Phone *</label>
+              <input type="tel" id="waInputContact" required placeholder="+880 1..." class="w-full px-3 py-2 text-xs rounded-xl border border-[#70805D]/25 focus:border-[#70805D] focus:ring-2 focus:ring-[#70805D]/20 outline-none text-[#1C2B1B] bg-[#F8F9F6] focus:bg-white transition-all">
+            </div>
+            <div>
+              <label class="block text-[10.5px] font-black uppercase tracking-wider text-[#2A3B27] mb-1">Email</label>
+              <input type="email" id="waInputEmail" placeholder="you@company.com" class="w-full px-3 py-2 text-xs rounded-xl border border-[#70805D]/25 focus:border-[#70805D] focus:ring-2 focus:ring-[#70805D]/20 outline-none text-[#1C2B1B] bg-[#F8F9F6] focus:bg-white transition-all">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[10.5px] font-black uppercase tracking-wider text-[#2A3B27] mb-1">Discussion Topic / Details</label>
+            <textarea id="waInputTopic" rows="2" placeholder="e.g. E-Commerce Packages, High-Converting Web Portal, SMM & Ads..." class="w-full px-3 py-2 text-xs rounded-xl border border-[#70805D]/25 focus:border-[#70805D] focus:ring-2 focus:ring-[#70805D]/20 outline-none text-[#1C2B1B] bg-[#F8F9F6] focus:bg-white resize-none transition-all"></textarea>
+          </div>
+
+          <div id="waFormAlert" class="hidden text-[11px] p-2 rounded-lg font-bold"></div>
+
+          <button type="submit" id="waSubmitBtn" class="w-full py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] text-white font-extrabold text-xs flex items-center justify-center gap-2 shadow-lg shadow-[#25D366]/30 hover:shadow-xl hover:scale-[1.01] transition-all">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>Contact with Mr. Shakib</span>
+          </button>
+        </form>
+
+      </div>
+
+      <!-- Floating Launcher Button -->
+      <div class="relative group">
+        <button type="button" id="waLauncherBtn" aria-label="Chat on WhatsApp with Mr. Shakib" class="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white flex items-center justify-center shadow-2xl shadow-[#25D366]/40 hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none ring-4 ring-white/90">
+          <i class="fa-brands fa-whatsapp text-3xl"></i>
+          
+          <!-- Ping indicator -->
+          <span class="absolute -top-1 -right-1 flex h-4 w-4">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-4 w-4 bg-emerald-500 border-2 border-white"></span>
+          </span>
+        </button>
+
+        <!-- Floating Tooltip Label (Desktop only) -->
+        <div class="hidden md:block absolute right-16 top-1/2 -translate-y-1/2 bg-[#1C2B1B] text-white text-[11px] font-bold px-3 py-1.5 rounded-xl whitespace-nowrap shadow-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-white/10">
+          Chat with Mr. Shakib
+          <span class="absolute right-[-4px] top-1/2 -translate-y-1/2 border-4 border-transparent border-l-[#1C2B1B]"></span>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(widget);
+
+    // Event Listeners
+    const launcherBtn = document.getElementById('waLauncherBtn');
+    const popupCard = document.getElementById('waPopupCard');
+    const closeBtn = document.getElementById('waCloseBtn');
+    const form = document.getElementById('waInquiryForm');
+
+    function togglePopup() {
+      if (popupCard.classList.contains('hidden')) {
+        popupCard.classList.remove('hidden');
+        setTimeout(() => {
+          const nameInput = document.getElementById('waInputName');
+          if (nameInput) nameInput.focus();
+        }, 100);
+      } else {
+        popupCard.classList.add('hidden');
+      }
+    }
+
+    launcherBtn.addEventListener('click', togglePopup);
+    closeBtn.addEventListener('click', () => popupCard.classList.add('hidden'));
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = document.getElementById('waInputName').value.trim();
+      const contact = document.getElementById('waInputContact').value.trim();
+      const email = document.getElementById('waInputEmail').value.trim();
+      const topic = document.getElementById('waInputTopic').value.trim() || 'your services, pricing packages, and strategic consultation';
+      const submitBtn = document.getElementById('waSubmitBtn');
+      const alertBox = document.getElementById('waFormAlert');
+
+      if (!name || !contact) {
+        alertBox.className = 'text-[11px] p-2 rounded-lg font-bold bg-rose-50 text-rose-700 border border-rose-200 block';
+        alertBox.textContent = 'Please provide both your Name and Contact number.';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-sm"></i><span>Opening WhatsApp...</span>';
+
+      // Setup Exact Requested WhatsApp Message Format:
+      // "Hello, This is (Name), You can contact with me (Contact) and i would to know/discuss with you about ......."
+      const emailNote = email ? ` (Email: ${email})` : '';
+      const whatsappMessage = `Hello, This is ${name}, You can contact with me ${contact}${emailNote} and i would to know/discuss with you about ${topic}`;
+      const whatsappUrl = `https://wa.me/8801838070468?text=${encodeURIComponent(whatsappMessage)}`;
+
+      // Save lead to backend CRM
+      try {
+        await fetch('/api/leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name,
+            phone: contact,
+            email: email || 'N/A',
+            company: 'Direct WhatsApp Contact Widget',
+            services: `WhatsApp Inquiry: ${topic}`,
+            budget: 'Direct Discussion',
+            timeline: 'Immediate WhatsApp Conversation',
+            message: `[WHATSAPP CONTACT WIDGET]\nName: ${name}\nContact: ${contact}\nEmail: ${email || 'N/A'}\nTopic: ${topic}\n\nGenerated Message: ${whatsappMessage}`,
+            date: new Date().toISOString()
+          })
+        });
+      } catch (err) {
+        console.warn('Could not save lead record to backend', err);
+      }
+
+      // Open WhatsApp
+      window.open(whatsappUrl, '_blank');
+
+      // Reset & show confirmation
+      alertBox.className = 'text-[11px] p-2 rounded-lg font-bold bg-emerald-50 text-emerald-800 border border-emerald-200 block';
+      alertBox.textContent = '✅ Connected! WhatsApp chat opened.';
+
+      setTimeout(() => {
+        form.reset();
+        popupCard.classList.add('hidden');
+        alertBox.classList.add('hidden');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fa-brands fa-whatsapp text-base"></i><span>Contact with Mr. Shakib</span>';
+      }, 1500);
+    });
+  }
+
   window.applySiteHydration = function(content) {
     if (!content) return;
     if (content.menu) hydrateHeaderMenu(content.menu);
@@ -350,6 +530,7 @@
   };
 
   async function initHydration() {
+    initWhatsAppFloatingWidget();
     const content = await fetchSiteContent();
     if (content) {
       window.applySiteHydration(content);
@@ -363,3 +544,4 @@
   }
 
 })();
+
