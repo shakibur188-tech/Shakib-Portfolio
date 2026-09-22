@@ -438,14 +438,9 @@
     const closeBtn = document.getElementById('waCloseBtn');
     const form = document.getElementById('waInquiryForm');
 
-    let leaveTimeout = null;
-    let explicitlyClosed = false;
+    let manuallyClosed = false;
 
     function openPopup() {
-      if (leaveTimeout) {
-        clearTimeout(leaveTimeout);
-        leaveTimeout = null;
-      }
       popupCard.classList.remove('hidden');
     }
 
@@ -453,39 +448,37 @@
       popupCard.classList.add('hidden');
     }
 
-    // Instant Hover In: Open instantly on mouseenter
-    widget.addEventListener('mouseenter', () => {
-      if (!explicitlyClosed) {
+    // Instant Hover: Open on hover and STAY open until manually closed
+    launcherBtn.addEventListener('mouseenter', () => {
+      if (!manuallyClosed) {
         openPopup();
       }
     });
 
-    // Graceful Hover Out: 350ms debounce so cursor can move between button and card smoothly
+    // Reset manuallyClosed flag once mouse completely leaves widget area
     widget.addEventListener('mouseleave', () => {
-      leaveTimeout = setTimeout(() => {
-        closePopup();
-        explicitlyClosed = false;
-      }, 350);
+      manuallyClosed = false;
     });
 
-    // Click on launcher button toggles and resets explicitlyClosed flag
+    // Click on launcher button toggles
     launcherBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      explicitlyClosed = false;
       if (popupCard.classList.contains('hidden')) {
+        manuallyClosed = false;
         openPopup();
         const nameInput = document.getElementById('waInputName');
         if (nameInput) nameInput.focus();
       } else {
         closePopup();
+        manuallyClosed = true;
       }
     });
 
-    // Close button dismisses card
+    // Manual close button dismisses card
     closeBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       closePopup();
-      explicitlyClosed = true;
+      manuallyClosed = true;
     });
 
     // Form Submission
