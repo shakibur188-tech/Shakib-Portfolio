@@ -541,14 +541,6 @@ function renderServices(services) {
       </li>
     `).join('');
 
-    // Strategic Value Points
-    const pointsList = (svc.points || ['Guaranteed enterprise SLA', '100% IP & asset ownership', 'Weekly executive sprint reviews']).slice(0, 2).map(p => `
-      <li class="bullet-point-item text-xs text-[#55738D]">
-        <i class="fa-solid fa-arrow-trend-up bullet-icon text-[#55738D]"></i>
-        <span>${escapeHtml(p)}</span>
-      </li>
-    `).join('');
-
     const toolsHtml = (svc.tools || []).slice(0, 4).map(t => `
       <span class="px-2 py-0.5 rounded-md bg-[#F1F3ED] text-[10.5px] text-[#2A3B27] border border-[#70805D]/25 font-bold">${escapeHtml(t)}</span>
     `).join('');
@@ -597,17 +589,6 @@ function renderServices(services) {
               </div>
               <ul class="space-y-1.5">
                 ${deliverablesPreview}
-              </ul>
-            </div>
-
-            <!-- Value / Impact Points -->
-            <div class="pt-2 border-t border-gray-100 mb-4">
-              <div class="text-[10px] font-extrabold text-[#55738D] uppercase tracking-widest mb-2 flex items-center gap-1.5">
-                <i class="fa-solid fa-chart-line text-[9px]"></i>
-                <span>Strategic Impact:</span>
-              </div>
-              <ul class="space-y-1">
-                ${pointsList}
               </ul>
             </div>
           </div>

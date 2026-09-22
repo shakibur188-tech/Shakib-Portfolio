@@ -1669,7 +1669,31 @@
       "file_type": "code",
       "norm_label": "inithydration()",
       "source_file": "site-hydration.js",
-      "source_location": "L352"
+      "source_location": "L532"
+    },
+    {
+      "id": "site_hydration_initwhatsappfloatingwidget",
+      "label": "initWhatsAppFloatingWidget()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "site-hydration.js",
+      "file_type": "code",
+      "norm_label": "initwhatsappfloatingwidget()",
+      "source_file": "site-hydration.js",
+      "source_location": "L341"
+    },
+    {
+      "id": "site_hydration_initwhatsappfloatingwidget_togglepopup",
+      "label": "togglePopup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "site-hydration.js",
+      "file_type": "code",
+      "norm_label": "togglepopup()",
+      "source_file": "site-hydration.js",
+      "source_location": "L441"
     },
     {
       "id": "admin_addfieldtobuilder",
@@ -6550,6 +6574,18 @@
     },
     {
       "source": "site_hydration_inithydration",
+      "target": "site_hydration_initwhatsappfloatingwidget",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "site-hydration.js",
+      "source_location": "L533",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration_inithydration",
       "target": "site_hydration_fetchsitecontent",
       "relation": "calls",
       "_origin": "ast",
@@ -6557,7 +6593,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "site-hydration.js",
-      "source_location": "L353",
+      "source_location": "L534",
       "weight": 1.0
     },
     {
@@ -10238,6 +10274,17 @@
     },
     {
       "source": "site_hydration",
+      "target": "site_hydration_initwhatsappfloatingwidget",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "site-hydration.js",
+      "source_location": "L341",
+      "weight": 1.0
+    },
+    {
+      "source": "site_hydration",
       "target": "site_hydration_fetchsitecontent",
       "relation": "contains",
       "_origin": "ast",
@@ -10837,7 +10884,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "site-hydration.js",
-      "source_location": "L360",
+      "source_location": "L541",
       "weight": 1.0
     },
     {
@@ -10851,8 +10898,20 @@
       "source_file": "site-hydration.js",
       "source_location": "L335",
       "weight": 1.0
+    },
+    {
+      "source": "site_hydration_initwhatsappfloatingwidget",
+      "target": "site_hydration_initwhatsappfloatingwidget_togglepopup",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "site-hydration.js",
+      "source_location": "L453",
+      "weight": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4ea144432d83dab6ac17a9910b8520da9ae5e637"
+  "built_at_commit": "a7d129d3d35319294c6048a67d0df9308de21ff0"
 }

@@ -1,17 +1,17 @@
 # Graph Report - shakibur-portfolio-live  (2026-09-23)
 
 ## Corpus Check
-- 50 files · ~190,653 words
+- 50 files · ~190,812 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 11 file(s) not represented in the graph (top: (none) 2, .css 2, .bat 2)
 
 ## Summary
-- 368 nodes · 573 edges · 33 communities (26 shown, 7 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 34 edges (avg confidence: 0.85)
+- 369 nodes · 574 edges · 33 communities (26 shown, 7 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 33 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a7d129d3`
+- Built from commit: `84ee8f80`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -131,7 +131,7 @@ Cohesion: 0.40
 Nodes (3): Task-1 (Initial setup and routing), Task-2 (UI implementation and content integration), Task-3 (Analytics, SEO, and deployment)
 
 ### Community 20 - "site-hydration.js"
-Cohesion: 0.24
+Cohesion: 0.22
 Nodes (7): animateCounter(), fetchSiteContent(), hydrateFiguresStrip(), hydratePageContent(), initAnimatedCounters(), initHydration(), initWhatsAppFloatingWidget()
 
 ### Community 21 - "initFormBuilderEventListeners"
@@ -176,7 +176,7 @@ Nodes (4): css, cssPath, fs, path
 
 ## Knowledge Gaps
 - **120 isolated node(s):** `currentLeads`, `allFormsData`, `allSubmissionsData`, `currentBuilderForm`, `currentPricingPlans` (+115 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 167 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 168 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
