@@ -1,17 +1,17 @@
 # Graph Report - shakibur-portfolio-live  (2026-09-23)
 
 ## Corpus Check
-- 50 files · ~196,195 words
+- 75 files · ~207,345 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 11 file(s) not represented in the graph (top: (none) 2, .css 2, .bat 2)
+- Unclassified: 12 file(s) not represented in the graph (top: .css 3, (none) 2, .bat 2)
 
 ## Summary
-- 376 nodes · 585 edges · 33 communities (26 shown, 7 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 33 edges (avg confidence: 0.85)
+- 457 nodes · 795 edges · 37 communities (27 shown, 10 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 33 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `620ac9c3`
+- Built from commit: `4de85091`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -37,7 +37,7 @@
 - rules/graphify.md
 - workflows/graphify.md
 - site-hydration.js
-- initFormBuilderEventListeners
+- getSiteContent
 - clean_all_nav.js
 - fix_admin_css.js
 - ref_fs
@@ -48,31 +48,41 @@
 - update_admin_js.js
 - update_styles_responsive.js
 - PricingSection.jsx
+- compilerOptions
+- next.config.js
 
 ## God Nodes (most connected - your core abstractions)
 1. `server` - 27 edges
-2. `setupEventListeners()` - 22 edges
-3. `escapeHtml()` - 20 edges
-4. `populateAdminForms()` - 18 edges
-5. `showToast()` - 18 edges
-6. `gatherContentFromForms()` - 15 edges
-7. `initFormBuilderEventListeners()` - 15 edges
-8. `applyContentToDOM()` - 12 edges
-9. `Md. Shakibur Rahaman — Executive Portfolio, CMS & Digital Growth Architecture` - 10 edges
-10. `loadDashboardData()` - 8 edges
+2. `getSiteContent()` - 23 edges
+3. `setupEventListeners()` - 22 edges
+4. `react` - 22 edges
+5. `escapeHtml()` - 20 edges
+6. `populateAdminForms()` - 18 edges
+7. `showToast()` - 18 edges
+8. `gatherContentFromForms()` - 15 edges
+9. `initFormBuilderEventListeners()` - 15 edges
+10. `applyContentToDOM()` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `setupEventListeners()` --calls--> `initFormBuilderEventListeners()`  [EXTRACTED]
-  admin.js → admin.js  _Bridges community 0 → community 21_
+- `AboutPage()` --calls--> `getSiteContent()`  [EXTRACTED]
+  app/about/page.js → lib/content.js
+- `CaseStudiesPage()` --calls--> `getSiteContent()`  [EXTRACTED]
+  app/case-studies/page.js → lib/content.js
+- `SingleCaseStudyPage()` --calls--> `getSiteContent()`  [EXTRACTED]
+  app/case-study/page.js → lib/content.js
+- `ContactPage()` --calls--> `getSiteContent()`  [EXTRACTED]
+  app/contact/page.js → lib/content.js
+- `generateMetadata()` --calls--> `getSiteContent()`  [EXTRACTED]
+  app/layout.js → lib/content.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (33 total, 7 thin omitted)
+## Communities (37 total, 10 thin omitted)
 
 ### Community 0 - "admin.js"
-Cohesion: 0.07
-Nodes (70): allFormsData, allSubmissionsData, calculateSeoScore(), currentBuilderForm, currentLeads, currentPricingPlans, discardChanges(), downloadSiteBackup() (+62 more)
+Cohesion: 0.06
+Nodes (88): addFieldToBuilder(), allFormsData, allSubmissionsData, calculateSeoScore(), closeEmbedModal(), closeTemplateModal(), currentBuilderForm, currentLeads (+80 more)
 
 ### Community 1 - "server.js"
 Cohesion: 0.06
@@ -99,8 +109,8 @@ Cohesion: 0.14
 Nodes (5): initAmbientCanvas(), initInteractiveWorkflow(), onScrollSpy(), updateActiveUI(), initScrollProgressBar()
 
 ### Community 7 - "package.json"
-Cohesion: 0.18
-Nodes (10): author, description, keywords, license, main, name, scripts, dev (+2 more)
+Cohesion: 0.08
+Nodes (24): author, dependencies, autoprefixer, next, postcss, react, react-dom, tailwindcss (+16 more)
 
 ### Community 8 - "🚀 Easy Deployment & Migration Guide | Md. Shakibur Rahaman Portfolio"
 Cohesion: 0.22
@@ -134,9 +144,9 @@ Nodes (3): Task-1 (Initial setup and routing), Task-2 (UI implementation and con
 Cohesion: 0.15
 Nodes (11): animateCounter(), fetchSiteContent(), getCachedSiteContent(), hydrateFiguresStrip(), hydratePageContent(), initAnimatedCounters(), initHydration(), initInstantPageTransitions() (+3 more)
 
-### Community 21 - "initFormBuilderEventListeners"
-Cohesion: 0.19
-Nodes (18): addFieldToBuilder(), closeEmbedModal(), closeTemplateModal(), exportSubmissionsCsv(), filterSubmissionsLocal(), initFormBuilderEventListeners(), loadFormsData(), loadSubmissions() (+10 more)
+### Community 21 - "getSiteContent"
+Cohesion: 0.11
+Nodes (34): AboutPage(), metadata, CaseStudiesPage(), metadata, metadata, SingleCaseStudyPage(), ContactPage(), metadata (+26 more)
 
 ### Community 22 - "clean_all_nav.js"
 Cohesion: 0.33
@@ -174,25 +184,29 @@ Nodes (4): adminJsPath, code, fs, path
 Cohesion: 0.40
 Nodes (4): css, cssPath, fs, path
 
+### Community 33 - "compilerOptions"
+Cohesion: 0.50
+Nodes (3): compilerOptions, baseUrl, paths
+
 ## Knowledge Gaps
-- **120 isolated node(s):** `currentLeads`, `allFormsData`, `allSubmissionsData`, `currentBuilderForm`, `currentPricingPlans` (+115 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 171 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **146 isolated node(s):** `currentLeads`, `allFormsData`, `allSubmissionsData`, `currentBuilderForm`, `currentPricingPlans` (+141 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 206 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `react` connect `getSiteContent` to `PricingSection.jsx`, `package.json`?**
+  _High betweenness centrality (0.046) - this node is a cross-community bridge._
+- **Why does `next` connect `getSiteContent` to `package.json`?**
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **Are the 16 inferred relationships involving `setupEventListeners()` (e.g. with `discardChanges()` and `downloadSiteBackup()`) actually correct?**
   _`setupEventListeners()` has 16 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `currentLeads`, `allFormsData`, `allSubmissionsData` to the rest of the system?**
-  _120 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _146 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `admin.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.06924882629107981 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.058177278401997504 - nodes in this community are weakly interconnected._
 - **Should `server.js` be split into smaller, more focused modules?**
   _Cohesion score 0.06009783368273934 - nodes in this community are weakly interconnected._
 - **Should `app.js` be split into smaller, more focused modules?**
   _Cohesion score 0.0957983193277311 - nodes in this community are weakly interconnected._
-- **Should `Md. Shakibur Rahaman — Executive Portfolio, CMS & Digital Growth Architecture` be split into smaller, more focused modules?**
-  _Cohesion score 0.1 - nodes in this community are weakly interconnected._
-- **Should `service-page.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._

@@ -4,8 +4,11 @@
   "description": "Md. Shakibur Rahaman - Multi-Industry Brand & Performance Marketing Portfolio & SEO CMS",
   "main": "server.js",
   "scripts": {
+    "dev": "node server.js",
     "start": "node server.js",
-    "dev": "node server.js"
+    "build": "next build",
+    "next:dev": "next dev -p 3000",
+    "next:start": "next start -p 3000"
   },
   "keywords": [
     "portfolio",
@@ -15,5 +18,13 @@
     "seo"
   ],
   "author": "Md. Shakibur Rahaman <shakibur188@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^10.6.1",
+    "next": "^14.2.15",
+    "postcss": "^8.5.28",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.14"
+  }
 }

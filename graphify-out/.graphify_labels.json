@@ -20,7 +20,7 @@
   "18": "rules/graphify.md",
   "19": "workflows/graphify.md",
   "20": "site-hydration.js",
-  "21": "initFormBuilderEventListeners",
+  "21": "getSiteContent",
   "22": "clean_all_nav.js",
   "23": "fix_admin_css.js",
   "24": "ref_fs",
@@ -31,5 +31,9 @@
   "29": "scan_html.js",
   "30": "update_admin_js.js",
   "31": "update_styles_responsive.js",
-  "32": "PricingSection.jsx"
+  "32": "PricingSection.jsx",
+  "33": "compilerOptions",
+  "34": "next.config.js",
+  "35": "tailwind.config.js",
+  "36": "postcss.config.js"
 }
