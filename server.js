@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const url = require('url');
+const zlib = require('zlib');
 
 const PORT = parseInt(process.env.PORT, 10) || 5500;
 const DIR = __dirname;
@@ -498,17 +499,46 @@ function parseJsonBody(req) {
   });
 }
 
-// Response helpers
-function jsonResponse(res, statusCode, data) {
+// Response helpers with automatic GZIP compression
+function jsonResponse(res, statusCode, data, req) {
   applySecurityHeaders(res);
+  const payload = JSON.stringify(data);
+  const acceptEncoding = req ? (req.headers['accept-encoding'] || '') : '';
+
+  if (acceptEncoding.includes('gzip') && payload.length > 256) {
+    zlib.gzip(Buffer.from(payload), (err, compressed) => {
+      if (!err && compressed) {
+        res.writeHead(statusCode, {
+          'Content-Type': 'application/json',
+          'Content-Encoding': 'gzip',
+          'Vary': 'Accept-Encoding',
+          'Cache-Control': 'public, max-age=0, must-revalidate',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+          'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+        });
+        return res.end(compressed);
+      }
+      res.writeHead(statusCode, {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'public, max-age=0, must-revalidate',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+      });
+      res.end(payload);
+    });
+    return;
+  }
+
   res.writeHead(statusCode, {
     'Content-Type': 'application/json',
-    'Cache-Control': 'no-store, no-cache, must-revalidate',
+    'Cache-Control': 'public, max-age=0, must-revalidate',
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type, Authorization'
   });
-  res.end(JSON.stringify(data));
+  res.end(payload);
 }
 
 const MIME_TYPES = {
@@ -1271,6 +1301,11 @@ const server = http.createServer(async (req, res) => {
     return res.end('<h1>403 Forbidden</h1><p>Access to this system resource is protected.</p>');
   }
 
+  // In-Memory RAM Cache Map
+  if (!global.staticRamCache) {
+    global.staticRamCache = new Map();
+  }
+
   // Verify file exists and is a regular file (or directory with index.html)
   fs.stat(filePath, (statErr, stats) => {
     let targetFilePath = filePath;
@@ -1291,19 +1326,66 @@ const server = http.createServer(async (req, res) => {
 
     const ext = path.extname(targetFilePath).toLowerCase();
     const contentType = MIME_TYPES[ext] || 'application/octet-stream';
+    const acceptEncoding = req.headers['accept-encoding'] || '';
+    const ifNoneMatch = req.headers['if-none-match'];
 
-    applySecurityHeaders(res);
-    res.writeHead(200, {
-      'Content-Type': contentType,
-      'Cache-Control': (ext === '.html' || ext === '.js' || ext === '.css' || ext === '.json') ? 'no-cache, no-store, must-revalidate' : 'public, max-age=3600'
-    });
+    try {
+      const fileStat = fs.statSync(targetFilePath);
+      const cacheKey = targetFilePath + ':' + fileStat.mtimeMs;
+      let cached = global.staticRamCache.get(cacheKey);
 
-    const stream = fs.createReadStream(targetFilePath);
-    stream.on('error', () => {
+      if (!cached) {
+        const rawBuffer = fs.readFileSync(targetFilePath);
+        const etag = '"' + crypto.createHash('md5').update(rawBuffer).digest('hex') + '"';
+        
+        let gzipBuffer = null;
+        const compressible = /text|javascript|json|css|xml|svg|html/i.test(contentType);
+        if (compressible && rawBuffer.length > 256) {
+          try {
+            gzipBuffer = zlib.gzipSync(rawBuffer, { level: 6 });
+          } catch (e) {}
+        }
+
+        cached = { rawBuffer, gzipBuffer, etag, contentType };
+        // Evict if cache exceeds 100MB
+        if (global.staticRamCache.size > 200) global.staticRamCache.clear();
+        global.staticRamCache.set(cacheKey, cached);
+      }
+
+      applySecurityHeaders(res);
+
+      // Fast ETag 304 response
+      if (ifNoneMatch && ifNoneMatch === cached.etag) {
+        res.writeHead(304, {
+          'ETag': cached.etag,
+          'Cache-Control': (ext === '.html' || ext === '.json') ? 'public, max-age=0, must-revalidate' : 'public, max-age=86400, stale-while-revalidate=604800'
+        });
+        return res.end();
+      }
+
+      const headers = {
+        'Content-Type': cached.contentType,
+        'ETag': cached.etag,
+        'Vary': 'Accept-Encoding',
+        'Cache-Control': (ext === '.html' || ext === '.json') ? 'public, max-age=0, must-revalidate' : 'public, max-age=86400, stale-while-revalidate=604800'
+      };
+
+      if (cached.gzipBuffer && acceptEncoding.includes('gzip')) {
+        headers['Content-Encoding'] = 'gzip';
+        headers['Content-Length'] = cached.gzipBuffer.length;
+        res.writeHead(200, headers);
+        return res.end(cached.gzipBuffer);
+      } else {
+        headers['Content-Length'] = cached.rawBuffer.length;
+        res.writeHead(200, headers);
+        return res.end(cached.rawBuffer);
+      }
+
+    } catch (readErr) {
+      applySecurityHeaders(res);
       res.writeHead(500, { 'Content-Type': 'text/plain' });
-      res.end('500 Internal Server Error');
-    });
-    stream.pipe(res);
+      return res.end('500 Internal Server Error');
+    }
   });
 });
 

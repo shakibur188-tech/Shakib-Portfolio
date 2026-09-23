@@ -1,10 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    './*.html',
+    './*.js',
+    './services/**/*.html',
+    './services/**/*.js',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -20,9 +22,9 @@ module.exports = {
         void: '#F1F3ED',
       },
       fontFamily: {
-        sans: ['var(--font-jakarta)', 'sans-serif'],
-        display: ['var(--font-jakarta)', 'sans-serif'],
-        mono: ['var(--font-jakarta)', 'monospace'],
+        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        display: ['"Plus Jakarta Sans"', 'sans-serif'],
+        mono: ['"Plus Jakarta Sans"', 'monospace'],
       },
       boxShadow: {
         'glow-olive': '0 0 35px -5px rgba(112, 128, 93, 0.25)',
