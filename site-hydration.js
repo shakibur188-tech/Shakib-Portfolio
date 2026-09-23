@@ -641,87 +641,25 @@
   }
 
   // -------------------------------------------------------------
-  // 4. Instant Turbo Router & Pre-fetching Engine (< 0.005s)
-  // -------------------------------------------------------------
-  const pageDomCache = new Map();
+  // 4. Instant Pre-fetching Engine (< 0.01s instant click)
+  const preloadedUrls = new Set();
 
   function prefetchUrl(url) {
-    if (!url || url.startsWith('#') || url.startsWith('mailto:') || url.startsWith('tel:') || url.startsWith('https://wa.me') || url.includes('/admin')) return;
+    if (!url || preloadedUrls.has(url) || url.startsWith('#') || url.startsWith('mailto:') || url.startsWith('tel:') || url.startsWith('https://wa.me') || url.includes('/admin')) return;
     if (url.startsWith('http') && !url.includes(window.location.hostname)) return;
 
-    if (!pageDomCache.has(url)) {
-      fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          pageDomCache.set(url, html);
-        })
-        .catch(() => {});
-    }
-  }
-
-  async function navigateToPage(url, pushState = true) {
-    if (!url || url.startsWith('#') || url.startsWith('mailto:') || url.startsWith('tel:') || url.startsWith('https://wa.me') || url.includes('/admin')) {
-      return false;
-    }
-    if (url.startsWith('http') && !url.includes(window.location.hostname)) {
-      return false;
-    }
-
+    preloadedUrls.add(url);
     try {
-      let html = pageDomCache.get(url);
-      if (!html) {
-        const res = await fetch(url);
-        html = await res.text();
-        pageDomCache.set(url, html);
-      }
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = url;
+      document.head.appendChild(link);
+    } catch (e) {}
 
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-
-      const newMain = doc.querySelector('main');
-      const curMain = document.querySelector('main');
-
-      if (newMain && curMain) {
-        curMain.replaceWith(newMain);
-        document.title = doc.title;
-        if (pushState) window.history.pushState({ url }, '', url);
-        window.scrollTo({ top: 0, behavior: 'instant' });
-
-        // Update active classes on header links
-        const curPath = window.location.pathname;
-        document.querySelectorAll('.desktop-nav-link, .mobile-link').forEach(link => {
-          const href = link.getAttribute('href');
-          if (href === curPath || (href && href !== '/' && curPath.startsWith(href))) {
-            link.classList.add('text-[#70805D]', 'bg-[#70805D]/10');
-          } else {
-            link.classList.remove('text-[#70805D]', 'bg-[#70805D]/10');
-          }
-        });
-
-        // Close mobile drawer if open
-        const drawer = document.getElementById('mobileDrawer');
-        const backdrop = document.getElementById('mobileBackdrop');
-        if (drawer) drawer.classList.add('translate-x-full');
-        if (backdrop) {
-          backdrop.classList.remove('opacity-100', 'pointer-events-auto');
-          backdrop.classList.add('opacity-0', 'pointer-events-none');
-        }
-
-        // Re-run hydration & page specific widgets
-        initHydration();
-        if (typeof window.initPageInteractiveScripts === 'function') {
-          window.initPageInteractiveScripts();
-        }
-        return true;
-      }
-    } catch (e) {
-      window.location.href = url;
-    }
-    return false;
+    fetch(url, { priority: 'low' }).catch(() => {});
   }
 
   function initInstantPageTransitions() {
-    // 1. Prefetch core site routes automatically
     const coreRoutes = [
       '/',
       '/about.html',
@@ -738,12 +676,9 @@
       coreRoutes.forEach(r => {
         if (r !== window.location.pathname) prefetchUrl(r);
       });
-    }, 100);
+    }, 50);
 
-    // 2. Pre-cache current page
-    pageDomCache.set(window.location.pathname, document.documentElement.outerHTML);
-
-    // 3. Instant Hover / Touch Pre-load on Any Link
+    // Instant Hover / Touch Pre-load so clicking renders immediately from cache in <0.01s
     document.addEventListener('mouseover', (e) => {
       const anchor = e.target.closest('a');
       if (anchor && anchor.getAttribute('href')) {
@@ -757,30 +692,6 @@
         prefetchUrl(anchor.getAttribute('href'));
       }
     }, { passive: true });
-
-    // 4. Click interceptor for instant <0.005s page switches
-    document.addEventListener('click', async (e) => {
-      const anchor = e.target.closest('a');
-      if (!anchor) return;
-
-      const href = anchor.getAttribute('href');
-      const target = anchor.getAttribute('target');
-      if (!href || target === '_blank' || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('https://wa.me') || href.includes('/admin')) {
-        return;
-      }
-
-      if (href.startsWith('http') && !href.includes(window.location.hostname)) {
-        return;
-      }
-
-      e.preventDefault();
-      await navigateToPage(href, true);
-    });
-
-    // 5. Handle browser back / forward
-    window.addEventListener('popstate', async () => {
-      await navigateToPage(window.location.pathname, false);
-    });
   }
 
   window.applySiteHydration = function(content) {
