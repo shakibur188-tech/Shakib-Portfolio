@@ -1,0 +1,6 @@
+{
+  "openaiApiKey": "",
+  "openaiBaseUrl": "https://api.xkiro.com/v1",
+  "openaiTextModel": "qwen/qwen3.8-max:free",
+  "openaiImageModel": "dall-e-3"
+}

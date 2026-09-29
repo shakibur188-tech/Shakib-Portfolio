@@ -1,0 +1,1495 @@
+[
+  {
+    "id": "tpl-executive-consultation",
+    "title": "Executive Consultation & Strategy Briefing",
+    "category": "Strategy & Direction",
+    "description": "High-level strategic advisory briefing for enterprise founders and marketing executives.",
+    "submitText": "Request Executive Briefing",
+    "successMessage": "Thank you. Your strategic brief has been received. Md. Shakibur Rahaman will review and respond within 24 business hours.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "clientName",
+        "label": "Full Name",
+        "type": "text",
+        "placeholder": "e.g. David Sterling",
+        "required": true
+      },
+      {
+        "id": "workEmail",
+        "label": "Corporate Email",
+        "type": "email",
+        "placeholder": "david@enterprise.com",
+        "required": true
+      },
+      {
+        "id": "phone",
+        "label": "Phone / WhatsApp",
+        "type": "tel",
+        "placeholder": "+880 1838-070468",
+        "required": true
+      },
+      {
+        "id": "companyName",
+        "label": "Company / Organization",
+        "type": "text",
+        "placeholder": "Sterling Global Capital",
+        "required": true
+      },
+      {
+        "id": "serviceInterest",
+        "label": "Primary Strategic Focus",
+        "type": "select",
+        "options": [
+          "Full-Scope 360° Creative Direction",
+          "Corporate Brand Transformation",
+          "Enterprise Jamstack Web Ecosystem",
+          "High-Intent Performance Scaling",
+          "Strategic Public Relations & Media"
+        ],
+        "required": true
+      },
+      {
+        "id": "budgetScope",
+        "label": "Anticipated Budget Horizon",
+        "type": "select",
+        "options": [
+          "Enterprise ($10,000 - $30,000+)",
+          "Growth Stage ($5,000 - $10,000)",
+          "Strategic Audit ($2,500 - $5,000)"
+        ],
+        "required": true
+      },
+      {
+        "id": "strategicGoals",
+        "label": "Strategic Objectives & Commercial Challenges",
+        "type": "textarea",
+        "placeholder": "Describe your core market hurdles, target milestones, and timeline...",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-branding-rfp",
+    "title": "Branding & Brand Identity RFP",
+    "category": "Branding",
+    "description": "Comprehensive brand positioning, identity architecture, and guidelines RFP intake.",
+    "submitText": "Submit Branding RFP",
+    "successMessage": "Branding RFP successfully logged. Our identity architecture team will prepare a structured proposal.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "contactName",
+        "label": "Primary Contact Name",
+        "type": "text",
+        "placeholder": "Sarah Lin",
+        "required": true
+      },
+      {
+        "id": "email",
+        "label": "Business Email",
+        "type": "email",
+        "placeholder": "s.lin@aura.com",
+        "required": true
+      },
+      {
+        "id": "brandStage",
+        "label": "Current Brand Stage",
+        "type": "select",
+        "options": [
+          "Brand Refresh / Modernization",
+          "Complete Rebranding from Scratch",
+          "New Startup Identity Architecture",
+          "Merger & Acquisition Brand Realignment"
+        ],
+        "required": true
+      },
+      {
+        "id": "targetAudience",
+        "label": "Target Demographic & Positioning",
+        "type": "text",
+        "placeholder": "e.g. Tier-1 enterprise decision makers, affluent luxury consumers",
+        "required": true
+      },
+      {
+        "id": "keyCompetitors",
+        "label": "Key Market Competitors (2-3)",
+        "type": "text",
+        "placeholder": "Competitor A, Competitor B",
+        "required": false
+      },
+      {
+        "id": "deliverablesNeeded",
+        "label": "Required Deliverables",
+        "type": "checkbox",
+        "options": [
+          "Visual Identity & Logo Suite",
+          "Corporate Guidelines Manual",
+          "Typography & Color Tokens",
+          "Packaging Architecture",
+          "Brand Voice & Messaging Book"
+        ],
+        "required": true
+      },
+      {
+        "id": "targetLaunchDate",
+        "label": "Target Launch Date",
+        "type": "date",
+        "required": false
+      },
+      {
+        "id": "brandVision",
+        "label": "Brand Vision & Non-Negotiables",
+        "type": "textarea",
+        "placeholder": "What emotional response should your new brand command?",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-webapp-saas-scope",
+    "title": "High-Performance Web App / SaaS Scope",
+    "category": "Web Development",
+    "description": "Technical requirements questionnaire for headless Jamstack web applications, SaaS dashboards, and portal engineering.",
+    "submitText": "Submit Technical Scope",
+    "successMessage": "Technical scope submitted! Our architecture team will review code stack viability and SLA benchmarks.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "leadDevContact",
+        "label": "Product Lead / CTO Name",
+        "type": "text",
+        "placeholder": "Michael Vance",
+        "required": true
+      },
+      {
+        "id": "leadEmail",
+        "label": "Technical Contact Email",
+        "type": "email",
+        "placeholder": "michael@saas.io",
+        "required": true
+      },
+      {
+        "id": "appType",
+        "label": "Platform Architecture Type",
+        "type": "select",
+        "options": [
+          "Headless Next.js Web App",
+          "B2B Client Portal / Dashboard",
+          "Multi-Vendor SaaS Platform",
+          "Custom Corporate Ecosystem"
+        ],
+        "required": true
+      },
+      {
+        "id": "authNeeds",
+        "label": "Authentication & Roles Requirement",
+        "type": "select",
+        "options": [
+          "OAuth 2.0 / SSO / Social Logins",
+          "JWT Custom Role-Based Access Control",
+          "Magic Links / Passwordless",
+          "Public Portal (No Auth)"
+        ],
+        "required": true
+      },
+      {
+        "id": "databasePreferences",
+        "label": "Backend / Database Preferences",
+        "type": "text",
+        "placeholder": "e.g. Node.js, PostgreSQL, Supabase, Redis",
+        "required": false
+      },
+      {
+        "id": "coreFeatures",
+        "label": "Core System Capabilities",
+        "type": "checkbox",
+        "options": [
+          "Real-Time WebSockets / Notifications",
+          "Stripe / SSLCommerz Payment Gateway",
+          "Third-Party API Integrations",
+          "High-Speed CDN Asset Pipeline",
+          "Automated PDF / Report Generator"
+        ],
+        "required": true
+      },
+      {
+        "id": "estimatedTraffic",
+        "label": "Expected Monthly Active Users (MAU)",
+        "type": "select",
+        "options": [
+          "Under 10k MAU",
+          "10k - 100k MAU",
+          "100k - 1M+ MAU"
+        ],
+        "required": true
+      },
+      {
+        "id": "technicalSpec",
+        "label": "Feature Description & Architecture Notes",
+        "type": "textarea",
+        "placeholder": "Detail key user flows, edge-case requirements, and API dependencies...",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-ecommerce-architecture",
+    "title": "Headless eCommerce Platform Architecture",
+    "category": "Web Development",
+    "description": "Specialized scoping form for high-velocity D2C storefronts, multi-currency retail, and wholesale B2B portals.",
+    "submitText": "Request eCommerce Architecture Blueprint",
+    "successMessage": "eCommerce brief recorded. Our headless retail architects will evaluate your catalog matrix.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "storeName",
+        "label": "Store / Brand Name",
+        "type": "text",
+        "placeholder": "Aura Studio Fashion",
+        "required": true
+      },
+      {
+        "id": "merchantEmail",
+        "label": "Merchant Email",
+        "type": "email",
+        "placeholder": "operations@aurafashion.com",
+        "required": true
+      },
+      {
+        "id": "skuCount",
+        "label": "Estimated Catalog SKU Count",
+        "type": "select",
+        "options": [
+          "Under 100 SKUs",
+          "100 - 1,000 SKUs",
+          "1,000 - 10,000 SKUs",
+          "10,000+ Enterprise SKUs"
+        ],
+        "required": true
+      },
+      {
+        "id": "currentPlatform",
+        "label": "Current Commerce Platform",
+        "type": "select",
+        "options": [
+          "Shopify / Shopify Plus",
+          "WooCommerce",
+          "Custom Monolithic CMS",
+          "New Build (No Legacy Store)"
+        ],
+        "required": true
+      },
+      {
+        "id": "paymentGateways",
+        "label": "Required Payment Integrations",
+        "type": "checkbox",
+        "options": [
+          "bKash / Nagad / Rocket (Local)",
+          "Stripe / Apple Pay",
+          "SSLCommerz Multi-Gateway",
+          "Cash on Delivery (COD) Automation",
+          "Buy Now Pay Later (BNPL)"
+        ],
+        "required": true
+      },
+      {
+        "id": "shippingLogistics",
+        "label": "Logistics Courier Synchronization",
+        "type": "text",
+        "placeholder": "e.g. Steadfast, Pathao Courier, RedX, DHL Global",
+        "required": false
+      },
+      {
+        "id": "ecommerceObjectives",
+        "label": "Conversion & Operational Goals",
+        "type": "textarea",
+        "placeholder": "Specify peak flash sale load requirements, inventory sync needs, and checkout speed targets...",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-paid-ads-audit",
+    "title": "Full-Funnel Paid Ads (Google & Meta) Audit",
+    "category": "Paid Media",
+    "description": "Request a mathematical ad spend audit to eliminate wasted budget and amplify Return on Ad Spend (ROAS).",
+    "submitText": "Request Precision Ads Audit",
+    "successMessage": "Ad audit request received. We will run negative keyword checks and attribution diagnostics.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "advertiserName",
+        "label": "Advertiser / Brand Name",
+        "type": "text",
+        "placeholder": "Hotel Sarina Dhaka",
+        "required": true
+      },
+      {
+        "id": "advertiserEmail",
+        "label": "Corporate Email",
+        "type": "email",
+        "placeholder": "marketing@hotelsarinadhaka.com",
+        "required": true
+      },
+      {
+        "id": "monthlySpend",
+        "label": "Current Monthly Ad Spend",
+        "type": "select",
+        "options": [
+          "$1,000 - $3,000 / month",
+          "$3,000 - $10,000 / month",
+          "$10,000 - $50,000+ / month"
+        ],
+        "required": true
+      },
+      {
+        "id": "activeChannels",
+        "label": "Active Channels to Audit",
+        "type": "checkbox",
+        "options": [
+          "Google Search & Performance Max",
+          "Meta Ads (Facebook & Instagram)",
+          "YouTube Video Discovery",
+          "TikTok Ads",
+          "LinkedIn B2B Sponsored Content"
+        ],
+        "required": true
+      },
+      {
+        "id": "currentCPA",
+        "label": "Current Cost Per Acquisition (CPA) / ROAS",
+        "type": "text",
+        "placeholder": "e.g. Current ROAS 1.8x, CPA $35",
+        "required": false
+      },
+      {
+        "id": "auditPainPoints",
+        "label": "Primary Pain Points & Growth Bottlenecks",
+        "type": "textarea",
+        "placeholder": "Are you experiencing high CPCs, declining ROAS, or attribution tracking discrepancies?",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-commercial-production",
+    "title": "Commercial Photoshoot & Video Production Brief",
+    "category": "Creative Media",
+    "description": "Pre-production briefing form for 4K broadcast TVCs, brand documentaries, high-fashion shoots, and social reels.",
+    "submitText": "Submit Production Brief",
+    "successMessage": "Production brief received. Director Md. Shakibur Rahaman will prepare treatment concepts and call sheets.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "brandClient",
+        "label": "Brand / Client Name",
+        "type": "text",
+        "placeholder": "ChronoCraft Horology",
+        "required": true
+      },
+      {
+        "id": "producerEmail",
+        "label": "Lead Producer / Brand Manager Email",
+        "type": "email",
+        "placeholder": "creative@chronocraft.com",
+        "required": true
+      },
+      {
+        "id": "productionType",
+        "label": "Production Format",
+        "type": "select",
+        "options": [
+          "Broadcast TVC & Digital Hero Film",
+          "Luxury Product Studio Photography",
+          "Corporate Executive Documentary",
+          "High-Retention Social Reels Campaign (10x-30x)",
+          "Event Multi-Cam Live Coverage & Aftermovie"
+        ],
+        "required": true
+      },
+      {
+        "id": "locationPreference",
+        "label": "Filming Location",
+        "type": "select",
+        "options": [
+          "Dedicated Cyclorama Studio (Dhaka)",
+          "On-Location Corporate Facility",
+          "Outdoor / Scenic Heritage Site",
+          "International Multi-Location"
+        ],
+        "required": true
+      },
+      {
+        "id": "videoDeliverables",
+        "label": "Deliverables & Aspect Ratios",
+        "type": "checkbox",
+        "options": [
+          "16:9 4K Master (Broadcast / YouTube)",
+          "9:16 Vertical (Reels / TikTok / Shorts)",
+          "1:1 Square (Feed Ads)",
+          "High-Resolution Retouched RAW Photos"
+        ],
+        "required": true
+      },
+      {
+        "id": "talentRequirements",
+        "label": "Talent & Voiceover Needs",
+        "type": "select",
+        "options": [
+          "Professional Cast & Voiceover Required",
+          "Internal Executive Team Featured",
+          "Product Only (No Human Talent)"
+        ],
+        "required": false
+      },
+      {
+        "id": "moodboardUrl",
+        "label": "Moodboard or Reference Links",
+        "type": "url",
+        "placeholder": "https://pinterest.com/... or Vimeo link",
+        "required": false
+      },
+      {
+        "id": "storyConcept",
+        "label": "Narrative Concept & Core Messaging",
+        "type": "textarea",
+        "placeholder": "Describe the key emotional hook, product benefits, and brand tone...",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-event-activation",
+    "title": "3D Event Activation & Tradeshow Pavilion Booking",
+    "category": "Experiential",
+    "description": "Spatial design, experiential stall fabrication, and turnkey tradeshow management intake.",
+    "submitText": "Commission Spatial Activation",
+    "successMessage": "Event activation brief received. Our 3D architectural team will generate space layouts.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "eventName",
+        "label": "Event / Expo Name",
+        "type": "text",
+        "placeholder": "e.g. Bangladesh International Trade Expo 2026",
+        "required": true
+      },
+      {
+        "id": "organizerEmail",
+        "label": "Organizer / Brand Email",
+        "type": "email",
+        "placeholder": "events@conglomerate.com",
+        "required": true
+      },
+      {
+        "id": "stallDimensions",
+        "label": "Booth Dimensions & Area",
+        "type": "text",
+        "placeholder": "e.g. 10m x 8m (80 sqm) Island Booth (4-Side Open)",
+        "required": true
+      },
+      {
+        "id": "activationType",
+        "label": "Activation Concept",
+        "type": "select",
+        "options": [
+          "Luxury 3D Illuminated Brand Pavilion",
+          "Interactive Tech & AR Experience Stall",
+          "High-Traffic Retail Pop-Up",
+          "B2B Corporate VIP Lounge & Gala Setup"
+        ],
+        "required": true
+      },
+      {
+        "id": "interactiveTech",
+        "label": "Interactive Features Required",
+        "type": "checkbox",
+        "options": [
+          "LED Video Wall Displays",
+          "Interactive Touchscreen Kiosks",
+          "Live Product Demonstration Zones",
+          "VIP Meeting Room (Private)",
+          "Spatial Sound & Directional Lighting"
+        ],
+        "required": false
+      },
+      {
+        "id": "eventDate",
+        "label": "Expo / Activation Date",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "spatialBrief",
+        "label": "Fabrication Requirements & Guidelines",
+        "type": "textarea",
+        "placeholder": "Include venue fabrication guidelines, height restrictions, and attendee flow goals...",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-seo-aeo-discovery",
+    "title": "SEO & AI Engine Optimization (AEO) Discovery",
+    "category": "Organic Growth",
+    "description": "Discovery questionnaire for traditional SERP ranking, schema entity graphs, and generative AI answer engine citations.",
+    "submitText": "Initiate SEO/AEO Audit",
+    "successMessage": "SEO & AEO audit scheduled. We will analyze entity graphs and AI citations in Perplexity and ChatGPT.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "websiteUrl",
+        "label": "Website URL to Audit",
+        "type": "url",
+        "placeholder": "https://example.com",
+        "required": true
+      },
+      {
+        "id": "ownerEmail",
+        "label": "Webmaster / Marketing Email",
+        "type": "email",
+        "placeholder": "seo@brand.com",
+        "required": true
+      },
+      {
+        "id": "targetKeywords",
+        "label": "Target Search Queries (3-5 core terms)",
+        "type": "text",
+        "placeholder": "e.g. Best 5-star hotel Dhaka, enterprise branding studio",
+        "required": true
+      },
+      {
+        "id": "primaryCompetitors",
+        "label": "Top 3 Competitor URLs",
+        "type": "text",
+        "placeholder": "https://competitor1.com, https://competitor2.com",
+        "required": true
+      },
+      {
+        "id": "focusEngines",
+        "label": "Priority Search & Answer Platforms",
+        "type": "checkbox",
+        "options": [
+          "Google Organic Search & SGE",
+          "ChatGPT & OpenAI Search Engine",
+          "Perplexity AI Search",
+          "Google Maps & Local SEO 3-Pack",
+          "Claude & Anthropic Retrieval"
+        ],
+        "required": true
+      },
+      {
+        "id": "currentPenalties",
+        "label": "Past SEO History & Challenges",
+        "type": "textarea",
+        "placeholder": "Mention any previous algorithmic penalties, toxic backlinks, or CMS migration issues...",
+        "required": false
+      }
+    ]
+  },
+  {
+    "id": "tpl-pr-media-intake",
+    "title": "Public Relations & Crisis Communications Intake",
+    "category": "PR & Media",
+    "description": "Intake form for national press syndication, corporate announcements, and urgent crisis mitigation.",
+    "submitText": "Submit Media Brief",
+    "successMessage": "PR brief received. Our media outreach leads will verify journalist availability and wire distribution.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "organizationName",
+        "label": "Corporate Organization",
+        "type": "text",
+        "placeholder": "Beximco Group / Square Pharma",
+        "required": true
+      },
+      {
+        "id": "spokespersonEmail",
+        "label": "Corporate Comms Email",
+        "type": "email",
+        "placeholder": "pr@organization.com",
+        "required": true
+      },
+      {
+        "id": "announcementUrgency",
+        "label": "Timing & Urgency",
+        "type": "select",
+        "options": [
+          "Standard Editorial Sprint (1-2 weeks)",
+          "Scheduled Milestone Launch (Date-Specific)",
+          "Urgent News Wire Distribution (24-48 Hours)",
+          "CRISIS COMMUNICATIONS SAFEGUARD (Immediate)"
+        ],
+        "required": true
+      },
+      {
+        "id": "targetMediaTiers",
+        "label": "Target Media Publications",
+        "type": "checkbox",
+        "options": [
+          "Tier-1 National Dailies (Prothom Alo, Daily Star, TBS)",
+          "International Business Media (Bloomberg, Reuters, Forbes)",
+          "Tech & Startup Portals (Tech in Asia, Future Startup)",
+          "Broadcast TV & Prime-Time Business News"
+        ],
+        "required": true
+      },
+      {
+        "id": "officialSpokesperson",
+        "label": "Designated Executive Spokesperson & Title",
+        "type": "text",
+        "placeholder": "e.g. Managing Director & CEO",
+        "required": true
+      },
+      {
+        "id": "announcementSummary",
+        "label": "Core Announcement / Story Pitch",
+        "type": "textarea",
+        "placeholder": "What is the news hook? Highlight factual metrics, investment size, or strategic significance...",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-client-onboarding",
+    "title": "Client Project Onboarding & Asset Handoff",
+    "category": "Operations",
+    "description": "Kick-off questionnaire for newly commissioned projects to collect assets, logins, and project stakeholder contacts.",
+    "submitText": "Submit Onboarding Information",
+    "successMessage": "Project assets logged. Your dedicated Notion dashboard and Slack channel are being prepared.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "clientName",
+        "label": "Client / Company Name",
+        "type": "text",
+        "placeholder": "LuxeHaven Studio",
+        "required": true
+      },
+      {
+        "id": "projectLead",
+        "label": "Project Lead / POC",
+        "type": "text",
+        "placeholder": "Nadia Rahman",
+        "required": true
+      },
+      {
+        "id": "leadEmail",
+        "label": "POC Email Address",
+        "type": "email",
+        "placeholder": "nadia@luxehaven.com",
+        "required": true
+      },
+      {
+        "id": "sharedDriveUrl",
+        "label": "Google Drive / Dropbox Asset Folder URL",
+        "type": "url",
+        "placeholder": "https://drive.google.com/drive/folders/...",
+        "required": true
+      },
+      {
+        "id": "figmaBoardUrl",
+        "label": "Figma / Brand Assets URL (Optional)",
+        "type": "url",
+        "placeholder": "https://figma.com/file/...",
+        "required": false
+      },
+      {
+        "id": "brandGuidelinesAttached",
+        "label": "Are Existing Brand Guidelines Available?",
+        "type": "radio",
+        "options": [
+          "Yes, fully documented in shared drive",
+          "Partial assets only",
+          "No, this project includes establishing guidelines"
+        ],
+        "required": true
+      },
+      {
+        "id": "stakeholderNotes",
+        "label": "Key Stakeholders & Approval Hierarchy",
+        "type": "textarea",
+        "placeholder": "List all stakeholders who have final sign-off authority on deliverables...",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-retainer-application",
+    "title": "Creative Direction Retainer Application",
+    "category": "Retainers",
+    "description": "Application for dedicated ongoing monthly creative leadership, design sprints, and marketing direction.",
+    "submitText": "Apply for Retainer Availability",
+    "successMessage": "Retainer application received. We will confirm executive bandwidth and schedule a discovery call.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "applicantCompany",
+        "label": "Company Name",
+        "type": "text",
+        "placeholder": "Apex Footwear Ltd.",
+        "required": true
+      },
+      {
+        "id": "executiveEmail",
+        "label": "Director / Executive Email",
+        "type": "email",
+        "placeholder": "director@apex.com",
+        "required": true
+      },
+      {
+        "id": "retainerTier",
+        "label": "Preferred Retainer Commitment",
+        "type": "select",
+        "options": [
+          "Full Creative Leadership Retainer ($5,000/mo - 40 hrs)",
+          "Omnichannel Marketing & Ads Retainer ($3,500/mo - 25 hrs)",
+          "Design & Web Maintenance Retainer ($2,000/mo - 15 hrs)",
+          "Bespoke Enterprise Retainer ($8,000+/mo)"
+        ],
+        "required": true
+      },
+      {
+        "id": "requiredVerticals",
+        "label": "Verticals Requiring Ongoing Oversight",
+        "type": "checkbox",
+        "options": [
+          "Visual Design & Brand Polish",
+          "Jamstack Web Updates & PageSpeed Audits",
+          "Monthly Social Video Reels Direction",
+          "Google & Meta Paid Ads Funnel Governance",
+          "Executive PR & Thought Leadership By-lines"
+        ],
+        "required": true
+      },
+      {
+        "id": "contractDuration",
+        "label": "Anticipated Commitment Duration",
+        "type": "select",
+        "options": [
+          "Quarterly (3 Months)",
+          "Bi-Annual (6 Months)",
+          "Annual Partnership (12 Months)"
+        ],
+        "required": true
+      },
+      {
+        "id": "retainerExpectations",
+        "label": "Weekly Deliverables & Expectations",
+        "type": "textarea",
+        "placeholder": "Describe recurring deliverables and weekly sprint cadence required...",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-uiux-design-sprint",
+    "title": "UI/UX Design Sprint Questionnaire",
+    "category": "Design & UX",
+    "description": "Targeted scoping for high-fidelity Figma prototypes, design token libraries, and conversion interface design.",
+    "submitText": "Book UI/UX Design Sprint",
+    "successMessage": "UI/UX sprint questionnaire submitted! We will analyze your user journey benchmarks.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "productName",
+        "label": "Product / Application Name",
+        "type": "text",
+        "placeholder": "NovaPulse SaaS Analytics",
+        "required": true
+      },
+      {
+        "id": "productManagerEmail",
+        "label": "Product Manager Email",
+        "type": "email",
+        "placeholder": "pm@novapulse.io",
+        "required": true
+      },
+      {
+        "id": "platformType",
+        "label": "Target Platform",
+        "type": "checkbox",
+        "options": [
+          "Responsive Desktop Web",
+          "Mobile Web App",
+          "iOS Native UI Specs",
+          "Android Material You Specs"
+        ],
+        "required": true
+      },
+      {
+        "id": "screensCount",
+        "label": "Estimated Screen / View Count",
+        "type": "select",
+        "options": [
+          "Sprint 1: 5 - 10 Core Views",
+          "Sprint 2: 10 - 25 Views with States",
+          "Complete Design System: 30+ Screens & Components"
+        ],
+        "required": true
+      },
+      {
+        "id": "benchmarkApps",
+        "label": "Top 3 Benchmark Interfaces You Admire",
+        "type": "text",
+        "placeholder": "e.g. Linear.app, Stripe Dashboard, Raycast",
+        "required": true
+      },
+      {
+        "id": "userPersonas",
+        "label": "Primary User Persona & Use Case",
+        "type": "textarea",
+        "placeholder": "Who is the daily user, and what is the primary friction point they must solve in 3 clicks?",
+        "required": true
+      },
+      {
+        "id": "sprintTimeline",
+        "label": "Target Sprint Completion Date",
+        "type": "date",
+        "required": false
+      }
+    ]
+  },
+  {
+    "id": "tpl-social-media-brief",
+    "title": "Social Media Growth & Influencer Campaign Brief",
+    "category": "Social Media",
+    "description": "Campaign setup brief for viral video production, influencer alignments, and follower acquisition.",
+    "submitText": "Submit Social Campaign Brief",
+    "successMessage": "Social campaign brief received. Content calendars and hook formulas are in development.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "brandName",
+        "label": "Brand Name",
+        "type": "text",
+        "placeholder": "Yellow Youth Apparel",
+        "required": true
+      },
+      {
+        "id": "socialLeadEmail",
+        "label": "Social Media Lead Email",
+        "type": "email",
+        "placeholder": "social@yellow.net",
+        "required": true
+      },
+      {
+        "id": "activeProfiles",
+        "label": "Current Social Profile URLs",
+        "type": "text",
+        "placeholder": "instagram.com/brand, tiktok.com/@brand",
+        "required": true
+      },
+      {
+        "id": "campaignGoal",
+        "label": "Primary Campaign Milestone",
+        "type": "select",
+        "options": [
+          "Explosive Brand Awareness & Reach",
+          "Direct E-Commerce Product Sales (ROAS)",
+          "Community Engagement & User Generated Content (UGC)",
+          "Influencer Collaboration & Co-Branded Sprints"
+        ],
+        "required": true
+      },
+      {
+        "id": "videoFrequency",
+        "label": "Desired Reel / Short Video Velocity",
+        "type": "select",
+        "options": [
+          "12 Reels / Month (3 per week)",
+          "20 Reels / Month (5 per week)",
+          "Daily Velocity (30 Reels / Month)"
+        ],
+        "required": true
+      },
+      {
+        "id": "influencerBudget",
+        "label": "Influencer Seeding Budget",
+        "type": "select",
+        "options": [
+          "None (Organic Team Only)",
+          "$500 - $1,500 / campaign",
+          "$1,500 - $5,000+ / campaign"
+        ],
+        "required": false
+      },
+      {
+        "id": "campaignTheme",
+        "label": "Campaign Theme & Key Hashtags",
+        "type": "textarea",
+        "placeholder": "What seasonal moment, launch event, or cultural narrative are we capitalizing on?",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-client-satisfaction-nps",
+    "title": "Client Satisfaction & Post-Launch Review (NPS)",
+    "category": "Feedback & QA",
+    "description": "Post-delivery review form to gather client feedback, Net Promoter Scores, and testimonial permissions.",
+    "submitText": "Submit Feedback & Rating",
+    "successMessage": "Thank you for your valuable review! Your feedback drives our continuous engineering standard.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "reviewerName",
+        "label": "Your Name & Title",
+        "type": "text",
+        "placeholder": "Tariqul Islam, COO",
+        "required": true
+      },
+      {
+        "id": "reviewerCompany",
+        "label": "Company Name",
+        "type": "text",
+        "placeholder": "The Peninsula Chittagong",
+        "required": true
+      },
+      {
+        "id": "npsScore",
+        "label": "On a scale of 1-10, how likely are you to recommend Md. Shakibur Rahaman?",
+        "type": "select",
+        "options": [
+          "10 - Absolutely Essential Partner",
+          "9 - Highly Likely",
+          "8 - Very Good",
+          "7 - Satisfactory",
+          "Under 7 - Needs Improvement"
+        ],
+        "required": true
+      },
+      {
+        "id": "standoutAspect",
+        "label": "What aspect of the engagement impressed you most?",
+        "type": "checkbox",
+        "options": [
+          "Decisive Strategic Leadership",
+          "Exceptional Design Precision",
+          "Sub-second Web App Speed",
+          "Punctual Delivery & Communication",
+          "Commercial Business Impact"
+        ],
+        "required": true
+      },
+      {
+        "id": "writtenReview",
+        "label": "Written Testimonial / Public Review",
+        "type": "textarea",
+        "placeholder": "Share your experience working with Shakibur and the results achieved...",
+        "required": true
+      },
+      {
+        "id": "testimonialConsent",
+        "label": "May we feature this testimonial on our portfolio?",
+        "type": "radio",
+        "options": [
+          "Yes, display with my name, title and company logo",
+          "Yes, but display anonymously",
+          "No, private internal feedback only"
+        ],
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-website-speed-audit",
+    "title": "Website Speed, Security & Core Web Vitals Audit",
+    "category": "Technical Audit",
+    "description": "Complimentary technical audit intake for sluggish websites, low Google PageSpeed scores, and conversion leaks.",
+    "submitText": "Request Technical Audit",
+    "successMessage": "Speed audit queued. We will run Google Lighthouse and Chrome UX telemetry tests.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "siteUrl",
+        "label": "Live Website URL to Diagnose",
+        "type": "url",
+        "placeholder": "https://mysite.com",
+        "required": true
+      },
+      {
+        "id": "siteOwnerEmail",
+        "label": "Contact Email for Audit Report",
+        "type": "email",
+        "placeholder": "founder@mysite.com",
+        "required": true
+      },
+      {
+        "id": "hostingEnvironment",
+        "label": "Current Hosting Infrastructure",
+        "type": "select",
+        "options": [
+          "Shared cPanel / Traditional Hosting",
+          "Cloud VPS (DigitalOcean / AWS / GCP)",
+          "Vercel / Netlify / Cloudflare Edge",
+          "Shopify / Managed SaaS",
+          "Uncertain / Need Investigation"
+        ],
+        "required": true
+      },
+      {
+        "id": "cmsUsed",
+        "label": "Content Management System",
+        "type": "select",
+        "options": [
+          "WordPress + WooCommerce",
+          "Next.js / React Jamstack",
+          "Custom PHP / Laravel",
+          "Shopify",
+          "Webflow / Wix / Squarespace"
+        ],
+        "required": true
+      },
+      {
+        "id": "performanceSymptoms",
+        "label": "Observed Performance Issues",
+        "type": "checkbox",
+        "options": [
+          "Slow Mobile Load Time (> 3 seconds)",
+          "Poor Google PageSpeed / Failed Core Web Vitals",
+          "High Server Downtime / 504 Gateway Timeouts",
+          "Slow Checkout / High Cart Abandonment",
+          "SSL / Mixed Content Security Warnings"
+        ],
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-vip-event-rsvp",
+    "title": "VIP Event RSVP & Guest Registration",
+    "category": "Events & Guestlist",
+    "description": "Exclusive guest registration and accreditation form for private brand galas, exhibition VIP nights, and launches.",
+    "submitText": "Confirm VIP Reservation",
+    "successMessage": "VIP reservation confirmed! Your digital admission pass and QR credentials have been queued.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "guestName",
+        "label": "Full Legal Name",
+        "type": "text",
+        "placeholder": "Syed Al-Mansoor",
+        "required": true
+      },
+      {
+        "id": "guestEmail",
+        "label": "Executive Email Address",
+        "type": "email",
+        "placeholder": "mansoor@capital.com",
+        "required": true
+      },
+      {
+        "id": "organization",
+        "label": "Organization & Designation",
+        "type": "text",
+        "placeholder": "Managing Partner, Apex Ventures",
+        "required": true
+      },
+      {
+        "id": "guestPhone",
+        "label": "Mobile / WhatsApp (for Entry Code)",
+        "type": "tel",
+        "placeholder": "+880 1711-000000",
+        "required": true
+      },
+      {
+        "id": "plusOneCount",
+        "label": "Additional Accompanying Guests",
+        "type": "select",
+        "options": [
+          "Attending Solo (0 Guests)",
+          "+1 Accompanying Guest",
+          "+2 VIP Delegation Members"
+        ],
+        "required": true
+      },
+      {
+        "id": "dietaryPreferences",
+        "label": "Dietary Preferences & Special Requests",
+        "type": "select",
+        "options": [
+          "Standard Gourmet Course",
+          "Halal Only",
+          "Vegetarian / Vegan Course",
+          "Gluten-Free Only"
+        ],
+        "required": false
+      }
+    ]
+  },
+  {
+    "id": "tpl-general-inquiry-whatsapp",
+    "title": "General Contact & Direct WhatsApp Callback",
+    "category": "General Contact",
+    "description": "Rapid-response general contact form with preferred callback scheduling and direct WhatsApp connectivity.",
+    "submitText": "Send Rapid Inquiry",
+    "successMessage": "Inquiry received. A direct response or WhatsApp message will be sent shortly.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "fullName",
+        "label": "Your Name",
+        "type": "text",
+        "placeholder": "Rashid Khan",
+        "required": true
+      },
+      {
+        "id": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "rashid@email.com",
+        "required": true
+      },
+      {
+        "id": "whatsappNumber",
+        "label": "WhatsApp Number with Country Code",
+        "type": "tel",
+        "placeholder": "+880 1838-070468",
+        "required": true
+      },
+      {
+        "id": "preferredMethod",
+        "label": "Preferred Contact Method",
+        "type": "radio",
+        "options": [
+          "WhatsApp Instant Message",
+          "Direct Phone Call",
+          "Official Corporate Email"
+        ],
+        "required": true
+      },
+      {
+        "id": "inquiryDetails",
+        "label": "How can we help your business today?",
+        "type": "textarea",
+        "placeholder": "Share a brief summary of your inquiry or question...",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-talent-acquisition",
+    "title": "Talent Acquisition / Creative Career Application",
+    "category": "Careers & Hiring",
+    "description": "Application portal for elite designers, frontend engineers, 3D animators, and cinematographers.",
+    "submitText": "Submit Career Application",
+    "successMessage": "Application logged. Our talent direction team will review your portfolio against active openings.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "candidateName",
+        "label": "Candidate Full Name",
+        "type": "text",
+        "placeholder": "Farhan Kabir",
+        "required": true
+      },
+      {
+        "id": "candidateEmail",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "farhan@portfolio.me",
+        "required": true
+      },
+      {
+        "id": "disciplineApplied",
+        "label": "Discipline Applied For",
+        "type": "select",
+        "options": [
+          "Senior UI/UX & Design Systems Architect",
+          "Full-Stack Next.js / TypeScript Engineer",
+          "Commercial Cinematographer & Colorist",
+          "3D Spatial & Exhibition Stall Designer",
+          "Growth Marketing & Paid Media Strategist"
+        ],
+        "required": true
+      },
+      {
+        "id": "portfolioUrl",
+        "label": "Online Portfolio / GitHub / Behance URL",
+        "type": "url",
+        "placeholder": "https://behance.net/farhan",
+        "required": true
+      },
+      {
+        "id": "experienceYears",
+        "label": "Years of Professional Experience",
+        "type": "select",
+        "options": [
+          "1 - 3 Years (Junior / Mid)",
+          "3 - 6 Years (Senior)",
+          "6+ Years (Lead / Principal)"
+        ],
+        "required": true
+      },
+      {
+        "id": "expectedCompensation",
+        "label": "Expected Monthly Compensation / Rate",
+        "type": "text",
+        "placeholder": "e.g. ৳80,000 - ৳120,000 / month or $25/hr",
+        "required": true
+      },
+      {
+        "id": "coverNote",
+        "label": "Why do you want to collaborate with Md. Shakibur Rahaman?",
+        "type": "textarea",
+        "placeholder": "Highlight your top 3 proudest creative or technical accomplishments...",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-partnership-sponsorship",
+    "title": "Strategic Media Partnership & Sponsorship Inquiry",
+    "category": "Partnerships",
+    "description": "Collaboration proposal intake for technology sponsors, media brands, and academic conferences.",
+    "submitText": "Propose Strategic Partnership",
+    "successMessage": "Partnership inquiry recorded. Our executive board will review proposal synergy.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "partnerOrganization",
+        "label": "Partner Entity / Organization",
+        "type": "text",
+        "placeholder": "e.g. Adobe Education / TechFest",
+        "required": true
+      },
+      {
+        "id": "partnerEmail",
+        "label": "Partnership Officer Email",
+        "type": "email",
+        "placeholder": "alliances@partner.com",
+        "required": true
+      },
+      {
+        "id": "partnershipType",
+        "label": "Nature of Proposed Partnership",
+        "type": "select",
+        "options": [
+          "Keynote Speaker / Jury Panellist Invitation",
+          "Media Sponsorship / Content Co-Production",
+          "Software / Hardware Tooling Sponsorship",
+          "Academic Workshop / Masterclass Collaboration"
+        ],
+        "required": true
+      },
+      {
+        "id": "audienceSize",
+        "label": "Anticipated Audience Reach / Attendees",
+        "type": "text",
+        "placeholder": "e.g. 5,000 attendees, 50,000 digital reach",
+        "required": true
+      },
+      {
+        "id": "proposalDeckUrl",
+        "label": "Partnership Deck URL (Optional)",
+        "type": "url",
+        "placeholder": "https://drive.google.com/...",
+        "required": false
+      },
+      {
+        "id": "valueExchange",
+        "label": "Mutual Value Proposition",
+        "type": "textarea",
+        "placeholder": "Outline how this collaboration brings mutual commercial or creative prestige...",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-competitor-analysis-survey",
+    "title": "Brand Discovery & Competitor Analysis Survey",
+    "category": "Strategy & Research",
+    "description": "Pre-engagement discovery survey profiling customer pain points, perceived market weaknesses, and moat opportunities.",
+    "submitText": "Submit Discovery Survey",
+    "successMessage": "Discovery survey data compiled. This will form the backbone of your strategic blueprint.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "brandName",
+        "label": "Brand Name",
+        "type": "text",
+        "placeholder": "Prestige VIP Club",
+        "required": true
+      },
+      {
+        "id": "executiveContact",
+        "label": "Executive Email",
+        "type": "email",
+        "placeholder": "founder@prestige.com",
+        "required": true
+      },
+      {
+        "id": "coreValueProp",
+        "label": "What is your single most potent value proposition?",
+        "type": "textarea",
+        "placeholder": "Why do customers choose you over anyone else in the market?",
+        "required": true
+      },
+      {
+        "id": "mainVulnerabilities",
+        "label": "What is the biggest threat or vulnerability you face today?",
+        "type": "textarea",
+        "placeholder": "e.g. Price undercutting, commoditization, outdated digital presence...",
+        "required": true
+      },
+      {
+        "id": "topThreeCompetitors",
+        "label": "Top 3 Competitors & What They Do Well",
+        "type": "textarea",
+        "placeholder": "List competitors and analyze their perceived strengths...",
+        "required": true
+      },
+      {
+        "id": "targetMarketShare",
+        "label": "Desired Market Share Horizon (12-24 Months)",
+        "type": "select",
+        "options": [
+          "Dominant #1 Market Leader",
+          "Top 3 Premium Tier Choice",
+          "High-Margin Boutique Specialist"
+        ],
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-bug-feature-ticket",
+    "title": "Software Bug Report & Feature Request Ticket",
+    "category": "Support & QA",
+    "description": "Rigorous engineering intake for deployed client portals, reporting unexpected behaviors or new feature milestones.",
+    "submitText": "File Engineering Ticket",
+    "successMessage": "Ticket filed. Our development team has assigned a tracking ID to this issue.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "reporterName",
+        "label": "Reported By",
+        "type": "text",
+        "placeholder": "Sara Khan",
+        "required": true
+      },
+      {
+        "id": "reporterEmail",
+        "label": "Notification Email",
+        "type": "email",
+        "placeholder": "sara@client.com",
+        "required": true
+      },
+      {
+        "id": "ticketType",
+        "label": "Ticket Classification",
+        "type": "select",
+        "options": [
+          "Critical Bug (Blocks Business Operations)",
+          "Standard Bug (Visual / Non-Blocking UI Glitch)",
+          "Feature Request (New Module / Integration)",
+          "Content / Asset Update Request"
+        ],
+        "required": true
+      },
+      {
+        "id": "affectedUrl",
+        "label": "URL / Page Where Issue Occurred",
+        "type": "url",
+        "placeholder": "https://www.hotelsarinadhaka.com/checkout",
+        "required": true
+      },
+      {
+        "id": "deviceEnvironment",
+        "label": "Device, OS & Browser Details",
+        "type": "text",
+        "placeholder": "iPhone 15 Pro, iOS 18, Safari Mobile",
+        "required": true
+      },
+      {
+        "id": "reproductionSteps",
+        "label": "Steps to Reproduce / Expected vs Actual Behavior",
+        "type": "textarea",
+        "placeholder": "1. Clicked Book Now\n2. Selected Deluxe Room\n3. Observed payment modal timeout...",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "tpl-investor-pitch-advisory",
+    "title": "Investor Pitch Deck & Corporate Advisory Request",
+    "category": "Corporate Advisory",
+    "description": "Confidential intake for startups seeking pitch deck architecture, visual storytelling, and valuation presentation design.",
+    "submitText": "Request Advisory Review",
+    "successMessage": "Confidential pitch request received. An NDA and review schedule will be issued.",
+    "isTemplate": true,
+    "isActive": true,
+    "fields": [
+      {
+        "id": "startupName",
+        "label": "Venture / Startup Name",
+        "type": "text",
+        "placeholder": "NovaPulse AI Systems",
+        "required": true
+      },
+      {
+        "id": "founderEmail",
+        "label": "Founder / CEO Email",
+        "type": "email",
+        "placeholder": "founder@novapulse.ai",
+        "required": true
+      },
+      {
+        "id": "fundraisingRound",
+        "label": "Current Fundraising Stage",
+        "type": "select",
+        "options": [
+          "Pre-Seed ($100k - $500k)",
+          "Seed Round ($500k - $2M)",
+          "Series A ($2M - $10M)",
+          "Bridge / Strategic Growth Round"
+        ],
+        "required": true
+      },
+      {
+        "id": "currentTraction",
+        "label": "Current Traction / ARR / Growth Metrics",
+        "type": "text",
+        "placeholder": "e.g. $25k MRR, 15% MoM growth, 4 enterprise pilots",
+        "required": true
+      },
+      {
+        "id": "existingDeckUrl",
+        "label": "Confidential Pitch Deck Link (DocSend / Google Slides)",
+        "type": "url",
+        "placeholder": "https://docsend.com/view/...",
+        "required": false
+      },
+      {
+        "id": "advisoryNeeds",
+        "label": "Advisory Focus & Design Requirements",
+        "type": "textarea",
+        "placeholder": "Do you need narrative restructuring, financial slide design, or complete 15-slide investor visual architecture?",
+        "required": true
+      }
+    ]
+  }
+]

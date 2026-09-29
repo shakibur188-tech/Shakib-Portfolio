@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Intake & Strategic Form | Md. Shakibur Rahaman</title>
+  <meta name="description" content="Official client briefing, consultation intake, and project scoping form directed by Md. Shakibur Rahaman.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#70805D',
+              forest: '#2A3B27',
+              slate: '#55738D',
+              mist: '#96A7B6',
+              stone: '#CBC8C4'
+            },
+            canvas: '#F8F9F6'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./styles.css">
+
+  <style>
+    .form-field-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #1C2B1B;
+      margin-bottom: 6px;
+    }
+    .form-field-label .required-star {
+      color: #EF4444;
+      margin-left: 2px;
+    }
+    .form-field-input {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background-color: #F8F9F6;
+      border: 1px solid rgba(112, 128, 93, 0.25);
+      color: #1C2B1B;
+      font-size: 14px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: all 0.2s ease;
+      outline: none;
+    }
+    .form-field-input:focus {
+      border-color: #70805D;
+      background-color: #FFFFFF;
+      box-shadow: 0 0 0 4px rgba(112, 128, 93, 0.12);
+    }
+    .checkbox-pill-label, .radio-pill-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-radius: 10px;
+      background: #F8F9F6;
+      border: 1px solid rgba(112, 128, 93, 0.22);
+      font-size: 13px;
+      font-weight: 600;
+      color: #2A3B27;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+    .checkbox-pill-label:hover, .radio-pill-label:hover {
+      border-color: #70805D;
+      background: #FFFFFF;
+    }
+    .checkbox-pill-input:checked + span, .radio-pill-input:checked + span {
+      color: #70805D;
+      font-weight: 700;
+    }
+    .checkbox-pill-input:checked ~ .checkbox-pill-box, .radio-pill-input:checked ~ .radio-pill-box {
+      border-color: #70805D;
+      background-color: #70805D;
+    }
+    .form-submit-btn {
+      background: linear-gradient(135deg, #70805D 0%, #2A3B27 100%);
+      color: #FFFFFF;
+      font-weight: 700;
+      border-radius: 14px;
+      padding: 14px 28px;
+      box-shadow: 0 10px 25px -5px rgba(112, 128, 93, 0.4);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .form-submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 32px -6px rgba(112, 128, 93, 0.5);
+    }
+  </style>
+</head>
+<body class="bg-[#F8F9F6] text-[#1C2B1B] font-sans antialiased selection:bg-[#70805D] selection:text-white relative overflow-x-hidden min-h-screen flex flex-col justify-between">
+
+  <!-- Ambient Light Background Mesh & Canvas -->
+  <div class="ambient-mesh-glow"></div>
+  <canvas id="ambientCanvas"></canvas>
+  <div class="ambient-vignette"></div>
+
+  <!-- Header Navigation -->
+  <header class="relative z-20 border-b border-[#70805D]/15 bg-white/90 backdrop-blur-xl">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-xl bg-[#70805D] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#70805D]/25">
+          SR
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-[#1C2B1B] tracking-tight text-base group-hover:text-[#70805D] transition-colors">Md. Shakibur Rahaman</span>
+          <span class="text-[10px] text-[#70805D] font-bold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
+        </div>
+      </a>
+
+      <div class="flex items-center gap-4">
+        <a href="/" class="text-xs font-bold text-[#4D614A] hover:text-[#70805D] flex items-center gap-1.5 transition-colors">
+          <i class="fa-solid fa-arrow-left text-[11px]"></i>
+          <span>Return to Website</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="relative z-10 flex-1 max-w-3xl mx-auto w-full px-4 sm:px-6 py-12">
+    
+    <!-- Loading State Skeleton -->
+    <div id="formLoadingSkeleton" class="bg-white border border-[#70805D]/20 rounded-3xl p-8 sm:p-12 shadow-xl animate-pulse space-y-6">
+      <div class="w-24 h-6 bg-gray-200 rounded-full"></div>
+      <div class="w-3/4 h-8 bg-gray-200 rounded-lg"></div>
+      <div class="w-full h-4 bg-gray-100 rounded"></div>
+      <div class="space-y-4 pt-6">
+        <div class="w-full h-12 bg-gray-100 rounded-xl"></div>
+        <div class="w-full h-12 bg-gray-100 rounded-xl"></div>
+        <div class="w-full h-24 bg-gray-100 rounded-xl"></div>
+      </div>
+    </div>
+
+    <!-- Error State Container (Hidden by default) -->
+    <div id="formErrorContainer" class="hidden bg-white border border-red-200 rounded-3xl p-8 text-center shadow-xl">
+      <div class="w-14 h-14 mx-auto rounded-2xl bg-red-50 text-red-500 flex items-center justify-center text-2xl mb-4">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+      <h2 class="text-xl font-bold text-[#1C2B1B] mb-2" id="formErrorTitle">Form Unavailable</h2>
+      <p class="text-sm text-[#55738D] mb-6" id="formErrorMessage">This form does not exist, is set to inactive, or has expired.</p>
+      <a href="/" class="btn-aesthetic-primary inline-flex">Return to Homepage</a>
+    </div>
+
+    <!-- Dynamic Form Card Container -->
+    <div id="formCardContainer" class="hidden bg-white border border-[#70805D]/20 rounded-3xl p-6 sm:p-12 shadow-2xl transition-all">
+      
+      <!-- Form Header -->
+      <div class="mb-8 pb-6 border-b border-[#70805D]/15">
+        <div class="flex items-center gap-2 mb-3">
+          <span id="formCategoryBadge" class="text-[10.5px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-[#70805D]/10 text-[#70805D] border border-[#70805D]/25">
+            General
+          </span>
+          <span class="text-[11px] text-[#55738D] font-semibold flex items-center gap-1">
+            <i class="fa-solid fa-shield-halved text-[10px] text-[#70805D]"></i>
+            <span>Encrypted Response</span>
+          </span>
+        </div>
+
+        <h1 id="formMainTitle" class="text-2xl sm:text-4xl font-extrabold text-[#1C2B1B] tracking-tight leading-tight mb-2">
+          Project Briefing Form
+        </h1>
+        <p id="formMainDescription" class="text-xs sm:text-sm text-[#4D614A] leading-relaxed">
+          Please fill out the specifications below so we can prepare an accurate proposal and timeline.
+        </p>
+      </div>
+
+      <!-- Interactive Form Element -->
+      <form id="publicDynamicForm" class="space-y-6">
+        <!-- Anti-Spam Honeypot (Hidden from humans) -->
+        <div style="display:none !important;" aria-hidden="true">
+          <label for="hp_field">Do not fill this</label>
+          <input type="text" name="hp_field" id="hp_field" tabindex="-1" autocomplete="off">
+        </div>
+
+        <!-- Dynamic Fields Target -->
+        <div id="fieldsContainer" class="space-y-6"></div>
+
+        <!-- Form Status / Validation Alert Box -->
+        <div id="formSubmitAlert" class="hidden p-4 rounded-xl text-xs font-semibold"></div>
+
+        <!-- Submit Button Container -->
+        <div class="pt-4">
+          <button type="submit" id="submitBtn" class="form-submit-btn w-full flex items-center justify-center gap-2 text-sm font-bold">
+            <span id="submitBtnLabel">Submit Form</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+
+        <div class="text-center pt-2">
+          <p class="text-[11.5px] text-[#55738D]">
+            <i class="fa-solid fa-lock text-[10px] text-[#70805D]"></i>
+            Your information is stored strictly for project communication and never shared.
+          </p>
+        </div>
+      </form>
+
+      <!-- Success Confirmation Card (Replaces form upon completion) -->
+      <div id="formSuccessCard" class="hidden text-center py-10 space-y-5">
+        <div class="w-16 h-16 rounded-full bg-[#70805D]/15 text-[#70805D] border-2 border-[#70805D] flex items-center justify-center text-3xl mx-auto animate-bounce shadow-md">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1C2B1B]">Submission Received!</h2>
+        <p id="successCardMessage" class="text-sm text-[#4D614A] max-w-md mx-auto leading-relaxed">
+          Thank you for providing your project details. Md. Shakibur Rahaman will review and respond promptly.
+        </p>
+        <div class="pt-4 flex flex-wrap items-center justify-center gap-3">
+          <a href="/" class="btn-aesthetic-primary text-xs">Return to Public Website</a>
+          <button id="submitAnotherBtn" class="px-5 py-2.5 rounded-full border border-[#70805D]/30 text-xs font-bold text-[#2A3B27] bg-[#F8F9F6] hover:bg-white transition-all">
+            Submit Another Response
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 py-8 border-t border-[#70805D]/15 bg-white/70 text-center text-xs text-[#55738D]">
+    <div class="max-w-5xl mx-auto px-4">
+      <div>© 2026 Md. Shakibur Rahaman • Enterprise Creative Direction &amp; Digital Architecture</div>
+      <div class="mt-1 text-[11px] text-[#70805D] font-bold">256-Bit Encrypted &bull; Automated CMS Delivery</div>
+    </div>
+  </footer>
+
+  <!-- Form Engine Client Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initFormPage();
+    });
+
+    let currentFormSchema = null;
+
+    async function initFormPage() {
+      const urlParams = new URLSearchParams(window.location.search);
+      let formId = urlParams.get('id');
+
+      // Check pathname fallback (e.g. /form/tpl-executive-consultation)
+      if (!formId) {
+        const parts = window.location.pathname.split('/').filter(Boolean);
+        if (parts.length >= 2 && parts[0] === 'form') {
+          formId = parts[1];
+        }
+      }
+
+      // Default fallback if no ID specified: Executive Consultation
+      if (!formId) {
+        formId = 'tpl-executive-consultation';
+      }
+
+      try {
+        const res = await fetch(`/api/forms/${encodeURIComponent(formId)}`);
+        const data = await res.json();
+
+        if (res.ok && data.success && data.form) {
+          currentFormSchema = data.form;
+          renderForm(currentFormSchema);
+        } else {
+          showFormError(data.error || 'Form could not be retrieved.');
+        }
+      } catch (err) {
+        showFormError('Network connection error. Please refresh and try again.');
+      }
+    }
+
+    function showFormError(msg) {
+      document.getElementById('formLoadingSkeleton').classList.add('hidden');
+      document.getElementById('formCardContainer').classList.add('hidden');
+      document.getElementById('formErrorMessage').textContent = msg;
+      document.getElementById('formErrorContainer').classList.remove('hidden');
+    }
+
+    function renderForm(schema) {
+      document.getElementById('formLoadingSkeleton').classList.add('hidden');
+      document.getElementById('formErrorContainer').classList.add('hidden');
+      document.getElementById('formCardContainer').classList.remove('hidden');
+
+      // Title & Meta
+      document.title = `${schema.title} | Md. Shakibur Rahaman`;
+      document.getElementById('formMainTitle').textContent = schema.title;
+      document.getElementById('formMainDescription').textContent = schema.description || 'Please complete all required fields below.';
+      document.getElementById('formCategoryBadge').textContent = schema.category || 'General';
+      document.getElementById('submitBtnLabel').textContent = schema.submitText || 'Submit Form';
+
+      // Render Fields
+      const container = document.getElementById('fieldsContainer');
+      container.innerHTML = '';
+
+      (schema.fields || []).forEach((f, idx) => {
+        const fieldWrapper = document.createElement('div');
+        fieldWrapper.className = 'form-group space-y-1.5';
+
+        const labelEl = document.createElement('label');
+        labelEl.className = 'form-field-label';
+        labelEl.setAttribute('for', `f_${f.id}`);
+        labelEl.innerHTML = `<span>${escapeHtml(f.label)}</span>${f.required ? '<span class="required-star">*</span>' : ''}`;
+        fieldWrapper.appendChild(labelEl);
+
+        if (f.helpText) {
+          const help = document.createElement('p');
+          help.className = 'text-[11.5px] text-[#55738D] mb-1';
+          help.textContent = f.helpText;
+          fieldWrapper.appendChild(help);
+        }
+
+        // Render based on field type
+        switch (f.type) {
+          case 'textarea': {
+            const textarea = document.createElement('textarea');
+            textarea.id = `f_${f.id}`;
+            textarea.name = f.id;
+            textarea.rows = 4;
+            textarea.className = 'form-field-input resize-y';
+            textarea.placeholder = f.placeholder || '';
+            if (f.required) textarea.required = true;
+            fieldWrapper.appendChild(textarea);
+            break;
+          }
+
+          case 'select': {
+            const select = document.createElement('select');
+            select.id = `f_${f.id}`;
+            select.name = f.id;
+            select.className = 'form-field-input';
+            if (f.required) select.required = true;
+
+            const defaultOpt = document.createElement('option');
+            defaultOpt.value = '';
+            defaultOpt.textContent = f.placeholder || 'Select an option...';
+            select.appendChild(defaultOpt);
+
+            (f.options || []).forEach(opt => {
+              const optionEl = document.createElement('option');
+              optionEl.value = opt;
+              optionEl.textContent = opt;
+              select.appendChild(optionEl);
+            });
+            fieldWrapper.appendChild(select);
+            break;
+          }
+
+          case 'checkbox': {
+            const optsContainer = document.createElement('div');
+            optsContainer.className = 'flex flex-wrap gap-2 pt-1';
+            (f.options || []).forEach((opt, oIdx) => {
+              const lbl = document.createElement('label');
+              lbl.className = 'checkbox-pill-label';
+              lbl.innerHTML = `
+                <input type="checkbox" name="${f.id}" value="${escapeHtml(opt)}" class="checkbox-pill-input rounded text-[#70805D] focus:ring-[#70805D] border-gray-300">
+                <span>${escapeHtml(opt)}</span>
+              `;
+              optsContainer.appendChild(lbl);
+            });
+            fieldWrapper.appendChild(optsContainer);
+            break;
+          }
+
+          case 'radio': {
+            const optsContainer = document.createElement('div');
+            optsContainer.className = 'flex flex-wrap gap-2 pt-1';
+            (f.options || []).forEach((opt, oIdx) => {
+              const lbl = document.createElement('label');
+              lbl.className = 'radio-pill-label';
+              lbl.innerHTML = `
+                <input type="radio" name="${f.id}" value="${escapeHtml(opt)}" ${f.required && oIdx === 0 ? 'required' : ''} class="radio-pill-input text-[#70805D] focus:ring-[#70805D] border-gray-300">
+                <span>${escapeHtml(opt)}</span>
+              `;
+              optsContainer.appendChild(lbl);
+            });
+            fieldWrapper.appendChild(optsContainer);
+            break;
+          }
+
+          default: {
+            // text, email, tel, number, url, date
+            const input = document.createElement('input');
+            input.id = `f_${f.id}`;
+            input.name = f.id;
+            input.type = f.type || 'text';
+            input.className = 'form-field-input';
+            input.placeholder = f.placeholder || '';
+            if (f.required) input.required = true;
+            fieldWrapper.appendChild(input);
+            break;
+          }
+        }
+
+        container.appendChild(fieldWrapper);
+      });
+
+      // Attach Submit Handler
+      const formEl = document.getElementById('publicDynamicForm');
+      formEl.onsubmit = handleFormSubmit;
+
+      document.getElementById('submitAnotherBtn').onclick = () => {
+        formEl.reset();
+        document.getElementById('formSuccessCard').classList.add('hidden');
+        document.getElementById('publicDynamicForm').classList.remove('hidden');
+      };
+    }
+
+    async function handleFormSubmit(e) {
+      e.preventDefault();
+      if (!currentFormSchema) return;
+
+      const submitBtn = document.getElementById('submitBtn');
+      const alertBox = document.getElementById('formSubmitAlert');
+      alertBox.classList.add('hidden');
+      alertBox.className = 'hidden p-4 rounded-xl text-xs font-semibold';
+
+      // Gather form inputs
+      const formEl = document.getElementById('publicDynamicForm');
+      const formData = new FormData(formEl);
+      const payload = {};
+
+      for (const [key, value] of formData.entries()) {
+        if (payload[key]) {
+          if (!Array.isArray(payload[key])) {
+            payload[key] = [payload[key]];
+          }
+          payload[key].push(value);
+        } else {
+          payload[key] = value;
+        }
+      }
+
+      // Check Honeypot
+      if (payload.hp_field) {
+        showSuccess(currentFormSchema.successMessage);
+        return;
+      }
+
+      // Client validation for required checkboxes
+      for (const f of currentFormSchema.fields || []) {
+        if (f.type === 'checkbox' && f.required) {
+          const vals = payload[f.id];
+          if (!vals || (Array.isArray(vals) && vals.length === 0)) {
+            alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-red-50 text-red-700 border border-red-200 block';
+            alertBox.textContent = `Please select at least one option for "${f.label}".`;
+            alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            return;
+          }
+        }
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <i class="fa-solid fa-circle-notch fa-spin text-sm"></i>
+        <span>Encrypting & Submitting...</span>
+      `;
+
+      try {
+        const res = await fetch(`/api/forms/${encodeURIComponent(currentFormSchema.id)}/submit`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+          showSuccess(data.message, data.redirectUrl);
+        } else {
+          alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-red-50 text-red-700 border border-red-200 block';
+          alertBox.textContent = data.error || 'Failed to submit form. Please check required fields.';
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `<span>${currentFormSchema.submitText || 'Submit Form'}</span><i class="fa-solid fa-arrow-right text-xs"></i>`;
+        }
+      } catch (err) {
+        alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-red-50 text-red-700 border border-red-200 block';
+        alertBox.textContent = 'Network error while submitting. Please check your connection and retry.';
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `<span>${currentFormSchema.submitText || 'Submit Form'}</span><i class="fa-solid fa-arrow-right text-xs"></i>`;
+      }
+    }
+
+    function showSuccess(msg, redirectUrl) {
+      document.getElementById('publicDynamicForm').classList.add('hidden');
+      document.getElementById('successCardMessage').textContent = msg || 'Your submission has been recorded.';
+      document.getElementById('formSuccessCard').classList.remove('hidden');
+
+      if (redirectUrl && redirectUrl.startsWith('http')) {
+        setTimeout(() => {
+          window.location.href = redirectUrl;
+        }, 2500);
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+  </script>
+</body>
+</html>

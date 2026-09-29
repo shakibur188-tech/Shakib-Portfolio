@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services &amp; Strategic Capabilities | Md. Shakibur Rahaman</title>
+  <meta name="description" content="Explore all 9 core service disciplines directed by Md. Shakibur Rahaman: Branding, Graphics Design, Web Development, Social Media Marketing, Commercial Videography, Event Activation, Google Ads, SEO/AEO, and Strategic PR.">
+  <link rel="canonical" href="http://localhost:5500/services.html">
+  
+  <!-- Plus Jakarta Sans Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN & DopelyColors Palette Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#70805D',
+              forest: '#2A3B27',
+              slate: '#55738D',
+              mist: '#96A7B6',
+              stone: '#CBC8C4'
+            },
+            canvas: '#F8F9F6'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Unified Aesthetic Stylesheet -->
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bg-[#F8F9F6] text-[#1C2B1B] font-sans antialiased selection:bg-[#70805D] selection:text-white relative overflow-x-hidden">
+
+  <!-- 0. Top Scroll Progress Bar (Scroll-time Animation) -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- 1. Ambient Background Canvas, Animated Mesh & Vignette -->
+  <div class="ambient-mesh-glow"></div>
+  <canvas id="ambientCanvas"></canvas>
+  <div class="ambient-vignette"></div>
+
+  <!-- 2. FIXED NAVBAR WITH SERVICES HOVER DROPDOWN -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#F8F9F6]/90 backdrop-blur-2xl border-b border-[#70805D]/15 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo / Monogram -->
+      <a href="/" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-xl bg-[#70805D] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#70805D]/25">
+          SR
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-[#1C2B1B] tracking-tight text-base sm:text-lg group-hover:text-[#70805D] transition-colors">Md. Shakibur Rahaman</span>
+          <span class="text-[10.5px] text-[#70805D] font-bold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
+        </div>
+      </a>
+
+      <!-- Centered Floating Pill Navigation Menu with Services Dropdown -->
+      <nav class="hidden lg:flex items-center gap-6 px-6 py-2.5 rounded-full bg-white/90 border border-[#70805D]/20 text-xs font-semibold text-[#4D614A] backdrop-blur-md shadow-sm">
+        <a href="/" class="desktop-nav-link hover:text-[#70805D] transition-colors">Home</a>
+        <a href="/#about" class="desktop-nav-link hover:text-[#70805D] transition-colors">About</a>
+        
+        <!-- SERVICES MENU ITEM WITH HOVER SUB-MENU -->
+        <div class="services-menu-item relative group">
+          <a href="/services.html" class="desktop-nav-link text-[#70805D] font-bold flex items-center gap-1.5 py-1">
+            <span>Services</span>
+            <i class="fa-solid fa-chevron-down text-[9px] text-[#70805D] transition-transform duration-200 group-hover:rotate-180"></i>
+          </a>
+          
+          <!-- 9 Services Hover Sub-Menu Panel -->
+          <div class="services-dropdown">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-[#70805D]/15">
+              <span class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-layer-group text-[#70805D]"></i>
+                <span>Core Capabilities (9 Disciplines)</span>
+              </span>
+              <span class="text-[11px] font-bold text-[#70805D]">Jump to Pillar ↓</span>
+            </div>
+
+            <div class="services-dropdown-grid">
+              <a href="#branding" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-fingerprint"></i></div>
+                <div>
+                  <div class="service-sub-title">01 Branding</div>
+                  <div class="service-sub-desc">Brand strategy &amp; books</div>
+                </div>
+              </a>
+              <a href="#graphics-design" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-bezier-curve"></i></div>
+                <div>
+                  <div class="service-sub-title">02 Graphics Design</div>
+                  <div class="service-sub-desc">Packaging &amp; UI/UX</div>
+                </div>
+              </a>
+              <a href="#web-development" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-code"></i></div>
+                <div>
+                  <div class="service-sub-title">03 Web Development</div>
+                  <div class="service-sub-desc">Jamstack &amp; headless apps</div>
+                </div>
+              </a>
+              <a href="#social-media-marketing" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-hashtag"></i></div>
+                <div>
+                  <div class="service-sub-title">04 Social Media</div>
+                  <div class="service-sub-desc">Viral reels &amp; Meta ads</div>
+                </div>
+              </a>
+              <a href="#photoshoot-videography" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-video"></i></div>
+                <div>
+                  <div class="service-sub-title">05 Video &amp; Photo</div>
+                  <div class="service-sub-desc">Cinematic commercial TVCs</div>
+                </div>
+              </a>
+              <a href="#event-activation" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-cubes"></i></div>
+                <div>
+                  <div class="service-sub-title">06 Event Activation</div>
+                  <div class="service-sub-desc">3D exhibition stalls</div>
+                </div>
+              </a>
+              <a href="#google-ads" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <div>
+                  <div class="service-sub-title">07 Google Ads</div>
+                  <div class="service-sub-desc">High-intent SEM funnels</div>
+                </div>
+              </a>
+              <a href="#seo-aeo" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                <div>
+                  <div class="service-sub-title">08 SEO &amp; AEO</div>
+                  <div class="service-sub-desc">AI answer optimization</div>
+                </div>
+              </a>
+              <a href="#public-relations" class="service-sub-item">
+                <div class="service-sub-icon"><i class="fa-solid fa-newspaper"></i></div>
+                <div>
+                  <div class="service-sub-title">09 PR &amp; Media</div>
+                  <div class="service-sub-desc">Tier-1 press releases</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/#projects" class="desktop-nav-link hover:text-[#70805D] transition-colors">Projects</a>
+        <a href="/#experience" class="desktop-nav-link hover:text-[#70805D] transition-colors">Experience</a>
+        <a href="#inquiry" class="desktop-nav-link hover:text-[#70805D] transition-colors">Consultation</a>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center gap-3">
+        <a href="#inquiry" class="nav-cta-btn btn-aesthetic-primary text-xs hidden md:inline-flex items-center gap-2">
+          <span>Book Consultation</span>
+          <i class="fa-solid fa-arrow-down text-[10px]"></i>
+        </a>
+        <button id="mobileMenuToggle" aria-label="Toggle Navigation" class="lg:hidden w-10 h-10 rounded-xl bg-white border border-[#70805D]/25 flex items-center justify-center text-[#2A3B27] shadow-sm">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. HERO DIRECTORY HEADER (Light Theme) -->
+  <section class="relative pt-36 pb-16 md:pt-44 md:pb-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      
+      <div class="section-tag justify-center mb-6">
+        <span class="pulse-dot-olive"></span>
+        <span>SERVICES &amp; CAPABILITIES DIRECTORY</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-[#1C2B1B] tracking-tight leading-[1.08] mb-6 reveal-on-scroll">
+        360° Creative Direction &amp; <br>
+        <span class="olive-gradient-text">Full-Stack Execution</span>
+      </h1>
+
+      <p class="text-sm sm:text-base text-[#4D614A] max-w-3xl mx-auto leading-relaxed mb-10 reveal-on-scroll">
+        All 9 core capabilities consolidated onto one master canvas with alternating layouts, interactive before &amp; after comparison, and end-to-end delivery frameworks.
+      </p>
+
+      <!-- Sticky Quick-Jump Pill Bar -->
+      <div class="sticky top-20 z-40 py-3 bg-[#F8F9F6]/95 backdrop-blur-md border-y border-[#70805D]/15 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 shadow-sm">
+        <div class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar py-1">
+          <a href="#branding" class="filter-btn text-[11px]">01 Branding</a>
+          <a href="#graphics-design" class="filter-btn text-[11px]">02 Graphics</a>
+          <a href="#web-development" class="filter-btn text-[11px]">03 Web Dev</a>
+          <a href="#social-media-marketing" class="filter-btn text-[11px]">04 SMM</a>
+          <a href="#photoshoot-videography" class="filter-btn text-[11px]">05 Video &amp; Photo</a>
+          <a href="#event-activation" class="filter-btn text-[11px]">06 Events</a>
+          <a href="#google-ads" class="filter-btn text-[11px]">07 Google Ads</a>
+          <a href="#seo-aeo" class="filter-btn text-[11px]">08 SEO &amp; AEO</a>
+          <a href="#public-relations" class="filter-btn text-[11px]">09 PR &amp; Media</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       THE 9 COMPREHENSIVE SERVICE PILLAR SECTIONS (DYNAMIC ALTERNATING LAYOUTS)
+       ========================================================================= -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 pb-24">
+
+    <!-- PILLAR 01: BRANDING & BRAND STRATEGY (WITH BEFORE/AFTER SLIDER!) -->
+    <section id="branding" class="scroll-mt-32 pt-10 border-t border-[#70805D]/15">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Content Left -->
+        <div class="lg:col-span-5 space-y-5 reveal-fade-left">
+          <div class="point-badge">PILLAR 01 • STRATEGIC IDENTITY</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C2B1B] tracking-tight">
+            Branding &amp; Brand Strategy
+          </h2>
+          <p class="text-sm text-[#4D614A] leading-relaxed">
+            Forging enduring corporate identities that command premium pricing, communicate clear positioning, and establish untouchable market authority.
+          </p>
+
+          <div class="space-y-2.5 pt-2">
+            <h4 class="text-xs font-bold text-[#70805D] uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-list-check text-[10px]"></i>
+              <span>Core Deliverable Points:</span>
+            </h4>
+            <ul class="space-y-2">
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Brand Positioning Blueprint:</strong> Market wedge analysis, competitor mapping, and value proposition architecture.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Master Brand Book:</strong> Logo lockups, clear space rules, typography scale, and color hierarchy.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Corporate Stationery Suite:</strong> Business cards, letterheads, invoice templates, and packaging assets.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Trademarkable Naming &amp; Voice:</strong> Distinctive verbal identity, tagline matrix, and brand personality guidelines.</span></li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-gray-200">
+            <div class="flex items-center gap-6 text-xs">
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">3.5x</span><div class="text-[10px] text-[#70805D] uppercase font-bold">Perceived Value Lift</div></div>
+              <div class="w-px h-8 bg-gray-300"></div>
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">100%</span><div class="text-[10px] text-[#70805D] uppercase font-bold">Full IP Ownership</div></div>
+              <div class="w-px h-8 bg-gray-300"></div>
+              <div><span class="font-extrabold text-[#1C2B1B] text-base">2-3 Wks</span><div class="text-[10px] text-[#70805D] uppercase font-bold">Sprint Delivery</div></div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="/services/branding.html" class="btn-aesthetic-primary text-xs">
+              <span>View Dedicated Branding Page</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Showcase Right: INTERACTIVE BEFORE & AFTER SLIDER -->
+        <div class="lg:col-span-7 reveal-fade-right">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs text-[#55738D] font-bold px-1">
+              <span class="flex items-center gap-1.5">
+                <i class="fa-solid fa-arrows-left-right text-[#70805D]"></i>
+                <span>Drag Slider: Before vs. After Transformation</span>
+              </span>
+              <span class="text-[11px] text-[#70805D]">Interactive Comparison</span>
+            </div>
+
+            <div class="before-after-container" style="--ba-position: 50%;">
+              <div class="ba-image-layer ba-after-layer">
+                <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=1000&q=80" alt="After: Modern Identity System">
+                <span class="ba-badge ba-badge-after">After: Modern Identity System</span>
+              </div>
+              <div class="ba-image-layer ba-before-layer">
+                <img src="https://images.unsplash.com/photo-1542744094-3a3172720a8a?auto=format&fit=crop&w=1000&q=80" alt="Before: Legacy Outdated Brand">
+                <span class="ba-badge ba-badge-before">Before: Legacy Fragmented Brand</span>
+              </div>
+              <div class="ba-divider">
+                <div class="ba-handle"><i class="fa-solid fa-arrows-left-right"></i></div>
+              </div>
+              <input type="range" min="0" max="100" value="50" class="ba-range-input" aria-label="Before and after comparison slider">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILLAR 02: GRAPHICS DESIGN (ALTERNATING: SHOWCASE ON LEFT!) -->
+    <section id="graphics-design" class="scroll-mt-32 pt-10 border-t border-[#70805D]/15">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Visual Showcase Left -->
+        <div class="lg:col-span-7 order-2 lg:order-1 reveal-fade-left">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="spotlight-card rounded-2xl overflow-hidden bg-white border border-[#70805D]/20 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Packaging Design" class="w-full h-48 sm:h-56 object-cover">
+              <div class="p-3.5 bg-white border-t border-gray-100">
+                <div class="text-[10px] text-[#70805D] uppercase font-bold">Packaging Architecture</div>
+                <div class="text-xs font-extrabold text-[#1C2B1B]">Luxury Box Collateral</div>
+              </div>
+            </div>
+            <div class="spotlight-card rounded-2xl overflow-hidden bg-white border border-[#70805D]/20 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=600&q=80" alt="Visual Identity Systems" class="w-full h-48 sm:h-56 object-cover">
+              <div class="p-3.5 bg-white border-t border-gray-100">
+                <div class="text-[10px] text-[#55738D] uppercase font-bold">Brand Guidelines</div>
+                <div class="text-xs font-extrabold text-[#1C2B1B]">60+ Page Vector Book</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Right -->
+        <div class="lg:col-span-5 order-1 lg:order-2 space-y-5 reveal-fade-right">
+          <div class="point-badge">PILLAR 02 • VISUAL SYSTEMS</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C2B1B] tracking-tight">
+            Graphics Design &amp; Collateral
+          </h2>
+          <p class="text-sm text-[#4D614A] leading-relaxed">
+            Ultra-high fidelity graphic design spanning investor decks, luxury product packaging, print advertising, and multi-channel campaign creative.
+          </p>
+
+          <div class="space-y-2.5 pt-2">
+            <h4 class="text-xs font-bold text-[#70805D] uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-list-check text-[10px]"></i>
+              <span>Core Deliverable Points:</span>
+            </h4>
+            <ul class="space-y-2">
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Luxury Packaging Mockups:</strong> Structural dielines, foils, embossing specs, and CMYK offset production prep.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>High-Stakes Investor Pitch Kits:</strong> 16:9 widescreen keynote decks with bespoke custom infographics.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Multi-Channel Advertising Sets:</strong> High-impact social banners, Google Display GDN ad creative suites.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Editorial &amp; Print Collateral:</strong> Corporate annual reports, brochures, executive stationery, and billboards.</span></li>
+            </ul>
+          </div>
+
+          <div class="pt-2">
+            <a href="/services/graphics-design.html" class="btn-aesthetic-primary text-xs">
+              <span>View Dedicated Graphics Page</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILLAR 03: MODERN WEB ENGINEERING (BROWSER SHOWCASE) -->
+    <section id="web-development" class="scroll-mt-32 pt-10 border-t border-[#70805D]/15">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Content Left -->
+        <div class="lg:col-span-5 space-y-5 reveal-fade-left">
+          <div class="point-badge">PILLAR 03 • MODERN WEB ARCHITECTURE</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C2B1B] tracking-tight">
+            Web Design &amp; Development
+          </h2>
+          <p class="text-sm text-[#4D614A] leading-relaxed">
+            Engineering modern Jamstack websites and full-stack platforms engineered for sub-second latencies, 95+ PageSpeed scores, and conversion-focused architectures.
+          </p>
+
+          <div class="space-y-2.5 pt-2">
+            <h4 class="text-xs font-bold text-[#70805D] uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-list-check text-[10px]"></i>
+              <span>Core Deliverable Points:</span>
+            </h4>
+            <ul class="space-y-2">
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Responsive Corporate Portals:</strong> Mobile-first architecture with fluid animations and strict cross-device QA.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Full-Stack E-Commerce Engines:</strong> Headless Shopify, WooCommerce, and custom multi-currency checkout gateways.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Lightweight Node.js / Jamstack Stack:</strong> 95+ Google PageSpeed benchmarks with instant sub-second TTFB loading.</span></li>
+              <li class="bullet-point-item"><i class="fa-solid fa-check-double bullet-icon"></i><span><strong>Bespoke CMS &amp; Rest API Architecture:</strong> Zero-bloat administrative dashboard for live updates.</span></li>
+            </ul>
+          </div>
+
+          <div class="pt-2">
+            <a href="/services/web-development.html" class="btn-aesthetic-primary text-xs">
+              <span>View Dedicated Web Engineering Page</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Showcase Right -->
+        <div class="lg:col-span-7 reveal-fade-right">
+          <div class="spotlight-card rounded-2xl overflow-hidden bg-white border border-[#70805D]/25 shadow-xl">
+            <div class="browser-header">
+              <div class="browser-dot"></div>
+              <div class="browser-dot"></div>
+              <div class="browser-dot"></div>
+              <div class="browser-url-bar">https://peninsulactg.com (Production Showcase)</div>
+            </div>
+            <div class="relative h-64 sm:h-80 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80" alt="Web Development Architecture" class="w-full h-full object-cover">
+              <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-md p-3 rounded-xl border border-[#70805D]/30 shadow-md flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full border-4 border-[#70805D] flex items-center justify-center font-extrabold text-xs text-[#2A3B27]">99</div>
+                <div>
+                  <div class="text-xs font-bold text-[#1C2B1B]">Performance 99</div>
+                  <div class="text-[10px] text-[#70805D]">Google Core Web Vitals</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTHER PILLARS DIRECT SUMMARY -->
+    <div class="p-8 rounded-2xl bg-white border border-[#70805D]/20 shadow-md text-center space-y-4">
+      <h3 class="text-2xl font-bold text-[#1C2B1B]">Looking for more disciplines?</h3>
+      <p class="text-sm text-[#4D614A] max-w-xl mx-auto">
+        Explore Social Media Marketing, Commercial Videography, Event Activation, Google Ads, SEO &amp; AEO, and Public Relations in dedicated detail.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-2 pt-2">
+        <a href="/services/social-media-marketing.html" class="filter-btn text-xs">04 Social Media</a>
+        <a href="/services/photoshoot-videography.html" class="filter-btn text-xs">05 Video &amp; Photo</a>
+        <a href="/services/event-activation.html" class="filter-btn text-xs">06 3D Events</a>
+        <a href="/services/google-ads.html" class="filter-btn text-xs">07 Google Ads</a>
+        <a href="/services/seo-aeo.html" class="filter-btn text-xs">08 SEO &amp; AEO</a>
+        <a href="/services/public-relations.html" class="filter-btn text-xs">09 Public Relations</a>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="./service-page.js"></script>
+</body>
+</html>

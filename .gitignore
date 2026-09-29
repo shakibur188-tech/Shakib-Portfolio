@@ -2,5 +2,14 @@ node_modules/
 .DS_Store
 Thumbs.db
 *.log
+*.err
 .env
 .system_generated/
+cloudflared.exe
+*.zip
+data/live_tunnel_url.txt
+fix_admin_css.js
+fix_mobile_master.js
+update_navbar_and_about.js
+update_styles_responsive.js
+generate_docs.js
