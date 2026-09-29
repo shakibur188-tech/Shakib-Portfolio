@@ -2,10 +2,9 @@
 # Shakibur Rahaman Portfolio & CMS - Apache / cPanel / LiteSpeed Configuration
 # ==============================================================================
 
-RewriteEngine On
+DirectoryIndex index.html index.php
 
-# Disable directory browsing
-Options -Indexes
+RewriteEngine On
 
 # 1. Route Admin URL directly to admin.html
 RewriteRule ^admin/?$ admin.html [L,QSA]
@@ -14,24 +13,9 @@ RewriteRule ^admin/?$ admin.html [L,QSA]
 RewriteRule ^api/(.*)$ api/index.php [L,QSA]
 RewriteRule ^api$ api/index.php [L,QSA]
 
-# 3. Security: Block direct public browser access to sensitive backend files
-<FilesMatch "^(serve\.ps1|server\.js|test_cms\.js|package\.json|package-lock\.json|\.env|\.git|auth\.json|leads\.json|.*\.bat|.*\.md)$">
-    Order allow,deny
-    Deny from all
-</FilesMatch>
-
-# Block access to data/ folder completely, git, and hidden dot files
+# 3. Block access to backend data store and dot files
 RewriteRule ^data(/.*)?$ - [F,L]
 RewriteRule ^\.git.*$ - [F,L]
-
-# 3.1 Inject Security Headers
-<IfModule mod_headers.c>
-    Header always set X-Content-Type-Options "nosniff"
-    Header always set X-Frame-Options "SAMEORIGIN"
-    Header always set X-XSS-Protection "1; mode=block"
-    Header always set Referrer-Policy "strict-origin-when-cross-origin"
-    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
-</IfModule>
 
 # 4. Correct MIME Types
 <IfModule mod_mime.c>
@@ -44,12 +28,12 @@ RewriteRule ^\.git.*$ - [F,L]
     AddType font/woff2 .woff2
 </IfModule>
 
-# 5. Enable GZIP / Brotli Compression for Ultra-Fast Page Speed
+# 5. Enable GZIP Compression
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
 </IfModule>
 
-# 6. Browser Caching for Performance
+# 6. Browser Caching
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresByType text/html "access plus 0 seconds"
