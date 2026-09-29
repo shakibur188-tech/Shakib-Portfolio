@@ -45,133 +45,69 @@
   <div class="ambient-vignette"></div>
 
   <!-- Header -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#F8F9F6]/90 backdrop-blur-2xl border-b border-[#70805D]/15 transition-all duration-300">
+    <!-- 1. FIXED GLASS NAVBAR (Matching Reference Pill Layout) -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-2xl border-b border-[#E2E8F0] transition-all duration-300 shadow-2xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <a href="/" class="flex items-center gap-3.5 group">
-        <div class="w-10 h-10 rounded-xl bg-[#70805D] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#70805D]/25">
-          SR
+      <!-- Brand Logo -->
+      <a href="../index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#0066FF] to-[#0040C1] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#0066FF]/25 border border-white/20">
+          ✦
         </div>
         <div class="flex flex-col">
-          <span class="font-bold text-[#1C2B1B] tracking-tight text-base sm:text-lg group-hover:text-[#70805D] transition-colors" id="navBrandName">Md. Shakibur Rahaman</span>
-          <span class="text-[10.5px] text-[#70805D] font-bold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
+          <span class="font-extrabold text-[#0B0F19] tracking-tight text-base sm:text-lg group-hover:text-[#0066FF] transition-colors">Md. Shakibur Rahaman</span>
+          <span class="text-[10px] text-[#0066FF] font-extrabold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
         </div>
       </a>
 
-      <!-- Centered Floating Pill Navigation Menu with Services Dropdown -->
-      <nav class="hidden lg:flex items-center gap-6 px-6 py-2.5 rounded-full bg-white/90 border border-[#70805D]/20 text-xs font-semibold text-[#4D614A] backdrop-blur-md shadow-sm">
-        <a href="/" class="desktop-nav-link hover:text-[#70805D] transition-colors">Home</a>
-        <a href="/#about" class="desktop-nav-link hover:text-[#70805D] transition-colors">About</a>
+      <!-- Centered Floating Pill Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-white/95 border border-[#E2E8F0] text-sm font-semibold text-[#334155] backdrop-blur-md shadow-xs">
+        <a href="../index.html" class="hover:text-[#0066FF] transition-colors">Home</a>
+        <a href="../about.html" class="hover:text-[#0066FF] transition-colors">About</a>
         
-        <div class="services-menu-item relative group">
-          <a href="/services.html" class="desktop-nav-link text-[#70805D] font-bold flex items-center gap-1.5 py-1">
+        <!-- Services with dropdown arrow -->
+        <div class="relative group">
+          <a href="../services.html" class="flex items-center gap-1.5 text-[#0066FF] font-bold transition-colors py-1">
             <span>Services</span>
-            <i class="fa-solid fa-chevron-down text-[9px] text-[#70805D] transition-transform duration-200 group-hover:rotate-180"></i>
+            <i class="fa-solid fa-chevron-down text-[10px] text-[#0066FF] group-hover:rotate-180 transition-transform duration-200"></i>
           </a>
-          
-          <div class="services-dropdown">
-            <div class="flex items-center justify-between pb-3 mb-3 border-b border-[#70805D]/15">
-              <span class="text-xs font-bold text-[#2A3B27] uppercase tracking-wider flex items-center gap-2">
-                <i class="fa-solid fa-layer-group text-[#70805D]"></i>
-                <span>All 9 Service Disciplines</span>
-              </span>
-              <a href="/services.html" class="text-[11px] font-bold text-[#70805D] hover:underline flex items-center gap-1">
-                <span>Directory</span>
-                <i class="fa-solid fa-arrow-right text-[9px]"></i>
-              </a>
-            </div>
-
-            <div class="services-dropdown-grid">
-
-              <a href="/services/branding.html" class="service-sub-item ">
-                <div class="service-sub-icon "><i class="fa-solid fa-fingerprint"></i></div>
-                <div>
-                  <div class="service-sub-title ">01 Branding</div>
-                  <div class="service-sub-desc">Brand strategy & books</div>
-                </div>
-              </a>
-              <a href="/services/graphics-design.html" class="service-sub-item ">
-                <div class="service-sub-icon "><i class="fa-solid fa-bezier-curve"></i></div>
-                <div>
-                  <div class="service-sub-title ">02 Graphics Design</div>
-                  <div class="service-sub-desc">Packaging & UI/UX</div>
-                </div>
-              </a>
-              <a href="/services/web-development.html" class="service-sub-item ">
-                <div class="service-sub-icon "><i class="fa-solid fa-code"></i></div>
-                <div>
-                  <div class="service-sub-title ">03 Web Development</div>
-                  <div class="service-sub-desc">Jamstack & headless apps</div>
-                </div>
-              </a>
-              <a href="/services/social-media-marketing.html" class="service-sub-item ">
-                <div class="service-sub-icon "><i class="fa-solid fa-hashtag"></i></div>
-                <div>
-                  <div class="service-sub-title ">04 Social Media</div>
-                  <div class="service-sub-desc">Viral reels & Meta ads</div>
-                </div>
-              </a>
-              <a href="/services/photoshoot-videography.html" class="service-sub-item ">
-                <div class="service-sub-icon "><i class="fa-solid fa-video"></i></div>
-                <div>
-                  <div class="service-sub-title ">05 Video & Photo</div>
-                  <div class="service-sub-desc">Commercial TVCs & shoots</div>
-                </div>
-              </a>
-              <a href="/services/event-activation.html" class="service-sub-item ">
-                <div class="service-sub-icon "><i class="fa-solid fa-cubes"></i></div>
-                <div>
-                  <div class="service-sub-title ">06 Event Activation</div>
-                  <div class="service-sub-desc">3D exhibition stalls</div>
-                </div>
-              </a>
-              <a href="/services/google-ads.html" class="service-sub-item bg-[#70805D]/10">
-                <div class="service-sub-icon bg-[#70805D] text-white"><i class="fa-solid fa-chart-line"></i></div>
-                <div>
-                  <div class="service-sub-title text-[#70805D]">07 Google Ads</div>
-                  <div class="service-sub-desc">High-intent SEM funnels</div>
-                </div>
-              </a>
-              <a href="/services/seo-aeo.html" class="service-sub-item ">
-                <div class="service-sub-icon "><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                <div>
-                  <div class="service-sub-title ">08 SEO & AEO</div>
-                  <div class="service-sub-desc">AI answer optimization</div>
-                </div>
-              </a>
-              <a href="/services/public-relations.html" class="service-sub-item ">
-                <div class="service-sub-icon "><i class="fa-solid fa-newspaper"></i></div>
-                <div>
-                  <div class="service-sub-title ">09 PR & Media</div>
-                  <div class="service-sub-desc">Tier-1 press releases</div>
-                </div>
-              </a>
-            </div>
+          <!-- Dropdown card -->
+          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#E2E8F0] shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="social-media-marketing.html" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Social Media &amp; Meta Ads</a>
+            <a href="google-ads.html" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Google Ads &amp; Search</a>
+            <a href="web-development.html" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Full-Stack Web Development</a>
+            <a href="seo-aeo.html" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">SEO &amp; AI Engine Optimization</a>
+            <a href="graphics-design.html" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Graphics &amp; Visual Assets</a>
+            <div class="my-1.5 border-t border-[#E2E8F0]"></div>
+            <a href="../services.html" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#0066FF] hover:bg-[#0066FF]/10 text-center">View All 9 Services &rarr;</a>
           </div>
         </div>
 
-        <a href="/#projects" class="desktop-nav-link hover:text-[#70805D] transition-colors">Projects</a>
-        <a href="/#experience" class="desktop-nav-link hover:text-[#70805D] transition-colors">Experience</a>
-        <a href="#inquiry" class="desktop-nav-link hover:text-[#70805D] transition-colors">Contact</a>
+        <a href="../projects.html" class="hover:text-[#0066FF] transition-colors">Projects</a>
+        <a href="../experience.html" class="hover:text-[#0066FF] transition-colors">Experience</a>
+        <a href="../consultation.html" class="hover:text-[#0066FF] transition-colors">Consultation</a>
       </nav>
 
+      <!-- Right Header Actions -->
       <div class="flex items-center gap-3">
-        <a href="#inquiry" class="nav-cta-btn btn-aesthetic-primary text-xs hidden md:inline-flex items-center gap-2">
-          <span>Let's Talk</span>
-          <i class="fa-solid fa-arrow-down text-[10px]"></i>
+        <a href="../consultation.html" class="btn-morphy-primary text-xs hidden md:inline-flex">
+          <span>Book Consultation</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
         </a>
-        <button id="mobileMenuToggle" class="lg:hidden w-10 h-10 rounded-xl bg-white border border-[#70805D]/25 flex items-center justify-center text-[#2A3B27] shadow-sm">
+        <button id="mobileMenuToggle" aria-label="Toggle Navigation" class="lg:hidden w-10 h-10 rounded-2xl bg-white border border-[#E2E8F0] flex items-center justify-center text-[#0B0F19] shadow-xs">
           <i class="fa-solid fa-bars-staggered"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 border-b border-[#70805D]/15 px-6 py-5 space-y-3 shadow-xl">
-      <a href="/" class="mobile-link block text-sm font-semibold text-[#4D614A]">Home</a>
-      <a href="/services.html" class="mobile-link block text-sm font-bold text-[#70805D]">All 9 Services Directory</a>
-      <a href="/#projects" class="mobile-link block text-sm font-semibold text-[#4D614A]">15 Web Projects</a>
-      <a href="#inquiry" class="mobile-link block text-sm font-bold text-[#70805D]">Book Consultation</a>
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-[#E2E8F0] px-5 py-6 space-y-3 shadow-2xl">
+      <a href="../index.html" class="mobile-link block text-sm font-semibold text-[#334155]">Home</a>
+      <a href="../about.html" class="mobile-link block text-sm font-semibold text-[#334155]">About</a>
+      <a href="../services.html" class="mobile-link block text-sm font-semibold text-[#334155]">Services</a>
+      <a href="../projects.html" class="mobile-link block text-sm font-semibold text-[#334155]">Projects</a>
+      <a href="../experience.html" class="mobile-link block text-sm font-semibold text-[#334155]">Experience</a>
+      <a href="../consultation.html" class="mobile-link block text-sm font-semibold text-[#334155]">Consultation</a>
     </div>
   </header>
 

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Strategy Consultation | Md. Shakibur Rahaman</title>
+  <meta name="description" content="Book a 1-on-1 growth strategy consultation, Meta ads audit, or custom funnel teardown with Md. Shakibur Rahaman.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Book a Strategy Consultation | Md. Shakibur Rahaman">
+  <meta property="og:description" content="Uncover high-ROI scaling opportunities for your brand with an expert digital strategy audit.">
+  <meta property="og:url" content="https://shakibur.info/consultation.html">
+  <meta property="og:image" content="https://shakibur.info/assets/profile.jpg">
+
+  <!-- Tailwind CSS & Font Awesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased bg-[#FAFCFF] text-[#0B0F19] min-h-screen">
+
+  <div id="scrollProgressBar"></div>
+  <canvas id="ambientCanvas"></canvas>
+
+  <!-- NAVBAR COMPONENT -->
+    <!-- 1. FIXED GLASS NAVBAR (Matching Reference Pill Layout) -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-2xl border-b border-[#E2E8F0] transition-all duration-300 shadow-2xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#0066FF] to-[#0040C1] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#0066FF]/25 border border-white/20">
+          ✦
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-[#0B0F19] tracking-tight text-base sm:text-lg group-hover:text-[#0066FF] transition-colors" id="navBrandName">Md. Shakibur Rahaman</span>
+          <span class="text-[10px] text-[#0066FF] font-extrabold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
+        </div>
+      </a>
+
+      <!-- Centered Floating Pill Navigation Menu (Exact User Layout) -->
+      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-white/95 border border-[#E2E8F0] text-sm font-semibold text-[#334155] backdrop-blur-md shadow-xs">
+        <a href="index.html" class="hover:text-[#0066FF] transition-colors">Home</a>
+        <a href="about.html" class="hover:text-[#0066FF] transition-colors">About</a>
+        
+        <!-- Services with dropdown arrow -->
+        <div class="relative group">
+          <a href="services.html" class="flex items-center gap-1.5 hover:text-[#0066FF] transition-colors py-1">
+            <span>Services</span>
+            <i class="fa-solid fa-chevron-down text-[10px] text-[#64748B] group-hover:text-[#0066FF] group-hover:rotate-180 transition-transform duration-200"></i>
+          </a>
+          <!-- Dropdown card -->
+          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#E2E8F0] shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="services/social-media-marketing.html" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Social Media &amp; Meta Ads</a>
+            <a href="services/google-ads.html" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Google Ads &amp; Search</a>
+            <a href="services/web-development.html" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Full-Stack Web Development</a>
+            <a href="services/seo-aeo.html" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">SEO &amp; AI Engine Optimization</a>
+            <a href="services/graphics-design.html" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Graphics &amp; Visual Assets</a>
+            <div class="my-1.5 border-t border-[#E2E8F0]"></div>
+            <a href="services.html" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#0066FF] hover:bg-[#0066FF]/10 text-center">View All 9 Services &rarr;</a>
+          </div>
+        </div>
+
+        <a href="projects.html" class="hover:text-[#0066FF] transition-colors">Projects</a>
+        <a href="experience.html" class="hover:text-[#0066FF] transition-colors">Experience</a>
+        <a href="consultation.html" class="text-[#0066FF] font-bold transition-colors">Consultation</a>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center gap-3">
+        <a href="consultation.html" class="btn-morphy-primary text-xs hidden md:inline-flex">
+          <span>Book Consultation</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+        <button id="mobileMenuToggle" aria-label="Toggle Navigation" class="lg:hidden w-10 h-10 rounded-2xl bg-white border border-[#E2E8F0] flex items-center justify-center text-[#0B0F19] shadow-xs">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-[#E2E8F0] px-5 py-6 space-y-3 shadow-2xl">
+      <a href="index.html" class="mobile-link block text-sm font-semibold text-[#334155]">Home</a>
+      <a href="about.html" class="mobile-link block text-sm font-semibold text-[#334155]">About</a>
+      <a href="services.html" class="mobile-link block text-sm font-semibold text-[#334155]">Services</a>
+      <a href="projects.html" class="mobile-link block text-sm font-semibold text-[#334155]">Projects</a>
+      <a href="experience.html" class="mobile-link block text-sm font-semibold text-[#334155]">Experience</a>
+      <a href="consultation.html" class="mobile-link block text-sm font-semibold text-[#334155]">Consultation</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="pt-36 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <div class="morphy-tag-primary">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>1-on-1 Growth Diagnostic</span>
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0B0F19]">
+        Book Your Private <span class="text-[#0066FF]">Strategy Consultation</span>
+      </h1>
+      <p class="text-base sm:text-lg text-[#64748B] font-medium leading-relaxed">
+        Let's dissect your current advertising metrics, identify conversion leaks, and map a bespoke roadmap to profitable customer acquisition.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONSULTATION OPTIONS & INTAKE FORM -->
+  <section class="py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+      <!-- LEFT: What You Get in Consultation (5 cols) -->
+      <div class="lg:col-span-5 space-y-6">
+        <div class="morphy-card p-8 space-y-6">
+          <h3 class="text-2xl font-bold text-[#0B0F19]">What We Cover In 45 Minutes</h3>
+          
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-xl bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center font-bold text-sm shrink-0">1</div>
+              <div>
+                <h4 class="text-sm font-bold text-[#0B0F19]">Ad Account Health Audit</h4>
+                <p class="text-xs text-[#64748B] mt-0.5">Live teardown of your Meta/Google ad account structure, audience overlap, and budget distribution.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-xl bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center font-bold text-sm shrink-0">2</div>
+              <div>
+                <h4 class="text-sm font-bold text-[#0B0F19]">Funnel &amp; CRO Breakdown</h4>
+                <p class="text-xs text-[#64748B] mt-0.5">Reviewing your landing page speed, copy hooks, mobile conversion friction, and offer positioning.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-xl bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center font-bold text-sm shrink-0">3</div>
+              <div>
+                <h4 class="text-sm font-bold text-[#0B0F19]">Actionable 90-Day Scaling Plan</h4>
+                <p class="text-xs text-[#64748B] mt-0.5">A clear step-by-step roadmap to lower your CPA and achieve predictable ROAS targets.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-[#0066FF]/5 border border-[#0066FF]/15">
+            <div class="text-xs font-bold text-[#0066FF] flex items-center gap-2">
+              <i class="fa-solid fa-shield-check"></i>
+              <span>100% No-Pressure Guarantee</span>
+            </div>
+            <p class="text-[11px] text-[#64748B] mt-1">If you don't receive at least 3 actionable insights you can implement immediately, the session is completely on us.</p>
+          </div>
+        </div>
+
+        <!-- Direct Contact Info -->
+        <div class="morphy-card p-6 space-y-3 text-sm">
+          <div class="font-bold text-[#0B0F19]">Prefer Direct Messaging?</div>
+          <div class="flex items-center gap-3 text-xs text-[#64748B]">
+            <i class="fa-solid fa-envelope text-[#0066FF]"></i>
+            <span>contact@shakibur.info</span>
+          </div>
+          <div class="flex items-center gap-3 text-xs text-[#64748B]">
+            <i class="fa-brands fa-whatsapp text-[#10B981]"></i>
+            <span>+880 1883 018868</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Interactive Booking Intake Form (7 cols) -->
+      <div class="lg:col-span-7">
+        <div class="morphy-card p-8 sm:p-10 space-y-6">
+          <div class="border-b border-[#E2E8F0] pb-4">
+            <h2 class="text-2xl font-extrabold text-[#0B0F19]">Reserve Your Session</h2>
+            <p class="text-xs text-[#64748B] mt-1">Fill out the briefing below so we can analyze your business before our call.</p>
+          </div>
+
+          <form action="/api/index.php?action=lead_submit" method="POST" class="inquiry-form space-y-5">
+            <input type="hidden" name="type" value="consultation_booking">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-xs font-bold text-[#0B0F19] uppercase tracking-wider mb-2">Your Full Name *</label>
+                <input type="text" name="name" required placeholder="e.g. Michael Vance" class="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-sm focus:outline-none focus:border-[#0066FF] transition-colors">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-[#0B0F19] uppercase tracking-wider mb-2">Work Email *</label>
+                <input type="email" name="email" required placeholder="michael@company.com" class="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-sm focus:outline-none focus:border-[#0066FF] transition-colors">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-xs font-bold text-[#0B0F19] uppercase tracking-wider mb-2">Website / Store URL *</label>
+                <input type="url" name="website" required placeholder="https://yourbrand.com" class="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-sm focus:outline-none focus:border-[#0066FF] transition-colors">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-[#0B0F19] uppercase tracking-wider mb-2">Current Monthly Ad Spend</label>
+                <select name="ad_spend" class="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-sm focus:outline-none focus:border-[#0066FF] transition-colors">
+                  <option value="under_1k">Under $1,000 / month</option>
+                  <option value="1k_5k">$1,000 - $5,000 / month</option>
+                  <option value="5k_20k" selected>$5,000 - $20,000 / month</option>
+                  <option value="20k_50k">$20,000 - $50,000 / month</option>
+                  <option value="50k_plus">$50,000+ / month</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-[#0B0F19] uppercase tracking-wider mb-2">Primary Consultation Focus *</label>
+              <select name="service" class="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-sm focus:outline-none focus:border-[#0066FF] transition-colors">
+                <option value="meta_ads">Meta (Facebook/Instagram) Paid Ads Scaling</option>
+                <option value="google_ads">Google Ads &amp; Search Intent Optimization</option>
+                <option value="web_cro">Full-Stack Web Rebuild &amp; Conversion Optimization</option>
+                <option value="full_growth">Comprehensive Omnichannel Growth Retainer</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-[#0B0F19] uppercase tracking-wider mb-2">Key Bottlenecks &amp; Current Goals</label>
+              <textarea name="message" rows="4" placeholder="Briefly describe your current ROAS, CPA challenges, or revenue targets for this quarter..." class="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-sm focus:outline-none focus:border-[#0066FF] transition-colors"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 rounded-xl bg-[#0066FF] hover:bg-[#0052FF] text-white font-extrabold text-sm uppercase tracking-wider transition-all duration-300 shadow-lg shadow-[#0066FF]/25 hover:scale-[1.01] active:scale-[0.99]">
+              <span>Request Consultation Slot &rarr;</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <div class="text-center mb-10">
+      <h3 class="text-2xl sm:text-3xl font-extrabold text-[#0B0F19]">Frequently Asked Questions</h3>
+    </div>
+
+    <div class="space-y-4">
+      <div class="morphy-card p-6">
+        <h4 class="font-bold text-[#0B0F19] text-base mb-1">How is the consultation conducted?</h4>
+        <p class="text-sm text-[#64748B]">All sessions are conducted 1-on-1 via Google Meet or Zoom. You will receive a direct calendar invitation with screen sharing enabled.</p>
+      </div>
+      <div class="morphy-card p-6">
+        <h4 class="font-bold text-[#0B0F19] text-base mb-1">Do I need to share ad account access beforehand?</h4>
+        <p class="text-sm text-[#64748B]">You can either grant view-only access before the call for deeper preparatory analysis or share your screen live during the session.</p>
+      </div>
+      <div class="morphy-card p-6">
+        <h4 class="font-bold text-[#0B0F19] text-base mb-1">What happens after the consultation?</h4>
+        <p class="text-sm text-[#64748B]">You will receive a written recap summary and key action items within 24 hours. If there's a strong mutual fit, we will outline monthly retainer options.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-[#E2E8F0] bg-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-[#64748B]">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-[#0066FF]"></span>
+        <span>&copy; 2026 Md. Shakibur Rahaman. All Rights Reserved.</span>
+      </div>
+      <div class="flex items-center gap-6 font-semibold text-[#0B0F19]">
+        <a href="index.html" class="hover:text-[#0066FF] transition-colors">Home</a>
+        <a href="about.html" class="hover:text-[#0066FF] transition-colors">About</a>
+        <a href="services.html" class="hover:text-[#0066FF] transition-colors">Services</a>
+        <a href="projects.html" class="hover:text-[#0066FF] transition-colors">Projects</a>
+        <a href="experience.html" class="hover:text-[#0066FF] transition-colors">Experience</a>
+        <a href="consultation.html" class="hover:text-[#0066FF] transition-colors">Consultation</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
