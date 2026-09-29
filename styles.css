@@ -138,53 +138,119 @@ body {
   gap: 6px;
 }
 
-/* BUTTONS */
-.btn-morphy-primary {
-  background: linear-gradient(135deg, #0066FF 0%, #0052FF 100%);
+
+/* ==========================================================================
+   ULTRA-ATTRACTIVE ANIMATED BUTTON SYSTEM (ACROSS ENTIRE WEBSITE)
+   ========================================================================== */
+.btn-morphy-primary,
+.btn-editorial-primary,
+.btn-primary-animated {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  padding: 14px 32px !important;
+  border-radius: 9999px !important;
+  background: linear-gradient(135deg, #0066FF 0%, #0052FF 50%, #003ECC 100%) !important;
   color: #FFFFFF !important;
-  font-size: 13px;
-  font-weight: 700;
-  padding: 12px 28px;
-  border-radius: 9999px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 6px 20px -3px rgba(0, 102, 255, 0.38);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  text-decoration: none;
+  font-size: 12.5px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+  box-shadow: 0 8px 24px -4px rgba(0, 102, 255, 0.45), 0 0 16px rgba(0, 102, 255, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.4) !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  overflow: hidden !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  z-index: 1 !important;
 }
 
-.btn-morphy-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px -4px rgba(0, 102, 255, 0.50);
+/* Continuous Light Sweep Animation */
+.btn-morphy-primary::after,
+.btn-editorial-primary::after,
+.btn-primary-animated::after {
+  content: '' !important;
+  position: absolute !important;
+  top: -50% !important;
+  left: -80% !important;
+  width: 55% !important;
+  height: 200% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent) !important;
+  transform: rotate(25deg) !important;
+  animation: btnSweep 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
 }
 
-.btn-morphy-outline {
-  background: #FFFFFF;
-  color: var(--text-dark) !important;
-  font-size: 13px;
-  font-weight: 700;
-  padding: 11px 26px;
-  border-radius: 9999px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: 1px solid var(--border-subtle);
-  cursor: pointer;
-  box-shadow: 0 4px 12px -2px rgba(11, 15, 25, 0.04);
-  transition: all 0.25s ease;
-  text-decoration: none;
+@keyframes btnSweep {
+  0% { left: -80%; }
+  35% { left: 130%; }
+  100% { left: 130%; }
 }
 
-.btn-morphy-outline:hover {
-  border-color: var(--primary);
-  color: var(--primary) !important;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px -4px rgba(0, 102, 255, 0.12);
+.btn-morphy-primary:hover,
+.btn-editorial-primary:hover,
+.btn-primary-animated:hover {
+  transform: translateY(-3px) scale(1.03) !important;
+  box-shadow: 0 16px 36px -4px rgba(0, 102, 255, 0.65), 0 0 28px rgba(0, 102, 255, 0.45), inset 0 1px 3px rgba(255, 255, 255, 0.6) !important;
 }
 
+.btn-morphy-primary:active,
+.btn-editorial-primary:active,
+.btn-primary-animated:active {
+  transform: translateY(0px) scale(0.97) !important;
+}
+
+.btn-morphy-primary i,
+.btn-primary-animated i {
+  transition: transform 0.25s ease !important;
+}
+
+.btn-morphy-primary:hover i.fa-arrow-right,
+.btn-primary-animated:hover i.fa-arrow-right {
+  transform: translateX(4px) !important;
+}
+
+/* SECONDARY OUTLINE ANIMATED BUTTON */
+.btn-morphy-outline,
+.btn-editorial-outline,
+.btn-secondary-animated {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  padding: 13px 30px !important;
+  border-radius: 9999px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #0B0F19 !important;
+  font-size: 12.5px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  border: 1.5px solid #CBD5E1 !important;
+  box-shadow: 0 4px 16px -2px rgba(11, 15, 25, 0.06) !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-morphy-outline:hover,
+.btn-editorial-outline:hover,
+.btn-secondary-animated:hover {
+  border-color: #0066FF !important;
+  color: #0066FF !important;
+  background: #FFFFFF !important;
+  transform: translateY(-2.5px) scale(1.02) !important;
+  box-shadow: 0 10px 28px -4px rgba(0, 102, 255, 0.22), 0 0 16px rgba(0, 102, 255, 0.12) !important;
+}
+
+.btn-morphy-outline:active,
+.btn-secondary-animated:active {
+  transform: translateY(0px) scale(0.97) !important;
+}
 /* ==========================================================================
    HERO INFOGRAPHIC NETWORK (BULLETPROOF ABSOLUTE COORDINATES)
    ========================================================================== */
