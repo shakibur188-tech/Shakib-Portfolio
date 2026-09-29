@@ -1,4 +1,118 @@
-/* ==========================================================================
+const fs = require('fs');
+const path = require('path');
+
+const rootDir = __dirname;
+
+// 1. UPDATE app.js with Continuous Animated Cloud Background Engine
+const appPath = path.join(rootDir, 'app.js');
+let appJs = fs.readFileSync(appPath, 'utf8');
+
+// Replace initAmbientBackground with the continuous 60fps Cloud Engine
+const newCloudEngine = `/* ==========================================================================
+   1. CONTINUOUS ANIMATED CLOUD BACKGROUND ENGINE (60FPS CANVAS & SKY)
+   ========================================================================== */
+function initAmbientBackground() {
+  const canvas = document.getElementById('ambientCanvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let width = (canvas.width = window.innerWidth);
+  let height = (canvas.height = window.innerHeight);
+
+  let mouse = { x: width / 2, y: height / 2, targetX: width / 2, targetY: height / 2 };
+
+  window.addEventListener('resize', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    initClouds();
+  }, { passive: true });
+
+  window.addEventListener('mousemove', (e) => {
+    mouse.targetX = e.clientX;
+    mouse.targetY = e.clientY;
+  }, { passive: true });
+
+  // Generate realistic layered drifting clouds
+  let clouds = [];
+  function initClouds() {
+    clouds = [];
+    const count = width > 768 ? 14 : 8;
+    for (let i = 0; i < count; i++) {
+      clouds.push({
+        x: Math.random() * (width + 400) - 200,
+        y: Math.random() * (height * 0.95),
+        radius: Math.random() * 140 + 100,
+        speed: Math.random() * 0.35 + 0.15,
+        opacity: Math.random() * 0.35 + 0.25,
+        puffs: Array.from({ length: 6 }, () => ({
+          dx: (Math.random() - 0.5) * 160,
+          dy: (Math.random() - 0.5) * 60,
+          r: Math.random() * 90 + 60
+        }))
+      });
+    }
+  }
+  initClouds();
+
+  function render() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Smooth mouse parallax
+    mouse.x += (mouse.targetX - mouse.x) * 0.04;
+    mouse.y += (mouse.targetY - mouse.y) * 0.04;
+
+    // 1. Draw subtle ambient sky gradients
+    const skyGrad = ctx.createLinearGradient(0, 0, 0, height);
+    skyGrad.addColorStop(0, 'rgba(240, 246, 255, 0.95)');
+    skyGrad.addColorStop(0.5, 'rgba(248, 250, 252, 0.9)');
+    skyGrad.addColorStop(1, 'rgba(255, 255, 255, 0.98)');
+    ctx.fillStyle = skyGrad;
+    ctx.fillRect(0, 0, width, height);
+
+    // 2. Render and drift soft clouds
+    clouds.forEach(c => {
+      c.x += c.speed;
+      // Seamless wrap-around
+      if (c.x - c.radius > width + 200) {
+        c.x = -c.radius - 200;
+        c.y = Math.random() * (height * 0.95);
+      }
+
+      ctx.save();
+      const parallaxX = (mouse.x - width / 2) * (c.speed * 0.08);
+      const parallaxY = (mouse.y - height / 2) * (c.speed * 0.08);
+
+      c.puffs.forEach(p => {
+        const px = c.x + p.dx + parallaxX;
+        const py = c.y + p.dy + parallaxY;
+        const puffGrad = ctx.createRadialGradient(px, py, 0, px, py, p.r);
+        puffGrad.addColorStop(0, \`rgba(255, 255, 255, \${c.opacity})\`);
+        puffGrad.addColorStop(0.5, \`rgba(240, 247, 255, \${c.opacity * 0.75})\`);
+        puffGrad.addColorStop(1, 'rgba(240, 247, 255, 0)');
+
+        ctx.fillStyle = puffGrad;
+        ctx.beginPath();
+        ctx.arc(px, py, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      ctx.restore();
+    });
+
+    requestAnimationFrame(render);
+  }
+
+  requestAnimationFrame(render);
+}`;
+
+appJs = appJs.replace(/\/\* ==========================================================================\s*1\. FULL-PAGE AMBIENT LIGHT[\s\S]*?requestAnimationFrame\(render\);\s*\}/, newCloudEngine);
+
+fs.writeFileSync(appPath, appJs, 'utf8');
+console.log('app.js cloud background engine updated!');
+
+// 2. UPDATE styles.css with full Morphy & bulletproof layout styles
+const cssPath = path.join(rootDir, 'styles.css');
+const masterMorphyCSS = `/* ==========================================================================
    Md. Shakibur Rahaman - Strategic Lead & Digital Architect
    MODERN "MORPHY" GLASSMORPHIC & CLOUD BLUE AESTHETIC
    Palette: #0066FF (Electric Royal Blue), #0B0F19 (Obsidian), #FFFFFF (Pure White)
@@ -416,3 +530,61 @@ body {
     padding: 14px 24px;
   }
 }
+`;
+
+fs.writeFileSync(cssPath, masterMorphyCSS, 'utf8');
+console.log('styles.css updated with Master Morphy Design System!');
+
+// 3. UPDATE index.html with inline styles + robust HTML structure
+const indexPath = path.join(rootDir, 'index.html');
+let indexHtml = fs.readFileSync(indexPath, 'utf8');
+
+// Ensure hero infographic has bulletproof inline coordinates
+const bulletproofHeroInfographic = `      <!-- CENTRAL CONNECTED INFOGRAPHIC DIAGRAM (Bulletproof Coordinates) -->
+      <div class="pt-8 pb-4">
+        <div class="hero-infographic-container relative w-full max-w-[680px] h-[380px] sm:h-[400px] mx-auto flex items-center justify-center">
+          
+          <!-- Central Glowing Radial Aura -->
+          <div class="hero-center-aura absolute w-[300px] h-[300px] rounded-full pointer-events-none z-[1]"></div>
+
+          <!-- Connected Curved Circuit Lines SVG -->
+          <svg class="circuit-svg absolute inset-0 w-full h-full pointer-events-none z-[2]" viewBox="0 0 680 380" fill="none">
+            <path d="M 340 190 Q 200 120 100 90" stroke="rgba(0, 102, 255, 0.22)" stroke-width="2" stroke-dasharray="6 6"/>
+            <path d="M 340 190 Q 500 120 580 90" stroke="rgba(0, 102, 255, 0.22)" stroke-width="2" stroke-dasharray="6 6"/>
+            <path d="M 340 190 Q 220 280 160 310" stroke="rgba(0, 102, 255, 0.22)" stroke-width="2" stroke-dasharray="6 6"/>
+            <path d="M 340 190 Q 480 280 560 300" stroke="rgba(0, 102, 255, 0.22)" stroke-width="2" stroke-dasharray="6 6"/>
+            <path d="M 340 190 Q 340 80 420 50" stroke="rgba(0, 102, 255, 0.22)" stroke-width="2" stroke-dasharray="6 6"/>
+          </svg>
+
+          <!-- Central Glowing Core Infinity / Meta Node -->
+          <div class="hero-center-node relative w-[110px] h-[110px] rounded-full z-[10]">
+            <i class="fa-brands fa-meta"></i>
+          </div>
+
+          <!-- Satellite Floating Ecosystem Nodes (Explicit Inline Positioning) -->
+          <div class="satellite-node" style="position: absolute; top: 20%; left: 10%; color: #1877F2;" title="Facebook Ads"><i class="fa-brands fa-facebook-f"></i></div>
+          <div class="satellite-node" style="position: absolute; top: 68%; right: 12%; color: #E4405F;" title="Instagram Growth"><i class="fa-brands fa-instagram"></i></div>
+          <div class="satellite-node" style="position: absolute; bottom: 8%; left: 22%; color: #25D366;" title="WhatsApp Funnel"><i class="fa-brands fa-whatsapp"></i></div>
+          <div class="satellite-node" style="position: absolute; top: 15%; right: 18%; color: #0084FF;" title="Messenger Direct"><i class="fa-brands fa-facebook-messenger"></i></div>
+          <div class="satellite-node" style="position: absolute; top: 10%; right: 38%; color: #0066FF;" title="Web Development"><i class="fa-solid fa-code"></i></div>
+          <div class="satellite-node" style="position: absolute; bottom: 12%; right: 32%; color: #10B981;" title="Google Ads & SEO"><i class="fa-solid fa-chart-line"></i></div>
+
+          <!-- Floating Info Chip Left: Get Started Free -->
+          <div class="hero-float-chip shadow-md" style="position: absolute; top: 18%; left: 2%; background: rgba(0, 102, 255, 0.08); border-color: rgba(0, 102, 255, 0.25); color: #0066FF;">
+            <span>Get Started Free</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+          </div>
+
+          <!-- Floating Info Chip Right: 2.3M+ Trusted -->
+          <div class="hero-float-chip shadow-md" style="position: absolute; top: 22%; right: 2%;">
+            <span class="text-base font-extrabold text-[#0B0F19]">2.3M+</span>
+            <span class="text-[11px] text-[#64748B] font-medium">Trusted global reach</span>
+          </div>
+
+        </div>
+      </div>`;
+
+indexHtml = indexHtml.replace(/<!-- CENTRAL CONNECTED INFOGRAPHIC DIAGRAM[\s\S]*?<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/, bulletproofHeroInfographic + '\n    </div>\n  </section>');
+
+fs.writeFileSync(indexPath, indexHtml, 'utf8');
+console.log('index.html hero infographic updated with bulletproof positioning!');

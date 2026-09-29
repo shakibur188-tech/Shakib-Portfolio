@@ -117,7 +117,7 @@ function animateSingleCounter(el) {
 }
 
 /* ==========================================================================
-   1. FULL-PAGE AMBIENT LIGHT BACKGROUND ANIMATION
+   1. CONTINUOUS ANIMATED CLOUD BACKGROUND ENGINE (60FPS CANVAS & SKY)
    ========================================================================== */
 function initAmbientBackground() {
   const canvas = document.getElementById('ambientCanvas');
@@ -132,6 +132,7 @@ function initAmbientBackground() {
   window.addEventListener('resize', () => {
     width = canvas.width = window.innerWidth;
     height = canvas.height = window.innerHeight;
+    initClouds();
   }, { passive: true });
 
   window.addEventListener('mousemove', (e) => {
@@ -139,36 +140,78 @@ function initAmbientBackground() {
     mouse.targetY = e.clientY;
   }, { passive: true });
 
-  // Floating Soft Gradient Orbs tuned for light theme canvas
-  const orbs = [
-    { x: width * 0.2, y: height * 0.25, r: 330, color: 'rgba(112, 128, 93, 0.08)', vx: 0.18, vy: 0.14, phase: 0 },
-    { x: width * 0.8, y: height * 0.35, r: 360, color: 'rgba(85, 115, 141, 0.07)', vx: -0.16, vy: 0.12, phase: 2 },
-    { x: width * 0.45, y: height * 0.75, r: 310, color: 'rgba(150, 167, 182, 0.10)', vx: 0.14, vy: -0.15, phase: 4 },
-    { x: width * 0.85, y: height * 0.85, r: 280, color: 'rgba(203, 200, 196, 0.14)', vx: -0.12, vy: -0.12, phase: 1 },
-    { x: width * 0.15, y: height * 0.85, r: 260, color: 'rgba(112, 128, 93, 0.06)', vx: 0.12, vy: -0.10, phase: 3 }
-  ];
+  // Generate realistic layered drifting clouds
+  let clouds = [];
+  function initClouds() {
+    clouds = [];
+    const count = width > 768 ? 14 : 8;
+    for (let i = 0; i < count; i++) {
+      clouds.push({
+        x: Math.random() * (width + 400) - 200,
+        y: Math.random() * (height * 0.95),
+        radius: Math.random() * 140 + 100,
+        speed: Math.random() * 0.35 + 0.15,
+        opacity: Math.random() * 0.35 + 0.25,
+        puffs: Array.from({ length: 6 }, () => ({
+          dx: (Math.random() - 0.5) * 160,
+          dy: (Math.random() - 0.5) * 60,
+          r: Math.random() * 90 + 60
+        }))
+      });
+    }
+  }
+  initClouds();
 
-  // Subtle Light Dust Particles
-  const particleCount = Math.min(width > 768 ? 42 : 20, 50);
-  const particles = [];
-  for (let i = 0; i < particleCount; i++) {
-    const isOlive = Math.random() > 0.5;
-    particles.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      size: Math.random() * 1.8 + 0.6,
-      vx: (Math.random() - 0.5) * 0.25,
-      vy: (Math.random() - 0.5) * 0.25 - 0.08,
-      alpha: Math.random() * 0.35 + 0.15,
-      color: isOlive ? '112, 128, 93' : '85, 115, 141'
+  function render() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Smooth mouse parallax
+    mouse.x += (mouse.targetX - mouse.x) * 0.04;
+    mouse.y += (mouse.targetY - mouse.y) * 0.04;
+
+    // 1. Draw subtle ambient sky gradients
+    const skyGrad = ctx.createLinearGradient(0, 0, 0, height);
+    skyGrad.addColorStop(0, 'rgba(240, 246, 255, 0.95)');
+    skyGrad.addColorStop(0.5, 'rgba(248, 250, 252, 0.9)');
+    skyGrad.addColorStop(1, 'rgba(255, 255, 255, 0.98)');
+    ctx.fillStyle = skyGrad;
+    ctx.fillRect(0, 0, width, height);
+
+    // 2. Render and drift soft clouds
+    clouds.forEach(c => {
+      c.x += c.speed;
+      // Seamless wrap-around
+      if (c.x - c.radius > width + 200) {
+        c.x = -c.radius - 200;
+        c.y = Math.random() * (height * 0.95);
+      }
+
+      ctx.save();
+      const parallaxX = (mouse.x - width / 2) * (c.speed * 0.08);
+      const parallaxY = (mouse.y - height / 2) * (c.speed * 0.08);
+
+      c.puffs.forEach(p => {
+        const px = c.x + p.dx + parallaxX;
+        const py = c.y + p.dy + parallaxY;
+        const puffGrad = ctx.createRadialGradient(px, py, 0, px, py, p.r);
+        puffGrad.addColorStop(0, `rgba(255, 255, 255, ${c.opacity})`);
+        puffGrad.addColorStop(0.5, `rgba(240, 247, 255, ${c.opacity * 0.75})`);
+        puffGrad.addColorStop(1, 'rgba(240, 247, 255, 0)');
+
+        ctx.fillStyle = puffGrad;
+        ctx.beginPath();
+        ctx.arc(px, py, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      ctx.restore();
     });
+
+    requestAnimationFrame(render);
   }
 
-  let isRunning = true;
-  document.addEventListener('visibilitychange', () => {
-    isRunning = !document.hidden;
-    if (isRunning) requestAnimationFrame(render);
-  });
+  requestAnimationFrame(render);
+});
 
   function render() {
     if (!isRunning) return;
