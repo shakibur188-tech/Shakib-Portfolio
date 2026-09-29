@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exclusive Offers &amp; Strategic Retainer Packages | Md. Shakibur Rahaman</title>
+  <meta name="description" content="Transparent, high-ROI strategic growth packages and retainer offers directed by Md. Shakibur Rahaman: Branding, Full-Stack Web Development, Paid Ads, and 360° Growth Retainers.">
+  <link rel="canonical" href="https://shakibur.info/offer.html">
+  
+  <!-- Plus Jakarta Sans Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#70805D',
+              forest: '#2A3B27',
+              slate: '#55738D',
+              mist: '#96A7B6',
+              stone: '#CBC8C4'
+            },
+            canvas: '#F8F9F6'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Unified Aesthetic Stylesheet -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-[#F8F9F6] text-[#1C2B1B] font-sans antialiased selection:bg-[#70805D] selection:text-white relative overflow-x-hidden">
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- Ambient Light Background -->
+  <div class="ambient-mesh-glow"></div>
+  <canvas id="ambientCanvas"></canvas>
+  <div class="ambient-vignette"></div>
+
+  <!-- FIXED NAVBAR -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#F8F9F6]/92 backdrop-blur-2xl border-b border-[#70805D]/15 transition-all duration-300 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo / Monogram -->
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-[#70805D] to-[#2A3B27] flex items-center justify-center font-black text-white text-sm sm:text-base tracking-tight group-hover:scale-105 transition-all shadow-md shadow-[#70805D]/20 border border-white/20 shrink-0">
+          SR
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-[#1C2B1B] tracking-tight text-sm sm:text-base md:text-lg group-hover:text-[#70805D] transition-colors">Md. Shakibur Rahaman</span>
+          <span class="text-[9.5px] sm:text-[10.5px] text-[#70805D] font-extrabold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-6 px-6 py-2.5 rounded-full bg-white/95 border border-[#70805D]/20 text-xs font-bold text-[#4D614A] backdrop-blur-md shadow-sm">
+        <a href="/" class="desktop-nav-link hover:text-[#70805D] transition-colors">Home</a>
+        <a href="/#about" class="desktop-nav-link hover:text-[#70805D] transition-colors">About</a>
+        <a href="/services.html" class="desktop-nav-link hover:text-[#70805D] transition-colors">9 Services</a>
+        <a href="/#projects" class="desktop-nav-link hover:text-[#70805D] transition-colors">15 Projects</a>
+        <a href="/offer.html" class="desktop-nav-link text-[#70805D] font-extrabold">Exclusive Offers ⭐</a>
+        <a href="/#contact" class="desktop-nav-link hover:text-[#70805D] transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center gap-3">
+        <a href="#claim-offer" class="nav-cta-btn btn-aesthetic-primary text-xs hidden md:inline-flex items-center gap-2">
+          <span>Claim Your Package</span>
+          <i class="fa-solid fa-arrow-down text-[10px]"></i>
+        </a>
+        <button id="mobileMenuToggle" aria-label="Toggle Navigation" class="lg:hidden w-10 h-10 rounded-xl bg-white border border-[#70805D]/25 flex items-center justify-center text-[#2A3B27] shadow-sm">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-[#70805D]/20 px-5 py-6 space-y-4 shadow-2xl">
+      <a href="/" class="mobile-link block text-sm font-semibold text-[#4D614A]">Home</a>
+      <a href="/services.html" class="mobile-link block text-sm font-semibold text-[#4D614A]">All 9 Services</a>
+      <a href="/offer.html" class="mobile-link block text-sm font-bold text-[#70805D]">⭐ Exclusive Retainer Offers</a>
+      <a href="/#projects" class="mobile-link block text-sm font-semibold text-[#4D614A]">15 Web Projects</a>
+      <a href="/#contact" class="mobile-link block text-sm font-bold text-[#70805D]">Get in Touch</a>
+    </div>
+  </header>
+
+  <!-- 1. HERO SECTION -->
+  <section class="relative pt-36 pb-16 md:pt-44 md:pb-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      
+      <div class="section-tag justify-center mb-6">
+        <span class="pulse-dot-olive"></span>
+        <span>LIMITED QUARTERLY ENGAGEMENTS</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#1C2B1B] tracking-tight leading-[1.1] mb-6">
+        High-Impact Execution Packages &amp; <br>
+        <span class="olive-gradient-text">Growth Retainer Offers</span>
+      </h1>
+
+      <p class="text-sm sm:text-base text-[#4D614A] max-w-2xl mx-auto leading-relaxed mb-8">
+        Direct executive engagement with Md. Shakibur Rahaman. Eliminating multi-agency friction by consolidating design, full-stack software development, and acquisition marketing under one decisive strategic leader.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-3 text-xs font-bold text-[#2A3B27]">
+        <span class="px-3.5 py-1.5 rounded-full bg-white border border-[#70805D]/25 shadow-xs"><i class="fa-solid fa-bolt text-[#70805D] mr-1.5"></i> 2-3 Week Sprint Turnaround</span>
+        <span class="px-3.5 py-1.5 rounded-full bg-white border border-[#70805D]/25 shadow-xs"><i class="fa-solid fa-shield-check text-[#70805D] mr-1.5"></i> 100% Asset Sovereignty</span>
+        <span class="px-3.5 py-1.5 rounded-full bg-white border border-[#70805D]/25 shadow-xs"><i class="fa-solid fa-gauge-high text-[#70805D] mr-1.5"></i> 95+ PageSpeed Guarantee</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. 3 TIERED STRATEGIC PACKAGES -->
+  <section class="py-12 border-t border-[#70805D]/15 bg-white/70 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-xl mx-auto mb-14">
+        <span class="point-badge mb-2">TRANSPARENT VALUE ARCHITECTURE</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-[#1C2B1B] tracking-tight mt-1">
+          Select Your Engagement Model
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- Tier 1: Sprint Commission -->
+        <div class="spotlight-card p-6 sm:p-8 bg-white border border-[#70805D]/20 rounded-3xl shadow-md flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-extrabold text-[#55738D] uppercase tracking-wider">Sprint Project</span>
+              <span class="text-[11px] font-bold text-[#70805D] bg-[#70805D]/10 px-2.5 py-0.5 rounded-full">Single Discipline</span>
+            </div>
+            <h3 class="text-xl font-black text-[#1C2B1B]">Core Sprint</h3>
+            <p class="text-xs text-[#4D614A] leading-relaxed">
+              Targeted sprint execution for high-converting brand identity, corporate web platform, or Google Ads performance funnels.
+            </p>
+
+            <div class="py-4 border-y border-gray-100">
+              <div class="text-2xl font-black text-[#2A3B27]">$1,200 – $2,500</div>
+              <div class="text-[11px] text-[#55738D] font-medium">Per sprint engagement (2-3 weeks)</div>
+            </div>
+
+            <ul class="space-y-2.5 text-xs text-[#2A3B27]">
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#70805D] mt-0.5"></i><span>Custom responsive web platform OR complete brand identity system</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#70805D] mt-0.5"></i><span>Sub-second load times &amp; 95+ PageSpeed score</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#70805D] mt-0.5"></i><span>Complete master vector &amp; source code repository</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#70805D] mt-0.5"></i><span>30 days post-launch support &amp; warranty</span></li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-gray-100">
+            <a href="#claim-offer" onclick="selectPackage('Core Sprint')" class="btn-outline-emerald w-full justify-center text-xs">
+              <span>Commission Sprint</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tier 2: 360° Retainer (Featured) -->
+        <div class="spotlight-card p-6 sm:p-8 bg-gradient-to-b from-white via-[#F8F9F6] to-[#F1F3ED] border-2 border-[#70805D] rounded-3xl shadow-xl flex flex-col justify-between relative transform md:-translate-y-3">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#70805D] to-[#2A3B27] text-white text-[10.5px] font-extrabold uppercase tracking-widest px-4 py-1 rounded-full shadow-md">
+            ⭐ Most Popular Partner Retainer
+          </div>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-extrabold text-[#70805D] uppercase tracking-wider">360° Fractional Lead</span>
+              <span class="text-[11px] font-bold text-white bg-[#70805D] px-2.5 py-0.5 rounded-full">High Demand</span>
+            </div>
+            <h3 class="text-xl font-black text-[#1C2B1B]">Strategic Growth Retainer</h3>
+            <p class="text-xs text-[#4D614A] leading-relaxed">
+              Full fractional creative direction &amp; digital architecture. Complete cross-disciplinary leadership across design, code, and growth ads.
+            </p>
+
+            <div class="py-4 border-y border-[#70805D]/20">
+              <div class="text-3xl font-black text-[#2A3B27]">$3,500 – $5,000</div>
+              <div class="text-[11px] text-[#70805D] font-bold">Monthly Retainer (Cancel anytime)</div>
+            </div>
+
+            <ul class="space-y-2.5 text-xs text-[#2A3B27]">
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#70805D] mt-0.5"></i><span><strong>Full 9-Pillar Coverage:</strong> Web development, branding, graphic design, social media &amp; paid ads</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#70805D] mt-0.5"></i><span>Dedicated weekly sprint roadmap &amp; direct Slack/WhatsApp channel</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#70805D] mt-0.5"></i><span>Google Ads &amp; Meta Ads funnel architecture with conversion tracking</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#70805D] mt-0.5"></i><span>Generative AI search optimization (AEO) &amp; Schema entity graphs</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#70805D] mt-0.5"></i><span>Continuous CRO audits, PageSpeed maintenance &amp; feature additions</span></li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-[#70805D]/20">
+            <a href="#claim-offer" onclick="selectPackage('Strategic Growth Retainer')" class="btn-aesthetic-primary w-full justify-center text-xs py-3">
+              <span>Claim Growth Retainer</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tier 3: Enterprise Scale -->
+        <div class="spotlight-card p-6 sm:p-8 bg-white border border-[#70805D]/20 rounded-3xl shadow-md flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-extrabold text-[#55738D] uppercase tracking-wider">Enterprise Scale</span>
+              <span class="text-[11px] font-bold text-[#55738D] bg-gray-100 px-2.5 py-0.5 rounded-full">Custom Scope</span>
+            </div>
+            <h3 class="text-xl font-black text-[#1C2B1B]">Market Domination</h3>
+            <p class="text-xs text-[#4D614A] leading-relaxed">
+              Omnichannel dominance for market leaders requiring commercial TVCs, 3D expo installations, high-volume paid media, and tier-1 mainstream PR.
+            </p>
+
+            <div class="py-4 border-y border-gray-100">
+              <div class="text-2xl font-black text-[#2A3B27]">$7,500+</div>
+              <div class="text-[11px] text-[#55738D] font-medium">Bespoke Enterprise Retainer / Project</div>
+            </div>
+
+            <ul class="space-y-2.5 text-xs text-[#2A3B27]">
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#70805D] mt-0.5"></i><span>End-to-end commercial video production &amp; 3D spatial architectural booths</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#70805D] mt-0.5"></i><span>Tier-1 national PR press release placements &amp; media outreach</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#70805D] mt-0.5"></i><span>Multi-platform web ecosystems (Jamstack, Headless Shopify, Laravel API)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#70805D] mt-0.5"></i><span>Executive boardroom strategy sessions &amp; investor pitch decks</span></li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-gray-100">
+            <a href="#claim-offer" onclick="selectPackage('Enterprise Market Domination')" class="btn-outline-emerald w-full justify-center text-xs">
+              <span>Book Enterprise Discovery</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. VALUE PROPOSITION & COMPARISON -->
+  <section class="py-16 border-t border-[#70805D]/15 bg-[#F1F3ED]/60 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1C2B1B] tracking-tight">
+          Why Partner With Md. Shakibur Rahaman?
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="spotlight-card p-6 bg-white rounded-2xl border border-[#70805D]/20 space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-lg font-bold"><i class="fa-solid fa-user-shield"></i></div>
+          <h4 class="text-sm font-extrabold text-[#1C2B1B]">Single Point of Accountability</h4>
+          <p class="text-xs text-[#4D614A] leading-relaxed">No junior handoffs or fragmented vendor finger-pointing. I direct and engineer your deliverables from inception to live deployment.</p>
+        </div>
+
+        <div class="spotlight-card p-6 bg-white rounded-2xl border border-[#70805D]/20 space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-lg font-bold"><i class="fa-solid fa-rocket"></i></div>
+          <h4 class="text-sm font-extrabold text-[#1C2B1B]">Sub-Second Performance</h4>
+          <p class="text-xs text-[#4D614A] leading-relaxed">Every web portal is engineered with modern clean code, achieving 95+ PageSpeed scores and lightning-fast user experiences.</p>
+        </div>
+
+        <div class="spotlight-card p-6 bg-white rounded-2xl border border-[#70805D]/20 space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-lg font-bold"><i class="fa-solid fa-key"></i></div>
+          <h4 class="text-sm font-extrabold text-[#1C2B1B]">100% Asset Sovereignty</h4>
+          <p class="text-xs text-[#4D614A] leading-relaxed">You own all master Figma vectors, git repositories, ad accounts, and documentation. No locked vendor lock-in.</p>
+        </div>
+
+        <div class="spotlight-card p-6 bg-white rounded-2xl border border-[#70805D]/20 space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-[#70805D]/15 text-[#70805D] flex items-center justify-center text-lg font-bold"><i class="fa-solid fa-brain"></i></div>
+          <h4 class="text-sm font-extrabold text-[#1C2B1B]">AI &amp; Search Ready</h4>
+          <p class="text-xs text-[#4D614A] leading-relaxed">Future-proofed with structured Schema.org JSON-LD and /llms.txt standard optimization for next-generation AI engine citations.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. CLAIM OFFER & CONSULTATION FORM -->
+  <section id="claim-offer" class="py-20 border-t border-[#70805D]/15 bg-white relative z-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center space-y-3 mb-10">
+        <div class="section-tag justify-center">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>GET STARTED TODAY</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C2B1B] tracking-tight">
+          Claim Your Engagement Package
+        </h2>
+        <p class="text-xs sm:text-sm text-[#4D614A]">
+          Fill out the brief below and I will respond with a tailored execution proposal within 24 business hours.
+        </p>
+      </div>
+
+      <div class="spotlight-card p-6 sm:p-10 bg-white border border-[#70805D]/25 rounded-3xl shadow-xl">
+        <form id="offerForm" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-[11px] font-bold text-[#4D614A] mb-1.5">Your Full Name *</label>
+              <input type="text" id="offerName" required placeholder="Marcus Vance" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-xs focus:outline-none focus:border-[#70805D]">
+            </div>
+            <div>
+              <label class="block text-[11px] font-bold text-[#4D614A] mb-1.5">Corporate Email Address *</label>
+              <input type="email" id="offerEmail" required placeholder="marcus@company.com" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-xs focus:outline-none focus:border-[#70805D]">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-[11px] font-bold text-[#4D614A] mb-1.5">Phone / WhatsApp</label>
+              <input type="text" id="offerPhone" placeholder="+880 1838-070468" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-xs focus:outline-none focus:border-[#70805D]">
+            </div>
+            <div>
+              <label class="block text-[11px] font-bold text-[#4D614A] mb-1.5">Selected Engagement Package *</label>
+              <select id="offerPackage" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-xs focus:outline-none focus:border-[#70805D]">
+                <option value="Strategic Growth Retainer ($3,500 - $5,000/mo)">⭐ Strategic Growth Retainer ($3,500 - $5,000/mo)</option>
+                <option value="Core Sprint Project ($1,200 - $2,500)">Core Sprint Project ($1,200 - $2,500)</option>
+                <option value="Enterprise Market Domination ($7,500+) ">Enterprise Market Domination ($7,500+)</option>
+                <option value="Custom Project Commission">Custom Project Commission</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-bold text-[#4D614A] mb-1.5">Project Scope &amp; Target Timeline *</label>
+            <textarea id="offerMessage" rows="4" required placeholder="Briefly outline your goals, target launch timeline, and key deliverables..." class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-xs focus:outline-none focus:border-[#70805D]"></textarea>
+          </div>
+
+          <div id="offerFormAlert" class="hidden p-4 rounded-xl text-xs font-semibold"></div>
+
+          <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
+            <button type="submit" id="submitOfferBtn" class="btn-aesthetic-primary w-full sm:w-auto px-8 py-3 text-xs justify-center">
+              <span>Submit Project Brief</span>
+              <i class="fa-solid fa-paper-plane text-xs"></i>
+            </button>
+            <a href="https://wa.me/8801838070468?text=Hi%20Shakibur,%20I%20would%20like%20to%20claim%20an%20exclusive%20engagement%20package." target="_blank" rel="noopener noreferrer" class="btn-outline-emerald w-full sm:w-auto px-6 py-3 text-xs justify-center">
+              <i class="fa-brands fa-whatsapp text-sm text-[#70805D]"></i>
+              <span>Connect on WhatsApp</span>
+            </a>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-12 border-t border-[#70805D]/15 bg-[#F1F3ED] text-xs text-[#4D614A] text-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="flex items-center justify-center gap-2 font-bold text-[#1C2B1B]">
+        <div class="w-7 h-7 rounded-lg bg-[#70805D] text-white flex items-center justify-center text-xs">SR</div>
+        <span>Md. Shakibur Rahaman • Strategic Lead &amp; Digital Architect</span>
+      </div>
+      <div>© 2026 Md. Shakibur Rahaman. All rights reserved. • <a href="/" class="text-[#70805D] underline font-bold">Return to Main Portfolio</a></div>
+    </div>
+  </footer>
+
+  <script>
+    function selectPackage(pkgName) {
+      const select = document.getElementById('offerPackage');
+      if (select) {
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].value.includes(pkgName)) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    }
+
+    document.getElementById('offerForm')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('submitOfferBtn');
+      const alertBox = document.getElementById('offerFormAlert');
+      const name = document.getElementById('offerName')?.value;
+      const email = document.getElementById('offerEmail')?.value;
+      const phone = document.getElementById('offerPhone')?.value;
+      const pkg = document.getElementById('offerPackage')?.value;
+      const msg = document.getElementById('offerMessage')?.value;
+
+      btn.disabled = true;
+      btn.innerHTML = '<span>Submitting Brief...</span>';
+
+      try {
+        const res = await fetch('/api/leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name,
+            email,
+            phone: phone || 'N/A',
+            services: 'Offer Package: ' + pkg,
+            message: msg,
+            date: new Date().toISOString()
+          })
+        });
+
+        alertBox.classList.remove('hidden');
+        alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-[#70805D]/15 text-[#2A3B27] border border-[#70805D]/35 block';
+        alertBox.textContent = '✅ Thank you! Your project brief has been submitted. Shakibur will review and respond within 24 hours.';
+        document.getElementById('offerForm').reset();
+      } catch (err) {
+        alertBox.classList.remove('hidden');
+        alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-gray-100 text-[#1C2B1B] border border-gray-300 block';
+        alertBox.textContent = 'Brief received! You can also connect via WhatsApp for immediate response.';
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<span>Submit Project Brief</span><i class="fa-solid fa-paper-plane text-xs"></i>';
+      }
+    });
+  </script>
+</body>
+</html>

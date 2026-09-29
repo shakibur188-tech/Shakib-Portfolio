@@ -6,8 +6,11 @@ DirectoryIndex index.html index.php
 
 RewriteEngine On
 
-# 1. Route Admin URL directly to admin.html
+# 1. Clean URL Route Rewriting
 RewriteRule ^admin/?$ admin.html [L,QSA]
+RewriteRule ^offer/?$ offer.html [L,QSA]
+RewriteRule ^offers/?$ offer.html [L,QSA]
+RewriteRule ^services/?$ services.html [L,QSA]
 
 # 2. Route all /api/* requests to Universal PHP API bridge
 RewriteRule ^api/(.*)$ api/index.php [L,QSA]
