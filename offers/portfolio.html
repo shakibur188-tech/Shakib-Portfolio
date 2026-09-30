@@ -158,9 +158,16 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- COMPARISON MATRIX TABLE VIEW -->
+      
+      <!-- Mobile Scroll Indicator (visible only on small screens) -->
+      <div class="md:hidden flex items-center justify-center gap-2 mb-3 text-[11px] font-bold text-[#64748B] bg-white p-2.5 rounded-xl border border-[#E2E8F0] shadow-2xs">
+        <i class="fa-solid fa-arrows-left-right text-[#0066FF] animate-pulse"></i>
+        <span>Swipe horizontally to compare all 4 plans</span>
+      </div>
       <div id="pricingTableView" class="morphy-card p-0 rounded-3xl bg-white border border-[#E2E8F0] shadow-xl overflow-hidden">
         <div class="overflow-x-auto">
-          <table class="w-full text-left border-collapse">
+          <table class="w-full text-left border-collapse min-w-[680px]">
+          
             <thead>
               <tr class="border-b border-[#E2E8F0] bg-[#F8FAFC]">
                 <th class="p-5 sm:p-6 text-sm font-black text-[#0B0F19] w-[24%]">Feature / Module</th>
@@ -529,6 +536,21 @@
       });
     }
     setupViewSwitcher();
+    
+    // Mobile-optimized default view selection
+    if (window.innerWidth < 768) {
+      const btnCards = document.getElementById('viewCardsBtn');
+      const btnTable = document.getElementById('viewTableBtn');
+      const tableSec = document.getElementById('pricingTableView');
+      const cardsSec = document.getElementById('pricingCardsView');
+      if (btnCards && btnTable && tableSec && cardsSec) {
+        cardsSec.classList.remove('hidden');
+        tableSec.classList.add('hidden');
+        btnCards.className = 'px-4 py-2 rounded-xl bg-[#0066FF] text-white shadow-xs font-black text-xs flex items-center gap-1.5 transition-all';
+        btnTable.className = 'px-4 py-2 rounded-xl bg-transparent text-[#64748B] hover:text-[#0B0F19] font-bold text-xs flex items-center gap-1.5 transition-all';
+      }
+    }
+  
   </script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 # ==============================================================================
 # Shakibur Rahaman Portfolio & CMS - Apache / cPanel / LiteSpeed Configuration
-# Universal Clean Extensionless URLs (.html hidden) & Security
+# Universal Clean Extensionless URLs (.html hidden), Security & Mobile Optimization
 # ==============================================================================
 
 DirectoryIndex index.html index.php
@@ -26,19 +26,39 @@ Options -Indexes
     # 4. Map clean URL /admin -> admin.html
     RewriteRule ^admin/?$ admin.html [L,QSA]
 
-    # 5. Internally rewrite extensionless URLs to their .html files if they exist
+    # 5. Direct explicit routing for Offers subpages
+    RewriteRule ^offers/ecommerce/?$ offers/ecommerce.html [L,QSA]
+    RewriteRule ^offers/service-platform/?$ offers/service-platform.html [L,QSA]
+    RewriteRule ^offers/portfolio/?$ offers/portfolio.html [L,QSA]
+    RewriteRule ^offers/?$ offers/index.html [L,QSA]
+    RewriteRule ^offers/index/?$ offers/index.html [L,QSA]
+
+    # 6. Direct explicit routing for Services subpages
+    RewriteRule ^services/branding/?$ services/branding.html [L,QSA]
+    RewriteRule ^services/graphics-design/?$ services/graphics-design.html [L,QSA]
+    RewriteRule ^services/web-development/?$ services/web-development.html [L,QSA]
+    RewriteRule ^services/social-media-marketing/?$ services/social-media-marketing.html [L,QSA]
+    RewriteRule ^services/photoshoot-videography/?$ services/photoshoot-videography.html [L,QSA]
+    RewriteRule ^services/event-activation/?$ services/event-activation.html [L,QSA]
+    RewriteRule ^services/google-ads/?$ services/google-ads.html [L,QSA]
+    RewriteRule ^services/seo-aeo/?$ services/seo-aeo.html [L,QSA]
+    RewriteRule ^services/public-relations/?$ services/public-relations.html [L,QSA]
+    RewriteRule ^services/?$ services/index.html [L,QSA]
+    RewriteRule ^services/index/?$ services/index.html [L,QSA]
+
+    # 7. Generic rewrite for root pages (e.g. /about -> about.html, /projects -> projects.html)
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{DOCUMENT_ROOT}/$1.html -f
     RewriteRule ^(.*)$ $1.html [L,QSA]
 
-    # 6. Fallback for subdirectories (e.g. /services/branding)
+    # 8. Fallback for subdirectories
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME}.html -f
     RewriteRule ^(.*)$ $1.html [L,QSA]
 
-    # 7. Block access to private data files and git
+    # 9. Block access to private data files and git
     RewriteRule ^data(/.*)?$ - [F,L]
     RewriteRule ^.git.*$ - [F,L]
 </IfModule>
