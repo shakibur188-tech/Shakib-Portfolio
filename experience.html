@@ -3,27 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experience & Career Track Record | Md. Shakibur Rahaman</title>
-  <meta name="description" content="Professional track record, enterprise client impact, ad spend management, and digital leadership experience of Md. Shakibur Rahaman.">
+  <title>Experience &amp; Career Track Record | Md. Shakibur Rahaman</title>
+  <meta name="description" content="Explore Md. Shakibur Rahaman's 5+ years of verified career experience across Hotel Sarina Dhaka, Marriott International (Renaissance Dhaka), ASAP Solutions, and executive growth strategy.">
+  <link rel="canonical" href="https://www.shakibur.info/experience">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Experience & Career Track Record | Md. Shakibur Rahaman">
-  <meta property="og:description" content="Explore Md. Shakibur Rahaman's 5+ years of digital marketing leadership, $1.2M+ ad spend managed, and 200+ campaigns scaled.">
-  <meta property="og:url" content="https://shakibur.info/experience.html">
-  <meta property="og:image" content="https://shakibur.info/assets/profile.jpg">
+  <meta property="og:title" content="Experience &amp; Career Track Record | Md. Shakibur Rahaman">
+  <meta property="og:description" content="Explore Md. Shakibur Rahaman's 5+ years of verified career milestones, hospitality marketing, paid acquisition leadership, and corporate track record.">
+  <meta property="og:url" content="https://www.shakibur.info/experience">
+  <meta property="og:image" content="https://www.shakibur.info/assets/shakibur.jpg">
+
+  <!-- Plus Jakarta Sans Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS & Font Awesome -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#0066FF',
+              forest: '#0B0F19',
+              slate: '#0066FF',
+              mist: '#94A3B8',
+              stone: '#CBD5E1'
+            },
+            canvas: '#FAFCFF'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
-<body class="antialiased bg-[#FAFCFF] text-[#0B0F19] min-h-screen">
+<body class="antialiased bg-[#FAFCFF] text-[#0B0F19] min-h-screen relative overflow-x-hidden">
 
   <div id="scrollProgressBar"></div>
+  <div class="ambient-mesh-glow"></div>
   <canvas id="ambientCanvas"></canvas>
+  <div class="ambient-vignette"></div>
 
-  <!-- NAVBAR COMPONENT -->
-    <!-- 1. FIXED GLASS NAVBAR (Matching Reference Pill Layout) -->
+  <!-- 1. FIXED GLASS NAVBAR -->
   <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-2xl border-b border-[#E2E8F0] transition-all duration-300 shadow-2xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
@@ -38,7 +68,7 @@
         </div>
       </a>
 
-      <!-- Centered Floating Pill Navigation Menu (Exact User Layout) -->
+      <!-- Centered Floating Pill Navigation Menu -->
       <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-white/95 border border-[#E2E8F0] text-sm font-semibold text-[#334155] backdrop-blur-md shadow-xs">
         <a href="/" class="hover:text-[#0066FF] transition-colors">Home</a>
         <a href="/about" class="hover:text-[#0066FF] transition-colors">About</a>
@@ -49,7 +79,6 @@
             <span>Services</span>
             <i class="fa-solid fa-chevron-down text-[10px] text-[#64748B] group-hover:text-[#0066FF] group-hover:rotate-180 transition-transform duration-200"></i>
           </a>
-          <!-- Dropdown card -->
           <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#E2E8F0] shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
             <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Social Media &amp; Meta Ads</a>
             <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Google Ads &amp; Search</a>
@@ -84,132 +113,317 @@
       <a href="/about" class="mobile-link block text-sm font-semibold text-[#334155]">About</a>
       <a href="/services" class="mobile-link block text-sm font-semibold text-[#334155]">Services</a>
       <a href="/projects" class="mobile-link block text-sm font-semibold text-[#334155]">Projects</a>
-      <a href="/experience" class="mobile-link block text-sm font-semibold text-[#334155]">Experience</a>
+      <a href="/experience" class="mobile-link block text-sm font-semibold text-[#334155] text-[#0066FF] font-bold">Experience</a>
       <a href="/consultation" class="mobile-link block text-sm font-semibold text-[#334155]">Consultation</a>
     </div>
   </header>
 
-  <!-- HERO HEADER -->
+  <!-- 2. HERO HEADER -->
   <section class="pt-36 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <div class="text-center max-w-3xl mx-auto space-y-4">
-      <div class="morphy-tag-primary">
+      <div class="morphy-tag-primary justify-center">
         <i class="fa-solid fa-briefcase"></i>
-        <span>Career Milestones &amp; Track Record</span>
+        <span>VERIFIED CAREER TRACK RECORD</span>
       </div>
-      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0B0F19]">
-        5+ Years Driving <span class="text-[#0066FF]">Measurable Digital Growth</span>
+      <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-[#0B0F19] leading-[1.1]">
+        5+ Years Leading <br>
+        <span class="bg-gradient-to-r from-[#0066FF] to-[#0052FF] bg-clip-text text-transparent">Brand Strategy &amp; Digital Growth</span>
       </h1>
-      <p class="text-base sm:text-lg text-[#64748B] font-medium leading-relaxed">
-        From early-stage DTC startups to established enterprise ecosystems, explore the roles, client results, and strategic frameworks executed across the digital landscape.
+      <p class="text-sm sm:text-base text-[#64748B] font-medium leading-relaxed max-w-2xl mx-auto">
+        Results-driven marketing professional with proven track record across 5-star international hospitality, enterprise digital agencies, paid media buying, and cross-functional team leadership.
       </p>
     </div>
 
-    <!-- STAT PILLS -->
+    <!-- EXECUTIVE STAT PILLS -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-12">
-      <div class="morphy-card p-6 text-center">
-        <div class="text-3xl sm:text-4xl font-black text-[#0066FF] mb-1">$1.2M+</div>
-        <div class="text-xs font-bold text-[#64748B] uppercase tracking-wider">Ad Spend Managed</div>
+      <div class="morphy-card p-6 text-center bg-white shadow-xs">
+        <div class="text-3xl sm:text-4xl font-black text-[#0066FF] mb-1">5+</div>
+        <div class="text-xs font-bold text-[#64748B] uppercase tracking-wider">Years Experience</div>
       </div>
-      <div class="morphy-card p-6 text-center">
-        <div class="text-3xl sm:text-4xl font-black text-[#0B0F19] mb-1">200+</div>
-        <div class="text-xs font-bold text-[#64748B] uppercase tracking-wider">Campaigns Scaled</div>
+      <div class="morphy-card p-6 text-center bg-white shadow-xs">
+        <div class="text-3xl sm:text-4xl font-black text-[#0B0F19] mb-1">4+</div>
+        <div class="text-xs font-bold text-[#64748B] uppercase tracking-wider">Industry Awards</div>
       </div>
-      <div class="morphy-card p-6 text-center">
-        <div class="text-3xl sm:text-4xl font-black text-[#0066FF] mb-1">4.2x</div>
-        <div class="text-xs font-bold text-[#64748B] uppercase tracking-wider">Average Blended ROAS</div>
+      <div class="morphy-card p-6 text-center bg-white shadow-xs">
+        <div class="text-3xl sm:text-4xl font-black text-[#0066FF] mb-1">100%</div>
+        <div class="text-xs font-bold text-[#64748B] uppercase tracking-wider">Brand Compliance</div>
       </div>
-      <div class="morphy-card p-6 text-center">
-        <div class="text-3xl sm:text-4xl font-black text-[#10B981] mb-1">98.4%</div>
-        <div class="text-xs font-bold text-[#64748B] uppercase tracking-wider">Client Retention Rate</div>
+      <div class="morphy-card p-6 text-center bg-white shadow-xs">
+        <div class="text-3xl sm:text-4xl font-black text-[#10B981] mb-1">5</div>
+        <div class="text-xs font-bold text-[#64748B] uppercase tracking-wider">Certified Domains</div>
       </div>
     </div>
   </section>
 
-  <!-- TIMELINE EXPERIENCE SECTION -->
-  <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+  <!-- 3. CORE COMPETENCIES MATRIX -->
+  <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="morphy-card p-8 sm:p-10 bg-white border border-[#E2E8F0] shadow-sm space-y-6">
+      <div class="flex items-center justify-between border-b border-[#F1F5F9] pb-4">
+        <div>
+          <span class="text-[10px] font-black uppercase tracking-widest text-[#0066FF]">CORE DOMAIN MASTERY</span>
+          <h2 class="text-2xl font-black text-[#0B0F19] tracking-tight mt-1">Strategic Competency Matrix</h2>
+        </div>
+        <div class="w-10 h-10 rounded-2xl bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-lg">
+          <i class="fa-solid fa-layer-group"></i>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
+        <div class="p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center gap-2.5">
+          <i class="fa-solid fa-circle-check text-[#0066FF] text-xs"></i>
+          <span class="text-xs font-bold text-[#0B0F19]">Brand Positioning &amp; Comms</span>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center gap-2.5">
+          <i class="fa-solid fa-circle-check text-[#0066FF] text-xs"></i>
+          <span class="text-xs font-bold text-[#0B0F19]">Campaign Planning &amp; Execution</span>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center gap-2.5">
+          <i class="fa-solid fa-circle-check text-[#0066FF] text-xs"></i>
+          <span class="text-xs font-bold text-[#0B0F19]">Digital Marketing &amp; Media</span>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center gap-2.5">
+          <i class="fa-solid fa-circle-check text-[#0066FF] text-xs"></i>
+          <span class="text-xs font-bold text-[#0B0F19]">Paid Ads (Meta &amp; SEM)</span>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center gap-2.5">
+          <i class="fa-solid fa-circle-check text-[#0066FF] text-xs"></i>
+          <span class="text-xs font-bold text-[#0B0F19]">Social Media Strategy</span>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center gap-2.5">
+          <i class="fa-solid fa-circle-check text-[#0066FF] text-xs"></i>
+          <span class="text-xs font-bold text-[#0B0F19]">Content &amp; Copywriting</span>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center gap-2.5">
+          <i class="fa-solid fa-circle-check text-[#0066FF] text-xs"></i>
+          <span class="text-xs font-bold text-[#0B0F19]">KPI Reporting &amp; Analytics</span>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center gap-2.5">
+          <i class="fa-solid fa-circle-check text-[#0066FF] text-xs"></i>
+          <span class="text-xs font-bold text-[#0B0F19]">Market &amp; Competitor Research</span>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center gap-2.5">
+          <i class="fa-solid fa-circle-check text-[#0066FF] text-xs"></i>
+          <span class="text-xs font-bold text-[#0B0F19]">Partnership &amp; Co-Branding</span>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center gap-2.5">
+          <i class="fa-solid fa-circle-check text-[#0066FF] text-xs"></i>
+          <span class="text-xs font-bold text-[#0B0F19]">Cross-Functional Teams</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CHRONOLOGICAL WORK EXPERIENCE TIMELINE -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <div class="morphy-tag-primary justify-center mb-3">
+        <i class="fa-solid fa-timeline"></i>
+        <span>PROFESSIONAL TIMELINE</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-black text-[#0B0F19]">Career Progression &amp; Milestones</h2>
+    </div>
+
     <div class="space-y-8 relative before:absolute before:inset-0 before:left-8 before:w-0.5 before:bg-[#E2E8F0] md:before:left-1/2 md:before:-translate-x-1/2">
 
-      <!-- Timeline Item 1: Strategic Lead -->
+      <!-- Role 1: Senior Marketing Executive (Hotel Sarina Dhaka) -->
       <div class="relative flex flex-col md:flex-row items-start group">
         <div class="hidden md:block w-1/2 pr-12 text-right">
-          <span class="inline-block px-3 py-1 rounded-full text-xs font-extrabold bg-[#0066FF]/10 text-[#0066FF]">2023 - PRESENT</span>
-          <h3 class="text-xl font-bold text-[#0B0F19] mt-2">Principal Digital Architect &amp; Growth Consultant</h3>
-          <p class="text-xs font-semibold text-[#64748B]">AdElevate Global &amp; Independent Retainers</p>
+          <span class="inline-block px-3.5 py-1 rounded-full text-xs font-extrabold bg-[#0066FF]/10 text-[#0066FF] border border-[#0066FF]/20">JUL 2025 – PRESENT</span>
+          <h3 class="text-xl font-bold text-[#0B0F19] mt-2">Senior Marketing Executive</h3>
+          <p class="text-xs font-semibold text-[#64748B]">Hotel Sarina Dhaka • Dhaka, Bangladesh</p>
         </div>
         <div class="absolute left-8 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-4 border-[#0066FF] flex items-center justify-center shadow-md z-10">
           <div class="w-2 h-2 rounded-full bg-[#0066FF]"></div>
         </div>
         <div class="pl-16 md:pl-12 md:w-1/2">
-          <div class="morphy-card p-6 space-y-3">
+          <div class="morphy-card p-6 sm:p-7 space-y-4 bg-white">
             <div class="md:hidden">
-              <span class="inline-block px-3 py-1 rounded-full text-xs font-extrabold bg-[#0066FF]/10 text-[#0066FF]">2023 - PRESENT</span>
-              <h3 class="text-lg font-bold text-[#0B0F19] mt-2">Principal Digital Architect</h3>
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-extrabold bg-[#0066FF]/10 text-[#0066FF]">JUL 2025 – PRESENT</span>
+              <h3 class="text-lg font-bold text-[#0B0F19] mt-2">Senior Marketing Executive</h3>
+              <p class="text-xs font-semibold text-[#64748B]">Hotel Sarina Dhaka</p>
             </div>
-            <p class="text-sm text-[#475569] leading-relaxed">
-              Directing end-to-end paid acquisition strategies for US, UK, and APAC e-commerce &amp; SaaS brands. Managing over $45k/month in ad capital, optimizing Meta Advantage+ pipelines, and building bespoke full-stack landing funnels.
-            </p>
-            <div class="flex flex-wrap gap-2 pt-2">
-              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F1F5F9] text-[#475569]">Meta Ads</span>
-              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F1F5F9] text-[#475569]">Google PMax</span>
-              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F1F5F9] text-[#475569]">Full-Stack Web</span>
-              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F1F5F9] text-[#475569]">CAPI Telemetry</span>
+            <ul class="space-y-2 text-xs text-[#475569] font-medium leading-relaxed">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Execute overall marketing strategy across branding, digital campaigns, and customer experience initiatives.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Plan and implement integrated campaigns across online and offline channels to drive direct revenue growth.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Manage paid media buying on Meta Ads focused on lead generation, reach, and conversion optimization.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Develop bank and corporate partnerships and co-branded campaigns to expand customer reach and visibility.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Produce and manage creative assets, ensuring consistent brand identity across all touchpoints.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Track campaign KPIs, analyze performance data, and optimize spend based on data-driven insights.</span>
+              </li>
+            </ul>
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-[#F1F5F9]">
+              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F8FAFC] border border-[#E2E8F0] text-[#334155]">Brand Strategy</span>
+              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F8FAFC] border border-[#E2E8F0] text-[#334155]">Meta Ads</span>
+              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F8FAFC] border border-[#E2E8F0] text-[#334155]">Bank Partnerships</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Timeline Item 2: Senior Performance Marketer -->
+      <!-- Role 2: Senior Digital Marketing Executive (ASAP Solutions) -->
       <div class="relative flex flex-col md:flex-row items-start group">
         <div class="hidden md:block w-1/2 pr-12 text-right">
-          <span class="inline-block px-3 py-1 rounded-full text-xs font-extrabold bg-[#E2E8F0] text-[#475569]">2021 - 2023</span>
-          <h3 class="text-xl font-bold text-[#0B0F19] mt-2">Senior Performance Marketing Specialist</h3>
-          <p class="text-xs font-semibold text-[#64748B]">Digital Reach Agency</p>
+          <span class="inline-block px-3.5 py-1 rounded-full text-xs font-extrabold bg-[#F8FAFC] text-[#64748B] border border-[#E2E8F0]">NOV 2024 – JUN 2025</span>
+          <h3 class="text-xl font-bold text-[#0B0F19] mt-2">Senior Digital Marketing Executive</h3>
+          <p class="text-xs font-semibold text-[#64748B]">ASAP Solutions Limited • Dhaka, Bangladesh</p>
         </div>
         <div class="absolute left-8 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-4 border-[#0B0F19] flex items-center justify-center shadow-md z-10">
           <div class="w-2 h-2 rounded-full bg-[#0B0F19]"></div>
         </div>
         <div class="pl-16 md:pl-12 md:w-1/2">
-          <div class="morphy-card p-6 space-y-3">
+          <div class="morphy-card p-6 sm:p-7 space-y-4 bg-white">
             <div class="md:hidden">
-              <span class="inline-block px-3 py-1 rounded-full text-xs font-extrabold bg-[#E2E8F0] text-[#475569]">2021 - 2023</span>
-              <h3 class="text-lg font-bold text-[#0B0F19] mt-2">Senior Performance Marketer</h3>
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-extrabold bg-[#F8FAFC] text-[#64748B]">NOV 2024 – JUN 2025</span>
+              <h3 class="text-lg font-bold text-[#0B0F19] mt-2">Senior Digital Marketing Executive</h3>
+              <p class="text-xs font-semibold text-[#64748B]">ASAP Solutions Limited</p>
             </div>
-            <p class="text-sm text-[#475569] leading-relaxed">
-              Spearheaded multi-channel campaigns across Facebook, Instagram, and TikTok for 30+ DTC fashion and lifestyle clients. Implemented dynamic creative testing (DCT) models that lowered blended Customer Acquisition Cost (CAC) by 32%.
-            </p>
-            <div class="flex flex-wrap gap-2 pt-2">
-              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F1F5F9] text-[#475569]">Creative Strategy</span>
-              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F1F5F9] text-[#475569]">TikTok Spark Ads</span>
-              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F1F5F9] text-[#475569]">Shopify Optimization</span>
+            <ul class="space-y-2 text-xs text-[#475569] font-medium leading-relaxed">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Developed and executed multi-channel digital strategies focused on lead generation and ROI improvement.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Managed paid campaigns, analyzed conversion performance, and optimized spend based on data insights.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Created and delivered promotional content, including videos, creatives, and campaign visuals.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Coordinated with cross-functional teams to align marketing efforts with broader business objectives.</span>
+              </li>
+            </ul>
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-[#F1F5F9]">
+              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F8FAFC] border border-[#E2E8F0] text-[#334155]">Lead Generation</span>
+              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F8FAFC] border border-[#E2E8F0] text-[#334155]">ROI Optimization</span>
+              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F8FAFC] border border-[#E2E8F0] text-[#334155]">Content Production</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Timeline Item 3: Digital Marketer & Web Developer -->
+      <!-- Role 3: Digital Marketing Executive (Renaissance Dhaka / Marriott) -->
       <div class="relative flex flex-col md:flex-row items-start group">
         <div class="hidden md:block w-1/2 pr-12 text-right">
-          <span class="inline-block px-3 py-1 rounded-full text-xs font-extrabold bg-[#E2E8F0] text-[#475569]">2019 - 2021</span>
-          <h3 class="text-xl font-bold text-[#0B0F19] mt-2">Digital Marketer &amp; Web Developer</h3>
-          <p class="text-xs font-semibold text-[#64748B]">TechVision Media</p>
+          <span class="inline-block px-3.5 py-1 rounded-full text-xs font-extrabold bg-[#F8FAFC] text-[#64748B] border border-[#E2E8F0]">MAR 2024 – OCT 2024</span>
+          <h3 class="text-xl font-bold text-[#0B0F19] mt-2">Digital Marketing Executive</h3>
+          <p class="text-xs font-semibold text-[#64748B]">Renaissance Dhaka Gulshan Hotel (Marriott International)</p>
+        </div>
+        <div class="absolute left-8 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-4 border-[#0066FF] flex items-center justify-center shadow-md z-10">
+          <div class="w-2 h-2 rounded-full bg-[#0066FF]"></div>
+        </div>
+        <div class="pl-16 md:pl-12 md:w-1/2">
+          <div class="morphy-card p-6 sm:p-7 space-y-4 bg-white">
+            <div class="md:hidden">
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-extrabold bg-[#F8FAFC] text-[#64748B]">MAR 2024 – OCT 2024</span>
+              <h3 class="text-lg font-bold text-[#0B0F19] mt-2">Digital Marketing Executive</h3>
+              <p class="text-xs font-semibold text-[#64748B]">Marriott International (Renaissance)</p>
+            </div>
+            <ul class="space-y-2 text-xs text-[#475569] font-medium leading-relaxed">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Executed targeted digital campaigns to improve luxury brand visibility and audience engagement.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Managed corporate website content via WordPress, strictly aligned with Marriott brand guidelines.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Coordinated with regional marketing teams on campaign execution and global brand compliance.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Collected and analyzed guest feedback data to generate actionable improvement insights.</span>
+              </li>
+            </ul>
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-[#F1F5F9]">
+              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F8FAFC] border border-[#E2E8F0] text-[#334155]">Marriott Standards</span>
+              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F8FAFC] border border-[#E2E8F0] text-[#334155]">WordPress CMS</span>
+              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F8FAFC] border border-[#E2E8F0] text-[#334155]">Global Compliance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Role 4: Marketing Executive (Hotel Sarina Dhaka) -->
+      <div class="relative flex flex-col md:flex-row items-start group">
+        <div class="hidden md:block w-1/2 pr-12 text-right">
+          <span class="inline-block px-3.5 py-1 rounded-full text-xs font-extrabold bg-[#F8FAFC] text-[#64748B] border border-[#E2E8F0]">JUL 2022 – OCT 2023</span>
+          <h3 class="text-xl font-bold text-[#0B0F19] mt-2">Marketing Executive</h3>
+          <p class="text-xs font-semibold text-[#64748B]">Hotel Sarina Dhaka • Dhaka, Bangladesh</p>
         </div>
         <div class="absolute left-8 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-4 border-[#64748B] flex items-center justify-center shadow-md z-10">
           <div class="w-2 h-2 rounded-full bg-[#64748B]"></div>
         </div>
         <div class="pl-16 md:pl-12 md:w-1/2">
-          <div class="morphy-card p-6 space-y-3">
+          <div class="morphy-card p-6 sm:p-7 space-y-4 bg-white">
             <div class="md:hidden">
-              <span class="inline-block px-3 py-1 rounded-full text-xs font-extrabold bg-[#E2E8F0] text-[#475569]">2019 - 2021</span>
-              <h3 class="text-lg font-bold text-[#0B0F19] mt-2">Digital Marketer &amp; Web Developer</h3>
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-extrabold bg-[#F8FAFC] text-[#64748B]">JUL 2022 – OCT 2023</span>
+              <h3 class="text-lg font-bold text-[#0B0F19] mt-2">Marketing Executive</h3>
+              <p class="text-xs font-semibold text-[#64748B]">Hotel Sarina Dhaka</p>
             </div>
-            <p class="text-sm text-[#475569] leading-relaxed">
-              Developed high-performance custom WordPress and JavaScript websites, integrated Google Analytics and Facebook Pixels, and executed foundational search engine optimization (SEO) strategies for regional enterprise businesses.
+            <ul class="space-y-2 text-xs text-[#475569] font-medium leading-relaxed">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Built brand awareness through targeted digital and offline marketing campaigns.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Created engaging social media content, posts, graphics, and short-form promotional videos.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Assisted in planning promotions, advertisements, and operational marketing activities.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] mt-0.5 shrink-0"></i>
+                <span>Collaborated with vendors and internal teams to ensure smooth campaign delivery.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Role 5 & 6: Earlier Foundations -->
+      <div class="relative flex flex-col md:flex-row items-start group">
+        <div class="hidden md:block w-1/2 pr-12 text-right">
+          <span class="inline-block px-3.5 py-1 rounded-full text-xs font-extrabold bg-[#F8FAFC] text-[#64748B] border border-[#E2E8F0]">2019 – 2022</span>
+          <h3 class="text-xl font-bold text-[#0B0F19] mt-2">Marketing Coordinator &amp; Associate</h3>
+          <p class="text-xs font-semibold text-[#64748B]">Hotel Sarina &amp; HRDI</p>
+        </div>
+        <div class="absolute left-8 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-4 border-[#E2E8F0] flex items-center justify-center shadow-md z-10">
+          <div class="w-2 h-2 rounded-full bg-[#64748B]"></div>
+        </div>
+        <div class="pl-16 md:pl-12 md:w-1/2">
+          <div class="morphy-card p-6 space-y-3 bg-white">
+            <div class="md:hidden">
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-extrabold bg-[#F8FAFC] text-[#64748B]">2019 – 2022</span>
+              <h3 class="text-lg font-bold text-[#0B0F19] mt-2">Marketing Coordinator &amp; Associate</h3>
+            </div>
+            <p class="text-xs text-[#475569] leading-relaxed">
+              <strong>Marketing Coordinator (Hotel Sarina | May 2022 – Jun 2022):</strong> Coordinated content calendar, social media management, and tracked engagement metrics.<br><br>
+              <strong>Student Associate (Human Resource Development Institute | Nov 2019 – Jul 2020):</strong> Supported training coordination, administrative operations, content creation, and program logistics.
             </p>
-            <div class="flex flex-wrap gap-2 pt-2">
-              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F1F5F9] text-[#475569]">WordPress</span>
-              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F1F5F9] text-[#475569]">SEO/SEM</span>
-              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#F1F5F9] text-[#475569]">JavaScript</span>
-            </div>
           </div>
         </div>
       </div>
@@ -217,81 +431,286 @@
     </div>
   </section>
 
-  <!-- SKILLS & COMPETENCY MATRIX -->
-  <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <!-- 5. HONORS & ACHIEVEMENTS STRIP -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#E2E8F0]">
     <div class="text-center max-w-2xl mx-auto mb-12">
-      <div class="morphy-tag-primary mb-3">
-        <i class="fa-solid fa-layer-group"></i>
-        <span>Core Expertise</span>
+      <div class="morphy-tag-primary justify-center mb-3">
+        <i class="fa-solid fa-trophy"></i>
+        <span>HONORS &amp; RECOGNITIONS</span>
       </div>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B0F19]">Technical &amp; Strategic Arsenal</h2>
+      <h2 class="text-3xl sm:text-4xl font-black text-[#0B0F19]">Key Performance Achievements</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="morphy-card p-8 space-y-4">
-        <div class="w-12 h-12 rounded-2xl bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-xl">
-          <i class="fa-solid fa-chart-pie"></i>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="morphy-card p-6 bg-white border border-[#E2E8F0] space-y-2 text-center">
+        <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-500 flex items-center justify-center text-xl mx-auto mb-3">
+          <i class="fa-solid fa-award"></i>
         </div>
-        <h3 class="text-lg font-bold text-[#0B0F19]">Paid Acquisition Mastery</h3>
-        <p class="text-sm text-[#64748B] leading-relaxed">
-          Deep expertise in Meta Ads Manager, Google Ads (Search, Display, PMax, YouTube), TikTok Ads Manager, LinkedIn Campaign Manager, and programmatic display bidding.
-        </p>
+        <h4 class="text-sm font-black text-[#0B0F19]">Pillar of Trust of the Month</h4>
+        <p class="text-xs text-[#0066FF] font-bold">Hotel Sarina Dhaka</p>
+        <span class="inline-block px-2.5 py-0.5 rounded-full bg-[#F8FAFC] text-[10px] font-bold text-[#64748B]">Jan 2026</span>
       </div>
 
-      <div class="morphy-card p-8 space-y-4">
-        <div class="w-12 h-12 rounded-2xl bg-[#10B981]/10 text-[#10B981] flex items-center justify-center text-xl">
-          <i class="fa-solid fa-code"></i>
+      <div class="morphy-card p-6 bg-white border border-[#E2E8F0] space-y-2 text-center">
+        <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-500 flex items-center justify-center text-xl mx-auto mb-3">
+          <i class="fa-solid fa-bolt"></i>
         </div>
-        <h3 class="text-lg font-bold text-[#0B0F19]">Full-Stack Web Engineering</h3>
-        <p class="text-sm text-[#64748B] leading-relaxed">
-          HTML5/CSS3/JavaScript, Tailwind CSS, PHP backend architectures, WordPress custom theme engineering, REST API integrations, and sub-second page speed optimization.
-        </p>
+        <h4 class="text-sm font-black text-[#0B0F19]">Dedication Dynamo of the Month</h4>
+        <p class="text-xs text-[#0066FF] font-bold">Hotel Sarina Dhaka</p>
+        <span class="inline-block px-2.5 py-0.5 rounded-full bg-[#F8FAFC] text-[10px] font-bold text-[#64748B]">Dec 2025</span>
       </div>
 
-      <div class="morphy-card p-8 space-y-4">
-        <div class="w-12 h-12 rounded-2xl bg-[#8B5CF6]/10 text-[#8B5CF6] flex items-center justify-center text-xl">
-          <i class="fa-solid fa-server"></i>
+      <div class="morphy-card p-6 bg-white border border-[#E2E8F0] space-y-2 text-center">
+        <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-500 flex items-center justify-center text-xl mx-auto mb-3">
+          <i class="fa-solid fa-star"></i>
         </div>
-        <h3 class="text-lg font-bold text-[#0B0F19]">Analytics &amp; Server Telemetry</h3>
-        <p class="text-sm text-[#64748B] leading-relaxed">
-          Google Tag Manager (GTM), Meta Conversions API (CAPI server-side tracking), GA4 customized event architecture, and automated Looker Studio client dashboards.
-        </p>
+        <h4 class="text-sm font-black text-[#0B0F19]">Employee of the Month (2x)</h4>
+        <p class="text-xs text-[#0066FF] font-bold">Hotel Sarina Dhaka</p>
+        <span class="inline-block px-2.5 py-0.5 rounded-full bg-[#F8FAFC] text-[10px] font-bold text-[#64748B]">Feb &amp; Jun 2023</span>
+      </div>
+
+      <div class="morphy-card p-6 bg-white border border-[#E2E8F0] space-y-2 text-center">
+        <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-500 flex items-center justify-center text-xl mx-auto mb-3">
+          <i class="fa-solid fa-medal"></i>
+        </div>
+        <h4 class="text-sm font-black text-[#0B0F19]">Best Performer of the Month</h4>
+        <p class="text-xs text-[#0066FF] font-bold">Hotel Sarina Dhaka</p>
+        <span class="inline-block px-2.5 py-0.5 rounded-full bg-[#F8FAFC] text-[10px] font-bold text-[#64748B]">Mar 2023</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. EDUCATION & CERTIFICATIONS DUAL BENTO -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#E2E8F0]">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Education Card -->
+      <div class="morphy-card p-8 bg-white border border-[#E2E8F0] space-y-6">
+        <div class="flex items-center gap-3 border-b border-[#F1F5F9] pb-4">
+          <div class="w-10 h-10 rounded-2xl bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-lg">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-black text-[#0B0F19]">Academic Credentials</h3>
+            <p class="text-xs text-[#64748B]">Formal Higher Education Background</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] space-y-1">
+            <div class="flex items-center justify-between">
+              <h4 class="text-sm font-black text-[#0B0F19]">Bachelor of Tourism &amp; Hospitality Management</h4>
+              <span class="px-2.5 py-0.5 rounded-full bg-[#0066FF]/10 text-[#0066FF] text-[10.5px] font-bold">CGPA: 3.36 / 4.00</span>
+            </div>
+            <p class="text-xs text-[#64748B] font-semibold">Daffodil International University (DIU)</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] space-y-1">
+            <div class="flex items-center justify-between">
+              <h4 class="text-sm font-black text-[#0B0F19]">Higher Secondary Certificate (HSC), Business Studies</h4>
+              <span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-[#475569] text-[10.5px] font-bold">GPA: 4.08 / 5.00</span>
+            </div>
+            <p class="text-xs text-[#64748B] font-semibold">Haziganj Govt. Model College</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] space-y-1">
+            <div class="flex items-center justify-between">
+              <h4 class="text-sm font-black text-[#0B0F19]">Secondary School Certificate (SSC), Business Studies</h4>
+              <span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-[#475569] text-[10.5px] font-bold">GPA: 4.68 / 5.00</span>
+            </div>
+            <p class="text-xs text-[#64748B] font-semibold">Al-Amin Academy School &amp; College</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications Card -->
+      <div class="morphy-card p-8 bg-white border border-[#E2E8F0] space-y-6">
+        <div class="flex items-center gap-3 border-b border-[#F1F5F9] pb-4">
+          <div class="w-10 h-10 rounded-2xl bg-[#10B981]/10 text-[#10B981] flex items-center justify-center text-lg">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-black text-[#0B0F19]">Professional Certifications</h3>
+            <p class="text-xs text-[#64748B]">Industry Accreditations &amp; Specializations</p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <div class="p-3 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <i class="fa-brands fa-google text-[#4285F4] text-base"></i>
+              <div>
+                <div class="text-xs font-black text-[#0B0F19]">Google Ads – Search Campaign</div>
+                <div class="text-[10.5px] text-[#64748B]">Coursera</div>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold text-[#64748B] bg-white px-2 py-0.5 rounded-md border border-[#E2E8F0]">Oct 2024</span>
+          </div>
+
+          <div class="p-3 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <i class="fa-brands fa-meta text-[#0066FF] text-base"></i>
+              <div>
+                <div class="text-xs font-black text-[#0B0F19]">Meta Pixel Setup &amp; Advanced Tracking</div>
+                <div class="text-[10.5px] text-[#64748B]">Coursera</div>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold text-[#64748B] bg-white px-2 py-0.5 rounded-md border border-[#E2E8F0]">Jun 2024</span>
+          </div>
+
+          <div class="p-3 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <i class="fa-brands fa-hubspot text-[#FF7A59] text-base"></i>
+              <div>
+                <div class="text-xs font-black text-[#0B0F19]">SEO Certification</div>
+                <div class="text-[10.5px] text-[#64748B]">HubSpot Academy</div>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold text-[#64748B] bg-white px-2 py-0.5 rounded-md border border-[#E2E8F0]">Nov 2023</span>
+          </div>
+
+          <div class="p-3 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <i class="fa-brands fa-facebook text-[#0066FF] text-base"></i>
+              <div>
+                <div class="text-xs font-black text-[#0B0F19]">Facebook Marketing Specialization</div>
+                <div class="text-[10.5px] text-[#64748B]">Grameenphone Academy</div>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold text-[#64748B] bg-white px-2 py-0.5 rounded-md border border-[#E2E8F0]">Sep 2023</span>
+          </div>
+
+          <div class="p-3 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-chart-line text-[#10B981] text-base"></i>
+              <div>
+                <div class="text-xs font-black text-[#0B0F19]">Business Analytics (Excel)</div>
+                <div class="text-[10.5px] text-[#64748B]">Simplilearn</div>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold text-[#64748B] bg-white px-2 py-0.5 rounded-md border border-[#E2E8F0]">Aug 2023</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. PROFESSIONAL REFERENCES BENTO -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#E2E8F0]">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <div class="morphy-tag-primary justify-center mb-3">
+        <i class="fa-solid fa-user-check"></i>
+        <span>VERIFIED REFERENCES</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-black text-[#0B0F19]">Executive &amp; Academic References</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div class="morphy-card p-8 bg-white border border-[#E2E8F0] space-y-4 shadow-sm">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-[#0066FF] text-white flex items-center justify-center font-black text-lg shadow-sm">
+            SM
+          </div>
+          <div>
+            <h3 class="text-lg font-black text-[#0B0F19]">Syed Mehran Hussain</h3>
+            <div class="text-xs font-bold text-[#0066FF]">Director of Marketing</div>
+            <div class="text-[11px] text-[#64748B]">Hotel Sarina Dhaka</div>
+          </div>
+        </div>
+        <div class="pt-3 border-t border-[#F1F5F9] space-y-2 text-xs text-[#334155] font-semibold">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-[#0066FF]"></i>
+            <a href="mailto:mehran2211@gmail.com" class="hover:text-[#0066FF] transition-colors">mehran2211@gmail.com</a>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-phone text-[#0066FF]"></i>
+            <a href="tel:+8801715600192" class="hover:text-[#0066FF] transition-colors">+88 01715600192</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="morphy-card p-8 bg-white border border-[#E2E8F0] space-y-4 shadow-sm">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-[#0B0F19] text-white flex items-center justify-center font-black text-lg shadow-sm">
+            MP
+          </div>
+          <div>
+            <h3 class="text-lg font-black text-[#0B0F19]">Mahbub Parvez</h3>
+            <div class="text-xs font-bold text-[#0066FF]">Associate Professor &amp; Former Dept. Head</div>
+            <div class="text-[11px] text-[#64748B]">Daffodil International University</div>
+          </div>
+        </div>
+        <div class="pt-3 border-t border-[#F1F5F9] space-y-2 text-xs text-[#334155] font-semibold">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-[#0066FF]"></i>
+            <a href="mailto:mparvez@daffodilvarsity.edu.bd" class="hover:text-[#0066FF] transition-colors">mparvez@daffodilvarsity.edu.bd</a>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-phone text-[#0066FF]"></i>
+            <a href="tel:+8801713493055" class="hover:text-[#0066FF] transition-colors">+88 01713493055</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA BANNER -->
-  <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-    <div class="morphy-card p-10 sm:p-14 text-center bg-gradient-to-r from-[#0066FF] to-[#0052FF] text-white border-0 shadow-2xl">
-      <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">Want to Scale Your Next Campaign?</h2>
-      <p class="text-white/80 max-w-xl mx-auto text-base sm:text-lg mb-8">
-        Book a 1-on-1 strategy consultation to review your current ad performance and uncover hidden growth opportunities.
-      </p>
-      <a href="/consultation" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-[#0066FF] font-extrabold text-sm uppercase tracking-wider hover:bg-white/90 hover:scale-105 transition-all shadow-lg">
-        <span>Book Strategy Call</span>
-        <i class="fa-solid fa-arrow-right text-xs"></i>
-      </a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-[#E2E8F0] bg-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-[#64748B]">
-      <div class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-[#0066FF]"></span>
-        <span>&copy; 2026 Md. Shakibur Rahaman. All Rights Reserved.</span>
+  <!-- 8. FOOTER -->
+  <footer class="py-16 border-t border-[#E2E8F0] bg-white relative z-10 text-xs text-[#64748B]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-xl bg-[#0066FF] text-white flex items-center justify-center font-black text-xs shadow-sm">
+              ✦
+            </div>
+            <span class="font-bold text-[#0B0F19] tracking-tight text-base">Md. Shakibur Rahaman</span>
+          </div>
+          <p class="text-xs text-[#64748B] leading-relaxed">
+            Brand &amp; Marketing Professional directing integrated brand strategy, digital campaigns, and performance marketing growth.
+          </p>
+        </div>
+        <div>
+          <div class="text-[#0B0F19] font-bold uppercase tracking-wider text-[11px] mb-3">Explore Hubs</div>
+          <div class="space-y-2">
+            <div><a href="/" class="hover:text-[#0066FF] transition-colors">Home</a></div>
+            <div><a href="/about" class="hover:text-[#0066FF] transition-colors">About</a></div>
+            <div><a href="/services" class="hover:text-[#0066FF] transition-colors">9 Strategic Services</a></div>
+            <div><a href="/projects" class="hover:text-[#0066FF] transition-colors">15 Web Projects</a></div>
+            <div><a href="/experience" class="hover:text-[#0066FF] text-[#0066FF] font-bold transition-colors">Experience Roadmap</a></div>
+            <div><a href="/consultation" class="hover:text-[#0066FF] transition-colors">Consultation Booking</a></div>
+          </div>
+        </div>
+        <div>
+          <div class="text-[#0B0F19] font-bold uppercase tracking-wider text-[11px] mb-3">Core Disciplines</div>
+          <div class="space-y-2">
+            <div><a href="/services/branding" class="hover:text-[#0066FF] transition-colors">01 Branding &amp; Strategy</a></div>
+            <div><a href="/services/graphics-design" class="hover:text-[#0066FF] transition-colors">02 Graphics &amp; UI/UX</a></div>
+            <div><a href="/services/web-development" class="hover:text-[#0066FF] transition-colors">03 Full-Stack Web Dev</a></div>
+            <div><a href="/services/social-media-marketing" class="hover:text-[#0066FF] transition-colors">04 Social Media &amp; Meta</a></div>
+            <div><a href="/services/google-ads" class="hover:text-[#0066FF] transition-colors">07 Google Ads Scaling</a></div>
+          </div>
+        </div>
+        <div>
+          <div class="text-[#0B0F19] font-bold uppercase tracking-wider text-[11px] mb-3">Direct Contact</div>
+          <div class="space-y-2">
+            <div><a href="mailto:shakibur188@gmail.com" class="hover:text-[#0066FF] font-bold transition-colors">shakibur188@gmail.com</a></div>
+            <div><a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#0066FF] font-bold transition-colors">+880 1838-070468</a></div>
+            <div class="pt-2"><a href="/admin" target="_blank" class="text-[11px] text-[#64748B] hover:text-[#0066FF] font-bold transition-colors">Admin CMS Portal 🔐</a></div>
+          </div>
+        </div>
       </div>
-      <div class="flex items-center gap-6 font-semibold text-[#0B0F19]">
-        <a href="/" class="hover:text-[#0066FF] transition-colors">Home</a>
-        <a href="/about" class="hover:text-[#0066FF] transition-colors">About</a>
-        <a href="/services" class="hover:text-[#0066FF] transition-colors">Services</a>
-        <a href="/projects" class="hover:text-[#0066FF] transition-colors">Projects</a>
-        <a href="/experience" class="hover:text-[#0066FF] transition-colors">Experience</a>
-        <a href="/consultation" class="hover:text-[#0066FF] transition-colors">Consultation</a>
+      <div class="pt-8 border-t border-[#E2E8F0] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+        <div>&copy; 2026 Md. Shakibur Rahaman. All rights reserved.</div>
+        <div class="flex items-center gap-4">
+          <a href="https://linkedin.com/in/shakiburrahman222" target="_blank" class="hover:text-[#0066FF] transition-colors font-bold">LinkedIn</a>
+          <a href="mailto:shakibur188@gmail.com" class="hover:text-[#0066FF] transition-colors font-bold">Email</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="/app.js"></script>
+  <script src="/site-hydration.js"></script>
 </body>
 </html>
