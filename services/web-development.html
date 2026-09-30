@@ -12,13 +12,13 @@
         extend: {
           colors: {
             palette: {
-              olive: '#70805D',
-              forest: '#2A3B27',
-              slate: '#55738D',
+              olive: '#0066FF',
+              forest: '#0B0F19',
+              slate: '#0066FF',
               mist: '#96A7B6',
               stone: '#CBC8C4'
             },
-            canvas: '#F8F9F6'
+            canvas: '#FAFCFF'
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body class="bg-[#F8F9F6] text-[#1C2B1B] font-sans antialiased selection:bg-[#70805D] selection:text-white relative overflow-x-hidden min-h-screen">
+<body class="bg-[#FAFCFF] text-[#0B0F19] font-sans antialiased selection:bg-[#0066FF] selection:text-white relative overflow-x-hidden min-h-screen">
   <!-- Top Scroll Progress Bar -->
   <div id="scrollProgressBar"></div>
 
@@ -114,18 +114,18 @@
   <!-- =========================================================================
        5. 4-PHASE INTERACTIVE WORKFLOW STEPPER
        ========================================================================= -->
-  <section id="workflow" class="py-24 border-t border-[#70805D]/15 bg-[#F1F3ED]/50 relative z-10">
+  <section id="workflow" class="py-24 border-t border-[#0066FF]/15 bg-[#F8FAFC]/50 relative z-10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-12 reveal-on-scroll">
-        <div class="section-tag justify-center mb-3">
+        <div class="morphy-tag-primary justify-center mb-3">
           <i class="fa-solid fa-layer-group"></i>
           <span>EXECUTION METHODOLOGY</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C2B1B] tracking-tight">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B0F19] tracking-tight">
           4-Phase Delivery Framework
         </h2>
-        <p class="text-xs sm:text-sm text-[#4D614A] mt-2">
+        <p class="text-xs sm:text-sm text-[#64748B] mt-2">
           Transparent, milestone-driven sprint execution ensuring zero surprises and complete executive governance.
         </p>
       </div>
@@ -151,33 +151,33 @@
       </div>
 
       <!-- Stepper Progress Bar -->
-      <div class="w-full bg-[#70805D]/15 h-2 rounded-full overflow-hidden mb-8 shadow-inner">
-        <div id="workflowProgressBar" class="h-full bg-[#70805D] transition-all duration-500 rounded-full" style="width: 25%;"></div>
+      <div class="w-full bg-[#0066FF]/15 h-2 rounded-full overflow-hidden mb-8 shadow-inner">
+        <div id="workflowProgressBar" class="h-full bg-[#0066FF] transition-all duration-500 rounded-full" style="width: 25%;"></div>
       </div>
 
       <!-- Phase Content Cards -->
       <div class="workflow-card-interactive active" data-phase-card="0">
-        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#0066FF]/15">
           <div>
-            <span class="text-xs font-bold text-[#70805D] tracking-wider uppercase">Phase 01 of 04</span>
-            <h3 class="text-xl font-extrabold text-[#1C2B1B]">Discovery &amp; Comprehensive Audit</h3>
+            <span class="text-xs font-bold text-[#0066FF] tracking-wider uppercase">Phase 01 of 04</span>
+            <h3 class="text-xl font-extrabold text-[#0B0F19]">Discovery &amp; Comprehensive Audit</h3>
           </div>
           <div class="flex items-center gap-2">
-            <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-clock mr-1"></i> Week 01</span>
-            <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">100% Alignment</span>
+            <span class="px-3 py-1 rounded-full bg-[#0066FF]/15 text-xs font-bold text-[#0066FF]"><i class="fa-solid fa-clock mr-1"></i> Week 01</span>
+            <span class="px-3 py-1 rounded-full bg-white border border-[#0066FF]/20 text-xs font-bold text-[#0B0F19]">100% Alignment</span>
           </div>
         </div>
-        <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
+        <p class="text-xs sm:text-sm text-[#64748B] leading-relaxed mb-6">
           In-depth technical and strategic immersion into current brand perception, competitor whitespace, analytics telemetry, and commercial bottlenecks before any design or code begins.
         </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27] mb-8">
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Stakeholder &amp; Founder Discovery Sessions</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Competitor &amp; Category Benchmark Audit</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Technical Architecture &amp; Data Review</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Strategic Scope &amp; Deliverables Sign-Off</span></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#0B0F19] mb-8">
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/10"><i class="fa-solid fa-circle-check text-[#0066FF]"></i><span>Stakeholder &amp; Founder Discovery Sessions</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/10"><i class="fa-solid fa-circle-check text-[#0066FF]"></i><span>Competitor &amp; Category Benchmark Audit</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/10"><i class="fa-solid fa-circle-check text-[#0066FF]"></i><span>Technical Architecture &amp; Data Review</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/10"><i class="fa-solid fa-circle-check text-[#0066FF]"></i><span>Strategic Scope &amp; Deliverables Sign-Off</span></div>
         </div>
         <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-          <span class="text-xs text-[#55738D] font-semibold">Ready for Architecture?</span>
+          <span class="text-xs text-[#0066FF] font-semibold">Ready for Architecture?</span>
           <button type="button" data-workflow-next class="btn-aesthetic-primary text-xs py-2.5 px-5">
             <span>Next: Phase 02 Architecture →</span>
           </button>
@@ -185,24 +185,24 @@
       </div>
 
       <div class="workflow-card-interactive" data-phase-card="1">
-        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#0066FF]/15">
           <div>
-            <span class="text-xs font-bold text-[#70805D] tracking-wider uppercase">Phase 02 of 04</span>
-            <h3 class="text-xl font-extrabold text-[#1C2B1B]">Strategic Architecture &amp; Prototypes</h3>
+            <span class="text-xs font-bold text-[#0066FF] tracking-wider uppercase">Phase 02 of 04</span>
+            <h3 class="text-xl font-extrabold text-[#0B0F19]">Strategic Architecture &amp; Prototypes</h3>
           </div>
           <div class="flex items-center gap-2">
-            <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-clock mr-1"></i> Week 02</span>
-            <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">Blueprint Approval</span>
+            <span class="px-3 py-1 rounded-full bg-[#0066FF]/15 text-xs font-bold text-[#0066FF]"><i class="fa-solid fa-clock mr-1"></i> Week 02</span>
+            <span class="px-3 py-1 rounded-full bg-white border border-[#0066FF]/20 text-xs font-bold text-[#0B0F19]">Blueprint Approval</span>
           </div>
         </div>
-        <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
+        <p class="text-xs sm:text-sm text-[#64748B] leading-relaxed mb-6">
           Drafting the foundational blueprint: creative direction decks, typographic hierarchies, database schemas, interactive wireframes, and milestone sign-offs.
         </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27] mb-8">
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Creative Direction &amp; Moodboard Alignment</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Technical Specifications &amp; API Contracts</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Interactive Low-Fidelity Clickable Wireframes</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Pre-Production Technical Sprint Plan</span></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#0B0F19] mb-8">
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/10"><i class="fa-solid fa-circle-check text-[#0066FF]"></i><span>Creative Direction &amp; Moodboard Alignment</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/10"><i class="fa-solid fa-circle-check text-[#0066FF]"></i><span>Technical Specifications &amp; API Contracts</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/10"><i class="fa-solid fa-circle-check text-[#0066FF]"></i><span>Interactive Low-Fidelity Clickable Wireframes</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/10"><i class="fa-solid fa-circle-check text-[#0066FF]"></i><span>Pre-Production Technical Sprint Plan</span></div>
         </div>
         <div class="flex items-center justify-between pt-4 border-t border-gray-100">
           <button type="button" data-workflow-prev class="btn-pill-glass text-xs py-2 px-4">
@@ -215,24 +215,24 @@
       </div>
 
       <div class="workflow-card-interactive" data-phase-card="2">
-        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#0066FF]/15">
           <div>
-            <span class="text-xs font-bold text-[#70805D] tracking-wider uppercase">Phase 03 of 04</span>
-            <h3 class="text-xl font-extrabold text-[#1C2B1B]">Surgical Sprint Execution</h3>
+            <span class="text-xs font-bold text-[#0066FF] tracking-wider uppercase">Phase 03 of 04</span>
+            <h3 class="text-xl font-extrabold text-[#0B0F19]">Surgical Sprint Execution</h3>
           </div>
           <div class="flex items-center gap-2">
-            <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-clock mr-1"></i> Weeks 03–04</span>
-            <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">Live Staging</span>
+            <span class="px-3 py-1 rounded-full bg-[#0066FF]/15 text-xs font-bold text-[#0066FF]"><i class="fa-solid fa-clock mr-1"></i> Weeks 03–04</span>
+            <span class="px-3 py-1 rounded-full bg-white border border-[#0066FF]/20 text-xs font-bold text-[#0B0F19]">Live Staging</span>
           </div>
         </div>
-        <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
+        <p class="text-xs sm:text-sm text-[#64748B] leading-relaxed mb-6">
           Rapid production iterations with weekly video walkthroughs, staging deployments, cross-browser QA, and collaborative client feedback cycles.
         </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27] mb-8">
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Weekly Agile Milestone Video Reviews</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Live Staging URL Deployment Access</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Pixel-Perfect Visual &amp; Performance Tuning</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Zero-Defect Security &amp; Regression Testing</span></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#0B0F19] mb-8">
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/10"><i class="fa-solid fa-circle-check text-[#0066FF]"></i><span>Weekly Agile Milestone Video Reviews</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/10"><i class="fa-solid fa-circle-check text-[#0066FF]"></i><span>Live Staging URL Deployment Access</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/10"><i class="fa-solid fa-circle-check text-[#0066FF]"></i><span>Pixel-Perfect Visual &amp; Performance Tuning</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/10"><i class="fa-solid fa-circle-check text-[#0066FF]"></i><span>Zero-Defect Security &amp; Regression Testing</span></div>
         </div>
         <div class="flex items-center justify-between pt-4 border-t border-gray-100">
           <button type="button" data-workflow-prev class="btn-pill-glass text-xs py-2 px-4">
@@ -245,24 +245,24 @@
       </div>
 
       <div class="workflow-card-interactive" data-phase-card="3">
-        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#70805D]/15">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-[#0066FF]/15">
           <div>
-            <span class="text-xs font-bold text-[#70805D] tracking-wider uppercase">Phase 04 of 04</span>
-            <h3 class="text-xl font-extrabold text-[#1C2B1B]">Launch, Governance &amp; Scale</h3>
+            <span class="text-xs font-bold text-[#0066FF] tracking-wider uppercase">Phase 04 of 04</span>
+            <h3 class="text-xl font-extrabold text-[#0B0F19]">Launch, Governance &amp; Scale</h3>
           </div>
           <div class="flex items-center gap-2">
-            <span class="px-3 py-1 rounded-full bg-[#70805D]/15 text-xs font-bold text-[#70805D]"><i class="fa-solid fa-rocket mr-1"></i> Deployment</span>
-            <span class="px-3 py-1 rounded-full bg-white border border-[#70805D]/20 text-xs font-bold text-[#2A3B27]">30-Day SLA</span>
+            <span class="px-3 py-1 rounded-full bg-[#0066FF]/15 text-xs font-bold text-[#0066FF]"><i class="fa-solid fa-rocket mr-1"></i> Deployment</span>
+            <span class="px-3 py-1 rounded-full bg-white border border-[#0066FF]/20 text-xs font-bold text-[#0B0F19]">30-Day SLA</span>
           </div>
         </div>
-        <p class="text-xs sm:text-sm text-[#4D614A] leading-relaxed mb-6">
+        <p class="text-xs sm:text-sm text-[#64748B] leading-relaxed mb-6">
           Turnkey rollout, production DNS switch, 100% intellectual property transfer, and ongoing performance telemetry monitoring with SLA support.
         </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#2A3B27] mb-8">
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>100% IP &amp; Master Asset Handover</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Production Go-Live &amp; DNS Cutover</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>30-Day Post-Launch SLA Warranty</span></div>
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/10"><i class="fa-solid fa-circle-check text-[#70805D]"></i><span>Quarterly Performance Retainer Review</span></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-[#0B0F19] mb-8">
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/10"><i class="fa-solid fa-circle-check text-[#0066FF]"></i><span>100% IP &amp; Master Asset Handover</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/10"><i class="fa-solid fa-circle-check text-[#0066FF]"></i><span>Production Go-Live &amp; DNS Cutover</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/10"><i class="fa-solid fa-circle-check text-[#0066FF]"></i><span>30-Day Post-Launch SLA Warranty</span></div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/10"><i class="fa-solid fa-circle-check text-[#0066FF]"></i><span>Quarterly Performance Retainer Review</span></div>
         </div>
         <div class="flex items-center justify-between pt-4 border-t border-gray-100">
           <button type="button" data-workflow-prev class="btn-pill-glass text-xs py-2 px-4">
@@ -280,45 +280,45 @@
   <!-- =========================================================================
        6. DEDICATED SERVICE INQUIRY FORM
        ========================================================================= -->
-  <section id="inquiry" class="py-24 border-t border-[#70805D]/15 bg-white relative z-10">
+  <section id="inquiry" class="py-24 border-t border-[#0066FF]/15 bg-white relative z-10">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-12 reveal-on-scroll">
-        <div class="section-tag justify-center">
+        <div class="morphy-tag-primary justify-center">
           <i class="fa-solid fa-paper-plane"></i>
           <span>INITIATE PROJECT</span>
         </div>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-[#1C2B1B] tracking-tight mt-2">
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-[#0B0F19] tracking-tight mt-2">
           Start Your Web Design & Full-Stack Engineering Project
         </h2>
-        <p class="text-xs sm:text-sm text-[#4D614A] mt-2">
+        <p class="text-xs sm:text-sm text-[#64748B] mt-2">
           Brief us on your enterprise goals, current challenges, and target timeline.
         </p>
       </div>
 
-      <div class="spotlight-card p-6 sm:p-10 border border-[#70805D]/25 bg-white shadow-xl">
+      <div class="morphy-card p-6 sm:p-10 border border-[#0066FF]/25 bg-white shadow-xl">
         <form id="serviceContactForm" class="space-y-6">
           <input type="hidden" id="selectedServiceHidden" value="Web Design & Full-Stack Engineering">
           
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Full Name *</label>
-              <input type="text" id="svcLeadName" required placeholder="Marcus Vance" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+              <label class="block text-xs font-bold text-[#0B0F19] mb-1.5">Full Name *</label>
+              <input type="text" id="svcLeadName" required placeholder="Marcus Vance" class="w-full px-4 py-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/25 text-[#0B0F19] text-sm focus:outline-none focus:border-[#0066FF]">
             </div>
             <div>
-              <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Corporate Email *</label>
-              <input type="email" id="svcLeadEmail" required placeholder="marcus@company.com" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+              <label class="block text-xs font-bold text-[#0B0F19] mb-1.5">Corporate Email *</label>
+              <input type="email" id="svcLeadEmail" required placeholder="marcus@company.com" class="w-full px-4 py-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/25 text-[#0B0F19] text-sm focus:outline-none focus:border-[#0066FF]">
             </div>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Phone / WhatsApp</label>
-              <input type="text" id="svcLeadPhone" placeholder="+880 1838-070468" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+              <label class="block text-xs font-bold text-[#0B0F19] mb-1.5">Phone / WhatsApp</label>
+              <input type="text" id="svcLeadPhone" placeholder="+880 1838-070468" class="w-full px-4 py-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/25 text-[#0B0F19] text-sm focus:outline-none focus:border-[#0066FF]">
             </div>
             <div>
-              <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Estimated Budget Scope</label>
-              <select id="svcLeadBudget" class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]">
+              <label class="block text-xs font-bold text-[#0B0F19] mb-1.5">Estimated Budget Scope</label>
+              <select id="svcLeadBudget" class="w-full px-4 py-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/25 text-[#0B0F19] text-sm focus:outline-none focus:border-[#0066FF]">
                 <option value="Custom Headless Enterprise Portal ($4,000 - $10,000+)">Custom Headless Enterprise Portal ($4,000 - $10,000+)</option>
                 <option value="High-Conversion eCommerce Engine ($2,500 - $5,000)">High-Conversion eCommerce Engine ($2,500 - $5,000)</option>
                 <option value="Corporate Portal & Headless CMS ($1,500 - $3,000)">Corporate Portal & Headless CMS ($1,500 - $3,000)</option>
@@ -327,8 +327,8 @@
           </div>
 
           <div>
-            <label class="block text-xs font-bold text-[#1C2B1B] mb-1.5">Project Scope &amp; Target Timeline *</label>
-            <textarea id="svcLeadMessage" rows="4" required placeholder="Tell us about your strategic goals, current challenges, and desired delivery schedule..." class="w-full px-4 py-3 rounded-xl bg-[#F8F9F6] border border-[#70805D]/25 text-[#1C2B1B] text-sm focus:outline-none focus:border-[#70805D]"></textarea>
+            <label class="block text-xs font-bold text-[#0B0F19] mb-1.5">Project Scope &amp; Target Timeline *</label>
+            <textarea id="svcLeadMessage" rows="4" required placeholder="Tell us about your strategic goals, current challenges, and desired delivery schedule..." class="w-full px-4 py-3 rounded-xl bg-[#FAFCFF] border border-[#0066FF]/25 text-[#0B0F19] text-sm focus:outline-none focus:border-[#0066FF]"></textarea>
           </div>
 
           <div id="svcStatusAlert" class="hidden p-4 rounded-xl text-xs font-semibold"></div>
@@ -344,15 +344,15 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-12 border-t border-[#70805D]/15 bg-[#F1F3ED] relative z-10 text-xs text-[#4D614A] text-center">
+  <footer class="py-12 border-t border-[#0066FF]/15 bg-[#F8FAFC] relative z-10 text-xs text-[#64748B] text-center">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>© 2026 Md. Shakibur Rahaman. All rights reserved.</div>
-        <div class="flex items-center gap-4 font-bold text-[#2A3B27]">
-          <a href="/" class="hover:text-[#70805D]">Home</a>
-          <a href="/services.html" class="hover:text-[#70805D]">All Services Directory</a>
-          <a href="/#projects" class="hover:text-[#70805D]">Projects</a>
-          <a href="#inquiry" class="hover:text-[#70805D]">Contact</a>
+        <div class="flex items-center gap-4 font-bold text-[#0B0F19]">
+          <a href="/" class="hover:text-[#0066FF]">Home</a>
+          <a href="/services.html" class="hover:text-[#0066FF]">All Services Directory</a>
+          <a href="/#projects" class="hover:text-[#0066FF]">Projects</a>
+          <a href="#inquiry" class="hover:text-[#0066FF]">Contact</a>
         </div>
       </div>
     </div>

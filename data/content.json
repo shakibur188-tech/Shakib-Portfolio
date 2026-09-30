@@ -125,7 +125,8 @@
         "Audience Insights"
       ],
       "stats": "25+ Enterprise Brand Blueprints",
-      "pageUrl": "/services/branding.html"
+      "pageUrl": "/services/branding.html",
+      "image": "https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80"
     },
     {
       "id": "graphics-design",
@@ -149,7 +150,8 @@
         "InDesign"
       ],
       "stats": "300+ Brand Assets Designed",
-      "pageUrl": "/services/graphics-design.html"
+      "pageUrl": "/services/graphics-design.html",
+      "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80"
     },
     {
       "id": "web-development",
@@ -175,7 +177,8 @@
         "Shopify"
       ],
       "stats": "15+ Live Web Portals Deployed",
-      "pageUrl": "/services/web-development.html"
+      "pageUrl": "/services/web-development.html",
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
     },
     {
       "id": "social-media-marketing",
@@ -200,7 +203,8 @@
         "TikTok Ads"
       ],
       "stats": "2M+ Organic Video Views Delivered",
-      "pageUrl": "/services/social-media-marketing.html"
+      "pageUrl": "/services/social-media-marketing.html",
+      "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80"
     },
     {
       "id": "photoshoot-videography",
@@ -224,7 +228,8 @@
         "Gimbal & Drone"
       ],
       "stats": "50+ Commercial Shoots Directed",
-      "pageUrl": "/services/photoshoot-videography.html"
+      "pageUrl": "/services/photoshoot-videography.html",
+      "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80"
     },
     {
       "id": "event-activation",
@@ -248,7 +253,8 @@
         "Spatial Audio & Lighting"
       ],
       "stats": "25+ Major Expos & Activations Executed",
-      "pageUrl": "/services/event-activation.html"
+      "pageUrl": "/services/event-activation.html",
+      "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80"
     },
     {
       "id": "google-ads",
@@ -272,7 +278,8 @@
         "Google Tag Manager"
       ],
       "stats": "4.8x–12.4x Target Return on Ad Spend",
-      "pageUrl": "/services/google-ads.html"
+      "pageUrl": "/services/google-ads.html",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
     },
     {
       "id": "seo-aeo",
@@ -297,7 +304,8 @@
         "Schema Builder"
       ],
       "stats": "100% AI Search Grounding Score",
-      "pageUrl": "/services/seo-aeo.html"
+      "pageUrl": "/services/seo-aeo.html",
+      "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80"
     },
     {
       "id": "public-relations",
@@ -321,7 +329,8 @@
         "Journalist Network"
       ],
       "stats": "40+ Mainstream Media Features",
-      "pageUrl": "/services/public-relations.html"
+      "pageUrl": "/services/public-relations.html",
+      "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80"
     }
   ],
   "webProjects": [

@@ -135,11 +135,11 @@
               (item.url === '/' && (currentPath === '/' || currentPath === '/index.html'));
 
             if (isCurrent) {
-              link.classList.add('text-[#70805D]', 'font-bold');
-              link.classList.remove('hover:text-[#70805D]');
+              link.classList.add('text-[#0066FF]', 'font-bold');
+              link.classList.remove('hover:text-[#0066FF]');
             } else {
-              link.classList.remove('text-[#70805D]');
-              link.classList.add('hover:text-[#70805D]');
+              link.classList.remove('text-[#0066FF]');
+              link.classList.add('hover:text-[#0066FF]');
             }
           });
         }
@@ -273,14 +273,14 @@
         const dataSuffix = fig.suffix ? `data-counter-suffix="${fig.suffix}"` : '';
 
         return `
-          <div class="spotlight-card p-4 bg-white border border-[#70805D]/20 rounded-2xl shadow-xs text-center">
-            <div class="text-2xl sm:text-3xl font-black text-[#2A3B27]" ${dataTarget} ${dataSuffix}>
+          <div class="spotlight-card p-4 bg-white border border-[#0066FF]/20 rounded-2xl shadow-xs text-center">
+            <div class="text-2xl sm:text-3xl font-black text-[#0B0F19]" ${dataTarget} ${dataSuffix}>
               ${fig.prefix || ''}${fig.value}
             </div>
-            <div class="text-[11px] text-[#55738D] uppercase font-extrabold mt-1">
+            <div class="text-[11px] text-[#0066FF] uppercase font-extrabold mt-1">
               ${fig.label}
             </div>
-            ${fig.sublabel ? `<div class="text-[10px] text-[#4D614A] font-medium mt-0.5">${fig.sublabel}</div>` : ''}
+            ${fig.sublabel ? `<div class="text-[10px] text-[#64748B] font-medium mt-0.5">${fig.sublabel}</div>` : ''}
           </div>
         `;
       }).join('\n');
@@ -384,10 +384,10 @@
 
     widget.innerHTML = `
       <!-- WhatsApp Popup Chat Card -->
-      <div id="waPopupCard" class="hidden absolute bottom-14 right-0 w-[315px] max-w-[calc(100vw-32px)] bg-white rounded-3xl shadow-2xl border border-[#70805D]/20 overflow-hidden transition-all duration-200 transform origin-bottom-right mb-2 ring-1 ring-black/10">
+      <div id="waPopupCard" class="hidden absolute bottom-14 right-0 w-[315px] max-w-[calc(100vw-32px)] bg-white rounded-3xl shadow-2xl border border-[#0066FF]/20 overflow-hidden transition-all duration-200 transform origin-bottom-right mb-2 ring-1 ring-black/10">
         
         <!-- Header -->
-        <div class="p-3.5 bg-gradient-to-r from-[#1C2B1B] via-[#2A3B27] to-[#1C2B1B] text-white flex items-center justify-between border-b border-white/10">
+        <div class="p-3.5 bg-gradient-to-r from-[#1C2B1B] via-[#0B0F19] to-[#1C2B1B] text-white flex items-center justify-between border-b border-white/10">
           <div class="flex items-center gap-2.5">
             <div class="relative shrink-0">
               <img src="/assets/shakibur.jpg" alt="Md. Shakibur Rahaman" class="w-9 h-9 rounded-full object-cover border-2 border-[#25D366] shadow-sm" onerror="this.src='/assets/avatar-placeholder.png'">
@@ -407,8 +407,8 @@
         </div>
 
         <!-- Chat Bubble Intro -->
-        <div class="p-3 bg-[#F8F9F6] border-b border-[#70805D]/10">
-          <div class="p-2.5 rounded-2xl bg-white border border-[#70805D]/15 text-[11px] text-[#2A3B27] shadow-2xs leading-snug">
+        <div class="p-3 bg-[#F8F9F6] border-b border-[#0066FF]/10">
+          <div class="p-2.5 rounded-2xl bg-white border border-[#0066FF]/15 text-[11px] text-[#0B0F19] shadow-2xs leading-snug">
             👋 <strong>Hi there!</strong> Ready to scale your brand? Drop your details below to chat with <strong>Mr. Shakib</strong> directly on WhatsApp.
           </div>
         </div>
@@ -416,24 +416,24 @@
         <!-- Form Body -->
         <form id="waInquiryForm" class="p-3.5 space-y-2.5 bg-white">
           <div>
-            <label class="block text-[10px] font-black uppercase tracking-wider text-[#2A3B27] mb-0.5">Your Name *</label>
-            <input type="text" id="waInputName" required placeholder="e.g. John Doe" class="w-full px-2.5 py-1.5 text-xs rounded-xl border border-[#70805D]/25 focus:border-[#70805D] focus:ring-2 focus:ring-[#70805D]/20 outline-none text-[#1C2B1B] bg-[#F8F9F6] focus:bg-white transition-all">
+            <label class="block text-[10px] font-black uppercase tracking-wider text-[#0B0F19] mb-0.5">Your Name *</label>
+            <input type="text" id="waInputName" required placeholder="e.g. John Doe" class="w-full px-2.5 py-1.5 text-xs rounded-xl border border-[#0066FF]/25 focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/20 outline-none text-[#1C2B1B] bg-[#F8F9F6] focus:bg-white transition-all">
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <div>
-              <label class="block text-[10px] font-black uppercase tracking-wider text-[#2A3B27] mb-0.5">Contact / Phone *</label>
-              <input type="tel" id="waInputContact" required placeholder="+880 1..." class="w-full px-2.5 py-1.5 text-xs rounded-xl border border-[#70805D]/25 focus:border-[#70805D] focus:ring-2 focus:ring-[#70805D]/20 outline-none text-[#1C2B1B] bg-[#F8F9F6] focus:bg-white transition-all">
+              <label class="block text-[10px] font-black uppercase tracking-wider text-[#0B0F19] mb-0.5">Contact / Phone *</label>
+              <input type="tel" id="waInputContact" required placeholder="+880 1..." class="w-full px-2.5 py-1.5 text-xs rounded-xl border border-[#0066FF]/25 focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/20 outline-none text-[#1C2B1B] bg-[#F8F9F6] focus:bg-white transition-all">
             </div>
             <div>
-              <label class="block text-[10px] font-black uppercase tracking-wider text-[#2A3B27] mb-0.5">Email</label>
-              <input type="email" id="waInputEmail" placeholder="you@company.com" class="w-full px-2.5 py-1.5 text-xs rounded-xl border border-[#70805D]/25 focus:border-[#70805D] focus:ring-2 focus:ring-[#70805D]/20 outline-none text-[#1C2B1B] bg-[#F8F9F6] focus:bg-white transition-all">
+              <label class="block text-[10px] font-black uppercase tracking-wider text-[#0B0F19] mb-0.5">Email</label>
+              <input type="email" id="waInputEmail" placeholder="you@company.com" class="w-full px-2.5 py-1.5 text-xs rounded-xl border border-[#0066FF]/25 focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/20 outline-none text-[#1C2B1B] bg-[#F8F9F6] focus:bg-white transition-all">
             </div>
           </div>
 
           <div>
-            <label class="block text-[10px] font-black uppercase tracking-wider text-[#2A3B27] mb-0.5">Discussion Topic / Details</label>
-            <textarea id="waInputTopic" rows="2" placeholder="e.g. E-Commerce Packages, High-Converting Web, SMM..." class="w-full px-2.5 py-1.5 text-xs rounded-xl border border-[#70805D]/25 focus:border-[#70805D] focus:ring-2 focus:ring-[#70805D]/20 outline-none text-[#1C2B1B] bg-[#F8F9F6] focus:bg-white resize-none transition-all"></textarea>
+            <label class="block text-[10px] font-black uppercase tracking-wider text-[#0B0F19] mb-0.5">Discussion Topic / Details</label>
+            <textarea id="waInputTopic" rows="2" placeholder="e.g. E-Commerce Packages, High-Converting Web, SMM..." class="w-full px-2.5 py-1.5 text-xs rounded-xl border border-[#0066FF]/25 focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/20 outline-none text-[#1C2B1B] bg-[#F8F9F6] focus:bg-white resize-none transition-all"></textarea>
           </div>
 
           <div id="waFormAlert" class="hidden text-[10.5px] p-2 rounded-lg font-bold"></div>
