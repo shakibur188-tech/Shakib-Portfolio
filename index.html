@@ -509,130 +509,182 @@
       <!-- Services Grid: Strictly 3 cards per row on desktop -->
       <div id="servicesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-    <div class="morphy-card p-0 rounded-[28px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0]">
+    <a href="services/branding.html" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
-      <!-- Card Image Header with Floating Badges -->
-      <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <!-- Inset Image Frame with Rounded Corners -->
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
         <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80" alt="Branding & Brand Strategy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
-        <!-- Top Left Icon Badge -->
-        <div class="absolute top-3.5 left-3.5 w-9 h-9 rounded-xl bg-white/95 backdrop-blur-md border border-white/40 shadow-md flex items-center justify-center text-sm text-[#0066FF]">
-          <i class="fa-solid fa-shield-halved"></i>
+        <!-- Top Floating Glass Tags & Rating -->
+        <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">Brand Strategy</span>
+  
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">Identity Systems</span>
+  
+          </div>
+          <div class="px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1">
+            <i class="fa-solid fa-star text-amber-400 text-[10px]"></i>
+            <span>5.0</span>
+          </div>
         </div>
 
-        <!-- Top Right Category Badge -->
-        <div class="absolute top-3.5 right-3.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-white/40 shadow-md text-[10px] font-black text-[#0066FF] uppercase tracking-wider">
-          Brand Strategy
+        <!-- Carousel Indicator Dots -->
+        <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
+          <span class="w-2 h-2 rounded-full bg-white shadow-xs"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
         </div>
       </div>
 
       <!-- Card Body Content -->
-      <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+      <div class="px-2 pb-2 flex-1 flex flex-col justify-between space-y-4">
+        
         <div>
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
-            Branding & Brand Strategy
-          </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-1 leading-snug">
-            Strategic Brand Positioning, Architecture & Guidelines
-          </p>
-          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
-            Forging iconic market identities that resonate deeply, command premium pricing, and outpace competition. From market research and positioning architecture to comprehensive corporate brand guidelines and narrative voice.
+          <!-- Title & Pillar Tag -->
+          <div class="flex items-start justify-between gap-2">
+            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+              Branding & Brand Strategy
+            </h3>
+            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+              Pillar 01
+            </span>
+          </div>
+
+          <!-- Subheadline -->
+          <p class="text-xs font-semibold text-[#64748B] mt-1">
+            Strategic Brand Positioning & Architecture
           </p>
 
-          <!-- Key Deliverable Points with Blue Checkmarks -->
-          <div class="pt-4 border-t border-[#F1F5F9] mt-4">
-            <div class="text-[10px] font-black tracking-widest text-[#0066FF] uppercase flex items-center gap-1.5 mb-2.5">
+          <!-- Description -->
+          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
+            Forging iconic market identities that resonate deeply, command premium pricing, and outpace competition.
+          </p>
+
+          <!-- Key Deliverable Points -->
+          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
+            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
-              <span>KEY DELIVERABLE POINTS:</span>
+              <span>KEY DELIVERABLES:</span>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-1.5">
               
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>Brand Positioning & Competitive Market Research</span>
+      <span>Brand Positioning & Market Research</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>Brand Architecture & Portfolio Structuring</span>
+      <span>Brand Architecture & Portfolio Structure</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>Corporate Brand Identity Guidelines Manual</span>
+      <span>Corporate Brand Guidelines Manual</span>
     </li>
   
             </ul>
           </div>
         </div>
 
-        <!-- Card Footer Action -->
+        <!-- Bottom Row: Metric & Morphy Pill Button -->
         <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
-          <a href="services/branding.html" class="text-xs font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors flex items-center gap-1.5">
-            <span>View Dedicated Service Page</span>
-            <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-          </a>
-          <a href="services/branding.html" class="w-8 h-8 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-[#0066FF] group-hover:bg-[#0066FF] group-hover:text-white transition-all flex items-center justify-center text-xs shadow-xs" title="Open Dedicated Hub">
-            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-          </a>
+          <div class="flex items-baseline gap-1.5">
+            <span class="text-base font-black text-[#0066FF]">+3.5x</span>
+            <span class="text-xs font-semibold text-[#64748B]">Valuation Lift</span>
+          </div>
+
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+            <span>Explore Hub</span>
+            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </span>
+          </div>
         </div>
 
       </div>
 
-    </div>
+    </a>
   
 
-    <div class="morphy-card p-0 rounded-[28px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0]">
+    <a href="services/graphics-design.html" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
-      <!-- Card Image Header with Floating Badges -->
-      <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-[#0B0F19]">
-        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Graphics Design & Visual Identity" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+      <!-- Inset Image Frame with Rounded Corners -->
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
+        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Graphics Design & Visual Systems" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
-        <!-- Top Left Icon Badge -->
-        <div class="absolute top-3.5 left-3.5 w-9 h-9 rounded-xl bg-white/95 backdrop-blur-md border border-white/40 shadow-md flex items-center justify-center text-sm text-[#0066FF]">
-          <i class="fa-solid fa-pen-nib"></i>
+        <!-- Top Floating Glass Tags & Rating -->
+        <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">UI/UX Design</span>
+  
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">Packaging</span>
+  
+          </div>
+          <div class="px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1">
+            <i class="fa-solid fa-star text-amber-400 text-[10px]"></i>
+            <span>4.9</span>
+          </div>
         </div>
 
-        <!-- Top Right Category Badge -->
-        <div class="absolute top-3.5 right-3.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-white/40 shadow-md text-[10px] font-black text-[#0066FF] uppercase tracking-wider">
-          Creative Direction
+        <!-- Carousel Indicator Dots -->
+        <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
+          <span class="w-2 h-2 rounded-full bg-white shadow-xs"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
         </div>
       </div>
 
       <!-- Card Body Content -->
-      <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+      <div class="px-2 pb-2 flex-1 flex flex-col justify-between space-y-4">
+        
         <div>
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
-            Graphics Design & Visual Identity
-          </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-1 leading-snug">
-            High-Impact Visual Systems, Packaging & UI/UX
-          </p>
-          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
-            Building enduring visual systems that command instant attention. From bespoke logo marks and typography hierarchies to luxury packaging, marketing collateral, and digital UI/UX design.
+          <!-- Title & Pillar Tag -->
+          <div class="flex items-start justify-between gap-2">
+            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+              Graphics Design & Visual Systems
+            </h3>
+            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+              Pillar 02
+            </span>
+          </div>
+
+          <!-- Subheadline -->
+          <p class="text-xs font-semibold text-[#64748B] mt-1">
+            High-Impact Visual Systems & Luxury UI/UX
           </p>
 
-          <!-- Key Deliverable Points with Blue Checkmarks -->
-          <div class="pt-4 border-t border-[#F1F5F9] mt-4">
-            <div class="text-[10px] font-black tracking-widest text-[#0066FF] uppercase flex items-center gap-1.5 mb-2.5">
+          <!-- Description -->
+          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
+            Building enduring visual systems that command instant attention across decks, packaging, and digital UI.
+          </p>
+
+          <!-- Key Deliverable Points -->
+          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
+            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
-              <span>KEY DELIVERABLE POINTS:</span>
+              <span>KEY DELIVERABLES:</span>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-1.5">
               
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
       <span>Brand Identity Guidelines & Logo Marks</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
       <span>UI/UX Web & Mobile App Interface Design</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
       <span>Luxury Packaging & Print Collateral</span>
     </li>
@@ -641,538 +693,738 @@
           </div>
         </div>
 
-        <!-- Card Footer Action -->
+        <!-- Bottom Row: Metric & Morphy Pill Button -->
         <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
-          <a href="services/graphics-design.html" class="text-xs font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors flex items-center gap-1.5">
-            <span>View Dedicated Service Page</span>
-            <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-          </a>
-          <a href="services/graphics-design.html" class="w-8 h-8 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-[#0066FF] group-hover:bg-[#0066FF] group-hover:text-white transition-all flex items-center justify-center text-xs shadow-xs" title="Open Dedicated Hub">
-            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-          </a>
+          <div class="flex items-baseline gap-1.5">
+            <span class="text-base font-black text-[#0066FF]">300+</span>
+            <span class="text-xs font-semibold text-[#64748B]">Vector Assets</span>
+          </div>
+
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+            <span>Explore Hub</span>
+            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </span>
+          </div>
         </div>
 
       </div>
 
-    </div>
+    </a>
   
 
-    <div class="morphy-card p-0 rounded-[28px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0]">
+    <a href="services/web-development.html" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
-      <!-- Card Image Header with Floating Badges -->
-      <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <!-- Inset Image Frame with Rounded Corners -->
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Web Design & Development" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
-        <!-- Top Left Icon Badge -->
-        <div class="absolute top-3.5 left-3.5 w-9 h-9 rounded-xl bg-white/95 backdrop-blur-md border border-white/40 shadow-md flex items-center justify-center text-sm text-[#0066FF]">
-          <i class="fa-solid fa-code"></i>
+        <!-- Top Floating Glass Tags & Rating -->
+        <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">Full-Stack</span>
+  
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">Next.js Jamstack</span>
+  
+          </div>
+          <div class="px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1">
+            <i class="fa-solid fa-star text-amber-400 text-[10px]"></i>
+            <span>5.0</span>
+          </div>
         </div>
 
-        <!-- Top Right Category Badge -->
-        <div class="absolute top-3.5 right-3.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-white/40 shadow-md text-[10px] font-black text-[#0066FF] uppercase tracking-wider">
-          Full-Stack Engineering
+        <!-- Carousel Indicator Dots -->
+        <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
+          <span class="w-2 h-2 rounded-full bg-white shadow-xs"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
         </div>
       </div>
 
       <!-- Card Body Content -->
-      <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+      <div class="px-2 pb-2 flex-1 flex flex-col justify-between space-y-4">
+        
         <div>
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
-            Web Design & Development
-          </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-1 leading-snug">
-            High-Performance Modern Web Architecture & E-Commerce
-          </p>
-          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
-            Architecting blazing-fast, responsive websites and web applications tailored for maximum conversion, rock-solid security, and top-tier SEO/AEO indexing with 95+ Google PageSpeed scores.
+          <!-- Title & Pillar Tag -->
+          <div class="flex items-start justify-between gap-2">
+            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+              Web Design & Development
+            </h3>
+            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+              Pillar 03
+            </span>
+          </div>
+
+          <!-- Subheadline -->
+          <p class="text-xs font-semibold text-[#64748B] mt-1">
+            High-Performance Jamstack & Headless Commerce
           </p>
 
-          <!-- Key Deliverable Points with Blue Checkmarks -->
-          <div class="pt-4 border-t border-[#F1F5F9] mt-4">
-            <div class="text-[10px] font-black tracking-widest text-[#0066FF] uppercase flex items-center gap-1.5 mb-2.5">
+          <!-- Description -->
+          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
+            Architecting blazing-fast websites and web applications tailored for 95+ PageSpeed scores and high conversion.
+          </p>
+
+          <!-- Key Deliverable Points -->
+          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
+            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
-              <span>KEY DELIVERABLE POINTS:</span>
+              <span>KEY DELIVERABLES:</span>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-1.5">
               
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
       <span>Custom Responsive Corporate Websites</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>Headless & Full-Stack E-Commerce Platforms</span>
+      <span>Headless & Full-Stack E-Commerce</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>Interactive Landing Pages with Ultra-High Conversion</span>
+      <span>Interactive Landing Pages (CRO)</span>
     </li>
   
             </ul>
           </div>
         </div>
 
-        <!-- Card Footer Action -->
+        <!-- Bottom Row: Metric & Morphy Pill Button -->
         <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
-          <a href="services/web-development.html" class="text-xs font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors flex items-center gap-1.5">
-            <span>View Dedicated Service Page</span>
-            <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-          </a>
-          <a href="services/web-development.html" class="w-8 h-8 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-[#0066FF] group-hover:bg-[#0066FF] group-hover:text-white transition-all flex items-center justify-center text-xs shadow-xs" title="Open Dedicated Hub">
-            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-          </a>
+          <div class="flex items-baseline gap-1.5">
+            <span class="text-base font-black text-[#0066FF]">0.8s</span>
+            <span class="text-xs font-semibold text-[#64748B]">Speed • 95+ PageSpeed</span>
+          </div>
+
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+            <span>Explore Hub</span>
+            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </span>
+          </div>
         </div>
 
       </div>
 
-    </div>
+    </a>
   
 
-    <div class="morphy-card p-0 rounded-[28px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0]">
+    <a href="services/social-media-marketing.html" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
-      <!-- Card Image Header with Floating Badges -->
-      <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <!-- Inset Image Frame with Rounded Corners -->
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
         <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="Social Media Marketing (SMM)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
-        <!-- Top Left Icon Badge -->
-        <div class="absolute top-3.5 left-3.5 w-9 h-9 rounded-xl bg-white/95 backdrop-blur-md border border-white/40 shadow-md flex items-center justify-center text-sm text-[#0066FF]">
-          <i class="fa-solid fa-hashtag"></i>
+        <!-- Top Floating Glass Tags & Rating -->
+        <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">Meta Ads</span>
+  
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">Viral Reels</span>
+  
+          </div>
+          <div class="px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1">
+            <i class="fa-solid fa-star text-amber-400 text-[10px]"></i>
+            <span>4.9</span>
+          </div>
         </div>
 
-        <!-- Top Right Category Badge -->
-        <div class="absolute top-3.5 right-3.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-white/40 shadow-md text-[10px] font-black text-[#0066FF] uppercase tracking-wider">
-          Omnichannel Growth
+        <!-- Carousel Indicator Dots -->
+        <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
+          <span class="w-2 h-2 rounded-full bg-white shadow-xs"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
         </div>
       </div>
 
       <!-- Card Body Content -->
-      <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+      <div class="px-2 pb-2 flex-1 flex flex-col justify-between space-y-4">
+        
         <div>
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
-            Social Media Marketing (SMM)
-          </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-1 leading-snug">
-            Data-Driven Content Strategy, Viral Campaigns & Community
-          </p>
-          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
-            Transforming passive followers into brand evangelists through magnetic storytelling, thumb-stopping short-form video content, proactive community management, and paid social scaling.
+          <!-- Title & Pillar Tag -->
+          <div class="flex items-start justify-between gap-2">
+            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+              Social Media Marketing (SMM)
+            </h3>
+            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+              Pillar 04
+            </span>
+          </div>
+
+          <!-- Subheadline -->
+          <p class="text-xs font-semibold text-[#64748B] mt-1">
+            Data-Driven Content Strategy & Meta Scaling
           </p>
 
-          <!-- Key Deliverable Points with Blue Checkmarks -->
-          <div class="pt-4 border-t border-[#F1F5F9] mt-4">
-            <div class="text-[10px] font-black tracking-widest text-[#0066FF] uppercase flex items-center gap-1.5 mb-2.5">
+          <!-- Description -->
+          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
+            Transforming passive followers into brand evangelists through magnetic short video reels and Advantage+ ads.
+          </p>
+
+          <!-- Key Deliverable Points -->
+          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
+            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
-              <span>KEY DELIVERABLE POINTS:</span>
+              <span>KEY DELIVERABLES:</span>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-1.5">
               
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
       <span>Omnichannel Social Content Architecture</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>High-Converting Viral Reels & TikTok Campaigns</span>
+      <span>High-Converting Viral Reels & TikToks</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>Community Management & Influencer Collaborations</span>
+      <span>Community Management & Scaling</span>
     </li>
   
             </ul>
           </div>
         </div>
 
-        <!-- Card Footer Action -->
+        <!-- Bottom Row: Metric & Morphy Pill Button -->
         <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
-          <a href="services/social-media-marketing.html" class="text-xs font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors flex items-center gap-1.5">
-            <span>View Dedicated Service Page</span>
-            <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-          </a>
-          <a href="services/social-media-marketing.html" class="w-8 h-8 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-[#0066FF] group-hover:bg-[#0066FF] group-hover:text-white transition-all flex items-center justify-center text-xs shadow-xs" title="Open Dedicated Hub">
-            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-          </a>
+          <div class="flex items-baseline gap-1.5">
+            <span class="text-base font-black text-[#0066FF]">4.8x</span>
+            <span class="text-xs font-semibold text-[#64748B]">Blended ROAS</span>
+          </div>
+
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+            <span>Explore Hub</span>
+            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </span>
+          </div>
         </div>
 
       </div>
 
-    </div>
+    </a>
   
 
-    <div class="morphy-card p-0 rounded-[28px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0]">
+    <a href="services/photoshoot-videography.html" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
-      <!-- Card Image Header with Floating Badges -->
-      <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <!-- Inset Image Frame with Rounded Corners -->
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
         <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80" alt="Photoshoot & Videography" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
-        <!-- Top Left Icon Badge -->
-        <div class="absolute top-3.5 left-3.5 w-9 h-9 rounded-xl bg-white/95 backdrop-blur-md border border-white/40 shadow-md flex items-center justify-center text-sm text-[#0066FF]">
-          <i class="fa-solid fa-video"></i>
+        <!-- Top Floating Glass Tags & Rating -->
+        <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">4K Cinema</span>
+  
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">TVC Production</span>
+  
+          </div>
+          <div class="px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1">
+            <i class="fa-solid fa-star text-amber-400 text-[10px]"></i>
+            <span>5.0</span>
+          </div>
         </div>
 
-        <!-- Top Right Category Badge -->
-        <div class="absolute top-3.5 right-3.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-white/40 shadow-md text-[10px] font-black text-[#0066FF] uppercase tracking-wider">
-          Studio & Field Production
+        <!-- Carousel Indicator Dots -->
+        <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
+          <span class="w-2 h-2 rounded-full bg-white shadow-xs"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
         </div>
       </div>
 
       <!-- Card Body Content -->
-      <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+      <div class="px-2 pb-2 flex-1 flex flex-col justify-between space-y-4">
+        
         <div>
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
-            Photoshoot & Videography
-          </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-1 leading-snug">
-            Commercial Cinematography, Product & Brand Storytelling
-          </p>
-          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
-            Capturing world-class commercial visual assets with cinematic color grading, professional lighting, and dynamic direction for broadcast TVCs, luxury product catalogs, and social reels.
+          <!-- Title & Pillar Tag -->
+          <div class="flex items-start justify-between gap-2">
+            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+              Photoshoot & Videography
+            </h3>
+            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+              Pillar 05
+            </span>
+          </div>
+
+          <!-- Subheadline -->
+          <p class="text-xs font-semibold text-[#64748B] mt-1">
+            Commercial Cinematography & Product Shoots
           </p>
 
-          <!-- Key Deliverable Points with Blue Checkmarks -->
-          <div class="pt-4 border-t border-[#F1F5F9] mt-4">
-            <div class="text-[10px] font-black tracking-widest text-[#0066FF] uppercase flex items-center gap-1.5 mb-2.5">
+          <!-- Description -->
+          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
+            Capturing world-class visual assets with cinematic color grading and professional studio lighting.
+          </p>
+
+          <!-- Key Deliverable Points -->
+          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
+            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
-              <span>KEY DELIVERABLE POINTS:</span>
+              <span>KEY DELIVERABLES:</span>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-1.5">
               
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>Commercial TVCs & Cinematic Brand Documentaries</span>
+      <span>Commercial TVCs & Brand Films</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>High-End E-Commerce & Editorial Product Photography</span>
+      <span>High-End E-Commerce Photography</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>Executive Headshots & Corporate Culture Features</span>
+      <span>Executive Headshots & Reels</span>
     </li>
   
             </ul>
           </div>
         </div>
 
-        <!-- Card Footer Action -->
+        <!-- Bottom Row: Metric & Morphy Pill Button -->
         <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
-          <a href="services/photoshoot-videography.html" class="text-xs font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors flex items-center gap-1.5">
-            <span>View Dedicated Service Page</span>
-            <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-          </a>
-          <a href="services/photoshoot-videography.html" class="w-8 h-8 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-[#0066FF] group-hover:bg-[#0066FF] group-hover:text-white transition-all flex items-center justify-center text-xs shadow-xs" title="Open Dedicated Hub">
-            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-          </a>
+          <div class="flex items-baseline gap-1.5">
+            <span class="text-base font-black text-[#0066FF]">4K</span>
+            <span class="text-xs font-semibold text-[#64748B]">Cinema Masters</span>
+          </div>
+
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+            <span>Explore Hub</span>
+            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </span>
+          </div>
         </div>
 
       </div>
 
-    </div>
+    </a>
   
 
-    <div class="morphy-card p-0 rounded-[28px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0]">
+    <a href="services/event-activation.html" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
-      <!-- Card Image Header with Floating Badges -->
-      <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <!-- Inset Image Frame with Rounded Corners -->
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
         <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Event Activation & Exhibition" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
-        <!-- Top Left Icon Badge -->
-        <div class="absolute top-3.5 left-3.5 w-9 h-9 rounded-xl bg-white/95 backdrop-blur-md border border-white/40 shadow-md flex items-center justify-center text-sm text-[#0066FF]">
-          <i class="fa-solid fa-champagne-glasses"></i>
+        <!-- Top Floating Glass Tags & Rating -->
+        <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">3D Booths</span>
+  
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">Trade Expos</span>
+  
+          </div>
+          <div class="px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1">
+            <i class="fa-solid fa-star text-amber-400 text-[10px]"></i>
+            <span>4.9</span>
+          </div>
         </div>
 
-        <!-- Top Right Category Badge -->
-        <div class="absolute top-3.5 right-3.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-white/40 shadow-md text-[10px] font-black text-[#0066FF] uppercase tracking-wider">
-          Experiential Marketing
+        <!-- Carousel Indicator Dots -->
+        <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
+          <span class="w-2 h-2 rounded-full bg-white shadow-xs"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
         </div>
       </div>
 
       <!-- Card Body Content -->
-      <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+      <div class="px-2 pb-2 flex-1 flex flex-col justify-between space-y-4">
+        
         <div>
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
-            Event Activation & Exhibition
-          </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-1 leading-snug">
-            Experiential Marketing, B2B Trade Expos & Brand Launches
-          </p>
-          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
-            Designing unforgettable live brand experiences, immersive exhibition booths, trade show installations, and corporate gala activations that drive deep emotional brand connection and qualified press buzz.
+          <!-- Title & Pillar Tag -->
+          <div class="flex items-start justify-between gap-2">
+            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+              Event Activation & Exhibition
+            </h3>
+            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+              Pillar 06
+            </span>
+          </div>
+
+          <!-- Subheadline -->
+          <p class="text-xs font-semibold text-[#64748B] mt-1">
+            Experiential Brand Pop-Ups & 3D Spatial Design
           </p>
 
-          <!-- Key Deliverable Points with Blue Checkmarks -->
-          <div class="pt-4 border-t border-[#F1F5F9] mt-4">
-            <div class="text-[10px] font-black tracking-widest text-[#0066FF] uppercase flex items-center gap-1.5 mb-2.5">
+          <!-- Description -->
+          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
+            Designing unforgettable live brand environments, photorealistic 3D exhibition stalls, and turnkey galas.
+          </p>
+
+          <!-- Key Deliverable Points -->
+          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
+            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
-              <span>KEY DELIVERABLE POINTS:</span>
+              <span>KEY DELIVERABLES:</span>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-1.5">
               
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>3D Exhibition Booth Design & Custom Fabrication</span>
+      <span>3D Exhibition Booth Design & Fabrication</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>Experiential Consumer Pop-Ups & Brand Launches</span>
+      <span>Experiential Pop-Ups & Brand Launches</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>Corporate Conferences, Galas & Award Ceremonies</span>
+      <span>Corporate Galas & Tech Activations</span>
     </li>
   
             </ul>
           </div>
         </div>
 
-        <!-- Card Footer Action -->
+        <!-- Bottom Row: Metric & Morphy Pill Button -->
         <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
-          <a href="services/event-activation.html" class="text-xs font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors flex items-center gap-1.5">
-            <span>View Dedicated Service Page</span>
-            <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-          </a>
-          <a href="services/event-activation.html" class="w-8 h-8 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-[#0066FF] group-hover:bg-[#0066FF] group-hover:text-white transition-all flex items-center justify-center text-xs shadow-xs" title="Open Dedicated Hub">
-            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-          </a>
+          <div class="flex items-baseline gap-1.5">
+            <span class="text-base font-black text-[#0066FF]">3D</span>
+            <span class="text-xs font-semibold text-[#64748B]">Spatial Renders</span>
+          </div>
+
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+            <span>Explore Hub</span>
+            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </span>
+          </div>
         </div>
 
       </div>
 
-    </div>
+    </a>
   
 
-    <div class="morphy-card p-0 rounded-[28px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0]">
+    <a href="services/google-ads.html" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
-      <!-- Card Image Header with Floating Badges -->
-      <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <!-- Inset Image Frame with Rounded Corners -->
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Google Ads & Intent Scaling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
-        <!-- Top Left Icon Badge -->
-        <div class="absolute top-3.5 left-3.5 w-9 h-9 rounded-xl bg-white/95 backdrop-blur-md border border-white/40 shadow-md flex items-center justify-center text-sm text-[#0066FF]">
-          <i class="fa-solid fa-chart-line"></i>
+        <!-- Top Floating Glass Tags & Rating -->
+        <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">PMax</span>
+  
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">Search Funnels</span>
+  
+          </div>
+          <div class="px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1">
+            <i class="fa-solid fa-star text-amber-400 text-[10px]"></i>
+            <span>5.0</span>
+          </div>
         </div>
 
-        <!-- Top Right Category Badge -->
-        <div class="absolute top-3.5 right-3.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-white/40 shadow-md text-[10px] font-black text-[#0066FF] uppercase tracking-wider">
-          Paid Media Precision
+        <!-- Carousel Indicator Dots -->
+        <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
+          <span class="w-2 h-2 rounded-full bg-white shadow-xs"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
         </div>
       </div>
 
       <!-- Card Body Content -->
-      <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+      <div class="px-2 pb-2 flex-1 flex flex-col justify-between space-y-4">
+        
         <div>
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
-            Google Ads & Intent Scaling
-          </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-1 leading-snug">
-            Precision Search, Performance Max & YouTube Funnels
-          </p>
-          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
-            Capturing high-intent commercial buyers at the exact moment they search. Structured multi-tier Search, Performance Max, and YouTube funnel scaling with real-time Looker Studio dashboards.
+          <!-- Title & Pillar Tag -->
+          <div class="flex items-start justify-between gap-2">
+            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+              Google Ads & Intent Scaling
+            </h3>
+            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+              Pillar 07
+            </span>
+          </div>
+
+          <!-- Subheadline -->
+          <p class="text-xs font-semibold text-[#64748B] mt-1">
+            Performance Max & High-Intent Search Funnels
           </p>
 
-          <!-- Key Deliverable Points with Blue Checkmarks -->
-          <div class="pt-4 border-t border-[#F1F5F9] mt-4">
-            <div class="text-[10px] font-black tracking-widest text-[#0066FF] uppercase flex items-center gap-1.5 mb-2.5">
+          <!-- Description -->
+          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
+            Capturing commercial buyers at peak intent with structured multi-tier Search, PMax, and GA4 attribution.
+          </p>
+
+          <!-- Key Deliverable Points -->
+          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
+            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
-              <span>KEY DELIVERABLE POINTS:</span>
+              <span>KEY DELIVERABLES:</span>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-1.5">
               
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>High-Intent Google Search Ads Campaigns</span>
+      <span>High-Intent Google Search Campaigns</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>Performance Max (PMax) Full-Funnel Scaling</span>
+      <span>Performance Max (PMax) Scaling</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>YouTube In-Stream Video Conversion Campaigns</span>
+      <span>YouTube In-Stream Video Funnels</span>
     </li>
   
             </ul>
           </div>
         </div>
 
-        <!-- Card Footer Action -->
+        <!-- Bottom Row: Metric & Morphy Pill Button -->
         <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
-          <a href="services/google-ads.html" class="text-xs font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors flex items-center gap-1.5">
-            <span>View Dedicated Service Page</span>
-            <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-          </a>
-          <a href="services/google-ads.html" class="w-8 h-8 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-[#0066FF] group-hover:bg-[#0066FF] group-hover:text-white transition-all flex items-center justify-center text-xs shadow-xs" title="Open Dedicated Hub">
-            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-          </a>
+          <div class="flex items-baseline gap-1.5">
+            <span class="text-base font-black text-[#0066FF]"><20%</span>
+            <span class="text-xs font-semibold text-[#64748B]">Target CPA</span>
+          </div>
+
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+            <span>Explore Hub</span>
+            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </span>
+          </div>
         </div>
 
       </div>
 
-    </div>
+    </a>
   
 
-    <div class="morphy-card p-0 rounded-[28px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0]">
+    <a href="services/seo-aeo.html" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
-      <!-- Card Image Header with Floating Badges -->
-      <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-[#0B0F19]">
-        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80" alt="SEO & AEO (AI Engine Optimization)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+      <!-- Inset Image Frame with Rounded Corners -->
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
+        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80" alt="SEO & AEO (AI Optimization)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
-        <!-- Top Left Icon Badge -->
-        <div class="absolute top-3.5 left-3.5 w-9 h-9 rounded-xl bg-white/95 backdrop-blur-md border border-white/40 shadow-md flex items-center justify-center text-sm text-[#0066FF]">
-          <i class="fa-solid fa-robot"></i>
+        <!-- Top Floating Glass Tags & Rating -->
+        <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">SERP Top 3</span>
+  
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">ChatGPT Citations</span>
+  
+          </div>
+          <div class="px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1">
+            <i class="fa-solid fa-star text-amber-400 text-[10px]"></i>
+            <span>4.9</span>
+          </div>
         </div>
 
-        <!-- Top Right Category Badge -->
-        <div class="absolute top-3.5 right-3.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-white/40 shadow-md text-[10px] font-black text-[#0066FF] uppercase tracking-wider">
-          Search & Generative AI (GEO)
+        <!-- Carousel Indicator Dots -->
+        <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
+          <span class="w-2 h-2 rounded-full bg-white shadow-xs"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
         </div>
       </div>
 
       <!-- Card Body Content -->
-      <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+      <div class="px-2 pb-2 flex-1 flex flex-col justify-between space-y-4">
+        
         <div>
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
-            SEO & AEO (AI Engine Optimization)
-          </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-1 leading-snug">
-            Top-Tier Google SERP & Direct AI Engine Citations
-          </p>
-          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
-            Dominating both traditional search engines (Google, Bing) and next-generation AI answer engines (ChatGPT, Perplexity, Claude) through semantic entity architecture and schema engineering.
+          <!-- Title & Pillar Tag -->
+          <div class="flex items-start justify-between gap-2">
+            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+              SEO & AEO (AI Optimization)
+            </h3>
+            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+              Pillar 08
+            </span>
+          </div>
+
+          <!-- Subheadline -->
+          <p class="text-xs font-semibold text-[#64748B] mt-1">
+            Top-Tier Google SERP & Generative AI Citations
           </p>
 
-          <!-- Key Deliverable Points with Blue Checkmarks -->
-          <div class="pt-4 border-t border-[#F1F5F9] mt-4">
-            <div class="text-[10px] font-black tracking-widest text-[#0066FF] uppercase flex items-center gap-1.5 mb-2.5">
+          <!-- Description -->
+          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
+            Dominating search rankings and AI answer engines through semantic schema engineering and entity authority.
+          </p>
+
+          <!-- Key Deliverable Points -->
+          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
+            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
-              <span>KEY DELIVERABLE POINTS:</span>
+              <span>KEY DELIVERABLES:</span>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-1.5">
               
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>On-Page, Technical & Semantic Keyword Optimization</span>
+      <span>Semantic Entity Architecture & On-Page</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>AEO / GEO Optimization (ChatGPT, Perplexity, Claude)</span>
+      <span>AEO Optimization (ChatGPT, Perplexity)</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>Standardized /llms.txt Context & AI Bot Directives</span>
+      <span>Standardized /llms.txt Directives</span>
     </li>
   
             </ul>
           </div>
         </div>
 
-        <!-- Card Footer Action -->
+        <!-- Bottom Row: Metric & Morphy Pill Button -->
         <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
-          <a href="services/seo-aeo.html" class="text-xs font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors flex items-center gap-1.5">
-            <span>View Dedicated Service Page</span>
-            <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-          </a>
-          <a href="services/seo-aeo.html" class="w-8 h-8 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-[#0066FF] group-hover:bg-[#0066FF] group-hover:text-white transition-all flex items-center justify-center text-xs shadow-xs" title="Open Dedicated Hub">
-            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-          </a>
+          <div class="flex items-baseline gap-1.5">
+            <span class="text-base font-black text-[#0066FF]">Top 3</span>
+            <span class="text-xs font-semibold text-[#64748B]">Rank & AI Answers</span>
+          </div>
+
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+            <span>Explore Hub</span>
+            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </span>
+          </div>
         </div>
 
       </div>
 
-    </div>
+    </a>
   
 
-    <div class="morphy-card p-0 rounded-[28px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0]">
+    <a href="services/public-relations.html" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
-      <!-- Card Image Header with Floating Badges -->
-      <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-[#0B0F19]">
-        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80" alt="PR (Public Relations) & Media Outreach" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+      <!-- Inset Image Frame with Rounded Corners -->
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
+        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80" alt="PR & Media Outreach" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
-        <!-- Top Left Icon Badge -->
-        <div class="absolute top-3.5 left-3.5 w-9 h-9 rounded-xl bg-white/95 backdrop-blur-md border border-white/40 shadow-md flex items-center justify-center text-sm text-[#0066FF]">
-          <i class="fa-solid fa-bullhorn"></i>
+        <!-- Top Floating Glass Tags & Rating -->
+        <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">Tier-1 Press</span>
+  
+    <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">Executive PR</span>
+  
+          </div>
+          <div class="px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1">
+            <i class="fa-solid fa-star text-amber-400 text-[10px]"></i>
+            <span>5.0</span>
+          </div>
         </div>
 
-        <!-- Top Right Category Badge -->
-        <div class="absolute top-3.5 right-3.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-white/40 shadow-md text-[10px] font-black text-[#0066FF] uppercase tracking-wider">
-          Brand Reputation & Media
+        <!-- Carousel Indicator Dots -->
+        <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
+          <span class="w-2 h-2 rounded-full bg-white shadow-xs"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
         </div>
       </div>
 
       <!-- Card Body Content -->
-      <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+      <div class="px-2 pb-2 flex-1 flex flex-col justify-between space-y-4">
+        
         <div>
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
-            PR (Public Relations) & Media Outreach
-          </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-1 leading-snug">
-            Mainstream Press Coverage, Media Placements & Authority
-          </p>
-          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
-            Amplifying executive thought leadership, securing organic tier-1 news publication coverage, distributing authoritative press releases, and fortifying corporate brand reputation against crises.
+          <!-- Title & Pillar Tag -->
+          <div class="flex items-start justify-between gap-2">
+            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+              PR & Media Outreach
+            </h3>
+            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+              Pillar 09
+            </span>
+          </div>
+
+          <!-- Subheadline -->
+          <p class="text-xs font-semibold text-[#64748B] mt-1">
+            Mainstream Press Coverage & Executive Authority
           </p>
 
-          <!-- Key Deliverable Points with Blue Checkmarks -->
-          <div class="pt-4 border-t border-[#F1F5F9] mt-4">
-            <div class="text-[10px] font-black tracking-widest text-[#0066FF] uppercase flex items-center gap-1.5 mb-2.5">
+          <!-- Description -->
+          <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
+            Amplifying executive leadership, securing organic tier-1 news placements, and syndicating press releases.
+          </p>
+
+          <!-- Key Deliverable Points -->
+          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
+            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
-              <span>KEY DELIVERABLE POINTS:</span>
+              <span>KEY DELIVERABLES:</span>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-1.5">
               
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>Strategic National & International Press Release Distribution</span>
+      <span>Tier-1 Press Release Distribution</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>Editorial Placements in Tier-1 Business & Lifestyle Media</span>
+      <span>Editorial Placements in Business Media</span>
     </li>
   
-    <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+    <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
       <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
-      <span>Executive Media Training & Thought Leadership By-lines</span>
+      <span>Executive Media Training & Op-Eds</span>
     </li>
   
             </ul>
           </div>
         </div>
 
-        <!-- Card Footer Action -->
+        <!-- Bottom Row: Metric & Morphy Pill Button -->
         <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
-          <a href="services/public-relations.html" class="text-xs font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors flex items-center gap-1.5">
-            <span>View Dedicated Service Page</span>
-            <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-          </a>
-          <a href="services/public-relations.html" class="w-8 h-8 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-[#0066FF] group-hover:bg-[#0066FF] group-hover:text-white transition-all flex items-center justify-center text-xs shadow-xs" title="Open Dedicated Hub">
-            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-          </a>
+          <div class="flex items-baseline gap-1.5">
+            <span class="text-base font-black text-[#0066FF]">Tier-1</span>
+            <span class="text-xs font-semibold text-[#64748B]">Media Placements</span>
+          </div>
+
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+            <span>Explore Hub</span>
+            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </span>
+          </div>
         </div>
 
       </div>
 
-    </div>
+    </a>
   
       </div>
 
