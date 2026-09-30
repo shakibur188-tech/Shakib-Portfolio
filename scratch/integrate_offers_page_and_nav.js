@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+const fs = require('fs');
+const path = require('path');
+
+const rootDir = path.join(__dirname, '..');
+
+// 1. Generate full Morphy Bento offers.html
+const offersHtml = `<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -630,3 +636,63 @@
   </script>
 </body>
 </html>
+`;
+
+// Write offers.html
+fs.writeFileSync(path.join(rootDir, 'offers.html'), offersHtml, 'utf8');
+console.log('offers.html created successfully!');
+
+// 2. Scan all HTML files and update navbar menus
+function updateNavInFiles() {
+  const filesToUpdate = [
+    'index.html',
+    'about.html',
+    'services.html',
+    'projects.html',
+    'experience.html',
+    'consultation.html',
+    'case-study.html',
+    'case-studies.html',
+    'testimonials.html',
+    'contact.html'
+  ];
+
+  const serviceFiles = fs.readdirSync(path.join(rootDir, 'services'))
+    .filter(f => f.endsWith('.html'))
+    .map(f => path.join('services', f));
+
+  const allFiles = [...filesToUpdate, ...serviceFiles];
+
+  allFiles.forEach(relPath => {
+    const fullPath = path.join(rootDir, relPath);
+    if (!fs.existsSync(fullPath)) return;
+
+    let content = fs.readFileSync(fullPath, 'utf8');
+
+    // Desktop Nav Menu Update
+    // Replace: <a href="/experience" ...>Experience</a>\n        <a href="/consultation"
+    // With: <a href="/experience" ...>Experience</a>\n        <a href="/offers" ...>Offers</a>\n        <a href="/consultation"
+    
+    // Check if /offers already exists in desktop nav
+    if (!content.includes('href="/offers"') && !content.includes('href="/offers.html"')) {
+      content = content.replace(
+        /(<a href="(?:\/experience|\/experience\.html)"[^>]*>Experience<\/a>\s*)(<a href="(?:\/consultation|\/consultation\.html)")/g,
+        `$1<a href="/offers" class="hover:text-[#0066FF] transition-colors">Offers</a>\n        $2`
+      );
+
+      // Mobile Menu Update
+      content = content.replace(
+        /(<a href="(?:\/experience|\/experience\.html)" class="mobile-link[^"]*"[^>]*>Experience<\/a>\s*)(<a href="(?:\/consultation|\/consultation\.html)")/g,
+        `$1<a href="/offers" class="mobile-link block text-sm font-semibold text-[#334155]">Offers</a>\n      $2`
+      );
+
+      fs.writeFileSync(fullPath, content, 'utf8');
+      console.log(`Updated nav in ${relPath}`);
+    } else {
+      console.log(`Nav already contains /offers in ${relPath}`);
+    }
+  });
+}
+
+updateNavInFiles();
+console.log('All files processed!');
