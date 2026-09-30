@@ -818,6 +818,112 @@
     </div>
   </section>
 
+  <!-- 10. NEWSLETTER & GROWTH BRIEFING (Exact Reference Layout in Morphy Theme) -->
+  <section id="newsletter" class="py-24 md:py-32 border-b border-[#E2E8F0] bg-[#FAFCFF] relative z-10 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- LEFT COLUMN: Heading, Value Props & Email Input Form (5 cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="space-y-3">
+            <h2 class="text-4xl sm:text-6xl font-black text-[#0B0F19] tracking-tight leading-[1.08]">
+              Join our <br>
+              <span class="text-[#0B0F19]">newsletter</span> <span class="inline-block animate-bounce">🎉</span>
+            </h2>
+            <p class="text-sm sm:text-base text-[#64748B] max-w-md leading-relaxed font-normal">
+              A curated weekly breakdown of high-ROI Meta ad strategies, full-stack Jamstack optimization, and conversion architecture.
+            </p>
+          </div>
+
+          <!-- 2 Numbered Benefit Pills -->
+          <div class="space-y-3 pt-2">
+            <div class="flex items-center gap-3">
+              <span class="w-7 h-7 rounded-full bg-[#10B981]/15 text-[#10B981] flex items-center justify-center font-black text-xs shrink-0">01</span>
+              <span class="text-xs sm:text-sm font-extrabold text-[#0B0F19]">Get proprietary ad scaling playbooks</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-7 h-7 rounded-full bg-[#0066FF]/15 text-[#0066FF] flex items-center justify-center font-black text-xs shrink-0">02</span>
+              <span class="text-xs sm:text-sm font-extrabold text-[#0B0F19]">Get teardowns of 7-figure e-commerce funnels</span>
+            </div>
+          </div>
+
+          <!-- Rounded Capsule Email Subscription Form -->
+          <form action="/api/index.php?action=lead_submit" method="POST" class="inquiry-form pt-4 max-w-md">
+            <input type="hidden" name="type" value="newsletter_subscribe">
+            <div class="relative flex items-center">
+              <input type="email" name="email" required placeholder="Enter your email" class="w-full pl-6 pr-16 py-4 rounded-full border-2 border-[#E2E8F0] bg-white text-sm text-[#0B0F19] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#0066FF] shadow-sm transition-colors">
+              <button type="submit" class="absolute right-2 w-11 h-11 rounded-full bg-[#0066FF] hover:bg-[#0052FF] text-white flex items-center justify-center shadow-md shadow-[#0066FF]/30 hover:scale-105 active:scale-95 transition-all" title="Subscribe to Newsletter">
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </button>
+            </div>
+            <p class="text-[11px] text-[#94A3B8] mt-2 pl-4">No spam ever. Unsubscribe with 1 click anytime.</p>
+          </form>
+        </div>
+
+        <!-- RIGHT COLUMN: Staggered Floating Cards & Floating Client Pills (7 cols) -->
+        <div class="lg:col-span-7 relative flex justify-center items-center py-6">
+          
+          <!-- Ambient Floating Confetti Particles -->
+          <div class="absolute top-4 left-10 w-2.5 h-2.5 rounded-sm bg-[#8B5CF6]/40 rotate-12 animate-pulse pointer-events-none"></div>
+          <div class="absolute top-1/4 right-8 w-2 h-2 rounded-full bg-[#F59E0B]/50 animate-ping pointer-events-none"></div>
+          <div class="absolute bottom-6 left-1/3 w-3 h-3 rounded-sm bg-[#EC4899]/40 rotate-45 pointer-events-none"></div>
+          <div class="absolute top-1/2 left-4 w-2 h-2 rounded-full bg-[#0066FF]/40 pointer-events-none"></div>
+
+          <!-- Staggered Image Cards Container -->
+          <div class="relative w-full max-w-[540px] h-[440px] sm:h-[480px]">
+            
+            <!-- Card 1: Mountain Peak (Top Right) -->
+            <div class="absolute top-0 right-4 sm:right-8 w-56 sm:w-64 h-56 sm:h-64 rounded-3xl overflow-hidden shadow-2xl border-2 border-white/80 bg-slate-900 group hover:scale-105 transition-transform duration-500 z-10">
+              <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Mountain peak high performance" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              
+              <!-- Floating Pill Top Right on Card 1 -->
+              <div class="absolute top-3.5 right-3.5 w-9 h-9 rounded-full bg-white/95 backdrop-blur-md p-0.5 border border-[#E2E8F0] shadow-md">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt="Reviewer" class="w-full h-full rounded-full object-cover">
+              </div>
+            </div>
+
+            <!-- Floating Pill Left on Card 1 & Card 2 Overlap -->
+            <div class="absolute top-20 sm:top-24 left-4 sm:left-12 z-30 px-4 py-2 rounded-full bg-white/95 backdrop-blur-md border border-[#E2E8F0] shadow-xl flex items-center gap-3 animate-floatSlow">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Eliezer Greenholt" class="w-7 h-7 rounded-full object-cover">
+              <div>
+                <div class="text-xs font-black text-[#0B0F19]">Eliezer Greenholt</div>
+                <div class="text-[10px] font-bold text-[#F59E0B] flex items-center gap-1">
+                  <i class="fa-solid fa-star text-[9px]"></i> 4.8
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Alpacas in Meadow (Center Left) -->
+            <div class="absolute bottom-6 sm:bottom-8 left-2 sm:left-6 w-52 sm:w-60 h-60 sm:h-68 rounded-3xl overflow-hidden shadow-2xl border-2 border-white/80 bg-slate-900 group hover:scale-105 transition-transform duration-500 z-20">
+              <img src="https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=600&q=80" alt="Alpacas nature" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            </div>
+
+            <!-- Card 3: Coastal Tropical Beach (Bottom Right) -->
+            <div class="absolute bottom-0 right-0 sm:right-4 w-44 sm:w-52 h-64 sm:h-72 rounded-3xl overflow-hidden shadow-2xl border-2 border-white/80 bg-slate-900 group hover:scale-105 transition-transform duration-500 z-15">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Coastal aerial beach" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              
+              <!-- Floating Pill on Card 3 -->
+              <div class="absolute top-1/3 -left-12 sm:-left-16 z-35 px-4 py-2 rounded-full bg-white/95 backdrop-blur-md border border-[#E2E8F0] shadow-xl flex items-center gap-3">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100&q=80" alt="Casey Littel" class="w-7 h-7 rounded-full object-cover">
+                <div>
+                  <div class="text-xs font-black text-[#0B0F19]">Casey Littel</div>
+                  <div class="text-[10px] font-bold text-[#F59E0B] flex items-center gap-1">
+                    <i class="fa-solid fa-star text-[9px]"></i> 4.9
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
   <!-- 10. GET IN TOUCH (Minimalist Morphy Contact Section) -->
   <section id="contact" class="py-24 border-b border-[#E2E8F0] bg-white relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
