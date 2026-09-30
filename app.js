@@ -409,123 +409,147 @@ function renderServices(servicesData) {
   const container = document.getElementById('servicesContainer');
   if (!container) return;
 
-  const services = [
+  const dataList = servicesData && servicesData.length ? servicesData : [
     {
-      id: 'branding', slug: 'branding', pillar: '01',
-      title: 'Branding & Brand Strategy', subtitle: 'Strategic Positioning & Identity Manuals',
-      icon: 'fa-fingerprint', metric: '+3.5x Brand Valuation Lift', metricIcon: 'fa-arrow-trend-up',
-      description: 'Forging iconic market identities that resonate deeply, command premium pricing power, and outpace market competition.',
-      tags: ['Brand Architecture', 'Identity Manuals', 'Trademark Positioning']
+      id: 'branding', slug: 'branding',
+      title: 'Branding & Brand Strategy', subtitle: 'Strategic Brand Positioning, Architecture & Guidelines',
+      badge: 'Brand Strategy', icon: 'fa-shield-halved',
+      image: 'https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80',
+      description: 'Forging iconic market identities that resonate deeply, command premium pricing, and outpace competition. From market research and positioning architecture to comprehensive corporate brand guidelines and narrative voice.',
+      deliverables: ['Brand Positioning & Competitive Market Research', 'Brand Architecture & Portfolio Structuring', 'Corporate Brand Identity Guidelines Manual']
     },
     {
-      id: 'graphics-design', slug: 'graphics-design', pillar: '02',
-      title: 'Graphics Design & Visual Systems', subtitle: 'High-Impact UI/UX & Packaging',
-      icon: 'fa-bezier-curve', metric: '300+ Scalable Vector Assets', metricIcon: 'fa-wand-magic-sparkles',
-      description: 'Building enduring visual design languages, luxury packaging architectures, marketing decks, and pixel-perfect UI/UX interfaces.',
-      tags: ['UI/UX App Design', 'Luxury Packaging', 'Marketing Pitch Decks']
+      id: 'graphics-design', slug: 'graphics-design',
+      title: 'Graphics Design & Visual Identity', subtitle: 'High-Impact Visual Systems, Packaging & UI/UX',
+      badge: 'Creative Direction', icon: 'fa-pen-nib',
+      image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80',
+      description: 'Building enduring visual systems that command instant attention. From bespoke logo marks and typography hierarchies to luxury packaging, marketing collateral, and digital UI/UX design.',
+      deliverables: ['Brand Identity Guidelines & Logo Marks', 'UI/UX Web & Mobile App Interface Design', 'Luxury Packaging & Print Collateral']
     },
     {
-      id: 'web-development', slug: 'web-development', pillar: '03',
-      title: 'Web Design & Full-Stack Dev', subtitle: 'Sub-Second Jamstack & E-Commerce',
-      icon: 'fa-code', metric: '0.8s Speed • 95+ PageSpeed', metricIcon: 'fa-bolt',
-      description: 'Architecting custom responsive Jamstack websites and full-stack headless e-commerce platforms engineered for maximum conversion.',
-      tags: ['Next.js & React', 'Headless E-Commerce', 'CAPI Telemetry']
+      id: 'web-development', slug: 'web-development',
+      title: 'Web Design & Development', subtitle: 'High-Performance Modern Web Architecture & E-Commerce',
+      badge: 'Full-Stack Engineering', icon: 'fa-code',
+      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
+      description: 'Architecting blazing-fast, responsive websites and web applications tailored for maximum conversion, rock-solid security, and top-tier SEO/AEO indexing with 95+ Google PageSpeed scores.',
+      deliverables: ['Custom Responsive Corporate Websites', 'Headless & Full-Stack E-Commerce Platforms', 'Interactive Landing Pages with Ultra-High Conversion']
     },
     {
-      id: 'social-media-marketing', slug: 'social-media-marketing', pillar: '04',
-      title: 'Social Media & Meta Ads', subtitle: 'AI Advantage+ & Viral Content',
-      icon: 'fa-hashtag', metric: '4.8x Blended ROAS Achieved', metricIcon: 'fa-chart-pie',
-      description: 'Transforming cold audiences into high-paying customers through creative testing, viral short reels, and Meta Advantage+ scaling.',
-      tags: ['Meta Advantage+', 'Viral Short Reels', 'Full-Funnel Scaling']
+      id: 'social-media-marketing', slug: 'social-media-marketing',
+      title: 'Social Media Marketing (SMM)', subtitle: 'Data-Driven Content Strategy, Viral Campaigns & Community',
+      badge: 'Omnichannel Growth', icon: 'fa-hashtag',
+      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80',
+      description: 'Transforming passive followers into brand evangelists through magnetic storytelling, thumb-stopping short-form video content, proactive community management, and paid social scaling.',
+      deliverables: ['Omnichannel Social Content Architecture', 'High-Converting Viral Reels & TikTok Campaigns', 'Community Management & Influencer Collaborations']
     },
     {
-      id: 'photoshoot-videography', slug: 'photoshoot-videography', pillar: '05',
-      title: 'Commercial Photoshoot & Video', subtitle: '4K Cinema Visual Storytelling',
-      icon: 'fa-video', metric: '4K Cinema Broadcast Masters', metricIcon: 'fa-film',
-      description: 'Directing world-class commercial cinematography, studio product photography, broadcast TVCs, and high-retention social reels.',
-      tags: ['Commercial TVCs', 'E-Commerce Studio', 'Cinematic Color Grade']
+      id: 'photoshoot-videography', slug: 'photoshoot-videography',
+      title: 'Photoshoot & Videography', subtitle: 'Commercial Cinematography, Product & Brand Storytelling',
+      badge: 'Studio & Field Production', icon: 'fa-video',
+      image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80',
+      description: 'Capturing world-class commercial visual assets with cinematic color grading, professional lighting, and dynamic direction for broadcast TVCs, luxury product catalogs, and social reels.',
+      deliverables: ['Commercial TVCs & Cinematic Brand Documentaries', 'High-End E-Commerce & Editorial Product Photography', 'Executive Headshots & Corporate Culture Features']
     },
     {
-      id: 'event-activation', slug: 'event-activation', pillar: '06',
-      title: 'Event Activation & 3D Booths', subtitle: 'Experiential Expos & Brand Pop-Ups',
-      icon: 'fa-cubes', metric: 'Photorealistic 3D Spatial Renders', metricIcon: 'fa-vr-cardboard',
-      description: 'Designing immersive live brand environments, photorealistic 3D exhibition booths, trade show activations, and turnkey production.',
-      tags: ['3D Booth Architecture', 'Trade Expo Pop-Ups', 'Turnkey Production']
+      id: 'event-activation', slug: 'event-activation',
+      title: 'Event Activation & Exhibition', subtitle: 'Experiential Marketing, B2B Trade Expos & Brand Launches',
+      badge: 'Experiential Marketing', icon: 'fa-champagne-glasses',
+      image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80',
+      description: 'Designing unforgettable live brand experiences, immersive exhibition booths, trade show installations, and corporate gala activations that drive deep emotional brand connection and qualified press buzz.',
+      deliverables: ['3D Exhibition Booth Design & Custom Fabrication', 'Experiential Consumer Pop-Ups & Brand Launches', 'Corporate Conferences, Galas & Award Ceremonies']
     },
     {
-      id: 'google-ads', slug: 'google-ads', pillar: '07',
-      title: 'Google Ads & Search Scaling', subtitle: 'Performance Max & Intent Keywords',
-      icon: 'fa-chart-line', metric: 'Sub-20% CPA Acquisition Target', metricIcon: 'fa-crosshair',
-      description: 'Capturing high-intent commercial buyers at the exact moment of search with Performance Max, Search ads, and granular GA4 attribution.',
-      tags: ['Performance Max', 'Search Intent Dominance', 'GA4 Attribution']
+      id: 'google-ads', slug: 'google-ads',
+      title: 'Google Ads & Intent Scaling', subtitle: 'Precision Search, Performance Max & YouTube Funnels',
+      badge: 'Paid Media Precision', icon: 'fa-chart-line',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
+      description: 'Capturing high-intent commercial buyers at the exact moment they search. Structured multi-tier Search, Performance Max, and YouTube funnel scaling with real-time Looker Studio dashboards.',
+      deliverables: ['High-Intent Google Search Ads Campaigns', 'Performance Max (PMax) Full-Funnel Scaling', 'YouTube In-Stream Video Conversion Campaigns']
     },
     {
-      id: 'seo-aeo', slug: 'seo-aeo', pillar: '08',
-      title: 'SEO & Generative AI Optimization', subtitle: 'Google SERP & ChatGPT / Claude Citations',
-      icon: 'fa-magnifying-glass-chart', metric: 'Top 3 Rank & AI Answer Ready', metricIcon: 'fa-robot',
-      description: 'Dominating Google rankings and generative AI answer engines through semantic schema engineering, entity authority, and Core Web Vitals.',
-      tags: ['Semantic Entity Graphs', 'ChatGPT & Claude Citations', 'Core Web Vitals']
+      id: 'seo-aeo', slug: 'seo-aeo',
+      title: 'SEO & AEO (AI Engine Optimization)', subtitle: 'Top-Tier Google SERP & Direct AI Engine Citations',
+      badge: 'Search & Generative AI (GEO)', icon: 'fa-robot',
+      image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80',
+      description: 'Dominating both traditional search engines (Google, Bing) and next-generation AI answer engines (ChatGPT, Perplexity, Claude) through semantic entity architecture and schema engineering.',
+      deliverables: ['On-Page, Technical & Semantic Keyword Optimization', 'AEO / GEO Optimization (ChatGPT, Perplexity, Claude)', 'Standardized /llms.txt Context & AI Bot Directives']
     },
     {
-      id: 'public-relations', slug: 'public-relations', pillar: '09',
-      title: 'Public Relations & Media Outreach', subtitle: 'Mainstream Press & Executive Authority',
-      icon: 'fa-newspaper', metric: 'Tier-1 Broadcast Media Reach', metricIcon: 'fa-bullhorn',
-      description: 'Amplifying executive thought leadership, securing tier-1 news placements, syndicating authoritative press releases, and safeguarding reputation.',
-      tags: ['Tier-1 Press Distribution', 'Executive Thought Op-Eds', 'Crisis Safeguards']
+      id: 'public-relations', slug: 'public-relations',
+      title: 'PR (Public Relations) & Media Outreach', subtitle: 'Mainstream Press Coverage, Media Placements & Authority',
+      badge: 'Brand Reputation & Media', icon: 'fa-bullhorn',
+      image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80',
+      description: 'Amplifying executive thought leadership, securing organic tier-1 news publication coverage, distributing authoritative press releases, and fortifying corporate brand reputation against crises.',
+      deliverables: ['Strategic National & International Press Release Distribution', 'Editorial Placements in Tier-1 Business & Lifestyle Media', 'Executive Media Training & Thought Leadership By-lines']
     }
   ];
 
-  const html = services.map(s => {
-    const tagsHtml = s.tags.map(t => `
-      <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
-        <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
-        <span>${t}</span>
-      </span>
+  const html = dataList.map(s => {
+    const deliverables = (s.deliverables || []).slice(0, 3);
+    const deliverablesHtml = deliverables.map(d => `
+      <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium leading-tight">
+        <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+        <span>${escapeHtml(d)}</span>
+      </li>
     `).join('');
 
+    const targetSlug = s.slug || s.id;
+
     return `
-      <div class="morphy-card p-8 rounded-[32px] bg-white border border-[#E2E8F0] flex flex-col justify-between space-y-6 group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 relative overflow-hidden">
+      <div class="morphy-card p-0 rounded-[28px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0]">
         
-        <div class="absolute top-0 right-0 w-32 h-32 bg-[#0066FF]/5 rounded-bl-full pointer-events-none group-hover:bg-[#0066FF]/10 transition-colors"></div>
-
-        <div class="flex items-center justify-between">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0066FF]/10 to-[#0052FF]/20 border border-[#0066FF]/25 flex items-center justify-center text-2xl text-[#0066FF] shadow-inner group-hover:scale-110 group-hover:bg-[#0066FF] group-hover:text-white transition-all duration-300">
-            <i class="fa-solid ${s.icon}"></i>
+        <!-- Card Image Header with Floating Badges -->
+        <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-[#0B0F19]">
+          <img src="${escapeHtml(s.image)}" alt="${escapeHtml(s.title)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+          
+          <!-- Top Left Icon Badge -->
+          <div class="absolute top-3.5 left-3.5 w-9 h-9 rounded-xl bg-white/95 backdrop-blur-md border border-white/40 shadow-md flex items-center justify-center text-sm text-[#0066FF]">
+            <i class="fa-solid ${s.icon || 'fa-layer-group'}"></i>
           </div>
-          <span class="px-3.5 py-1.5 rounded-full bg-[#F8FAFC] border border-[#E2E8F0] text-[11px] font-black text-[#64748B] group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors uppercase tracking-wider">
-            Pillar ${s.pillar}
-          </span>
+
+          <!-- Top Right Category Badge -->
+          <div class="absolute top-3.5 right-3.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-white/40 shadow-md text-[10px] font-black text-[#0066FF] uppercase tracking-wider">
+            ${escapeHtml(s.badge || 'Core Pillar')}
+          </div>
         </div>
 
-        <div class="space-y-4 flex-1">
+        <!-- Card Body Content -->
+        <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
           <div>
-            <h3 class="text-2xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors tracking-tight leading-snug">
-              ${s.title}
+            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+              ${escapeHtml(s.title)}
             </h3>
-            <p class="text-xs font-extrabold text-[#0066FF] uppercase tracking-wider mt-1">
-              ${s.subtitle}
+            <p class="text-xs font-bold text-[#0066FF] mt-1 leading-snug">
+              ${escapeHtml(s.subtitle || '')}
             </p>
+            <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
+              ${escapeHtml(s.description || '')}
+            </p>
+
+            <!-- Key Deliverable Points with Blue Checkmarks -->
+            <div class="pt-4 border-t border-[#F1F5F9] mt-4">
+              <div class="text-[10px] font-black tracking-widest text-[#0066FF] uppercase flex items-center gap-1.5 mb-2.5">
+                <i class="fa-solid fa-list-check text-[10px]"></i>
+                <span>KEY DELIVERABLE POINTS:</span>
+              </div>
+              <ul class="space-y-2">
+                ${deliverablesHtml}
+              </ul>
+            </div>
           </div>
 
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15 text-xs font-black text-[#0066FF]">
-            <i class="fa-solid ${s.metricIcon} text-[#10B981]"></i>
-            <span>${s.metric}</span>
+          <!-- Card Footer Action -->
+          <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
+            <a href="services/${targetSlug}.html" class="text-xs font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors flex items-center gap-1.5">
+              <span>View Dedicated Service Page</span>
+              <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+            </a>
+            <a href="services/${targetSlug}.html" class="w-8 h-8 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-[#0066FF] group-hover:bg-[#0066FF] group-hover:text-white transition-all flex items-center justify-center text-xs shadow-xs" title="Open Dedicated Hub">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
           </div>
 
-          <p class="text-sm text-[#64748B] font-normal leading-relaxed">
-            ${s.description}
-          </p>
-
-          <div class="flex flex-wrap gap-2 pt-2">
-            ${tagsHtml}
-          </div>
-        </div>
-
-        <div class="pt-4 border-t border-[#F1F5F9]">
-          <a href="services/${s.slug}.html" class="w-full py-3.5 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
-            <span>Explore Architecture</span>
-            <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1.5 transition-transform"></i>
-          </a>
         </div>
 
       </div>
