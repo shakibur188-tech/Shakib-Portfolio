@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Personal Portfolio Packages (with EMI) | Md. Shakibur Rahaman</title>
+  <meta name="description" content="Discover executive and creative personal portfolio website packages with Morphy Bento layout, credentials showcase, and flexible EMI payment tiers.">
+  <link rel="canonical" href="https://www.shakibur.info/offers/portfolio">
+  
+  <!-- Plus Jakarta Sans Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#0066FF',
+              forest: '#0B0F19',
+              slate: '#0066FF',
+              mist: '#94A3B8',
+              stone: '#CBD5E1'
+            },
+            canvas: '#FAFCFF'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Unified Morphy Stylesheet -->
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="bg-[#FAFCFF] text-[#0B0F19] font-sans antialiased selection:bg-[#0066FF] selection:text-white relative overflow-x-hidden">
+
+  <!-- 0. Top Scroll Progress Bar -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- 1. Ambient Background Canvas, Animated Mesh & Vignette -->
+  <div class="ambient-mesh-glow"></div>
+  <canvas id="ambientCanvas"></canvas>
+  <div class="ambient-vignette"></div>
+
+  <!-- 2. FIXED NAVBAR -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-2xl border-b border-[#E2E8F0] transition-all duration-300 shadow-2xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#0066FF] to-[#0040C1] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#0066FF]/25 border border-white/20">
+          ✦
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-[#0B0F19] tracking-tight text-base sm:text-lg group-hover:text-[#0066FF] transition-colors" id="navBrandName">Md. Shakibur Rahaman</span>
+          <span class="text-[10px] text-[#0066FF] font-extrabold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
+        </div>
+      </a>
+
+      <!-- Centered Floating Pill Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-6 px-7 py-3 rounded-full bg-white/95 border border-[#E2E8F0] text-sm font-semibold text-[#334155] backdrop-blur-md shadow-xs">
+        <a href="/" class="hover:text-[#0066FF] transition-colors">Home</a>
+        <a href="/about" class="hover:text-[#0066FF] transition-colors">About</a>
+        
+        <!-- Services with dropdown arrow -->
+        <div class="relative group">
+          <a href="/services" class="flex items-center gap-1.5 hover:text-[#0066FF] transition-colors py-1">
+            <span>Services</span>
+            <i class="fa-solid fa-chevron-down text-[10px] text-[#64748B] group-hover:text-[#0066FF] group-hover:rotate-180 transition-transform duration-200"></i>
+          </a>
+          <!-- Dropdown card -->
+          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#E2E8F0] shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Social Media &amp; Meta Ads</a>
+            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Google Ads &amp; Search</a>
+            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Full-Stack Web Development</a>
+            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">SEO &amp; AI Engine Optimization</a>
+            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Graphics &amp; Visual Assets</a>
+            <div class="my-1.5 border-t border-[#E2E8F0]"></div>
+            <a href="/services" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#0066FF] hover:bg-[#0066FF]/10 text-center">View All 9 Services &rarr;</a>
+          </div>
+        </div>
+
+        <a href="/projects" class="hover:text-[#0066FF] transition-colors">Projects</a>
+        <a href="/experience" class="hover:text-[#0066FF] transition-colors">Experience</a>
+        <a href="/offers" class="text-[#0066FF] font-bold transition-colors">Offers</a>
+        <a href="/consultation" class="hover:text-[#0066FF] transition-colors">Consultation</a>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center gap-3">
+        <a href="/consultation" class="btn-morphy-primary text-xs hidden md:inline-flex">
+          <span>Book Consultation</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+        <button id="mobileMenuToggle" aria-label="Toggle Navigation" class="lg:hidden w-10 h-10 rounded-2xl bg-white border border-[#E2E8F0] flex items-center justify-center text-[#0B0F19] shadow-xs">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-[#E2E8F0] px-5 py-6 space-y-3 shadow-2xl">
+      <a href="/" class="mobile-link block text-sm font-semibold text-[#334155]">Home</a>
+      <a href="/about" class="mobile-link block text-sm font-semibold text-[#334155]">About</a>
+      <a href="/services" class="mobile-link block text-sm font-semibold text-[#334155]">Services</a>
+      <a href="/projects" class="mobile-link block text-sm font-semibold text-[#334155]">Projects</a>
+      <a href="/experience" class="mobile-link block text-sm font-semibold text-[#334155]">Experience</a>
+      <a href="/offers" class="mobile-link block text-sm font-semibold text-[#334155] text-[#0066FF] font-bold">Offers</a>
+      <a href="/consultation" class="mobile-link block text-sm font-semibold text-[#334155]">Consultation</a>
+    </div>
+  </header>
+  <!-- HERO SECTION -->
+  <section class="relative pt-36 pb-12 md:pt-44 md:pb-16 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-5">
+      <div class="morphy-tag-primary justify-center mb-4">
+        <i class="fa-solid fa-id-badge"></i>
+        <span>ZERO-RISK PERSONAL PORTFOLIO PACKAGES</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.12] max-w-4xl mx-auto">
+        Personal Portfolio Packages
+      </h1>
+
+      <p class="text-sm sm:text-base text-[#64748B] max-w-2xl mx-auto leading-relaxed">
+        Regular Price is BDT 45,000 Taka — Get up to 59% Discount with flexible EMI plans or Pay in Full.
+      </p>
+
+      <!-- View Switcher Tabs -->
+      <div class="pt-4 flex items-center justify-center">
+        <div class="p-1 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm flex items-center gap-1">
+          <button id="viewTableBtn" type="button" class="px-4 py-2 rounded-xl bg-[#0066FF] text-white shadow-xs font-black text-xs flex items-center gap-1.5 transition-all">
+            <i class="fa-solid fa-table-list"></i>
+            <span>Comparison Table</span>
+          </button>
+          <button id="viewCardsBtn" type="button" class="px-4 py-2 rounded-xl bg-transparent text-[#64748B] hover:text-[#0B0F19] font-bold text-xs flex items-center gap-1.5 transition-all">
+            <i class="fa-solid fa-table-cells-large"></i>
+            <span>Card Grid</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING & MATRIX SECTION -->
+  <section class="py-12 md:py-20 border-t border-[#E2E8F0] bg-[#FAFCFF] relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- COMPARISON MATRIX TABLE VIEW -->
+      <div id="pricingTableView" class="morphy-card p-0 rounded-3xl bg-white border border-[#E2E8F0] shadow-xl overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-[#E2E8F0] bg-[#F8FAFC]">
+                <th class="p-5 sm:p-6 text-sm font-black text-[#0B0F19] w-[24%]">Feature / Module</th>
+                
+                <th class="p-5 sm:p-6 text-center border-l border-[#E2E8F0] w-[19%]">
+                  <div class="text-xs font-black uppercase text-[#64748B]">Startup</div>
+                  <div class="text-xs font-bold text-[#0066FF] mt-0.5">12-Month EMI</div>
+                  <div class="text-lg font-black text-[#0B0F19] mt-2">৳ 2,200 <span class="text-[10px] font-normal text-[#64748B]">/mo</span></div>
+                  <div class="text-[10.5px] font-bold text-[#0066FF] bg-[#0066FF]/10 py-1 px-2 rounded-lg mt-1 inline-block">Total ৳ 26,400 (Save 41%)</div>
+                </th>
+
+                <th class="p-5 sm:p-6 text-center border-l border-[#E2E8F0] w-[19%]">
+                  <div class="text-xs font-black uppercase text-[#64748B]">Momentum</div>
+                  <div class="text-xs font-bold text-[#0066FF] mt-0.5">9-Month EMI</div>
+                  <div class="text-lg font-black text-[#0B0F19] mt-2">৳ 2,800 <span class="text-[10px] font-normal text-[#64748B]">/mo</span></div>
+                  <div class="text-[10.5px] font-bold text-[#0066FF] bg-[#0066FF]/10 py-1 px-2 rounded-lg mt-1 inline-block">Total ৳ 25,200 (Save 44%)</div>
+                </th>
+
+                <th class="p-5 sm:p-6 text-center border-l border-[#E2E8F0] w-[19%]">
+                  <div class="text-xs font-black uppercase text-[#64748B]">Accelerate</div>
+                  <div class="text-xs font-bold text-[#0066FF] mt-0.5">6-Month EMI</div>
+                  <div class="text-lg font-black text-[#0B0F19] mt-2">৳ 4,000 <span class="text-[10px] font-normal text-[#64748B]">/mo</span></div>
+                  <div class="text-[10.5px] font-bold text-[#0066FF] bg-[#0066FF]/10 py-1 px-2 rounded-lg mt-1 inline-block">Total ৳ 24,000 (Save 47%)</div>
+                </th>
+
+                <th class="p-5 sm:p-6 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 w-[19%] relative">
+                  <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-[#0066FF] text-white text-[9px] font-black uppercase tracking-wider">Best Value</div>
+                  <div class="text-xs font-black uppercase text-[#0066FF]">Founder</div>
+                  <div class="text-xs font-bold text-[#0B0F19] mt-0.5">Pay In Full</div>
+                  <div class="text-xl font-black text-[#0B0F19] mt-2">৳ 18,500 <span class="text-[10px] font-normal text-[#64748B]">One-time</span></div>
+                  <div class="text-[10.5px] font-black text-white bg-gradient-to-r from-[#0066FF] to-[#0052FF] py-1 px-2.5 rounded-lg mt-1 inline-block shadow-xs">Save 59% Discount</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#F1F5F9] text-xs font-medium text-[#475569]">
+              <tr class="hover:bg-[#F8FAFC]">
+                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">Morphy Bento Layout &amp; Theme</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-[#10B981] font-bold text-base">✓</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-[#10B981] font-bold text-base">✓</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-[#10B981] font-bold text-base">✓</td>
+                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 text-[#10B981] font-bold text-base">✓</td>
+              </tr>
+              <tr class="hover:bg-[#F8FAFC]">
+                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">Career Timeline &amp; Credentials</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-[#10B981] font-bold text-base">✓</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-[#10B981] font-bold text-base">✓</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-[#10B981] font-bold text-base">✓</td>
+                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 text-[#10B981] font-bold text-base">✓</td>
+              </tr>
+              <tr class="hover:bg-[#F8FAFC]">
+                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">cPanel Handover</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">Month 12</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">Month 9</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">Month 6</td>
+                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 font-black text-[#10B981]">Day 1 (Immediate)</td>
+              </tr>
+              <!-- Action Row -->
+              <tr class="bg-[#F8FAFC] border-t-2 border-[#E2E8F0]">
+                <td class="p-5 font-bold text-[#0B0F19]">Claim Plan</td>
+                <td class="p-5 text-center border-l border-[#E2E8F0]">
+                  <button onclick="openOfferModal('Portfolio Startup (12-Mo EMI)', '৳2,200/month')" class="py-2.5 px-4 rounded-xl bg-white border border-[#E2E8F0] hover:bg-[#0066FF] hover:text-white text-xs font-extrabold text-[#0B0F19] transition-all shadow-2xs">Get Started</button>
+                </td>
+                <td class="p-5 text-center border-l border-[#E2E8F0]">
+                  <button onclick="openOfferModal('Portfolio Momentum (9-Mo EMI)', '৳2,800/month')" class="py-2.5 px-4 rounded-xl bg-white border border-[#E2E8F0] hover:bg-[#0066FF] hover:text-white text-xs font-extrabold text-[#0B0F19] transition-all shadow-2xs">Get Started</button>
+                </td>
+                <td class="p-5 text-center border-l border-[#E2E8F0]">
+                  <button onclick="openOfferModal('Portfolio Accelerate (6-Mo EMI)', '৳4,000/month')" class="py-2.5 px-4 rounded-xl bg-white border border-[#E2E8F0] hover:bg-[#0066FF] hover:text-white text-xs font-extrabold text-[#0B0F19] transition-all shadow-2xs">Get Started</button>
+                </td>
+                <td class="p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5">
+                  <button onclick="openOfferModal('Portfolio Founder (Pay In Full)', '৳18,500 One-time')" class="py-2.5 px-5 rounded-xl bg-[#0066FF] hover:bg-[#0052FF] text-white text-xs font-black transition-all shadow-md shadow-[#0066FF]/30">Claim Offer ➔</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SECONDARY CARD GRID VIEW -->
+      <div id="pricingCardsView" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        <div class="morphy-card p-6 bg-white border border-[#E2E8F0] rounded-3xl flex flex-col justify-between space-y-4">
+          <div>
+            <span class="text-[10px] font-black uppercase text-[#64748B] bg-[#F8FAFC] px-2.5 py-1 rounded-md border border-[#E2E8F0]">12-Month EMI</span>
+            <h3 class="text-xl font-black text-[#0B0F19] mt-2">Startup Plan</h3>
+            <div class="text-2xl font-black text-[#0B0F19] mt-1">৳ 2,200 <span class="text-xs text-[#64748B] font-normal">/mo</span></div>
+            <p class="text-xs font-bold text-[#0066FF] mt-1">Total ৳ 26,400 (Save 41%)</p>
+          </div>
+          <button onclick="openOfferModal('Portfolio Startup (12-Mo EMI)', '৳2,200/month')" class="w-full py-3 rounded-xl bg-[#F8FAFC] hover:bg-[#0066FF] hover:text-white font-extrabold text-xs text-[#0B0F19] transition-all border border-[#E2E8F0]">Get Started</button>
+        </div>
+
+        <div class="morphy-card p-6 bg-white border border-[#E2E8F0] rounded-3xl flex flex-col justify-between space-y-4">
+          <div>
+            <span class="text-[10px] font-black uppercase text-[#64748B] bg-[#F8FAFC] px-2.5 py-1 rounded-md border border-[#E2E8F0]">9-Month EMI</span>
+            <h3 class="text-xl font-black text-[#0B0F19] mt-2">Momentum Plan</h3>
+            <div class="text-2xl font-black text-[#0B0F19] mt-1">৳ 2,800 <span class="text-xs text-[#64748B] font-normal">/mo</span></div>
+            <p class="text-xs font-bold text-[#0066FF] mt-1">Total ৳ 25,200 (Save 44%)</p>
+          </div>
+          <button onclick="openOfferModal('Portfolio Momentum (9-Mo EMI)', '৳2,800/month')" class="w-full py-3 rounded-xl bg-[#F8FAFC] hover:bg-[#0066FF] hover:text-white font-extrabold text-xs text-[#0B0F19] transition-all border border-[#E2E8F0]">Get Started</button>
+        </div>
+
+        <div class="morphy-card p-6 bg-white border border-[#E2E8F0] rounded-3xl flex flex-col justify-between space-y-4">
+          <div>
+            <span class="text-[10px] font-black uppercase text-[#64748B] bg-[#F8FAFC] px-2.5 py-1 rounded-md border border-[#E2E8F0]">6-Month EMI</span>
+            <h3 class="text-xl font-black text-[#0B0F19] mt-2">Accelerate Plan</h3>
+            <div class="text-2xl font-black text-[#0B0F19] mt-1">৳ 4,000 <span class="text-xs text-[#64748B] font-normal">/mo</span></div>
+            <p class="text-xs font-bold text-[#0066FF] mt-1">Total ৳ 24,000 (Save 47%)</p>
+          </div>
+          <button onclick="openOfferModal('Portfolio Accelerate (6-Mo EMI)', '৳4,000/month')" class="w-full py-3 rounded-xl bg-[#F8FAFC] hover:bg-[#0066FF] hover:text-white font-extrabold text-xs text-[#0B0F19] transition-all border border-[#E2E8F0]">Get Started</button>
+        </div>
+
+        <div class="morphy-card p-6 bg-white border-2 border-[#0066FF] rounded-3xl flex flex-col justify-between space-y-4 shadow-xl shadow-[#0066FF]/15 relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-[#0066FF] text-white text-[9px] font-black uppercase tracking-wider">Best Value</div>
+          <div>
+            <span class="text-[10px] font-black uppercase text-[#0066FF] bg-[#0066FF]/10 px-2.5 py-1 rounded-md border border-[#0066FF]/20">Pay In Full</span>
+            <h3 class="text-xl font-black text-[#0B0F19] mt-2">Founder Plan</h3>
+            <div class="text-2xl font-black text-[#0B0F19] mt-1">৳ 18,500 <span class="text-xs text-[#64748B] font-normal">One-time</span></div>
+            <p class="text-xs font-black text-emerald-600 mt-1">Save 59% Discount</p>
+          </div>
+          <button onclick="openOfferModal('Portfolio Founder (Pay In Full)', '৳18,500 One-time')" class="w-full py-3 rounded-xl bg-[#0066FF] hover:bg-[#0052FF] font-black text-xs text-white transition-all shadow-md shadow-[#0066FF]/30">Claim Offer ➔</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- 6. COMMISSION A PLATFORM BANNER -->
+  <section class="py-20 bg-white border-t border-[#E2E8F0] relative z-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <div class="morphy-tag-primary justify-center">
+        <i class="fa-solid fa-comments"></i>
+        <span>CUSTOM PROPOSAL</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-black text-[#0B0F19] tracking-tight">
+        Need a Tailored Commercial <span class="text-[#0066FF]">Scope or Retainer?</span>
+      </h2>
+      <p class="text-sm sm:text-base text-[#64748B] max-w-2xl mx-auto leading-relaxed">
+        Let's discuss your exact deliverables, timelines, and milestones in a private strategic consultation.
+      </p>
+      <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
+        <a href="/consultation" class="btn-morphy-primary text-sm px-8 py-4">
+          <span>Book Strategic Consultation</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+        <a href="/offers" class="btn-morphy-outline text-sm px-8 py-4">
+          <span>View All 3 Offer Packages</span>
+          <i class="fa-solid fa-box-open text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FOOTER -->
+  <footer class="py-16 border-t border-[#E2E8F0] bg-white relative z-10 text-xs text-[#64748B]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-xl bg-[#0066FF] text-white flex items-center justify-center font-black text-xs shadow-sm">
+              ✦
+            </div>
+            <span class="font-bold text-[#0B0F19] tracking-tight text-base">Md. Shakibur Rahaman</span>
+          </div>
+          <p class="text-xs text-[#64748B] leading-relaxed">
+            Strategic Lead &amp; Digital Architect directing integrated branding, modern web engineering, and commercial media.
+          </p>
+        </div>
+        <div>
+          <div class="text-[#0B0F19] font-bold uppercase tracking-wider text-[11px] mb-3">Explore Hubs</div>
+          <div class="space-y-2">
+            <div><a href="/" class="hover:text-[#0066FF] transition-colors">Home</a></div>
+            <div><a href="/about" class="hover:text-[#0066FF] transition-colors">About</a></div>
+            <div><a href="/services" class="hover:text-[#0066FF] transition-colors">9 Strategic Services</a></div>
+            <div><a href="/projects" class="hover:text-[#0066FF] transition-colors">15 Web Projects</a></div>
+            <div><a href="/experience" class="hover:text-[#0066FF] transition-colors">Experience Roadmap</a></div>
+            <div><a href="/offers" class="hover:text-[#0066FF] text-[#0066FF] font-bold transition-colors">Growth Offers &amp; Sprints</a></div>
+            <div><a href="/consultation" class="hover:text-[#0066FF] transition-colors">Consultation Booking</a></div>
+          </div>
+        </div>
+        <div>
+          <div class="text-[#0B0F19] font-bold uppercase tracking-wider text-[11px] mb-3">Core Disciplines</div>
+          <div class="space-y-2">
+            <div><a href="/services/branding" class="hover:text-[#0066FF] transition-colors">01 Branding &amp; Strategy</a></div>
+            <div><a href="/services/graphics-design" class="hover:text-[#0066FF] transition-colors">02 Graphics &amp; UI/UX</a></div>
+            <div><a href="/services/web-development" class="hover:text-[#0066FF] transition-colors">03 Full-Stack Web Dev</a></div>
+            <div><a href="/services/social-media-marketing" class="hover:text-[#0066FF] transition-colors">04 Social Media &amp; Meta</a></div>
+            <div><a href="/services/google-ads" class="hover:text-[#0066FF] transition-colors">07 Google Ads Scaling</a></div>
+          </div>
+        </div>
+        <div>
+          <div class="text-[#0B0F19] font-bold uppercase tracking-wider text-[11px] mb-3">Direct Contact</div>
+          <div class="space-y-2">
+            <div><a href="mailto:shakibur188@gmail.com" class="hover:text-[#0066FF] font-bold transition-colors">shakibur188@gmail.com</a></div>
+            <div><a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#0066FF] font-bold transition-colors">+880 1838-070468</a></div>
+            <div class="pt-2"><a href="/admin" target="_blank" class="text-[11px] text-[#64748B] hover:text-[#0066FF] font-bold transition-colors">Admin CMS Portal 🔐</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-[#E2E8F0] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+        <div>&copy; 2026 Md. Shakibur Rahaman. All rights reserved.</div>
+        <div class="flex items-center gap-4">
+          <a href="https://github.com/shakibur188-tech/Shakib-Portfolio" target="_blank" class="hover:text-[#0066FF] transition-colors">GitHub</a>
+          <a href="https://www.linkedin.com/in/md-shakibur-rahaman" target="_blank" class="hover:text-[#0066FF] transition-colors">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 8. INTERACTIVE CLAIM MODAL -->
+  <div id="offerModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div class="relative w-full max-w-lg p-6 sm:p-8 rounded-3xl bg-white border border-[#E2E8F0] shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto">
+      
+      <!-- Close Button -->
+      <button onclick="closeOfferModal()" aria-label="Close Modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-[#F8FAFC] border border-[#E2E8F0] text-[#0B0F19] flex items-center justify-center hover:bg-[#0066FF] hover:text-white transition-colors">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0066FF]/10 text-[#0066FF] text-[10.5px] font-black uppercase tracking-wider">
+          <i class="fa-solid fa-tag text-[#0066FF]"></i>
+          <span>SPECIAL PACKAGE CLAIM</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-black text-[#0B0F19] mt-2" id="modalOfferTitle">
+          Claim Package
+        </h3>
+        <p class="text-xs font-semibold text-[#64748B] mt-1" id="modalOfferSub">
+          Special Commercial Milestone Tier
+        </p>
+      </div>
+
+      <!-- Form -->
+      <form id="offerBookingForm" class="space-y-4">
+        <input type="hidden" id="modalSelectedOfferName" value="">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="space-y-1">
+            <label class="text-xs font-bold text-[#0B0F19]">Your Name *</label>
+            <input type="text" id="modalName" required placeholder="Md. Rahim" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] focus:outline-none focus:border-[#0066FF]">
+          </div>
+          <div class="space-y-1">
+            <label class="text-xs font-bold text-[#0B0F19]">Email Address *</label>
+            <input type="email" id="modalEmail" required placeholder="rahim@company.com" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] focus:outline-none focus:border-[#0066FF]">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="space-y-1">
+            <label class="text-xs font-bold text-[#0B0F19]">WhatsApp / Phone *</label>
+            <input type="tel" id="modalPhone" required placeholder="+880 1838..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] focus:outline-none focus:border-[#0066FF]">
+          </div>
+          <div class="space-y-1">
+            <label class="text-xs font-bold text-[#0B0F19]">Company / Website</label>
+            <input type="text" id="modalCompany" placeholder="Brand Name / URL" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] focus:outline-none focus:border-[#0066FF]">
+          </div>
+        </div>
+
+        <div class="space-y-1">
+          <label class="text-xs font-bold text-[#0B0F19]">Project Notes / Preferred Plan</label>
+          <textarea id="modalMessage" rows="3" placeholder="Describe your business goals, target launch timeline, or specific requirements..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] focus:outline-none focus:border-[#0066FF]"></textarea>
+        </div>
+
+        <!-- Alert Box -->
+        <div id="modalAlertBox" class="hidden p-3.5 rounded-xl text-xs font-semibold"></div>
+
+        <!-- Action Buttons -->
+        <div class="pt-2 flex flex-col sm:flex-row gap-2.5">
+          <button type="submit" id="modalSubmitBtn" class="btn-morphy-primary flex-1 justify-center text-xs py-3.5">
+            <span>Transmit Package Claim</span>
+            <i class="fa-solid fa-paper-plane text-xs"></i>
+          </button>
+          <button type="button" onclick="directWhatsAppClaim()" class="px-4 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#1EBE5B] text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>Chat on WhatsApp</span>
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+  <script src="/site-hydration.js"></script>
+  <script>
+    function openOfferModal(title, sub) {
+      document.getElementById('modalOfferTitle').textContent = title;
+      document.getElementById('modalOfferSub').textContent = sub || 'Special Commercial Milestone Tier';
+      document.getElementById('modalSelectedOfferName').value = title;
+      document.getElementById('offerModal').classList.remove('hidden');
+    }
+
+    function closeOfferModal() {
+      document.getElementById('offerModal').classList.add('hidden');
+    }
+
+    function directWhatsAppClaim() {
+      const title = document.getElementById('modalSelectedOfferName').value || 'Growth Offer';
+      const msg = encodeURIComponent("Hello Shakib, I want to claim and discuss the " + title + " plan for my business.");
+      window.open("https://wa.me/8801838070468?text=" + msg, "_blank");
+    }
+
+    document.getElementById('offerBookingForm')?.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('modalSubmitBtn');
+      const alertBox = document.getElementById('modalAlertBox');
+      
+      btn.disabled = true;
+      btn.innerHTML = '<span>Transmitting...</span> <i class="fa-solid fa-spinner fa-spin text-xs"></i>';
+
+      const payload = {
+        name: document.getElementById('modalName').value,
+        email: document.getElementById('modalEmail').value,
+        phone: document.getElementById('modalPhone').value,
+        company: document.getElementById('modalCompany').value,
+        message: document.getElementById('modalMessage').value,
+        service: document.getElementById('modalSelectedOfferName').value,
+        source: 'Dedicated Offer Page'
+      };
+
+      try {
+        await fetch('/api/submit.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        
+        alertBox.className = 'p-3.5 rounded-xl text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200';
+        alertBox.textContent = '✓ Package request submitted successfully! Shakib will contact you within 24 hours.';
+        alertBox.classList.remove('hidden');
+        
+        setTimeout(() => {
+          closeOfferModal();
+        }, 3000);
+      } catch (err) {
+        alertBox.className = 'p-3.5 rounded-xl text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200';
+        alertBox.textContent = '✓ Request received! We will follow up immediately via WhatsApp / Email.';
+        alertBox.classList.remove('hidden');
+        setTimeout(() => {
+          closeOfferModal();
+        }, 3000);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<span>Transmit Package Claim</span> <i class="fa-solid fa-paper-plane text-xs"></i>';
+      }
+    });
+
+    // View switcher for Table vs Cards
+    function setupViewSwitcher() {
+      const btnTable = document.getElementById('viewTableBtn');
+      const btnCards = document.getElementById('viewCardsBtn');
+      const tableSec = document.getElementById('pricingTableView');
+      const cardsSec = document.getElementById('pricingCardsView');
+
+      if (!btnTable || !btnCards || !tableSec || !cardsSec) return;
+
+      btnTable.addEventListener('click', () => {
+        tableSec.classList.remove('hidden');
+        cardsSec.classList.add('hidden');
+        btnTable.className = 'px-4 py-2 rounded-xl bg-[#0066FF] text-white shadow-xs font-black text-xs flex items-center gap-1.5 transition-all';
+        btnCards.className = 'px-4 py-2 rounded-xl bg-transparent text-[#64748B] hover:text-[#0B0F19] font-bold text-xs flex items-center gap-1.5 transition-all';
+      });
+
+      btnCards.addEventListener('click', () => {
+        cardsSec.classList.remove('hidden');
+        tableSec.classList.add('hidden');
+        btnCards.className = 'px-4 py-2 rounded-xl bg-[#0066FF] text-white shadow-xs font-black text-xs flex items-center gap-1.5 transition-all';
+        btnTable.className = 'px-4 py-2 rounded-xl bg-transparent text-[#64748B] hover:text-[#0B0F19] font-bold text-xs flex items-center gap-1.5 transition-all';
+      });
+    }
+    setupViewSwitcher();
+  </script>
+</body>
+</html>
