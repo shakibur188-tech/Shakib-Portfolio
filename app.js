@@ -1,7 +1,7 @@
 /**
  * Md. Shakibur Rahaman - Strategic Lead & Digital Architect
  * BOTANICAL FOREST & STEEL SLATE LIGHT THEME ENGINE
- * Palette: #70805D (Olive), #2A3B27 (Forest), #55738D (Slate), #96A7B6 (Mist), #CBC8C4 (Stone)
+ * Palette: #0066FF (Olive), #0B0F19 (Forest), #64748B (Slate), #94A3B8 (Mist), #CBD5E1 (Stone)
  * Dynamic Scroll Progress Bar, Animated Counters, Ambient Canvas, Before/After Slider & Point Architecture
  */
 
@@ -625,9 +625,9 @@ function renderTechArsenal() {
     { name: 'JavaScript', icon: 'fa-brands fa-js', color: '#B39200' },
     { name: 'TypeScript', icon: 'fa-solid fa-code', color: '#3178C6' },
     { name: 'React', icon: 'fa-brands fa-react', color: '#0088A9' },
-    { name: 'Next.js', icon: 'fa-solid fa-n', color: '#2A3B27' },
+    { name: 'Next.js', icon: 'fa-solid fa-n', color: '#0B0F19' },
     { name: 'Node.js', icon: 'fa-brands fa-node-js', color: '#43853D' },
-    { name: 'Express.js', icon: 'fa-solid fa-server', color: '#55738D' },
+    { name: 'Express.js', icon: 'fa-solid fa-server', color: '#64748B' },
     { name: 'MongoDB', icon: 'fa-solid fa-database', color: '#3F8A43' },
     { name: 'Tailwind CSS', icon: 'fa-solid fa-wind', color: '#38BDF8' },
     { name: 'Git', icon: 'fa-brands fa-git-alt', color: '#F05032' },
@@ -635,7 +635,7 @@ function renderTechArsenal() {
     { name: 'Figma', icon: 'fa-brands fa-figma', color: '#A259FF' },
     { name: 'Adobe Suite', icon: 'fa-solid fa-palette', color: '#FF0000' },
     { name: 'Google Ads', icon: 'fa-solid fa-chart-line', color: '#4285F4' },
-    { name: 'GA4 / SEO', icon: 'fa-solid fa-magnifying-glass-chart', color: '#70805D' }
+    { name: 'GA4 / SEO', icon: 'fa-solid fa-magnifying-glass-chart', color: '#0066FF' }
   ];
 
   container.innerHTML = stack.map(tech => `
@@ -665,11 +665,11 @@ function renderRoadmap() {
       <div class="roadmap-node-circle">
         <i class="fa-solid ${m.icon}"></i>
       </div>
-      <div class="inline-block px-3.5 py-1 rounded-full bg-[#70805D]/15 border border-[#70805D]/30 text-[#2A3B27] text-xs font-bold mb-2">
+      <div class="inline-block px-3.5 py-1 rounded-full bg-[#0066FF]/15 border border-[#0066FF]/30 text-[#0B0F19] text-xs font-bold mb-2">
         ${escapeHtml(m.year)}
       </div>
-      <h4 class="text-base font-extrabold text-[#1C2B1B] mb-1.5 uppercase tracking-wider">${escapeHtml(m.title)}</h4>
-      <p class="text-xs text-[#4D614A] leading-relaxed max-w-xs mx-auto">${escapeHtml(m.desc)}</p>
+      <h4 class="text-base font-extrabold text-[#0B0F19] mb-1.5 uppercase tracking-wider">${escapeHtml(m.title)}</h4>
+      <p class="text-xs text-[#64748B] leading-relaxed max-w-xs mx-auto">${escapeHtml(m.desc)}</p>
     </div>
   `).join('');
 }
@@ -910,7 +910,7 @@ function initServiceModal() {
     const modalTools = document.getElementById('modalTools');
     const modalPageLink = document.getElementById('modalPageLink');
 
-    if (modalIcon) modalIcon.className = `fa-solid ${svc.icon || 'fa-layer-group'} text-2xl text-[#70805D]`;
+    if (modalIcon) modalIcon.className = `fa-solid ${svc.icon || 'fa-layer-group'} text-2xl text-[#0066FF]`;
     if (modalBadge) modalBadge.textContent = svc.badge || 'Core Vertical';
     if (modalTitle) modalTitle.textContent = svc.title;
     if (modalSubtitle) modalSubtitle.textContent = svc.subtitle || '';
@@ -919,8 +919,8 @@ function initServiceModal() {
 
     if (modalDeliverables) {
       modalDeliverables.innerHTML = (svc.deliverables || []).map(d => `
-        <li class="flex items-start gap-2.5 text-xs text-[#2A3B27]">
-          <i class="fa-solid fa-check text-[#70805D] mt-0.5 shrink-0"></i>
+        <li class="flex items-start gap-2.5 text-xs text-[#0B0F19]">
+          <i class="fa-solid fa-check text-[#0066FF] mt-0.5 shrink-0"></i>
           <span>${escapeHtml(d)}</span>
         </li>
       `).join('');
@@ -928,7 +928,7 @@ function initServiceModal() {
 
     if (modalTools) {
       modalTools.innerHTML = (svc.tools || []).map(t => `
-        <span class="px-2.5 py-1 rounded-md bg-[#F1F3ED] text-xs text-[#2A3B27] border border-[#70805D]/25 font-bold">${escapeHtml(t)}</span>
+        <span class="px-2.5 py-1 rounded-md bg-[#FAFCFF] text-xs text-[#0B0F19] border border-[#0066FF]/25 font-bold">${escapeHtml(t)}</span>
       `).join('');
     }
 
@@ -1004,9 +1004,9 @@ function initContactForm() {
     statusDiv.classList.remove('hidden');
 
     if (type === 'success') {
-      statusDiv.className = 'p-4 rounded-xl text-xs font-semibold bg-[#70805D]/15 text-[#2A3B27] border border-[#70805D]/35 block';
+      statusDiv.className = 'p-4 rounded-xl text-xs font-semibold bg-[#0066FF]/15 text-[#0B0F19] border border-[#0066FF]/35 block';
     } else {
-      statusDiv.className = 'p-4 rounded-xl text-xs font-semibold bg-gray-100 text-[#1C2B1B] border border-gray-300 block';
+      statusDiv.className = 'p-4 rounded-xl text-xs font-semibold bg-gray-100 text-[#0B0F19] border border-gray-300 block';
     }
     statusDiv.textContent = msg;
   }
@@ -1087,10 +1087,10 @@ function initScrollEffects() {
     if (navbar) {
       if (scrollTop > 40) {
         navbar.classList.add('shadow-md', 'bg-white/95');
-        navbar.classList.remove('bg-[#F8F9F6]/90');
+        navbar.classList.remove('bg-[#F8FAFC]/90');
       } else {
         navbar.classList.remove('shadow-md', 'bg-white/95');
-        navbar.classList.add('bg-[#F8F9F6]/90');
+        navbar.classList.add('bg-[#F8FAFC]/90');
       }
     }
 
@@ -1103,9 +1103,9 @@ function initScrollEffects() {
     });
 
     navLinks.forEach(link => {
-      link.classList.remove('text-[#70805D]', 'font-bold');
+      link.classList.remove('text-[#0066FF]', 'font-bold');
       if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('text-[#70805D]', 'font-bold');
+        link.classList.add('text-[#0066FF]', 'font-bold');
       }
     });
   }

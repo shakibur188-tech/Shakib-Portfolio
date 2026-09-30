@@ -1718,7 +1718,7 @@ async function handleGenerateAiImage() {
         dlLink.classList.remove('hidden');
       }
       if (urlBar) {
-        urlBar.innerHTML = `<strong>Saved Asset URL:</strong> <a href="${data.url}" target="_blank" class="text-[#70805D] underline">${data.url}</a>`;
+        urlBar.innerHTML = `<strong>Saved Asset URL:</strong> <a href="${data.url}" target="_blank" class="text-[#0066FF] underline">${data.url}</a>`;
         urlBar.classList.remove('hidden');
       }
       showToast('Visual rendered and saved to assets successfully!', 'success');
@@ -1831,9 +1831,9 @@ function initFormBuilderEventListeners() {
   document.querySelectorAll('.template-filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.template-filter-btn').forEach(b => {
-        b.className = 'template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#70805D]/25 text-[#2A3B27] hover:bg-[#F1F4EE]';
+        b.className = 'template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#0066FF]/25 text-[#0B0F19] hover:bg-[#F1F4EE]';
       });
-      btn.className = 'template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#70805D] text-white';
+      btn.className = 'template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0066FF] text-white';
       activeTemplateCategory = btn.getAttribute('data-cat') || 'all';
       renderTemplateGallery();
     });
@@ -2052,9 +2052,9 @@ function renderTemplateGallery() {
 
   if (!filtered.length) {
     container.innerHTML = `
-      <div class="col-span-full py-12 text-center text-xs text-[#55738D] bg-white rounded-2xl border border-[#70805D]/15 p-8">
-        <i class="fa-solid fa-folder-open text-2xl text-[#70805D] mb-2"></i>
-        <p class="font-bold text-[#1C2B1B]">No templates match your filter.</p>
+      <div class="col-span-full py-12 text-center text-xs text-[#64748B] bg-white rounded-2xl border border-[#0066FF]/15 p-8">
+        <i class="fa-solid fa-folder-open text-2xl text-[#0066FF] mb-2"></i>
+        <p class="font-bold text-[#0B0F19]">No templates match your filter.</p>
         <p class="mt-1">Try searching for a different keyword or select "All".</p>
       </div>
     `;
@@ -2070,22 +2070,22 @@ function renderTemplateGallery() {
           <p class="template-card-desc">${escapeHtml(tpl.description || '')}</p>
         </div>
 
-        <div class="space-y-1.5 py-3 border-t border-[#70805D]/10">
-          <div class="text-[11px] font-extrabold uppercase tracking-wider text-[#70805D]">Fields Preview:</div>
+        <div class="space-y-1.5 py-3 border-t border-[#0066FF]/10">
+          <div class="text-[11px] font-extrabold uppercase tracking-wider text-[#0066FF]">Fields Preview:</div>
           <div class="flex flex-wrap gap-1.5">
             ${(tpl.fields || []).slice(0, 4).map(f => `
-              <span class="px-2 py-0.5 rounded-md bg-[#F1F4EE] text-[10px] font-bold text-[#2A3B27] border border-[#70805D]/20">
+              <span class="px-2 py-0.5 rounded-md bg-[#F1F4EE] text-[10px] font-bold text-[#0B0F19] border border-[#0066FF]/20">
                 ${escapeHtml(f.label)}
               </span>
             `).join('')}
-            ${(tpl.fields || []).length > 4 ? `<span class="px-1.5 py-0.5 text-[10px] text-[#55738D] font-bold">+${(tpl.fields || []).length - 4} more</span>` : ''}
+            ${(tpl.fields || []).length > 4 ? `<span class="px-1.5 py-0.5 text-[10px] text-[#64748B] font-bold">+${(tpl.fields || []).length - 4} more</span>` : ''}
           </div>
         </div>
       </div>
 
       <div class="template-card-footer">
         <div class="template-fields-count">
-          <i class="fa-solid fa-list-check text-[11px] text-[#70805D]"></i>
+          <i class="fa-solid fa-list-check text-[11px] text-[#0066FF]"></i>
           <span>${(tpl.fields || []).length} Fields</span>
         </div>
 
@@ -2113,17 +2113,17 @@ window.openTemplatePreview = function(templateId) {
 
   const fieldsList = document.getElementById('tplModalFieldsList');
   fieldsList.innerHTML = (tpl.fields || []).map((f, i) => `
-    <div class="p-3 bg-[#F8F9F6] rounded-xl border border-[#70805D]/15 flex items-center justify-between text-xs">
+    <div class="p-3 bg-[#F8FAFC] rounded-xl border border-[#0066FF]/15 flex items-center justify-between text-xs">
       <div class="flex items-center gap-2.5">
-        <span class="w-6 h-6 rounded-lg bg-[#70805D]/10 text-[#70805D] flex items-center justify-center font-bold text-[10px]">
+        <span class="w-6 h-6 rounded-lg bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center font-bold text-[10px]">
           ${i + 1}
         </span>
         <div>
-          <div class="font-bold text-[#1C2B1B]">${escapeHtml(f.label)} ${f.required ? '<span class="text-red-500">*</span>' : ''}</div>
-          <div class="text-[10.5px] text-[#55738D] font-mono">${escapeHtml(f.placeholder || 'No placeholder')}</div>
+          <div class="font-bold text-[#0B0F19]">${escapeHtml(f.label)} ${f.required ? '<span class="text-red-500">*</span>' : ''}</div>
+          <div class="text-[10.5px] text-[#64748B] font-mono">${escapeHtml(f.placeholder || 'No placeholder')}</div>
         </div>
       </div>
-      <span class="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase bg-white border border-[#70805D]/25 text-[#70805D]">
+      <span class="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase bg-white border border-[#0066FF]/25 text-[#0066FF]">
         ${f.type}
       </span>
     </div>
@@ -2185,9 +2185,9 @@ function renderBuilderFields() {
 
   if (!currentBuilderForm.fields.length) {
     container.innerHTML = `
-      <div class="p-8 text-center bg-white rounded-xl border border-dashed border-[#70805D]/30 text-xs text-[#55738D]">
-        <i class="fa-solid fa-plus-circle text-2xl text-[#70805D] mb-2"></i>
-        <p class="font-bold text-[#1C2B1B]">No fields yet in this form.</p>
+      <div class="p-8 text-center bg-white rounded-xl border border-dashed border-[#0066FF]/30 text-xs text-[#64748B]">
+        <i class="fa-solid fa-plus-circle text-2xl text-[#0066FF] mb-2"></i>
+        <p class="font-bold text-[#0B0F19]">No fields yet in this form.</p>
         <p class="mt-1">Click "Add New Field" above to insert questions.</p>
       </div>
     `;
@@ -2201,7 +2201,7 @@ function renderBuilderFields() {
           <span class="cursor-grab text-gray-400 hover:text-gray-600">
             <i class="fa-solid fa-grip-vertical"></i>
           </span>
-          <span class="w-6 h-6 rounded-md bg-[#70805D]/10 text-[#70805D] flex items-center justify-center font-bold text-[10px]">
+          <span class="w-6 h-6 rounded-md bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center font-bold text-[10px]">
             ${idx + 1}
           </span>
           <input type="text" value="${escapeHtml(f.label)}" placeholder="Field Question / Label" class="admin-input text-xs py-1.5 px-2.5 font-bold flex-1" oninput="updateFieldProperty(${idx}, 'label', this.value)">
@@ -2221,15 +2221,15 @@ function renderBuilderFields() {
             <option value="url" ${f.type === 'url' ? 'selected' : ''}>URL</option>
           </select>
 
-          <label class="flex items-center gap-1 text-[11px] font-bold text-[#1C2B1B] cursor-pointer" title="Required Field">
+          <label class="flex items-center gap-1 text-[11px] font-bold text-[#0B0F19] cursor-pointer" title="Required Field">
             <input type="checkbox" ${f.required ? 'checked' : ''} onchange="updateFieldProperty(${idx}, 'required', this.checked)">
             <span>Req</span>
           </label>
 
-          <button type="button" class="text-gray-400 hover:text-[#70805D] p-1" onclick="moveBuilderField(${idx}, -1)" title="Move Up" ${idx === 0 ? 'disabled' : ''}>
+          <button type="button" class="text-gray-400 hover:text-[#0066FF] p-1" onclick="moveBuilderField(${idx}, -1)" title="Move Up" ${idx === 0 ? 'disabled' : ''}>
             <i class="fa-solid fa-arrow-up text-xs"></i>
           </button>
-          <button type="button" class="text-gray-400 hover:text-[#70805D] p-1" onclick="moveBuilderField(${idx}, 1)" title="Move Down" ${idx === currentBuilderForm.fields.length - 1 ? 'disabled' : ''}>
+          <button type="button" class="text-gray-400 hover:text-[#0066FF] p-1" onclick="moveBuilderField(${idx}, 1)" title="Move Down" ${idx === currentBuilderForm.fields.length - 1 ? 'disabled' : ''}>
             <i class="fa-solid fa-arrow-down text-xs"></i>
           </button>
           <button type="button" class="text-red-400 hover:text-red-600 p-1" onclick="removeFieldFromBuilder(${idx})" title="Delete Field">
@@ -2239,19 +2239,19 @@ function renderBuilderFields() {
       </div>
 
       <!-- Extended Details (Placeholder & Options) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3 pt-2.5 border-t border-[#70805D]/10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3 pt-2.5 border-t border-[#0066FF]/10">
         <div>
-          <label class="block text-[10px] font-bold text-[#55738D] mb-1">Placeholder Text</label>
+          <label class="block text-[10px] font-bold text-[#64748B] mb-1">Placeholder Text</label>
           <input type="text" value="${escapeHtml(f.placeholder || '')}" placeholder="e.g. Type here..." class="admin-input text-xs py-1 px-2" oninput="updateFieldProperty(${idx}, 'placeholder', this.value)">
         </div>
         ${['select', 'checkbox', 'radio'].includes(f.type) ? `
         <div>
-          <label class="block text-[10px] font-bold text-[#70805D] mb-1">Options (comma-separated)</label>
+          <label class="block text-[10px] font-bold text-[#0066FF] mb-1">Options (comma-separated)</label>
           <input type="text" value="${escapeHtml((f.options || []).join(', '))}" placeholder="Option A, Option B, Option C" class="admin-input text-xs py-1 px-2" oninput="updateFieldOptions(${idx}, this.value)">
         </div>
         ` : `
         <div>
-          <label class="block text-[10px] font-bold text-[#55738D] mb-1">Help / Subtext (Optional)</label>
+          <label class="block text-[10px] font-bold text-[#64748B] mb-1">Help / Subtext (Optional)</label>
           <input type="text" value="${escapeHtml(f.helpText || '')}" placeholder="Short hint below label..." class="admin-input text-xs py-1 px-2" oninput="updateFieldProperty(${idx}, 'helpText', this.value)">
         </div>
         `}
@@ -2310,15 +2310,15 @@ function updateLiveFormPreview() {
   if (!box) return;
 
   box.innerHTML = `
-    <div class="bg-white border border-[#70805D]/20 rounded-2xl p-6 shadow-sm">
-      <div class="mb-5 pb-4 border-b border-[#70805D]/15">
-        <span class="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-[#70805D]/10 text-[#70805D] border border-[#70805D]/20">
+    <div class="bg-white border border-[#0066FF]/20 rounded-2xl p-6 shadow-sm">
+      <div class="mb-5 pb-4 border-b border-[#0066FF]/15">
+        <span class="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-[#0066FF]/10 text-[#0066FF] border border-[#0066FF]/20">
           ${escapeHtml(currentBuilderForm.category || 'General')}
         </span>
-        <h3 class="text-xl font-extrabold text-[#1C2B1B] mt-2">
+        <h3 class="text-xl font-extrabold text-[#0B0F19] mt-2">
           ${escapeHtml(currentBuilderForm.title || 'Untitled Form')}
         </h3>
-        <p class="text-xs text-[#4D614A] mt-1">
+        <p class="text-xs text-[#64748B] mt-1">
           ${escapeHtml(currentBuilderForm.description || 'Fill out the details below.')}
         </p>
       </div>
@@ -2326,34 +2326,34 @@ function updateLiveFormPreview() {
       <div class="space-y-4">
         ${currentBuilderForm.fields.map(f => `
           <div>
-            <label class="block text-xs font-bold text-[#1C2B1B] mb-1">
+            <label class="block text-xs font-bold text-[#0B0F19] mb-1">
               ${escapeHtml(f.label)} ${f.required ? '<span class="text-red-500">*</span>' : ''}
             </label>
-            ${f.helpText ? `<p class="text-[10.5px] text-[#55738D] mb-1">${escapeHtml(f.helpText)}</p>` : ''}
+            ${f.helpText ? `<p class="text-[10.5px] text-[#64748B] mb-1">${escapeHtml(f.helpText)}</p>` : ''}
             
             ${f.type === 'textarea' ? `
-              <textarea class="w-full p-2.5 rounded-xl border border-[#70805D]/25 text-xs bg-[#F8F9F6] resize-none" rows="2" placeholder="${escapeHtml(f.placeholder || '')}" disabled></textarea>
+              <textarea class="w-full p-2.5 rounded-xl border border-[#0066FF]/25 text-xs bg-[#F8FAFC] resize-none" rows="2" placeholder="${escapeHtml(f.placeholder || '')}" disabled></textarea>
             ` : f.type === 'select' ? `
-              <select class="w-full p-2.5 rounded-xl border border-[#70805D]/25 text-xs bg-[#F8F9F6]" disabled>
+              <select class="w-full p-2.5 rounded-xl border border-[#0066FF]/25 text-xs bg-[#F8FAFC]" disabled>
                 <option>${escapeHtml(f.placeholder || 'Select an option...')}</option>
                 ${(f.options || []).map(o => `<option>${escapeHtml(o)}</option>`).join('')}
               </select>
             ` : ['checkbox', 'radio'].includes(f.type) ? `
               <div class="flex flex-wrap gap-1.5 pt-0.5">
                 ${(f.options || ['Sample Option 1', 'Sample Option 2']).map(o => `
-                  <span class="px-2.5 py-1 rounded-lg border border-[#70805D]/25 text-[11px] font-semibold bg-[#F8F9F6] text-[#2A3B27]">
+                  <span class="px-2.5 py-1 rounded-lg border border-[#0066FF]/25 text-[11px] font-semibold bg-[#F8FAFC] text-[#0B0F19]">
                     ${escapeHtml(o)}
                   </span>
                 `).join('')}
               </div>
             ` : `
-              <input type="${f.type}" class="w-full p-2.5 rounded-xl border border-[#70805D]/25 text-xs bg-[#F8F9F6]" placeholder="${escapeHtml(f.placeholder || '')}" disabled>
+              <input type="${f.type}" class="w-full p-2.5 rounded-xl border border-[#0066FF]/25 text-xs bg-[#F8FAFC]" placeholder="${escapeHtml(f.placeholder || '')}" disabled>
             `}
           </div>
         `).join('')}
 
         <div class="pt-2">
-          <button type="button" class="w-full py-3 rounded-xl bg-[#70805D] text-white text-xs font-bold shadow-md shadow-[#70805D]/20 cursor-default">
+          <button type="button" class="w-full py-3 rounded-xl bg-[#0066FF] text-white text-xs font-bold shadow-md shadow-[#0066FF]/20 cursor-default">
             ${escapeHtml(currentBuilderForm.submitText || 'Submit Form')}
           </button>
         </div>
@@ -2416,9 +2416,9 @@ function renderCustomFormsTable() {
   if (!customForms.length) {
     tbody.innerHTML = `
       <tr>
-        <td colspan="7" class="text-center py-12 text-[#55738D]">
-          <i class="fa-solid fa-rectangle-list text-2xl text-[#70805D] mb-2"></i>
-          <p class="font-bold text-[#1C2B1B]">No custom forms published yet.</p>
+        <td colspan="7" class="text-center py-12 text-[#64748B]">
+          <i class="fa-solid fa-rectangle-list text-2xl text-[#0066FF] mb-2"></i>
+          <p class="font-bold text-[#0B0F19]">No custom forms published yet.</p>
           <p class="text-xs mt-1">Pick a template from the "Template Library" or create one from scratch!</p>
         </td>
       </tr>
@@ -2433,40 +2433,40 @@ function renderCustomFormsTable() {
     return `
       <tr>
         <td>
-          <div class="font-bold text-[#1C2B1B] text-sm">${escapeHtml(f.title)}</div>
-          <div class="text-[11px] text-[#55738D] line-clamp-1">${escapeHtml(f.description || '')}</div>
+          <div class="font-bold text-[#0B0F19] text-sm">${escapeHtml(f.title)}</div>
+          <div class="text-[11px] text-[#64748B] line-clamp-1">${escapeHtml(f.description || '')}</div>
         </td>
         <td>
           <span class="template-cat-badge mb-0">${escapeHtml(f.category || 'General')}</span>
         </td>
         <td>
-          <code class="text-xs text-[#70805D] font-mono bg-[#F8F9F6] px-2 py-1 rounded border border-[#70805D]/20">
+          <code class="text-xs text-[#0066FF] font-mono bg-[#F8FAFC] px-2 py-1 rounded border border-[#0066FF]/20">
             ${escapeHtml(f.slug || f.id)}
           </code>
         </td>
         <td>
-          <span class="font-bold text-[#2A3B27]">${(f.fields || []).length}</span>
+          <span class="font-bold text-[#0B0F19]">${(f.fields || []).length}</span>
         </td>
         <td>
-          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold ${subCount > 0 ? 'bg-[#70805D] text-white' : 'bg-gray-100 text-gray-500'}">
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold ${subCount > 0 ? 'bg-[#0066FF] text-white' : 'bg-gray-100 text-gray-500'}">
             ${subCount}
           </span>
         </td>
         <td>
-          <span class="inline-flex items-center gap-1.5 text-xs font-bold ${f.isActive !== false ? 'text-[#70805D]' : 'text-gray-400'}">
-            <span class="w-2 h-2 rounded-full ${f.isActive !== false ? 'bg-[#70805D]' : 'bg-gray-400'}"></span>
+          <span class="inline-flex items-center gap-1.5 text-xs font-bold ${f.isActive !== false ? 'text-[#0066FF]' : 'text-gray-400'}">
+            <span class="w-2 h-2 rounded-full ${f.isActive !== false ? 'bg-[#0066FF]' : 'bg-gray-400'}"></span>
             ${f.isActive !== false ? 'Active' : 'Draft'}
           </span>
         </td>
         <td class="text-right whitespace-nowrap">
           <div class="flex items-center justify-end gap-1.5">
-            <a href="${directUrl}" target="_blank" class="p-2 rounded-lg bg-[#F8F9F6] hover:bg-white text-[#70805D] border border-[#70805D]/20 transition-colors" title="Open Public Form ↗">
+            <a href="${directUrl}" target="_blank" class="p-2 rounded-lg bg-[#F8FAFC] hover:bg-white text-[#0066FF] border border-[#0066FF]/20 transition-colors" title="Open Public Form ↗">
               <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
             </a>
-            <button type="button" class="p-2 rounded-lg bg-[#F8F9F6] hover:bg-white text-[#55738D] border border-[#70805D]/20 transition-colors" onclick="openEmbedModal('${f.id}')" title="Share & Embed Code">
+            <button type="button" class="p-2 rounded-lg bg-[#F8FAFC] hover:bg-white text-[#64748B] border border-[#0066FF]/20 transition-colors" onclick="openEmbedModal('${f.id}')" title="Share & Embed Code">
               <i class="fa-solid fa-code text-xs"></i>
             </button>
-            <button type="button" class="p-2 rounded-lg bg-[#F8F9F6] hover:bg-white text-[#2A3B27] border border-[#70805D]/20 transition-colors" onclick="editCustomForm('${f.id}')" title="Edit Form">
+            <button type="button" class="p-2 rounded-lg bg-[#F8FAFC] hover:bg-white text-[#0B0F19] border border-[#0066FF]/20 transition-colors" onclick="editCustomForm('${f.id}')" title="Edit Form">
               <i class="fa-solid fa-pen-to-square text-xs"></i>
             </button>
             <button type="button" class="p-2 rounded-lg bg-red-50 hover:bg-red-100 text-red-600 border border-red-200 transition-colors" onclick="deleteCustomForm('${f.id}')" title="Delete Form">
@@ -2586,9 +2586,9 @@ function renderSubmissionsList(submissions) {
 
   if (!submissions.length) {
     container.innerHTML = `
-      <div class="glass-panel p-12 text-center text-[#55738D]">
-        <i class="fa-solid fa-inbox text-3xl text-[#70805D] mb-3"></i>
-        <h4 class="text-base font-bold text-[#1C2B1B]">No Submissions Recorded Yet</h4>
+      <div class="glass-panel p-12 text-center text-[#64748B]">
+        <i class="fa-solid fa-inbox text-3xl text-[#0066FF] mb-3"></i>
+        <h4 class="text-base font-bold text-[#0B0F19]">No Submissions Recorded Yet</h4>
         <p class="text-xs mt-1">When users fill out any of your 22 templates or custom forms, their responses will appear here in real-time.</p>
       </div>
     `;
@@ -2605,11 +2605,11 @@ function renderSubmissionsList(submissions) {
       <div class="submission-card" id="sub_card_${sub.id}">
         <div class="submission-header">
           <div class="flex items-center gap-3">
-            <span class="w-8 h-8 rounded-xl bg-[#70805D]/10 text-[#70805D] flex items-center justify-center font-bold text-xs">
+            <span class="w-8 h-8 rounded-xl bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center font-bold text-xs">
               <i class="fa-solid fa-envelope-open-text"></i>
             </span>
             <div>
-              <div class="font-extrabold text-sm text-[#1C2B1B]">${escapeHtml(sub.formTitle || 'Custom Form')}</div>
+              <div class="font-extrabold text-sm text-[#0B0F19]">${escapeHtml(sub.formTitle || 'Custom Form')}</div>
               <div class="submission-meta flex items-center gap-2 mt-0.5">
                 <span><i class="fa-regular fa-clock text-[10px]"></i> ${formattedDate}</span>
                 <span>&bull;</span>
@@ -2629,7 +2629,7 @@ function renderSubmissionsList(submissions) {
             <div class="submission-data-item">
               <div class="submission-field-name">${escapeHtml(key)}</div>
               <div class="submission-field-value">
-                ${Array.isArray(val) ? val.map(v => `<span class="inline-block px-1.5 py-0.5 rounded bg-white text-[11px] font-bold border border-[#70805D]/20 mr-1">${escapeHtml(v)}</span>`).join('') : escapeHtml(String(val))}
+                ${Array.isArray(val) ? val.map(v => `<span class="inline-block px-1.5 py-0.5 rounded bg-white text-[11px] font-bold border border-[#0066FF]/20 mr-1">${escapeHtml(v)}</span>`).join('') : escapeHtml(String(val))}
               </div>
             </div>
           `).join('')}

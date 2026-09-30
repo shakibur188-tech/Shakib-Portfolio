@@ -387,11 +387,11 @@
       <div id="waPopupCard" class="hidden absolute bottom-14 right-0 w-[315px] max-w-[calc(100vw-32px)] bg-white rounded-3xl shadow-2xl border border-[#0066FF]/20 overflow-hidden transition-all duration-200 transform origin-bottom-right mb-2 ring-1 ring-black/10">
         
         <!-- Header -->
-        <div class="p-3.5 bg-gradient-to-r from-[#1C2B1B] via-[#0B0F19] to-[#1C2B1B] text-white flex items-center justify-between border-b border-white/10">
+        <div class="p-3.5 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19] to-[#0B0F19] text-white flex items-center justify-between border-b border-white/10">
           <div class="flex items-center gap-2.5">
             <div class="relative shrink-0">
               <img src="/assets/shakibur.jpg" alt="Md. Shakibur Rahaman" class="w-9 h-9 rounded-full object-cover border-2 border-[#25D366] shadow-sm" onerror="this.src='/assets/avatar-placeholder.png'">
-              <span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-[#25D366] ring-2 ring-[#1C2B1B]"></span>
+              <span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-[#25D366] ring-2 ring-[#0B0F19]"></span>
             </div>
             <div>
               <div class="text-[11.5px] font-black text-white tracking-tight">Md. Shakibur Rahaman</div>
@@ -407,7 +407,7 @@
         </div>
 
         <!-- Chat Bubble Intro -->
-        <div class="p-3 bg-[#F8F9F6] border-b border-[#0066FF]/10">
+        <div class="p-3 bg-[#F8FAFC] border-b border-[#0066FF]/10">
           <div class="p-2.5 rounded-2xl bg-white border border-[#0066FF]/15 text-[11px] text-[#0B0F19] shadow-2xs leading-snug">
             👋 <strong>Hi there!</strong> Ready to scale your brand? Drop your details below to chat with <strong>Mr. Shakib</strong> directly on WhatsApp.
           </div>
@@ -417,23 +417,23 @@
         <form id="waInquiryForm" class="p-3.5 space-y-2.5 bg-white">
           <div>
             <label class="block text-[10px] font-black uppercase tracking-wider text-[#0B0F19] mb-0.5">Your Name *</label>
-            <input type="text" id="waInputName" required placeholder="e.g. John Doe" class="w-full px-2.5 py-1.5 text-xs rounded-xl border border-[#0066FF]/25 focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/20 outline-none text-[#1C2B1B] bg-[#F8F9F6] focus:bg-white transition-all">
+            <input type="text" id="waInputName" required placeholder="e.g. John Doe" class="w-full px-2.5 py-1.5 text-xs rounded-xl border border-[#0066FF]/25 focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/20 outline-none text-[#0B0F19] bg-[#F8FAFC] focus:bg-white transition-all">
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <div>
               <label class="block text-[10px] font-black uppercase tracking-wider text-[#0B0F19] mb-0.5">Contact / Phone *</label>
-              <input type="tel" id="waInputContact" required placeholder="+880 1..." class="w-full px-2.5 py-1.5 text-xs rounded-xl border border-[#0066FF]/25 focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/20 outline-none text-[#1C2B1B] bg-[#F8F9F6] focus:bg-white transition-all">
+              <input type="tel" id="waInputContact" required placeholder="+880 1..." class="w-full px-2.5 py-1.5 text-xs rounded-xl border border-[#0066FF]/25 focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/20 outline-none text-[#0B0F19] bg-[#F8FAFC] focus:bg-white transition-all">
             </div>
             <div>
               <label class="block text-[10px] font-black uppercase tracking-wider text-[#0B0F19] mb-0.5">Email</label>
-              <input type="email" id="waInputEmail" placeholder="you@company.com" class="w-full px-2.5 py-1.5 text-xs rounded-xl border border-[#0066FF]/25 focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/20 outline-none text-[#1C2B1B] bg-[#F8F9F6] focus:bg-white transition-all">
+              <input type="email" id="waInputEmail" placeholder="you@company.com" class="w-full px-2.5 py-1.5 text-xs rounded-xl border border-[#0066FF]/25 focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/20 outline-none text-[#0B0F19] bg-[#F8FAFC] focus:bg-white transition-all">
             </div>
           </div>
 
           <div>
             <label class="block text-[10px] font-black uppercase tracking-wider text-[#0B0F19] mb-0.5">Discussion Topic / Details</label>
-            <textarea id="waInputTopic" rows="2" placeholder="e.g. E-Commerce Packages, High-Converting Web, SMM..." class="w-full px-2.5 py-1.5 text-xs rounded-xl border border-[#0066FF]/25 focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/20 outline-none text-[#1C2B1B] bg-[#F8F9F6] focus:bg-white resize-none transition-all"></textarea>
+            <textarea id="waInputTopic" rows="2" placeholder="e.g. E-Commerce Packages, High-Converting Web, SMM..." class="w-full px-2.5 py-1.5 text-xs rounded-xl border border-[#0066FF]/25 focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/20 outline-none text-[#0B0F19] bg-[#F8FAFC] focus:bg-white resize-none transition-all"></textarea>
           </div>
 
           <div id="waFormAlert" class="hidden text-[10.5px] p-2 rounded-lg font-bold"></div>
@@ -459,9 +459,9 @@
         </button>
 
         <!-- Floating Tooltip Label (Desktop only on hover) -->
-        <div class="hidden md:block absolute right-14 top-1/2 -translate-y-1/2 bg-[#1C2B1B] text-white text-[10.5px] font-bold px-2.5 py-1 rounded-lg whitespace-nowrap shadow-md opacity-0 group-hover/wa:opacity-100 transition-opacity pointer-events-none border border-white/10">
+        <div class="hidden md:block absolute right-14 top-1/2 -translate-y-1/2 bg-[#0B0F19] text-white text-[10.5px] font-bold px-2.5 py-1 rounded-lg whitespace-nowrap shadow-md opacity-0 group-hover/wa:opacity-100 transition-opacity pointer-events-none border border-white/10">
           WhatsApp
-          <span class="absolute right-[-3px] top-1/2 -translate-y-1/2 border-3 border-transparent border-l-[#1C2B1B]"></span>
+          <span class="absolute right-[-3px] top-1/2 -translate-y-1/2 border-3 border-transparent border-l-[#0B0F19]"></span>
         </div>
       </div>
     `;
