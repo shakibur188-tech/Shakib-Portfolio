@@ -403,7 +403,7 @@ function applyContentToDOM(content) {
 }
 
 /* ==========================================================================
-   4. Render 9 Core Services (Structured with Key Strategic Points - Light Theme)
+   4. Render 9 Core Services (Modern Morphy Glass & Royal Blue Theme)
    ========================================================================== */
 function renderServices(services) {
   const container = document.getElementById('servicesContainer');
@@ -424,65 +424,65 @@ function renderServices(services) {
   const html = services.map((svc) => {
     // 3 Deliverables Points
     const deliverablesPreview = (svc.deliverables || []).slice(0, 3).map(item => `
-      <li class="bullet-point-item text-xs text-[#2A3B27]">
-        <i class="fa-solid fa-circle-check bullet-icon text-[#70805D]"></i>
+      <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium">
+        <i class="fa-solid fa-circle-check text-[11px] text-[#0066FF] shrink-0 mt-0.5"></i>
         <span>${escapeHtml(item)}</span>
       </li>
     `).join('');
 
     // Strategic Value Points
     const pointsList = (svc.points || ['Guaranteed enterprise SLA', '100% IP & asset ownership', 'Weekly executive sprint reviews']).slice(0, 2).map(p => `
-      <li class="bullet-point-item text-xs text-[#55738D]">
-        <i class="fa-solid fa-arrow-trend-up bullet-icon text-[#55738D]"></i>
+      <li class="flex items-start gap-2.5 text-xs text-[#0066FF] font-semibold">
+        <i class="fa-solid fa-arrow-trend-up text-[10px] text-[#10B981] shrink-0 mt-0.5"></i>
         <span>${escapeHtml(p)}</span>
       </li>
     `).join('');
 
     const toolsHtml = (svc.tools || []).slice(0, 4).map(t => `
-      <span class="px-2 py-0.5 rounded-md bg-[#F1F3ED] text-[10.5px] text-[#2A3B27] border border-[#70805D]/25 font-bold">${escapeHtml(t)}</span>
+      <span class="px-2.5 py-1 rounded-lg bg-[#F8FAFC] text-[10.5px] text-[#475569] border border-[#E2E8F0] font-bold">${escapeHtml(t)}</span>
     `).join('');
 
     const slug = svc.slug || svc.id;
-    // Link to dedicated individual service page with fallback to services directory
     const pageUrl = `/services/${slug}.html`;
     const cardImg = svc.image || defaultImages[slug] || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80';
 
     return `
-      <a href="${pageUrl}" class="spotlight-card p-0 overflow-hidden flex flex-col justify-between group reveal-on-scroll cursor-pointer text-left no-underline block bg-white border border-[#70805D]/20">
-        <!-- Visual Picture Header -->
-        <div class="relative h-48 w-full overflow-hidden bg-[#F1F3ED]">
-          <img src="${escapeHtml(cardImg)}" alt="${escapeHtml(svc.title)}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+      <div class="morphy-card p-0 overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF]/40 hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0]">
+        
+        <!-- Visual Image Header with Gradient Overlay -->
+        <div class="relative h-52 w-full overflow-hidden bg-[#F1F5F9]">
+          <img src="${escapeHtml(cardImg)}" alt="${escapeHtml(svc.title)}" class="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-black/20"></div>
           
           <!-- Top Floating Icon & Category Badge -->
-          <div class="absolute top-3.5 left-3.5 w-10 h-10 rounded-xl bg-white/95 border border-[#70805D]/30 backdrop-blur-md flex items-center justify-center text-[#70805D] text-base shadow-sm">
+          <div class="absolute top-4 left-4 w-11 h-11 rounded-2xl bg-white/95 border border-[#E2E8F0] backdrop-blur-md flex items-center justify-center text-[#0066FF] text-lg shadow-md">
             <i class="fa-solid ${svc.icon || 'fa-layer-group'}"></i>
           </div>
-          <div class="absolute top-3.5 right-3.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#70805D]/30 text-[10.5px] font-bold text-[#2A3B27] shadow-sm">
-            ${escapeHtml(svc.badge || 'Core Pillar')}
+          <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-[#0066FF]/20 text-[10.5px] font-extrabold text-[#0066FF] shadow-md uppercase tracking-wider">
+            ${escapeHtml(svc.badge || 'Core Discipline')}
           </div>
         </div>
 
-        <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+        <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-5">
           <div>
             <!-- Title & Subtitle -->
-            <h3 class="text-xl font-extrabold text-[#1C2B1B] group-hover:text-[#70805D] transition-colors tracking-tight leading-snug">
+            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors tracking-tight leading-snug">
               ${escapeHtml(svc.title)}
             </h3>
-            <p class="text-xs text-[#55738D] font-bold mt-1 mb-3">
+            <p class="text-xs text-[#0066FF] font-bold mt-1 mb-3 uppercase tracking-wider">
               ${escapeHtml(svc.subtitle || '')}
             </p>
 
             <!-- Description -->
-            <p class="text-xs text-[#4D614A] leading-relaxed mb-4 line-clamp-2">
+            <p class="text-xs text-[#64748B] leading-relaxed mb-5 line-clamp-2">
               ${escapeHtml(svc.description)}
             </p>
 
             <!-- Strategic Deliverables Points -->
-            <div class="pt-3 border-t border-gray-100 mb-4">
-              <div class="text-[10px] font-extrabold text-[#70805D] uppercase tracking-widest mb-2 flex items-center gap-1.5">
-                <i class="fa-solid fa-list-check text-[9px]"></i>
-                <span>Key Deliverable Points:</span>
+            <div class="pt-4 border-t border-[#F1F5F9] mb-4 space-y-2">
+              <div class="text-[10px] font-black text-[#0B0F19] uppercase tracking-widest flex items-center gap-1.5">
+                <i class="fa-solid fa-list-check text-[#0066FF] text-[9px]"></i>
+                <span>Core Deliverables:</span>
               </div>
               <ul class="space-y-1.5">
                 ${deliverablesPreview}
@@ -490,10 +490,10 @@ function renderServices(services) {
             </div>
 
             <!-- Value / Impact Points -->
-            <div class="pt-2 border-t border-gray-100 mb-4">
-              <div class="text-[10px] font-extrabold text-[#55738D] uppercase tracking-widest mb-2 flex items-center gap-1.5">
-                <i class="fa-solid fa-chart-line text-[9px]"></i>
-                <span>Strategic Impact:</span>
+            <div class="pt-3 border-t border-[#F1F5F9] mb-4 space-y-2">
+              <div class="text-[10px] font-black text-[#10B981] uppercase tracking-widest flex items-center gap-1.5">
+                <i class="fa-solid fa-bolt text-[#10B981] text-[9px]"></i>
+                <span>Commercial Impact:</span>
               </div>
               <ul class="space-y-1">
                 ${pointsList}
@@ -501,24 +501,22 @@ function renderServices(services) {
             </div>
           </div>
 
-          <!-- Card Footer -->
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-5">
+          <!-- Card Footer & Action Button -->
+          <div class="space-y-4 pt-2">
+            <div class="flex flex-wrap gap-1.5">
               ${toolsHtml}
             </div>
 
-            <div class="flex items-center justify-between pt-3 border-t border-gray-100">
-              <span class="text-xs font-bold text-[#2A3B27] group-hover:text-[#70805D] flex items-center gap-2 transition-colors">
-                <span>View Dedicated Service Page</span>
-                <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform text-[#70805D]"></i>
-              </span>
-              <span class="w-8 h-8 rounded-full bg-[#70805D]/10 border border-[#70805D]/25 flex items-center justify-center text-[#70805D] text-xs group-hover:bg-[#70805D] group-hover:text-white transition-all">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
+            <div class="pt-4 border-t border-[#F1F5F9]">
+              <a href="${pageUrl}" class="w-full py-3 px-4 rounded-xl bg-[#F8FAFC] hover:bg-[#0066FF] text-[#0B0F19] hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-200 flex items-center justify-between border border-[#E2E8F0] hover:border-[#0066FF] group/btn shadow-xs">
+                <span>View Full Discipline</span>
+                <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
+              </a>
             </div>
           </div>
+
         </div>
-      </a>
+      </div>
     `;
   }).join('');
 
@@ -526,7 +524,7 @@ function renderServices(services) {
 }
 
 /* ==========================================================================
-   5. Render 15 Web Projects Showcase Grid (Light Theme)
+   5. Render 15 Web Projects Showcase Grid (Modern Morphy Browser Theme)
    ========================================================================== */
 function renderWebProjects(projects) {
   const container = document.getElementById('projectsGrid');
@@ -535,66 +533,67 @@ function renderWebProjects(projects) {
   const html = projects.map(proj => {
     const displayUrl = proj.liveUrl.replace(/^https?:\/\//i, '').replace(/\/$/, '');
     const pointsHtml = (proj.points || ['High-speed cloud deployment', 'Core Web Vitals optimized', 'Mobile-first responsive architecture']).slice(0, 3).map(pt => `
-      <li class="bullet-point-item text-xs text-[#4D614A]">
-        <i class="fa-solid fa-check text-[9px] text-[#70805D] mt-1 shrink-0"></i>
+      <li class="flex items-start gap-2 text-xs text-[#475569] font-medium">
+        <i class="fa-solid fa-check text-[10px] text-[#0066FF] mt-0.5 shrink-0"></i>
         <span>${escapeHtml(pt)}</span>
       </li>
     `).join('');
 
     return `
-      <a href="${escapeHtml(proj.liveUrl)}" target="_blank" rel="noopener noreferrer" class="spotlight-card project-card flex flex-col group reveal-on-scroll cursor-pointer text-left no-underline block bg-white border border-[#70805D]/20" data-category="${escapeHtml(proj.category || 'General')}">
-        <!-- Browser Mockup Header -->
-        <div class="browser-header">
-          <div class="browser-dot"></div>
-          <div class="browser-dot"></div>
-          <div class="browser-dot"></div>
-          <div class="browser-url-bar">${escapeHtml(displayUrl)}</div>
+      <div class="morphy-card p-0 overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF]/40 hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] project-item" data-category="${escapeHtml(proj.category || 'General')}">
+        
+        <!-- Browser Window Mockup Header -->
+        <div class="px-4 py-3 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+          <div class="flex items-center gap-1.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/80"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/80"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/80"></span>
+          </div>
+          <div class="px-3 py-1 rounded-md bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[200px] truncate">
+            ${escapeHtml(displayUrl)}
+          </div>
+          <span class="px-2 py-0.5 rounded text-[9.5px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase">
+            ${escapeHtml(proj.category)}
+          </span>
         </div>
 
-        <!-- Image Preview Thumbnail -->
-        <div class="project-thumbnail-wrapper">
-          <img src="${escapeHtml(proj.previewImage)}" alt="${escapeHtml(proj.title)}" class="project-thumbnail" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'">
-          <div class="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent"></div>
-          <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md border border-[#70805D]/30 text-[10px] font-bold text-[#2A3B27] shadow-sm">
-            ${escapeHtml(proj.category)}
+        <!-- Project Screenshot / Preview -->
+        <div class="relative h-48 w-full overflow-hidden bg-[#0B0F19]">
+          <img src="${escapeHtml(proj.previewImage)}" alt="${escapeHtml(proj.title)}" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          
+          <!-- Bottom Client Tag -->
+          <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white">
+            <span class="text-xs font-bold text-white/90 drop-shadow-sm">${escapeHtml(proj.client || 'Enterprise Client')}</span>
+            <span class="text-[10px] font-extrabold px-2 py-0.5 rounded bg-white/20 backdrop-blur-md text-white">Production Live</span>
           </div>
         </div>
 
-        <!-- Project Details Body -->
-        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+        <!-- Content Area -->
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
           <div>
-            <div class="flex items-center justify-between gap-2 mb-2">
-              <span class="text-[11px] text-[#70805D] font-bold uppercase tracking-wider">${escapeHtml(proj.client || 'Enterprise Web')}</span>
-            </div>
-
-            <h3 class="text-base sm:text-lg font-bold text-[#1C2B1B] mb-2 leading-snug group-hover:text-[#70805D] transition-colors">
+            <h3 class="text-lg font-extrabold text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-snug">
               ${escapeHtml(proj.title)}
             </h3>
-
-            <p class="text-xs text-[#55738D] leading-relaxed mb-3">
+            <p class="text-xs text-[#64748B] mt-1 mb-3 leading-relaxed">
               ${escapeHtml(proj.highlights || '')}
             </p>
 
-            <!-- Project Execution Points -->
-            <div class="pt-2.5 pb-2 border-t border-gray-100">
-              <ul class="space-y-1.5">
-                ${pointsHtml}
-              </ul>
-            </div>
+            <ul class="space-y-1.5 pt-3 border-t border-[#F1F5F9]">
+              ${pointsHtml}
+            </ul>
           </div>
 
-          <!-- Direct Live Website Button with Circular Arrow -->
-          <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
-            <span class="text-xs font-bold text-[#2A3B27] group-hover:text-[#70805D] flex items-center gap-2 transition-colors">
-              <span>${escapeHtml(proj.ctaText || 'Visit Live Website')}</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-[#70805D] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-            </span>
-            <span class="w-8 h-8 rounded-full bg-[#70805D]/10 border border-[#70805D]/25 flex items-center justify-center text-[#70805D] text-xs group-hover:bg-[#70805D] group-hover:text-white transition-all" title="Visit Live Portal">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </span>
+          <!-- Bottom Live Platform CTA Button -->
+          <div class="pt-4 border-t border-[#F1F5F9]">
+            <a href="${escapeHtml(proj.liveUrl)}" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-[#0066FF] to-[#0052FF] text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-200 flex items-center justify-between shadow-md shadow-[#0066FF]/20 hover:shadow-lg hover:shadow-[#0066FF]/35 group/btn">
+              <span>Visit Live Platform</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform"></i>
+            </a>
           </div>
+
         </div>
-      </a>
+      </div>
     `;
   }).join('');
 
