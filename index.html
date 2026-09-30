@@ -509,12 +509,627 @@
       <!-- Services Grid (Dynamic Morphy Cards) -->
       <div id="servicesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-    <div class="morphy-card p-0 overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] rounded-3xl">
+    <div class="morphy-card p-8 rounded-[32px] bg-white border border-[#E2E8F0] flex flex-col justify-between space-y-6 group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 relative overflow-hidden">
       
-      <!-- Top Image Header with Frosted Glass Badges -->
-      <div class="relative h-56 w-full overflow-hidden bg-[#0B0F19]">
-        <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80" alt="Branding & Brand Strategy" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/80 via-[#0B0F19]/20 to-transparent"></div>
+      <!-- Top Ambient Corner Glow -->
+      <div class="absolute top-0 right-0 w-32 h-32 bg-[#0066FF]/5 rounded-bl-full pointer-events-none group-hover:bg-[#0066FF]/10 transition-colors"></div>
+
+      <!-- Card Top: Icon & Pillar Badge -->
+      <div class="flex items-center justify-between">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0066FF]/10 to-[#0052FF]/20 border border-[#0066FF]/25 flex items-center justify-center text-2xl text-[#0066FF] shadow-inner group-hover:scale-110 group-hover:bg-[#0066FF] group-hover:text-white transition-all duration-300">
+          <i class="fa-solid fa-fingerprint"></i>
+        </div>
+        <span class="px-3.5 py-1.5 rounded-full bg-[#F8FAFC] border border-[#E2E8F0] text-[11px] font-black text-[#64748B] group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors uppercase tracking-wider">
+          Pillar 01
+        </span>
+      </div>
+
+      <!-- Card Middle: Title, Subtitle & Outcome Metric -->
+      <div class="space-y-4 flex-1">
+        <div>
+          <h3 class="text-2xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors tracking-tight leading-snug">
+            Branding & Brand Strategy
+          </h3>
+          <p class="text-xs font-extrabold text-[#0066FF] uppercase tracking-wider mt-1">
+            Strategic Positioning & Identity Manuals
+          </p>
+        </div>
+
+        <!-- Highlight Outcome Metric Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15 text-xs font-black text-[#0066FF]">
+          <i class="fa-solid fa-arrow-trend-up text-[#10B981]"></i>
+          <span>+3.5x Brand Valuation Lift</span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-sm text-[#64748B] font-normal leading-relaxed">
+          Forging iconic market identities that resonate deeply, command premium pricing power, and outpace market competition.
+        </p>
+
+        <!-- 3 Feature Chips -->
+        <div class="flex flex-wrap gap-2 pt-2">
+          
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Brand Architecture</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Identity Manuals</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Trademark Positioning</span>
+    </span>
+  
+        </div>
+      </div>
+
+      <!-- Card Bottom: Animated Morphy Action Button -->
+      <div class="pt-4 border-t border-[#F1F5F9]">
+        <a href="services/branding.html" class="w-full py-3.5 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <span>Explore Architecture</span>
+          <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+    </div>
+  
+
+    <div class="morphy-card p-8 rounded-[32px] bg-white border border-[#E2E8F0] flex flex-col justify-between space-y-6 group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 relative overflow-hidden">
+      
+      <!-- Top Ambient Corner Glow -->
+      <div class="absolute top-0 right-0 w-32 h-32 bg-[#0066FF]/5 rounded-bl-full pointer-events-none group-hover:bg-[#0066FF]/10 transition-colors"></div>
+
+      <!-- Card Top: Icon & Pillar Badge -->
+      <div class="flex items-center justify-between">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0066FF]/10 to-[#0052FF]/20 border border-[#0066FF]/25 flex items-center justify-center text-2xl text-[#0066FF] shadow-inner group-hover:scale-110 group-hover:bg-[#0066FF] group-hover:text-white transition-all duration-300">
+          <i class="fa-solid fa-bezier-curve"></i>
+        </div>
+        <span class="px-3.5 py-1.5 rounded-full bg-[#F8FAFC] border border-[#E2E8F0] text-[11px] font-black text-[#64748B] group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors uppercase tracking-wider">
+          Pillar 02
+        </span>
+      </div>
+
+      <!-- Card Middle: Title, Subtitle & Outcome Metric -->
+      <div class="space-y-4 flex-1">
+        <div>
+          <h3 class="text-2xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors tracking-tight leading-snug">
+            Graphics Design & Visual Systems
+          </h3>
+          <p class="text-xs font-extrabold text-[#0066FF] uppercase tracking-wider mt-1">
+            High-Impact UI/UX & Packaging
+          </p>
+        </div>
+
+        <!-- Highlight Outcome Metric Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15 text-xs font-black text-[#0066FF]">
+          <i class="fa-solid fa-wand-magic-sparkles text-[#10B981]"></i>
+          <span>300+ Scalable Vector Assets</span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-sm text-[#64748B] font-normal leading-relaxed">
+          Building enduring visual design languages, luxury packaging architectures, marketing decks, and pixel-perfect UI/UX interfaces.
+        </p>
+
+        <!-- 3 Feature Chips -->
+        <div class="flex flex-wrap gap-2 pt-2">
+          
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>UI/UX App Design</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Luxury Packaging</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Marketing Pitch Decks</span>
+    </span>
+  
+        </div>
+      </div>
+
+      <!-- Card Bottom: Animated Morphy Action Button -->
+      <div class="pt-4 border-t border-[#F1F5F9]">
+        <a href="services/graphics-design.html" class="w-full py-3.5 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <span>Explore Architecture</span>
+          <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+    </div>
+  
+
+    <div class="morphy-card p-8 rounded-[32px] bg-white border border-[#E2E8F0] flex flex-col justify-between space-y-6 group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 relative overflow-hidden">
+      
+      <!-- Top Ambient Corner Glow -->
+      <div class="absolute top-0 right-0 w-32 h-32 bg-[#0066FF]/5 rounded-bl-full pointer-events-none group-hover:bg-[#0066FF]/10 transition-colors"></div>
+
+      <!-- Card Top: Icon & Pillar Badge -->
+      <div class="flex items-center justify-between">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0066FF]/10 to-[#0052FF]/20 border border-[#0066FF]/25 flex items-center justify-center text-2xl text-[#0066FF] shadow-inner group-hover:scale-110 group-hover:bg-[#0066FF] group-hover:text-white transition-all duration-300">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <span class="px-3.5 py-1.5 rounded-full bg-[#F8FAFC] border border-[#E2E8F0] text-[11px] font-black text-[#64748B] group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors uppercase tracking-wider">
+          Pillar 03
+        </span>
+      </div>
+
+      <!-- Card Middle: Title, Subtitle & Outcome Metric -->
+      <div class="space-y-4 flex-1">
+        <div>
+          <h3 class="text-2xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors tracking-tight leading-snug">
+            Web Design & Full-Stack Dev
+          </h3>
+          <p class="text-xs font-extrabold text-[#0066FF] uppercase tracking-wider mt-1">
+            Sub-Second Jamstack & E-Commerce
+          </p>
+        </div>
+
+        <!-- Highlight Outcome Metric Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15 text-xs font-black text-[#0066FF]">
+          <i class="fa-solid fa-bolt text-[#10B981]"></i>
+          <span>0.8s Speed • 95+ PageSpeed</span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-sm text-[#64748B] font-normal leading-relaxed">
+          Architecting custom responsive Jamstack websites and full-stack headless e-commerce platforms engineered for maximum conversion.
+        </p>
+
+        <!-- 3 Feature Chips -->
+        <div class="flex flex-wrap gap-2 pt-2">
+          
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Next.js & React</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Headless E-Commerce</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>CAPI Telemetry</span>
+    </span>
+  
+        </div>
+      </div>
+
+      <!-- Card Bottom: Animated Morphy Action Button -->
+      <div class="pt-4 border-t border-[#F1F5F9]">
+        <a href="services/web-development.html" class="w-full py-3.5 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <span>Explore Architecture</span>
+          <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+    </div>
+  
+
+    <div class="morphy-card p-8 rounded-[32px] bg-white border border-[#E2E8F0] flex flex-col justify-between space-y-6 group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 relative overflow-hidden">
+      
+      <!-- Top Ambient Corner Glow -->
+      <div class="absolute top-0 right-0 w-32 h-32 bg-[#0066FF]/5 rounded-bl-full pointer-events-none group-hover:bg-[#0066FF]/10 transition-colors"></div>
+
+      <!-- Card Top: Icon & Pillar Badge -->
+      <div class="flex items-center justify-between">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0066FF]/10 to-[#0052FF]/20 border border-[#0066FF]/25 flex items-center justify-center text-2xl text-[#0066FF] shadow-inner group-hover:scale-110 group-hover:bg-[#0066FF] group-hover:text-white transition-all duration-300">
+          <i class="fa-solid fa-hashtag"></i>
+        </div>
+        <span class="px-3.5 py-1.5 rounded-full bg-[#F8FAFC] border border-[#E2E8F0] text-[11px] font-black text-[#64748B] group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors uppercase tracking-wider">
+          Pillar 04
+        </span>
+      </div>
+
+      <!-- Card Middle: Title, Subtitle & Outcome Metric -->
+      <div class="space-y-4 flex-1">
+        <div>
+          <h3 class="text-2xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors tracking-tight leading-snug">
+            Social Media & Meta Ads
+          </h3>
+          <p class="text-xs font-extrabold text-[#0066FF] uppercase tracking-wider mt-1">
+            AI Advantage+ & Viral Content
+          </p>
+        </div>
+
+        <!-- Highlight Outcome Metric Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15 text-xs font-black text-[#0066FF]">
+          <i class="fa-solid fa-chart-pie text-[#10B981]"></i>
+          <span>4.8x Blended ROAS Achieved</span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-sm text-[#64748B] font-normal leading-relaxed">
+          Transforming cold audiences into high-paying customers through creative testing, viral short reels, and Meta Advantage+ scaling.
+        </p>
+
+        <!-- 3 Feature Chips -->
+        <div class="flex flex-wrap gap-2 pt-2">
+          
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Meta Advantage+</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Viral Short Reels</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Full-Funnel Scaling</span>
+    </span>
+  
+        </div>
+      </div>
+
+      <!-- Card Bottom: Animated Morphy Action Button -->
+      <div class="pt-4 border-t border-[#F1F5F9]">
+        <a href="services/social-media-marketing.html" class="w-full py-3.5 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <span>Explore Architecture</span>
+          <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+    </div>
+  
+
+    <div class="morphy-card p-8 rounded-[32px] bg-white border border-[#E2E8F0] flex flex-col justify-between space-y-6 group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 relative overflow-hidden">
+      
+      <!-- Top Ambient Corner Glow -->
+      <div class="absolute top-0 right-0 w-32 h-32 bg-[#0066FF]/5 rounded-bl-full pointer-events-none group-hover:bg-[#0066FF]/10 transition-colors"></div>
+
+      <!-- Card Top: Icon & Pillar Badge -->
+      <div class="flex items-center justify-between">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0066FF]/10 to-[#0052FF]/20 border border-[#0066FF]/25 flex items-center justify-center text-2xl text-[#0066FF] shadow-inner group-hover:scale-110 group-hover:bg-[#0066FF] group-hover:text-white transition-all duration-300">
+          <i class="fa-solid fa-video"></i>
+        </div>
+        <span class="px-3.5 py-1.5 rounded-full bg-[#F8FAFC] border border-[#E2E8F0] text-[11px] font-black text-[#64748B] group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors uppercase tracking-wider">
+          Pillar 05
+        </span>
+      </div>
+
+      <!-- Card Middle: Title, Subtitle & Outcome Metric -->
+      <div class="space-y-4 flex-1">
+        <div>
+          <h3 class="text-2xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors tracking-tight leading-snug">
+            Commercial Photoshoot & Video
+          </h3>
+          <p class="text-xs font-extrabold text-[#0066FF] uppercase tracking-wider mt-1">
+            4K Cinema Visual Storytelling
+          </p>
+        </div>
+
+        <!-- Highlight Outcome Metric Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15 text-xs font-black text-[#0066FF]">
+          <i class="fa-solid fa-film text-[#10B981]"></i>
+          <span>4K Cinema Broadcast Masters</span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-sm text-[#64748B] font-normal leading-relaxed">
+          Directing world-class commercial cinematography, studio product photography, broadcast TVCs, and high-retention social reels.
+        </p>
+
+        <!-- 3 Feature Chips -->
+        <div class="flex flex-wrap gap-2 pt-2">
+          
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Commercial TVCs</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>E-Commerce Studio</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Cinematic Color Grade</span>
+    </span>
+  
+        </div>
+      </div>
+
+      <!-- Card Bottom: Animated Morphy Action Button -->
+      <div class="pt-4 border-t border-[#F1F5F9]">
+        <a href="services/photoshoot-videography.html" class="w-full py-3.5 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <span>Explore Architecture</span>
+          <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+    </div>
+  
+
+    <div class="morphy-card p-8 rounded-[32px] bg-white border border-[#E2E8F0] flex flex-col justify-between space-y-6 group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 relative overflow-hidden">
+      
+      <!-- Top Ambient Corner Glow -->
+      <div class="absolute top-0 right-0 w-32 h-32 bg-[#0066FF]/5 rounded-bl-full pointer-events-none group-hover:bg-[#0066FF]/10 transition-colors"></div>
+
+      <!-- Card Top: Icon & Pillar Badge -->
+      <div class="flex items-center justify-between">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0066FF]/10 to-[#0052FF]/20 border border-[#0066FF]/25 flex items-center justify-center text-2xl text-[#0066FF] shadow-inner group-hover:scale-110 group-hover:bg-[#0066FF] group-hover:text-white transition-all duration-300">
+          <i class="fa-solid fa-cubes"></i>
+        </div>
+        <span class="px-3.5 py-1.5 rounded-full bg-[#F8FAFC] border border-[#E2E8F0] text-[11px] font-black text-[#64748B] group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors uppercase tracking-wider">
+          Pillar 06
+        </span>
+      </div>
+
+      <!-- Card Middle: Title, Subtitle & Outcome Metric -->
+      <div class="space-y-4 flex-1">
+        <div>
+          <h3 class="text-2xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors tracking-tight leading-snug">
+            Event Activation & 3D Booths
+          </h3>
+          <p class="text-xs font-extrabold text-[#0066FF] uppercase tracking-wider mt-1">
+            Experiential Expos & Brand Pop-Ups
+          </p>
+        </div>
+
+        <!-- Highlight Outcome Metric Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15 text-xs font-black text-[#0066FF]">
+          <i class="fa-solid fa-vr-cardboard text-[#10B981]"></i>
+          <span>Photorealistic 3D Spatial Renders</span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-sm text-[#64748B] font-normal leading-relaxed">
+          Designing immersive live brand environments, photorealistic 3D exhibition booths, trade show activations, and turnkey production.
+        </p>
+
+        <!-- 3 Feature Chips -->
+        <div class="flex flex-wrap gap-2 pt-2">
+          
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>3D Booth Architecture</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Trade Expo Pop-Ups</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Turnkey Production</span>
+    </span>
+  
+        </div>
+      </div>
+
+      <!-- Card Bottom: Animated Morphy Action Button -->
+      <div class="pt-4 border-t border-[#F1F5F9]">
+        <a href="services/event-activation.html" class="w-full py-3.5 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <span>Explore Architecture</span>
+          <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+    </div>
+  
+
+    <div class="morphy-card p-8 rounded-[32px] bg-white border border-[#E2E8F0] flex flex-col justify-between space-y-6 group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 relative overflow-hidden">
+      
+      <!-- Top Ambient Corner Glow -->
+      <div class="absolute top-0 right-0 w-32 h-32 bg-[#0066FF]/5 rounded-bl-full pointer-events-none group-hover:bg-[#0066FF]/10 transition-colors"></div>
+
+      <!-- Card Top: Icon & Pillar Badge -->
+      <div class="flex items-center justify-between">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0066FF]/10 to-[#0052FF]/20 border border-[#0066FF]/25 flex items-center justify-center text-2xl text-[#0066FF] shadow-inner group-hover:scale-110 group-hover:bg-[#0066FF] group-hover:text-white transition-all duration-300">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <span class="px-3.5 py-1.5 rounded-full bg-[#F8FAFC] border border-[#E2E8F0] text-[11px] font-black text-[#64748B] group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors uppercase tracking-wider">
+          Pillar 07
+        </span>
+      </div>
+
+      <!-- Card Middle: Title, Subtitle & Outcome Metric -->
+      <div class="space-y-4 flex-1">
+        <div>
+          <h3 class="text-2xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors tracking-tight leading-snug">
+            Google Ads & Search Scaling
+          </h3>
+          <p class="text-xs font-extrabold text-[#0066FF] uppercase tracking-wider mt-1">
+            Performance Max & Intent Keywords
+          </p>
+        </div>
+
+        <!-- Highlight Outcome Metric Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15 text-xs font-black text-[#0066FF]">
+          <i class="fa-solid fa-crosshair text-[#10B981]"></i>
+          <span>Sub-20% CPA Acquisition Target</span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-sm text-[#64748B] font-normal leading-relaxed">
+          Capturing high-intent commercial buyers at the exact moment of search with Performance Max, Search ads, and granular GA4 attribution.
+        </p>
+
+        <!-- 3 Feature Chips -->
+        <div class="flex flex-wrap gap-2 pt-2">
+          
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Performance Max</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Search Intent Dominance</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>GA4 Attribution</span>
+    </span>
+  
+        </div>
+      </div>
+
+      <!-- Card Bottom: Animated Morphy Action Button -->
+      <div class="pt-4 border-t border-[#F1F5F9]">
+        <a href="services/google-ads.html" class="w-full py-3.5 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <span>Explore Architecture</span>
+          <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+    </div>
+  
+
+    <div class="morphy-card p-8 rounded-[32px] bg-white border border-[#E2E8F0] flex flex-col justify-between space-y-6 group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 relative overflow-hidden">
+      
+      <!-- Top Ambient Corner Glow -->
+      <div class="absolute top-0 right-0 w-32 h-32 bg-[#0066FF]/5 rounded-bl-full pointer-events-none group-hover:bg-[#0066FF]/10 transition-colors"></div>
+
+      <!-- Card Top: Icon & Pillar Badge -->
+      <div class="flex items-center justify-between">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0066FF]/10 to-[#0052FF]/20 border border-[#0066FF]/25 flex items-center justify-center text-2xl text-[#0066FF] shadow-inner group-hover:scale-110 group-hover:bg-[#0066FF] group-hover:text-white transition-all duration-300">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+        </div>
+        <span class="px-3.5 py-1.5 rounded-full bg-[#F8FAFC] border border-[#E2E8F0] text-[11px] font-black text-[#64748B] group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors uppercase tracking-wider">
+          Pillar 08
+        </span>
+      </div>
+
+      <!-- Card Middle: Title, Subtitle & Outcome Metric -->
+      <div class="space-y-4 flex-1">
+        <div>
+          <h3 class="text-2xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors tracking-tight leading-snug">
+            SEO & Generative AI Optimization
+          </h3>
+          <p class="text-xs font-extrabold text-[#0066FF] uppercase tracking-wider mt-1">
+            Google SERP & ChatGPT / Claude Citations
+          </p>
+        </div>
+
+        <!-- Highlight Outcome Metric Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15 text-xs font-black text-[#0066FF]">
+          <i class="fa-solid fa-robot text-[#10B981]"></i>
+          <span>Top 3 Rank & AI Answer Ready</span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-sm text-[#64748B] font-normal leading-relaxed">
+          Dominating Google rankings and generative AI answer engines through semantic schema engineering, entity authority, and Core Web Vitals.
+        </p>
+
+        <!-- 3 Feature Chips -->
+        <div class="flex flex-wrap gap-2 pt-2">
+          
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Semantic Entity Graphs</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>ChatGPT & Claude Citations</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Core Web Vitals</span>
+    </span>
+  
+        </div>
+      </div>
+
+      <!-- Card Bottom: Animated Morphy Action Button -->
+      <div class="pt-4 border-t border-[#F1F5F9]">
+        <a href="services/seo-aeo.html" class="w-full py-3.5 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <span>Explore Architecture</span>
+          <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+    </div>
+  
+
+    <div class="morphy-card p-8 rounded-[32px] bg-white border border-[#E2E8F0] flex flex-col justify-between space-y-6 group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 relative overflow-hidden">
+      
+      <!-- Top Ambient Corner Glow -->
+      <div class="absolute top-0 right-0 w-32 h-32 bg-[#0066FF]/5 rounded-bl-full pointer-events-none group-hover:bg-[#0066FF]/10 transition-colors"></div>
+
+      <!-- Card Top: Icon & Pillar Badge -->
+      <div class="flex items-center justify-between">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0066FF]/10 to-[#0052FF]/20 border border-[#0066FF]/25 flex items-center justify-center text-2xl text-[#0066FF] shadow-inner group-hover:scale-110 group-hover:bg-[#0066FF] group-hover:text-white transition-all duration-300">
+          <i class="fa-solid fa-newspaper"></i>
+        </div>
+        <span class="px-3.5 py-1.5 rounded-full bg-[#F8FAFC] border border-[#E2E8F0] text-[11px] font-black text-[#64748B] group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors uppercase tracking-wider">
+          Pillar 09
+        </span>
+      </div>
+
+      <!-- Card Middle: Title, Subtitle & Outcome Metric -->
+      <div class="space-y-4 flex-1">
+        <div>
+          <h3 class="text-2xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors tracking-tight leading-snug">
+            Public Relations & Media Outreach
+          </h3>
+          <p class="text-xs font-extrabold text-[#0066FF] uppercase tracking-wider mt-1">
+            Mainstream Press & Executive Authority
+          </p>
+        </div>
+
+        <!-- Highlight Outcome Metric Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15 text-xs font-black text-[#0066FF]">
+          <i class="fa-solid fa-bullhorn text-[#10B981]"></i>
+          <span>Tier-1 Broadcast Media Reach</span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-sm text-[#64748B] font-normal leading-relaxed">
+          Amplifying executive thought leadership, securing tier-1 news placements, syndicating authoritative press releases, and safeguarding reputation.
+        </p>
+
+        <!-- 3 Feature Chips -->
+        <div class="flex flex-wrap gap-2 pt-2">
+          
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Tier-1 Press Distribution</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Executive Thought Op-Eds</span>
+    </span>
+  
+    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+      <span>Crisis Safeguards</span>
+    </span>
+  
+        </div>
+      </div>
+
+      <!-- Card Bottom: Animated Morphy Action Button -->
+      <div class="pt-4 border-t border-[#F1F5F9]">
+        <a href="services/public-relations.html" class="w-full py-3.5 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <span>Explore Architecture</span>
+          <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+    </div>
+  
+      </div>
         
         <!-- Top Left Icon Bubble -->
         <div class="absolute top-4 left-4 w-11 h-11 rounded-2xl bg-white/95 backdrop-blur-xl border border-white/40 flex items-center justify-center text-[#0066FF] text-lg shadow-lg">

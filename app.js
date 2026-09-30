@@ -403,119 +403,131 @@ function applyContentToDOM(content) {
 }
 
 /* ==========================================================================
-   4. Render 9 Core Services (Modern Morphy Glass & Royal Blue Theme)
+   4. Render 9 Core Services (Ultra-Clean Morphy Bento Card Theme)
    ========================================================================== */
-function renderServices(services) {
+function renderServices(servicesData) {
   const container = document.getElementById('servicesContainer');
   if (!container) return;
 
-  const defaultImages = {
-    'branding': 'https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80',
-    'graphics-design': 'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80',
-    'web-development': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
-    'social-media-marketing': 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80',
-    'photoshoot-videography': 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80',
-    'event-activation': 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80',
-    'google-ads': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-    'seo-aeo': 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80',
-    'public-relations': 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80'
-  };
+  const services = [
+    {
+      id: 'branding', slug: 'branding', pillar: '01',
+      title: 'Branding & Brand Strategy', subtitle: 'Strategic Positioning & Identity Manuals',
+      icon: 'fa-fingerprint', metric: '+3.5x Brand Valuation Lift', metricIcon: 'fa-arrow-trend-up',
+      description: 'Forging iconic market identities that resonate deeply, command premium pricing power, and outpace market competition.',
+      tags: ['Brand Architecture', 'Identity Manuals', 'Trademark Positioning']
+    },
+    {
+      id: 'graphics-design', slug: 'graphics-design', pillar: '02',
+      title: 'Graphics Design & Visual Systems', subtitle: 'High-Impact UI/UX & Packaging',
+      icon: 'fa-bezier-curve', metric: '300+ Scalable Vector Assets', metricIcon: 'fa-wand-magic-sparkles',
+      description: 'Building enduring visual design languages, luxury packaging architectures, marketing decks, and pixel-perfect UI/UX interfaces.',
+      tags: ['UI/UX App Design', 'Luxury Packaging', 'Marketing Pitch Decks']
+    },
+    {
+      id: 'web-development', slug: 'web-development', pillar: '03',
+      title: 'Web Design & Full-Stack Dev', subtitle: 'Sub-Second Jamstack & E-Commerce',
+      icon: 'fa-code', metric: '0.8s Speed • 95+ PageSpeed', metricIcon: 'fa-bolt',
+      description: 'Architecting custom responsive Jamstack websites and full-stack headless e-commerce platforms engineered for maximum conversion.',
+      tags: ['Next.js & React', 'Headless E-Commerce', 'CAPI Telemetry']
+    },
+    {
+      id: 'social-media-marketing', slug: 'social-media-marketing', pillar: '04',
+      title: 'Social Media & Meta Ads', subtitle: 'AI Advantage+ & Viral Content',
+      icon: 'fa-hashtag', metric: '4.8x Blended ROAS Achieved', metricIcon: 'fa-chart-pie',
+      description: 'Transforming cold audiences into high-paying customers through creative testing, viral short reels, and Meta Advantage+ scaling.',
+      tags: ['Meta Advantage+', 'Viral Short Reels', 'Full-Funnel Scaling']
+    },
+    {
+      id: 'photoshoot-videography', slug: 'photoshoot-videography', pillar: '05',
+      title: 'Commercial Photoshoot & Video', subtitle: '4K Cinema Visual Storytelling',
+      icon: 'fa-video', metric: '4K Cinema Broadcast Masters', metricIcon: 'fa-film',
+      description: 'Directing world-class commercial cinematography, studio product photography, broadcast TVCs, and high-retention social reels.',
+      tags: ['Commercial TVCs', 'E-Commerce Studio', 'Cinematic Color Grade']
+    },
+    {
+      id: 'event-activation', slug: 'event-activation', pillar: '06',
+      title: 'Event Activation & 3D Booths', subtitle: 'Experiential Expos & Brand Pop-Ups',
+      icon: 'fa-cubes', metric: 'Photorealistic 3D Spatial Renders', metricIcon: 'fa-vr-cardboard',
+      description: 'Designing immersive live brand environments, photorealistic 3D exhibition booths, trade show activations, and turnkey production.',
+      tags: ['3D Booth Architecture', 'Trade Expo Pop-Ups', 'Turnkey Production']
+    },
+    {
+      id: 'google-ads', slug: 'google-ads', pillar: '07',
+      title: 'Google Ads & Search Scaling', subtitle: 'Performance Max & Intent Keywords',
+      icon: 'fa-chart-line', metric: 'Sub-20% CPA Acquisition Target', metricIcon: 'fa-crosshair',
+      description: 'Capturing high-intent commercial buyers at the exact moment of search with Performance Max, Search ads, and granular GA4 attribution.',
+      tags: ['Performance Max', 'Search Intent Dominance', 'GA4 Attribution']
+    },
+    {
+      id: 'seo-aeo', slug: 'seo-aeo', pillar: '08',
+      title: 'SEO & Generative AI Optimization', subtitle: 'Google SERP & ChatGPT / Claude Citations',
+      icon: 'fa-magnifying-glass-chart', metric: 'Top 3 Rank & AI Answer Ready', metricIcon: 'fa-robot',
+      description: 'Dominating Google rankings and generative AI answer engines through semantic schema engineering, entity authority, and Core Web Vitals.',
+      tags: ['Semantic Entity Graphs', 'ChatGPT & Claude Citations', 'Core Web Vitals']
+    },
+    {
+      id: 'public-relations', slug: 'public-relations', pillar: '09',
+      title: 'Public Relations & Media Outreach', subtitle: 'Mainstream Press & Executive Authority',
+      icon: 'fa-newspaper', metric: 'Tier-1 Broadcast Media Reach', metricIcon: 'fa-bullhorn',
+      description: 'Amplifying executive thought leadership, securing tier-1 news placements, syndicating authoritative press releases, and safeguarding reputation.',
+      tags: ['Tier-1 Press Distribution', 'Executive Thought Op-Eds', 'Crisis Safeguards']
+    }
+  ];
 
-  const html = services.map((svc) => {
-    // 3 Deliverables Points
-    const deliverablesPreview = (svc.deliverables || []).slice(0, 3).map(item => `
-      <li class="flex items-start gap-2.5 text-xs text-[#334155] font-medium">
-        <i class="fa-solid fa-circle-check text-[11px] text-[#0066FF] shrink-0 mt-0.5"></i>
-        <span>${escapeHtml(item)}</span>
-      </li>
+  const html = services.map(s => {
+    const tagsHtml = s.tags.map(t => `
+      <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-bold text-[#334155] group-hover:border-[#0066FF]/30 transition-colors">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#0066FF]"></span>
+        <span>${t}</span>
+      </span>
     `).join('');
-
-    // Strategic Value Points
-    const pointsList = (svc.points || ['Guaranteed enterprise SLA', '100% IP & asset ownership', 'Weekly executive sprint reviews']).slice(0, 2).map(p => `
-      <li class="flex items-start gap-2.5 text-xs text-[#0066FF] font-semibold">
-        <i class="fa-solid fa-arrow-trend-up text-[10px] text-[#10B981] shrink-0 mt-0.5"></i>
-        <span>${escapeHtml(p)}</span>
-      </li>
-    `).join('');
-
-    const toolsHtml = (svc.tools || []).slice(0, 4).map(t => `
-      <span class="px-2.5 py-1 rounded-lg bg-[#F8FAFC] text-[10.5px] text-[#475569] border border-[#E2E8F0] font-bold">${escapeHtml(t)}</span>
-    `).join('');
-
-    const slug = svc.slug || svc.id;
-    const pageUrl = `/services/${slug}.html`;
-    const cardImg = svc.image || defaultImages[slug] || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80';
 
     return `
-      <div class="morphy-card p-0 overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF]/40 hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0]">
+      <div class="morphy-card p-8 rounded-[32px] bg-white border border-[#E2E8F0] flex flex-col justify-between space-y-6 group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 relative overflow-hidden">
         
-        <!-- Visual Image Header with Gradient Overlay -->
-        <div class="relative h-52 w-full overflow-hidden bg-[#F1F5F9]">
-          <img src="${escapeHtml(cardImg)}" alt="${escapeHtml(svc.title)}" class="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-black/20"></div>
-          
-          <!-- Top Floating Icon & Category Badge -->
-          <div class="absolute top-4 left-4 w-11 h-11 rounded-2xl bg-white/95 border border-[#E2E8F0] backdrop-blur-md flex items-center justify-center text-[#0066FF] text-lg shadow-md">
-            <i class="fa-solid ${svc.icon || 'fa-layer-group'}"></i>
+        <div class="absolute top-0 right-0 w-32 h-32 bg-[#0066FF]/5 rounded-bl-full pointer-events-none group-hover:bg-[#0066FF]/10 transition-colors"></div>
+
+        <div class="flex items-center justify-between">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0066FF]/10 to-[#0052FF]/20 border border-[#0066FF]/25 flex items-center justify-center text-2xl text-[#0066FF] shadow-inner group-hover:scale-110 group-hover:bg-[#0066FF] group-hover:text-white transition-all duration-300">
+            <i class="fa-solid ${s.icon}"></i>
           </div>
-          <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-[#0066FF]/20 text-[10.5px] font-extrabold text-[#0066FF] shadow-md uppercase tracking-wider">
-            ${escapeHtml(svc.badge || 'Core Discipline')}
-          </div>
+          <span class="px-3.5 py-1.5 rounded-full bg-[#F8FAFC] border border-[#E2E8F0] text-[11px] font-black text-[#64748B] group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors uppercase tracking-wider">
+            Pillar ${s.pillar}
+          </span>
         </div>
 
-        <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-5">
+        <div class="space-y-4 flex-1">
           <div>
-            <!-- Title & Subtitle -->
-            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors tracking-tight leading-snug">
-              ${escapeHtml(svc.title)}
+            <h3 class="text-2xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors tracking-tight leading-snug">
+              ${s.title}
             </h3>
-            <p class="text-xs text-[#0066FF] font-bold mt-1 mb-3 uppercase tracking-wider">
-              ${escapeHtml(svc.subtitle || '')}
+            <p class="text-xs font-extrabold text-[#0066FF] uppercase tracking-wider mt-1">
+              ${s.subtitle}
             </p>
-
-            <!-- Description -->
-            <p class="text-xs text-[#64748B] leading-relaxed mb-5 line-clamp-2">
-              ${escapeHtml(svc.description)}
-            </p>
-
-            <!-- Strategic Deliverables Points -->
-            <div class="pt-4 border-t border-[#F1F5F9] mb-4 space-y-2">
-              <div class="text-[10px] font-black text-[#0B0F19] uppercase tracking-widest flex items-center gap-1.5">
-                <i class="fa-solid fa-list-check text-[#0066FF] text-[9px]"></i>
-                <span>Core Deliverables:</span>
-              </div>
-              <ul class="space-y-1.5">
-                ${deliverablesPreview}
-              </ul>
-            </div>
-
-            <!-- Value / Impact Points -->
-            <div class="pt-3 border-t border-[#F1F5F9] mb-4 space-y-2">
-              <div class="text-[10px] font-black text-[#10B981] uppercase tracking-widest flex items-center gap-1.5">
-                <i class="fa-solid fa-bolt text-[#10B981] text-[9px]"></i>
-                <span>Commercial Impact:</span>
-              </div>
-              <ul class="space-y-1">
-                ${pointsList}
-              </ul>
-            </div>
           </div>
 
-          <!-- Card Footer & Action Button -->
-          <div class="space-y-4 pt-2">
-            <div class="flex flex-wrap gap-1.5">
-              ${toolsHtml}
-            </div>
-
-            <div class="pt-4 border-t border-[#F1F5F9]">
-              <a href="${pageUrl}" class="w-full py-3 px-4 rounded-xl bg-[#F8FAFC] hover:bg-[#0066FF] text-[#0B0F19] hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-200 flex items-center justify-between border border-[#E2E8F0] hover:border-[#0066FF] group/btn shadow-xs">
-                <span>View Full Discipline</span>
-                <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
-              </a>
-            </div>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15 text-xs font-black text-[#0066FF]">
+            <i class="fa-solid ${s.metricIcon} text-[#10B981]"></i>
+            <span>${s.metric}</span>
           </div>
 
+          <p class="text-sm text-[#64748B] font-normal leading-relaxed">
+            ${s.description}
+          </p>
+
+          <div class="flex flex-wrap gap-2 pt-2">
+            ${tagsHtml}
+          </div>
         </div>
+
+        <div class="pt-4 border-t border-[#F1F5F9]">
+          <a href="services/${s.slug}.html" class="w-full py-3.5 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+            <span>Explore Architecture</span>
+            <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1.5 transition-transform"></i>
+          </a>
+        </div>
+
       </div>
     `;
   }).join('');
