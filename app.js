@@ -1114,43 +1114,59 @@ function initTypewriter() {
 }
 
 /* ==========================================================================
-   15. Mobile Menu Navigation
+   15. Mobile Menu Navigation (Enhanced Glassmorphic Drawer)
    ========================================================================== */
 function initMobileMenu() {
   const toggleBtn = document.getElementById('mobileMenuToggle');
   const menu = document.getElementById('mobileMenu');
+  const icon = document.getElementById('mobileMenuIcon') || (toggleBtn ? toggleBtn.querySelector('i') : null);
   if (!toggleBtn || !menu) return;
 
-  toggleBtn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
+  function openMenu() {
+    menu.classList.remove('hidden');
+    if (icon) {
+      icon.classList.remove('fa-bars-staggered');
+      icon.classList.add('fa-xmark');
+    }
+  }
+
+  function closeMenu() {
+    menu.classList.add('hidden');
+    if (icon) {
+      icon.classList.remove('fa-xmark');
+      icon.classList.add('fa-bars-staggered');
+    }
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (menu.classList.contains('hidden')) {
+      openMenu();
+    } else {
+      closeMenu();
+    }
   });
 
-  document.querySelectorAll('.mobile-link').forEach(link => {
+  document.querySelectorAll('.mobile-nav-link, .mobile-link').forEach(link => {
     link.addEventListener('click', () => {
-      menu.classList.add('hidden');
+      closeMenu();
     });
   });
-}
 
-/* ==========================================================================
-   16. Scroll Effects: Active Navbar Item Tracking (Light Theme)
-   ========================================================================== */
-function initScrollEffects() {
-  const navbar = document.getElementById('navbar');
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.desktop-nav-link');
-
-  function handleScroll() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (navbar) {
-      if (scrollTop > 40) {
-        navbar.classList.add('shadow-md', 'bg-white/95');
-        navbar.classList.remove('bg-[#F8FAFC]/90');
-      } else {
-        navbar.classList.remove('shadow-md', 'bg-white/95');
-        navbar.classList.add('bg-[#F8FAFC]/90');
-      }
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!menu.classList.contains('hidden') && !menu.contains(e.target) && !toggleBtn.contains(e.target)) {
+      closeMenu();
     }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+      closeMenu();
+    }
+  });
+}
 
     let current = '';
     sections.forEach(sec => {
