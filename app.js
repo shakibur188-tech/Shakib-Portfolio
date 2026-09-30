@@ -506,7 +506,7 @@ function renderServices(servicesData) {
     `).join('');
 
     return `
-      <a href="services/${s.slug}.html" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
+      <a href="/services/${s.slug}" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
         
         <!-- Inset Image Frame with Rounded Corners -->
         <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
@@ -786,7 +786,7 @@ function initProjectFilter() {
 }
 
 function filterProjectsByCategory(category) {
-  const projectCards = document.querySelectorAll('#projectsGrid .project-card');
+  const projectCards = document.querySelectorAll('#projectsGrid .project-card, #fullProjectsGrid .project-card, .project-card');
 
   projectCards.forEach(card => {
     const cardCat = (card.getAttribute('data-category') || '').toLowerCase();
@@ -991,7 +991,7 @@ function initServiceModal() {
     }
 
     if (modalPageLink) {
-      modalPageLink.href = `/services/${svc.slug || svc.id}.html`;
+      modalPageLink.href = `//services/${svc.slug || svc.id}`;
     }
 
     modal.classList.remove('hidden');

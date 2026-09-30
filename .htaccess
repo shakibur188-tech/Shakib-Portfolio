@@ -1,24 +1,48 @@
 # ==============================================================================
 # Shakibur Rahaman Portfolio & CMS - Apache / cPanel / LiteSpeed Configuration
+# Universal Clean Extensionless URLs (.html hidden) & Security
 # ==============================================================================
 
 DirectoryIndex index.html index.php
 
-RewriteEngine On
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
 
-# 1. Clean URL Route Rewriting
-RewriteRule ^admin/?$ admin.html [L,QSA]
-RewriteRule ^services/?$ services.html [L,QSA]
+    # 1. Strip trailing slashes (except real directories)
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
 
-# 2. Route all /api/* requests to Universal PHP API bridge
-RewriteRule ^api/(.*)$ api/index.php [L,QSA]
-RewriteRule ^api$ api/index.php [L,QSA]
+    # 2. Redirect explicit .html requests to clean extensionless URLs (301 Redirect)
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9} /([^/]+/)*([^.]+).html(?[^ ]*)? HTTP/ [NC]
+    RewriteCond %{REQUEST_URI} !^/api/ [NC]
+    RewriteRule ^((?:[^/]+/)*[^.]+).html$ /$1 [R=301,L,NC]
 
-# 3. Block access to backend data store and dot files
-RewriteRule ^data(/.*)?$ - [F,L]
-RewriteRule ^\.git.*$ - [F,L]
+    # 3. Route /api/* requests to PHP backend
+    RewriteRule ^api/(.*)$ api/index.php [L,QSA]
+    RewriteRule ^api$ api/index.php [L,QSA]
 
-# 4. Correct MIME Types
+    # 4. Map clean URL /admin -> admin.html
+    RewriteRule ^admin/?$ admin.html [L,QSA]
+
+    # 5. Internally rewrite extensionless URLs to their .html files if they exist
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+    RewriteRule ^(.*)$ $1.html [L,QSA]
+
+    # 6. Fallback for subdirectories (e.g. /services/branding)
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.*)$ $1.html [L,QSA]
+
+    # 7. Block access to private data files and git
+    RewriteRule ^data(/.*)?$ - [F,L]
+    RewriteRule ^.git.*$ - [F,L]
+</IfModule>
+
+# Correct MIME Types
 <IfModule mod_mime.c>
     AddType text/plain .txt
     AddType text/html .html
@@ -29,12 +53,12 @@ RewriteRule ^\.git.*$ - [F,L]
     AddType font/woff2 .woff2
 </IfModule>
 
-# 5. Enable GZIP Compression
+# Enable GZIP Compression
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
 </IfModule>
 
-# 6. Browser Caching
+# Browser Caching
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresByType text/html "access plus 0 seconds"
