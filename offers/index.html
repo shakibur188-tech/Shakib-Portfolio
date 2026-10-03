@@ -168,7 +168,7 @@
   </header>
 
   
-  <!-- HERO & OFFERS GRID SECTION (Reduced Gaps) -->
+  <!-- HERO & OFFERS GRID SECTION (With Grid & Table Dual Mode) -->
   <section class="relative pt-28 pb-14 md:pt-36 md:pb-20 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6 md:space-y-8">
       
@@ -184,10 +184,24 @@
         <p class="text-xs sm:text-sm text-[#64748B] max-w-xl mx-auto leading-relaxed">
           High-velocity digital packages with turnkey deliverables, 100% intellectual property ownership, and flexible 0% interest EMI options.
         </p>
+
+        <!-- View Switcher (Grid View vs Comparison Table View) -->
+        <div class="pt-3 flex items-center justify-center">
+          <div class="p-1 rounded-2xl bg-white border border-[#E2E8F0] shadow-xs inline-flex items-center gap-1">
+            <button id="viewGridModeBtn" type="button" class="px-4 sm:px-5 py-2 rounded-xl bg-[#0066FF] text-white font-extrabold text-xs flex items-center gap-2 shadow-xs transition-all duration-200">
+              <i class="fa-solid fa-table-cells-large text-[11px]"></i>
+              <span>Card Grid</span>
+            </button>
+            <button id="viewTableModeBtn" type="button" class="px-4 sm:px-5 py-2 rounded-xl bg-transparent text-[#64748B] hover:text-[#0B0F19] font-bold text-xs flex items-center gap-2 transition-all duration-200">
+              <i class="fa-solid fa-table-list text-[11px]"></i>
+              <span>Comparison Table</span>
+            </button>
+          </div>
+        </div>
       </div>
 
-      <!-- 3-Package Dynamic Card Grid (Managed via Admin CMS) -->
-      <div id="offersGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-7 items-stretch">
+      <!-- 1. Card Grid View -->
+      <div id="offersGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-7 items-stretch transition-all duration-300">
 
       <!-- Offer Card: Fully Customized E-com Website -->
       <div class="morphy-card bg-white border border-[#E2E8F0] hover:border-[#0066FF]/40 rounded-3xl overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
@@ -228,7 +242,7 @@
           </div>
         </div>
       </div>
-    
+
       <!-- Offer Card: Fully Customized Service-Based Platform -->
       <div class="morphy-card bg-white border border-[#E2E8F0] hover:border-[#0066FF]/40 rounded-3xl overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
         <!-- 1. Card Top Image -->
@@ -268,7 +282,7 @@
           </div>
         </div>
       </div>
-    
+
       <!-- Offer Card: Fully Customized Personal Portfolio Website -->
       <div class="morphy-card bg-white border border-[#E2E8F0] hover:border-[#0066FF]/40 rounded-3xl overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
         <!-- 1. Card Top Image -->
@@ -308,8 +322,113 @@
           </div>
         </div>
       </div>
-    
+
       </div>
+
+
+      <!-- Comparison Matrix Table View (Toggled via Switcher) -->
+      <div id="offersTableView" class="hidden morphy-card p-0 rounded-3xl bg-white border border-[#E2E8F0] shadow-xl overflow-hidden transition-all duration-300">
+        <!-- Mobile Swipe Indicator -->
+        <div class="md:hidden flex items-center justify-center gap-2 p-3 text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] border-b border-[#E2E8F0]">
+          <i class="fa-solid fa-arrows-left-right text-[#0066FF] animate-pulse"></i>
+          <span>Swipe horizontally to compare all 3 packages</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse min-w-[700px]">
+            <thead>
+              <tr class="border-b border-[#E2E8F0] bg-[#F8FAFC]">
+                <th class="p-5 sm:p-6 text-sm font-black text-[#0B0F19] w-[28%]">Package Features &amp; Scope</th>
+                
+                <!-- Package 1: E-Com -->
+                <th class="p-5 sm:p-6 text-center border-l border-[#E2E8F0] w-[24%]">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase">E-Commerce</span>
+                  <div class="text-base font-black text-[#0B0F19] mt-2">E-Com Storefront</div>
+                  <div class="text-[11px] font-bold text-[#10B981] mt-0.5">0% EMI Available</div>
+                </th>
+
+                <!-- Package 2: Service Platform -->
+                <th class="p-5 sm:p-6 text-center border-l border-[#E2E8F0] w-[24%]">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase">Service Platform</span>
+                  <div class="text-base font-black text-[#0B0F19] mt-2">Service Engine</div>
+                  <div class="text-[11px] font-bold text-[#10B981] mt-0.5">0% EMI Available</div>
+                </th>
+
+                <!-- Package 3: Portfolio -->
+                <th class="p-5 sm:p-6 text-center border-l border-[#E2E8F0] w-[24%]">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase">Executive</span>
+                  <div class="text-base font-black text-[#0B0F19] mt-2">Personal Portfolio</div>
+                  <div class="text-[11px] font-bold text-[#10B981] mt-0.5">0% EMI Available</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#F1F5F9] text-xs font-medium text-[#475569]">
+              <tr class="hover:bg-[#F8FAFC]">
+                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">Primary Architecture</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">Headless Storefront (Shopify / Next.js)</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">Custom Service Funnel &amp; Quotation Engine</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">Luxury Morphy Bento Portfolio Architecture</td>
+              </tr>
+
+              <tr class="hover:bg-[#F8FAFC]">
+                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">Payment Gateways</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-[#10B981] font-bold">bKash, Nagad, Cards, SSLCommerz</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-[#10B981] font-bold">Integrated Invoice &amp; Online Booking</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-[#10B981] font-bold">Consultation Booking &amp; Lead Funnel</td>
+              </tr>
+
+              <tr class="hover:bg-[#F8FAFC]">
+                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">Performance &amp; Speed</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">&lt; 1s Sub-Second Checkouts</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">&lt; 1s High-Conversion Speed</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">99/100 Google PageSpeed Score</td>
+              </tr>
+
+              <tr class="hover:bg-[#F8FAFC]">
+                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">Hosting &amp; Domain</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">Free Domain + 10GB NVMe Hosting</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">Free Domain + 10GB NVMe Hosting</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">Free Domain + High-Speed CDN</td>
+              </tr>
+
+              <tr class="hover:bg-[#F8FAFC]">
+                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">Admin CMS &amp; Full Access</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-[#10B981] font-bold text-sm">✓ Included</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-[#10B981] font-bold text-sm">✓ Included</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-[#10B981] font-bold text-sm">✓ Included</td>
+              </tr>
+
+              <tr class="hover:bg-[#F8FAFC]">
+                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">Flexible 0% Interest EMI</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] font-bold text-[#0066FF]">3, 6, 9 &amp; 12 Months EMI</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] font-bold text-[#0066FF]">3, 6, 9 &amp; 12 Months EMI</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] font-bold text-[#0066FF]">3, 6, 9 &amp; 12 Months EMI</td>
+              </tr>
+
+              <!-- Action Row -->
+              <tr class="bg-[#F8FAFC] border-t-2 border-[#E2E8F0]">
+                <td class="p-5 font-bold text-[#0B0F19]">Package Details &amp; Plans</td>
+                <td class="p-5 text-center border-l border-[#E2E8F0]">
+                  <a href="/offers/ecommerce" class="inline-flex py-2.5 px-4 rounded-full bg-[#0066FF] hover:bg-[#0052FF] text-white text-xs font-extrabold transition-all shadow-md shadow-[#0066FF]/20">
+                    <span>View E-Com Matrix →</span>
+                  </a>
+                </td>
+                <td class="p-5 text-center border-l border-[#E2E8F0]">
+                  <a href="/offers/service-platform" class="inline-flex py-2.5 px-4 rounded-full bg-[#0066FF] hover:bg-[#0052FF] text-white text-xs font-extrabold transition-all shadow-md shadow-[#0066FF]/20">
+                    <span>View Service Matrix →</span>
+                  </a>
+                </td>
+                <td class="p-5 text-center border-l border-[#E2E8F0]">
+                  <a href="/offers/portfolio" class="inline-flex py-2.5 px-4 rounded-full bg-[#0066FF] hover:bg-[#0052FF] text-white text-xs font-extrabold transition-all shadow-md shadow-[#0066FF]/20">
+                    <span>View Portfolio Matrix →</span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
 
     </div>
   </section>

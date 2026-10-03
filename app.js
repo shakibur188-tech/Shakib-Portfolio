@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // 4. Initialize Interactive Features & Motion Engines
   initTypewriter();
   initMobileMenu();
+  initOffersViewSwitcher();
   initProjectFilter();
   initServiceModal();
   initContactForm();
@@ -1195,4 +1196,42 @@ function escapeHtml(str) {
             .replace(/>/g, '&gt;')
             .replace(/"/g, '&quot;')
             .replace(/'/g, '&#039;');
+}
+
+
+/* ==========================================================================
+   Offers Dual View Switcher (Card Grid vs Comparison Table)
+   ========================================================================== */
+function initOffersViewSwitcher() {
+  const gridBtn = document.getElementById('viewGridModeBtn');
+  const tableBtn = document.getElementById('viewTableModeBtn');
+  const gridView = document.getElementById('offersGrid');
+  const tableView = document.getElementById('offersTableView');
+
+  if (!gridBtn || !tableBtn || !gridView || !tableView) return;
+
+  function setView(mode) {
+    if (mode === 'table') {
+      gridView.classList.add('hidden');
+      tableView.classList.remove('hidden');
+
+      tableBtn.classList.remove('bg-transparent', 'text-[#64748B]');
+      tableBtn.classList.add('bg-[#0066FF]', 'text-white', 'shadow-xs');
+
+      gridBtn.classList.remove('bg-[#0066FF]', 'text-white', 'shadow-xs');
+      gridBtn.classList.add('bg-transparent', 'text-[#64748B]');
+    } else {
+      tableView.classList.add('hidden');
+      gridView.classList.remove('hidden');
+
+      gridBtn.classList.remove('bg-transparent', 'text-[#64748B]');
+      gridBtn.classList.add('bg-[#0066FF]', 'text-white', 'shadow-xs');
+
+      tableBtn.classList.remove('bg-[#0066FF]', 'text-white', 'shadow-xs');
+      tableBtn.classList.add('bg-transparent', 'text-[#64748B]');
+    }
+  }
+
+  gridBtn.addEventListener('click', () => setView('grid'));
+  tableBtn.addEventListener('click', () => setView('table'));
 }
