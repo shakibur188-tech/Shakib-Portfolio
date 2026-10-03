@@ -727,3 +727,73 @@
 
 })();
 
+
+
+  // -------------------------------------------------------------
+  // Dynamic Offers Grid Hydration (Admin CMS Driven)
+  // -------------------------------------------------------------
+  function hydrateOffersGrid(content) {
+    const grid = document.getElementById('offersGrid');
+    if (!grid || !Array.isArray(content.offers) || !content.offers.length) return;
+
+    grid.innerHTML = content.offers.map(offer => {
+      const isFeatured = offer.featured === true;
+      const borderClass = isFeatured 
+        ? 'border-2 border-[#0066FF] shadow-2xl shadow-[#0066FF]/20 relative -translate-y-1 md:-translate-y-2 ring-4 ring-[#0066FF]/10' 
+        : 'border border-[#E2E8F0] shadow-sm hover:border-[#0066FF]/40 hover:shadow-xl hover:-translate-y-1.5';
+      
+      const btnClass = isFeatured
+        ? 'w-full py-3.5 px-5 rounded-full bg-[#0066FF] hover:bg-[#0052FF] text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between shadow-lg shadow-[#0066FF]/30 active:scale-98'
+        : 'w-full py-3.5 px-5 rounded-full bg-[#F8FAFC] hover:bg-[#0066FF] text-[#0B0F19] hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] hover:border-transparent shadow-xs hover:shadow-lg hover:shadow-[#0066FF]/25 active:scale-98';
+
+      const featureItems = (offer.features || []).map(feat => `
+        <li class="flex items-start gap-2.5">
+          <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+          <span>${feat}</span>
+        </li>
+      `).join('');
+
+      const featuredBadge = isFeatured
+        ? `<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#0066FF] to-[#0052FF] text-white font-extrabold text-[10px] uppercase tracking-wider shadow-md shadow-[#0066FF]/30">
+            ★ Most Popular Sprint
+          </div>`
+        : '';
+
+      return `
+        <div class="morphy-card p-8 bg-white ${borderClass} rounded-[32px] flex flex-col justify-between transition-all duration-300 relative group">
+          ${featuredBadge}
+          <div>
+            <div class="flex items-center justify-between mb-5 pt-1">
+              <span class="px-3 py-1 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] border border-[#0066FF]/20 uppercase tracking-wider">
+                ${offer.badge || 'Sprint Package'}
+              </span>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#10B981]/10 text-[#10B981] border border-[#10B981]/20">
+                ${offer.emiBadge || 'EMI Available'}
+              </span>
+            </div>
+
+            <h3 class="text-2xl font-black text-[#0B0F19] leading-tight">
+              ${offer.title} <br>
+              <span class="text-sm font-bold text-[#0066FF]">${offer.subtitle || ''}</span>
+            </h3>
+
+            <p class="text-xs text-[#64748B] mt-2 mb-6 leading-relaxed">
+              ${offer.description || ''}
+            </p>
+
+            <ul class="space-y-3.5 pt-5 border-t border-[#F1F5F9] text-xs text-[#475569] font-medium">
+              ${featureItems}
+            </ul>
+          </div>
+
+          <div class="pt-6 border-t border-[#F1F5F9] mt-8">
+            <a href="${offer.ctaLink || '/contact'}" class="${btnClass}">
+              <span>${offer.ctaText || 'View Plans & EMI Matrix'}</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+  

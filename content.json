@@ -336,257 +336,87 @@
   "webProjects": [
     {
       "id": "proj-1",
-      "title": "Hotel Sarina Dhaka - 5-Star Luxury Booking Portal",
-      "client": "Hotel Sarina Dhaka",
-      "category": "Hospitality & Booking",
-      "liveUrl": "https://www.hotelsarinadhaka.com",
-      "previewImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
+      "title": "ASAP Interior Solutions - Commercial & Residential Interior Flagship",
+      "client": "ASAP Solutions Limited",
+      "category": "Architecture & Interior",
+      "liveUrl": "https://interior.asapsl.com",
+      "previewImage": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
       "techStack": [
-        "WordPress",
         "Next.js",
-        "Direct Booking API",
-        "Tailwind CSS"
+        "Tailwind CSS",
+        "Framer Motion",
+        "REST Booking API"
       ],
-      "highlights": "Bespoke 5-star hotel portal with real-time room availability, dining reservations, and festive event ticketing.",
-      "metrics": "+42% Direct Bookings",
+      "highlights": "Corporate interior architecture portal with interactive 3D spatial galleries, quotation calculator, and automated consultation scheduling.",
+      "metrics": "+310% Inbound Inquiries",
       "ctaText": "Visit Live Website ↗"
     },
     {
       "id": "proj-2",
-      "title": "LuxeHaven Interiors - Architectural Design & Fitout Studio",
-      "client": "LuxeHaven Architectural Studio",
-      "category": "Corporate / B2B",
-      "liveUrl": "https://luxehaven-interior.example.com",
-      "previewImage": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
+      "title": "Luxora Furniture - Bespoke Luxury Furniture D2C E-Store",
+      "client": "Luxora Luxury Furnishings",
+      "category": "E-Commerce & Retail",
+      "liveUrl": "https://luxorafurniture.com",
+      "previewImage": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80",
       "techStack": [
-        "React",
+        "Shopify Headless",
         "Tailwind CSS",
-        "Framer Motion",
-        "Supabase"
+        "Custom Variant Engine",
+        "Stripe"
       ],
-      "highlights": "Interactive 3D space gallery, client consultation booking, and high-ticket residential/commercial portfolio showcase.",
-      "metrics": "99/100 Mobile Speed",
+      "highlights": "Luxury headless e-commerce store with dynamic product finish selectors, room visualization guides, and accelerated 1-click checkout.",
+      "metrics": "+45% Conversion Lift",
       "ctaText": "Visit Live Website ↗"
     },
     {
       "id": "proj-3",
-      "title": "Prestige VIP Club - Members-Only Private Concierge",
-      "client": "Prestige Global Club",
-      "category": "Web Apps / SaaS",
-      "liveUrl": "https://prestige-club.example.com",
-      "previewImage": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80",
+      "title": "UDC (Unity Design Consultancy) - Architectural Design Hub",
+      "client": "Unity Design Consultancy",
+      "category": "Architecture & Interior",
+      "liveUrl": "https://interior3.shakibur.info",
+      "previewImage": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
       "techStack": [
-        "Next.js",
-        "TypeScript",
+        "Next.js 14",
         "Tailwind CSS",
+        "Blueprint Viewer",
         "Node.js"
       ],
-      "highlights": "Gated membership verification portal, VIP lounge dining reservations, and private member directory.",
-      "metrics": "100% Secure Auth",
+      "highlights": "Architectural consultancy platform with interactive blueprint case studies, client testimonial carousels, and multi-step RFP intake flow.",
+      "metrics": "99/100 PageSpeed",
       "ctaText": "Visit Live Website ↗"
     },
     {
       "id": "proj-4",
-      "title": "GlobalEd Pathways - International Study Abroad Portal",
-      "client": "Global Education Pathways",
-      "category": "Corporate / B2B",
-      "liveUrl": "https://globaled-pathways.example.com",
-      "previewImage": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+      "title": "Gram Banglar Poth e Poth e - Cultural Documentary Publication",
+      "client": "Gram Banglar Poth e Poth e Media",
+      "category": "Media & Publications",
+      "liveUrl": "https://news.shakibur.info",
+      "previewImage": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80",
       "techStack": [
-        "React",
-        "PHP",
-        "MySQL",
-        "Bootstrap 5"
+        "Next.js",
+        "Tailwind CSS",
+        "Headless CMS",
+        "Cloudflare CDN"
       ],
-      "highlights": "University course search database, intake assessment calculator, and automated student counselor lead matching.",
-      "metrics": "4,000+ Students Guided",
+      "highlights": "High-traffic digital news publication with lightning-fast AMP reader experience, documentary archives, and newsletter dispatch.",
+      "metrics": "0.5s Reader TTFB",
       "ctaText": "Visit Live Website ↗"
     },
     {
       "id": "proj-5",
-      "title": "Apex Recruitment Hub - Executive Search & B2B Staffing",
-      "client": "Apex Manpower & Recruitment",
-      "category": "Corporate / B2B",
-      "liveUrl": "https://apex-recruitment.example.com",
-      "previewImage": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-      "techStack": [
-        "Next.js",
-        "Tailwind CSS",
-        "PostgreSQL",
-        "Prisma"
-      ],
-      "highlights": "B2B employer job requisition posting, candidate resume parser, and real-time interview coordination pipeline.",
-      "metrics": "65+ Corporate Clients",
-      "ctaText": "Visit Live Website ↗"
-    },
-    {
-      "id": "proj-6",
-      "title": "WanderLuxe Expeditions - Premium Travel & Tour Operator",
-      "client": "WanderLuxe Travel Group",
+      "title": "Hotel Booking Platform - 5-Star Direct Reservation Engine",
+      "client": "Shakib Hospitality Flagship",
       "category": "Hospitality & Booking",
-      "liveUrl": "https://wanderluxe-travel.example.com",
-      "previewImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+      "liveUrl": "https://hotel.shakibur.info",
+      "previewImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
       "techStack": [
-        "WordPress",
-        "WooCommerce",
-        "Custom Booking Plugin",
+        "Next.js 14",
+        "Tailwind CSS",
+        "Availability Engine API",
         "Stripe"
       ],
-      "highlights": "Dynamic package itinerary builder, flight/visa inquiry engine, and multi-currency international payments.",
-      "metrics": "210+ Booked Trips",
-      "ctaText": "Visit Live Website ↗"
-    },
-    {
-      "id": "proj-7",
-      "title": "Aura Studio Fashion - D2C E-Commerce Flagship Store",
-      "client": "Aura Luxury Apparel",
-      "category": "E-Commerce",
-      "liveUrl": "https://aura-fashion.example.com",
-      "previewImage": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80",
-      "techStack": [
-        "Shopify Liquid",
-        "Hydrogen",
-        "Tailwind CSS",
-        "Klaviyo"
-      ],
-      "highlights": "Modern headless e-commerce store with instant product filtering, dynamic cart recovery, and 1-click checkout.",
-      "metrics": "12.4x Peak ROAS",
-      "ctaText": "Visit Live Website ↗"
-    },
-    {
-      "id": "proj-8",
-      "title": "UrbanBite Gourmet - Artisanal Cloud Kitchen & Delivery",
-      "client": "UrbanBite Food Labs",
-      "category": "E-Commerce",
-      "liveUrl": "https://urbanbite-delivery.example.com",
-      "previewImage": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
-      "techStack": [
-        "React",
-        "Firebase",
-        "Tailwind CSS",
-        "Google Maps API"
-      ],
-      "highlights": "Real-time kitchen order dispatch, interactive dish customization, and live rider tracking.",
-      "metrics": "15-Min Fast Dispatch",
-      "ctaText": "Visit Live Website ↗"
-    },
-    {
-      "id": "proj-9",
-      "title": "NovaPulse SaaS - AI-Powered Social Analytics Dashboard",
-      "client": "NovaPulse Technologies",
-      "category": "Web Apps / SaaS",
-      "liveUrl": "https://novapulse-saas.example.com",
-      "previewImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-      "techStack": [
-        "Next.js",
-        "Tailwind CSS",
-        "Recharts",
-        "Node.js / Express"
-      ],
-      "highlights": "Multi-platform social engagement analytics, automated performance reports, and AI caption recommendations.",
-      "metrics": "10k+ Monthly Events",
-      "ctaText": "Visit Live Website ↗"
-    },
-    {
-      "id": "proj-10",
-      "title": "Veritas Law Chambers - Corporate Legal Advisory Firm",
-      "client": "Veritas Legal Group",
-      "category": "Corporate / B2B",
-      "liveUrl": "https://veritas-legal.example.com",
-      "previewImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
-      "techStack": [
-        "HTML5 / Tailwind",
-        "Alpine.js",
-        "PHP",
-        "SEO Structured Data"
-      ],
-      "highlights": "Authoritative bilingual corporate presence, legal practice areas breakdown, and confidential consultation portal.",
-      "metrics": "Top 3 Google Rank",
-      "ctaText": "Visit Live Website ↗"
-    },
-    {
-      "id": "proj-11",
-      "title": "Zenith Health Clinics - Telemedicine & Appointment Suite",
-      "client": "Zenith Healthcare Network",
-      "category": "Hospitality & Booking",
-      "liveUrl": "https://zenith-health.example.com",
-      "previewImage": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-      "techStack": [
-        "React",
-        "Node.js",
-        "WebRTC",
-        "PostgreSQL"
-      ],
-      "highlights": "Doctor directory by specialty, instant video consultation booking, and electronic medical prescription viewer.",
-      "metrics": "99.9% Uptime",
-      "ctaText": "Visit Live Website ↗"
-    },
-    {
-      "id": "proj-12",
-      "title": "Prism Creative Collective - Multimedia Production Agency",
-      "client": "Prism Studio",
-      "category": "Creative Portfolios",
-      "liveUrl": "https://prism-studio.example.com",
-      "previewImage": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80",
-      "techStack": [
-        "Next.js",
-        "GSAP Animations",
-        "Tailwind CSS",
-        "Vimeo API"
-      ],
-      "highlights": "Award-winning fluid motion animations, 4K commercial video reel player, and case study visual deep dives.",
-      "metrics": "Awwwards Nominee",
-      "ctaText": "Visit Live Website ↗"
-    },
-    {
-      "id": "proj-13",
-      "title": "EstatePrime Properties - High-End Real Estate Portal",
-      "client": "EstatePrime Developments",
-      "category": "Corporate / B2B",
-      "liveUrl": "https://estateprime-realty.example.com",
-      "previewImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-      "techStack": [
-        "WordPress",
-        "Elementor Pro",
-        "Custom Post Types",
-        "Mapbox"
-      ],
-      "highlights": "Luxury property listings with 360 virtual tours, mortgage payment calculator, and verified agent inquiry desk.",
-      "metrics": "BDT 80M+ Inquiries",
-      "ctaText": "Visit Live Website ↗"
-    },
-    {
-      "id": "proj-14",
-      "title": "ChronoCraft Horology - Heritage Luxury Watch Store",
-      "client": "ChronoCraft Timepieces",
-      "category": "E-Commerce",
-      "liveUrl": "https://chronocraft-watches.example.com",
-      "previewImage": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80",
-      "techStack": [
-        "WooCommerce",
-        "Next.js",
-        "Tailwind CSS",
-        "SSL / PCI Gateway"
-      ],
-      "highlights": "Swiss watchmaker portfolio with serial authentication checking, insured global courier tracking, and VIP concierge.",
-      "metrics": "+180% Avg Order Value",
-      "ctaText": "Visit Live Website ↗"
-    },
-    {
-      "id": "proj-15",
-      "title": "EchoSound Festival - Live Concert & Event Ticket Engine",
-      "client": "EchoLive Entertainment",
-      "category": "Hospitality & Booking",
-      "liveUrl": "https://echosound-festival.example.com",
-      "previewImage": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
-      "techStack": [
-        "React",
-        "Tailwind CSS",
-        "Stripe Connect",
-        "QR Scanner API"
-      ],
-      "highlights": "Interactive festival venue map, tiered VIP ticket sales, and instant automated QR e-ticket generation.",
-      "metrics": "5,000+ Tickets Sold",
+      "highlights": "Ultra-modern direct luxury booking engine with real-time date room availability, dining package add-ons, and instant SMS ticketing.",
+      "metrics": "+340% Direct Bookings",
       "ctaText": "Visit Live Website ↗"
     }
   ],
@@ -661,6 +491,62 @@
       "author": "Lais A.",
       "role": "Digital Marketer",
       "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&h=120&q=80"
+    }
+  ],
+  "offers": [
+    {
+      "id": "offer-ecom",
+      "badge": "E-Commerce Flagship",
+      "emiBadge": "EMI Available",
+      "title": "Fully Customized E-com Website",
+      "subtitle": "(with EMI Facility)",
+      "description": "High-converting digital storefront engineered for sub-second checkouts, multi-warehouse stock management, and zero drop-off cart conversion.",
+      "features": [
+        "Bespoke Headless Storefront Architecture (Shopify / Next.js)",
+        "Multi-Currency & Local Gateways (bKash, Nagad, Cards, SSLCommerz)",
+        "Automated Courier API Dispatch & Live SMS Order Tracking",
+        "Dynamic Product Customizer & Automated Abandoned Cart Recovery",
+        "Flexible 0% Interest EMI Plans (3 to 12 Months)"
+      ],
+      "ctaText": "View E-Com Plans & EMI Matrix",
+      "ctaLink": "/offers/ecommerce",
+      "featured": false
+    },
+    {
+      "id": "offer-service",
+      "badge": "Service Engine",
+      "emiBadge": "EMI Available",
+      "title": "Fully Customized Service-Based Platform",
+      "subtitle": "(with EMI Facility)",
+      "description": "Tailored conversion architecture for agencies, consultancies, and B2B enterprises to automate lead generation and client onboarding.",
+      "features": [
+        "Interactive Multi-Step Service Quotation & Intake Funnel",
+        "Real-Time Consultation Calendar & Instant WhatsApp Sync",
+        "Client Case Study Retrospective Library with 3D Visuals",
+        "Automated CRM Lead Capture & Email Notification Dispatch",
+        "Flexible 0% Interest EMI Plans (3 to 12 Months)"
+      ],
+      "ctaText": "View Service Platform Plans & EMI",
+      "ctaLink": "/offers/service-platform",
+      "featured": true
+    },
+    {
+      "id": "offer-portfolio",
+      "badge": "Executive Brand",
+      "emiBadge": "EMI Available",
+      "title": "Fully Customized Personal Portfolio Website",
+      "subtitle": "(with EMI Facility)",
+      "description": "Ultra-luxury personal branding platform designed for founders, consultants, directors, and executives to command premium authority and client trust.",
+      "features": [
+        "High-End Interactive Morphy Bento Layout & Custom Aesthetic Design",
+        "Dynamic Projects, Career Timeline & Credentials Showcase",
+        "99/100 Google PageSpeed & Sub-Second Global CDN Asset Loading",
+        "Direct Client Inbound Lead Capture & Consultation Booking Engine",
+        "Flexible 0% Interest EMI Plans (3 to 12 Months)"
+      ],
+      "ctaText": "View Portfolio Plans & EMI Matrix",
+      "ctaLink": "/offers/portfolio",
+      "featured": false
     }
   ]
 }

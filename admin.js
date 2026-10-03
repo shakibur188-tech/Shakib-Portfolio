@@ -210,6 +210,7 @@ window.switchTab = function(tabId) {
 
   const titleMap = {
     'tab-overview': { title: 'Dashboard Overview', sub: 'Real-time performance metrics, services, and live web portals.' },
+    'tab-offers': { title: 'Special Offers & Packages CMS', sub: 'Add, edit, reorder, or remove growth packages and EMI sprint cards on /offers.' },
     'tab-services': { title: '9 Core Services CMS', sub: 'Manage titles, deliverables, tools, icons, and impact metrics.' },
     'tab-webprojects': { title: '15 Web Projects CMS (Live)', sub: 'Manage client portals, live external URLs, screenshots, and tech stacks.' },
     'tab-creative': { title: 'Creative Media Studio Gallery', sub: 'Branding kits, commercial films, packaging 3D renders, and expo booths.' },
@@ -2668,3 +2669,202 @@ function exportSubmissionsCsv() {
   window.open(`/api/forms/submissions/export${query}`, '_blank');
 }
 
+
+
+// ==========================================================================
+// OFFERS & PACKAGES CMS CONTROLLER
+// ==========================================================================
+function renderOffersEditor(offers) {
+  const container = document.getElementById('offersEditorContainer');
+  const badge = document.getElementById('offersBadge');
+  if (!container) return;
+
+  if (badge) badge.textContent = Array.isArray(offers) ? offers.length : 0;
+
+  if (!Array.isArray(offers) || !offers.length) {
+    container.innerHTML = '<div class="empty-state">No offers created yet. Click "+ Add New Offer" to create your first package.</div>';
+    return;
+  }
+
+  container.innerHTML = offers.map((offer, idx) => {
+    const featuresList = Array.isArray(offer.features) ? offer.features : [];
+    const featureRows = featuresList.map(feat => `
+      <div class="dynamic-row">
+        <input type="text" class="admin-input offer-feature" value="${escapeHtml(feat)}" placeholder="Feature bullet point" oninput="markDirty()">
+        <button type="button" class="btn-delete-icon" onclick="this.parentElement.remove(); markDirty();">✕</button>
+      </div>
+    `).join('');
+
+    const isFeatured = offer.featured === true;
+
+    return `
+      <div class="case-item-card" data-index="${idx}">
+        <div class="case-item-header" onclick="toggleAccordion(this)">
+          <div class="case-header-left">
+            <span class="case-index">#${idx + 1}</span>
+            <span class="svc-badge-pill" style="background:#0066FF15; color:#0066FF; font-size:11px; padding:3px 8px; border-radius:6px; font-weight:700;">${escapeHtml(offer.badge || 'Offer')}</span>
+            <strong class="case-header-title">${escapeHtml(offer.title || 'Untitled Offer')}</strong>
+            ${isFeatured ? '<span class="status-pill status-active" style="margin-left:6px; font-size:10px;">★ Featured</span>' : ''}
+          </div>
+          <div class="case-header-actions" onclick="event.stopPropagation();">
+            <button type="button" class="btn-ghost-sm" title="Move Up" onclick="moveOffer(${idx}, -1)" ${idx === 0 ? 'disabled' : ''}>▲</button>
+            <button type="button" class="btn-ghost-sm" title="Move Down" onclick="moveOffer(${idx}, 1)" ${idx === offers.length - 1 ? 'disabled' : ''}>▼</button>
+            <button type="button" class="btn-danger-sm" title="Delete Offer" onclick="deleteOffer(${idx})">Delete</button>
+            <span class="accordion-arrow">▼</span>
+          </div>
+        </div>
+
+        <div class="case-item-body hidden">
+          <input type="hidden" class="offer-id" value="${escapeHtml(offer.id || 'offer-' + Date.now())}">
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>Offer Title</label>
+              <input type="text" class="admin-input offer-title" value="${escapeHtml(offer.title || '')}" placeholder="e.g. Fully Customized E-com Website" oninput="markDirty()">
+            </div>
+            <div class="form-group">
+              <label>Subtitle / Tagline</label>
+              <input type="text" class="admin-input offer-subtitle" value="${escapeHtml(offer.subtitle || '')}" placeholder="e.g. (with EMI Facility)" oninput="markDirty()">
+            </div>
+          </div>
+
+          <div class="form-row-3">
+            <div class="form-group">
+              <label>Category Badge</label>
+              <input type="text" class="admin-input offer-badge" value="${escapeHtml(offer.badge || '')}" placeholder="e.g. E-Commerce Flagship" oninput="markDirty()">
+            </div>
+            <div class="form-group">
+              <label>EMI Badge Text</label>
+              <input type="text" class="admin-input offer-emi-badge" value="${escapeHtml(offer.emiBadge || 'EMI Available')}" placeholder="e.g. EMI Available" oninput="markDirty()">
+            </div>
+            <div class="form-group">
+              <label>Featured / Highlighted</label>
+              <div style="display:flex; align-items:center; height:42px;">
+                <label class="switch-toggle" style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+                  <input type="checkbox" class="offer-featured" ${isFeatured ? 'checked' : ''} onchange="markDirty()">
+                  <span style="font-size:12px; font-weight:600; color:#334155;">Highlight this card</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Short Description</label>
+            <textarea class="admin-textarea offer-desc" rows="2" placeholder="Brief summary of the package..." oninput="markDirty()">${escapeHtml(offer.description || '')}</textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Key Features & Deliverables (Bullet Points)</label>
+            <div class="offer-features-list mb-2">${featureRows}</div>
+            <button type="button" class="btn-secondary-sm" onclick="addFeatureToOffer(this)">+ Add Feature Bullet</button>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>CTA Button Text</label>
+              <input type="text" class="admin-input offer-cta-text" value="${escapeHtml(offer.ctaText || 'View Plans & EMI Matrix')}" placeholder="e.g. View Plans & EMI Matrix" oninput="markDirty()">
+            </div>
+            <div class="form-group">
+              <label>CTA Target URL / Link</label>
+              <input type="text" class="admin-input offer-cta-link" value="${escapeHtml(offer.ctaLink || '/contact')}" placeholder="e.g. /offers/ecommerce or /contact" oninput="markDirty()">
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+window.addFeatureToOffer = function(btn) {
+  const list = btn.previousElementSibling;
+  const row = document.createElement('div');
+  row.className = 'dynamic-row';
+  row.innerHTML = `
+    <input type="text" class="admin-input offer-feature" value="" placeholder="New Feature Bullet" oninput="markDirty()">
+    <button type="button" class="btn-delete-icon" onclick="this.parentElement.remove(); markDirty();">✕</button>
+  `;
+  list.appendChild(row);
+  markDirty();
+};
+
+window.addNewOffer = function() {
+  const current = getOffersFromForms();
+  const newId = 'offer-' + Date.now();
+  current.push({
+    id: newId,
+    badge: 'Custom Sprint',
+    emiBadge: 'EMI Available',
+    title: 'New Custom Package',
+    subtitle: '(with EMI Facility)',
+    description: 'High-converting custom sprint package designed for rapid commercial growth.',
+    features: [
+      'Bespoke Architecture & Strategic Planning',
+      'Turnkey Deliverables with Fast Turnaround',
+      'Flexible 0% Interest EMI Facility (3 to 12 Months)'
+    ],
+    ctaText: 'View Details & EMI',
+    ctaLink: '/contact',
+    featured: false
+  });
+  renderOffersEditor(current);
+  markDirty();
+};
+
+window.deleteOffer = function(idx) {
+  if (confirm('Are you sure you want to delete this offer package?')) {
+    const current = getOffersFromForms();
+    current.splice(idx, 1);
+    renderOffersEditor(current);
+    markDirty();
+  }
+};
+
+window.moveOffer = function(idx, direction) {
+  const current = getOffersFromForms();
+  const targetIdx = idx + direction;
+  if (targetIdx < 0 || targetIdx >= current.length) return;
+  const temp = current[idx];
+  current[idx] = current[targetIdx];
+  current[targetIdx] = temp;
+  renderOffersEditor(current);
+  markDirty();
+};
+
+function getOffersFromForms() {
+  const cards = document.querySelectorAll('#offersEditorContainer .case-item-card');
+  const offers = [];
+
+  cards.forEach(card => {
+    const id = card.querySelector('.offer-id')?.value || 'offer-' + Date.now();
+    const title = card.querySelector('.offer-title')?.value.trim() || 'Untitled Offer';
+    const subtitle = card.querySelector('.offer-subtitle')?.value.trim() || '';
+    const badge = card.querySelector('.offer-badge')?.value.trim() || 'Special Offer';
+    const emiBadge = card.querySelector('.offer-emi-badge')?.value.trim() || 'EMI Available';
+    const description = card.querySelector('.offer-desc')?.value.trim() || '';
+    const featured = card.querySelector('.offer-featured')?.checked === true;
+    const ctaText = card.querySelector('.offer-cta-text')?.value.trim() || 'View Details';
+    const ctaLink = card.querySelector('.offer-cta-link')?.value.trim() || '/contact';
+
+    const featureInputs = card.querySelectorAll('.offer-feature');
+    const features = [];
+    featureInputs.forEach(inp => {
+      const val = inp.value.trim();
+      if (val) features.push(val);
+    });
+
+    offers.push({
+      id,
+      badge,
+      emiBadge,
+      title,
+      subtitle,
+      description,
+      features,
+      ctaText,
+      ctaLink,
+      featured
+    });
+  });
+
+  return offers;
+}

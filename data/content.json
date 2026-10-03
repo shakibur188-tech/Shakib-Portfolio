@@ -492,5 +492,61 @@
       "role": "Digital Marketer",
       "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&h=120&q=80"
     }
+  ],
+  "offers": [
+    {
+      "id": "offer-ecom",
+      "badge": "E-Commerce Flagship",
+      "emiBadge": "EMI Available",
+      "title": "Fully Customized E-com Website",
+      "subtitle": "(with EMI Facility)",
+      "description": "High-converting digital storefront engineered for sub-second checkouts, multi-warehouse stock management, and zero drop-off cart conversion.",
+      "features": [
+        "Bespoke Headless Storefront Architecture (Shopify / Next.js)",
+        "Multi-Currency & Local Gateways (bKash, Nagad, Cards, SSLCommerz)",
+        "Automated Courier API Dispatch & Live SMS Order Tracking",
+        "Dynamic Product Customizer & Automated Abandoned Cart Recovery",
+        "Flexible 0% Interest EMI Plans (3 to 12 Months)"
+      ],
+      "ctaText": "View E-Com Plans & EMI Matrix",
+      "ctaLink": "/offers/ecommerce",
+      "featured": false
+    },
+    {
+      "id": "offer-service",
+      "badge": "Service Engine",
+      "emiBadge": "EMI Available",
+      "title": "Fully Customized Service-Based Platform",
+      "subtitle": "(with EMI Facility)",
+      "description": "Tailored conversion architecture for agencies, consultancies, and B2B enterprises to automate lead generation and client onboarding.",
+      "features": [
+        "Interactive Multi-Step Service Quotation & Intake Funnel",
+        "Real-Time Consultation Calendar & Instant WhatsApp Sync",
+        "Client Case Study Retrospective Library with 3D Visuals",
+        "Automated CRM Lead Capture & Email Notification Dispatch",
+        "Flexible 0% Interest EMI Plans (3 to 12 Months)"
+      ],
+      "ctaText": "View Service Platform Plans & EMI",
+      "ctaLink": "/offers/service-platform",
+      "featured": true
+    },
+    {
+      "id": "offer-portfolio",
+      "badge": "Executive Brand",
+      "emiBadge": "EMI Available",
+      "title": "Fully Customized Personal Portfolio Website",
+      "subtitle": "(with EMI Facility)",
+      "description": "Ultra-luxury personal branding platform designed for founders, consultants, directors, and executives to command premium authority and client trust.",
+      "features": [
+        "High-End Interactive Morphy Bento Layout & Custom Aesthetic Design",
+        "Dynamic Projects, Career Timeline & Credentials Showcase",
+        "99/100 Google PageSpeed & Sub-Second Global CDN Asset Loading",
+        "Direct Client Inbound Lead Capture & Consultation Booking Engine",
+        "Flexible 0% Interest EMI Plans (3 to 12 Months)"
+      ],
+      "ctaText": "View Portfolio Plans & EMI Matrix",
+      "ctaLink": "/offers/portfolio",
+      "featured": false
+    }
   ]
 }
