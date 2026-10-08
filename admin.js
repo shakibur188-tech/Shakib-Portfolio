@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (isValid) {
       showAdminApp();
       await loadDashboardData();
-      await loadAiStudioStatus();
     } else {
       showLoginOverlay();
     }
@@ -220,7 +219,6 @@ window.switchTab = function(tabId) {
     'tab-hero': { title: 'Hero, Profile & Stats', sub: 'Bio, contact numbers, animated typewriter phrases, and key impact numbers.' },
     'tab-leads': { title: 'Client Inquiries & Leads Inbox', sub: 'Project briefs submitted through the public website contact form.' },
     'tab-forms': { title: 'Form Builder & 20+ Template Engine', sub: 'Create custom forms, explore 22 templates, share embed codes, and inspect submissions.' },
-    'tab-aistudio': { title: 'AI Studio & OpenAI Suite', sub: 'Generate copy, DALL-E 3 visual assets, and strategic marketing concepts.' },
     'tab-scripts': { title: 'Custom Scripts & Header Injection', sub: 'Google Tag Manager, custom CSS, chat widgets, and tracking pixels.' },
     'tab-settings': { title: 'Security & Backup Settings', sub: 'Change admin password, download JSON site snapshot, or restore.' }
   };
@@ -1538,7 +1536,6 @@ async function handleSaveAiConfig() {
     if (res.ok && data.success) {
       showToast('AI API settings saved successfully!', 'success');
       if (keyInput) keyInput.value = '';
-      await loadAiStudioStatus();
     } else {
       showToast(data.error || 'Failed to save AI settings.', 'error');
     }
@@ -1579,7 +1576,6 @@ async function handleTestAiConnection() {
     const data = await res.json();
     if (res.ok && data.success) {
       showToast('⚡ ' + (data.text || 'API Connected Successfully!'), 'success');
-      await loadAiStudioStatus();
     } else {
       showToast(data.error || 'Connection failed. Please verify endpoint & API key.', 'error');
     }
