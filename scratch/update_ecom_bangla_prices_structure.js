@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+const fs = require('fs');
+const path = require('path');
+
+const ecomBanglaHtml = `<!DOCTYPE html>
 <html lang="bn" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -1143,4 +1146,8 @@
     });
   </script>
 </body>
-</html>
+</html>`;
+
+const targetFile = path.resolve(__dirname, '..', 'offers', 'ecommerce.html');
+fs.writeFileSync(targetFile, ecomBanglaHtml, 'utf8');
+console.log('Successfully updated offers/ecommerce.html with section order and updated pricing!');
