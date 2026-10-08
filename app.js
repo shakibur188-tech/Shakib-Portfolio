@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initTypewriter();
   initMobileMenu();
   initOffersViewSwitcher();
+  initSubpagePricingSwitcher();
   initProjectFilter();
   initServiceModal();
   initContactForm();
@@ -1234,4 +1235,46 @@ function initOffersViewSwitcher() {
 
   gridBtn.addEventListener('click', () => setView('grid'));
   tableBtn.addEventListener('click', () => setView('table'));
+}
+
+
+/* ==========================================================================
+   Smart Pricing View Controller (PC: Table First, Phone: Cards First)
+   ========================================================================== */
+function initSubpagePricingSwitcher() {
+  const tableBtn = document.getElementById('viewTableBtn');
+  const cardsBtn = document.getElementById('viewCardsBtn');
+  const tableView = document.getElementById('pricingTableView');
+  const cardsView = document.getElementById('pricingCardsView');
+
+  if (!tableBtn || !cardsBtn || !tableView || !cardsView) return;
+
+  function renderView(mode) {
+    if (mode === 'cards') {
+      tableView.classList.add('hidden');
+      cardsView.classList.remove('hidden');
+
+      cardsBtn.classList.remove('bg-transparent', 'text-[#64748B]');
+      cardsBtn.classList.add('bg-[#0066FF]', 'text-white', 'shadow-xs');
+
+      tableBtn.classList.remove('bg-[#0066FF]', 'text-white', 'shadow-xs');
+      tableBtn.classList.add('bg-transparent', 'text-[#64748B]');
+    } else {
+      cardsView.classList.add('hidden');
+      tableView.classList.remove('hidden');
+
+      tableBtn.classList.remove('bg-transparent', 'text-[#64748B]');
+      tableBtn.classList.add('bg-[#0066FF]', 'text-white', 'shadow-xs');
+
+      cardsBtn.classList.remove('bg-[#0066FF]', 'text-white', 'shadow-xs');
+      cardsBtn.classList.add('bg-transparent', 'text-[#64748B]');
+    }
+  }
+
+  // Device-smart initial default: Phone (<768px) shows Cards, PC (>=768px) shows Table
+  const isMobile = window.innerWidth < 768;
+  renderView(isMobile ? 'cards' : 'table');
+
+  tableBtn.addEventListener('click', () => renderView('table'));
+  cardsBtn.addEventListener('click', () => renderView('cards'));
 }

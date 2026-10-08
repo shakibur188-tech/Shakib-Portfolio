@@ -182,7 +182,21 @@
         Regular Price is BDT 60,000 Taka — Get up to 58% Discount with flexible EMI plans or Pay in Full.
       </p>
 
+      
+      <!-- Smart View Switcher (PC: Table Default, Phone: Cards Default) -->
+      <div class="pt-3 flex items-center justify-center">
+        <div class="p-1 rounded-2xl bg-white border border-[#E2E8F0] shadow-xs inline-flex items-center gap-1">
+          <button id="viewTableBtn" type="button" class="px-4 sm:px-5 py-2 rounded-xl font-extrabold text-xs flex items-center gap-2 transition-all duration-200">
+            <i class="fa-solid fa-table-list text-[11px]"></i>
+            <span>Comparison Table</span>
+          </button>
+          <button id="viewCardsBtn" type="button" class="px-4 sm:px-5 py-2 rounded-xl font-extrabold text-xs flex items-center gap-2 transition-all duration-200">
+            <i class="fa-solid fa-table-cells-large text-[11px]"></i>
+            <span>Card Grid</span>
+          </button>
+        </div>
       </div>
+    </div>
   </section>
 
   <!-- PRICING & MATRIX SECTION -->
@@ -373,8 +387,103 @@
           </table>
         </div>
       </div>
+      </div>
+
+      <!-- 2. CARD GRID VIEW (Default on Mobile Phones) -->
+      <div id="pricingCardsView" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch transition-all duration-300">
+        
+        <!-- Card 1: Startup -->
+        <div class="morphy-card p-6 bg-white border border-[#E2E8F0] rounded-3xl flex flex-col justify-between space-y-4 hover:border-[#0066FF]/40 hover:shadow-xl transition-all">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-black uppercase text-[#64748B] bg-[#F8FAFC] px-2.5 py-1 rounded-md border border-[#E2E8F0]">12-Month EMI</span>
+            </div>
+            <h3 class="text-xl font-black text-[#0B0F19] mt-3">Startup Plan</h3>
+            <div class="text-2xl font-black text-[#0B0F19] mt-1">৳ 3,000 <span class="text-xs text-[#64748B] font-normal">/mo</span></div>
+            <p class="text-xs font-bold text-[#0066FF] mt-1">Total ৳ 36,000 (Save 40%)</p>
+            <ul class="space-y-2 pt-4 border-t border-[#F1F5F9] text-xs text-[#475569] font-medium">
+              <li>✓ Free Domain (1st Year)</li>
+              <li>✓ 10 GB NVMe Hosting</li>
+              <li>✓ Secured + Gmail Login</li>
+              <li>✓ Payment Gateway &amp; Cart Recovery</li>
+              <li>✓ cPanel Handover: Month 12</li>
+            </ul>
+          </div>
+          <button onclick="openOfferModal('E-Com Startup (12-Mo EMI)', '৳3,000/month (Total ৳36,000)')" class="w-full py-3 rounded-xl bg-[#F8FAFC] hover:bg-[#0066FF] hover:text-white font-extrabold text-xs text-[#0B0F19] transition-all border border-[#E2E8F0]">
+            Get Started
+          </button>
+        </div>
+
+        <!-- Card 2: Momentum -->
+        <div class="morphy-card p-6 bg-white border border-[#E2E8F0] rounded-3xl flex flex-col justify-between space-y-4 hover:border-[#0066FF]/40 hover:shadow-xl transition-all">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-black uppercase text-[#64748B] bg-[#F8FAFC] px-2.5 py-1 rounded-md border border-[#E2E8F0]">9-Month EMI</span>
+            </div>
+            <h3 class="text-xl font-black text-[#0B0F19] mt-3">Momentum Plan</h3>
+            <div class="text-2xl font-black text-[#0B0F19] mt-1">৳ 3,800 <span class="text-xs text-[#64748B] font-normal">/mo</span></div>
+            <p class="text-xs font-bold text-[#0066FF] mt-1">Total ৳ 34,200 (Save 43%)</p>
+            <ul class="space-y-2 pt-4 border-t border-[#F1F5F9] text-xs text-[#475569] font-medium">
+              <li>✓ Free Domain (2 Years)</li>
+              <li>✓ 10 GB NVMe Hosting</li>
+              <li>✓ Secured + Gmail Login</li>
+              <li>✓ Payment Gateway &amp; Cart Recovery</li>
+              <li>✓ cPanel Handover: Month 9</li>
+            </ul>
+          </div>
+          <button onclick="openOfferModal('E-Com Momentum (9-Mo EMI)', '৳3,800/month (Total ৳34,200)')" class="w-full py-3 rounded-xl bg-[#F8FAFC] hover:bg-[#0066FF] hover:text-white font-extrabold text-xs text-[#0B0F19] transition-all border border-[#E2E8F0]">
+            Get Started
+          </button>
+        </div>
+
+        <!-- Card 3: Accelerate -->
+        <div class="morphy-card p-6 bg-white border border-[#E2E8F0] rounded-3xl flex flex-col justify-between space-y-4 hover:border-[#0066FF]/40 hover:shadow-xl transition-all">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-black uppercase text-[#64748B] bg-[#F8FAFC] px-2.5 py-1 rounded-md border border-[#E2E8F0]">6-Month EMI</span>
+            </div>
+            <h3 class="text-xl font-black text-[#0B0F19] mt-3">Accelerate Plan</h3>
+            <div class="text-2xl font-black text-[#0B0F19] mt-1">৳ 5,425 <span class="text-xs text-[#64748B] font-normal">/mo</span></div>
+            <p class="text-xs font-bold text-[#0066FF] mt-1">Total ৳ 32,550 (Save 46%)</p>
+            <ul class="space-y-2 pt-4 border-t border-[#F1F5F9] text-xs text-[#475569] font-medium">
+              <li>✓ Free Domain (1st Year)</li>
+              <li>✓ 10 GB NVMe Hosting</li>
+              <li>✓ Secured + Gmail Login</li>
+              <li>✓ Payment Gateway &amp; Cart Recovery</li>
+              <li>✓ cPanel Handover: Month 6</li>
+            </ul>
+          </div>
+          <button onclick="openOfferModal('E-Com Accelerate (6-Mo EMI)', '৳5,425/month (Total ৳32,550)')" class="w-full py-3 rounded-xl bg-[#F8FAFC] hover:bg-[#0066FF] hover:text-white font-extrabold text-xs text-[#0B0F19] transition-all border border-[#E2E8F0]">
+            Get Started
+          </button>
+        </div>
+
+        <!-- Card 4: Founder Pay In Full -->
+        <div class="morphy-card p-6 bg-white border-2 border-[#0066FF] rounded-3xl flex flex-col justify-between space-y-4 shadow-xl shadow-[#0066FF]/15 relative hover:-translate-y-1 transition-all">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-[#0066FF] text-white text-[9px] font-black uppercase tracking-wider shadow-xs">Best Value</div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-black uppercase text-[#0066FF] bg-[#0066FF]/10 px-2.5 py-1 rounded-md border border-[#0066FF]/20">Pay In Full</span>
+            </div>
+            <h3 class="text-xl font-black text-[#0B0F19] mt-3">Founder Plan</h3>
+            <div class="text-2xl font-black text-[#0B0F19] mt-1">৳ 25,000 <span class="text-xs text-[#64748B] font-normal">One-time</span></div>
+            <p class="text-xs font-black text-emerald-600 mt-1">Save 58% Discount</p>
+            <ul class="space-y-2 pt-4 border-t border-[#F1F5F9] text-xs text-[#475569] font-medium">
+              <li>✓ <strong>Master Access</strong> Day 1</li>
+              <li>✓ <strong>cPanel Handover: Immediate</strong></li>
+              <li>✓ <strong>Unlimited Business Emails</strong></li>
+              <li>✓ Free Domain &amp; SSL Included</li>
+              <li>✓ 10 GB NVMe Hosting Bundle</li>
+            </ul>
+          </div>
+          <button onclick="openOfferModal('E-Com Founder (Pay In Full)', '৳25,000 One-time (Save 58%)')" class="w-full py-3 rounded-xl bg-[#0066FF] hover:bg-[#0052FF] font-black text-xs text-white transition-all shadow-md shadow-[#0066FF]/30 active:scale-98">
+            Claim Offer ➔
+          </button>
+        </div>
 
       </div>
+
+    </div>
   </section>
   <!-- 6. COMMISSION A PLATFORM BANNER -->
   <section class="py-20 bg-white border-t border-[#E2E8F0] relative z-10">
