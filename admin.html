@@ -548,24 +548,130 @@
           </div>
         </section>
 
-        <!-- TAB 9: LEADS INBOX -->
+        <!-- TAB 9: LEADS INBOX & CRM ENGINE -->
         <section id="tab-leads" class="tab-pane">
-          <div class="card-form glass-panel">
-            <div class="flex-between mb-4">
+          
+          <!-- CRM Summary Metric Cards -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+            <div class="p-4 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm flex items-center justify-between">
               <div>
-                <h3>📬 Client Inquiries & Leads Inbox</h3>
-                <p class="section-desc">All project briefs submitted via the portfolio contact form:</p>
+                <div class="text-[11px] font-bold uppercase tracking-wider text-[#64748B]">Total Inquiries</div>
+                <div class="text-2xl font-black text-[#0B0F19] mt-0.5" id="crmTotalLeads">0</div>
               </div>
-              <div class="leads-actions">
-                <input type="text" id="leadsSearchInput" placeholder="Search inquiries..." class="admin-input-search">
-                <button type="button" id="exportLeadsCsvBtn" class="btn-secondary-sm">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-                  <span>Export CSV</span>
+              <div class="w-10 h-10 rounded-xl bg-blue-50 text-[#0066FF] flex items-center justify-center text-base">📊</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm flex items-center justify-between">
+              <div>
+                <div class="text-[11px] font-bold uppercase tracking-wider text-blue-600">New / Unread</div>
+                <div class="text-2xl font-black text-blue-600 mt-0.5" id="crmNewLeads">0</div>
+              </div>
+              <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-base font-bold">✨</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm flex items-center justify-between">
+              <div>
+                <div class="text-[11px] font-bold uppercase tracking-wider text-amber-600">In Discussion</div>
+                <div class="text-2xl font-black text-amber-600 mt-0.5" id="crmProgressLeads">0</div>
+              </div>
+              <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-base font-bold">⏳</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm flex items-center justify-between">
+              <div>
+                <div class="text-[11px] font-bold uppercase tracking-wider text-emerald-600">Deals Won</div>
+                <div class="text-2xl font-black text-emerald-600 mt-0.5" id="crmWonLeads">0</div>
+              </div>
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-base font-bold">🏆</div>
+            </div>
+          </div>
+
+          <!-- CRM Main Card -->
+          <div class="card-form glass-panel">
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 mb-6">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="text-xl">📬</span>
+                  <h3 class="text-lg font-black text-[#0B0F19] mb-0">Client Inquiries & CRM Database</h3>
+                </div>
+                <p class="section-desc mt-1">Real-time customer bookings, inquiries from /offers & contact forms, status tracking, and notes.</p>
+              </div>
+              
+              <!-- Filter Controls & Actions -->
+              <div class="flex flex-wrap items-center gap-2.5 w-full lg:w-auto">
+                <input type="text" id="leadsSearchInput" placeholder="🔍 Search name, phone, email, package..." class="admin-input text-xs py-2 px-3 w-full sm:w-64 rounded-xl">
+                
+                <select id="crmStatusFilter" class="admin-input text-xs py-2 px-3 rounded-xl w-auto font-semibold">
+                  <option value="all">All Stages</option>
+                  <option value="new">New / Unread</option>
+                  <option value="contacted">Contacted</option>
+                  <option value="in_discussion">In Discussion</option>
+                  <option value="payment_pending">Payment Pending</option>
+                  <option value="won">Closed / Won</option>
+                  <option value="lost">Lost</option>
+                </select>
+
+                <button type="button" id="exportLeadsCsvBtn" class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center gap-2 transition-all shadow-xs">
+                  <i class="fa-solid fa-file-excel"></i>
+                  <span>Export to Excel</span>
+                </button>
+
+                <button type="button" onclick="openAddLeadModal()" class="px-3.5 py-2 rounded-xl bg-[#0066FF] hover:bg-[#0052FF] text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-xs">
+                  <i class="fa-solid fa-plus"></i>
+                  <span>Add Lead</span>
                 </button>
               </div>
             </div>
+
+            <!-- Leads Table Container -->
             <div id="leadsTableContainer" class="table-responsive"></div>
           </div>
+
+          <!-- Add Manual Lead Modal -->
+          <div id="addLeadModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+            <div class="relative w-full max-w-lg p-6 rounded-3xl bg-white border border-[#E2E8F0] shadow-2xl space-y-4">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-black text-[#0B0F19]">➕ Add Manual Lead to CRM</h3>
+                <button type="button" onclick="closeAddLeadModal()" class="w-8 h-8 rounded-full bg-[#F8FAFC] text-[#64748B] hover:text-[#0B0F19] flex items-center justify-center">✕</button>
+              </div>
+              <form id="addLeadForm" class="space-y-3">
+                <div>
+                  <label class="text-xs font-bold text-[#0B0F19]">Client Name *</label>
+                  <input type="text" id="manualLeadName" required placeholder="e.g. Md. Rahim" class="admin-input text-xs py-2">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <label class="text-xs font-bold text-[#0B0F19]">Phone / WhatsApp *</label>
+                    <input type="tel" id="manualLeadPhone" required placeholder="017XXXXXXXX" class="admin-input text-xs py-2">
+                  </div>
+                  <div>
+                    <label class="text-xs font-bold text-[#0B0F19]">Email Address</label>
+                    <input type="email" id="manualLeadEmail" placeholder="client@brand.com" class="admin-input text-xs py-2">
+                  </div>
+                </div>
+                <div>
+                  <label class="text-xs font-bold text-[#0B0F19]">Package / Service Required</label>
+                  <select id="manualLeadService" class="admin-input text-xs py-2 font-bold">
+                    <option value="Startup Plan (12-Mo EMI)">Startup Plan (12-Mo EMI)</option>
+                    <option value="Accelerate Plan (6-Mo EMI)">Accelerate Plan (6-Mo EMI)</option>
+                    <option value="Momentum Plan (3-Mo EMI)">Momentum Plan (3-Mo EMI)</option>
+                    <option value="Founder Plan (Pay In Full)">Founder Plan (Pay In Full)</option>
+                    <option value="Custom E-Commerce Package">Custom E-Commerce Package</option>
+                    <option value="Full-Stack Web Development">Full-Stack Web Development</option>
+                    <option value="Brand Strategy & Corporate Identity">Brand Strategy & Corporate Identity</option>
+                    <option value="Social Media & Meta Ads">Social Media & Meta Ads</option>
+                    <option value="Other Service">Other Service</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="text-xs font-bold text-[#0B0F19]">Business Details / Client Notes</label>
+                  <textarea id="manualLeadMsg" rows="3" placeholder="Requirements, meeting notes, or budget..." class="admin-textarea text-xs"></textarea>
+                </div>
+                <div class="flex justify-end gap-2 pt-2">
+                  <button type="button" onclick="closeAddLeadModal()" class="px-4 py-2 rounded-xl bg-slate-100 font-bold text-xs text-[#64748B]">Cancel</button>
+                  <button type="submit" class="px-5 py-2 rounded-xl bg-[#0066FF] hover:bg-[#0052FF] font-bold text-xs text-white">Save Lead</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
         </section>
 
         

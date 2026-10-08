@@ -108,6 +108,33 @@ function setupEventListeners() {
   }
 
   const exportLeadsCsvBtn = document.getElementById('exportLeadsCsvBtn');
+  const crmStatusFilter = document.getElementById('crmStatusFilter');
+  if (crmStatusFilter) crmStatusFilter.addEventListener('change', filterLeads);
+
+  const addLeadForm = document.getElementById('addLeadForm');
+  if (addLeadForm) {
+    addLeadForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const newLead = {
+        id: 'lead_' + Date.now(),
+        name: document.getElementById('manualLeadName').value.trim(),
+        phone: document.getElementById('manualLeadPhone').value.trim(),
+        email: document.getElementById('manualLeadEmail').value.trim(),
+        services: document.getElementById('manualLeadService').value,
+        message: document.getElementById('manualLeadMsg').value.trim(),
+        source: 'Admin Manual Entry',
+        status: 'new',
+        notes: '',
+        date: new Date().toISOString()
+      };
+      currentLeads.unshift(newLead);
+      await persistLeadsDatabase();
+      renderLeads(currentLeads);
+      closeAddLeadModal();
+      addLeadForm.reset();
+      showToast('New lead added to CRM!', 'success');
+    });
+  }
   if (exportLeadsCsvBtn) exportLeadsCsvBtn.addEventListener('click', exportLeadsCsv);
 
   // Settings

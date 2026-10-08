@@ -765,7 +765,7 @@
 
 
   <!-- =========================================================================
-       7. INTERACTIVE CLAIM MODAL (বাংলা)
+       7. INTERACTIVE UNIFIED BOOKING MODAL (বাংলা)
        ========================================================================= -->
   <div id="offerModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
     <div class="relative w-full max-w-lg p-6 sm:p-8 rounded-3xl bg-white border border-[#E2E8F0] shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto">
@@ -782,42 +782,49 @@
           <span>ই-কমার্স প্যাকেজ বুকিং</span>
         </div>
         <h3 class="text-xl sm:text-2xl font-black text-[#0B0F19] mt-2" id="modalOfferTitle">
-          প্যাকেজ ক্লেইম করুন
+          প্যাকেজ বুকিং ফর্ম
         </h3>
         <p class="text-xs font-semibold text-[#64748B] mt-1" id="modalOfferSub">
-          স্পেশাল কিস্তি (EMI) অথবা এককালীন ডিসকাউন্ট প্যাকেজ
+          আপনার তথ্য দিন — আমরা দ্রুত আপনার সাথে যোগাযোগ করব
         </p>
       </div>
 
       <!-- Form -->
       <form id="offerBookingForm" class="space-y-4">
-        <input type="hidden" id="modalSelectedOfferName" value="">
+        
+        <!-- 1. Name -->
+        <div class="space-y-1">
+          <label class="text-xs font-bold text-[#0B0F19]">আপনার নাম *</label>
+          <input type="text" id="modalName" required placeholder="মোঃ রহিম" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] font-medium focus:outline-none focus:border-[#0066FF]">
+        </div>
 
+        <!-- 2. Contact & Email in 2 columns -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div class="space-y-1">
-            <label class="text-xs font-bold text-[#0B0F19]">আপনার নাম *</label>
-            <input type="text" id="modalName" required placeholder="মোঃ রহিম" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] focus:outline-none focus:border-[#0066FF]">
+            <label class="text-xs font-bold text-[#0B0F19]">মোবাইল / WhatsApp নম্বর *</label>
+            <input type="tel" id="modalPhone" required placeholder="017XXXXXXXX" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] font-medium focus:outline-none focus:border-[#0066FF]">
           </div>
           <div class="space-y-1">
             <label class="text-xs font-bold text-[#0B0F19]">ইমেইল এড্রেস *</label>
-            <input type="email" id="modalEmail" required placeholder="rahim@brand.com" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] focus:outline-none focus:border-[#0066FF]">
+            <input type="email" id="modalEmail" required placeholder="rahim@brand.com" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] font-medium focus:outline-none focus:border-[#0066FF]">
           </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div class="space-y-1">
-            <label class="text-xs font-bold text-[#0B0F19]">মোবাইল / WhatsApp *</label>
-            <input type="tel" id="modalPhone" required placeholder="+880 18..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] focus:outline-none focus:border-[#0066FF]">
-          </div>
-          <div class="space-y-1">
-            <label class="text-xs font-bold text-[#0B0F19]">কোম্পানি / ব্র্যান্ডের নাম</label>
-            <input type="text" id="modalCompany" placeholder="আপনার শপ / পেইজ নাম" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] focus:outline-none focus:border-[#0066FF]">
-          </div>
-        </div>
-
+        <!-- 3. Which package he wants to take (Dropdown) -->
         <div class="space-y-1">
-          <label class="text-xs font-bold text-[#0B0F19]">বিজনেসের বিবরণ বা কোনো বিশেষ রিকোয়ারমেন্ট</label>
-          <textarea id="modalMessage" rows="3" placeholder="আপনার প্রডাক্টের ধরন, টার্গেট লঞ্চ টাইম বা অন্য কোনো তথ্য..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] focus:outline-none focus:border-[#0066FF]"></textarea>
+          <label class="text-xs font-bold text-[#0B0F19]">যে প্যাকেজটি নিতে চান *</label>
+          <select id="modalPackage" required class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] font-bold focus:outline-none focus:border-[#0066FF]">
+            <option value="Startup Plan (12-Mo EMI) - ৳ 2,500/মাস">Startup Plan (12-Mo EMI) - ৳ 2,500/মাস (মোট ৳ 30,000)</option>
+            <option value="Accelerate Plan (6-Mo EMI) - ৳ 4,500/মাস">Accelerate Plan (6-Mo EMI) - ৳ 4,500/মাস (মোট ৳ 27,000)</option>
+            <option value="Momentum Plan (3-Mo EMI) - ৳ 8,500/মাস">Momentum Plan (3-Mo EMI) - ৳ 8,500/মাস (মোট ৳ 25,500)</option>
+            <option value="Founder Plan (Pay In Full) - ৳ 19,990 এককালীন">Founder Plan (Pay In Full) - ৳ 19,990 এককালীন (Save 67%)</option>
+          </select>
+        </div>
+
+        <!-- 4. Details about the business -->
+        <div class="space-y-1">
+          <label class="text-xs font-bold text-[#0B0F19]">বিজনেসের বিবরণ বা কোনো বিশেষ রিকোয়ারমেন্ট *</label>
+          <textarea id="modalMessage" rows="3" required placeholder="আপনার প্রোডাক্ট বা বিজনেসের ধরন, শপ/পেইজের নাম, টার্গেট লঞ্চ টাইম..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] font-medium focus:outline-none focus:border-[#0066FF]"></textarea>
         </div>
 
         <!-- Alert Box -->
@@ -829,345 +836,13 @@
             <span>প্যাকেজ বুকিং সাবমিট করুন</span>
             <i class="fa-solid fa-paper-plane text-xs"></i>
           </button>
-          <button type="button" onclick="directWhatsAppClaim()" class="px-4 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#1EBE5B] text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all">
+          <button type="button" onclick="directWhatsAppClaim()" class="px-4 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#1EBE5B] text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-98">
             <i class="fa-brands fa-whatsapp text-sm"></i>
             <span>WhatsApp-এ পাঠান</span>
           </button>
         </div>
 
       </form>
-
-    </div>
-  </div>
-
-
-  <!-- Core Scripts -->
-  <script src="/app.js"></script>
-  <script src="/site-hydration.js"></script>
-  
-  <script>
-    // 6-Screenshots Interactive Database
-    const ecomScreens = {
-      analytics: {
-        title: "1. এক্সিকিউটিভ রেভিনিউ ও সেলস অ্যানালিটিক্স",
-        desc: "রিয়েল-টাইম লাইভ সেলস ট্র্যাকিং (যেমন: ৳ 1,26,599), অর্ডার ভলিউম, গড় অর্ডার ভ্যালু (AOV ৳ 9,738) এবং ক্যাটাগরিভিত্তিক সেলস ব্রেকডাউন।",
-        url: "luxora-furniture.com/admin/analytics",
-        img: "/assets/offers/ecom-admin.png"
-      },
-      traffic: {
-        title: "2. লাইভ ভিজিটর ট্রাফিক ও কনভার্শন ফানেল",
-        desc: "লাইভ ভিজিটর ব্রাউজিং ট্র্যাকার, 24 ঘণ্টার প্রতি ঘণ্টার ডেটা (ভিজিটর, Add to Cart, Order Now, চেকআউট) এবং ড্রপ-অফ অ্যানালাইসিস।",
-        url: "luxora-furniture.com/admin/visitor-analytics",
-        img: "/assets/offers/ecom-traffic.jpg"
-      },
-      orders: {
-        title: "3. ক্লায়েন্ট অর্ডার ও কুরিয়ার ডিসপ্যাচ কনসোল",
-        desc: "ইনকমপ্লিট/ড্রপড কার্ট অর্ডার রিকভারি, পেন্ডিং ও কনফার্মড অর্ডার স্ট্যাটাস ফিল্টার এবং Steadfast ও Pathao কুরিয়ারে 1-ক্লিক অটোমেটেড পার্সেল বুকিং।",
-        url: "luxora-furniture.com/admin/orders",
-        img: "/assets/offers/ecom-orders.png"
-      },
-      payments: {
-        title: "4. মাল্টিপল পেমেন্ট গেটওয়ে ইন্টিগ্রেশন",
-        desc: "বিকাশ মার্চেন্ট, বিকাশ পার্সোনাল সেন্ড মানি (TrxID ভেরিফিকেশনসহ), নগদ ডিরেক্ট, SSLCommerz, PayStation ও aamarPay গেটওয়ে রেডি।",
-        url: "luxora-furniture.com/admin/payment-gateways",
-        img: "/assets/offers/ecom-payments.png"
-      },
-      customers: {
-        title: "5. কাস্টমার ইন্টেলিজেন্স ও লাইফটাইম ভ্যালু (LTV)",
-        desc: "কাস্টমার পারচেজ ডিরেক্টরি, লাইফটাইম স্পেন্ড হিস্ট্রি (৳ 42,620+), গড় অর্ডার ভ্যালু, রিপিট বায়ার রেট এবং VIP বায়ারদের সম্পূর্ণ ডেটা।",
-        url: "luxora-furniture.com/admin/customers",
-        img: "/assets/offers/ecom-customers.png"
-      },
-      billing: {
-        title: "6. স্বচ্ছ EMI বিলিং লেজার ও ইনস্টলমেন্ট ট্র্যাকিং",
-        desc: "মাসিক কিস্তি শিডিউল (3, 6 ও 12 মাস), রিসিপ্ট ট্র্যাকিং, ভেরিফাইড লেজার এবং কোনো হিডেন চার্জ ছাড়া 100% স্বচ্ছ ট্র্যাকিং।",
-        url: "luxora-furniture.com/admin/agency-billing",
-        img: "/assets/offers/ecom-billing.png"
-      }
-    };
-
-    function switchEcomScreen(key) {
-      const data = ecomScreens[key];
-      if (!data) return;
-
-      const imgEl = document.getElementById('activeScreenImg');
-      const titleEl = document.getElementById('screenTitle');
-      const descEl = document.getElementById('screenDesc');
-      const urlEl = document.getElementById('screenUrl');
-
-      if (imgEl) {
-        imgEl.style.opacity = '0.3';
-        imgEl.src = data.img;
-        imgEl.onload = () => { imgEl.style.opacity = '1'; };
-      }
-      if (titleEl) titleEl.textContent = data.title;
-      if (descEl) descEl.textContent = data.desc;
-      if (urlEl) urlEl.textContent = data.url;
-
-      // Update Tab Active Styles
-      document.querySelectorAll('.ecom-tab-btn').forEach(btn => {
-        btn.classList.remove('bg-[#0066FF]', 'text-white', 'shadow-md', 'shadow-[#0066FF]/20', 'active');
-        btn.classList.add('bg-white', 'hover:bg-[#F8FAFC]', 'text-[#64748B]', 'hover:text-[#0B0F19]', 'border', 'border-[#E2E8F0]');
-      });
-
-      const activeBtn = document.getElementById('tab-' + key);
-      if (activeBtn) {
-        activeBtn.classList.remove('bg-white', 'hover:bg-[#F8FAFC]', 'text-[#64748B]', 'hover:text-[#0B0F19]', 'border', 'border-[#E2E8F0]');
-        activeBtn.classList.add('bg-[#0066FF]', 'text-white', 'shadow-md', 'shadow-[#0066FF]/20', 'active');
-      }
-    }
-
-    function openImageLightbox() {
-      const modal = document.getElementById('imageLightboxModal');
-      const lightboxImg = document.getElementById('lightboxImg');
-      const activeImg = document.getElementById('activeScreenImg');
-      const titleEl = document.getElementById('screenTitle');
-      const captionEl = document.getElementById('lightboxCaption');
-
-      if (modal && lightboxImg && activeImg) {
-        lightboxImg.src = activeImg.src;
-        if (captionEl && titleEl) captionEl.textContent = titleEl.textContent + ' (Luxora Furniture Live Admin)';
-        modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    function closeImageLightbox() {
-      const modal = document.getElementById('imageLightboxModal');
-      if (modal) {
-        modal.classList.add('hidden');
-        document.body.style.overflow = '';
-      }
-    }
-
-    // Modal Controller
-    function openOfferModal(title, sub) {
-      document.getElementById('modalOfferTitle').textContent = title;
-      document.getElementById('modalOfferSub').textContent = sub || 'স্পেশাল কিস্তি (EMI) অথবা এককালীন ডিসকাউন্ট প্যাকেজ';
-      document.getElementById('modalSelectedOfferName').value = title;
-      document.getElementById('offerModal').classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeOfferModal() {
-      document.getElementById('offerModal').classList.add('hidden');
-      document.body.style.overflow = 'auto';
-    }
-
-    function directWhatsAppClaim() {
-      const offer = document.getElementById('modalSelectedOfferName').value || 'E-Commerce Website Package';
-      const name = document.getElementById('modalName').value.trim() || 'Client';
-      const company = document.getElementById('modalCompany').value.trim() || 'Business';
-      const msg = encodeURIComponent('Hello Shakib, I want to claim the ' + offer + ' for ' + company + ' (Name: ' + name + '). Please send details.');
-      window.open('https://wa.me/8801880907080?text=' + msg, '_blank');
-    }
-
-    
-    // Interactive View Switcher (Mobile: Cards First, PC: Table First)
-    function initPricingViewToggle() {
-      const cardsBtn = document.getElementById('viewCardsBtn');
-      const tableBtn = document.getElementById('viewTableBtn');
-      const cardsView = document.getElementById('pricingCardsView');
-      const tableView = document.getElementById('pricingTableView');
-
-      if (!cardsBtn || !tableBtn || !cardsView || !tableView) return;
-
-      function setView(mode) {
-        if (mode === 'cards') {
-          tableView.classList.add('hidden');
-          cardsView.classList.remove('hidden');
-          cardsBtn.className = 'px-4 sm:px-5 py-2 rounded-xl font-bold text-xs flex items-center gap-2 transition-all duration-200 bg-[#0066FF] text-white shadow-xs';
-          tableBtn.className = 'px-4 sm:px-5 py-2 rounded-xl font-bold text-xs flex items-center gap-2 transition-all duration-200 bg-transparent text-[#64748B] hover:text-[#0B0F19]';
-        } else {
-          cardsView.classList.add('hidden');
-          tableView.classList.remove('hidden');
-          tableBtn.className = 'px-4 sm:px-5 py-2 rounded-xl font-bold text-xs flex items-center gap-2 transition-all duration-200 bg-[#0066FF] text-white shadow-xs';
-          cardsBtn.className = 'px-4 sm:px-5 py-2 rounded-xl font-bold text-xs flex items-center gap-2 transition-all duration-200 bg-transparent text-[#64748B] hover:text-[#0B0F19]';
-        }
-      }
-
-      // Default smart check: Desktop (>=768px) shows Table, Phone (<768px) shows Cards
-      const isMobile = window.innerWidth < 768;
-      setView(isMobile ? 'cards' : 'table');
-
-      cardsBtn.onclick = function() { setView('cards'); };
-      tableBtn.onclick = function() { setView('table'); };
-    }
-
-
-    document.addEventListener('DOMContentLoaded', () => {
-      initPricingViewToggle();
-
-      const bookingForm = document.getElementById('offerBookingForm');
-      if (bookingForm) {
-        bookingForm.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          const btn = document.getElementById('modalSubmitBtn');
-          const alertBox = document.getElementById('modalAlertBox');
-          
-          btn.disabled = true;
-          btn.innerHTML = '<span>বুকিং প্রসেস হচ্ছে...</span><i class="fa-solid fa-spinner fa-spin text-xs"></i>';
-          
-          const payload = {
-            name: document.getElementById('modalName').value.trim(),
-            email: document.getElementById('modalEmail').value.trim(),
-            phone: document.getElementById('modalPhone').value.trim(),
-            company: document.getElementById('modalCompany').value.trim(),
-            service: document.getElementById('modalSelectedOfferName').value,
-            message: document.getElementById('modalMessage').value.trim(),
-            date: new Date().toISOString()
-          };
-
-          try {
-            const res = await fetch('/api/leads', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify(payload)
-            });
-
-            alertBox.classList.remove('hidden', 'bg-rose-50', 'text-rose-700', 'border-rose-200');
-            alertBox.classList.add('bg-emerald-50', 'text-emerald-700', 'border', 'border-emerald-200');
-            alertBox.innerHTML = '<i class="fa-solid fa-check-circle mr-1"></i> ধন্যবাদ! আপনার প্যাকেজ বুকিং গ্রহণ করা হয়েছে। শীঘ্রই যোগাযোগ করা হবে।';
-            bookingForm.reset();
-            setTimeout(() => { closeOfferModal(); }, 2500);
-          } catch (err) {
-            alertBox.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-700');
-            alertBox.classList.add('bg-rose-50', 'text-rose-700', 'border', 'border-rose-200');
-            alertBox.textContent = 'ত্রুটি ঘটেছে, অনুগ্রহ করে সরাসরি WhatsApp-এ যোগাযোগ করুন।';
-          } finally {
-            btn.disabled = false;
-            btn.innerHTML = '<span>প্যাকেজ বুকিং সাবমিট করুন</span><i class="fa-solid fa-paper-plane text-xs"></i>';
-          }
-        });
-      }
-    });
-  </script>
-
-  <!-- =========================================================================
-       8. WELCOME POPUP: UNLOCK EMI & FREE DOMAIN + 10GB HOSTING (COMPACT BANGLA, NO CROSS ICON)
-       ========================================================================= -->
-  <div id="welcomePopupModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-md transition-opacity duration-300">
-    <div class="relative w-full max-w-md p-4 sm:p-6 rounded-2xl sm:rounded-3xl bg-white border border-[#E2E8F0] shadow-2xl space-y-3.5 sm:space-y-4 max-h-[95vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-200">
-      
-      <!-- FORM STATE CONTAINER -->
-      <div id="popupFormState" class="space-y-3 sm:space-y-3.5">
-        
-        <!-- Header & Offer Badge -->
-        <div class="text-left space-y-1.5">
-          <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#0066FF]/10 text-[#0066FF] text-[10.5px] font-bold uppercase tracking-wider">
-            <i class="fa-solid fa-gift text-xs animate-bounce"></i>
-            <span>স্পেশাল অফার</span>
-          </div>
-          
-          <h3 class="text-lg sm:text-xl font-black text-[#0B0F19] tracking-tight leading-snug">
-            সহজ কিস্তি (EMI) সুবিধা আনলক করুন এবং সাথে নিন 1টি <span class="text-[#0066FF]">ফ্রি ডোমেইন ও 10GB NVMe SSD হোস্টিং সম্পূর্ণ ফ্রি</span>!
-          </h3>
-        </div>
-
-        <!-- Form -->
-        <form id="welcomePopupForm" class="space-y-2.5 sm:space-y-3 pt-0.5" onsubmit="handleWelcomePopupSubmit(event)">
-          
-          <!-- Name Field -->
-          <div class="space-y-0.5 text-left">
-            <label class="text-[11.5px] font-bold text-[#0B0F19]">আপনার পুরো নাম *</label>
-            <div class="relative">
-              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-[#94A3B8]">
-                <i class="fa-solid fa-user text-xs"></i>
-              </span>
-              <input type="text" id="popupName" required placeholder="মোঃ শাকিল / আপনার নাম" class="w-full pl-8 pr-3 py-2 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#0066FF] focus:bg-white transition-colors">
-            </div>
-          </div>
-
-          <!-- WhatsApp Contact Field with Validation -->
-          <div class="space-y-0.5 text-left">
-            <div class="flex items-center justify-between">
-              <label class="text-[11.5px] font-bold text-[#0B0F19]">WhatsApp নম্বর *</label>
-              <span class="text-[9.5px] text-emerald-600 font-bold">11 ডিজিট নম্বর</span>
-            </div>
-            <div class="relative">
-              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-emerald-600">
-                <i class="fa-brands fa-whatsapp text-sm"></i>
-              </span>
-              <input type="tel" id="popupPhone" required placeholder="01XXXXXXXXX বা +8801XXXXXXXXX" oninput="validateWhatsAppNumber(this)" class="w-full pl-8 pr-3 py-2 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#0066FF] focus:bg-white transition-colors">
-            </div>
-            <p id="phoneValidationError" class="hidden text-[10.5px] text-rose-600 font-medium pt-0.5">
-              <i class="fa-solid fa-circle-exclamation mr-1"></i>সঠিক WhatsApp নম্বর দিন (11 ডিজিট, যেমন: 017XXXXXXXX)।
-            </p>
-          </div>
-
-          <!-- Where did you find us Dropdown -->
-          <div class="space-y-0.5 text-left">
-            <label class="text-[11.5px] font-bold text-[#0B0F19]">আমাদের সম্পর্কে কোথা থেকে জেনেছেন? *</label>
-            <div class="relative">
-              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-[#94A3B8]">
-                <i class="fa-solid fa-magnifying-glass text-xs"></i>
-              </span>
-              <select id="popupSource" required class="w-full pl-8 pr-7 py-2 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#0B0F19] focus:outline-none focus:border-[#0066FF] focus:bg-white transition-colors appearance-none cursor-pointer">
-                <option value="" disabled selected>একটি মাধ্যম নির্বাচন করুন...</option>
-                <option value="Facebook / মেটা বিজ্ঞাপন">Facebook / মেটা বিজ্ঞাপন</option>
-                <option value="Instagram">Instagram</option>
-                <option value="Google Search / গুগল">Google Search / গুগল</option>
-                <option value="LinkedIn">LinkedIn</option>
-                <option value="YouTube">YouTube</option>
-                <option value="Friend / Referral / পরিচিত কারো মাধ্যমে">Friend / পরিচিত কারো মাধ্যমে</option>
-                <option value="Direct Website / সরাসরি ওয়েবসাইট">Direct Website / সরাসরি ওয়েবসাইট</option>
-                <option value="Other / অন্যান্য">Other / অন্যান্য</option>
-              </select>
-              <span class="absolute inset-y-0 right-0 flex items-center pr-2.5 pointer-events-none text-[#94A3B8]">
-                <i class="fa-solid fa-chevron-down text-[10px]"></i>
-              </span>
-            </div>
-          </div>
-
-          <!-- Submit Button -->
-          <div class="pt-1.5 space-y-1.5">
-            <button type="submit" id="popupSubmitBtn" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-[#0066FF] to-[#0052FF] hover:from-[#0052FF] hover:to-[#0040C1] text-white font-black text-xs uppercase tracking-wider shadow-md shadow-[#0066FF]/25 hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 active:scale-98">
-              <span>অফারটি আনলক করুন ➔</span>
-            </button>
-            <button type="button" onclick="closeWelcomePopup()" class="w-full py-1.5 text-center text-[11px] font-semibold text-[#94A3B8] hover:text-[#64748B] transition-colors">
-              সরাসরি পেজে যেতে চান? স্কিপ করুন (Skip to Page)
-            </button>
-          </div>
-
-        </form>
-      </div>
-
-
-      <!-- CONGRATULATIONS SUCCESS STATE (Hidden by default) -->
-      <div id="popupSuccessState" class="hidden text-center space-y-3.5 py-2 animate-in fade-in zoom-in-95 duration-300">
-        
-        <!-- Celebration Animated Icon -->
-        <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-400 text-white flex items-center justify-center text-2xl shadow-lg shadow-emerald-500/25 animate-bounce">
-          🎉
-        </div>
-
-        <!-- Congratulations Text -->
-        <div class="space-y-1.5 max-w-sm mx-auto">
-          <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200 text-xs font-black uppercase">
-            <i class="fa-solid fa-check-circle"></i>
-            <span>অভিনন্দন! Congratulations!</span>
-          </div>
-
-          <h3 class="text-lg sm:text-xl font-black text-[#0B0F19] tracking-tight leading-snug">
-            অভিনন্দন! Congratulations! 🎉
-          </h3>
-          
-          <p class="text-xs sm:text-[12.5px] font-bold text-emerald-700 bg-emerald-50/90 p-3.5 rounded-2xl border border-emerald-200 leading-relaxed">
-            আমাদের ওয়েবসাইটের যেকোনো প্যাকেজ নিলে আপনি <strong>সহজ কিস্তি (EMI) সুবিধা</strong> এবং প্রথম বছরের জন্য <strong>1টি ফ্রি ডোমেইন ও 10GB NVMe SSD হোস্টিং সম্পূর্ণ ফ্রি</strong> পাওয়ার জন্য যোগ্য হয়েছেন!
-          </p>
-          <p class="text-[11px] text-[#64748B] font-medium">
-            You're eligible to get the EMI facilities and Free Domain + 10GB NVMe SSD Hosting for 1 year, after taking any plan from our website.
-          </p>
-        </div>
-
-        <!-- Action Button to reveal page -->
-        <div class="pt-1">
-          <button type="button" onclick="closeWelcomePopup()" class="w-full py-3 px-5 rounded-xl bg-[#0066FF] hover:bg-[#0052FF] text-white font-black text-xs uppercase tracking-wider shadow-md shadow-[#0066FF]/25 hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 active:scale-98">
-            <span>ওয়েবসাইট ও প্যাকেজগুলো দেখুন ➔</span>
-          </button>
-        </div>
-
-      </div>
 
     </div>
   </div>
