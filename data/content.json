@@ -501,7 +501,12 @@
       "emiBadge": "EMI Available",
       "title": "Fully Customized E-com Website",
       "subtitle": "(with EMI Facility)",
-      "description": "High-converting digital storefront engineered for sub-second checkouts, multi-currency payment gateways, inventory management, and zero drop-off cart conversion.",
+      "description": "High-converting digital storefront engineered for sub-second checkouts, multi-currency payment gateways, automated courier dispatch, and zero drop-off cart conversion.",
+      "chips": [
+        "Headless Storefront",
+        "Local & Global Gateways",
+        "Sub-Second Speed"
+      ],
       "ctaText": "View E-Com Plans & EMI Matrix",
       "ctaLink": "/offers/ecommerce"
     },
@@ -513,6 +518,11 @@
       "title": "Fully Customized Service-Based Platform",
       "subtitle": "(with EMI Facility)",
       "description": "Tailored conversion architecture for agencies, consultancies, and B2B enterprises to automate lead generation, interactive quotations, and client onboarding.",
+      "chips": [
+        "Interactive Quotations",
+        "Calendar & WhatsApp Sync",
+        "Automated CRM"
+      ],
       "ctaText": "View Service Platform Plans & EMI",
       "ctaLink": "/offers/service-platform"
     },
@@ -523,7 +533,12 @@
       "emiBadge": "EMI Available",
       "title": "Fully Customized Personal Portfolio Website",
       "subtitle": "(with EMI Facility)",
-      "description": "Ultra-luxury personal branding platform designed for founders, consultants, directors, and executives to command premium authority and client trust.",
+      "description": "Ultra-luxury personal branding platform designed for founders, consultants, directors, and executives to command premium authority, credentials showcase, and client trust.",
+      "chips": [
+        "Morphy Bento Layout",
+        "99/100 PageSpeed",
+        "100% IP Ownership"
+      ],
       "ctaText": "View Portfolio Plans & EMI Matrix",
       "ctaLink": "/offers/portfolio"
     }
