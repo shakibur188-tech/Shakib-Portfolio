@@ -496,7 +496,7 @@
   "offers": [
     {
       "id": "offer-ecom",
-      "image": "/assets/offers/ecom.jpg",
+      "image": "/assets/offers/ecom-admin.png",
       "badge": "E-Commerce Flagship",
       "emiBadge": "EMI Available",
       "title": "Fully Customized E-com Website",
