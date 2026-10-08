@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+const fs = require('fs');
+const path = require('path');
+
+const ecomBanglaHtml = `<!DOCTYPE html>
 <html lang="bn" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -1196,4 +1199,8 @@
     });
   </script>
 </body>
-</html>
+</html>`;
+
+const targetFile = path.resolve(__dirname, '..', 'offers', 'ecommerce.html');
+fs.writeFileSync(targetFile, ecomBanglaHtml, 'utf8');
+console.log('Successfully redesigned offers/ecommerce.html in Bengali with Screenshots first, deliverables, and 3-mo, 6-mo, 12-mo EMI packages!');
