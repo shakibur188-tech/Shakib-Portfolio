@@ -1274,7 +1274,7 @@ const server = http.createServer(async (req, res) => {
     if (statErr || !fs.existsSync(targetFilePath) || !fs.statSync(targetFilePath).isFile()) {
       applySecurityHeaders(res);
       res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' });
-      return res.end('<h1>404 Not Found</h1><p><a href="/">Return to Portfolio</a> | <a href="/admin">Admin Panel</a></p>');
+      return res.end('<h1>404 Not Found</h1><p><a href="/">Return to Home</a></p>');
     }
 
     const ext = path.extname(targetFilePath).toLowerCase();
