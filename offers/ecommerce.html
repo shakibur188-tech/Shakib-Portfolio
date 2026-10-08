@@ -74,122 +74,10 @@
   <canvas id="ambientCanvas"></canvas>
   <div class="ambient-vignette"></div>
 
-  <!-- 2. FIXED NAVBAR -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-2xl border-b border-[#E2E8F0] transition-all duration-300 shadow-2xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
-      
-      <!-- Brand Logo -->
-      <a href="/" class="flex items-center gap-3 group min-w-0">
-        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#0066FF] to-[#0040C1] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#0066FF]/25 border border-white/20 shrink-0">
-          ✦
-        </div>
-        <div class="flex flex-col min-w-0">
-          <span class="font-extrabold text-[#0B0F19] tracking-tight text-base sm:text-lg group-hover:text-[#0066FF] transition-colors truncate">Md. Shakibur Rahaman</span>
-          <span class="text-[10px] text-[#0066FF] font-extrabold tracking-wider uppercase truncate">Strategic Lead &amp; Digital Architect</span>
-        </div>
-      </a>
-
-      <!-- Centered Floating Pill Navigation Menu (Desktop Only) -->
-      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-white/95 border border-[#E2E8F0] text-sm font-semibold text-[#334155] backdrop-blur-md shadow-xs shrink-0">
-        <a href="/" class="hover:text-[#0066FF] transition-colors">Home</a>
-        <a href="/about" class="hover:text-[#0066FF] transition-colors">About</a>
-        
-        <!-- Services with dropdown -->
-        <div class="relative group">
-          <a href="/services" class="flex items-center gap-1.5 hover:text-[#0066FF] transition-colors py-1">
-            <span>Services</span>
-            <i class="fa-solid fa-chevron-down text-[10px] text-[#64748B] group-hover:text-[#0066FF] group-hover:rotate-180 transition-transform duration-200"></i>
-          </a>
-          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#E2E8F0] shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Social Media &amp; Meta Ads</a>
-            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Google Ads &amp; Search</a>
-            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Full-Stack Web Development</a>
-            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">SEO &amp; AI Engine Optimization</a>
-            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Graphics &amp; Visual Assets</a>
-            <div class="my-1.5 border-t border-[#E2E8F0]"></div>
-            <a href="/services" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#0066FF] hover:bg-[#0066FF]/10 text-center">View All 9 Services &rarr;</a>
-          </div>
-        </div>
-
-        <a href="/projects" class="hover:text-[#0066FF] transition-colors">Projects</a>
-        <a href="/experience" class="hover:text-[#0066FF] transition-colors">Experience</a>
-        <a href="/offers" class="text-[#0066FF] font-bold transition-colors">Offers</a>
-        <a href="/consultation" class="hover:text-[#0066FF] transition-colors">Consultation</a>
-      </nav>
-
-      <!-- Right Header Actions (Mobile Hamburger Toggle) -->
-      <div class="flex items-center gap-3 shrink-0">
-        <a href="https://wa.me/8801880907080" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/30 hover:bg-[#25D366] hover:text-white transition-all text-xs font-bold">
-          <i class="fa-brands fa-whatsapp text-sm"></i>
-          <span>WhatsApp</span>
-        </a>
-        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-white border border-[#E2E8F0] hover:border-[#0066FF]/30 hover:bg-[#0066FF]/5 text-[#0B0F19] hover:text-[#0066FF] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
-          <i id="mobileMenuIcon" class="fa-solid fa-bars-staggered text-base"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-x border-[#E2E8F0] rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
-      <div class="space-y-1.5 pb-3 border-b border-[#F1F5F9]">
-        <a href="/" class="mobile-nav-link mobile-link flex items-center justify-between">
-          <span class="flex items-center gap-3">
-            <i class="fa-solid fa-house-chimney text-xs text-[#64748B] w-4"></i>
-            <span>Home</span>
-          </span>
-          <i class="fa-solid fa-chevron-right text-[10px] text-[#94A3B8]"></i>
-        </a>
-        <a href="/about" class="mobile-nav-link mobile-link flex items-center justify-between">
-          <span class="flex items-center gap-3">
-            <i class="fa-solid fa-user text-xs text-[#64748B] w-4"></i>
-            <span>About</span>
-          </span>
-          <i class="fa-solid fa-chevron-right text-[10px] text-[#94A3B8]"></i>
-        </a>
-        <a href="/services" class="mobile-nav-link mobile-link flex items-center justify-between">
-          <span class="flex items-center gap-3">
-            <i class="fa-solid fa-layer-group text-xs text-[#64748B] w-4"></i>
-            <span>Services</span>
-          </span>
-          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#0066FF]/10 text-[#0066FF]">9 Pillars</span>
-        </a>
-        <a href="/projects" class="mobile-nav-link mobile-link flex items-center justify-between">
-          <span class="flex items-center gap-3">
-            <i class="fa-solid fa-briefcase text-xs text-[#64748B] w-4"></i>
-            <span>Projects</span>
-          </span>
-          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#10B981]/10 text-[#10B981]">Featured</span>
-        </a>
-        <a href="/experience" class="mobile-nav-link mobile-link flex items-center justify-between">
-          <span class="flex items-center gap-3">
-            <i class="fa-solid fa-chart-line text-xs text-[#64748B] w-4"></i>
-            <span>Experience</span>
-          </span>
-          <i class="fa-solid fa-chevron-right text-[10px] text-[#94A3B8]"></i>
-        </a>
-        <a href="/offers" class="mobile-nav-link mobile-link flex items-center justify-between active">
-          <span class="flex items-center gap-3">
-            <i class="fa-solid fa-tags text-xs text-[#0066FF] w-4"></i>
-            <span class="font-bold text-[#0066FF]">Special Offers</span>
-          </span>
-          <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-gradient-to-r from-[#0066FF] to-[#0052FF] text-white shadow-xs">EMI 🔥</span>
-        </a>
-      </div>
-
-      <div class="pt-2 flex items-center gap-2">
-        <a href="/contact" class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#0066FF] to-[#0052FF] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-[#0066FF]/25 hover:shadow-lg transition-all active:scale-98">
-          <i class="fa-solid fa-paper-plane text-xs"></i>
-          <span>যোগাযোগ করুন</span>
-        </a>
-        <a href="https://wa.me/8801880907080" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/25 flex items-center justify-center text-lg hover:bg-[#25D366] hover:text-white transition-all shrink-0 active:scale-95" aria-label="WhatsApp Contact">
-          <i class="fa-brands fa-whatsapp"></i>
-        </a>
-      </div>
-    </div>
-  </header>
+  <!-- Navbar hidden as requested for focused landing page -->
 
   <!-- 1. HERO SECTION (বাংলা) -->
-  <section class="relative pt-32 pb-8 md:pt-40 md:pb-12 overflow-hidden">
+  <section class="relative pt-12 pb-8 md:pt-16 md:pb-12 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
       
       <div class="morphy-tag-primary justify-center mb-1">
@@ -853,61 +741,9 @@
   </section>
 
 
-  <!-- =========================================================================
-       5. FOOTER
-       ========================================================================= -->
-  <footer class="py-16 border-t border-[#E2E8F0] bg-white relative z-10 text-xs text-[#64748B]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-        <div class="space-y-3">
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-xl bg-[#0066FF] text-white flex items-center justify-center font-black text-xs shadow-sm">
-              ✦
-            </div>
-            <span class="font-bold text-[#0B0F19] tracking-tight text-base font-eng">Md. Shakibur Rahaman</span>
-          </div>
-          <p class="text-xs text-[#64748B] leading-relaxed">
-            Strategic Lead &amp; Digital Architect directing integrated branding, modern web engineering, and commercial media.
-          </p>
-        </div>
-        <div>
-          <div class="text-[#0B0F19] font-bold uppercase tracking-wider text-[11px] mb-3">Explore Hubs</div>
-          <div class="space-y-2">
-            <div><a href="/" class="hover:text-[#0066FF] transition-colors">Home</a></div>
-            <div><a href="/about" class="hover:text-[#0066FF] transition-colors">About</a></div>
-            <div><a href="/services" class="hover:text-[#0066FF] transition-colors">9 Strategic Services</a></div>
-            <div><a href="/projects" class="hover:text-[#0066FF] transition-colors">15 Web Projects</a></div>
-            <div><a href="/experience" class="hover:text-[#0066FF] transition-colors">Experience Roadmap</a></div>
-            <div><a href="/offers" class="hover:text-[#0066FF] text-[#0066FF] font-bold transition-colors">Special Offers &amp; Sprints</a></div>
-            <div><a href="/consultation" class="hover:text-[#0066FF] transition-colors">Consultation Booking</a></div>
-          </div>
-        </div>
-        <div>
-          <div class="text-[#0B0F19] font-bold uppercase tracking-wider text-[11px] mb-3">Core Disciplines</div>
-          <div class="space-y-2">
-            <div><a href="/services/branding" class="hover:text-[#0066FF] transition-colors">01 Branding &amp; Strategy</a></div>
-            <div><a href="/services/graphics-design" class="hover:text-[#0066FF] transition-colors">02 Graphics &amp; UI/UX</a></div>
-            <div><a href="/services/web-development" class="hover:text-[#0066FF] transition-colors">03 Full-Stack Web Dev</a></div>
-            <div><a href="/services/social-media-marketing" class="hover:text-[#0066FF] transition-colors">04 Social Media &amp; Meta</a></div>
-            <div><a href="/services/google-ads" class="hover:text-[#0066FF] transition-colors">07 Google Ads Scaling</a></div>
-          </div>
-        </div>
-        <div>
-          <div class="text-[#0B0F19] font-bold uppercase tracking-wider text-[11px] mb-3">Direct Contact</div>
-          <div class="space-y-2">
-            <div><a href="mailto:shakibur188@gmail.com" class="hover:text-[#0066FF] font-bold transition-colors font-eng">shakibur188@gmail.com</a></div>
-            <div><a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#0066FF] font-bold transition-colors font-eng">+880 1838-070468</a></div>
-            <div class="pt-2"><a href="/admin" target="_blank" class="text-[11px] text-[#64748B] hover:text-[#0066FF] font-bold transition-colors">Admin CMS Portal 🔐</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="pt-8 border-t border-[#E2E8F0] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
-        <div>&copy; 2026 Md. Shakibur Rahaman. All rights reserved.</div>
-        <div class="flex items-center gap-4 font-eng">
-          <a href="https://github.com/shakibur188-tech/Shakib-Portfolio" target="_blank" class="hover:text-[#0066FF] transition-colors">GitHub</a>
-          <a href="https://www.linkedin.com/in/md-shakibur-rahaman" target="_blank" class="hover:text-[#0066FF] transition-colors">LinkedIn</a>
-        </div>
-      </div>
+  <footer class="py-6 border-t border-[#E2E8F0] bg-white text-center text-xs text-[#94A3B8] relative z-10">
+    <div class="max-w-7xl mx-auto px-4">
+      &copy; 2026 Md. Shakibur Rahaman. All rights reserved.
     </div>
   </footer>
 
