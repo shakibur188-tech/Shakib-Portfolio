@@ -49,7 +49,87 @@
   </script>
 
   <!-- Modern Morphy Design Stylesheet -->
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=4.0">
+  <!-- Guaranteed Mobile Navigation Contrast & Visibility (Anti-Cache) -->
+  <style id="mobile-nav-fix">
+    #navbar {
+      background-color: #041B21 !important;
+      background: #041B21 !important;
+      border-bottom: 1px solid rgba(32, 225, 178, 0.25) !important;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7) !important;
+    }
+    #navbar #navBrandName,
+    #navbar span.font-extrabold {
+      color: #FFFFFF !important;
+    }
+    #mobileMenuToggle,
+    #svcMobileToggle {
+      background-color: #0B3844 !important;
+      border: 1.5px solid #20E1B2 !important;
+      color: #20E1B2 !important;
+    }
+    #mobileMenuToggle i,
+    #svcMobileToggle i {
+      color: #20E1B2 !important;
+    }
+    #mobileMenu,
+    #svcMobileMenu {
+      background-color: #041B21 !important;
+      background: #041B21 !important;
+      border: 1.5px solid rgba(32, 225, 178, 0.35) !important;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.95), 0 0 40px rgba(32, 225, 178, 0.2) !important;
+      border-radius: 24px !important;
+    }
+    .mobile-nav-link,
+    .mobile-link {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 14px 18px !important;
+      margin-bottom: 8px !important;
+      border-radius: 14px !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      color: #FFFFFF !important;
+      background-color: #082830 !important;
+      background: #082830 !important;
+      border: 1px solid rgba(32, 225, 178, 0.25) !important;
+      text-decoration: none !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    }
+    .mobile-nav-link span,
+    .mobile-link span {
+      color: #FFFFFF !important;
+      font-weight: 700 !important;
+    }
+    .mobile-nav-link i,
+    .mobile-link i {
+      color: #20E1B2 !important;
+    }
+    .mobile-nav-link .fa-chevron-right,
+    .mobile-link .fa-chevron-right {
+      color: #7EADA3 !important;
+    }
+    .mobile-nav-link:hover,
+    .mobile-nav-link:active,
+    .mobile-link:hover,
+    .mobile-link:active {
+      background: rgba(32, 225, 178, 0.22) !important;
+      border-color: #20E1B2 !important;
+      color: #FFFFFF !important;
+    }
+    .mobile-nav-link.active,
+    .mobile-link.active {
+      background: linear-gradient(135deg, rgba(32, 225, 178, 0.35) 0%, #0B3844 100%) !important;
+      border-color: #20E1B2 !important;
+      box-shadow: 0 4px 22px rgba(32, 225, 178, 0.35) !important;
+    }
+    .mobile-nav-link.active span,
+    .mobile-link.active span {
+      color: #20E1B2 !important;
+      font-weight: 800 !important;
+    }
+  </style>
 </head>
 <body class="bg-[#041B21] text-white font-sans antialiased selection:bg-[#20E1B2] selection:text-white relative overflow-x-hidden">
 
@@ -379,7 +459,7 @@
   </section>
 
   <!-- 3. SOCIAL PROOF LOGO BAR -->
-  <section class="py-12 border-y border-[#D1F5EE]/15 bg-white/60 relative z-10">
+  <section class="py-12 border-y border-[#D1F5EE]/15 bg-[#041B21] relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="text-xs font-extrabold uppercase tracking-wider text-[#7EADA3] shrink-0">
@@ -590,9 +670,9 @@
         <!-- Carousel Indicator Dots -->
         <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
           <span class="w-2 h-2 rounded-full bg-[#0B3844]/35 backdrop-blur-xl shadow-xs"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
         </div>
       </div>
 
@@ -692,9 +772,9 @@
         <!-- Carousel Indicator Dots -->
         <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
           <span class="w-2 h-2 rounded-full bg-[#0B3844]/35 backdrop-blur-xl shadow-xs"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
         </div>
       </div>
 
@@ -794,9 +874,9 @@
         <!-- Carousel Indicator Dots -->
         <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
           <span class="w-2 h-2 rounded-full bg-[#0B3844]/35 backdrop-blur-xl shadow-xs"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
         </div>
       </div>
 
@@ -896,9 +976,9 @@
         <!-- Carousel Indicator Dots -->
         <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
           <span class="w-2 h-2 rounded-full bg-[#0B3844]/35 backdrop-blur-xl shadow-xs"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
         </div>
       </div>
 
@@ -998,9 +1078,9 @@
         <!-- Carousel Indicator Dots -->
         <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
           <span class="w-2 h-2 rounded-full bg-[#0B3844]/35 backdrop-blur-xl shadow-xs"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
         </div>
       </div>
 
@@ -1100,9 +1180,9 @@
         <!-- Carousel Indicator Dots -->
         <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
           <span class="w-2 h-2 rounded-full bg-[#0B3844]/35 backdrop-blur-xl shadow-xs"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
         </div>
       </div>
 
@@ -1202,9 +1282,9 @@
         <!-- Carousel Indicator Dots -->
         <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
           <span class="w-2 h-2 rounded-full bg-[#0B3844]/35 backdrop-blur-xl shadow-xs"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
         </div>
       </div>
 
@@ -1304,9 +1384,9 @@
         <!-- Carousel Indicator Dots -->
         <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
           <span class="w-2 h-2 rounded-full bg-[#0B3844]/35 backdrop-blur-xl shadow-xs"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
         </div>
       </div>
 
@@ -1406,9 +1486,9 @@
         <!-- Carousel Indicator Dots -->
         <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
           <span class="w-2 h-2 rounded-full bg-[#0B3844]/35 backdrop-blur-xl shadow-xs"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-          <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#041B21]"></span>
         </div>
       </div>
 
