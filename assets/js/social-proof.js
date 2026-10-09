@@ -1,34 +1,25 @@
 /**
- * Social Proof & Real-Time Active Viewer Counter Engine
+ * Synchronized Social Proof & Real-Time Active Viewer Counter Engine
  * Md. Shakibur Rahaman Website & Offers
  * 
- * Requirements:
- * 1. Toast Notification:
- *    - Format: "[Name] এই মাত্র [Plan Name] বুক করেছেন।"
- *    - Random selection of diverse Male & Female names from various regions
+ * Features:
+ * 1. Synchronized Viewer Count (Upper Right Corner):
+ *    - Mathematical cross-device synchronization (every device sees the EXACT SAME number at the same second)
+ *    - Baseline: 277 (realistic deterministic oscillation around 270 - 286)
+ *    - Position: Upper Right Corner (top-right fixed badge)
+ * 
+ * 2. Synchronized Social Proof Booking Toasts:
+ *    - Every device sees the EXACT SAME client name and plan at the exact same moment
+ *    - Balanced pool of Male & Female names from across Bangladesh
  *    - Plans: Founder প্ল্যান, Startup প্ল্যান, Accelerate প্ল্যান, Momentum প্ল্যান
- *    - Frequency: Appears every 30-50 seconds
- *    - Duration: Stays visible for 10 seconds
- *    - Real-time trigger: If someone submits a form / booking, instantly shows their name & plan
- * 2. Fixed Floating Live Active Viewers Badge:
- *    - Position: Fixed at bottom-right corner
- *    - Text: "🔥 বর্তমানে 269 জন এই অফারটি দেখছেন" (starts ~269, fluctuates dynamically above 200+)
+ *    - Cycles every 40 seconds, displayed for 10 seconds
+ *    - Real-time instant trigger for actual users submitting forms
  */
 
 (function () {
   'use strict';
 
-  // --- 1. STATE & BASELINE ---
-  let baseCounter = 269; // Starting from 269 as requested
-  let currentCount = baseCounter;
-  let isPaused = false;
-  let nextToastTimer = null;
-  let autoHideTimer = null;
-  let counterTimer = null;
-  let lastPickedName = '';
-  let lastPickedPlan = '';
-
-  // 4 Core E-Commerce Package Names
+  // --- 1. SYNCHRONIZED NAMES & PLANS POOL ---
   const packagePlans = [
     'Founder প্ল্যান',
     'Startup প্ল্যান',
@@ -36,7 +27,6 @@
     'Momentum প্ল্যান'
   ];
 
-  // Rich pool of diverse Male & Female client names from different cities
   const mockNames = [
     // Male Clients
     'তানভীর আহমেদ (উত্তরা)',
@@ -71,7 +61,7 @@
     'শারমিন সুলতানা (উত্তরা)'
   ];
 
-  // Clean plan name helper
+  // Helper to normalize plan names
   function cleanPlanName(rawPlan) {
     if (!rawPlan) return 'Founder প্ল্যান';
     if (rawPlan.includes('Startup')) return 'Startup প্ল্যান';
@@ -81,65 +71,81 @@
     return rawPlan;
   }
 
-  // Pick a random item ensuring no consecutive duplicates
-  function getRandomItem(array, lastItem) {
-    let available = array.filter(item => item !== lastItem);
-    if (available.length === 0) available = array;
-    return available[Math.floor(Math.random() * available.length)];
+  // --- 2. DETERMINISTIC CROSS-DEVICE TIME SYNCHRONIZATION ---
+  
+  // Computes the exact same visitor count on all devices based on universal UTC time
+  function getSynchronizedVisitorCount() {
+    const timeSlot = Math.floor(Date.now() / 6000); // changes every 6s in unison
+    const base = 277;
+    // Smooth deterministic sinusoidal wave
+    const wave = Math.sin(timeSlot * 0.45) * 5.5;
+    // Pseudo-random offset based on timestamp hash
+    const hash = ((timeSlot * 9301 + 49297) % 233280) / 233280;
+    const offset = Math.floor((hash - 0.5) * 6);
+    
+    return Math.round(base + wave + offset);
   }
 
-  // --- 2. DYNAMIC COUNTER FLUCTUATION (Starting from 269, realistic ups & downs) ---
-  function getNextVisitorCount(current) {
-    const deltas = [-3, -2, -1, 1, 2, 3, 4, -2, 2, 3, -1, 4, -3, 2];
-    const change = deltas[Math.floor(Math.random() * deltas.length)];
-    let next = current + change;
+  // Computes the exact same active booking notification on all devices
+  function getSynchronizedBookingSlot() {
+    const slotDuration = 40000; // 40 seconds cycle
+    const displayDuration = 10000; // 10 seconds display
     
-    // Strict boundaries (never drop below 225, stay realistic up to 295)
-    if (next < 225) next = 248 + Math.floor(Math.random() * 15);
-    if (next > 295) next = 276 - Math.floor(Math.random() * 12);
+    const now = Date.now();
+    const currentSlot = Math.floor(now / slotDuration);
+    const elapsedInSlot = now % slotDuration;
     
-    return next;
+    // Deterministic selection using slot index
+    const nameIndex = ((currentSlot * 7) + 3) % mockNames.length;
+    const planIndex = ((currentSlot * 11) + 1) % packagePlans.length;
+    
+    return {
+      slot: currentSlot,
+      name: mockNames[nameIndex],
+      plan: packagePlans[planIndex],
+      shouldShow: elapsedInSlot < displayDuration,
+      remainingDisplayTime: displayDuration - elapsedInSlot,
+      timeUntilNextSlot: slotDuration - elapsedInSlot
+    };
   }
 
+  // Update all counter elements on the page
   function updateAllCounterElements(count) {
-    // Update floating badge at bottom-right
     const floatingCountSpan = document.getElementById('floatingLiveViewersSpan');
     if (floatingCountSpan) {
       floatingCountSpan.textContent = count;
     }
 
-    // Update hero counters if present
     const heroLiveViewersCount = document.getElementById('heroLiveViewersCount');
     if (heroLiveViewersCount) {
       heroLiveViewersCount.textContent = count;
     }
 
-    // Update generic attribute selectors
     document.querySelectorAll('[data-live-counter]').forEach(el => {
       el.textContent = count;
     });
   }
 
-  // --- 3. INJECT STYLES ---
+  // --- 3. INJECT CSS STYLES (Upper Right Fixed Badge + Bottom Left Toast) ---
   function injectStyles() {
-    if (document.getElementById('social-proof-dynamic-styles')) return;
+    if (document.getElementById('social-proof-synchronized-styles')) return;
     const style = document.createElement('style');
-    style.id = 'social-proof-dynamic-styles';
+    style.id = 'social-proof-synchronized-styles';
     style.textContent = `
-      /* Fixed Floating Live Viewers Badge (Bottom-Right Corner) */
+      /* Fixed Live Viewers Badge in UPPER RIGHT CORNER */
       #floatingLiveViewersBadge {
         position: fixed;
-        bottom: 24px;
-        right: 24px;
+        top: 20px;
+        right: 20px;
         z-index: 9980;
         pointer-events: auto;
         user-select: none;
-        background: rgba(8, 40, 48, 0.94);
+        background: rgba(8, 40, 48, 0.95);
         backdrop-filter: blur(24px);
         -webkit-backdrop-filter: blur(24px);
-        border: 1.5px solid rgba(32, 225, 178, 0.65);
+        border: 1.5px solid rgba(32, 225, 178, 0.7);
         border-radius: 9999px;
-        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.75), 0 0 28px rgba(32, 225, 178, 0.35);
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.75), 0 0 28px rgba(32, 225, 178, 0.4);
         padding: 10px 18px;
         display: inline-flex;
         align-items: center;
@@ -148,16 +154,16 @@
         font-weight: 800;
         color: #FFFFFF;
         transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        animation: subtleFloat 4s ease-in-out infinite alternate;
+        animation: subtlePulseTop 3.5s ease-in-out infinite alternate;
       }
       #floatingLiveViewersBadge:hover {
-        transform: translateY(-3px) scale(1.03);
+        transform: translateY(-2px) scale(1.03);
         border-color: #20E1B2;
-        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.85), 0 0 36px rgba(32, 225, 178, 0.55);
+        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.85), 0 0 36px rgba(32, 225, 178, 0.6);
       }
-      @keyframes subtleFloat {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(-4px); }
+      @keyframes subtlePulseTop {
+        0% { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75), 0 0 20px rgba(32, 225, 178, 0.3); }
+        100% { box-shadow: 0 14px 40px rgba(0, 0, 0, 0.85), 0 0 32px rgba(32, 225, 178, 0.55); }
       }
 
       /* Fixed Social Proof Toast Container (Bottom-Left Corner) */
@@ -172,16 +178,17 @@
         transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
-      /* Mobile responsiveness for corner items */
+      /* Mobile responsiveness */
       @media (max-width: 768px) {
         #floatingLiveViewersBadge {
-          bottom: 16px;
+          top: 14px;
           right: 12px;
-          padding: 8px 14px;
+          padding: 8px 13px;
           font-size: 11.5px;
+          gap: 7px;
         }
         #socialProofToastContainer {
-          bottom: 74px; /* Stack above floating badge on mobile */
+          bottom: 16px;
           left: 12px;
           right: 12px;
           width: auto;
@@ -189,15 +196,15 @@
         }
       }
 
-      /* Toast Notification Card */
+      /* Toast Card Structure */
       .social-proof-toast {
         pointer-events: auto;
-        background: rgba(8, 40, 48, 0.95);
+        background: rgba(8, 40, 48, 0.96);
         backdrop-filter: blur(24px);
         -webkit-backdrop-filter: blur(24px);
-        border: 1.5px solid rgba(32, 225, 178, 0.5);
+        border: 1.5px solid rgba(32, 225, 178, 0.55);
         border-radius: 20px;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 32px rgba(32, 225, 178, 0.28);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 32px rgba(32, 225, 178, 0.32);
         padding: 14px 16px;
         display: flex;
         align-items: flex-start;
@@ -214,7 +221,7 @@
       }
       .social-proof-toast:hover {
         border-color: #20E1B2;
-        box-shadow: 0 24px 56px rgba(0, 0, 0, 0.9), 0 0 40px rgba(32, 225, 178, 0.4);
+        box-shadow: 0 24px 56px rgba(0, 0, 0, 0.9), 0 0 40px rgba(32, 225, 178, 0.45);
       }
       .social-proof-progress {
         position: absolute;
@@ -239,9 +246,11 @@
     document.head.appendChild(style);
   }
 
-  // --- 4. RENDER FIXED BOTTOM-RIGHT LIVE VIEWERS BADGE ---
-  function renderFloatingLiveViewerBadge() {
+  // --- 4. RENDER UPPER RIGHT LIVE VIEWERS BADGE ---
+  function renderUpperRightLiveViewerBadge() {
     let badge = document.getElementById('floatingLiveViewersBadge');
+    const initialCount = getSynchronizedVisitorCount();
+
     if (!badge) {
       badge = document.createElement('div');
       badge.id = 'floatingLiveViewersBadge';
@@ -252,13 +261,21 @@
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#20E1B2] opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#20E1B2]"></span>
         </span>
-        <span>🔥 বর্তমানে <strong id="floatingLiveViewersSpan" class="text-[#20E1B2] font-black text-sm font-eng">${currentCount}</strong> জন এই অফারটি দেখছেন</span>
+        <span>🔥 বর্তমানে <strong id="floatingLiveViewersSpan" class="text-[#20E1B2] font-black text-sm font-eng">${initialCount}</strong> জন এই অফারটি দেখছেন</span>
       `;
       document.body.appendChild(badge);
+    } else {
+      badge.innerHTML = `
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#20E1B2] opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#20E1B2]"></span>
+        </span>
+        <span>🔥 বর্তমানে <strong id="floatingLiveViewersSpan" class="text-[#20E1B2] font-black text-sm font-eng">${initialCount}</strong> জন এই অফারটি দেখছেন</span>
+      `;
     }
   }
 
-  // --- 5. RENDER & SCHEDULE SOCIAL PROOF TOASTS (10s duration, 30-50s interval) ---
+  // --- 5. RENDER SYNCHRONIZED SOCIAL PROOF TOAST ---
   function createToastContainer() {
     let container = document.getElementById('socialProofToastContainer');
     if (!container) {
@@ -269,14 +286,13 @@
     return container;
   }
 
-  function displayBookingToast(personName, planName, isInstantReal = false) {
+  let autoHideTimer = null;
+  let isHoverPaused = false;
+
+  function displayBookingToast(personName, planName, durationMs = 10000) {
     const container = createToastContainer();
     const formattedPlan = cleanPlanName(planName);
 
-    lastPickedName = personName;
-    lastPickedPlan = formattedPlan;
-
-    // Create Toast Element
     const toast = document.createElement('div');
     toast.className = 'social-proof-toast';
     toast.innerHTML = `
@@ -300,55 +316,55 @@
         <i class="fa-solid fa-xmark"></i>
       </button>
       <div class="social-proof-progress">
-        <div class="social-proof-progress-bar"></div>
+        <div class="social-proof-progress-bar" style="animation-duration: ${durationMs}ms;"></div>
       </div>
     `;
 
-    // Pause countdown timer on hover
+    // Pause on hover
     toast.addEventListener('mouseenter', () => {
-      isPaused = true;
+      isHoverPaused = true;
       const bar = toast.querySelector('.social-proof-progress-bar');
       if (bar) bar.style.animationPlayState = 'paused';
     });
     toast.addEventListener('mouseleave', () => {
-      isPaused = false;
+      isHoverPaused = false;
       const bar = toast.querySelector('.social-proof-progress-bar');
       if (bar) bar.style.animationPlayState = 'running';
     });
 
-    // Clear existing toast smoothly
     container.innerHTML = '';
     container.appendChild(toast);
 
-    // Animate In
     requestAnimationFrame(() => {
       toast.classList.add('show');
     });
 
-    // Keep visible for exactly 10 seconds (10000ms)
     clearTimeout(autoHideTimer);
     autoHideTimer = setTimeout(() => {
-      if (toast && toast.parentNode) {
+      if (toast && toast.parentNode && !isHoverPaused) {
         toast.classList.remove('show');
         setTimeout(() => {
           if (toast && toast.parentNode) toast.remove();
         }, 450);
       }
-    }, 10000);
+    }, durationMs);
   }
 
-  function scheduleNextMockToast() {
-    // Random interval between 30 and 50 seconds (30000 - 50000 ms)
-    const delay = Math.floor(Math.random() * 20000) + 30000;
-    
-    clearTimeout(nextToastTimer);
-    nextToastTimer = setTimeout(() => {
-      const name = getRandomItem(mockNames, lastPickedName);
-      const plan = getRandomItem(packagePlans, lastPickedPlan);
+  // Synchronized Cycle Loop
+  let lastHandledSlot = -1;
 
-      displayBookingToast(name, plan);
-      scheduleNextMockToast();
-    }, delay);
+  function runSynchronizedCycle() {
+    const slotInfo = getSynchronizedBookingSlot();
+    
+    // If we've entered a new slot, display the synchronized toast
+    if (slotInfo.slot !== lastHandledSlot) {
+      lastHandledSlot = slotInfo.slot;
+      displayBookingToast(slotInfo.name, slotInfo.plan, 10000);
+    }
+
+    // Schedule next check aligned with slot transition
+    const nextCheckMs = slotInfo.timeUntilNextSlot + 50;
+    setTimeout(runSynchronizedCycle, Math.max(1000, nextCheckMs));
   }
 
   // --- 6. REAL-TIME INSTANT TRIGGER FOR ACTUAL USERS ---
@@ -356,48 +372,37 @@
     const finalName = name && name.trim() ? name.trim() : 'সম্মানিত ক্লায়েন্ট';
     const finalPlan = cleanPlanName(planName);
 
-    // Cancel next scheduled mock timer to show real user instantly
-    clearTimeout(nextToastTimer);
-
     // Instantly show the real user's booking toast for 10 seconds
-    displayBookingToast(finalName, finalPlan, true);
-
-    // Resume mock schedule after 35 seconds
-    scheduleNextMockToast();
+    displayBookingToast(finalName, finalPlan, 10000);
   }
 
   // --- 7. INITIALIZATION ---
   function init() {
     injectStyles();
-    renderFloatingLiveViewerBadge();
-    updateAllCounterElements(currentCount);
+    renderUpperRightLiveViewerBadge();
 
-    // 1. Dynamic fluctuating live counter interval (every 4 to 6 seconds)
-    counterTimer = setInterval(() => {
-      currentCount = getNextVisitorCount(currentCount);
-      updateAllCounterElements(currentCount);
-    }, 4500);
+    // 1. Initial count & cross-device synchronized counter ticker (every 3 seconds)
+    const initialCount = getSynchronizedVisitorCount();
+    updateAllCounterElements(initialCount);
 
-    // 2. First random male/female notification after 6 seconds, then every 30-50s
-    setTimeout(() => {
-      const initialName = getRandomItem(mockNames, '');
-      const initialPlan = getRandomItem(packagePlans, '');
-      displayBookingToast(initialName, initialPlan);
-      scheduleNextMockToast();
-    }, 6000);
+    setInterval(() => {
+      const syncCount = getSynchronizedVisitorCount();
+      updateAllCounterElements(syncCount);
+    }, 3000);
+
+    // 2. Start cross-device synchronized social proof cycle
+    runSynchronizedCycle();
   }
 
-  // Run on DOM Ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
   }
 
-  // Global API exposed for instant real-time triggers
+  // Expose API
   window.ShakibSocialProof = {
-    getCount: () => currentCount,
-    setCount: (c) => { currentCount = c; updateAllCounterElements(c); },
+    getCount: getSynchronizedVisitorCount,
     triggerRealBooking: triggerRealBooking,
     displayToast: displayBookingToast
   };
