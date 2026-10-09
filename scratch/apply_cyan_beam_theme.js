@@ -1,4 +1,10 @@
-/* ==========================================================================
+const fs = require('fs');
+const path = require('path');
+
+const rootDir = path.resolve(__dirname, '..');
+
+// 1. REWRITE styles.css WITH EXACT GRADIENT BEAM & GLASS CARDS THEME
+const cyanBeamStylesCss = `/* ==========================================================================
    Md. Shakibur Rahaman - Strategic Lead & Digital Architect
    HIGH-TECH PRISMATIC CYAN & OCEANIC TEAL LIGHT-BEAM THEME
    100% Faithful Match to Reference Image:
@@ -672,3 +678,197 @@ thead tr {
 tbody tr:hover {
   background: rgba(56, 189, 248, 0.1) !important;
 }
+`;
+
+fs.writeFileSync(path.join(rootDir, 'styles.css'), cyanBeamStylesCss, 'utf8');
+
+// 2. UPDATE app.js and services/service-page.js WITH PRISMATIC DIAGONAL CYAN BEAM CANVAS
+function updateCanvasAnimation(filePath) {
+  if (!fs.existsSync(filePath)) return;
+  let code = fs.readFileSync(filePath, 'utf8');
+
+  const oldCanvasBlockRegex = /function initAmbientBackground\(\)[\s\S]*?requestAnimationFrame\(render\);\s*\}/m;
+  const newCanvasBlock = `function initAmbientBackground() {
+  const canvas = document.getElementById('ambientCanvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let width = (canvas.width = window.innerWidth);
+  let height = (canvas.height = window.innerHeight);
+
+  let mouse = { x: width / 2, y: height / 2, targetX: width / 2, targetY: height / 2 };
+
+  window.addEventListener('resize', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    initLightBeams();
+  }, { passive: true });
+
+  window.addEventListener('mousemove', (e) => {
+    mouse.targetX = e.clientX;
+    mouse.targetY = e.clientY;
+  }, { passive: true });
+
+  // High-Tech Prismatic Diagonal Light Beams & Particles
+  let beams = [];
+  function initLightBeams() {
+    beams = [];
+    const count = 6;
+    for (let i = 0; i < count; i++) {
+      beams.push({
+        offset: (i / count) * (width + height) - height * 0.5,
+        speed: 0.25 + (i % 2) * 0.15,
+        width: 140 + Math.random() * 180,
+        alpha: 0.12 + Math.random() * 0.15
+      });
+    }
+  }
+  initLightBeams();
+
+  function render() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Smooth mouse parallax
+    mouse.x += (mouse.targetX - mouse.x) * 0.04;
+    mouse.y += (mouse.targetY - mouse.y) * 0.04;
+
+    // 1. Base Oceanic Gradient
+    const baseGrad = ctx.createLinearGradient(0, 0, width, height);
+    baseGrad.addColorStop(0, 'rgba(6, 24, 36, 0.95)');
+    baseGrad.addColorStop(0.35, 'rgba(11, 53, 74, 0.85)');
+    baseGrad.addColorStop(0.5, 'rgba(53, 146, 176, 0.7)');
+    baseGrad.addColorStop(0.52, 'rgba(213, 245, 250, 0.8)');
+    baseGrad.addColorStop(0.58, 'rgba(53, 146, 176, 0.7)');
+    baseGrad.addColorStop(0.75, 'rgba(11, 53, 74, 0.85)');
+    baseGrad.addColorStop(1, 'rgba(5, 21, 31, 0.95)');
+    ctx.fillStyle = baseGrad;
+    ctx.fillRect(0, 0, width, height);
+
+    // 2. Draw Moving Diagonal Light Beams (45-degree angle matching reference image)
+    const parallax = (mouse.x - width / 2) * 0.04;
+    beams.forEach(b => {
+      b.offset += b.speed;
+      if (b.offset > width + height) {
+        b.offset = -height;
+      }
+
+      ctx.save();
+      ctx.translate(b.offset + parallax, 0);
+      ctx.rotate(Math.PI / 4); // 45 degree angle
+
+      const beamGrad = ctx.createLinearGradient(0, -b.width, 0, b.width);
+      beamGrad.addColorStop(0, 'rgba(56, 189, 248, 0)');
+      beamGrad.addColorStop(0.5, \`rgba(216, 246, 251, \${b.alpha})\`);
+      beamGrad.addColorStop(1, 'rgba(56, 189, 248, 0)');
+
+      ctx.fillStyle = beamGrad;
+      ctx.fillRect(-width * 2, -b.width, width * 4, b.width * 2);
+      ctx.restore();
+    });
+
+    // 3. Horizontal Scanlines Mesh
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.035)';
+    for (let y = 0; y < height; y += 4) {
+      ctx.fillRect(0, y, width, 1);
+    }
+
+    requestAnimationFrame(render);
+  }
+
+  requestAnimationFrame(render);
+}`;
+
+  if (oldCanvasBlockRegex.test(code)) {
+    code = code.replace(oldCanvasBlockRegex, newCanvasBlock);
+  }
+  fs.writeFileSync(filePath, code, 'utf8');
+}
+
+updateCanvasAnimation(path.join(rootDir, 'app.js'));
+updateCanvasAnimation(path.join(rootDir, 'services', 'service-page.js'));
+
+// 3. UPDATE ALL HTML FILES FOR CYAN LIGHT-BEAM & GLASSMORPHIC THEME
+function updateHtmlFile(filePath) {
+  let content = fs.readFileSync(filePath, 'utf8');
+
+  // Tailwind config
+  const tailwindRegex = /tailwind\.config\s*=\s*\{[\s\S]*?theme:\s*\{[\s\S]*?extend:\s*\{[\s\S]*?colors:\s*\{[\s\S]*?\}\s*\}\s*\}\s*\}/m;
+  const newTailwindConfig = `tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#38BDF8',
+              forest: '#0B354A',
+              slate: '#38BDF8',
+              mist: '#74A8BA',
+              stone: 'rgba(216, 246, 251, 0.15)',
+              emerald: '#38BDF8',
+              brunswick: '#0B354A',
+              polar: '#D8F6FB',
+              canvas: '#061B27',
+              card: 'rgba(11, 53, 74, 0.42)'
+            },
+            canvas: '#061B27'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            bengali: ['"Hind Siliguri"', '"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'monospace']
+          }
+        }
+      }
+    }`;
+
+  if (tailwindRegex.test(content)) {
+    content = content.replace(tailwindRegex, newTailwindConfig);
+  }
+
+  content = content
+    // Replace green tokens with Cyan / Aqua tokens
+    .replace(/#06D6A0/gi, '#38BDF8')
+    .replace(/#05B386/gi, '#0284C7')
+    .replace(/#0C4137/gi, '#0B354A')
+    .replace(/#E6FBF6/gi, '#D8F6FB')
+    .replace(/#03100D/gi, '#061B27')
+    .replace(/#041612/gi, '#071E2B')
+    .replace(/#051F19/gi, '#092A3B')
+    
+    // Replace RGBAs
+    .replace(/rgba\(6,\s*214,\s*160,/gi, 'rgba(56, 189, 248,')
+    .replace(/rgba\(12,\s*65,\s*55,/gi, 'rgba(11, 53, 74,')
+    .replace(/rgba\(230,\s*251,\s*246,/gi, 'rgba(216, 246, 251,')
+    
+    // Borders & Glass Cards
+    .replace(/bg-white(?=[\s"'])/g, 'bg-[#0B354A]/40 backdrop-blur-xl')
+    .replace(/border-\[#D7EFE9\]/gi, 'border-[#D8F6FB]/20')
+    .replace(/border-\[#E6FBF6\]\/15/gi, 'border-[#D8F6FB]/20')
+    .replace(/border-\[#E6FBF6\]\/10/gi, 'border-[#D8F6FB]/15');
+
+  fs.writeFileSync(filePath, content, 'utf8');
+}
+
+function getHtmlFiles(dir) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  list.forEach(file => {
+    if (file === 'node_modules' || file === '.git') return;
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+    if (stat && stat.isDirectory()) {
+      results = results.concat(getHtmlFiles(fullPath));
+    } else if (file.endsWith('.html')) {
+      results.push(fullPath);
+    }
+  });
+  return results;
+}
+
+const htmlFiles = getHtmlFiles(rootDir);
+htmlFiles.forEach(file => {
+  updateHtmlFile(file);
+  console.log('Updated to Cyan Light-Beam Glass Theme:', path.relative(rootDir, file));
+});
+
+console.log('\\n✅ 100% Prismatic Cyan Light-Beam Gradient & Glass Theme Applied Successfully!');

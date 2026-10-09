@@ -134,7 +134,7 @@ function initAmbientBackground() {
   window.addEventListener('resize', () => {
     width = canvas.width = window.innerWidth;
     height = canvas.height = window.innerHeight;
-    initOrbs();
+    initLightBeams();
   }, { passive: true });
 
   window.addEventListener('mousemove', (e) => {
@@ -142,33 +142,21 @@ function initAmbientBackground() {
     mouse.targetY = e.clientY;
   }, { passive: true });
 
-  // Monestra & Arounda Luxury Dark Emerald Aurora Mesh Orbs
-  let orbs = [];
-  function initOrbs() {
-    orbs = [];
-    const count = width > 768 ? 8 : 5;
-    const colors = [
-      { r: 6, g: 214, b: 160 },    // Luminous Emerald (#06D6A0)
-      { r: 12, g: 65, b: 55 },     // Brunswick Green (#0C4137)
-      { r: 4, g: 179, b: 134 },    // Deep Mint Glow (#04B386)
-      { r: 18, g: 90, b: 76 }      // Dark Pine (#125A4C)
-    ];
-
+  // High-Tech Prismatic Diagonal Light Beams & Particles
+  let beams = [];
+  function initLightBeams() {
+    beams = [];
+    const count = 6;
     for (let i = 0; i < count; i++) {
-      const col = colors[i % colors.length];
-      orbs.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        r: Math.random() * 260 + 160,
-        vx: (Math.random() - 0.5) * 0.35,
-        vy: (Math.random() - 0.5) * 0.35,
-        color: col,
-        alpha: Math.random() * 0.28 + 0.15,
-        phase: Math.random() * Math.PI * 2
+      beams.push({
+        offset: (i / count) * (width + height) - height * 0.5,
+        speed: 0.25 + (i % 2) * 0.15,
+        width: 140 + Math.random() * 180,
+        alpha: 0.12 + Math.random() * 0.15
       });
     }
   }
-  initOrbs();
+  initLightBeams();
 
   function render() {
     ctx.clearRect(0, 0, width, height);
@@ -177,44 +165,51 @@ function initAmbientBackground() {
     mouse.x += (mouse.targetX - mouse.x) * 0.04;
     mouse.y += (mouse.targetY - mouse.y) * 0.04;
 
-    // 1. Monestra Deep Obsidian & Brunswick Green Canvas Base
-    const bgGrad = ctx.createLinearGradient(0, 0, 0, height);
-    bgGrad.addColorStop(0, '#03100D');
-    bgGrad.addColorStop(0.5, '#051F19');
-    bgGrad.addColorStop(1, '#020C0A');
-    ctx.fillStyle = bgGrad;
+    // 1. Base Oceanic Gradient
+    const baseGrad = ctx.createLinearGradient(0, 0, width, height);
+    baseGrad.addColorStop(0, 'rgba(6, 24, 36, 0.95)');
+    baseGrad.addColorStop(0.35, 'rgba(11, 53, 74, 0.85)');
+    baseGrad.addColorStop(0.5, 'rgba(53, 146, 176, 0.7)');
+    baseGrad.addColorStop(0.52, 'rgba(213, 245, 250, 0.8)');
+    baseGrad.addColorStop(0.58, 'rgba(53, 146, 176, 0.7)');
+    baseGrad.addColorStop(0.75, 'rgba(11, 53, 74, 0.85)');
+    baseGrad.addColorStop(1, 'rgba(5, 21, 31, 0.95)');
+    ctx.fillStyle = baseGrad;
     ctx.fillRect(0, 0, width, height);
 
-    // 2. Render drifting luminous Aurora Orbs with Arounda lighting
-    orbs.forEach(orb => {
-      orb.phase += 0.007;
-      orb.x += orb.vx + Math.sin(orb.phase) * 0.25;
-      orb.y += orb.vy + Math.cos(orb.phase) * 0.25;
+    // 2. Draw Moving Diagonal Light Beams (45-degree angle matching reference image)
+    const parallax = (mouse.x - width / 2) * 0.04;
+    beams.forEach(b => {
+      b.offset += b.speed;
+      if (b.offset > width + height) {
+        b.offset = -height;
+      }
 
-      // Wrap around bounds softly
-      if (orb.x < -orb.r) orb.x = width + orb.r;
-      if (orb.x > width + orb.r) orb.x = -orb.r;
-      if (orb.y < -orb.r) orb.y = height + orb.r;
-      if (orb.y > height + orb.r) orb.y = -orb.r;
+      ctx.save();
+      ctx.translate(b.offset + parallax, 0);
+      ctx.rotate(Math.PI / 4); // 45 degree angle
 
-      const parallaxX = (mouse.x - width / 2) * 0.035;
-      const parallaxY = (mouse.y - height / 2) * 0.035;
-      const ox = orb.x + parallaxX;
-      const oy = orb.y + parallaxY;
+      const beamGrad = ctx.createLinearGradient(0, -b.width, 0, b.width);
+      beamGrad.addColorStop(0, 'rgba(56, 189, 248, 0)');
+      beamGrad.addColorStop(0.5, `rgba(216, 246, 251, ${b.alpha})`);
+      beamGrad.addColorStop(1, 'rgba(56, 189, 248, 0)');
 
-      const grad = ctx.createRadialGradient(ox, oy, 0, ox, oy, orb.r);
-      grad.addColorStop(0, `rgba(${orb.color.r}, ${orb.color.g}, ${orb.color.b}, ${orb.alpha})`);
-      grad.addColorStop(0.5, `rgba(${orb.color.r}, ${orb.color.g}, ${orb.color.b}, ${orb.alpha * 0.45})`);
-      grad.addColorStop(1, `rgba(${orb.color.r}, ${orb.color.g}, ${orb.color.b}, 0)`);
-
-      ctx.fillStyle = grad;
-      ctx.beginPath();
-      ctx.arc(ox, oy, orb.r, 0, Math.PI * 2);
-      ctx.fill();
+      ctx.fillStyle = beamGrad;
+      ctx.fillRect(-width * 2, -b.width, width * 4, b.width * 2);
+      ctx.restore();
     });
+
+    // 3. Horizontal Scanlines Mesh
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.035)';
+    for (let y = 0; y < height; y += 4) {
+      ctx.fillRect(0, y, width, 1);
+    }
 
     requestAnimationFrame(render);
   }
+
+  requestAnimationFrame(render);
+}
 
   requestAnimationFrame(render);
 }

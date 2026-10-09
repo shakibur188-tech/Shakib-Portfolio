@@ -26,18 +26,18 @@
         extend: {
           colors: {
             palette: {
-              olive: '#06D6A0',
-              forest: '#0C4137',
-              slate: '#06D6A0',
-              mist: '#6E9B91',
-              stone: 'rgba(230, 251, 246, 0.12)',
-              emerald: '#06D6A0',
-              brunswick: '#0C4137',
-              polar: '#E6FBF6',
-              canvas: '#03100D',
-              card: 'rgba(12, 65, 55, 0.35)'
+              olive: '#38BDF8',
+              forest: '#0B354A',
+              slate: '#38BDF8',
+              mist: '#74A8BA',
+              stone: 'rgba(216, 246, 251, 0.15)',
+              emerald: '#38BDF8',
+              brunswick: '#0B354A',
+              polar: '#D8F6FB',
+              canvas: '#061B27',
+              card: 'rgba(11, 53, 74, 0.42)'
             },
-            canvas: '#03100D'
+            canvas: '#061B27'
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
@@ -52,7 +52,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="/styles.css">
 </head>
-<body class="antialiased bg-[#03100D] text-white min-h-screen relative overflow-x-hidden">
+<body class="antialiased bg-[#061B27] text-white min-h-screen relative overflow-x-hidden">
 
   <div id="scrollProgressBar"></div>
   <div class="ambient-mesh-glow"></div>
@@ -60,60 +60,60 @@
   <div class="ambient-vignette"></div>
 
         <!-- 1. FIXED GLASS NAVBAR (Morphy Style) -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#03100D]/95 backdrop-blur-2xl border-b border-[#E6FBF6]/15 transition-all duration-300 shadow-2xs">
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#061B27]/95 backdrop-blur-2xl border-b border-[#D8F6FB]/15 transition-all duration-300 shadow-2xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
       <!-- Brand Logo -->
       <a href="/" class="flex items-center gap-3 group min-w-0">
-        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#06D6A0] to-[#0C4137] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#06D6A0]/25 border border-white/20 shrink-0">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#38BDF8] to-[#0B354A] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#38BDF8]/25 border border-white/20 shrink-0">
           ✦
         </div>
         <div class="flex flex-col min-w-0">
-          <span class="font-extrabold text-white tracking-tight text-base sm:text-lg group-hover:text-[#06D6A0] transition-colors truncate" id="navBrandName">Md. Shakibur Rahaman</span>
-          <span class="text-[10px] text-[#06D6A0] font-extrabold tracking-wider uppercase truncate">Strategic Lead &amp; Digital Architect</span>
+          <span class="font-extrabold text-white tracking-tight text-base sm:text-lg group-hover:text-[#38BDF8] transition-colors truncate" id="navBrandName">Md. Shakibur Rahaman</span>
+          <span class="text-[10px] text-[#38BDF8] font-extrabold tracking-wider uppercase truncate">Strategic Lead &amp; Digital Architect</span>
         </div>
       </a>
 
       <!-- Centered Floating Pill Navigation Menu (Desktop Only) -->
-      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-[#03100D]/95 border border-[#E6FBF6]/15 text-sm font-semibold text-[#DDF6F0] backdrop-blur-md shadow-xs shrink-0">
-        <a href="/" class="hover:text-[#06D6A0] transition-colors">Home</a>
-        <a href="/about" class="hover:text-[#06D6A0] transition-colors">About</a>
+      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-[#061B27]/95 border border-[#D8F6FB]/15 text-sm font-semibold text-[#DDF6F0] backdrop-blur-md shadow-xs shrink-0">
+        <a href="/" class="hover:text-[#38BDF8] transition-colors">Home</a>
+        <a href="/about" class="hover:text-[#38BDF8] transition-colors">About</a>
         
         <!-- Services with dropdown arrow -->
         <div class="relative group">
-          <a href="/services" class="flex items-center gap-1.5 text-[#06D6A0] font-bold transition-colors py-1">
+          <a href="/services" class="flex items-center gap-1.5 text-[#38BDF8] font-bold transition-colors py-1">
             <span>Services</span>
-            <i class="fa-solid fa-chevron-down text-[10px] text-[#7EADA3] group-hover:text-[#06D6A0] group-hover:rotate-180 transition-transform duration-200"></i>
+            <i class="fa-solid fa-chevron-down text-[10px] text-[#7EADA3] group-hover:text-[#38BDF8] group-hover:rotate-180 transition-transform duration-200"></i>
           </a>
           <!-- Dropdown card -->
-          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#E6FBF6]/15 shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Social Media &amp; Meta Ads</a>
-            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Google Ads &amp; Search</a>
-            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Full-Stack Web Development</a>
-            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">SEO &amp; AI Engine Optimization</a>
-            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Graphics &amp; Visual Assets</a>
-            <div class="my-1.5 border-t border-[#E6FBF6]/15"></div>
-            <a href="/services" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#06D6A0] hover:bg-[#06D6A0]/10 text-center">View All 9 Services &rarr;</a>
+          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#D8F6FB]/15 shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">Social Media &amp; Meta Ads</a>
+            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">Google Ads &amp; Search</a>
+            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">Full-Stack Web Development</a>
+            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">SEO &amp; AI Engine Optimization</a>
+            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">Graphics &amp; Visual Assets</a>
+            <div class="my-1.5 border-t border-[#D8F6FB]/15"></div>
+            <a href="/services" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#38BDF8] hover:bg-[#38BDF8]/10 text-center">View All 9 Services &rarr;</a>
           </div>
         </div>
 
-        <a href="/projects" class="hover:text-[#06D6A0] transition-colors">Projects</a>
-        <a href="/experience" class="hover:text-[#06D6A0] transition-colors">Experience</a>
-        <a href="/offers" class="hover:text-[#06D6A0] transition-colors">Offers</a>
-        <a href="/consultation" class="hover:text-[#06D6A0] transition-colors">Consultation</a>
+        <a href="/projects" class="hover:text-[#38BDF8] transition-colors">Projects</a>
+        <a href="/experience" class="hover:text-[#38BDF8] transition-colors">Experience</a>
+        <a href="/offers" class="hover:text-[#38BDF8] transition-colors">Offers</a>
+        <a href="/consultation" class="hover:text-[#38BDF8] transition-colors">Consultation</a>
       </nav>
 
       <!-- Right Header Actions (Mobile Hamburger Toggle) -->
       <div class="flex items-center gap-3 shrink-0">
-        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 hover:border-[#06D6A0]/30 hover:bg-[#06D6A0]/5 text-white hover:text-[#06D6A0] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
+        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 hover:border-[#38BDF8]/30 hover:bg-[#38BDF8]/5 text-white hover:text-[#38BDF8] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
           <i id="mobileMenuIcon" class="fa-solid fa-bars-staggered text-base"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Dropdown Menu (Morphy Glassmorphic Design) -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-x border-[#E6FBF6]/15 rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
-      <div class="space-y-1.5 pb-3 border-b border-[#E6FBF6]/10">
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-x border-[#D8F6FB]/15 rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
+      <div class="space-y-1.5 pb-3 border-b border-[#D8F6FB]/10">
         <a href="/" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
             <i class="fa-solid fa-house-chimney text-xs text-[#7EADA3] w-4"></i>
@@ -130,10 +130,10 @@
         </a>
         <a href="/services" class="mobile-nav-link mobile-link flex items-center justify-between active">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-layer-group text-xs text-[#06D6A0] w-4"></i>
+            <i class="fa-solid fa-layer-group text-xs text-[#38BDF8] w-4"></i>
             <span>Services</span>
           </span>
-          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#06D6A0]/10 text-[#06D6A0]">9 Pillars</span>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#38BDF8]/10 text-[#38BDF8]">9 Pillars</span>
         </a>
         <a href="/projects" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
@@ -151,16 +151,16 @@
         </a>
         <a href="/offers" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-tags text-xs text-[#06D6A0] w-4"></i>
-            <span class="font-bold text-[#06D6A0]">Special Offers</span>
+            <i class="fa-solid fa-tags text-xs text-[#38BDF8] w-4"></i>
+            <span class="font-bold text-[#38BDF8]">Special Offers</span>
           </span>
-          <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-gradient-to-r from-[#06D6A0] to-[#05B386] text-white shadow-xs">EMI 🔥</span>
+          <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-white shadow-xs">EMI 🔥</span>
         </a>
       </div>
 
       <!-- Quick Action Contact in Mobile Menu -->
       <div class="pt-2 flex items-center gap-2">
-        <a href="/contact" class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#06D6A0] to-[#05B386] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-[#06D6A0]/25 hover:shadow-lg transition-all active:scale-98">
+        <a href="/contact" class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-[#38BDF8]/25 hover:shadow-lg transition-all active:scale-98">
           <i class="fa-solid fa-paper-plane text-xs"></i>
           <span>Get in Touch</span>
         </a>
@@ -186,7 +186,7 @@
           Public Relations & Media Outreach
         </h1>
 
-        <p class="text-base sm:text-lg font-bold text-[#06D6A0]">
+        <p class="text-base sm:text-lg font-bold text-[#38BDF8]">
           Mainstream News Placements, Executive Thought Leadership & Crisis PR
         </p>
 
@@ -197,28 +197,28 @@
         <!-- Tools Tags -->
         <div class="flex flex-wrap gap-2 pt-2">
           
-    <span class="px-3.5 py-1.5 rounded-xl bg-[#051F19] border border-[#E6FBF6]/15 text-xs font-bold text-[#DDF6F0] flex items-center gap-1.5">
-      <span class="w-1.5 h-1.5 rounded-full bg-[#06D6A0]"></span>
+    <span class="px-3.5 py-1.5 rounded-xl bg-[#092A3B] border border-[#D8F6FB]/15 text-xs font-bold text-[#DDF6F0] flex items-center gap-1.5">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#38BDF8]"></span>
       <span>PR Newswire</span>
     </span>
   
-    <span class="px-3.5 py-1.5 rounded-xl bg-[#051F19] border border-[#E6FBF6]/15 text-xs font-bold text-[#DDF6F0] flex items-center gap-1.5">
-      <span class="w-1.5 h-1.5 rounded-full bg-[#06D6A0]"></span>
+    <span class="px-3.5 py-1.5 rounded-xl bg-[#092A3B] border border-[#D8F6FB]/15 text-xs font-bold text-[#DDF6F0] flex items-center gap-1.5">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#38BDF8]"></span>
       <span>Cision</span>
     </span>
   
-    <span class="px-3.5 py-1.5 rounded-xl bg-[#051F19] border border-[#E6FBF6]/15 text-xs font-bold text-[#DDF6F0] flex items-center gap-1.5">
-      <span class="w-1.5 h-1.5 rounded-full bg-[#06D6A0]"></span>
+    <span class="px-3.5 py-1.5 rounded-xl bg-[#092A3B] border border-[#D8F6FB]/15 text-xs font-bold text-[#DDF6F0] flex items-center gap-1.5">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#38BDF8]"></span>
       <span>Direct Journalist Network</span>
     </span>
   
-    <span class="px-3.5 py-1.5 rounded-xl bg-[#051F19] border border-[#E6FBF6]/15 text-xs font-bold text-[#DDF6F0] flex items-center gap-1.5">
-      <span class="w-1.5 h-1.5 rounded-full bg-[#06D6A0]"></span>
+    <span class="px-3.5 py-1.5 rounded-xl bg-[#092A3B] border border-[#D8F6FB]/15 text-xs font-bold text-[#DDF6F0] flex items-center gap-1.5">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#38BDF8]"></span>
       <span>Brand24</span>
     </span>
   
-    <span class="px-3.5 py-1.5 rounded-xl bg-[#051F19] border border-[#E6FBF6]/15 text-xs font-bold text-[#DDF6F0] flex items-center gap-1.5">
-      <span class="w-1.5 h-1.5 rounded-full bg-[#06D6A0]"></span>
+    <span class="px-3.5 py-1.5 rounded-xl bg-[#092A3B] border border-[#D8F6FB]/15 text-xs font-bold text-[#DDF6F0] flex items-center gap-1.5">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#38BDF8]"></span>
       <span>Muck Rack</span>
     </span>
   
@@ -226,7 +226,7 @@
 
         <!-- Hero Actions -->
         <div class="pt-4 flex flex-wrap items-center gap-4">
-          <a href="/consultation" class="btn-morphy-primary text-xs px-7 py-3.5 shadow-lg shadow-[#06D6A0]/20">
+          <a href="/consultation" class="btn-morphy-primary text-xs px-7 py-3.5 shadow-lg shadow-[#38BDF8]/20">
             <span>Commission This Discipline</span>
             <i class="fa-solid fa-arrow-right text-[10px]"></i>
           </a>
@@ -239,7 +239,7 @@
 
       <!-- Right: Inset Visual Hero Card -->
       <div class="lg:col-span-5">
-        <div class="morphy-card p-4 sm:p-5 rounded-[32px] bg-[#0C4137]/35 backdrop-blur-xl border-2 border-[#E6FBF6]/15 shadow-2xl shadow-[#06D6A0]/15 space-y-5">
+        <div class="morphy-card p-4 sm:p-5 rounded-[32px] bg-[#0B354A]/35 backdrop-blur-xl border-2 border-[#D8F6FB]/15 shadow-2xl shadow-[#38BDF8]/15 space-y-5">
           <div class="relative h-72 w-full rounded-[24px] overflow-hidden bg-[#08201A]">
             <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80" alt="Public Relations & Media Outreach" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30"></div>
@@ -255,12 +255,12 @@
             </div>
           </div>
 
-          <div class="p-4 rounded-2xl bg-[#051F19] border border-[#E6FBF6]/15 flex items-center justify-between">
+          <div class="p-4 rounded-2xl bg-[#092A3B] border border-[#D8F6FB]/15 flex items-center justify-between">
             <div class="flex items-center gap-3">
               <span class="w-3 h-3 rounded-full bg-[#10B981] animate-ping"></span>
               <div class="text-xs font-bold text-white">Direct Executive Leadership</div>
             </div>
-            <span class="text-xs font-extrabold text-[#06D6A0]">100% SLA Guarantee</span>
+            <span class="text-xs font-extrabold text-[#38BDF8]">100% SLA Guarantee</span>
           </div>
         </div>
       </div>
@@ -269,29 +269,29 @@
   </section>
 
   <!-- 3. QUANTIFIABLE IMPACT FIGURES -->
-  <section class="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#E6FBF6]/15">
+  <section class="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#D8F6FB]/15">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
       
-    <div class="morphy-card p-5 text-center bg-[#0C4137]/35 backdrop-blur-xl shadow-xs">
-      <div class="text-2xl sm:text-3xl font-black text-[#06D6A0] mb-1">Tier-1</div>
+    <div class="morphy-card p-5 text-center bg-[#0B354A]/35 backdrop-blur-xl shadow-xs">
+      <div class="text-2xl sm:text-3xl font-black text-[#38BDF8] mb-1">Tier-1</div>
       <div class="text-xs font-bold text-white">Media Placement Reach</div>
       <div class="text-[10px] text-[#7EADA3] font-medium mt-0.5">National & international press outlets</div>
     </div>
   
-    <div class="morphy-card p-5 text-center bg-[#0C4137]/35 backdrop-blur-xl shadow-xs">
-      <div class="text-2xl sm:text-3xl font-black text-[#06D6A0] mb-1">100%</div>
+    <div class="morphy-card p-5 text-center bg-[#0B354A]/35 backdrop-blur-xl shadow-xs">
+      <div class="text-2xl sm:text-3xl font-black text-[#38BDF8] mb-1">100%</div>
       <div class="text-xs font-bold text-white">Crisis Safeguards Blueprint</div>
       <div class="text-[10px] text-[#7EADA3] font-medium mt-0.5">24/7 reputation protection protocols</div>
     </div>
   
-    <div class="morphy-card p-5 text-center bg-[#0C4137]/35 backdrop-blur-xl shadow-xs">
-      <div class="text-2xl sm:text-3xl font-black text-[#06D6A0] mb-1">48h</div>
+    <div class="morphy-card p-5 text-center bg-[#0B354A]/35 backdrop-blur-xl shadow-xs">
+      <div class="text-2xl sm:text-3xl font-black text-[#38BDF8] mb-1">48h</div>
       <div class="text-xs font-bold text-white">Press Release Syndication</div>
       <div class="text-[10px] text-[#7EADA3] font-medium mt-0.5">Rapid wire distribution network</div>
     </div>
   
-    <div class="morphy-card p-5 text-center bg-[#0C4137]/35 backdrop-blur-xl shadow-xs">
-      <div class="text-2xl sm:text-3xl font-black text-[#06D6A0] mb-1">15+</div>
+    <div class="morphy-card p-5 text-center bg-[#0B354A]/35 backdrop-blur-xl shadow-xs">
+      <div class="text-2xl sm:text-3xl font-black text-[#38BDF8] mb-1">15+</div>
       <div class="text-xs font-bold text-white">Executive Op-Eds Placed</div>
       <div class="text-[10px] text-[#7EADA3] font-medium mt-0.5">Positioning founders as industry leaders</div>
     </div>
@@ -300,14 +300,14 @@
   </section>
 
   <!-- 4. 6 CORE DELIVERABLES BENTO GRID -->
-  <section id="deliverables" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#E6FBF6]/15">
+  <section id="deliverables" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#D8F6FB]/15">
     <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
       <div class="morphy-tag-primary justify-center">
         <i class="fa-solid fa-list-check"></i>
         <span>COMPREHENSIVE ARTIFACTS</span>
       </div>
       <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
-        What We Deliver &amp; <span class="text-[#06D6A0]">Guarantee</span>
+        What We Deliver &amp; <span class="text-[#38BDF8]">Guarantee</span>
       </h2>
       <p class="text-sm sm:text-base text-[#7EADA3] font-medium leading-relaxed">
         Every engagement includes battle-tested architecture, production-ready assets, full intellectual property transfer, and seamless integration into your business.
@@ -316,69 +316,69 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
       
-    <div class="morphy-card p-6 sm:p-7 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
+    <div class="morphy-card p-6 sm:p-7 bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 space-y-3 group hover:border-[#38BDF8] hover:shadow-xl hover:shadow-[#38BDF8]/10 transition-all duration-300">
       <div class="flex items-center justify-between">
-        <div class="w-8 h-8 rounded-xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center font-black text-xs">
+        <div class="w-8 h-8 rounded-xl bg-[#38BDF8]/10 text-[#38BDF8] flex items-center justify-center font-black text-xs">
           01
         </div>
-        <i class="fa-solid fa-circle-check text-[#06D6A0] text-sm"></i>
+        <i class="fa-solid fa-circle-check text-[#38BDF8] text-sm"></i>
       </div>
-      <h3 class="text-base font-black text-white group-hover:text-[#06D6A0] transition-colors">Strategic Press Release Syndication</h3>
+      <h3 class="text-base font-black text-white group-hover:text-[#38BDF8] transition-colors">Strategic Press Release Syndication</h3>
       <p class="text-xs text-[#7EADA3] font-medium leading-relaxed">Drafting authoritative press releases and syndicating across national wire networks, digital news portals, and trade publications.</p>
     </div>
   
-    <div class="morphy-card p-6 sm:p-7 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
+    <div class="morphy-card p-6 sm:p-7 bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 space-y-3 group hover:border-[#38BDF8] hover:shadow-xl hover:shadow-[#38BDF8]/10 transition-all duration-300">
       <div class="flex items-center justify-between">
-        <div class="w-8 h-8 rounded-xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center font-black text-xs">
+        <div class="w-8 h-8 rounded-xl bg-[#38BDF8]/10 text-[#38BDF8] flex items-center justify-center font-black text-xs">
           02
         </div>
-        <i class="fa-solid fa-circle-check text-[#06D6A0] text-sm"></i>
+        <i class="fa-solid fa-circle-check text-[#38BDF8] text-sm"></i>
       </div>
-      <h3 class="text-base font-black text-white group-hover:text-[#06D6A0] transition-colors">Executive Thought Leadership & Op-Eds</h3>
+      <h3 class="text-base font-black text-white group-hover:text-[#38BDF8] transition-colors">Executive Thought Leadership & Op-Eds</h3>
       <p class="text-xs text-[#7EADA3] font-medium leading-relaxed">Ghostwriting and placing strategic opinion pieces in leading business magazines and newspapers to establish industry authority.</p>
     </div>
   
-    <div class="morphy-card p-6 sm:p-7 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
+    <div class="morphy-card p-6 sm:p-7 bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 space-y-3 group hover:border-[#38BDF8] hover:shadow-xl hover:shadow-[#38BDF8]/10 transition-all duration-300">
       <div class="flex items-center justify-between">
-        <div class="w-8 h-8 rounded-xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center font-black text-xs">
+        <div class="w-8 h-8 rounded-xl bg-[#38BDF8]/10 text-[#38BDF8] flex items-center justify-center font-black text-xs">
           03
         </div>
-        <i class="fa-solid fa-circle-check text-[#06D6A0] text-sm"></i>
+        <i class="fa-solid fa-circle-check text-[#38BDF8] text-sm"></i>
       </div>
-      <h3 class="text-base font-black text-white group-hover:text-[#06D6A0] transition-colors">Journalist Relations & Media Pitching</h3>
+      <h3 class="text-base font-black text-white group-hover:text-[#38BDF8] transition-colors">Journalist Relations & Media Pitching</h3>
       <p class="text-xs text-[#7EADA3] font-medium leading-relaxed">Direct 1-on-1 pitching to key business, lifestyle, and tech editors to secure organic feature interviews.</p>
     </div>
   
-    <div class="morphy-card p-6 sm:p-7 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
+    <div class="morphy-card p-6 sm:p-7 bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 space-y-3 group hover:border-[#38BDF8] hover:shadow-xl hover:shadow-[#38BDF8]/10 transition-all duration-300">
       <div class="flex items-center justify-between">
-        <div class="w-8 h-8 rounded-xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center font-black text-xs">
+        <div class="w-8 h-8 rounded-xl bg-[#38BDF8]/10 text-[#38BDF8] flex items-center justify-center font-black text-xs">
           04
         </div>
-        <i class="fa-solid fa-circle-check text-[#06D6A0] text-sm"></i>
+        <i class="fa-solid fa-circle-check text-[#38BDF8] text-sm"></i>
       </div>
-      <h3 class="text-base font-black text-white group-hover:text-[#06D6A0] transition-colors">Crisis Communications & Reputation Defense</h3>
+      <h3 class="text-base font-black text-white group-hover:text-[#38BDF8] transition-colors">Crisis Communications & Reputation Defense</h3>
       <p class="text-xs text-[#7EADA3] font-medium leading-relaxed">Comprehensive crisis manuals, holding statements, media response protocols, and online reputation cleanup.</p>
     </div>
   
-    <div class="morphy-card p-6 sm:p-7 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
+    <div class="morphy-card p-6 sm:p-7 bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 space-y-3 group hover:border-[#38BDF8] hover:shadow-xl hover:shadow-[#38BDF8]/10 transition-all duration-300">
       <div class="flex items-center justify-between">
-        <div class="w-8 h-8 rounded-xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center font-black text-xs">
+        <div class="w-8 h-8 rounded-xl bg-[#38BDF8]/10 text-[#38BDF8] flex items-center justify-center font-black text-xs">
           05
         </div>
-        <i class="fa-solid fa-circle-check text-[#06D6A0] text-sm"></i>
+        <i class="fa-solid fa-circle-check text-[#38BDF8] text-sm"></i>
       </div>
-      <h3 class="text-base font-black text-white group-hover:text-[#06D6A0] transition-colors">Press Conferences & Media Junkets</h3>
+      <h3 class="text-base font-black text-white group-hover:text-[#38BDF8] transition-colors">Press Conferences & Media Junkets</h3>
       <p class="text-xs text-[#7EADA3] font-medium leading-relaxed">End-to-end press conference management, media kit production, RSVP tracking, and post-event coverage reporting.</p>
     </div>
   
-    <div class="morphy-card p-6 sm:p-7 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
+    <div class="morphy-card p-6 sm:p-7 bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 space-y-3 group hover:border-[#38BDF8] hover:shadow-xl hover:shadow-[#38BDF8]/10 transition-all duration-300">
       <div class="flex items-center justify-between">
-        <div class="w-8 h-8 rounded-xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center font-black text-xs">
+        <div class="w-8 h-8 rounded-xl bg-[#38BDF8]/10 text-[#38BDF8] flex items-center justify-center font-black text-xs">
           06
         </div>
-        <i class="fa-solid fa-circle-check text-[#06D6A0] text-sm"></i>
+        <i class="fa-solid fa-circle-check text-[#38BDF8] text-sm"></i>
       </div>
-      <h3 class="text-base font-black text-white group-hover:text-[#06D6A0] transition-colors">Media Monitoring & Sentiment Analytics</h3>
+      <h3 class="text-base font-black text-white group-hover:text-[#38BDF8] transition-colors">Media Monitoring & Sentiment Analytics</h3>
       <p class="text-xs text-[#7EADA3] font-medium leading-relaxed">Real-time media tracking, brand sentiment scoring, PR value measurement, and comprehensive clipping reports.</p>
     </div>
   
@@ -386,7 +386,7 @@
   </section>
 
   <!-- 5. 4-PHASE SPRINT WORKFLOW -->
-  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#E6FBF6]/15">
+  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#D8F6FB]/15">
     <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
       <div class="morphy-tag-primary justify-center">
         <i class="fa-solid fa-code-commit"></i>
@@ -401,25 +401,25 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="morphy-card p-6 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3">
-        <div class="text-xs font-black text-[#06D6A0] uppercase">Phase 01 • Week 01</div>
+      <div class="morphy-card p-6 bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 space-y-3">
+        <div class="text-xs font-black text-[#38BDF8] uppercase">Phase 01 • Week 01</div>
         <h3 class="text-lg font-black text-white">Discovery &amp; Audit</h3>
         <p class="text-xs text-[#7EADA3] leading-relaxed">In-depth technical analysis, competitor whitespace mapping, and strategic requirement sign-off.</p>
       </div>
 
-      <div class="morphy-card p-6 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3">
-        <div class="text-xs font-black text-[#06D6A0] uppercase">Phase 02 • Week 02</div>
+      <div class="morphy-card p-6 bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 space-y-3">
+        <div class="text-xs font-black text-[#38BDF8] uppercase">Phase 02 • Week 02</div>
         <h3 class="text-lg font-black text-white">Architecture</h3>
         <p class="text-xs text-[#7EADA3] leading-relaxed">Prototypes, design systems, technical blueprint sign-offs, and pre-production staging alignment.</p>
       </div>
 
-      <div class="morphy-card p-6 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3">
-        <div class="text-xs font-black text-[#06D6A0] uppercase">Phase 03 • Weeks 03–04</div>
+      <div class="morphy-card p-6 bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 space-y-3">
+        <div class="text-xs font-black text-[#38BDF8] uppercase">Phase 03 • Weeks 03–04</div>
         <h3 class="text-lg font-black text-white">Sprint Execution</h3>
         <p class="text-xs text-[#7EADA3] leading-relaxed">Rapid production iterations, live staging deployments, cross-browser QA, and feedback loops.</p>
       </div>
 
-      <div class="morphy-card p-6 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3">
+      <div class="morphy-card p-6 bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 space-y-3">
         <div class="text-xs font-black text-[#10B981] uppercase">Phase 04 • Week 05</div>
         <h3 class="text-lg font-black text-white">Launch &amp; Scaling</h3>
         <p class="text-xs text-[#7EADA3] leading-relaxed">Zero-downtime production deployment, team training, master file transfer, and ongoing telemetry.</p>
@@ -428,15 +428,15 @@
   </section>
 
   <!-- 6. HIGH CONVERSION INTAKE FORM BANNER -->
-  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-[#E6FBF6]/15">
-    <div class="morphy-card p-8 sm:p-12 bg-[#0C4137]/35 backdrop-blur-xl border-2 border-[#E6FBF6]/15 shadow-2xl shadow-[#06D6A0]/10 space-y-8">
+  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-[#D8F6FB]/15">
+    <div class="morphy-card p-8 sm:p-12 bg-[#0B354A]/35 backdrop-blur-xl border-2 border-[#D8F6FB]/15 shadow-2xl shadow-[#38BDF8]/10 space-y-8">
       <div class="text-center space-y-3">
         <div class="morphy-tag-primary justify-center">
           <i class="fa-solid fa-paper-plane"></i>
           <span>DIRECT DISCIPLINE INQUIRY</span>
         </div>
         <h2 class="text-3xl sm:text-4xl font-black text-white">
-          Commission <span class="text-[#06D6A0]">Public Relations & Media Outreach</span>
+          Commission <span class="text-[#38BDF8]">Public Relations & Media Outreach</span>
         </h2>
         <p class="text-xs sm:text-sm text-[#7EADA3] max-w-xl mx-auto">
           Share your business goals below to receive a custom sprint roadmap, timeline estimation, and consultation slot with Mr. Shakib.
@@ -449,20 +449,20 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-xs font-bold text-white uppercase tracking-wider mb-1.5">Your Name *</label>
-            <input type="text" name="name" required placeholder="e.g. Michael Vance" class="w-full px-4 py-3 rounded-xl border border-[#E6FBF6]/15 bg-[#0C4137]/35 backdrop-blur-xl text-xs font-medium focus:outline-none focus:border-[#06D6A0] transition-colors">
+            <input type="text" name="name" required placeholder="e.g. Michael Vance" class="w-full px-4 py-3 rounded-xl border border-[#D8F6FB]/15 bg-[#0B354A]/35 backdrop-blur-xl text-xs font-medium focus:outline-none focus:border-[#38BDF8] transition-colors">
           </div>
           <div>
             <label class="block text-xs font-bold text-white uppercase tracking-wider mb-1.5">Work Email / WhatsApp *</label>
-            <input type="text" name="email" required placeholder="you@company.com or +880 1..." class="w-full px-4 py-3 rounded-xl border border-[#E6FBF6]/15 bg-[#0C4137]/35 backdrop-blur-xl text-xs font-medium focus:outline-none focus:border-[#06D6A0] transition-colors">
+            <input type="text" name="email" required placeholder="you@company.com or +880 1..." class="w-full px-4 py-3 rounded-xl border border-[#D8F6FB]/15 bg-[#0B354A]/35 backdrop-blur-xl text-xs font-medium focus:outline-none focus:border-[#38BDF8] transition-colors">
           </div>
         </div>
 
         <div>
           <label class="block text-xs font-bold text-white uppercase tracking-wider mb-1.5">Project Scope &amp; Target Timeline</label>
-          <textarea name="message" rows="3" placeholder="Briefly describe what you'd like to achieve with Public Relations & Media Outreach..." class="w-full px-4 py-3 rounded-xl border border-[#E6FBF6]/15 bg-[#0C4137]/35 backdrop-blur-xl text-xs font-medium focus:outline-none focus:border-[#06D6A0] transition-colors resize-none"></textarea>
+          <textarea name="message" rows="3" placeholder="Briefly describe what you'd like to achieve with Public Relations & Media Outreach..." class="w-full px-4 py-3 rounded-xl border border-[#D8F6FB]/15 bg-[#0B354A]/35 backdrop-blur-xl text-xs font-medium focus:outline-none focus:border-[#38BDF8] transition-colors resize-none"></textarea>
         </div>
 
-        <button type="submit" class="w-full btn-morphy-primary py-4 text-xs font-black shadow-lg shadow-[#06D6A0]/25">
+        <button type="submit" class="w-full btn-morphy-primary py-4 text-xs font-black shadow-lg shadow-[#38BDF8]/25">
           <span>Submit Project Inquiry &rarr;</span>
         </button>
       </form>
@@ -470,12 +470,12 @@
   </section>
 
   <!-- 7. FOOTER -->
-  <footer class="py-16 border-t border-[#E6FBF6]/15 bg-[#0C4137]/35 backdrop-blur-xl relative z-10 text-xs text-[#7EADA3]">
+  <footer class="py-16 border-t border-[#D8F6FB]/15 bg-[#0B354A]/35 backdrop-blur-xl relative z-10 text-xs text-[#7EADA3]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         <div class="space-y-3">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-xl bg-[#06D6A0] text-white flex items-center justify-center font-black text-xs shadow-sm">
+            <div class="w-8 h-8 rounded-xl bg-[#38BDF8] text-white flex items-center justify-center font-black text-xs shadow-sm">
               ✦
             </div>
             <span class="font-bold text-white tracking-tight text-base">Md. Shakibur Rahaman</span>
@@ -487,38 +487,38 @@
         <div>
           <div class="text-white font-bold uppercase tracking-wider text-[11px] mb-3">Explore Hubs</div>
           <div class="space-y-2">
-            <div><a href="/" class="hover:text-[#06D6A0] transition-colors">Home</a></div>
-            <div><a href="/about" class="hover:text-[#06D6A0] transition-colors">About</a></div>
-            <div><a href="/services" class="hover:text-[#06D6A0] font-bold text-[#06D6A0] transition-colors">9 Strategic Services</a></div>
-            <div><a href="/projects" class="hover:text-[#06D6A0] transition-colors">15 Web Projects</a></div>
-            <div><a href="/experience" class="hover:text-[#06D6A0] transition-colors">Experience Roadmap</a></div>
-            <div><a href="/consultation" class="hover:text-[#06D6A0] transition-colors">Consultation Booking</a></div>
+            <div><a href="/" class="hover:text-[#38BDF8] transition-colors">Home</a></div>
+            <div><a href="/about" class="hover:text-[#38BDF8] transition-colors">About</a></div>
+            <div><a href="/services" class="hover:text-[#38BDF8] font-bold text-[#38BDF8] transition-colors">9 Strategic Services</a></div>
+            <div><a href="/projects" class="hover:text-[#38BDF8] transition-colors">15 Web Projects</a></div>
+            <div><a href="/experience" class="hover:text-[#38BDF8] transition-colors">Experience Roadmap</a></div>
+            <div><a href="/consultation" class="hover:text-[#38BDF8] transition-colors">Consultation Booking</a></div>
           </div>
         </div>
         <div>
           <div class="text-white font-bold uppercase tracking-wider text-[11px] mb-3">Core Disciplines</div>
           <div class="space-y-2">
-            <div><a href="/services/branding" class="hover:text-[#06D6A0] transition-colors">01 Branding &amp; Strategy</a></div>
-            <div><a href="/services/graphics-design" class="hover:text-[#06D6A0] transition-colors">02 Graphics &amp; UI/UX</a></div>
-            <div><a href="/services/web-development" class="hover:text-[#06D6A0] transition-colors">03 Full-Stack Web Dev</a></div>
-            <div><a href="/services/social-media-marketing" class="hover:text-[#06D6A0] transition-colors">04 Social Media &amp; Meta</a></div>
-            <div><a href="/services/google-ads" class="hover:text-[#06D6A0] transition-colors">07 Google Ads Scaling</a></div>
+            <div><a href="/services/branding" class="hover:text-[#38BDF8] transition-colors">01 Branding &amp; Strategy</a></div>
+            <div><a href="/services/graphics-design" class="hover:text-[#38BDF8] transition-colors">02 Graphics &amp; UI/UX</a></div>
+            <div><a href="/services/web-development" class="hover:text-[#38BDF8] transition-colors">03 Full-Stack Web Dev</a></div>
+            <div><a href="/services/social-media-marketing" class="hover:text-[#38BDF8] transition-colors">04 Social Media &amp; Meta</a></div>
+            <div><a href="/services/google-ads" class="hover:text-[#38BDF8] transition-colors">07 Google Ads Scaling</a></div>
           </div>
         </div>
         <div>
           <div class="text-white font-bold uppercase tracking-wider text-[11px] mb-3">Direct Contact</div>
           <div class="space-y-2">
-            <div><a href="mailto:shakibur188@gmail.com" class="hover:text-[#06D6A0] font-bold transition-colors">shakibur188@gmail.com</a></div>
-            <div><a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#06D6A0] font-bold transition-colors">+880 1838-070468</a></div>
+            <div><a href="mailto:shakibur188@gmail.com" class="hover:text-[#38BDF8] font-bold transition-colors">shakibur188@gmail.com</a></div>
+            <div><a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#38BDF8] font-bold transition-colors">+880 1838-070468</a></div>
             
           </div>
         </div>
       </div>
-      <div class="pt-8 border-t border-[#E6FBF6]/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+      <div class="pt-8 border-t border-[#D8F6FB]/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
         <div>&copy; 2026 Md. Shakibur Rahaman. All rights reserved.</div>
         <div class="flex items-center gap-4">
-          <a href="https://github.com/shakibur188-tech/Shakib-Portfolio" target="_blank" class="hover:text-[#06D6A0] transition-colors">GitHub</a>
-          <a href="https://www.linkedin.com/in/md-shakibur-rahaman" target="_blank" class="hover:text-[#06D6A0] transition-colors">LinkedIn</a>
+          <a href="https://github.com/shakibur188-tech/Shakib-Portfolio" target="_blank" class="hover:text-[#38BDF8] transition-colors">GitHub</a>
+          <a href="https://www.linkedin.com/in/md-shakibur-rahaman" target="_blank" class="hover:text-[#38BDF8] transition-colors">LinkedIn</a>
         </div>
       </div>
     </div>
