@@ -779,12 +779,6 @@
           <i class="fa-solid fa-tag text-[#0066FF]"></i>
           <span>ই-কমার্স প্যাকেজ বুকিং</span>
         </div>
-        <h3 class="text-xl sm:text-2xl font-black text-[#0B0F19] mt-2" id="modalOfferTitle">
-          প্যাকেজ বুকিং ফর্ম
-        </h3>
-        <p class="text-xs font-semibold text-[#64748B] mt-1" id="modalOfferSub">
-          আপনার তথ্য দিন — আমরা দ্রুত আপনার সাথে যোগাযোগ করব
-        </p>
       </div>
 
       <!-- Form -->
@@ -970,13 +964,9 @@
     // --- 4. UNIFIED BOOKING MODAL ---
     function openOfferModal(planTitle, planPrice) {
       const modal = document.getElementById('offerModal');
-      const titleEl = document.getElementById('modalOfferTitle');
-      const subEl = document.getElementById('modalOfferSub');
       const pkgSelect = document.getElementById('modalPackage');
       const alertBox = document.getElementById('modalAlertBox');
 
-      if (titleEl && planTitle) titleEl.innerText = planTitle + ' বুকিং';
-      if (subEl && planPrice) subEl.innerText = 'প্যাকেজ মূল্য: ' + planPrice;
       if (alertBox) alertBox.classList.add('hidden');
 
       if (pkgSelect && planTitle) {
