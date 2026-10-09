@@ -16,16 +16,19 @@
               olive: '#06D6A0',
               forest: '#0C4137',
               slate: '#06D6A0',
-              mist: '#73968E',
-              stone: '#D7EFE9',
+              mist: '#6E9B91',
+              stone: 'rgba(230, 251, 246, 0.12)',
               emerald: '#06D6A0',
               brunswick: '#0C4137',
-              polar: '#E6FBF6'
+              polar: '#E6FBF6',
+              canvas: '#03100D',
+              card: 'rgba(12, 65, 55, 0.35)'
             },
-            canvas: '#F4FBF8'
+            canvas: '#03100D'
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            bengali: ['"Hind Siliguri"', '"Plus Jakarta Sans"', 'sans-serif'],
             display: ['"Plus Jakarta Sans"', 'sans-serif'],
             mono: ['"Plus Jakarta Sans"', 'monospace']
           }
@@ -111,7 +114,7 @@
     }
   </style>
 </head>
-<body class="bg-[#EDF9F5] text-[#08201A] font-sans antialiased selection:bg-[#06D6A0] selection:text-white relative overflow-x-hidden min-h-screen flex flex-col justify-between">
+<body class="bg-[#051F19] text-white font-sans antialiased selection:bg-[#06D6A0] selection:text-white relative overflow-x-hidden min-h-screen flex flex-col justify-between">
 
   <!-- Ambient Light Background Mesh & Canvas -->
   <div class="ambient-mesh-glow"></div>
@@ -119,20 +122,20 @@
   <div class="ambient-vignette"></div>
 
   <!-- Header Navigation -->
-  <header class="relative z-20 border-b border-[#06D6A0]/15 bg-white/90 backdrop-blur-xl">
+  <header class="relative z-20 border-b border-[#06D6A0]/15 bg-[#03100D]/90 backdrop-blur-xl">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
       <a href="/" class="flex items-center gap-3.5 group">
         <div class="w-10 h-10 rounded-xl bg-[#06D6A0] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#06D6A0]/25">
           SR
         </div>
         <div class="flex flex-col">
-          <span class="font-bold text-[#08201A] tracking-tight text-base group-hover:text-[#06D6A0] transition-colors">Md. Shakibur Rahaman</span>
+          <span class="font-bold text-white tracking-tight text-base group-hover:text-[#06D6A0] transition-colors">Md. Shakibur Rahaman</span>
           <span class="text-[10px] text-[#06D6A0] font-bold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
         </div>
       </a>
 
       <div class="flex items-center gap-4">
-        <a href="/" class="text-xs font-bold text-[#64748B] hover:text-[#06D6A0] flex items-center gap-1.5 transition-colors">
+        <a href="/" class="text-xs font-bold text-[#7EADA3] hover:text-[#06D6A0] flex items-center gap-1.5 transition-colors">
           <i class="fa-solid fa-arrow-left text-[11px]"></i>
           <span>Return to Website</span>
         </a>
@@ -144,7 +147,7 @@
   <main class="relative z-10 flex-1 max-w-3xl mx-auto w-full px-4 sm:px-6 py-12">
     
     <!-- Loading State Skeleton -->
-    <div id="formLoadingSkeleton" class="bg-white border border-[#06D6A0]/20 rounded-3xl p-8 sm:p-12 shadow-xl animate-pulse space-y-6">
+    <div id="formLoadingSkeleton" class="bg-[#0C4137]/35 backdrop-blur-xl border border-[#06D6A0]/20 rounded-3xl p-8 sm:p-12 shadow-xl animate-pulse space-y-6">
       <div class="w-24 h-6 bg-gray-200 rounded-full"></div>
       <div class="w-3/4 h-8 bg-gray-200 rounded-lg"></div>
       <div class="w-full h-4 bg-gray-100 rounded"></div>
@@ -156,17 +159,17 @@
     </div>
 
     <!-- Error State Container (Hidden by default) -->
-    <div id="formErrorContainer" class="hidden bg-white border border-red-200 rounded-3xl p-8 text-center shadow-xl">
+    <div id="formErrorContainer" class="hidden bg-[#0C4137]/35 backdrop-blur-xl border border-red-200 rounded-3xl p-8 text-center shadow-xl">
       <div class="w-14 h-14 mx-auto rounded-2xl bg-red-50 text-red-500 flex items-center justify-center text-2xl mb-4">
         <i class="fa-solid fa-triangle-exclamation"></i>
       </div>
-      <h2 class="text-xl font-bold text-[#08201A] mb-2" id="formErrorTitle">Form Unavailable</h2>
-      <p class="text-sm text-[#64748B] mb-6" id="formErrorMessage">This form does not exist, is set to inactive, or has expired.</p>
+      <h2 class="text-xl font-bold text-white mb-2" id="formErrorTitle">Form Unavailable</h2>
+      <p class="text-sm text-[#7EADA3] mb-6" id="formErrorMessage">This form does not exist, is set to inactive, or has expired.</p>
       <a href="/" class="btn-aesthetic-primary inline-flex">Return to Homepage</a>
     </div>
 
     <!-- Dynamic Form Card Container -->
-    <div id="formCardContainer" class="hidden bg-white border border-[#06D6A0]/20 rounded-3xl p-6 sm:p-12 shadow-2xl transition-all">
+    <div id="formCardContainer" class="hidden bg-[#0C4137]/35 backdrop-blur-xl border border-[#06D6A0]/20 rounded-3xl p-6 sm:p-12 shadow-2xl transition-all">
       
       <!-- Form Header -->
       <div class="mb-8 pb-6 border-b border-[#06D6A0]/15">
@@ -174,16 +177,16 @@
           <span id="formCategoryBadge" class="text-[10.5px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] border border-[#06D6A0]/25">
             General
           </span>
-          <span class="text-[11px] text-[#64748B] font-semibold flex items-center gap-1">
+          <span class="text-[11px] text-[#7EADA3] font-semibold flex items-center gap-1">
             <i class="fa-solid fa-shield-halved text-[10px] text-[#06D6A0]"></i>
             <span>Encrypted Response</span>
           </span>
         </div>
 
-        <h1 id="formMainTitle" class="text-2xl sm:text-4xl font-extrabold text-[#08201A] tracking-tight leading-tight mb-2">
+        <h1 id="formMainTitle" class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight mb-2">
           Project Briefing Form
         </h1>
-        <p id="formMainDescription" class="text-xs sm:text-sm text-[#64748B] leading-relaxed">
+        <p id="formMainDescription" class="text-xs sm:text-sm text-[#7EADA3] leading-relaxed">
           Please fill out the specifications below so we can prepare an accurate proposal and timeline.
         </p>
       </div>
@@ -211,7 +214,7 @@
         </div>
 
         <div class="text-center pt-2">
-          <p class="text-[11.5px] text-[#64748B]">
+          <p class="text-[11.5px] text-[#7EADA3]">
             <i class="fa-solid fa-lock text-[10px] text-[#06D6A0]"></i>
             Your information is stored strictly for project communication and never shared.
           </p>
@@ -223,13 +226,13 @@
         <div class="w-16 h-16 rounded-full bg-[#06D6A0]/15 text-[#06D6A0] border-2 border-[#06D6A0] flex items-center justify-center text-3xl mx-auto animate-bounce shadow-md">
           <i class="fa-solid fa-check"></i>
         </div>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#08201A]">Submission Received!</h2>
-        <p id="successCardMessage" class="text-sm text-[#64748B] max-w-md mx-auto leading-relaxed">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Submission Received!</h2>
+        <p id="successCardMessage" class="text-sm text-[#7EADA3] max-w-md mx-auto leading-relaxed">
           Thank you for providing your project details. Md. Shakibur Rahaman will review and respond promptly.
         </p>
         <div class="pt-4 flex flex-wrap items-center justify-center gap-3">
           <a href="/" class="btn-aesthetic-primary text-xs">Return to Public Website</a>
-          <button id="submitAnotherBtn" class="px-5 py-2.5 rounded-full border border-[#06D6A0]/30 text-xs font-bold text-[#08201A] bg-[#EDF9F5] hover:bg-white transition-all">
+          <button id="submitAnotherBtn" class="px-5 py-2.5 rounded-full border border-[#06D6A0]/30 text-xs font-bold text-white bg-[#051F19] hover:bg-[#0C4137]/35 backdrop-blur-xl transition-all">
             Submit Another Response
           </button>
         </div>
@@ -239,7 +242,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="relative z-10 py-8 border-t border-[#06D6A0]/15 bg-white/70 text-center text-xs text-[#64748B]">
+  <footer class="relative z-10 py-8 border-t border-[#06D6A0]/15 bg-white/70 text-center text-xs text-[#7EADA3]">
     <div class="max-w-5xl mx-auto px-4">
       <div>© 2026 Md. Shakibur Rahaman • Enterprise Creative Direction &amp; Digital Architecture</div>
       <div class="mt-1 text-[11px] text-[#06D6A0] font-bold">256-Bit Encrypted &bull; Automated CMS Delivery</div>
@@ -321,7 +324,7 @@
 
         if (f.helpText) {
           const help = document.createElement('p');
-          help.className = 'text-[11.5px] text-[#64748B] mb-1';
+          help.className = 'text-[11.5px] text-[#7EADA3] mb-1';
           help.textContent = f.helpText;
           fieldWrapper.appendChild(help);
         }

@@ -142,16 +142,16 @@ function initAmbientBackground() {
     mouse.targetY = e.clientY;
   }, { passive: true });
 
-  // Monestra & Arounda Luminous Emerald Aurora Mesh Orbs
+  // Monestra & Arounda Luxury Dark Emerald Aurora Mesh Orbs
   let orbs = [];
   function initOrbs() {
     orbs = [];
-    const count = width > 768 ? 9 : 5;
+    const count = width > 768 ? 8 : 5;
     const colors = [
       { r: 6, g: 214, b: 160 },    // Luminous Emerald (#06D6A0)
       { r: 12, g: 65, b: 55 },     // Brunswick Green (#0C4137)
-      { r: 230, g: 251, b: 246 },  // Polar Mint (#E6FBF6)
-      { r: 5, g: 179, b: 134 }     // Mint Glow (#05B386)
+      { r: 4, g: 179, b: 134 },    // Deep Mint Glow (#04B386)
+      { r: 18, g: 90, b: 76 }      // Dark Pine (#125A4C)
     ];
 
     for (let i = 0; i < count; i++) {
@@ -159,11 +159,11 @@ function initAmbientBackground() {
       orbs.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        r: Math.random() * 220 + 140,
-        vx: (Math.random() - 0.5) * 0.45,
-        vy: (Math.random() - 0.5) * 0.45,
+        r: Math.random() * 260 + 160,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
         color: col,
-        alpha: Math.random() * 0.22 + 0.12,
+        alpha: Math.random() * 0.28 + 0.15,
         phase: Math.random() * Math.PI * 2
       });
     }
@@ -177,17 +177,17 @@ function initAmbientBackground() {
     mouse.x += (mouse.targetX - mouse.x) * 0.04;
     mouse.y += (mouse.targetY - mouse.y) * 0.04;
 
-    // 1. Subtle Polar Mint canvas background
+    // 1. Monestra Deep Obsidian & Brunswick Green Canvas Base
     const bgGrad = ctx.createLinearGradient(0, 0, 0, height);
-    bgGrad.addColorStop(0, 'rgba(244, 251, 248, 0.98)');
-    bgGrad.addColorStop(0.5, 'rgba(235, 249, 244, 0.92)');
-    bgGrad.addColorStop(1, 'rgba(244, 251, 248, 0.98)');
+    bgGrad.addColorStop(0, '#03100D');
+    bgGrad.addColorStop(0.5, '#051F19');
+    bgGrad.addColorStop(1, '#020C0A');
     ctx.fillStyle = bgGrad;
     ctx.fillRect(0, 0, width, height);
 
-    // 2. Render drifting luminous Aurora Orbs
+    // 2. Render drifting luminous Aurora Orbs with Arounda lighting
     orbs.forEach(orb => {
-      orb.phase += 0.008;
+      orb.phase += 0.007;
       orb.x += orb.vx + Math.sin(orb.phase) * 0.25;
       orb.y += orb.vy + Math.cos(orb.phase) * 0.25;
 
@@ -197,14 +197,14 @@ function initAmbientBackground() {
       if (orb.y < -orb.r) orb.y = height + orb.r;
       if (orb.y > height + orb.r) orb.y = -orb.r;
 
-      const parallaxX = (mouse.x - width / 2) * 0.03;
-      const parallaxY = (mouse.y - height / 2) * 0.03;
+      const parallaxX = (mouse.x - width / 2) * 0.035;
+      const parallaxY = (mouse.y - height / 2) * 0.035;
       const ox = orb.x + parallaxX;
       const oy = orb.y + parallaxY;
 
       const grad = ctx.createRadialGradient(ox, oy, 0, ox, oy, orb.r);
       grad.addColorStop(0, `rgba(${orb.color.r}, ${orb.color.g}, ${orb.color.b}, ${orb.alpha})`);
-      grad.addColorStop(0.6, `rgba(${orb.color.r}, ${orb.color.g}, ${orb.color.b}, ${orb.alpha * 0.4})`);
+      grad.addColorStop(0.5, `rgba(${orb.color.r}, ${orb.color.g}, ${orb.color.b}, ${orb.alpha * 0.45})`);
       grad.addColorStop(1, `rgba(${orb.color.r}, ${orb.color.g}, ${orb.color.b}, 0)`);
 
       ctx.fillStyle = grad;
@@ -215,6 +215,9 @@ function initAmbientBackground() {
 
     requestAnimationFrame(render);
   }
+
+  requestAnimationFrame(render);
+}
 
   requestAnimationFrame(render);
 }

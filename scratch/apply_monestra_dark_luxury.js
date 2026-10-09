@@ -1,4 +1,10 @@
-/* ==========================================================================
+const fs = require('fs');
+const path = require('path');
+
+const rootDir = path.resolve(__dirname, '..');
+
+// 1. REWRITE styles.css WITH 100% MONESTRA / AROUNDA DARK LUXURY EMERALD DESIGN SYSTEM
+const luxuryDarkStylesCss = `/* ==========================================================================
    Md. Shakibur Rahaman - Strategic Lead & Digital Architect
    MONESTRA & AROUNDA LUXURY DARK EMERALD & BRUNSWICK GREEN THEME
    100% Pure Design Reference Match:
@@ -610,42 +616,223 @@ body {
   font-weight: 800;
   border-color: rgba(6, 214, 160, 0.4);
 }
+`;
 
-/* ==========================================================================
-   DARK LUXURY FORM INPUTS & SELECT CONTROLS
-   ========================================================================== */
-input, textarea, select {
-  background-color: rgba(12, 65, 55, 0.4) !important;
-  color: #E6FBF6 !important;
-  border: 1px solid rgba(230, 251, 246, 0.18) !important;
-  transition: all 0.25s ease !important;
+fs.writeFileSync(path.join(rootDir, 'styles.css'), luxuryDarkStylesCss, 'utf8');
+
+// 2. UPDATE app.js and services/service-page.js (Dark luxury Aurora canvas)
+function updateCanvasAnimation(filePath) {
+  if (!fs.existsSync(filePath)) return;
+  let code = fs.readFileSync(filePath, 'utf8');
+
+  const oldCanvasBlockRegex = /function initAmbientBackground\(\)[\s\S]*?requestAnimationFrame\(render\);\s*\}/m;
+  const newCanvasBlock = `function initAmbientBackground() {
+  const canvas = document.getElementById('ambientCanvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let width = (canvas.width = window.innerWidth);
+  let height = (canvas.height = window.innerHeight);
+
+  let mouse = { x: width / 2, y: height / 2, targetX: width / 2, targetY: height / 2 };
+
+  window.addEventListener('resize', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    initOrbs();
+  }, { passive: true });
+
+  window.addEventListener('mousemove', (e) => {
+    mouse.targetX = e.clientX;
+    mouse.targetY = e.clientY;
+  }, { passive: true });
+
+  // Monestra & Arounda Luxury Dark Emerald Aurora Mesh Orbs
+  let orbs = [];
+  function initOrbs() {
+    orbs = [];
+    const count = width > 768 ? 8 : 5;
+    const colors = [
+      { r: 6, g: 214, b: 160 },    // Luminous Emerald (#06D6A0)
+      { r: 12, g: 65, b: 55 },     // Brunswick Green (#0C4137)
+      { r: 4, g: 179, b: 134 },    // Deep Mint Glow (#04B386)
+      { r: 18, g: 90, b: 76 }      // Dark Pine (#125A4C)
+    ];
+
+    for (let i = 0; i < count; i++) {
+      const col = colors[i % colors.length];
+      orbs.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        r: Math.random() * 260 + 160,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
+        color: col,
+        alpha: Math.random() * 0.28 + 0.15,
+        phase: Math.random() * Math.PI * 2
+      });
+    }
+  }
+  initOrbs();
+
+  function render() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Smooth mouse parallax
+    mouse.x += (mouse.targetX - mouse.x) * 0.04;
+    mouse.y += (mouse.targetY - mouse.y) * 0.04;
+
+    // 1. Monestra Deep Obsidian & Brunswick Green Canvas Base
+    const bgGrad = ctx.createLinearGradient(0, 0, 0, height);
+    bgGrad.addColorStop(0, '#03100D');
+    bgGrad.addColorStop(0.5, '#051F19');
+    bgGrad.addColorStop(1, '#020C0A');
+    ctx.fillStyle = bgGrad;
+    ctx.fillRect(0, 0, width, height);
+
+    // 2. Render drifting luminous Aurora Orbs with Arounda lighting
+    orbs.forEach(orb => {
+      orb.phase += 0.007;
+      orb.x += orb.vx + Math.sin(orb.phase) * 0.25;
+      orb.y += orb.vy + Math.cos(orb.phase) * 0.25;
+
+      // Wrap around bounds softly
+      if (orb.x < -orb.r) orb.x = width + orb.r;
+      if (orb.x > width + orb.r) orb.x = -orb.r;
+      if (orb.y < -orb.r) orb.y = height + orb.r;
+      if (orb.y > height + orb.r) orb.y = -orb.r;
+
+      const parallaxX = (mouse.x - width / 2) * 0.035;
+      const parallaxY = (mouse.y - height / 2) * 0.035;
+      const ox = orb.x + parallaxX;
+      const oy = orb.y + parallaxY;
+
+      const grad = ctx.createRadialGradient(ox, oy, 0, ox, oy, orb.r);
+      grad.addColorStop(0, \`rgba(\${orb.color.r}, \${orb.color.g}, \${orb.color.b}, \${orb.alpha})\`);
+      grad.addColorStop(0.5, \`rgba(\${orb.color.r}, \${orb.color.g}, \${orb.color.b}, \${orb.alpha * 0.45})\`);
+      grad.addColorStop(1, \`rgba(\${orb.color.r}, \${orb.color.g}, \${orb.color.b}, 0)\`);
+
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(ox, oy, orb.r, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    requestAnimationFrame(render);
+  }
+
+  requestAnimationFrame(render);
+}`;
+
+  if (oldCanvasBlockRegex.test(code)) {
+    code = code.replace(oldCanvasBlockRegex, newCanvasBlock);
+  }
+  fs.writeFileSync(filePath, code, 'utf8');
 }
 
-input:focus, textarea:focus, select:focus {
-  border-color: #06D6A0 !important;
-  box-shadow: 0 0 20px rgba(6, 214, 160, 0.35) !important;
-  outline: none !important;
+updateCanvasAnimation(path.join(rootDir, 'app.js'));
+updateCanvasAnimation(path.join(rootDir, 'services', 'service-page.js'));
+
+// 3. FUNCTION TO UPDATE HTML PAGES FOR FULL DARK LUXURY MONESTRA THEME
+function updateHtmlFile(filePath) {
+  let content = fs.readFileSync(filePath, 'utf8');
+
+  // Tailwind configuration
+  const tailwindRegex = /tailwind\.config\s*=\s*\{[\s\S]*?theme:\s*\{[\s\S]*?extend:\s*\{[\s\S]*?colors:\s*\{[\s\S]*?\}\s*\}\s*\}\s*\}/m;
+  const newTailwindConfig = `tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#06D6A0',
+              forest: '#0C4137',
+              slate: '#06D6A0',
+              mist: '#6E9B91',
+              stone: 'rgba(230, 251, 246, 0.12)',
+              emerald: '#06D6A0',
+              brunswick: '#0C4137',
+              polar: '#E6FBF6',
+              canvas: '#03100D',
+              card: 'rgba(12, 65, 55, 0.35)'
+            },
+            canvas: '#03100D'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            bengali: ['"Hind Siliguri"', '"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'monospace']
+          }
+        }
+      }
+    }`;
+
+  if (tailwindRegex.test(content)) {
+    content = content.replace(tailwindRegex, newTailwindConfig);
+  }
+
+  // Replace light background body and containers with luxury dark emerald
+  content = content
+    // Body background
+    .replace(/bg-\[#FAFCFF\]/gi, 'bg-[#03100D]')
+    .replace(/bg-\[#F4FBF8\]/gi, 'bg-[#03100D]')
+    .replace(/bg-\[#F8FAFC\]/gi, 'bg-[#041612]')
+    .replace(/bg-\[#EDF9F5\]/gi, 'bg-[#051F19]')
+    .replace(/bg-canvas/gi, 'bg-[#03100D]')
+    
+    // Replace light white container sections with dark frosted panels
+    .replace(/bg-white(?=[\s"'])/g, 'bg-[#0C4137]/35 backdrop-blur-xl')
+    .replace(/bg-\[#FFFFFF\]/gi, 'bg-[#0C4137]/35 backdrop-blur-xl')
+    
+    // Text colors - make high contrast polar white & emerald
+    .replace(/text-\[#0B0F19\]/gi, 'text-white')
+    .replace(/text-\[#08201A\]/gi, 'text-white')
+    .replace(/text-\[#334155\]/gi, 'text-[#DDF6F0]')
+    .replace(/text-\[#475569\]/gi, 'text-[#A3CEC5]')
+    .replace(/text-\[#64748B\]/gi, 'text-[#7EADA3]')
+    
+    // Border colors - make soft glowing dark border
+    .replace(/border-\[#E2E8F0\]/gi, 'border-[#E6FBF6]/15')
+    .replace(/border-\[#D7EFE9\]/gi, 'border-[#E6FBF6]/15')
+    .replace(/border-\[#F1F5F9\]/gi, 'border-[#E6FBF6]/10')
+    .replace(/border-\[#E2F4EF\]/gi, 'border-[#E6FBF6]/10')
+    .replace(/border-slate-200/gi, 'border-[#E6FBF6]/15')
+    .replace(/divide-\[#F1F5F9\]/gi, 'divide-[#E6FBF6]/10')
+    .replace(/divide-\[#E2F4EF\]/gi, 'divide-[#E6FBF6]/10')
+    
+    // Navbar styling
+    .replace(/bg-white\/80/gi, 'bg-[#03100D]/80')
+    .replace(/bg-white\/90/gi, 'bg-[#03100D]/90')
+    .replace(/bg-white\/95/gi, 'bg-[#03100D]/95')
+    
+    // Lightbox and modal
+    .replace(/bg-black\/60/gi, 'bg-black/80')
+    .replace(/bg-black\/70/gi, 'bg-black/85');
+
+  fs.writeFileSync(filePath, content, 'utf8');
 }
 
-select option {
-  background-color: #041612 !important;
-  color: #E6FBF6 !important;
+// Find all HTML files recursively
+function getHtmlFiles(dir) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  list.forEach(file => {
+    if (file === 'node_modules' || file === '.git') return;
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+    if (stat && stat.isDirectory()) {
+      results = results.concat(getHtmlFiles(fullPath));
+    } else if (file.endsWith('.html')) {
+      results.push(fullPath);
+    }
+  });
+  return results;
 }
 
-::placeholder {
-  color: rgba(180, 220, 210, 0.5) !important;
-}
+const htmlFiles = getHtmlFiles(rootDir);
+htmlFiles.forEach(file => {
+  updateHtmlFile(file);
+  console.log('Applied Dark Luxury Emerald Theme to:', path.relative(rootDir, file));
+});
 
-/* Glass Tables */
-table {
-  color: #E6FBF6;
-}
-
-thead tr {
-  background: rgba(12, 65, 55, 0.5) !important;
-}
-
-tbody tr:hover {
-  background: rgba(6, 214, 160, 0.08) !important;
-}
-
+console.log('\\n✅ 100% Monestra / Arounda Dark Luxury Emerald & Brunswick Green Design System Applied!');

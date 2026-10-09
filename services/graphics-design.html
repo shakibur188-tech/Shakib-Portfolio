@@ -29,16 +29,19 @@
               olive: '#06D6A0',
               forest: '#0C4137',
               slate: '#06D6A0',
-              mist: '#73968E',
-              stone: '#D7EFE9',
+              mist: '#6E9B91',
+              stone: 'rgba(230, 251, 246, 0.12)',
               emerald: '#06D6A0',
               brunswick: '#0C4137',
-              polar: '#E6FBF6'
+              polar: '#E6FBF6',
+              canvas: '#03100D',
+              card: 'rgba(12, 65, 55, 0.35)'
             },
-            canvas: '#F4FBF8'
+            canvas: '#03100D'
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            bengali: ['"Hind Siliguri"', '"Plus Jakarta Sans"', 'sans-serif'],
             display: ['"Plus Jakarta Sans"', 'sans-serif'],
             mono: ['"Plus Jakarta Sans"', 'monospace']
           }
@@ -49,7 +52,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="/styles.css">
 </head>
-<body class="antialiased bg-[#F4FBF8] text-[#08201A] min-h-screen relative overflow-x-hidden">
+<body class="antialiased bg-[#03100D] text-white min-h-screen relative overflow-x-hidden">
 
   <div id="scrollProgressBar"></div>
   <div class="ambient-mesh-glow"></div>
@@ -57,7 +60,7 @@
   <div class="ambient-vignette"></div>
 
         <!-- 1. FIXED GLASS NAVBAR (Morphy Style) -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-2xl border-b border-[#D7EFE9] transition-all duration-300 shadow-2xs">
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#03100D]/95 backdrop-blur-2xl border-b border-[#E6FBF6]/15 transition-all duration-300 shadow-2xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
       <!-- Brand Logo -->
@@ -66,13 +69,13 @@
           ✦
         </div>
         <div class="flex flex-col min-w-0">
-          <span class="font-extrabold text-[#08201A] tracking-tight text-base sm:text-lg group-hover:text-[#06D6A0] transition-colors truncate" id="navBrandName">Md. Shakibur Rahaman</span>
+          <span class="font-extrabold text-white tracking-tight text-base sm:text-lg group-hover:text-[#06D6A0] transition-colors truncate" id="navBrandName">Md. Shakibur Rahaman</span>
           <span class="text-[10px] text-[#06D6A0] font-extrabold tracking-wider uppercase truncate">Strategic Lead &amp; Digital Architect</span>
         </div>
       </a>
 
       <!-- Centered Floating Pill Navigation Menu (Desktop Only) -->
-      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-white/95 border border-[#D7EFE9] text-sm font-semibold text-[#334155] backdrop-blur-md shadow-xs shrink-0">
+      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-[#03100D]/95 border border-[#E6FBF6]/15 text-sm font-semibold text-[#DDF6F0] backdrop-blur-md shadow-xs shrink-0">
         <a href="/" class="hover:text-[#06D6A0] transition-colors">Home</a>
         <a href="/about" class="hover:text-[#06D6A0] transition-colors">About</a>
         
@@ -80,16 +83,16 @@
         <div class="relative group">
           <a href="/services" class="flex items-center gap-1.5 text-[#06D6A0] font-bold transition-colors py-1">
             <span>Services</span>
-            <i class="fa-solid fa-chevron-down text-[10px] text-[#64748B] group-hover:text-[#06D6A0] group-hover:rotate-180 transition-transform duration-200"></i>
+            <i class="fa-solid fa-chevron-down text-[10px] text-[#7EADA3] group-hover:text-[#06D6A0] group-hover:rotate-180 transition-transform duration-200"></i>
           </a>
           <!-- Dropdown card -->
-          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#D7EFE9] shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Social Media &amp; Meta Ads</a>
-            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Google Ads &amp; Search</a>
-            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Full-Stack Web Development</a>
-            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">SEO &amp; AI Engine Optimization</a>
-            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Graphics &amp; Visual Assets</a>
-            <div class="my-1.5 border-t border-[#D7EFE9]"></div>
+          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#E6FBF6]/15 shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Social Media &amp; Meta Ads</a>
+            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Google Ads &amp; Search</a>
+            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Full-Stack Web Development</a>
+            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">SEO &amp; AI Engine Optimization</a>
+            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Graphics &amp; Visual Assets</a>
+            <div class="my-1.5 border-t border-[#E6FBF6]/15"></div>
             <a href="/services" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#06D6A0] hover:bg-[#06D6A0]/10 text-center">View All 9 Services &rarr;</a>
           </div>
         </div>
@@ -102,25 +105,25 @@
 
       <!-- Right Header Actions (Mobile Hamburger Toggle) -->
       <div class="flex items-center gap-3 shrink-0">
-        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-white border border-[#D7EFE9] hover:border-[#06D6A0]/30 hover:bg-[#06D6A0]/5 text-[#08201A] hover:text-[#06D6A0] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
+        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 hover:border-[#06D6A0]/30 hover:bg-[#06D6A0]/5 text-white hover:text-[#06D6A0] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
           <i id="mobileMenuIcon" class="fa-solid fa-bars-staggered text-base"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Dropdown Menu (Morphy Glassmorphic Design) -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-x border-[#D7EFE9] rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
-      <div class="space-y-1.5 pb-3 border-b border-[#E2F4EF]">
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-x border-[#E6FBF6]/15 rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
+      <div class="space-y-1.5 pb-3 border-b border-[#E6FBF6]/10">
         <a href="/" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-house-chimney text-xs text-[#64748B] w-4"></i>
+            <i class="fa-solid fa-house-chimney text-xs text-[#7EADA3] w-4"></i>
             <span>Home</span>
           </span>
           <i class="fa-solid fa-chevron-right text-[10px] text-[#94A3B8]"></i>
         </a>
         <a href="/about" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-user text-xs text-[#64748B] w-4"></i>
+            <i class="fa-solid fa-user text-xs text-[#7EADA3] w-4"></i>
             <span>About</span>
           </span>
           <i class="fa-solid fa-chevron-right text-[10px] text-[#94A3B8]"></i>
@@ -134,14 +137,14 @@
         </a>
         <a href="/projects" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-briefcase text-xs text-[#64748B] w-4"></i>
+            <i class="fa-solid fa-briefcase text-xs text-[#7EADA3] w-4"></i>
             <span>Projects</span>
           </span>
           <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#10B981]/10 text-[#10B981]">Featured</span>
         </a>
         <a href="/experience" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-chart-line text-xs text-[#64748B] w-4"></i>
+            <i class="fa-solid fa-chart-line text-xs text-[#7EADA3] w-4"></i>
             <span>Experience</span>
           </span>
           <i class="fa-solid fa-chevron-right text-[10px] text-[#94A3B8]"></i>
@@ -179,7 +182,7 @@
           <span>CORE PILLAR 02 • VISUAL SYSTEMS</span>
         </div>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-[#08201A] tracking-tight leading-[1.1]">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
           Graphics Design & Visual Systems
         </h1>
 
@@ -187,34 +190,34 @@
           High-Impact Visual Systems, Packaging Architecture & UI/UX
         </p>
 
-        <p class="text-sm sm:text-base text-[#64748B] font-medium leading-relaxed max-w-2xl">
+        <p class="text-sm sm:text-base text-[#7EADA3] font-medium leading-relaxed max-w-2xl">
           Building enduring visual design languages that command instant attention. From bespoke marketing pitch decks and packaging systems to pixel-perfect digital UI/UX interfaces and high-converting marketing collateral.
         </p>
 
         <!-- Tools Tags -->
         <div class="flex flex-wrap gap-2 pt-2">
           
-    <span class="px-3.5 py-1.5 rounded-xl bg-[#EDF9F5] border border-[#D7EFE9] text-xs font-bold text-[#334155] flex items-center gap-1.5">
+    <span class="px-3.5 py-1.5 rounded-xl bg-[#051F19] border border-[#E6FBF6]/15 text-xs font-bold text-[#DDF6F0] flex items-center gap-1.5">
       <span class="w-1.5 h-1.5 rounded-full bg-[#06D6A0]"></span>
       <span>Figma</span>
     </span>
   
-    <span class="px-3.5 py-1.5 rounded-xl bg-[#EDF9F5] border border-[#D7EFE9] text-xs font-bold text-[#334155] flex items-center gap-1.5">
+    <span class="px-3.5 py-1.5 rounded-xl bg-[#051F19] border border-[#E6FBF6]/15 text-xs font-bold text-[#DDF6F0] flex items-center gap-1.5">
       <span class="w-1.5 h-1.5 rounded-full bg-[#06D6A0]"></span>
       <span>Adobe Photoshop</span>
     </span>
   
-    <span class="px-3.5 py-1.5 rounded-xl bg-[#EDF9F5] border border-[#D7EFE9] text-xs font-bold text-[#334155] flex items-center gap-1.5">
+    <span class="px-3.5 py-1.5 rounded-xl bg-[#051F19] border border-[#E6FBF6]/15 text-xs font-bold text-[#DDF6F0] flex items-center gap-1.5">
       <span class="w-1.5 h-1.5 rounded-full bg-[#06D6A0]"></span>
       <span>Illustrator</span>
     </span>
   
-    <span class="px-3.5 py-1.5 rounded-xl bg-[#EDF9F5] border border-[#D7EFE9] text-xs font-bold text-[#334155] flex items-center gap-1.5">
+    <span class="px-3.5 py-1.5 rounded-xl bg-[#051F19] border border-[#E6FBF6]/15 text-xs font-bold text-[#DDF6F0] flex items-center gap-1.5">
       <span class="w-1.5 h-1.5 rounded-full bg-[#06D6A0]"></span>
       <span>InDesign</span>
     </span>
   
-    <span class="px-3.5 py-1.5 rounded-xl bg-[#EDF9F5] border border-[#D7EFE9] text-xs font-bold text-[#334155] flex items-center gap-1.5">
+    <span class="px-3.5 py-1.5 rounded-xl bg-[#051F19] border border-[#E6FBF6]/15 text-xs font-bold text-[#DDF6F0] flex items-center gap-1.5">
       <span class="w-1.5 h-1.5 rounded-full bg-[#06D6A0]"></span>
       <span>After Effects</span>
     </span>
@@ -236,7 +239,7 @@
 
       <!-- Right: Inset Visual Hero Card -->
       <div class="lg:col-span-5">
-        <div class="morphy-card p-4 sm:p-5 rounded-[32px] bg-white border-2 border-[#D7EFE9] shadow-2xl shadow-[#06D6A0]/15 space-y-5">
+        <div class="morphy-card p-4 sm:p-5 rounded-[32px] bg-[#0C4137]/35 backdrop-blur-xl border-2 border-[#E6FBF6]/15 shadow-2xl shadow-[#06D6A0]/15 space-y-5">
           <div class="relative h-72 w-full rounded-[24px] overflow-hidden bg-[#08201A]">
             <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Graphics Design & Visual Systems" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30"></div>
@@ -252,10 +255,10 @@
             </div>
           </div>
 
-          <div class="p-4 rounded-2xl bg-[#EDF9F5] border border-[#D7EFE9] flex items-center justify-between">
+          <div class="p-4 rounded-2xl bg-[#051F19] border border-[#E6FBF6]/15 flex items-center justify-between">
             <div class="flex items-center gap-3">
               <span class="w-3 h-3 rounded-full bg-[#10B981] animate-ping"></span>
-              <div class="text-xs font-bold text-[#08201A]">Direct Executive Leadership</div>
+              <div class="text-xs font-bold text-white">Direct Executive Leadership</div>
             </div>
             <span class="text-xs font-extrabold text-[#06D6A0]">100% SLA Guarantee</span>
           </div>
@@ -266,176 +269,176 @@
   </section>
 
   <!-- 3. QUANTIFIABLE IMPACT FIGURES -->
-  <section class="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#D7EFE9]">
+  <section class="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#E6FBF6]/15">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
       
-    <div class="morphy-card p-5 text-center bg-white shadow-xs">
+    <div class="morphy-card p-5 text-center bg-[#0C4137]/35 backdrop-blur-xl shadow-xs">
       <div class="text-2xl sm:text-3xl font-black text-[#06D6A0] mb-1">300+</div>
-      <div class="text-xs font-bold text-[#08201A]">Brand Assets Designed</div>
-      <div class="text-[10px] text-[#64748B] font-medium mt-0.5">Logos, packaging, and UI components</div>
+      <div class="text-xs font-bold text-white">Brand Assets Designed</div>
+      <div class="text-[10px] text-[#7EADA3] font-medium mt-0.5">Logos, packaging, and UI components</div>
     </div>
   
-    <div class="morphy-card p-5 text-center bg-white shadow-xs">
+    <div class="morphy-card p-5 text-center bg-[#0C4137]/35 backdrop-blur-xl shadow-xs">
       <div class="text-2xl sm:text-3xl font-black text-[#06D6A0] mb-1">99.8%</div>
-      <div class="text-xs font-bold text-[#08201A]">Pixel Precision</div>
-      <div class="text-[10px] text-[#64748B] font-medium mt-0.5">Flawless vector export standards</div>
+      <div class="text-xs font-bold text-white">Pixel Precision</div>
+      <div class="text-[10px] text-[#7EADA3] font-medium mt-0.5">Flawless vector export standards</div>
     </div>
   
-    <div class="morphy-card p-5 text-center bg-white shadow-xs">
+    <div class="morphy-card p-5 text-center bg-[#0C4137]/35 backdrop-blur-xl shadow-xs">
       <div class="text-2xl sm:text-3xl font-black text-[#06D6A0] mb-1">48h</div>
-      <div class="text-xs font-bold text-[#08201A]">Initial Concept Turnaround</div>
-      <div class="text-[10px] text-[#64748B] font-medium mt-0.5">Rapid design sprint cadence</div>
+      <div class="text-xs font-bold text-white">Initial Concept Turnaround</div>
+      <div class="text-[10px] text-[#7EADA3] font-medium mt-0.5">Rapid design sprint cadence</div>
     </div>
   
-    <div class="morphy-card p-5 text-center bg-white shadow-xs">
+    <div class="morphy-card p-5 text-center bg-[#0C4137]/35 backdrop-blur-xl shadow-xs">
       <div class="text-2xl sm:text-3xl font-black text-[#06D6A0] mb-1">100%</div>
-      <div class="text-xs font-bold text-[#08201A]">Commercial Print-Ready</div>
-      <div class="text-[10px] text-[#64748B] font-medium mt-0.5">CMYK & Pantone color calibrated</div>
+      <div class="text-xs font-bold text-white">Commercial Print-Ready</div>
+      <div class="text-[10px] text-[#7EADA3] font-medium mt-0.5">CMYK & Pantone color calibrated</div>
     </div>
   
     </div>
   </section>
 
   <!-- 4. 6 CORE DELIVERABLES BENTO GRID -->
-  <section id="deliverables" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#D7EFE9]">
+  <section id="deliverables" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#E6FBF6]/15">
     <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
       <div class="morphy-tag-primary justify-center">
         <i class="fa-solid fa-list-check"></i>
         <span>COMPREHENSIVE ARTIFACTS</span>
       </div>
-      <h2 class="text-3xl sm:text-5xl font-black text-[#08201A] tracking-tight">
+      <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
         What We Deliver &amp; <span class="text-[#06D6A0]">Guarantee</span>
       </h2>
-      <p class="text-sm sm:text-base text-[#64748B] font-medium leading-relaxed">
+      <p class="text-sm sm:text-base text-[#7EADA3] font-medium leading-relaxed">
         Every engagement includes battle-tested architecture, production-ready assets, full intellectual property transfer, and seamless integration into your business.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
       
-    <div class="morphy-card p-6 sm:p-7 bg-white border border-[#D7EFE9] space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
+    <div class="morphy-card p-6 sm:p-7 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
       <div class="flex items-center justify-between">
         <div class="w-8 h-8 rounded-xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center font-black text-xs">
           01
         </div>
         <i class="fa-solid fa-circle-check text-[#06D6A0] text-sm"></i>
       </div>
-      <h3 class="text-base font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors">UI/UX Web & Mobile Interface Design</h3>
-      <p class="text-xs text-[#64748B] font-medium leading-relaxed">Modern Figma design systems, responsive component libraries, user journeys, and micro-interactions.</p>
+      <h3 class="text-base font-black text-white group-hover:text-[#06D6A0] transition-colors">UI/UX Web & Mobile Interface Design</h3>
+      <p class="text-xs text-[#7EADA3] font-medium leading-relaxed">Modern Figma design systems, responsive component libraries, user journeys, and micro-interactions.</p>
     </div>
   
-    <div class="morphy-card p-6 sm:p-7 bg-white border border-[#D7EFE9] space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
+    <div class="morphy-card p-6 sm:p-7 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
       <div class="flex items-center justify-between">
         <div class="w-8 h-8 rounded-xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center font-black text-xs">
           02
         </div>
         <i class="fa-solid fa-circle-check text-[#06D6A0] text-sm"></i>
       </div>
-      <h3 class="text-base font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors">Luxury Packaging & Structural Dielines</h3>
-      <p class="text-xs text-[#64748B] font-medium leading-relaxed">High-end retail packaging, custom dielines, embossing, foil stamping, and production-ready print specs.</p>
+      <h3 class="text-base font-black text-white group-hover:text-[#06D6A0] transition-colors">Luxury Packaging & Structural Dielines</h3>
+      <p class="text-xs text-[#7EADA3] font-medium leading-relaxed">High-end retail packaging, custom dielines, embossing, foil stamping, and production-ready print specs.</p>
     </div>
   
-    <div class="morphy-card p-6 sm:p-7 bg-white border border-[#D7EFE9] space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
+    <div class="morphy-card p-6 sm:p-7 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
       <div class="flex items-center justify-between">
         <div class="w-8 h-8 rounded-xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center font-black text-xs">
           03
         </div>
         <i class="fa-solid fa-circle-check text-[#06D6A0] text-sm"></i>
       </div>
-      <h3 class="text-base font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors">Investor Pitch Decks & Keynotes</h3>
-      <p class="text-xs text-[#64748B] font-medium leading-relaxed">High-converting investor presentation decks, financial charts, editorial typography, and visual narratives.</p>
+      <h3 class="text-base font-black text-white group-hover:text-[#06D6A0] transition-colors">Investor Pitch Decks & Keynotes</h3>
+      <p class="text-xs text-[#7EADA3] font-medium leading-relaxed">High-converting investor presentation decks, financial charts, editorial typography, and visual narratives.</p>
     </div>
   
-    <div class="morphy-card p-6 sm:p-7 bg-white border border-[#D7EFE9] space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
+    <div class="morphy-card p-6 sm:p-7 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
       <div class="flex items-center justify-between">
         <div class="w-8 h-8 rounded-xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center font-black text-xs">
           04
         </div>
         <i class="fa-solid fa-circle-check text-[#06D6A0] text-sm"></i>
       </div>
-      <h3 class="text-base font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors">Social Media Key Visual Templates</h3>
-      <p class="text-xs text-[#64748B] font-medium leading-relaxed">Omnichannel creative suites for Instagram, LinkedIn, Meta, and YouTube with reusable modular Figma layouts.</p>
+      <h3 class="text-base font-black text-white group-hover:text-[#06D6A0] transition-colors">Social Media Key Visual Templates</h3>
+      <p class="text-xs text-[#7EADA3] font-medium leading-relaxed">Omnichannel creative suites for Instagram, LinkedIn, Meta, and YouTube with reusable modular Figma layouts.</p>
     </div>
   
-    <div class="morphy-card p-6 sm:p-7 bg-white border border-[#D7EFE9] space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
+    <div class="morphy-card p-6 sm:p-7 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
       <div class="flex items-center justify-between">
         <div class="w-8 h-8 rounded-xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center font-black text-xs">
           05
         </div>
         <i class="fa-solid fa-circle-check text-[#06D6A0] text-sm"></i>
       </div>
-      <h3 class="text-base font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors">Corporate Editorial & Annual Reports</h3>
-      <p class="text-xs text-[#64748B] font-medium leading-relaxed">Premium multi-page brochures, magazine editorial layouts, ESG sustainability reports, and whitepapers.</p>
+      <h3 class="text-base font-black text-white group-hover:text-[#06D6A0] transition-colors">Corporate Editorial & Annual Reports</h3>
+      <p class="text-xs text-[#7EADA3] font-medium leading-relaxed">Premium multi-page brochures, magazine editorial layouts, ESG sustainability reports, and whitepapers.</p>
     </div>
   
-    <div class="morphy-card p-6 sm:p-7 bg-white border border-[#D7EFE9] space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
+    <div class="morphy-card p-6 sm:p-7 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3 group hover:border-[#06D6A0] hover:shadow-xl hover:shadow-[#06D6A0]/10 transition-all duration-300">
       <div class="flex items-center justify-between">
         <div class="w-8 h-8 rounded-xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center font-black text-xs">
           06
         </div>
         <i class="fa-solid fa-circle-check text-[#06D6A0] text-sm"></i>
       </div>
-      <h3 class="text-base font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors">Custom Vector Illustration & Icons</h3>
-      <p class="text-xs text-[#64748B] font-medium leading-relaxed">Bespoke iconography sets, custom vector illustrations, 3D product mockups, and infographic systems.</p>
+      <h3 class="text-base font-black text-white group-hover:text-[#06D6A0] transition-colors">Custom Vector Illustration & Icons</h3>
+      <p class="text-xs text-[#7EADA3] font-medium leading-relaxed">Bespoke iconography sets, custom vector illustrations, 3D product mockups, and infographic systems.</p>
     </div>
   
     </div>
   </section>
 
   <!-- 5. 4-PHASE SPRINT WORKFLOW -->
-  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#D7EFE9]">
+  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#E6FBF6]/15">
     <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
       <div class="morphy-tag-primary justify-center">
         <i class="fa-solid fa-code-commit"></i>
         <span>SPRINT EXECUTION CADENCE</span>
       </div>
-      <h2 class="text-3xl sm:text-4xl font-black text-[#08201A] tracking-tight">
+      <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
         4-Phase Delivery Framework
       </h2>
-      <p class="text-sm text-[#64748B] font-medium">
+      <p class="text-sm text-[#7EADA3] font-medium">
         Milestone-driven sprints ensuring complete transparency and zero operational downtime.
       </p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="morphy-card p-6 bg-white border border-[#D7EFE9] space-y-3">
+      <div class="morphy-card p-6 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3">
         <div class="text-xs font-black text-[#06D6A0] uppercase">Phase 01 • Week 01</div>
-        <h3 class="text-lg font-black text-[#08201A]">Discovery &amp; Audit</h3>
-        <p class="text-xs text-[#64748B] leading-relaxed">In-depth technical analysis, competitor whitespace mapping, and strategic requirement sign-off.</p>
+        <h3 class="text-lg font-black text-white">Discovery &amp; Audit</h3>
+        <p class="text-xs text-[#7EADA3] leading-relaxed">In-depth technical analysis, competitor whitespace mapping, and strategic requirement sign-off.</p>
       </div>
 
-      <div class="morphy-card p-6 bg-white border border-[#D7EFE9] space-y-3">
+      <div class="morphy-card p-6 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3">
         <div class="text-xs font-black text-[#06D6A0] uppercase">Phase 02 • Week 02</div>
-        <h3 class="text-lg font-black text-[#08201A]">Architecture</h3>
-        <p class="text-xs text-[#64748B] leading-relaxed">Prototypes, design systems, technical blueprint sign-offs, and pre-production staging alignment.</p>
+        <h3 class="text-lg font-black text-white">Architecture</h3>
+        <p class="text-xs text-[#7EADA3] leading-relaxed">Prototypes, design systems, technical blueprint sign-offs, and pre-production staging alignment.</p>
       </div>
 
-      <div class="morphy-card p-6 bg-white border border-[#D7EFE9] space-y-3">
+      <div class="morphy-card p-6 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3">
         <div class="text-xs font-black text-[#06D6A0] uppercase">Phase 03 • Weeks 03–04</div>
-        <h3 class="text-lg font-black text-[#08201A]">Sprint Execution</h3>
-        <p class="text-xs text-[#64748B] leading-relaxed">Rapid production iterations, live staging deployments, cross-browser QA, and feedback loops.</p>
+        <h3 class="text-lg font-black text-white">Sprint Execution</h3>
+        <p class="text-xs text-[#7EADA3] leading-relaxed">Rapid production iterations, live staging deployments, cross-browser QA, and feedback loops.</p>
       </div>
 
-      <div class="morphy-card p-6 bg-white border border-[#D7EFE9] space-y-3">
+      <div class="morphy-card p-6 bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 space-y-3">
         <div class="text-xs font-black text-[#10B981] uppercase">Phase 04 • Week 05</div>
-        <h3 class="text-lg font-black text-[#08201A]">Launch &amp; Scaling</h3>
-        <p class="text-xs text-[#64748B] leading-relaxed">Zero-downtime production deployment, team training, master file transfer, and ongoing telemetry.</p>
+        <h3 class="text-lg font-black text-white">Launch &amp; Scaling</h3>
+        <p class="text-xs text-[#7EADA3] leading-relaxed">Zero-downtime production deployment, team training, master file transfer, and ongoing telemetry.</p>
       </div>
     </div>
   </section>
 
   <!-- 6. HIGH CONVERSION INTAKE FORM BANNER -->
-  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-[#D7EFE9]">
-    <div class="morphy-card p-8 sm:p-12 bg-white border-2 border-[#D7EFE9] shadow-2xl shadow-[#06D6A0]/10 space-y-8">
+  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-[#E6FBF6]/15">
+    <div class="morphy-card p-8 sm:p-12 bg-[#0C4137]/35 backdrop-blur-xl border-2 border-[#E6FBF6]/15 shadow-2xl shadow-[#06D6A0]/10 space-y-8">
       <div class="text-center space-y-3">
         <div class="morphy-tag-primary justify-center">
           <i class="fa-solid fa-paper-plane"></i>
           <span>DIRECT DISCIPLINE INQUIRY</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl font-black text-[#08201A]">
+        <h2 class="text-3xl sm:text-4xl font-black text-white">
           Commission <span class="text-[#06D6A0]">Graphics Design & Visual Systems</span>
         </h2>
-        <p class="text-xs sm:text-sm text-[#64748B] max-w-xl mx-auto">
+        <p class="text-xs sm:text-sm text-[#7EADA3] max-w-xl mx-auto">
           Share your business goals below to receive a custom sprint roadmap, timeline estimation, and consultation slot with Mr. Shakib.
         </p>
       </div>
@@ -445,18 +448,18 @@
         
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs font-bold text-[#08201A] uppercase tracking-wider mb-1.5">Your Name *</label>
-            <input type="text" name="name" required placeholder="e.g. Michael Vance" class="w-full px-4 py-3 rounded-xl border border-[#D7EFE9] bg-white text-xs font-medium focus:outline-none focus:border-[#06D6A0] transition-colors">
+            <label class="block text-xs font-bold text-white uppercase tracking-wider mb-1.5">Your Name *</label>
+            <input type="text" name="name" required placeholder="e.g. Michael Vance" class="w-full px-4 py-3 rounded-xl border border-[#E6FBF6]/15 bg-[#0C4137]/35 backdrop-blur-xl text-xs font-medium focus:outline-none focus:border-[#06D6A0] transition-colors">
           </div>
           <div>
-            <label class="block text-xs font-bold text-[#08201A] uppercase tracking-wider mb-1.5">Work Email / WhatsApp *</label>
-            <input type="text" name="email" required placeholder="you@company.com or +880 1..." class="w-full px-4 py-3 rounded-xl border border-[#D7EFE9] bg-white text-xs font-medium focus:outline-none focus:border-[#06D6A0] transition-colors">
+            <label class="block text-xs font-bold text-white uppercase tracking-wider mb-1.5">Work Email / WhatsApp *</label>
+            <input type="text" name="email" required placeholder="you@company.com or +880 1..." class="w-full px-4 py-3 rounded-xl border border-[#E6FBF6]/15 bg-[#0C4137]/35 backdrop-blur-xl text-xs font-medium focus:outline-none focus:border-[#06D6A0] transition-colors">
           </div>
         </div>
 
         <div>
-          <label class="block text-xs font-bold text-[#08201A] uppercase tracking-wider mb-1.5">Project Scope &amp; Target Timeline</label>
-          <textarea name="message" rows="3" placeholder="Briefly describe what you'd like to achieve with Graphics Design & Visual Systems..." class="w-full px-4 py-3 rounded-xl border border-[#D7EFE9] bg-white text-xs font-medium focus:outline-none focus:border-[#06D6A0] transition-colors resize-none"></textarea>
+          <label class="block text-xs font-bold text-white uppercase tracking-wider mb-1.5">Project Scope &amp; Target Timeline</label>
+          <textarea name="message" rows="3" placeholder="Briefly describe what you'd like to achieve with Graphics Design & Visual Systems..." class="w-full px-4 py-3 rounded-xl border border-[#E6FBF6]/15 bg-[#0C4137]/35 backdrop-blur-xl text-xs font-medium focus:outline-none focus:border-[#06D6A0] transition-colors resize-none"></textarea>
         </div>
 
         <button type="submit" class="w-full btn-morphy-primary py-4 text-xs font-black shadow-lg shadow-[#06D6A0]/25">
@@ -467,7 +470,7 @@
   </section>
 
   <!-- 7. FOOTER -->
-  <footer class="py-16 border-t border-[#D7EFE9] bg-white relative z-10 text-xs text-[#64748B]">
+  <footer class="py-16 border-t border-[#E6FBF6]/15 bg-[#0C4137]/35 backdrop-blur-xl relative z-10 text-xs text-[#7EADA3]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         <div class="space-y-3">
@@ -475,14 +478,14 @@
             <div class="w-8 h-8 rounded-xl bg-[#06D6A0] text-white flex items-center justify-center font-black text-xs shadow-sm">
               ✦
             </div>
-            <span class="font-bold text-[#08201A] tracking-tight text-base">Md. Shakibur Rahaman</span>
+            <span class="font-bold text-white tracking-tight text-base">Md. Shakibur Rahaman</span>
           </div>
-          <p class="text-xs text-[#64748B] leading-relaxed">
+          <p class="text-xs text-[#7EADA3] leading-relaxed">
             Strategic Lead &amp; Digital Architect directing integrated branding, modern web engineering, and commercial growth.
           </p>
         </div>
         <div>
-          <div class="text-[#08201A] font-bold uppercase tracking-wider text-[11px] mb-3">Explore Hubs</div>
+          <div class="text-white font-bold uppercase tracking-wider text-[11px] mb-3">Explore Hubs</div>
           <div class="space-y-2">
             <div><a href="/" class="hover:text-[#06D6A0] transition-colors">Home</a></div>
             <div><a href="/about" class="hover:text-[#06D6A0] transition-colors">About</a></div>
@@ -493,7 +496,7 @@
           </div>
         </div>
         <div>
-          <div class="text-[#08201A] font-bold uppercase tracking-wider text-[11px] mb-3">Core Disciplines</div>
+          <div class="text-white font-bold uppercase tracking-wider text-[11px] mb-3">Core Disciplines</div>
           <div class="space-y-2">
             <div><a href="/services/branding" class="hover:text-[#06D6A0] transition-colors">01 Branding &amp; Strategy</a></div>
             <div><a href="/services/graphics-design" class="hover:text-[#06D6A0] transition-colors">02 Graphics &amp; UI/UX</a></div>
@@ -503,7 +506,7 @@
           </div>
         </div>
         <div>
-          <div class="text-[#08201A] font-bold uppercase tracking-wider text-[11px] mb-3">Direct Contact</div>
+          <div class="text-white font-bold uppercase tracking-wider text-[11px] mb-3">Direct Contact</div>
           <div class="space-y-2">
             <div><a href="mailto:shakibur188@gmail.com" class="hover:text-[#06D6A0] font-bold transition-colors">shakibur188@gmail.com</a></div>
             <div><a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#06D6A0] font-bold transition-colors">+880 1838-070468</a></div>
@@ -511,7 +514,7 @@
           </div>
         </div>
       </div>
-      <div class="pt-8 border-t border-[#D7EFE9] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+      <div class="pt-8 border-t border-[#E6FBF6]/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
         <div>&copy; 2026 Md. Shakibur Rahaman. All rights reserved.</div>
         <div class="flex items-center gap-4">
           <a href="https://github.com/shakibur188-tech/Shakib-Portfolio" target="_blank" class="hover:text-[#06D6A0] transition-colors">GitHub</a>

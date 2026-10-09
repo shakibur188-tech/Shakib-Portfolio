@@ -26,16 +26,19 @@
               olive: '#06D6A0',
               forest: '#0C4137',
               slate: '#06D6A0',
-              mist: '#73968E',
-              stone: '#D7EFE9',
+              mist: '#6E9B91',
+              stone: 'rgba(230, 251, 246, 0.12)',
               emerald: '#06D6A0',
               brunswick: '#0C4137',
-              polar: '#E6FBF6'
+              polar: '#E6FBF6',
+              canvas: '#03100D',
+              card: 'rgba(12, 65, 55, 0.35)'
             },
-            canvas: '#F4FBF8'
+            canvas: '#03100D'
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            bengali: ['"Hind Siliguri"', '"Plus Jakarta Sans"', 'sans-serif'],
             display: ['"Plus Jakarta Sans"', 'sans-serif'],
             mono: ['"Plus Jakarta Sans"', 'monospace']
           }
@@ -47,7 +50,7 @@
   <!-- Custom Unified Morphy Stylesheet -->
   <link rel="stylesheet" href="/styles.css">
 </head>
-<body class="bg-[#F4FBF8] text-[#08201A] font-sans antialiased selection:bg-[#06D6A0] selection:text-white relative overflow-x-hidden">
+<body class="bg-[#03100D] text-white font-sans antialiased selection:bg-[#06D6A0] selection:text-white relative overflow-x-hidden">
 
   <!-- 0. Top Scroll Progress Bar -->
   <div id="scrollProgressBar"></div>
@@ -59,7 +62,7 @@
 
   <!-- 2. FIXED NAVBAR -->
         <!-- 1. FIXED GLASS NAVBAR (Morphy Style) -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-2xl border-b border-[#D7EFE9] transition-all duration-300 shadow-2xs">
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#03100D]/95 backdrop-blur-2xl border-b border-[#E6FBF6]/15 transition-all duration-300 shadow-2xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
       <!-- Brand Logo -->
@@ -68,13 +71,13 @@
           ✦
         </div>
         <div class="flex flex-col min-w-0">
-          <span class="font-extrabold text-[#08201A] tracking-tight text-base sm:text-lg group-hover:text-[#06D6A0] transition-colors truncate" id="navBrandName">Md. Shakibur Rahaman</span>
+          <span class="font-extrabold text-white tracking-tight text-base sm:text-lg group-hover:text-[#06D6A0] transition-colors truncate" id="navBrandName">Md. Shakibur Rahaman</span>
           <span class="text-[10px] text-[#06D6A0] font-extrabold tracking-wider uppercase truncate">Strategic Lead &amp; Digital Architect</span>
         </div>
       </a>
 
       <!-- Centered Floating Pill Navigation Menu (Desktop Only) -->
-      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-white/95 border border-[#D7EFE9] text-sm font-semibold text-[#334155] backdrop-blur-md shadow-xs shrink-0">
+      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-[#03100D]/95 border border-[#E6FBF6]/15 text-sm font-semibold text-[#DDF6F0] backdrop-blur-md shadow-xs shrink-0">
         <a href="/" class="hover:text-[#06D6A0] transition-colors">Home</a>
         <a href="/about" class="hover:text-[#06D6A0] transition-colors">About</a>
         
@@ -82,16 +85,16 @@
         <div class="relative group">
           <a href="/services" class="flex items-center gap-1.5 hover:text-[#06D6A0] transition-colors py-1">
             <span>Services</span>
-            <i class="fa-solid fa-chevron-down text-[10px] text-[#64748B] group-hover:text-[#06D6A0] group-hover:rotate-180 transition-transform duration-200"></i>
+            <i class="fa-solid fa-chevron-down text-[10px] text-[#7EADA3] group-hover:text-[#06D6A0] group-hover:rotate-180 transition-transform duration-200"></i>
           </a>
           <!-- Dropdown card -->
-          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#D7EFE9] shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Social Media &amp; Meta Ads</a>
-            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Google Ads &amp; Search</a>
-            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Full-Stack Web Development</a>
-            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">SEO &amp; AI Engine Optimization</a>
-            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Graphics &amp; Visual Assets</a>
-            <div class="my-1.5 border-t border-[#D7EFE9]"></div>
+          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#E6FBF6]/15 shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Social Media &amp; Meta Ads</a>
+            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Google Ads &amp; Search</a>
+            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Full-Stack Web Development</a>
+            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">SEO &amp; AI Engine Optimization</a>
+            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Graphics &amp; Visual Assets</a>
+            <div class="my-1.5 border-t border-[#E6FBF6]/15"></div>
             <a href="/services" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#06D6A0] hover:bg-[#06D6A0]/10 text-center">View All 9 Services &rarr;</a>
           </div>
         </div>
@@ -104,46 +107,46 @@
 
       <!-- Right Header Actions (Mobile Hamburger Toggle) -->
       <div class="flex items-center gap-3 shrink-0">
-        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-white border border-[#D7EFE9] hover:border-[#06D6A0]/30 hover:bg-[#06D6A0]/5 text-[#08201A] hover:text-[#06D6A0] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
+        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 hover:border-[#06D6A0]/30 hover:bg-[#06D6A0]/5 text-white hover:text-[#06D6A0] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
           <i id="mobileMenuIcon" class="fa-solid fa-bars-staggered text-base"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Dropdown Menu (Morphy Glassmorphic Design) -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-x border-[#D7EFE9] rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
-      <div class="space-y-1.5 pb-3 border-b border-[#E2F4EF]">
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-x border-[#E6FBF6]/15 rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
+      <div class="space-y-1.5 pb-3 border-b border-[#E6FBF6]/10">
         <a href="/" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-house-chimney text-xs text-[#64748B] w-4"></i>
+            <i class="fa-solid fa-house-chimney text-xs text-[#7EADA3] w-4"></i>
             <span>Home</span>
           </span>
           <i class="fa-solid fa-chevron-right text-[10px] text-[#94A3B8]"></i>
         </a>
         <a href="/about" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-user text-xs text-[#64748B] w-4"></i>
+            <i class="fa-solid fa-user text-xs text-[#7EADA3] w-4"></i>
             <span>About</span>
           </span>
           <i class="fa-solid fa-chevron-right text-[10px] text-[#94A3B8]"></i>
         </a>
         <a href="/services" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-layer-group text-xs text-[#64748B] w-4"></i>
+            <i class="fa-solid fa-layer-group text-xs text-[#7EADA3] w-4"></i>
             <span>Services</span>
           </span>
           <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#06D6A0]/10 text-[#06D6A0]">9 Pillars</span>
         </a>
         <a href="/projects" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-briefcase text-xs text-[#64748B] w-4"></i>
+            <i class="fa-solid fa-briefcase text-xs text-[#7EADA3] w-4"></i>
             <span>Projects</span>
           </span>
           <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#10B981]/10 text-[#10B981]">Featured</span>
         </a>
         <a href="/experience" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-chart-line text-xs text-[#64748B] w-4"></i>
+            <i class="fa-solid fa-chart-line text-xs text-[#7EADA3] w-4"></i>
             <span>Experience</span>
           </span>
           <i class="fa-solid fa-chevron-right text-[10px] text-[#94A3B8]"></i>
@@ -177,18 +180,18 @@
         <span>ZERO-RISK PERSONAL PORTFOLIO PACKAGES</span>
       </div>
 
-      <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#08201A] tracking-tight leading-[1.12] max-w-4xl mx-auto">
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.12] max-w-4xl mx-auto">
         Personal Portfolio Packages
       </h1>
 
-      <p class="text-sm sm:text-base text-[#64748B] max-w-2xl mx-auto leading-relaxed">
+      <p class="text-sm sm:text-base text-[#7EADA3] max-w-2xl mx-auto leading-relaxed">
         Regular Price is BDT 45,000 Taka — Get up to 59% Discount with flexible EMI plans or Pay in Full.
       </p>
 
       
       <!-- Smart View Switcher (PC: Table Default, Phone: Cards Default) -->
       <div class="pt-3 flex items-center justify-center">
-        <div class="p-1 rounded-2xl bg-white border border-[#D7EFE9] shadow-xs inline-flex items-center gap-1">
+        <div class="p-1 rounded-2xl bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 shadow-xs inline-flex items-center gap-1">
           <button id="viewTableBtn" type="button" class="px-4 sm:px-5 py-2 rounded-xl font-extrabold text-xs flex items-center gap-2 transition-all duration-200">
             <i class="fa-solid fa-table-list text-[11px]"></i>
             <span>Comparison Table</span>
@@ -203,87 +206,87 @@
   </section>
 
   <!-- PRICING & MATRIX SECTION -->
-  <section class="py-12 md:py-20 border-t border-[#D7EFE9] bg-[#F4FBF8] relative z-10">
+  <section class="py-12 md:py-20 border-t border-[#E6FBF6]/15 bg-[#03100D] relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- COMPARISON MATRIX TABLE VIEW -->
       
       <!-- Mobile Scroll Indicator (visible only on small screens) -->
-      <div class="md:hidden flex items-center justify-center gap-2 mb-3 text-[11px] font-bold text-[#64748B] bg-white p-2.5 rounded-xl border border-[#D7EFE9] shadow-2xs">
+      <div class="md:hidden flex items-center justify-center gap-2 mb-3 text-[11px] font-bold text-[#7EADA3] bg-[#0C4137]/35 backdrop-blur-xl p-2.5 rounded-xl border border-[#E6FBF6]/15 shadow-2xs">
         <i class="fa-solid fa-arrows-left-right text-[#06D6A0] animate-pulse"></i>
         <span>Swipe horizontally to compare all 4 plans</span>
       </div>
-      <div id="pricingTableView" class="morphy-card p-0 rounded-3xl bg-white border border-[#D7EFE9] shadow-xl overflow-hidden">
+      <div id="pricingTableView" class="morphy-card p-0 rounded-3xl bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 shadow-xl overflow-hidden">
         <div class="overflow-x-auto">
           <table class="w-full text-left border-collapse min-w-[680px]">
           
             <thead>
-              <tr class="border-b border-[#D7EFE9] bg-[#EDF9F5]">
-                <th class="p-5 sm:p-6 text-sm font-black text-[#08201A] w-[24%]">Feature / Module</th>
+              <tr class="border-b border-[#E6FBF6]/15 bg-[#051F19]">
+                <th class="p-5 sm:p-6 text-sm font-black text-white w-[24%]">Feature / Module</th>
                 
-                <th class="p-5 sm:p-6 text-center border-l border-[#D7EFE9] w-[19%]">
-                  <div class="text-xs font-black uppercase text-[#64748B]">Startup</div>
+                <th class="p-5 sm:p-6 text-center border-l border-[#E6FBF6]/15 w-[19%]">
+                  <div class="text-xs font-black uppercase text-[#7EADA3]">Startup</div>
                   <div class="text-xs font-bold text-[#06D6A0] mt-0.5">12-Month EMI</div>
-                  <div class="text-lg font-black text-[#08201A] mt-2">৳ 2,200 <span class="text-[10px] font-normal text-[#64748B]">/mo</span></div>
+                  <div class="text-lg font-black text-white mt-2">৳ 2,200 <span class="text-[10px] font-normal text-[#7EADA3]">/mo</span></div>
                   <div class="text-[10.5px] font-bold text-[#06D6A0] bg-[#06D6A0]/10 py-1 px-2 rounded-lg mt-1 inline-block">Total ৳ 26,400 (Save 41%)</div>
                 </th>
 
-                <th class="p-5 sm:p-6 text-center border-l border-[#D7EFE9] w-[19%]">
-                  <div class="text-xs font-black uppercase text-[#64748B]">Momentum</div>
+                <th class="p-5 sm:p-6 text-center border-l border-[#E6FBF6]/15 w-[19%]">
+                  <div class="text-xs font-black uppercase text-[#7EADA3]">Momentum</div>
                   <div class="text-xs font-bold text-[#06D6A0] mt-0.5">9-Month EMI</div>
-                  <div class="text-lg font-black text-[#08201A] mt-2">৳ 2,800 <span class="text-[10px] font-normal text-[#64748B]">/mo</span></div>
+                  <div class="text-lg font-black text-white mt-2">৳ 2,800 <span class="text-[10px] font-normal text-[#7EADA3]">/mo</span></div>
                   <div class="text-[10.5px] font-bold text-[#06D6A0] bg-[#06D6A0]/10 py-1 px-2 rounded-lg mt-1 inline-block">Total ৳ 25,200 (Save 44%)</div>
                 </th>
 
-                <th class="p-5 sm:p-6 text-center border-l border-[#D7EFE9] w-[19%]">
-                  <div class="text-xs font-black uppercase text-[#64748B]">Accelerate</div>
+                <th class="p-5 sm:p-6 text-center border-l border-[#E6FBF6]/15 w-[19%]">
+                  <div class="text-xs font-black uppercase text-[#7EADA3]">Accelerate</div>
                   <div class="text-xs font-bold text-[#06D6A0] mt-0.5">6-Month EMI</div>
-                  <div class="text-lg font-black text-[#08201A] mt-2">৳ 4,000 <span class="text-[10px] font-normal text-[#64748B]">/mo</span></div>
+                  <div class="text-lg font-black text-white mt-2">৳ 4,000 <span class="text-[10px] font-normal text-[#7EADA3]">/mo</span></div>
                   <div class="text-[10.5px] font-bold text-[#06D6A0] bg-[#06D6A0]/10 py-1 px-2 rounded-lg mt-1 inline-block">Total ৳ 24,000 (Save 47%)</div>
                 </th>
 
                 <th class="p-5 sm:p-6 text-center border-l-2 border-[#06D6A0] bg-[#06D6A0]/5 w-[19%] relative">
                   <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-[#06D6A0] text-white text-[9px] font-black uppercase tracking-wider">Best Value</div>
                   <div class="text-xs font-black uppercase text-[#06D6A0]">Founder</div>
-                  <div class="text-xs font-bold text-[#08201A] mt-0.5">Pay In Full</div>
-                  <div class="text-xl font-black text-[#08201A] mt-2">৳ 18,500 <span class="text-[10px] font-normal text-[#64748B]">One-time</span></div>
+                  <div class="text-xs font-bold text-white mt-0.5">Pay In Full</div>
+                  <div class="text-xl font-black text-white mt-2">৳ 18,500 <span class="text-[10px] font-normal text-[#7EADA3]">One-time</span></div>
                   <div class="text-[10.5px] font-black text-white bg-gradient-to-r from-[#06D6A0] to-[#05B386] py-1 px-2.5 rounded-lg mt-1 inline-block shadow-xs">Save 59% Discount</div>
                 </th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-[#E2F4EF] text-xs font-medium text-[#475569]">
-              <tr class="hover:bg-[#EDF9F5]">
-                <td class="p-4 sm:p-5 font-bold text-[#08201A]">Morphy Bento Layout &amp; Theme</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#D7EFE9] text-[#10B981] font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#D7EFE9] text-[#10B981] font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#D7EFE9] text-[#10B981] font-bold text-base">✓</td>
+            <tbody class="divide-y divide-[#E6FBF6]/10 text-xs font-medium text-[#A3CEC5]">
+              <tr class="hover:bg-[#051F19]">
+                <td class="p-4 sm:p-5 font-bold text-white">Morphy Bento Layout &amp; Theme</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E6FBF6]/15 text-[#10B981] font-bold text-base">✓</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E6FBF6]/15 text-[#10B981] font-bold text-base">✓</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E6FBF6]/15 text-[#10B981] font-bold text-base">✓</td>
                 <td class="p-4 sm:p-5 text-center border-l-2 border-[#06D6A0] bg-[#06D6A0]/5 text-[#10B981] font-bold text-base">✓</td>
               </tr>
-              <tr class="hover:bg-[#EDF9F5]">
-                <td class="p-4 sm:p-5 font-bold text-[#08201A]">Career Timeline &amp; Credentials</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#D7EFE9] text-[#10B981] font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#D7EFE9] text-[#10B981] font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#D7EFE9] text-[#10B981] font-bold text-base">✓</td>
+              <tr class="hover:bg-[#051F19]">
+                <td class="p-4 sm:p-5 font-bold text-white">Career Timeline &amp; Credentials</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E6FBF6]/15 text-[#10B981] font-bold text-base">✓</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E6FBF6]/15 text-[#10B981] font-bold text-base">✓</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E6FBF6]/15 text-[#10B981] font-bold text-base">✓</td>
                 <td class="p-4 sm:p-5 text-center border-l-2 border-[#06D6A0] bg-[#06D6A0]/5 text-[#10B981] font-bold text-base">✓</td>
               </tr>
-              <tr class="hover:bg-[#EDF9F5]">
-                <td class="p-4 sm:p-5 font-bold text-[#08201A]">cPanel Handover</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#D7EFE9]">Month 12</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#D7EFE9]">Month 9</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#D7EFE9]">Month 6</td>
+              <tr class="hover:bg-[#051F19]">
+                <td class="p-4 sm:p-5 font-bold text-white">cPanel Handover</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E6FBF6]/15">Month 12</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E6FBF6]/15">Month 9</td>
+                <td class="p-4 sm:p-5 text-center border-l border-[#E6FBF6]/15">Month 6</td>
                 <td class="p-4 sm:p-5 text-center border-l-2 border-[#06D6A0] bg-[#06D6A0]/5 font-black text-[#10B981]">Day 1 (Immediate)</td>
               </tr>
               <!-- Action Row -->
-              <tr class="bg-[#EDF9F5] border-t-2 border-[#D7EFE9]">
-                <td class="p-5 font-bold text-[#08201A]">Claim Plan</td>
-                <td class="p-5 text-center border-l border-[#D7EFE9]">
-                  <button onclick="openOfferModal('Portfolio Startup (12-Mo EMI)', '৳2,200/month')" class="py-2.5 px-4 rounded-xl bg-white border border-[#D7EFE9] hover:bg-[#06D6A0] hover:text-white text-xs font-extrabold text-[#08201A] transition-all shadow-2xs">Get Started</button>
+              <tr class="bg-[#051F19] border-t-2 border-[#E6FBF6]/15">
+                <td class="p-5 font-bold text-white">Claim Plan</td>
+                <td class="p-5 text-center border-l border-[#E6FBF6]/15">
+                  <button onclick="openOfferModal('Portfolio Startup (12-Mo EMI)', '৳2,200/month')" class="py-2.5 px-4 rounded-xl bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 hover:bg-[#06D6A0] hover:text-white text-xs font-extrabold text-white transition-all shadow-2xs">Get Started</button>
                 </td>
-                <td class="p-5 text-center border-l border-[#D7EFE9]">
-                  <button onclick="openOfferModal('Portfolio Momentum (9-Mo EMI)', '৳2,800/month')" class="py-2.5 px-4 rounded-xl bg-white border border-[#D7EFE9] hover:bg-[#06D6A0] hover:text-white text-xs font-extrabold text-[#08201A] transition-all shadow-2xs">Get Started</button>
+                <td class="p-5 text-center border-l border-[#E6FBF6]/15">
+                  <button onclick="openOfferModal('Portfolio Momentum (9-Mo EMI)', '৳2,800/month')" class="py-2.5 px-4 rounded-xl bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 hover:bg-[#06D6A0] hover:text-white text-xs font-extrabold text-white transition-all shadow-2xs">Get Started</button>
                 </td>
-                <td class="p-5 text-center border-l border-[#D7EFE9]">
-                  <button onclick="openOfferModal('Portfolio Accelerate (6-Mo EMI)', '৳4,000/month')" class="py-2.5 px-4 rounded-xl bg-white border border-[#D7EFE9] hover:bg-[#06D6A0] hover:text-white text-xs font-extrabold text-[#08201A] transition-all shadow-2xs">Get Started</button>
+                <td class="p-5 text-center border-l border-[#E6FBF6]/15">
+                  <button onclick="openOfferModal('Portfolio Accelerate (6-Mo EMI)', '৳4,000/month')" class="py-2.5 px-4 rounded-xl bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 hover:bg-[#06D6A0] hover:text-white text-xs font-extrabold text-white transition-all shadow-2xs">Get Started</button>
                 </td>
                 <td class="p-5 text-center border-l-2 border-[#06D6A0] bg-[#06D6A0]/5">
                   <button onclick="openOfferModal('Portfolio Founder (Pay In Full)', '৳18,500 One-time')" class="py-2.5 px-5 rounded-xl bg-[#06D6A0] hover:bg-[#05B386] text-white text-xs font-black transition-all shadow-md shadow-[#06D6A0]/30">Claim Offer ➔</button>
@@ -298,16 +301,16 @@
       </div>
   </section>
   <!-- 6. COMMISSION A PLATFORM BANNER -->
-  <section class="py-20 bg-white border-t border-[#D7EFE9] relative z-10">
+  <section class="py-20 bg-[#0C4137]/35 backdrop-blur-xl border-t border-[#E6FBF6]/15 relative z-10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
       <div class="morphy-tag-primary justify-center">
         <i class="fa-solid fa-comments"></i>
         <span>CUSTOM PROPOSAL</span>
       </div>
-      <h2 class="text-3xl sm:text-5xl font-black text-[#08201A] tracking-tight">
+      <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
         Need a Tailored Commercial <span class="text-[#06D6A0]">Scope or Retainer?</span>
       </h2>
-      <p class="text-sm sm:text-base text-[#64748B] max-w-2xl mx-auto leading-relaxed">
+      <p class="text-sm sm:text-base text-[#7EADA3] max-w-2xl mx-auto leading-relaxed">
         Let's discuss your exact deliverables, timelines, and milestones in a private strategic consultation.
       </p>
       <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
@@ -324,7 +327,7 @@
   </section>
 
   <!-- 7. FOOTER -->
-  <footer class="py-16 border-t border-[#D7EFE9] bg-white relative z-10 text-xs text-[#64748B]">
+  <footer class="py-16 border-t border-[#E6FBF6]/15 bg-[#0C4137]/35 backdrop-blur-xl relative z-10 text-xs text-[#7EADA3]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         <div class="space-y-3">
@@ -332,14 +335,14 @@
             <div class="w-8 h-8 rounded-xl bg-[#06D6A0] text-white flex items-center justify-center font-black text-xs shadow-sm">
               ✦
             </div>
-            <span class="font-bold text-[#08201A] tracking-tight text-base">Md. Shakibur Rahaman</span>
+            <span class="font-bold text-white tracking-tight text-base">Md. Shakibur Rahaman</span>
           </div>
-          <p class="text-xs text-[#64748B] leading-relaxed">
+          <p class="text-xs text-[#7EADA3] leading-relaxed">
             Strategic Lead &amp; Digital Architect directing integrated branding, modern web engineering, and commercial media.
           </p>
         </div>
         <div>
-          <div class="text-[#08201A] font-bold uppercase tracking-wider text-[11px] mb-3">Explore Hubs</div>
+          <div class="text-white font-bold uppercase tracking-wider text-[11px] mb-3">Explore Hubs</div>
           <div class="space-y-2">
             <div><a href="/" class="hover:text-[#06D6A0] transition-colors">Home</a></div>
             <div><a href="/about" class="hover:text-[#06D6A0] transition-colors">About</a></div>
@@ -351,7 +354,7 @@
           </div>
         </div>
         <div>
-          <div class="text-[#08201A] font-bold uppercase tracking-wider text-[11px] mb-3">Core Disciplines</div>
+          <div class="text-white font-bold uppercase tracking-wider text-[11px] mb-3">Core Disciplines</div>
           <div class="space-y-2">
             <div><a href="/services/branding" class="hover:text-[#06D6A0] transition-colors">01 Branding &amp; Strategy</a></div>
             <div><a href="/services/graphics-design" class="hover:text-[#06D6A0] transition-colors">02 Graphics &amp; UI/UX</a></div>
@@ -361,7 +364,7 @@
           </div>
         </div>
         <div>
-          <div class="text-[#08201A] font-bold uppercase tracking-wider text-[11px] mb-3">Direct Contact</div>
+          <div class="text-white font-bold uppercase tracking-wider text-[11px] mb-3">Direct Contact</div>
           <div class="space-y-2">
             <div><a href="mailto:shakibur188@gmail.com" class="hover:text-[#06D6A0] font-bold transition-colors">shakibur188@gmail.com</a></div>
             <div><a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#06D6A0] font-bold transition-colors">+880 1838-070468</a></div>
@@ -369,7 +372,7 @@
           </div>
         </div>
       </div>
-      <div class="pt-8 border-t border-[#D7EFE9] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+      <div class="pt-8 border-t border-[#E6FBF6]/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
         <div>&copy; 2026 Md. Shakibur Rahaman. All rights reserved.</div>
         <div class="flex items-center gap-4">
           <a href="https://github.com/shakibur188-tech/Shakib-Portfolio" target="_blank" class="hover:text-[#06D6A0] transition-colors">GitHub</a>
@@ -380,11 +383,11 @@
   </footer>
 
   <!-- 8. INTERACTIVE CLAIM MODAL -->
-  <div id="offerModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-    <div class="relative w-full max-w-lg p-6 sm:p-8 rounded-3xl bg-white border border-[#D7EFE9] shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto">
+  <div id="offerModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="relative w-full max-w-lg p-6 sm:p-8 rounded-3xl bg-[#0C4137]/35 backdrop-blur-xl border border-[#E6FBF6]/15 shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto">
       
       <!-- Close Button -->
-      <button onclick="closeOfferModal()" aria-label="Close Modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-[#EDF9F5] border border-[#D7EFE9] text-[#08201A] flex items-center justify-center hover:bg-[#06D6A0] hover:text-white transition-colors">
+      <button onclick="closeOfferModal()" aria-label="Close Modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-[#051F19] border border-[#E6FBF6]/15 text-white flex items-center justify-center hover:bg-[#06D6A0] hover:text-white transition-colors">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
@@ -394,10 +397,10 @@
           <i class="fa-solid fa-tag text-[#06D6A0]"></i>
           <span>SPECIAL PACKAGE CLAIM</span>
         </div>
-        <h3 class="text-xl sm:text-2xl font-black text-[#08201A] mt-2" id="modalOfferTitle">
+        <h3 class="text-xl sm:text-2xl font-black text-white mt-2" id="modalOfferTitle">
           Claim Package
         </h3>
-        <p class="text-xs font-semibold text-[#64748B] mt-1" id="modalOfferSub">
+        <p class="text-xs font-semibold text-[#7EADA3] mt-1" id="modalOfferSub">
           Special Commercial Milestone Tier
         </p>
       </div>
@@ -408,29 +411,29 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div class="space-y-1">
-            <label class="text-xs font-bold text-[#08201A]">Your Name *</label>
-            <input type="text" id="modalName" required placeholder="Md. Rahim" class="w-full px-3.5 py-2.5 rounded-xl bg-[#EDF9F5] border border-[#D7EFE9] text-xs text-[#08201A] focus:outline-none focus:border-[#06D6A0]">
+            <label class="text-xs font-bold text-white">Your Name *</label>
+            <input type="text" id="modalName" required placeholder="Md. Rahim" class="w-full px-3.5 py-2.5 rounded-xl bg-[#051F19] border border-[#E6FBF6]/15 text-xs text-white focus:outline-none focus:border-[#06D6A0]">
           </div>
           <div class="space-y-1">
-            <label class="text-xs font-bold text-[#08201A]">Email Address *</label>
-            <input type="email" id="modalEmail" required placeholder="rahim@company.com" class="w-full px-3.5 py-2.5 rounded-xl bg-[#EDF9F5] border border-[#D7EFE9] text-xs text-[#08201A] focus:outline-none focus:border-[#06D6A0]">
+            <label class="text-xs font-bold text-white">Email Address *</label>
+            <input type="email" id="modalEmail" required placeholder="rahim@company.com" class="w-full px-3.5 py-2.5 rounded-xl bg-[#051F19] border border-[#E6FBF6]/15 text-xs text-white focus:outline-none focus:border-[#06D6A0]">
           </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div class="space-y-1">
-            <label class="text-xs font-bold text-[#08201A]">WhatsApp / Phone *</label>
-            <input type="tel" id="modalPhone" required placeholder="+880 1838..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#EDF9F5] border border-[#D7EFE9] text-xs text-[#08201A] focus:outline-none focus:border-[#06D6A0]">
+            <label class="text-xs font-bold text-white">WhatsApp / Phone *</label>
+            <input type="tel" id="modalPhone" required placeholder="+880 1838..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#051F19] border border-[#E6FBF6]/15 text-xs text-white focus:outline-none focus:border-[#06D6A0]">
           </div>
           <div class="space-y-1">
-            <label class="text-xs font-bold text-[#08201A]">Company / Website</label>
-            <input type="text" id="modalCompany" placeholder="Brand Name / URL" class="w-full px-3.5 py-2.5 rounded-xl bg-[#EDF9F5] border border-[#D7EFE9] text-xs text-[#08201A] focus:outline-none focus:border-[#06D6A0]">
+            <label class="text-xs font-bold text-white">Company / Website</label>
+            <input type="text" id="modalCompany" placeholder="Brand Name / URL" class="w-full px-3.5 py-2.5 rounded-xl bg-[#051F19] border border-[#E6FBF6]/15 text-xs text-white focus:outline-none focus:border-[#06D6A0]">
           </div>
         </div>
 
         <div class="space-y-1">
-          <label class="text-xs font-bold text-[#08201A]">Project Notes / Preferred Plan</label>
-          <textarea id="modalMessage" rows="3" placeholder="Describe your business goals, target launch timeline, or specific requirements..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#EDF9F5] border border-[#D7EFE9] text-xs text-[#08201A] focus:outline-none focus:border-[#06D6A0]"></textarea>
+          <label class="text-xs font-bold text-white">Project Notes / Preferred Plan</label>
+          <textarea id="modalMessage" rows="3" placeholder="Describe your business goals, target launch timeline, or specific requirements..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#051F19] border border-[#E6FBF6]/15 text-xs text-white focus:outline-none focus:border-[#06D6A0]"></textarea>
         </div>
 
         <!-- Alert Box -->
@@ -531,14 +534,14 @@
         tableSec.classList.remove('hidden');
         cardsSec.classList.add('hidden');
         btnTable.className = 'px-4 py-2 rounded-xl bg-[#06D6A0] text-white shadow-xs font-black text-xs flex items-center gap-1.5 transition-all';
-        btnCards.className = 'px-4 py-2 rounded-xl bg-transparent text-[#64748B] hover:text-[#08201A] font-bold text-xs flex items-center gap-1.5 transition-all';
+        btnCards.className = 'px-4 py-2 rounded-xl bg-transparent text-[#7EADA3] hover:text-white font-bold text-xs flex items-center gap-1.5 transition-all';
       });
 
       btnCards.addEventListener('click', () => {
         cardsSec.classList.remove('hidden');
         tableSec.classList.add('hidden');
         btnCards.className = 'px-4 py-2 rounded-xl bg-[#06D6A0] text-white shadow-xs font-black text-xs flex items-center gap-1.5 transition-all';
-        btnTable.className = 'px-4 py-2 rounded-xl bg-transparent text-[#64748B] hover:text-[#08201A] font-bold text-xs flex items-center gap-1.5 transition-all';
+        btnTable.className = 'px-4 py-2 rounded-xl bg-transparent text-[#7EADA3] hover:text-white font-bold text-xs flex items-center gap-1.5 transition-all';
       });
     }
     setupViewSwitcher();
@@ -553,7 +556,7 @@
         cardsSec.classList.remove('hidden');
         tableSec.classList.add('hidden');
         btnCards.className = 'px-4 py-2 rounded-xl bg-[#06D6A0] text-white shadow-xs font-black text-xs flex items-center gap-1.5 transition-all';
-        btnTable.className = 'px-4 py-2 rounded-xl bg-transparent text-[#64748B] hover:text-[#08201A] font-bold text-xs flex items-center gap-1.5 transition-all';
+        btnTable.className = 'px-4 py-2 rounded-xl bg-transparent text-[#7EADA3] hover:text-white font-bold text-xs flex items-center gap-1.5 transition-all';
       }
     }
   
