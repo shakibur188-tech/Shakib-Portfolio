@@ -7,33 +7,39 @@
 | **Domain Name** | `shakibur.info` |
 | **Author / Principal** | Md. Shakibur Rahaman |
 | **Professional Focus** | Digital Marketing Lead, Full-Stack Web Developer (MERN, Laravel, WordPress), SEO/AEO Strategist |
+| **Official Contact / WhatsApp** | `01838070468` / `+880 1838-070468` |
 | **Project Root** | `C:\Users\ORIGIN\.gemini\antigravity\scratch\Shakibur Rahaman` |
-| **Runtime Environment**| Node.js v24.21.0 on Windows |
-| **Active Cloudflare URL**| Live Tunnel Supervised via `server.js` |
+| **Runtime Environment**| Node.js on Windows (PowerShell) |
+| **Git Repository** | `https://github.com/shakibur188-tech/Shakib-Portfolio.git` (Branch: `main`) |
+| **Deployment Package** | `C:\Users\ORIGIN\Desktop\shakibur-cpanel-upload.zip` |
 | **Admin Credentials** | Username: `admin` | Password: `shakibur2026` |
 
 ---
 
 ## 2. Changelog & Modification Ledger
 
-### [2026-09-20] — Documentation Suite & Mobile Responsiveness Finalization
-- **Core Documentation**: Generated full technical documentation suite in root directory (`PRD.md`, `Architecture.md`, `Rules.md`, `Design.md`, `Task.md`, `Memory.md`).
-- **Mobile Viewport Optimization**: Applied master mobile responsiveness system across `styles.css` and all templates, eliminating horizontal scrolling and bounding badges.
-- **Navbar Visual Polish**: Implemented glassmorphic header, enhanced mobile slide-down drawer with quick category icons, and removed desktop CTA buttons on mobile viewports.
-- **About Me Section Redesign**: Removed studio portrait from About section and replaced with high-authority Strategic Leadership & Architecture Card.
-- **Tunnel & Server Verification**: Verified active Cloudflare quick tunnel serving both public portfolio and admin control center at HTTP 200 OK.
+### [2026-10-09] — Luxury Dark Teal Glass Overhaul, Dynamic Booking Flow & Page-Load Lead Capture
+- **Dark Teal / Cyan Aurora Glass Redesign**: Converted theme to luxury dark cyan/teal gradient (`#021217` to `#041C22`) with frosted glass styling (`bg-[#082830]/45 backdrop-blur-2xl border border-[#D1F5EE]/15`) across all pages.
+- **Mobile Navbar Fix**: Resolved mobile menu readability issue with dark glass background and crisp white navigation links.
+- **WhatsApp Direct Integration**: Updated site-wide contact number to `01838070468`.
+- **E-Commerce Offers & In-Page Booking Flow (`offers/ecommerce.html`)**:
+  - Removed popup interruption upon selecting a package; configured smooth scroll to down-page booking form.
+  - Implemented automatic package pre-selection in form dropdown.
+  - Added dynamic business type selection with conditional "Others" text input box.
+  - Implemented page-load welcome lead capture modal (Name + `+880` phone) transitioning to instant "Congratulations! 🎉" state.
+  - Set default view: Cards view on mobile, Comparison Table view on desktop.
+- **Production Push & ZIP Build**: Committed all changes to GitHub `main` branch (`ccd08dc`) and rebuilt `C:\Users\ORIGIN\Desktop\shakibur-cpanel-upload.zip`.
 
-### [2026-09-19] — Admin CMS UI Polish & Workflow Delivery Fixes
-- **Admin CSS Repair**: Added comprehensive accordion card styling, grid layouts, form row utilities, and custom button states to `admin.css`.
-- **4-Phase Delivery Framework**: Enhanced interactive phase switching with progress bar and step checklists across all 9 service detail pages.
-- **Testimonials Section**: Refined 8-column photo mosaic collage and clean borderless cards matching reference specifications.
+### [2026-09-30] — Multi-Page Architecture & Global Hydration
+- **Multi-Page Site Migration**: Built standalone pages for Services, Projects, Case Studies, Experience, Testimonials, and Consultation.
+- **Global Header & Navigation Hydration**: Developed `site-hydration.js` for universal navbar, footer, and active state management.
 
-### [2026-09-18] — Initial System Build & Feature Integration
-- **Full-Stack Node.js Server**: Built self-contained HTTP server with REST endpoints for content, leads, and custom form schemas.
-- **Form Builder Engine**: Integrated visual form builder with 22 industry templates, public link generator, and CSV exports.
-- **AI Studio Integration**: Connected OpenAI-compatible API gateway for automated copywriting, bio generation, and image synthesis.
+### [2026-09-20] — Documentation Suite & Mobile Responsiveness
+- **Core Documentation**: Generated full technical documentation suite (`PRD.md`, `Architecture.md`, `Rules.md`, `Design.md`, `Task.md`, `Memory.md`).
+- **Admin CMS & CRM**: Developed lead ledger, visual form builder, and AI studio in `admin.html`.
 
 ---
 
 ## 3. Pending Enhancements & Future Notes
-- *Log upcoming features, domain DNS mappings, or client additions here.*
+- Monitor lead submission conversion rates from e-commerce campaign traffic.
+- Integrate automated email / SMS webhook notifications for new lead arrivals.

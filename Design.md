@@ -1,51 +1,52 @@
 # Design System Specification — shakibur.info
 
 ## 1. Brand Aesthetic & Philosophy
-The **shakibur.info** design system is built upon a **Botanical Forest & Steel Slate** light aesthetic on a clean Stone Canvas. It blends organic warmth (earthy sage and deep olive) with modern architectural precision (steel slate and ice mist), communicating authority, technical mastery, and creative sophistication.
+The **shakibur.info** design system is built upon a **Dark Teal / Cyan Aurora & Frosted Glass** luxury aesthetic. It blends deep oceanic darks (`#021217`, `#041C22`) with vibrant neon cyan/teal accents (`#20E1B2`, `#0D9488`, `#D1F5EE`), frosted glass cards (`backdrop-blur-2xl`), and subtle luminous glowing borders, communicating high-end engineering authority, data mastery, and creative prestige.
 
 ---
 
 ## 2. Color Palette & Token Definitions
 
-| Token Name | Hex Code | Semantic Role | Usage Context |
+| Token Name | Hex Code / Value | Semantic Role | Usage Context |
 | :--- | :--- | :--- | :--- |
-| **--palette-olive** | `#70805D` | Primary Accent & Brand Identity | Primary buttons, active tabs, icon highlights, badges. |
-| **--palette-forest** | `#2A3B27` | Deep Accent & High Contrast Text | Major headings, monogram gradients, high-emphasis text. |
-| **--palette-slate** | `#55738D` | Secondary Accent & Metadata | Subtitles, pill borders, secondary links, category chips. |
-| **--palette-mist** | `#96A7B6` | Soft Neutral Accent | Gradient midpoints, subtle dividers, secondary badges. |
-| **--palette-stone** | `#CBC8C4` | Neutral Base & Border Tint | Subtle borders, ambient vignettes, inactive states. |
-| **--bg-canvas** | `#F8F9F6` | Page Background Canvas | Full-page light canvas, modal overlays, input fields. |
-| **--bg-card** | `#FFFFFF` | Elevated Surface & Panels | Bento cards, spotlight panels, accordion rows. |
+| **--palette-primary** | `#20E1B2` | Primary Neon Cyan / Teal Accent | Primary CTA buttons, glowing badges, active pills, hover borders. |
+| **--palette-teal-deep** | `#0D9488` | Deep Teal Accent | Secondary gradients, accent cards, icon backgrounds. |
+| **--palette-cyan-light**| `#D1F5EE` | Ice Mint Text / Neutral Highlight | Subheadings, feature text, badges, secondary icons. |
+| **--bg-canvas** | `#021217` to `#041C22` | Deep Ocean Canvas Gradient | Full-page background with radial aurora ambient lights. |
+| **--bg-glass-card** | `rgba(8, 40, 48, 0.45)` | Frosted Glass Surface | Bento cards, pricing tiers, feature blocks, modal backdrops. |
+| **--border-glass** | `rgba(209, 245, 238, 0.15)` | Subtle Glass Border | Card borders, table cell dividers, form inputs. |
+| **--text-primary** | `#FFFFFF` | High-Contrast Headings & Titles | Hero titles, package names, pricing figures. |
+| **--text-secondary** | `#94A3B8` / `#CBD5E1` | Readable Body & Meta Text | Paragraphs, descriptions, secondary metadata. |
 
 ---
 
 ## 3. Typography System
 
-**Single Unified Typeface**: `Plus Jakarta Sans` (Weights: 300, 400, 500, 600, 700, 800, 900)
+**Single Unified Typeface**: `Plus Jakarta Sans` & `Inter` (Weights: 300, 400, 500, 600, 700, 800, 900)
 
 | Hierarchy Level | Font Size (Desktop) | Font Size (Mobile) | Weight | Line Height | Letter Spacing |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Display Title (Hero)** | 4.5rem (72px) | 2.5rem (40px) | 800 (Extrabold) | 1.06 | -0.03em |
-| **Section Heading (H2)** | 3.0rem (48px) | 1.875rem (30px)| 800 (Extrabold) | 1.15 | -0.02em |
-| **Card Title (H3)** | 1.25rem (20px) | 1.125rem (18px)| 700 (Bold) | 1.30 | -0.015em |
-| **Body Text** | 0.9375rem (15px) | 0.875rem (14px)| 400 / 500 (Medium) | 1.65 | -0.01em |
-| **Meta / Eyebrow Tag** | 0.6875rem (11px) | 0.625rem (10px)| 800 (Extrabold) | 1.00 | +0.14em (Uppercase) |
-| **Code / Monospace** | 0.75rem (12px) | 0.6875rem (11px)| 600 (Semibold) | 1.40 | 0.00em |
+| **Display Title (Hero)** | 3.75rem – 4.5rem (60-72px) | 2.25rem (36px) | 800 (Extrabold) | 1.08 | -0.03em |
+| **Section Heading (H2)** | 2.5rem – 3.0rem (40-48px) | 1.75rem (28px) | 800 (Extrabold) | 1.15 | -0.02em |
+| **Card Title (H3)** | 1.25rem – 1.5rem (20-24px) | 1.125rem (18px) | 700 (Bold) | 1.30 | -0.015em |
+| **Body Text** | 0.9375rem (15px) | 0.875rem (14px) | 400 / 500 (Medium) | 1.65 | -0.01em |
+| **Meta / Eyebrow Tag** | 0.6875rem (11px) | 0.625rem (10px) | 800 (Extrabold) | 1.00 | +0.14em (Uppercase) |
+| **Pricing / Figures** | 2.25rem – 3.0rem (36-48px) | 1.75rem (28px) | 900 (Black) | 1.10 | -0.02em |
 
 ---
 
 ## 4. UI Components & Micro-Interactions
 
-### 4.1 Glassmorphic Cards & Mouse Spotlight
-- **Base Surface**: `rgba(255, 255, 255, 0.94)` with `backdrop-filter: blur(16px)` and `1px solid rgba(112, 128, 93, 0.18)`.
-- **Spotlight Sheen**: Dynamic mouse-following radial gradient driven by CSS custom properties (`--mouse-x`, `--mouse-y`).
-- **Elevation on Hover**: `transform: translateY(-4px)` with soft olive drop shadow (`0 16px 36px -10px rgba(42, 59, 39, 0.12)`).
+### 4.1 Frosted Glassmorphic Cards (`.glass-card`)
+- **Base Surface**: `bg-[#082830]/45 backdrop-blur-2xl border border-[#D1F5EE]/15`.
+- **Hover Transition**: `hover:border-[#20E1B2]/60 hover:-translate-y-1 transition-all duration-300 shadow-2xl`.
+- **Spotlight Sheen**: Subtle dynamic glow with gradient overlay `radial-gradient(circle at top, rgba(32,225,178,0.12), transparent 70%)`.
 
 ### 4.2 Interactive Action Buttons
-- **Primary Aesthetic Button**: Linear gradient `#70805D` to `#2A3B27`, rounded-full pill, white text, bold typography, arrow icon hover shift.
-- **Emerald Outline Button**: Transparent fill with `1px solid #70805D`, dark olive text, subtle green fill transition on hover.
-- **Glass Floating Pill**: White semi-transparent backdrop, subtle border, smooth hover elevation.
+- **Primary Glowing Pill**: `bg-gradient-to-r from-[#20E1B2] to-[#0D9488] text-[#021217] font-extrabold shadow-lg shadow-[#20E1B2]/20 hover:scale-[1.02]`.
+- **Glass Outline Button**: `bg-white/5 border border-[#D1F5EE]/20 text-[#D1F5EE] hover:bg-[#20E1B2]/10 hover:border-[#20E1B2]/50`.
+- **Floating WhatsApp Action**: Direct WhatsApp click triggering chat with `01838070468` / `+880 1838-070468`.
 
 ### 4.3 Ambient Background Engine
-- **Canvas Particle Orbs**: Smooth floating gradient nodes tuned with soft alpha channels (`rgba(112, 128, 93, 0.08)`, `rgba(85, 115, 141, 0.07)`).
-- **Animated Background Mesh**: 4-point radial mesh with 18s floating animation.
+- **Dark Aurora Mesh**: Fixed layered gradients `radial-gradient(circle at 15% 20%, rgba(32, 225, 178, 0.12) 0%, transparent 40%)` and `radial-gradient(circle at 85% 80%, rgba(13, 148, 136, 0.12) 0%, transparent 40%)`.
+- **Canvas Noise / Particle Layer**: Seamless subtle texture overlaid on top of `#021217` body canvas.

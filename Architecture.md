@@ -33,12 +33,12 @@
                                          |
                                          v
 +-----------------------------------------------------------------------------------+
-|                             PERSISTENCE LAYER (JSON DB)                           |
-|  - data/content.json (Site content, services, 15 web projects, SEO graph)         |
-|  - data/leads.json (Submitted project briefs, client inquiries)                   |
+|                             PERSISTENCE LAYER (JSON & LocalStorage)               |
+|  - data/content.json (Site content, services, web projects, SEO graph)            |
+|  - data/leads.json (Submitted project briefs, client inquiries, package bookings) |
 |  - data/custom_forms.json (Dynamic Form Builder schemas & templates)              |
 |  - data/form_submissions.json (Form responses & webhook payload logs)             |
-|  - data/ai_config.json (Encrypted server-side LLM credentials)                    |
+|  - localStorage (Client-side lead caching: shakib_leads, shakib_inquiries)        |
 +-----------------------------------------------------------------------------------+
 ```
 
@@ -49,17 +49,29 @@
 ```
 shakibur-portfolio/
 ├── index.html                     # Primary single-page portfolio & showcase
-├── services.html                  # Consolidated 9-Services single-page directory
-├── admin.html                     # Administrative control center & CMS app
-├── styles.css                     # Unified design system & responsive stylesheet
-├── admin.css                      # Admin CMS dashboard styling & component library
-├── app.js                         # Public client runtime, animation & DOM hydration
+├── services.html                  # Consolidated 9-Services directory
+├── projects.html                  # Web development projects showcase
+├── case-studies.html              # Case studies directory
+├── case-study.html                # Detailed single case study template
+├── experience.html                # Career timeline & expertise
+├── testimonials.html              # Client endorsements & photo mosaic
+├── consultation.html              # Strategy session booking
+├── contact.html                   # Contact & direct WhatsApp reach
+├── form.html                      # Standalone form viewer
+├── admin.html                     # Administrative control center & CRM
+├── admin.css                      # Admin CMS dashboard styling
 ├── admin.js                       # Admin CMS frontend application logic
-├── server.js                      # High-performance Node.js HTTP backend & tunnel
+├── styles.css                     # Unified Dark Teal Glass design system
+├── app.js                         # Public client runtime & DOM hydration
+├── site-hydration.js              # Multi-page header, footer, & navigation hydration
+├── server.js                      # High-performance Node.js backend & tunnel supervisor
 ├── llms.txt                       # Machine-readable context graph for LLMs (AEO)
 ├── package.json                   # Project descriptor & scripts
 │
-├── services/                      # Granular service vertical detail sub-pages
+├── offers/                        # Promotional packages & campaign landing pages
+│   └── ecommerce.html             # E-Commerce package pricing, matrix, & in-page booking
+│
+├── services/                      # 9 Granular service vertical detail sub-pages
 │   ├── service-page.js            # Shared interactive logic for service sub-pages
 │   ├── branding.html              # 01 Branding & Strategy
 │   ├── graphics-design.html       # 02 Graphics Design & Visual ID
@@ -97,8 +109,8 @@ shakibur-portfolio/
 | Layer | Technologies Selected | Justification |
 | :--- | :--- | :--- |
 | **Frontend Core** | HTML5, Modern ES6+ JavaScript, Tailwind CSS (Utility CDN) | Sub-second First Contentful Paint (FCP), zero build-step overhead, maximum reliability. |
-| **Styling & Motion** | Custom CSS3 Custom Properties, Plus Jakarta Sans, FontAwesome 6.5 | Bespoke Botanical Slate visual identity, fluid typography, smooth CSS transitions. |
+| **Styling & Motion** | Custom CSS3 Custom Properties, Plus Jakarta Sans, FontAwesome 6.5, Frosted Glass Blur | Luxury Dark Teal Aurora aesthetic, responsive cards, glassmorphic sheen effects. |
 | **Backend Runtime** | Node.js (Built-in `http`, `fs`, `path`, `crypto`, `child_process`) | Ultra-lightweight, zero external npm vulnerability surface, native fast I/O. |
-| **Data Persistence** | Atomic JSON Flat-File Store with in-memory caching | Deterministic snapshots, instant backup/restore, zero database connection latency. |
+| **Data Persistence** | Atomic JSON Flat-File Store with in-memory & LocalStorage caching | Deterministic snapshots, instant backup/restore, offline resilience. |
 | **Deployment & Tunnel** | Cloudflare Zero-Trust Quick Tunnel (`cloudflared`) | Instant SSL, DDoS protection, edge caching, zero exposed local ports. |
-| **Supported Dev Stacks** | MERN (MongoDB, Express, React, Node.js), Laravel, WordPress | Complete versatility across headless SPAs, enterprise PHP backends, and CMS portals. |
+| **Supported Dev Stacks** | MERN (MongoDB, Express, React, Node.js), Laravel, WordPress, WooCommerce | Complete versatility across headless SPAs, enterprise PHP backends, and CMS portals. |
