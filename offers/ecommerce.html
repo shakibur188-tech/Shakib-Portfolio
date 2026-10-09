@@ -381,11 +381,11 @@
         <!-- View Switcher -->
         <div class="pt-2 flex items-center justify-center">
           <div class="p-1.5 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm inline-flex items-center gap-1.5">
-            <button id="viewCardsBtn" type="button" class="px-5 py-2.5 rounded-xl font-black text-xs flex items-center gap-2 transition-all duration-200">
+            <button id="viewCardsBtn" type="button" onclick="setPricingView('cards')" class="px-5 py-2.5 rounded-xl font-black text-xs flex items-center gap-2 transition-all duration-200 bg-white text-[#64748B] hover:bg-[#F8FAFC]">
               <i class="fa-solid fa-table-cells-large text-xs"></i>
               <span>কার্ড ভিউ (Card View)</span>
             </button>
-            <button id="viewTableBtn" type="button" class="px-5 py-2.5 rounded-xl font-black text-xs flex items-center gap-2 transition-all duration-200">
+            <button id="viewTableBtn" type="button" onclick="setPricingView('table')" class="px-5 py-2.5 rounded-xl font-black text-xs flex items-center gap-2 transition-all duration-200 bg-[#0066FF] text-white shadow-md shadow-[#0066FF]/20">
               <i class="fa-solid fa-table-list text-xs"></i>
               <span>তুলনামূলক টেবিল (Table View)</span>
             </button>
@@ -395,8 +395,8 @@
       </div>
 
 
-      <!-- 1. CARD GRID VIEW -->
-      <div id="pricingCardsView" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+      <!-- 1. CARD GRID VIEW (Initially hidden - mutually exclusive with table view) -->
+      <div id="pricingCardsView" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
         
         <!-- Plan 1: 12-Month EMI (Startup Plan) -->
         <div class="morphy-card p-6 bg-white border border-[#E2E8F0] rounded-3xl flex flex-col justify-between space-y-5 hover:border-[#0066FF]/40 hover:shadow-xl transition-all">
@@ -534,170 +534,170 @@
       </div>
 
 
-      <!-- 2. COMPARISON TABLE VIEW -->
+      <!-- 2. COMPARISON TABLE VIEW (Visible by default) -->
       <div id="pricingTableView" class="morpy-table-container morphy-card p-0 rounded-3xl bg-white border border-[#E2E8F0] shadow-xl overflow-hidden">
         
         <!-- Mobile Horizontal Scroll Alert -->
-        <div class="md:hidden flex items-center justify-center gap-2 p-3 text-xs font-bold text-[#64748B] bg-[#F8FAFC] border-b border-[#E2E8F0]">
+        <div class="md:hidden flex items-center justify-center gap-2 p-2.5 text-xs font-bold text-[#64748B] bg-[#F8FAFC] border-b border-[#E2E8F0]">
           <i class="fa-solid fa-arrows-left-right text-[#0066FF] animate-pulse"></i>
           <span>4টি প্ল্যান তুলনা করতে ডানে-বামে সোয়াইপ করুন</span>
         </div>
 
         <div class="overflow-x-auto">
-          <table class="w-full text-left border-collapse min-w-[760px]">
+          <table class="w-full text-left border-collapse min-w-[720px]">
             <thead>
               <tr class="border-b border-[#E2E8F0] bg-[#F8FAFC]">
-                <th class="p-5 sm:p-6 text-sm font-black text-[#0B0F19] w-[24%]">মডিউল ও ফিচারসমূহ</th>
+                <th class="py-3 px-3 sm:py-4 sm:px-4 text-xs sm:text-sm font-black text-[#0B0F19] w-[24%]">মডিউল ও ফিচারসমূহ</th>
                 
-                <th class="p-5 sm:p-6 text-center border-l border-[#E2E8F0] w-[19%]">
-                  <div class="text-xs font-black uppercase text-[#64748B]">Startup</div>
-                  <div class="text-xs font-bold text-[#0066FF] mt-0.5">12 মাসের কিস্তি</div>
-                  <div class="text-lg font-black text-[#0B0F19] mt-2 font-eng">৳ 2,500 <span class="text-[10px] font-normal text-[#64748B] font-bengali">/ মাস</span></div>
-                  <div class="text-[10px] font-bold text-[#0066FF] bg-[#0066FF]/10 py-1 px-2 rounded-lg mt-1 inline-block font-eng">মোট ৳ 30,000</div>
+                <th class="py-3 px-3 sm:py-4 sm:px-4 text-center border-l border-[#E2E8F0] w-[19%]">
+                  <div class="text-[11px] font-black uppercase text-[#64748B]">Startup</div>
+                  <div class="text-[11px] font-bold text-[#0066FF] mt-0.5">12 মাসের কিস্তি</div>
+                  <div class="text-base sm:text-lg font-black text-[#0B0F19] mt-1 font-eng">৳ 2,500 <span class="text-[10px] font-normal text-[#64748B] font-bengali">/ মাস</span></div>
+                  <div class="text-[9.5px] font-bold text-[#0066FF] bg-[#0066FF]/10 py-0.5 px-1.5 rounded mt-0.5 inline-block font-eng">মোট ৳ 30,000</div>
                 </th>
 
-                <th class="p-5 sm:p-6 text-center border-l border-[#E2E8F0] w-[19%]">
-                  <div class="text-xs font-black uppercase text-[#64748B]">Accelerate</div>
-                  <div class="text-xs font-bold text-[#0066FF] mt-0.5">6 মাসের কিস্তি</div>
-                  <div class="text-lg font-black text-[#0B0F19] mt-2 font-eng">৳ 4,500 <span class="text-[10px] font-normal text-[#64748B] font-bengali">/ মাস</span></div>
-                  <div class="text-[10px] font-bold text-[#0066FF] bg-[#0066FF]/10 py-1 px-2 rounded-lg mt-1 inline-block font-eng">মোট ৳ 27,000</div>
+                <th class="py-3 px-3 sm:py-4 sm:px-4 text-center border-l border-[#E2E8F0] w-[19%]">
+                  <div class="text-[11px] font-black uppercase text-[#64748B]">Accelerate</div>
+                  <div class="text-[11px] font-bold text-[#0066FF] mt-0.5">6 মাসের কিস্তি</div>
+                  <div class="text-base sm:text-lg font-black text-[#0B0F19] mt-1 font-eng">৳ 4,500 <span class="text-[10px] font-normal text-[#64748B] font-bengali">/ মাস</span></div>
+                  <div class="text-[9.5px] font-bold text-[#0066FF] bg-[#0066FF]/10 py-0.5 px-1.5 rounded mt-0.5 inline-block font-eng">মোট ৳ 27,000</div>
                 </th>
 
-                <th class="p-5 sm:p-6 text-center border-l border-[#E2E8F0] w-[19%]">
-                  <div class="text-xs font-black uppercase text-[#64748B]">Momentum</div>
-                  <div class="text-xs font-bold text-[#0066FF] mt-0.5">3 মাসের কিস্তি</div>
-                  <div class="text-lg font-black text-[#0B0F19] mt-2 font-eng">৳ 8,500 <span class="text-[10px] font-normal text-[#64748B] font-bengali">/ মাস</span></div>
-                  <div class="text-[10px] font-bold text-[#0066FF] bg-[#0066FF]/10 py-1 px-2 rounded-lg mt-1 inline-block font-eng">মোট ৳ 25,500</div>
+                <th class="py-3 px-3 sm:py-4 sm:px-4 text-center border-l border-[#E2E8F0] w-[19%]">
+                  <div class="text-[11px] font-black uppercase text-[#64748B]">Momentum</div>
+                  <div class="text-[11px] font-bold text-[#0066FF] mt-0.5">3 মাসের কিস্তি</div>
+                  <div class="text-base sm:text-lg font-black text-[#0B0F19] mt-1 font-eng">৳ 8,500 <span class="text-[10px] font-normal text-[#64748B] font-bengali">/ মাস</span></div>
+                  <div class="text-[9.5px] font-bold text-[#0066FF] bg-[#0066FF]/10 py-0.5 px-1.5 rounded mt-0.5 inline-block font-eng">মোট ৳ 25,500</div>
                 </th>
 
-                <th class="p-5 sm:p-6 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 w-[19%] relative">
-                  <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-[#0066FF] text-white text-[9px] font-black uppercase tracking-wider font-eng">BEST VALUE</div>
-                  <div class="text-xs font-black uppercase text-[#0066FF]">Founder</div>
-                  <div class="text-xs font-bold text-[#0B0F19] mt-0.5">এককালীন পেমেন্ট</div>
-                  <div class="text-xl font-black text-[#0B0F19] mt-2 font-eng">৳ 19,990 <span class="text-[10px] font-normal text-[#64748B] font-bengali">এককালীন</span></div>
-                  <div class="text-[10px] font-black text-white bg-[#0066FF] py-1 px-2 rounded-lg mt-1 inline-block shadow-xs font-eng">সেভ 67% ডিসকাউন্ট</div>
+                <th class="py-3 px-3 sm:py-4 sm:px-4 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 w-[19%] relative">
+                  <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-[#0066FF] text-white text-[8.5px] font-black uppercase tracking-wider font-eng">BEST VALUE</div>
+                  <div class="text-[11px] font-black uppercase text-[#0066FF]">Founder</div>
+                  <div class="text-[11px] font-bold text-[#0B0F19] mt-0.5">এককালীন পেমেন্ট</div>
+                  <div class="text-lg sm:text-xl font-black text-[#0B0F19] mt-1 font-eng">৳ 19,990 <span class="text-[10px] font-normal text-[#64748B] font-bengali">এককালীন</span></div>
+                  <div class="text-[9.5px] font-black text-white bg-[#0066FF] py-0.5 px-1.5 rounded mt-0.5 inline-block shadow-xs font-eng">সেভ 67%</div>
                 </th>
               </tr>
             </thead>
             
             <tbody class="divide-y divide-[#F1F5F9] text-xs font-medium text-[#475569]">
               <tr class="hover:bg-[#F8FAFC]">
-                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">ওয়েবসাইট পারফরম্যান্স</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">1 সেকেন্ডের কম</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">1 সেকেন্ডের কম</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">1 সেকেন্ডের কম</td>
-                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 font-bold text-[#0B0F19]">1 সেকেন্ডের কম</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-[#0B0F19]">ওয়েবসাইট পারফরম্যান্স</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0]">1 সেকেন্ডের কম</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0]">1 সেকেন্ডের কম</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0]">1 সেকেন্ডের কম</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 font-bold text-[#0B0F19]">1 সেকেন্ডের কম</td>
               </tr>
               <tr class="hover:bg-[#F8FAFC]">
-                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">মোবাইল ও ট্যাব অপ্টিমাইজড</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 text-emerald-600 font-bold text-base">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-[#0B0F19]">মোবাইল ও ট্যাব অপ্টিমাইজড</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 text-emerald-600 font-bold text-sm">✓</td>
               </tr>
               <tr class="hover:bg-[#F8FAFC]">
-                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">অ্যাডমিন ড্যাশবোর্ড অ্যাক্সেস</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">অ্যাডমিন অ্যাক্সেস</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">অ্যাডমিন অ্যাক্সেস</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">অ্যাডমিন অ্যাক্সেস</td>
-                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 font-black text-[#0066FF]">মাস্টার অ্যাক্সেস</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-[#0B0F19]">অ্যাডমিন ড্যাশবোর্ড অ্যাক্সেস</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0]">অ্যাডমিন অ্যাক্সেস</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0]">অ্যাডমিন অ্যাক্সেস</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0]">অ্যাডমিন অ্যাক্সেস</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 font-black text-[#0066FF]">মাস্টার অ্যাক্সেস</td>
               </tr>
               <tr class="hover:bg-[#F8FAFC]">
-                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">ফ্রি ডোমেইন (.com)</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-slate-400 font-bold">—</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-slate-400 font-bold">—</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold">প্রথম বছর ফ্রি</td>
-                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 font-bold text-emerald-600">প্রথম বছর ফ্রি</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-[#0B0F19]">ফ্রি ডোমেইন (.com)</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-slate-400 font-bold">—</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-slate-400 font-bold">—</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold">প্রথম বছর ফ্রি</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 font-bold text-emerald-600">প্রথম বছর ফ্রি</td>
               </tr>
               <tr class="hover:bg-[#F8FAFC]">
-                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">SSL সার্টিফিকেট</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-slate-400 font-bold">—</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-slate-400 font-bold">—</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold">প্রথম বছর ফ্রি</td>
-                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 font-bold text-emerald-600">প্রথম বছর ফ্রি</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-[#0B0F19]">SSL সার্টিফিকেট</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-slate-400 font-bold">—</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-slate-400 font-bold">—</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold">প্রথম বছর ফ্রি</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 font-bold text-emerald-600">প্রথম বছর ফ্রি</td>
               </tr>
               <tr class="hover:bg-[#F8FAFC]">
-                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">হোস্টিং ব্যান্ডউইথ ও স্টোরেজ</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-slate-400 font-bold">—</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-slate-400 font-bold">—</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">10 GB NVMe (1 বছর ফ্রি)</td>
-                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 font-bold">10 GB NVMe (1 বছর ফ্রি)</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-[#0B0F19]">হোস্টিং ব্যান্ডউইথ ও স্টোরেজ</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-slate-400 font-bold">—</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-slate-400 font-bold">—</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0]">10 GB NVMe (1 বছর ফ্রি)</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 font-bold">10 GB NVMe (1 বছর ফ্রি)</td>
               </tr>
               <tr class="hover:bg-[#F8FAFC]">
-                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">পেমেন্ট গেটওয়ে (বিকাশ, নগদ, কার্ড, EMI System)</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-amber-600 font-bold">6 মাস পর</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 text-emerald-600 font-bold text-base">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-[#0B0F19]">পেমেন্ট গেটওয়ে (বিকাশ, নগদ, কার্ড, EMI)</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-amber-600 font-bold">6 মাস পর</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 text-emerald-600 font-bold text-sm">✓</td>
               </tr>
               <tr class="hover:bg-[#F8FAFC]">
-                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">অর্ডার টাইমে অ্যাডভান্স পেমেন্ট সিস্টেম</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-amber-600 font-bold">6 মাস পর</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 text-emerald-600 font-bold text-base">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-[#0B0F19]">অর্ডার টাইমে অ্যাডভান্স পেমেন্ট সিস্টেম</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-amber-600 font-bold">6 মাস পর</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 text-emerald-600 font-bold text-sm">✓</td>
               </tr>
               <tr class="hover:bg-[#F8FAFC]">
-                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">ইনকমপ্লিট কার্ট রিকভারি</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 text-emerald-600 font-bold text-base">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-[#0B0F19]">ইনকমপ্লিট কার্ট রিকভারি</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 text-emerald-600 font-bold text-sm">✓</td>
               </tr>
               <tr class="hover:bg-[#F8FAFC]">
-                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">কুরিয়ার এপিআই (Steadfast/Pathao)</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-amber-600 font-bold">6 মাস পর</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 text-emerald-600 font-bold text-base">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-[#0B0F19]">কুরিয়ার এপিআই (Steadfast/Pathao)</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-amber-600 font-bold">6 মাস পর</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 text-emerald-600 font-bold text-sm">✓</td>
               </tr>
               <tr class="hover:bg-[#F8FAFC]">
-                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">কাস্টমার অ্যাড্রেস ভিত্তিক অটো কুরিয়ার চার্জ</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 text-emerald-600 font-bold text-base">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-[#0B0F19]">অটো কুরিয়ার চার্জ ও ট্র্যাকিং</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 text-emerald-600 font-bold text-sm">✓</td>
               </tr>
               <tr class="hover:bg-[#F8FAFC]">
-                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">ফ্রি পিক্সেল সেটআপ (Facebook Pixel & CAPI)</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-base">✓</td>
-                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 text-emerald-600 font-bold text-base">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-[#0B0F19]">ফ্রি পিক্সেল সেটআপ (Pixel & CAPI)</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 text-emerald-600 font-bold text-sm">✓</td>
               </tr>
               <tr class="hover:bg-[#F8FAFC]">
-                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">বিজনেস ইমেইল অ্যাকাউন্ট</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] font-bold">2 টি অ্যাকাউন্ট</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] font-bold">2 টি অ্যাকাউন্ট</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0] font-bold">2 টি অ্যাকাউন্ট</td>
-                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 font-black text-[#0066FF]">আনলিমিটেড</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-[#0B0F19]">বিজনেস ইমেইল অ্যাকাউন্ট</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] font-bold">2 টি</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] font-bold">2 টি</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0] font-bold">2 টি</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 font-black text-[#0066FF]">আনলিমিটেড</td>
               </tr>
               <tr class="hover:bg-[#F8FAFC]">
-                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">cPanel হ্যান্ডওভার</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">12 মাস পর</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">6 মাস পর</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">3 মাস পর</td>
-                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 font-black text-emerald-600">তাত্ক্ষণিক (1st দিনে)</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-[#0B0F19]">cPanel হ্যান্ডওভার</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0]">12 মাস পর</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0]">6 মাস পর</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#E2E8F0]">3 মাস পর</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5 font-black text-emerald-600">তাত্ক্ষণিক (1st দিনে)</td>
               </tr>
               <tr class="bg-[#F8FAFC]">
-                <td class="p-4 sm:p-5 font-bold text-[#0B0F19]">অ্যাকশন</td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">
-                  <button onclick="openOfferModal('Startup Plan (12-Mo EMI)', '৳ 2,500/মাস (মোট ৳ 30,000)')" class="w-full py-2.5 rounded-xl bg-white hover:bg-[#0066FF] hover:text-white font-bold text-xs text-[#0B0F19] transition-all border border-[#E2E8F0]">
+                <td class="py-3 px-3 sm:py-4 sm:px-4 font-bold text-[#0B0F19]">অ্যাকশন</td>
+                <td class="py-3 px-3 sm:py-4 sm:px-4 text-center border-l border-[#E2E8F0]">
+                  <button onclick="openOfferModal('Startup Plan (12-Mo EMI)', '৳ 2,500/মাস (মোট ৳ 30,000)')" class="w-full py-2 sm:py-2.5 rounded-xl bg-white hover:bg-[#0066FF] hover:text-white font-bold text-xs text-[#0B0F19] transition-all border border-[#E2E8F0]">
                     সিলেক্ট করুন
                   </button>
                 </td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">
-                  <button onclick="openOfferModal('Accelerate Plan (6-Mo EMI)', '৳ 4,500/মাস (মোট ৳ 27,000)')" class="w-full py-2.5 rounded-xl bg-white hover:bg-[#0066FF] hover:text-white font-bold text-xs text-[#0B0F19] transition-all border border-[#E2E8F0]">
+                <td class="py-3 px-3 sm:py-4 sm:px-4 text-center border-l border-[#E2E8F0]">
+                  <button onclick="openOfferModal('Accelerate Plan (6-Mo EMI)', '৳ 4,500/মাস (মোট ৳ 27,000)')" class="w-full py-2 sm:py-2.5 rounded-xl bg-white hover:bg-[#0066FF] hover:text-white font-bold text-xs text-[#0B0F19] transition-all border border-[#E2E8F0]">
                     সিলেক্ট করুন
                   </button>
                 </td>
-                <td class="p-4 sm:p-5 text-center border-l border-[#E2E8F0]">
-                  <button onclick="openOfferModal('Momentum Plan (3-Mo EMI)', '৳ 8,500/মাস (মোট ৳ 25,500)')" class="w-full py-2.5 rounded-xl bg-white hover:bg-[#0066FF] hover:text-white font-bold text-xs text-[#0B0F19] transition-all border border-[#E2E8F0]">
+                <td class="py-3 px-3 sm:py-4 sm:px-4 text-center border-l border-[#E2E8F0]">
+                  <button onclick="openOfferModal('Momentum Plan (3-Mo EMI)', '৳ 8,500/মাস (মোট ৳ 25,500)')" class="w-full py-2 sm:py-2.5 rounded-xl bg-white hover:bg-[#0066FF] hover:text-white font-bold text-xs text-[#0B0F19] transition-all border border-[#E2E8F0]">
                     সিলেক্ট করুন
                   </button>
                 </td>
-                <td class="p-4 sm:p-5 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5">
-                  <button onclick="openOfferModal('Founder Plan (Pay In Full)', '৳ 19,990 এককালীন (Save 67%)')" class="w-full py-2.5 rounded-xl bg-[#0066FF] hover:bg-[#0052FF] font-black text-xs text-white transition-all shadow-md shadow-[#0066FF]/25">
+                <td class="py-3 px-3 sm:py-4 sm:px-4 text-center border-l-2 border-[#0066FF] bg-[#0066FF]/5">
+                  <button onclick="openOfferModal('Founder Plan (Pay In Full)', '৳ 19,990 এককালীন (Save 67%)')" class="w-full py-2 sm:py-2.5 rounded-xl bg-[#0066FF] hover:bg-[#0052FF] font-black text-xs text-white transition-all shadow-md shadow-[#0066FF]/25">
                     ক্লেইম করুন ➔
                   </button>
                 </td>
@@ -705,8 +705,6 @@
             </tbody>
           </table>
         </div>
-
-      </div>
 
     </div>
   </section>
@@ -848,11 +846,255 @@
   </div>
 
   <script>
+    // --- 1. PRICING VIEW SWITCHER (Cards vs. Table - Mutually Exclusive) ---
+    function setPricingView(viewMode) {
+      const cardsView = document.getElementById('pricingCardsView');
+      const tableView = document.getElementById('pricingTableView');
+      const cardsBtn = document.getElementById('viewCardsBtn');
+      const tableBtn = document.getElementById('viewTableBtn');
+
+      if (!cardsView || !tableView || !cardsBtn || !tableBtn) return;
+
+      const activeClasses = ['bg-[#0066FF]', 'text-white', 'shadow-md', 'shadow-[#0066FF]/20'];
+      const inactiveClasses = ['bg-white', 'text-[#64748B]', 'hover:bg-[#F8FAFC]'];
+
+      if (viewMode === 'cards') {
+        cardsView.classList.remove('hidden');
+        tableView.classList.add('hidden');
+
+        cardsBtn.classList.remove(...inactiveClasses);
+        cardsBtn.classList.add(...activeClasses);
+
+        tableBtn.classList.remove(...activeClasses);
+        tableBtn.classList.add(...inactiveClasses);
+      } else {
+        tableView.classList.remove('hidden');
+        cardsView.classList.add('hidden');
+
+        tableBtn.classList.remove(...inactiveClasses);
+        tableBtn.classList.add(...activeClasses);
+
+        cardsBtn.classList.remove(...activeClasses);
+        cardsBtn.classList.add(...inactiveClasses);
+      }
+    }
+
+    // --- 2. LIVE DASHBOARD SCREENSHOT TABS ---
+    const ecomScreens = {
+      analytics: {
+        img: '/assets/offers/ecom-admin.png',
+        url: 'luxora-furniture.com/admin/analytics',
+        title: '1. এক্সিকিউটিভ রেভিনিউ ও সেলস অ্যানালিটিক্স',
+        desc: 'রিয়েল-টাইম লাইভ সেলস ট্র্যাকিং (যেমন: ৳ 1,26,599), অর্ডার ভলিউম, গড় অর্ডার ভ্যালু (AOV ৳ 9,738) এবং ক্যাটাগরিভিত্তিক সেলস ব্রেকডাউন।'
+      },
+      traffic: {
+        img: '/assets/offers/ecom-admin.png',
+        url: 'luxora-furniture.com/admin/traffic',
+        title: '2. লাইভ ট্রাফিক ও ফানেল অ্যানালিটিক্স',
+        desc: 'এই মুহূর্তে কতজন লাইভ ভিজিটর সাইটে আছেন, 24 ঘণ্টার ট্রাফিক ভেলোসিটি এবং Add to Cart থেকে পারচেজ পর্যন্ত ফানেল ড্রপ-অফ রেট।'
+      },
+      orders: {
+        img: '/assets/offers/ecom-admin.png',
+        url: 'luxora-furniture.com/admin/orders',
+        title: '3. অর্ডার ম্যানেজমেন্ট ও অটো কুরিয়ার ডিসপ্যাচ',
+        desc: 'ইনকমপ্লিট অর্ডার ফিল্টার, কাস্টমার অ্যাড্রেস ভিত্তিক অটো কুরিয়ার চার্জ এবং Steadfast ও Pathao কুরিয়ারে 1-ক্লিকে পার্সেল বুকিং।'
+      },
+      payments: {
+        img: '/assets/offers/ecom-admin.png',
+        url: 'luxora-furniture.com/admin/payments',
+        title: '4. পেমেন্ট গেটওয়ে ও অ্যাডভান্স পেমেন্ট',
+        desc: 'বিকাশ, নগদ, ডেবিট/ক্রেডিট কার্ড, EMI সিস্টেম এবং ফেক অর্ডার রোধে অর্ডার টাইমে অ্যাডভান্স পেমেন্ট কালেকশন।'
+      },
+      customers: {
+        img: '/assets/offers/ecom-admin.png',
+        url: 'luxora-furniture.com/admin/customers',
+        title: '5. কাস্টমার ইন্টেলিজেন্স ও LTV ট্র্যাকার',
+        desc: 'কাস্টমার হিস্ট্রি, লাইফটাইম স্পেন্ড (LTV ৳ 42,620+), রিপিট বায়ার রেট এবং কাস্টমার লোকেশন অ্যানালাইসিস।'
+      },
+      billing: {
+        img: '/assets/offers/ecom-admin.png',
+        url: 'luxora-furniture.com/admin/billing',
+        title: '6. স্বচ্ছ EMI বিলিং লেজার ও ইনভয়েস',
+        desc: '3, 6 বা 12 মাসের কিস্তি পেমেন্ট শিডিউল, পেইড ও ডিউ ট্র্যাকার, মাসিক চালান এবং 100% স্বচ্ছ ট্র্যাকিং কন্ট্রোল।'
+      }
+    };
+
+    function switchEcomScreen(screenKey) {
+      const data = ecomScreens[screenKey];
+      if (!data) return;
+
+      const activeImg = document.getElementById('activeScreenImg');
+      const urlEl = document.getElementById('screenUrl');
+      const titleEl = document.getElementById('screenTitle');
+      const descEl = document.getElementById('screenDesc');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxCap = document.getElementById('lightboxCaption');
+
+      if (activeImg) activeImg.src = data.img;
+      if (urlEl) urlEl.innerText = data.url;
+      if (titleEl) titleEl.innerText = data.title;
+      if (descEl) descEl.innerText = data.desc;
+      if (lightboxImg) lightboxImg.src = data.img;
+      if (lightboxCap) lightboxCap.innerText = data.title;
+
+      // Update button classes
+      document.querySelectorAll('.ecom-tab-btn').forEach(btn => {
+        btn.classList.remove('bg-[#0066FF]', 'text-white', 'shadow-md', 'shadow-[#0066FF]/20');
+        btn.classList.add('bg-white', 'text-[#64748B]', 'border', 'border-[#E2E8F0]');
+      });
+
+      const activeBtn = document.getElementById('tab-' + screenKey);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-white', 'text-[#64748B]', 'border', 'border-[#E2E8F0]');
+        activeBtn.classList.add('bg-[#0066FF]', 'text-white', 'shadow-md', 'shadow-[#0066FF]/20');
+      }
+    }
+
+    // --- 3. FULLSCREEN IMAGE LIGHTBOX ---
+    function openImageLightbox() {
+      const modal = document.getElementById('imageLightboxModal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeImageLightbox() {
+      const modal = document.getElementById('imageLightboxModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // --- 4. UNIFIED BOOKING MODAL ---
+    function openOfferModal(planTitle, planPrice) {
+      const modal = document.getElementById('offerModal');
+      const titleEl = document.getElementById('modalOfferTitle');
+      const subEl = document.getElementById('modalOfferSub');
+      const pkgSelect = document.getElementById('modalPackage');
+      const alertBox = document.getElementById('modalAlertBox');
+
+      if (titleEl && planTitle) titleEl.innerText = planTitle + ' বুকিং';
+      if (subEl && planPrice) subEl.innerText = 'প্যাকেজ মূল্য: ' + planPrice;
+      if (alertBox) alertBox.classList.add('hidden');
+
+      if (pkgSelect && planTitle) {
+        for (let i = 0; i < pkgSelect.options.length; i++) {
+          if (pkgSelect.options[i].value.toLowerCase().includes(planTitle.split(' ')[0].toLowerCase())) {
+            pkgSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeOfferModal() {
+      const modal = document.getElementById('offerModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // WhatsApp Direct Message
+    function directWhatsAppClaim() {
+      const name = document.getElementById('modalName')?.value.trim() || 'কাস্টমার';
+      const phone = document.getElementById('modalPhone')?.value.trim() || '';
+      const email = document.getElementById('modalEmail')?.value.trim() || '';
+      const pkg = document.getElementById('modalPackage')?.value || 'E-Commerce Package';
+      const msg = document.getElementById('modalMessage')?.value.trim() || 'বিজনেসের জন্য নতুন ই-কমার্স ওয়েবসাইট প্রয়োজন।';
+
+      const text = `আসসালামু আলাইকুম শাকিল ভাই,\nআমি ${name}। আমি আপনার "${pkg}" অফারটি নিতে আগ্রহী।\n\n📱 মোবাইল: ${phone}\n✉️ ইমেইল: ${email}\n💼 বিজনেসের বিবরণ: ${msg}`;
+      const url = `https://wa.me/8801880907080?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+
+    // Handle Modal Booking Submission
+    const offerBookingForm = document.getElementById('offerBookingForm');
+    if (offerBookingForm) {
+      offerBookingForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitBtn = document.getElementById('modalSubmitBtn');
+        const alertBox = document.getElementById('modalAlertBox');
+        
+        const name = document.getElementById('modalName').value.trim();
+        const phone = document.getElementById('modalPhone').value.trim();
+        const email = document.getElementById('modalEmail').value.trim();
+        const selectedPackage = document.getElementById('modalPackage').value;
+        const message = document.getElementById('modalMessage').value.trim();
+
+        // Validate 11-digit phone
+        const bdRegex = /^(?:\+?8801|01)[3-9]\d{8}$/;
+        const intlRegex = /^\+?[1-9]\d{9,14}$/;
+        if (!bdRegex.test(phone) && !intlRegex.test(phone)) {
+          if (alertBox) {
+            alertBox.className = 'p-3.5 rounded-xl text-xs font-semibold bg-rose-50 text-rose-700 border border-rose-200';
+            alertBox.innerText = 'দয়া করে একটি সঠিক ১১ ডিজিটের মোবাইল / WhatsApp নম্বর দিন (যেমন: 017XXXXXXXX)।';
+            alertBox.classList.remove('hidden');
+          }
+          return;
+        }
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<span>তথ্য পাঠানো হচ্ছে...</span><i class="fa-solid fa-spinner fa-spin text-xs"></i>';
+        }
+
+        const payload = {
+          name: name,
+          phone: phone,
+          email: email,
+          package: selectedPackage,
+          service: 'E-Commerce Offer: ' + selectedPackage,
+          message: 'প্যাকেজ: ' + selectedPackage + ' | বিবরণ: ' + message,
+          date: new Date().toISOString()
+        };
+
+        try {
+          await fetch('/api/leads', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+
+          if (alertBox) {
+            alertBox.className = 'p-3.5 rounded-xl text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200';
+            alertBox.innerText = 'ধন্যবাদ! আপনার বুকিং রিকোয়েস্ট সফলভাবে গৃহীত হয়েছে। আমরা অতি দ্রুত WhatsApp অথবা ফোনে যোগাযোগ করব।';
+            alertBox.classList.remove('hidden');
+          }
+
+          offerBookingForm.reset();
+
+          setTimeout(() => {
+            closeOfferModal();
+          }, 3000);
+        } catch (err) {
+          console.error('Lead submit error:', err);
+          if (alertBox) {
+            alertBox.className = 'p-3.5 rounded-xl text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200';
+            alertBox.innerText = 'আপনার তথ্য সেভ করা হয়েছে। দ্রুত যোগাযোগের জন্য সরাসরি WhatsApp-এ বার্তা পাঠাতে পারেন।';
+            alertBox.classList.remove('hidden');
+          }
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<span>প্যাকেজ বুকিং সাবমিট করুন</span><i class="fa-solid fa-paper-plane text-xs"></i>';
+          }
+        }
+      });
+    }
+
     // WhatsApp Phone Number Validator (Bangladesh / International)
     function validateWhatsAppNumber(input) {
       const val = input.value.trim().replace(/\s+/g, '');
       const errEl = document.getElementById('phoneValidationError');
-      // Must be at least 11 digits, or standard BD phone format 01XXXXXXXXX or +8801XXXXXXXXX
       const bdRegex = /^(?:\+?8801|01)[3-9]\d{8}$/;
       const intlRegex = /^\+?[1-9]\d{9,14}$/;
 
@@ -869,86 +1111,10 @@
       }
     }
 
-    // Auto-Open Popup on first load
-    function initWelcomePopup() {
-      const popup = document.getElementById('welcomePopupModal');
-      if (!popup) return;
-
-      // Check if user has already unlocked in this session
-      const alreadyUnlocked = sessionStorage.getItem('ecom_emi_unlocked');
-      if (!alreadyUnlocked) {
-        setTimeout(() => {
-          popup.classList.remove('hidden');
-          document.body.style.overflow = 'hidden';
-        }, 500); // Smooth half-second delay
-      }
-    }
-
-    function closeWelcomePopup() {
-      const popup = document.getElementById('welcomePopupModal');
-      if (popup) {
-        popup.classList.add('hidden');
-        document.body.style.overflow = '';
-      }
-    }
-
-    // Handle Form Submit
-    async function handleWelcomePopupSubmit(e) {
-      e.preventDefault();
-      
-      const nameInput = document.getElementById('popupName');
-      const phoneInput = document.getElementById('popupPhone');
-      const sourceInput = document.getElementById('popupSource');
-      const submitBtn = document.getElementById('popupSubmitBtn');
-
-      const name = nameInput.value.trim();
-      const phone = phoneInput.value.trim();
-      const source = sourceInput.value;
-
-      // Validate WhatsApp Number
-      const bdRegex = /^(?:\+?8801|01)[3-9]\d{8}$/;
-      const intlRegex = /^\+?[1-9]\d{9,14}$/;
-      if (!bdRegex.test(phone) && !intlRegex.test(phone)) {
-        const errEl = document.getElementById('phoneValidationError');
-        if (errEl) errEl.classList.remove('hidden');
-        phoneInput.focus();
-        return;
-      }
-
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span>অফার আনলক হচ্ছে...</span><i class="fa-solid fa-spinner fa-spin text-xs"></i>';
-
-      const payload = {
-        name: name,
-        phone: phone,
-        source: source,
-        service: 'E-Commerce Offer Unlocked: EMI Facilities + Free Domain & 10GB NVMe SSD Hosting',
-        message: 'Where did you find us: ' + source + ' | Unlocked EMI + Free Domain + 10GB NVMe Hosting',
-        date: new Date().toISOString()
-      };
-
-      try {
-        // Send lead to /api/leads
-        await fetch('/api/leads', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-      } catch (err) {
-        console.log('Lead recording notice:', err);
-      }
-
-      // Mark in session so it does not annoy user again
-      sessionStorage.setItem('ecom_emi_unlocked', 'true');
-
-      // Transition to Congratulations Success State
-      document.getElementById('popupFormState').classList.add('hidden');
-      document.getElementById('popupSuccessState').classList.remove('hidden');
-    }
-
-    // Trigger Popup on Load
+    // Trigger on Load
     document.addEventListener('DOMContentLoaded', () => {
-      initWelcomePopup();
+      // Set table view as active default (both PC & mobile show table first, cards hidden)
+      setPricingView('table');
     });
   </script>
 
