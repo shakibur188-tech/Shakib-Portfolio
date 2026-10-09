@@ -923,10 +923,10 @@
                 <div class="relative">
                   <select id="bookingPackage" required 
                     class="w-full px-4 py-3.5 rounded-2xl bg-[#041B21] border border-[#20E1B2]/30 text-white focus:outline-none focus:border-[#20E1B2] focus:ring-2 focus:ring-[#20E1B2]/30 transition-all text-sm appearance-none cursor-pointer">
-                    <option value="Starter Store — ৳ ১২,০০০ (EMI: ৳ ৪,০০০/মাস)" class="bg-[#041B21] text-white">Starter Store — ৳ ১২,০০০ (EMI: ৳ ৪,০০০/মাস)</option>
-                    <option value="Growth Pro — ৳ ২২,০০০ (EMI: ৳ ৭,৩৩৩/মাস)" selected class="bg-[#041B21] text-white">Growth Pro — ৳ ২২,০০০ (EMI: ৳ ৭,৩৩৩/মাস)</option>
-                    <option value="Advanced Scale — ৳ ৩৮,০০০ (EMI: ৳ ১২,৬৬৬/মাস)" class="bg-[#041B21] text-white">Advanced Scale — ৳ ৩৮,০০০ (EMI: ৳ ১২,৬৬৬/মাস)</option>
-                    <option value="Enterprise Custom — ৳ ৬৫,০০০+ (কাস্টম EMI সুবিধা)" class="bg-[#041B21] text-white">Enterprise Custom — ৳ ৬৫,০০০+ (কাস্টম EMI সুবিধা)</option>
+                    <option value="Startup Plan (12 মাসের কিস্তি) — ৳ ২,৫০০/মাস (মোট ৳ ৩০,০০০)" class="bg-[#041B21] text-white">Startup Plan (12 মাসের কিস্তি) — ৳ ২,৫০০/মাস (মোট ৳ ৩০,০০০)</option>
+                    <option value="Accelerate Plan (6 মাসের কিস্তি) — ৳ ৪,৫০০/মাস (মোট ৳ ২৭,০০০)" class="bg-[#041B21] text-white">Accelerate Plan (6 মাসের কিস্তি) — ৳ ৪,৫০০/মাস (মোট ৳ ২৭,০০০)</option>
+                    <option value="Momentum Plan (3 মাসের কিস্তি) — ৳ ৮,৫০০/মাস (মোট ৳ ২৫,৫০০)" class="bg-[#041B21] text-white">Momentum Plan (3 মাসের কিস্তি) — ৳ ৮,৫০০/মাস (মোট ৳ ২৫,৫০০)</option>
+                    <option value="Founder Plan (এককালীন পেমেন্ট) — ৳ ১৯,৯৯০ (Save 67% Best Value)" selected class="bg-[#041B21] text-white">Founder Plan (এককালীন পেমেন্ট) — ৳ ১৯,৯৯০ (Save 67% Best Value)</option>
                   </select>
                   <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-[#20E1B2] pointer-events-none text-xs"></i>
                 </div>
@@ -1492,8 +1492,17 @@
       const packageSelect = document.getElementById('bookingPackage');
 
       if (packageSelect && packageName) {
+        const pLower = packageName.toLowerCase();
         for (let i = 0; i < packageSelect.options.length; i++) {
-          if (packageSelect.options[i].text.includes(packageName) || packageSelect.options[i].value.includes(packageName)) {
+          const optText = packageSelect.options[i].text.toLowerCase();
+          const optVal = packageSelect.options[i].value.toLowerCase();
+          if (
+            optText.includes(pLower) || optVal.includes(pLower) ||
+            (pLower.includes('startup') && optText.includes('startup')) ||
+            (pLower.includes('accelerate') && optText.includes('accelerate')) ||
+            (pLower.includes('momentum') && optText.includes('momentum')) ||
+            (pLower.includes('founder') && optText.includes('founder'))
+          ) {
             packageSelect.selectedIndex = i;
             break;
           }
