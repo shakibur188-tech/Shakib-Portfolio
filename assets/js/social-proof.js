@@ -4,15 +4,15 @@
  * 
  * Requirements:
  * 1. Toast Notification:
- *    - Format: "[Name] এই মাত্র [Plan Name] বুক করেছেন।" (e.g. "Shakibur Rahaman এই মাত্র 'Founder প্ল্যান' বুক করেছেন।")
- *    - Plans: Startup প্ল্যান, Accelerate প্ল্যান, Momentum প্ল্যান, Founder প্ল্যান
- *    - Frequency: Appears after every 30-50 seconds
+ *    - Format: "[Name] এই মাত্র [Plan Name] বুক করেছেন।"
+ *    - Random selection of diverse Male & Female names from various regions
+ *    - Plans: Founder প্ল্যান, Startup প্ল্যান, Accelerate প্ল্যান, Momentum প্ল্যান
+ *    - Frequency: Appears every 30-50 seconds
  *    - Duration: Stays visible for 10 seconds
  *    - Real-time trigger: If someone submits a form / booking, instantly shows their name & plan
  * 2. Fixed Floating Live Active Viewers Badge:
  *    - Position: Fixed at bottom-right corner
  *    - Text: "🔥 বর্তমানে 269 জন এই অফারটি দেখছেন" (starts ~269, fluctuates dynamically above 200+)
- *    - High-visibility attention grabbing glowing frosted glass design
  */
 
 (function () {
@@ -25,7 +25,8 @@
   let nextToastTimer = null;
   let autoHideTimer = null;
   let counterTimer = null;
-  let currentIndex = 0;
+  let lastPickedName = '';
+  let lastPickedPlan = '';
 
   // 4 Core E-Commerce Package Names
   const packagePlans = [
@@ -35,18 +36,39 @@
     'Momentum প্ল্যান'
   ];
 
-  // Client name pool with primary focus on requested format
+  // Rich pool of diverse Male & Female client names from different cities
   const mockNames = [
-    'Shakibur Rahaman',
-    'তানভীর আহমেদ',
-    'Shakibur Rahaman',
-    'রাকিব হাসান',
-    'Shakibur Rahaman',
-    'ফারহান চৌধুরী',
-    'Shakibur Rahaman',
-    'সাবরিনা আক্তার',
-    'মাহমুদুল হাসান',
-    'Shakibur Rahaman'
+    // Male Clients
+    'তানভীর আহমেদ (উত্তরা)',
+    'রাকিবুল হাসান (ধানমন্ডি)',
+    'ফারহান চৌধুরী (গুলশান)',
+    'মাহমুদুল হক (চট্টগ্রাম)',
+    'আরিফুল ইসলাম (সিলেট)',
+    'সাইফুর রহমান (বনানী)',
+    'জাহিদ হাসান (রাজশাহী)',
+    'আসিফ ইকবাল (খুলনা)',
+    'নাজমুল হুদা (কুমিল্লা)',
+    'শাকিল আহমেদ (মিরপুর)',
+    'রিয়াদ মাহমুদ (বসুন্ধরা)',
+    'Shakibur Rahaman (ঢাকা)',
+    'সজিব খান (নারায়ণগঞ্জ)',
+    'ইমরান হোসেন (গাজীপুর)',
+
+    // Female Clients
+    'সাবরিনা আক্তার (বনানী)',
+    'নুসরাত জাহান (ধানমন্ডি)',
+    'ফারহানা ইসলাম (উত্তরা)',
+    'সাদিয়া আফরিন (চট্টগ্রাম)',
+    'তাসফিয়া রহমান (গুলশান)',
+    'রুবাইয়া তাসনিম (সিলেট)',
+    'সুমাইয়া আক্তার (মিরপুর)',
+    'মেহজাবিন আলম (রাজশাহী)',
+    'আনিকা তাহসিন (বসুন্ধরা)',
+    'জান্নাতুল ফেরদৌস (খুলনা)',
+    'মায়িশা চৌধুরী (মোহাম্মদপুর)',
+    'তানিয়া সুলতানা (কুমিল্লা)',
+    'ফারজানা হক (বারিধারা)',
+    'শারমিন সুলতানা (উত্তরা)'
   ];
 
   // Clean plan name helper
@@ -59,15 +81,22 @@
     return rawPlan;
   }
 
+  // Pick a random item ensuring no consecutive duplicates
+  function getRandomItem(array, lastItem) {
+    let available = array.filter(item => item !== lastItem);
+    if (available.length === 0) available = array;
+    return available[Math.floor(Math.random() * available.length)];
+  }
+
   // --- 2. DYNAMIC COUNTER FLUCTUATION (Starting from 269, realistic ups & downs) ---
   function getNextVisitorCount(current) {
     const deltas = [-3, -2, -1, 1, 2, 3, 4, -2, 2, 3, -1, 4, -3, 2];
     const change = deltas[Math.floor(Math.random() * deltas.length)];
     let next = current + change;
     
-    // Strict boundaries (never drop below 215, stay realistic up to 295)
-    if (next < 225) next = 245 + Math.floor(Math.random() * 15);
-    if (next > 295) next = 278 - Math.floor(Math.random() * 12);
+    // Strict boundaries (never drop below 225, stay realistic up to 295)
+    if (next < 225) next = 248 + Math.floor(Math.random() * 15);
+    if (next > 295) next = 276 - Math.floor(Math.random() * 12);
     
     return next;
   }
@@ -244,6 +273,9 @@
     const container = createToastContainer();
     const formattedPlan = cleanPlanName(planName);
 
+    lastPickedName = personName;
+    lastPickedPlan = formattedPlan;
+
     // Create Toast Element
     const toast = document.createElement('div');
     toast.className = 'social-proof-toast';
@@ -311,9 +343,8 @@
     
     clearTimeout(nextToastTimer);
     nextToastTimer = setTimeout(() => {
-      const name = mockNames[currentIndex % mockNames.length];
-      const plan = packagePlans[currentIndex % packagePlans.length];
-      currentIndex++;
+      const name = getRandomItem(mockNames, lastPickedName);
+      const plan = getRandomItem(packagePlans, lastPickedPlan);
 
       displayBookingToast(name, plan);
       scheduleNextMockToast();
@@ -347,11 +378,13 @@
       updateAllCounterElements(currentCount);
     }, 4500);
 
-    // 2. First mock notification after 8 seconds, then every 30-50s
+    // 2. First random male/female notification after 6 seconds, then every 30-50s
     setTimeout(() => {
-      displayBookingToast('Shakibur Rahaman', 'Founder প্ল্যান');
+      const initialName = getRandomItem(mockNames, '');
+      const initialPlan = getRandomItem(packagePlans, '');
+      displayBookingToast(initialName, initialPlan);
       scheduleNextMockToast();
-    }, 8000);
+    }, 6000);
   }
 
   // Run on DOM Ready
