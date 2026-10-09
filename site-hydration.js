@@ -581,63 +581,103 @@
   }
 
   // -------------------------------------------------------------
-  // 3. Right-Sided Off-Canvas Mobile Drawer Controller
+  // 3. Right-Sided Off-Canvas Mobile Drawer & Dropdown Controller
   // -------------------------------------------------------------
   function initMobileDrawer() {
     const toggleBtn = document.getElementById('mobileMenuToggle') || document.getElementById('svcMobileToggle');
     const closeBtn = document.getElementById('mobileDrawerClose');
     const drawer = document.getElementById('mobileDrawer');
     const backdrop = document.getElementById('mobileBackdrop');
+    const mobileMenu = document.getElementById('mobileMenu') || document.getElementById('svcMobileMenu');
+    const icon = document.getElementById('mobileMenuIcon') || (toggleBtn ? toggleBtn.querySelector('i') : null);
 
-    if (!drawer || !backdrop) return;
+    if (drawer && backdrop) {
+      function openDrawer() {
+        backdrop.classList.remove('opacity-0', 'pointer-events-none');
+        backdrop.classList.add('opacity-100', 'pointer-events-auto');
+        drawer.classList.remove('translate-x-full');
+        document.body.style.overflow = 'hidden';
+      }
 
-    function openDrawer() {
-      backdrop.classList.remove('opacity-0', 'pointer-events-none');
-      backdrop.classList.add('opacity-100', 'pointer-events-auto');
-      drawer.classList.remove('translate-x-full');
-      document.body.style.overflow = 'hidden';
-    }
+      function closeDrawer() {
+        backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+        drawer.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+      }
 
-    function closeDrawer() {
-      backdrop.classList.remove('opacity-100', 'pointer-events-auto');
-      backdrop.classList.add('opacity-0', 'pointer-events-none');
-      drawer.classList.add('translate-x-full');
-      document.body.style.overflow = '';
-    }
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          if (drawer.classList.contains('translate-x-full')) {
+            openDrawer();
+          } else {
+            closeDrawer();
+          }
+        });
+      }
 
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        if (drawer.classList.contains('translate-x-full')) {
-          openDrawer();
-        } else {
+      if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          closeDrawer();
+        });
+      }
+
+      backdrop.addEventListener('click', closeDrawer);
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !drawer.classList.contains('translate-x-full')) {
           closeDrawer();
         }
       });
-    }
 
-    if (closeBtn) {
-      closeBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        closeDrawer();
+      drawer.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          closeDrawer();
+        });
       });
-    }
-
-    backdrop.addEventListener('click', closeDrawer);
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !drawer.classList.contains('translate-x-full')) {
-        closeDrawer();
+    } else if (toggleBtn && mobileMenu) {
+      if (!toggleBtn.dataset.menuHydrated) {
+        toggleBtn.dataset.menuHydrated = 'true';
+        function openMenu() {
+          mobileMenu.classList.remove('hidden');
+          if (icon) {
+            icon.classList.remove('fa-bars-staggered', 'fa-bars');
+            icon.classList.add('fa-xmark');
+          }
+        }
+        function closeMenu() {
+          mobileMenu.classList.add('hidden');
+          if (icon) {
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars-staggered');
+          }
+        }
+        toggleBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (mobileMenu.classList.contains('hidden')) {
+            openMenu();
+          } else {
+            closeMenu();
+          }
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => closeMenu());
+        });
+        document.addEventListener('click', (e) => {
+          if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+            closeMenu();
+          }
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+            closeMenu();
+          }
+        });
       }
-    });
-
-    // Close on navigation link tap
-    drawer.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        closeDrawer();
-      });
-    });
+    }
   }
 
   // -------------------------------------------------------------
