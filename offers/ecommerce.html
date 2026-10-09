@@ -1691,6 +1691,11 @@
             }).catch(() => {});
           } catch (_) {}
 
+          // Instantly Trigger Real-Time Social Proof Toast with their Name & Package
+          if (window.ShakibSocialProof && window.ShakibSocialProof.triggerRealBooking) {
+            window.ShakibSocialProof.triggerRealBooking(name, pkg);
+          }
+
           // Success feedback
           if (alertBox) {
             alertBox.className = 'p-5 rounded-2xl text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/50 block space-y-1';
@@ -1773,6 +1778,11 @@
           const bookingPhone = document.getElementById('bookingPhone');
           if (bookingName) bookingName.value = name;
           if (bookingPhone) bookingPhone.value = phone;
+
+          // Instantly Trigger Real-Time Social Proof Toast with Welcome Visitor Name
+          if (window.ShakibSocialProof && window.ShakibSocialProof.triggerRealBooking) {
+            window.ShakibSocialProof.triggerRealBooking(name, 'Founder প্ল্যান');
+          }
 
         } catch (err) {
           console.error(err);
