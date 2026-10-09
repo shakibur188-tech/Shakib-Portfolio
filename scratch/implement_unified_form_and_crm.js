@@ -148,7 +148,7 @@ const newScriptLogic = `// Modal Controller
         \`\\n*Email:* \${email}\` +
         \`\\n*Business Details:* \${details}\`;
         
-      window.open('https://wa.me/8801880907080?text=' + encodeURIComponent(msg), '_blank');
+      window.open('https://wa.me/8801838070468?text=' + encodeURIComponent(msg), '_blank');
     }
 
     

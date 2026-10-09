@@ -111,7 +111,7 @@ const ecomBanglaHtml = `<!DOCTYPE html>
 
       <!-- Right Header Actions (Mobile Hamburger Toggle) -->
       <div class="flex items-center gap-3 shrink-0">
-        <a href="https://wa.me/8801880907080" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/30 hover:bg-[#25D366] hover:text-white transition-all text-xs font-bold">
+        <a href="https://wa.me/8801838070468" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/30 hover:bg-[#25D366] hover:text-white transition-all text-xs font-bold">
           <i class="fa-brands fa-whatsapp text-sm"></i>
           <span>WhatsApp</span>
         </a>
@@ -173,7 +173,7 @@ const ecomBanglaHtml = `<!DOCTYPE html>
           <i class="fa-solid fa-paper-plane text-xs"></i>
           <span>যোগাযোগ করুন</span>
         </a>
-        <a href="https://wa.me/8801880907080" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/25 flex items-center justify-center text-lg hover:bg-[#25D366] hover:text-white transition-all shrink-0 active:scale-95" aria-label="WhatsApp Contact">
+        <a href="https://wa.me/8801838070468" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/25 flex items-center justify-center text-lg hover:bg-[#25D366] hover:text-white transition-all shrink-0 active:scale-95" aria-label="WhatsApp Contact">
           <i class="fa-brands fa-whatsapp"></i>
         </a>
       </div>
@@ -830,7 +830,7 @@ const ecomBanglaHtml = `<!DOCTYPE html>
         আপনার বিজনেস মডেল অনুযায়ী কাস্টম সলিউশন ও টাইমলাইন নিয়ে কথা বলতে সরাসরি হোয়াটসঅ্যাপে নক দিন অথবা স্ট্র্যাটেজিক কনসালটেশন বুক করুন।
       </p>
       <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
-        <a href="https://wa.me/8801880907080" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#1EBE5B] text-white font-bold text-xs sm:text-sm flex items-center gap-2 shadow-md shadow-[#25D366]/25 transition-all active:scale-98">
+        <a href="https://wa.me/8801838070468" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#1EBE5B] text-white font-bold text-xs sm:text-sm flex items-center gap-2 shadow-md shadow-[#25D366]/25 transition-all active:scale-98">
           <i class="fa-brands fa-whatsapp text-base"></i>
           <span>সরাসরি WhatsApp-এ কথা বলুন</span>
         </a>
@@ -1113,7 +1113,7 @@ const ecomBanglaHtml = `<!DOCTYPE html>
       const name = document.getElementById('modalName').value.trim() || 'Client';
       const company = document.getElementById('modalCompany').value.trim() || 'Business';
       const msg = encodeURIComponent('Hello Shakib, I want to claim the ' + offer + ' for ' + company + ' (Name: ' + name + '). Please send details.');
-      window.open('https://wa.me/8801880907080?text=' + msg, '_blank');
+      window.open('https://wa.me/8801838070468?text=' + msg, '_blank');
     }
 
     // Interactive View Switcher (Mobile: Cards First, PC: Table First)
