@@ -1075,7 +1075,7 @@ function renderLeads(leads) {
           <a href="mailto:${escapeHtml(lead.email)}" class="btn-link">${escapeHtml(lead.email || 'N/A')}</a>
           <br><small class="text-dim">${escapeHtml(lead.phone || '')}</small>
         </td>
-        <td><span class="badge-tag">${escapeHtml(lead.services || 'All Services')}</span></td>
+        <td><span class="badge-tag">${escapeHtml(lead.package || lead.services || lead.service || 'All Services')}</span></td>
         <td>${escapeHtml(lead.budget || 'N/A')}</td>
         <td class="lead-msg-cell" title="${escapeHtml(lead.message)}">${escapeHtml(lead.message || '')}</td>
         <td>

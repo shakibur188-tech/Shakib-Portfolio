@@ -1042,7 +1042,9 @@
           phone: phone,
           email: email,
           package: selectedPackage,
-          service: 'E-Commerce Offer: ' + selectedPackage,
+          services: selectedPackage,
+          service: 'E-Commerce: ' + selectedPackage,
+          budget: selectedPackage.includes('2,500') ? '৳ 2,500/Month (৳ 30,000)' : (selectedPackage.includes('4,500') ? '৳ 4,500/Month (৳ 27,000)' : (selectedPackage.includes('8,500') ? '৳ 8,500/Month (৳ 25,500)' : '৳ 19,990 (Pay In Full)')),
           message: 'প্যাকেজ: ' + selectedPackage + ' | বিবরণ: ' + message,
           date: new Date().toISOString()
         };
