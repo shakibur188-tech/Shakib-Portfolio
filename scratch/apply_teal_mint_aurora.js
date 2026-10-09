@@ -1,4 +1,10 @@
-/* ==========================================================================
+const fs = require('fs');
+const path = require('path');
+
+const rootDir = path.resolve(__dirname, '..');
+
+// 1. REWRITE styles.css WITH 100% TEAL & LUMINOUS MINT AURORA THEME
+const tealMintAuroraStylesCss = `/* ==========================================================================
    Md. Shakibur Rahaman - Strategic Lead & Digital Architect
    VELVETY DEEP TEAL & LUMINOUS MINT-AQUA AURORA THEME
    100% Faithful Reference Match:
@@ -664,3 +670,206 @@ thead tr {
 tbody tr:hover {
   background: rgba(32, 225, 178, 0.1) !important;
 }
+`;
+
+fs.writeFileSync(path.join(rootDir, 'styles.css'), tealMintAuroraStylesCss, 'utf8');
+
+// 2. UPDATE app.js and services/service-page.js WITH FLUID VELVET TEAL & MINT AURORA CANVAS
+function updateCanvasAnimation(filePath) {
+  if (!fs.existsSync(filePath)) return;
+  let code = fs.readFileSync(filePath, 'utf8');
+
+  const oldCanvasBlockRegex = /function initAmbientBackground\(\)[\s\S]*?requestAnimationFrame\(render\);\s*\}/m;
+  const newCanvasBlock = `function initAmbientBackground() {
+  const canvas = document.getElementById('ambientCanvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let width = (canvas.width = window.innerWidth);
+  let height = (canvas.height = window.innerHeight);
+
+  let mouse = { x: width / 2, y: height / 2, targetX: width / 2, targetY: height / 2 };
+
+  window.addEventListener('resize', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    initAuroraWaves();
+  }, { passive: true });
+
+  window.addEventListener('mousemove', (e) => {
+    mouse.targetX = e.clientX;
+    mouse.targetY = e.clientY;
+  }, { passive: true });
+
+  // Velvety Deep Teal & Glowing Mint Aurora Waves
+  let waves = [];
+  function initAuroraWaves() {
+    waves = [];
+    const count = width > 768 ? 7 : 4;
+    const colors = [
+      { r: 32, g: 225, b: 178 },   // Electric Mint Aurora (#20E1B2)
+      { r: 14, g: 165, b: 233 },   // Soft Azure (#0EA5E9)
+      { r: 11, g: 56, b: 68 },     // Deep Petrol Teal (#0B3844)
+      { r: 18, g: 87, b: 104 }     // Sea Wave (#125768)
+    ];
+
+    for (let i = 0; i < count; i++) {
+      const col = colors[i % colors.length];
+      waves.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        r: Math.random() * 280 + 180,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        color: col,
+        alpha: Math.random() * 0.3 + 0.18,
+        phase: Math.random() * Math.PI * 2
+      });
+    }
+  }
+  initAuroraWaves();
+
+  function render() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Smooth mouse parallax
+    mouse.x += (mouse.targetX - mouse.x) * 0.04;
+    mouse.y += (mouse.targetY - mouse.y) * 0.04;
+
+    // 1. Fluid Base Gradient
+    const bgGrad = ctx.createLinearGradient(0, 0, width * 0.4, height);
+    bgGrad.addColorStop(0, '#03151A');
+    bgGrad.addColorStop(0.3, '#07252D');
+    bgGrad.addColorStop(0.6, '#0B3844');
+    bgGrad.addColorStop(1, '#020F13');
+    ctx.fillStyle = bgGrad;
+    ctx.fillRect(0, 0, width, height);
+
+    // 2. Render Velvet Aurora Glow Waves
+    waves.forEach(w => {
+      w.phase += 0.006;
+      w.x += w.vx + Math.sin(w.phase) * 0.25;
+      w.y += w.vy + Math.cos(w.phase) * 0.25;
+
+      // Soft wrap
+      if (w.x < -w.r) w.x = width + w.r;
+      if (w.x > width + w.r) w.x = -w.r;
+      if (w.y < -w.r) w.y = height + w.r;
+      if (w.y > height + w.r) w.y = -w.r;
+
+      const parallaxX = (mouse.x - width / 2) * 0.035;
+      const parallaxY = (mouse.y - height / 2) * 0.035;
+      const ox = w.x + parallaxX;
+      const oy = w.y + parallaxY;
+
+      const grad = ctx.createRadialGradient(ox, oy, 0, ox, oy, w.r);
+      grad.addColorStop(0, \`rgba(\${w.color.r}, \${w.color.g}, \${w.color.b}, \${w.alpha})\`);
+      grad.addColorStop(0.55, \`rgba(\${w.color.r}, \${w.color.g}, \${w.color.b}, \${w.alpha * 0.45})\`);
+      grad.addColorStop(1, \`rgba(\${w.color.r}, \${w.color.g}, \${w.color.b}, 0)\`);
+
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(ox, oy, w.r, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    requestAnimationFrame(render);
+  }
+
+  requestAnimationFrame(render);
+}`;
+
+  if (oldCanvasBlockRegex.test(code)) {
+    code = code.replace(oldCanvasBlockRegex, newCanvasBlock);
+  }
+  fs.writeFileSync(filePath, code, 'utf8');
+}
+
+updateCanvasAnimation(path.join(rootDir, 'app.js'));
+updateCanvasAnimation(path.join(rootDir, 'services', 'service-page.js'));
+
+// 3. UPDATE ALL HTML FILES
+function updateHtmlFile(filePath) {
+  let content = fs.readFileSync(filePath, 'utf8');
+
+  // Tailwind config
+  const tailwindRegex = /tailwind\.config\s*=\s*\{[\s\S]*?theme:\s*\{[\s\S]*?extend:\s*\{[\s\S]*?colors:\s*\{[\s\S]*?\}\s*\}\s*\}\s*\}/m;
+  const newTailwindConfig = `tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#20E1B2',
+              forest: '#0B3844',
+              slate: '#20E1B2',
+              mist: '#68A89C',
+              stone: 'rgba(209, 245, 238, 0.15)',
+              emerald: '#20E1B2',
+              brunswick: '#0B3844',
+              polar: '#D1F5EE',
+              canvas: '#041B21',
+              card: 'rgba(8, 40, 48, 0.42)'
+            },
+            canvas: '#041B21'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            bengali: ['"Hind Siliguri"', '"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'monospace']
+          }
+        }
+      }
+    }`;
+
+  if (tailwindRegex.test(content)) {
+    content = content.replace(tailwindRegex, newTailwindConfig);
+  }
+
+  content = content
+    // Replace hex tokens with Velvet Teal & Mint Aurora
+    .replace(/#38BDF8/gi, '#20E1B2')
+    .replace(/#0284C7/gi, '#0D9488')
+    .replace(/#0B354A/gi, '#0B3844')
+    .replace(/#D8F6FB/gi, '#D1F5EE')
+    .replace(/#061B27/gi, '#041B21')
+    .replace(/#071E2B/gi, '#07252D')
+    .replace(/#092A3B/gi, '#06232B')
+    
+    // Replace RGBAs
+    .replace(/rgba\(56,\s*189,\s*248,/gi, 'rgba(32, 225, 178,')
+    .replace(/rgba\(11,\s*53,\s*74,/gi, 'rgba(8, 40, 48,')
+    .replace(/rgba\(216,\s*246,\s*251,/gi, 'rgba(209, 245, 238,')
+    
+    // Glass Cards & borders
+    .replace(/bg-\[#0B354A\]\/35/gi, 'bg-[#082830]/40')
+    .replace(/bg-\[#0B354A\]\/40/gi, 'bg-[#082830]/40')
+    .replace(/border-\[#D8F6FB\]\/20/gi, 'border-[#D1F5EE]/20')
+    .replace(/border-\[#D8F6FB\]\/15/gi, 'border-[#D1F5EE]/15');
+
+  fs.writeFileSync(filePath, content, 'utf8');
+}
+
+function getHtmlFiles(dir) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  list.forEach(file => {
+    if (file === 'node_modules' || file === '.git') return;
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+    if (stat && stat.isDirectory()) {
+      results = results.concat(getHtmlFiles(fullPath));
+    } else if (file.endsWith('.html')) {
+      results.push(fullPath);
+    }
+  });
+  return results;
+}
+
+const htmlFiles = getHtmlFiles(rootDir);
+htmlFiles.forEach(file => {
+  updateHtmlFile(file);
+  console.log('Updated to Velvet Teal & Mint Aurora Theme:', path.relative(rootDir, file));
+});
+
+console.log('\\n✅ 100% Deep Velvet Teal & Glowing Mint Aurora Theme Applied Successfully!');

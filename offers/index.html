@@ -23,18 +23,18 @@
         extend: {
           colors: {
             palette: {
-              olive: '#38BDF8',
-              forest: '#0B354A',
-              slate: '#38BDF8',
-              mist: '#74A8BA',
-              stone: 'rgba(216, 246, 251, 0.15)',
-              emerald: '#38BDF8',
-              brunswick: '#0B354A',
-              polar: '#D8F6FB',
-              canvas: '#061B27',
-              card: 'rgba(11, 53, 74, 0.42)'
+              olive: '#20E1B2',
+              forest: '#0B3844',
+              slate: '#20E1B2',
+              mist: '#68A89C',
+              stone: 'rgba(209, 245, 238, 0.15)',
+              emerald: '#20E1B2',
+              brunswick: '#0B3844',
+              polar: '#D1F5EE',
+              canvas: '#041B21',
+              card: 'rgba(8, 40, 48, 0.42)'
             },
-            canvas: '#061B27'
+            canvas: '#041B21'
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
@@ -50,7 +50,7 @@
   <!-- Custom Unified Morphy Stylesheet -->
   <link rel="stylesheet" href="/styles.css">
 </head>
-<body class="bg-[#061B27] text-white font-sans antialiased selection:bg-[#38BDF8] selection:text-white relative overflow-x-hidden">
+<body class="bg-[#041B21] text-white font-sans antialiased selection:bg-[#20E1B2] selection:text-white relative overflow-x-hidden">
 
   <!-- 0. Top Scroll Progress Bar -->
   <div id="scrollProgressBar"></div>
@@ -62,60 +62,60 @@
 
   <!-- 2. FIXED NAVBAR -->
         <!-- 1. FIXED GLASS NAVBAR (Morphy Style) -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#061B27]/95 backdrop-blur-2xl border-b border-[#D8F6FB]/15 transition-all duration-300 shadow-2xs">
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#041B21]/95 backdrop-blur-2xl border-b border-[#D1F5EE]/15 transition-all duration-300 shadow-2xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
       <!-- Brand Logo -->
       <a href="/" class="flex items-center gap-3 group min-w-0">
-        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#38BDF8] to-[#0B354A] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#38BDF8]/25 border border-white/20 shrink-0">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#20E1B2] to-[#0B3844] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#20E1B2]/25 border border-white/20 shrink-0">
           ✦
         </div>
         <div class="flex flex-col min-w-0">
-          <span class="font-extrabold text-white tracking-tight text-base sm:text-lg group-hover:text-[#38BDF8] transition-colors truncate" id="navBrandName">Md. Shakibur Rahaman</span>
-          <span class="text-[10px] text-[#38BDF8] font-extrabold tracking-wider uppercase truncate">Strategic Lead &amp; Digital Architect</span>
+          <span class="font-extrabold text-white tracking-tight text-base sm:text-lg group-hover:text-[#20E1B2] transition-colors truncate" id="navBrandName">Md. Shakibur Rahaman</span>
+          <span class="text-[10px] text-[#20E1B2] font-extrabold tracking-wider uppercase truncate">Strategic Lead &amp; Digital Architect</span>
         </div>
       </a>
 
       <!-- Centered Floating Pill Navigation Menu (Desktop Only) -->
-      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-[#061B27]/95 border border-[#D8F6FB]/15 text-sm font-semibold text-[#DDF6F0] backdrop-blur-md shadow-xs shrink-0">
-        <a href="/" class="hover:text-[#38BDF8] transition-colors">Home</a>
-        <a href="/about" class="hover:text-[#38BDF8] transition-colors">About</a>
+      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-[#041B21]/95 border border-[#D1F5EE]/15 text-sm font-semibold text-[#DDF6F0] backdrop-blur-md shadow-xs shrink-0">
+        <a href="/" class="hover:text-[#20E1B2] transition-colors">Home</a>
+        <a href="/about" class="hover:text-[#20E1B2] transition-colors">About</a>
         
         <!-- Services with dropdown arrow -->
         <div class="relative group">
-          <a href="/services" class="flex items-center gap-1.5 hover:text-[#38BDF8] transition-colors py-1">
+          <a href="/services" class="flex items-center gap-1.5 hover:text-[#20E1B2] transition-colors py-1">
             <span>Services</span>
-            <i class="fa-solid fa-chevron-down text-[10px] text-[#7EADA3] group-hover:text-[#38BDF8] group-hover:rotate-180 transition-transform duration-200"></i>
+            <i class="fa-solid fa-chevron-down text-[10px] text-[#7EADA3] group-hover:text-[#20E1B2] group-hover:rotate-180 transition-transform duration-200"></i>
           </a>
           <!-- Dropdown card -->
-          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#D8F6FB]/15 shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">Social Media &amp; Meta Ads</a>
-            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">Google Ads &amp; Search</a>
-            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">Full-Stack Web Development</a>
-            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">SEO &amp; AI Engine Optimization</a>
-            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">Graphics &amp; Visual Assets</a>
-            <div class="my-1.5 border-t border-[#D8F6FB]/15"></div>
-            <a href="/services" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#38BDF8] hover:bg-[#38BDF8]/10 text-center">View All 9 Services &rarr;</a>
+          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#D1F5EE]/15 shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">Social Media &amp; Meta Ads</a>
+            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">Google Ads &amp; Search</a>
+            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">Full-Stack Web Development</a>
+            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">SEO &amp; AI Engine Optimization</a>
+            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">Graphics &amp; Visual Assets</a>
+            <div class="my-1.5 border-t border-[#D1F5EE]/15"></div>
+            <a href="/services" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#20E1B2] hover:bg-[#20E1B2]/10 text-center">View All 9 Services &rarr;</a>
           </div>
         </div>
 
-        <a href="/projects" class="hover:text-[#38BDF8] transition-colors">Projects</a>
-        <a href="/experience" class="hover:text-[#38BDF8] transition-colors">Experience</a>
-        <a href="/offers" class="text-[#38BDF8] font-bold transition-colors">Offers</a>
-        <a href="/consultation" class="hover:text-[#38BDF8] transition-colors">Consultation</a>
+        <a href="/projects" class="hover:text-[#20E1B2] transition-colors">Projects</a>
+        <a href="/experience" class="hover:text-[#20E1B2] transition-colors">Experience</a>
+        <a href="/offers" class="text-[#20E1B2] font-bold transition-colors">Offers</a>
+        <a href="/consultation" class="hover:text-[#20E1B2] transition-colors">Consultation</a>
       </nav>
 
       <!-- Right Header Actions (Mobile Hamburger Toggle) -->
       <div class="flex items-center gap-3 shrink-0">
-        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 hover:border-[#38BDF8]/30 hover:bg-[#38BDF8]/5 text-white hover:text-[#38BDF8] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
+        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 hover:border-[#20E1B2]/30 hover:bg-[#20E1B2]/5 text-white hover:text-[#20E1B2] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
           <i id="mobileMenuIcon" class="fa-solid fa-bars-staggered text-base"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Dropdown Menu (Morphy Glassmorphic Design) -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-x border-[#D8F6FB]/15 rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
-      <div class="space-y-1.5 pb-3 border-b border-[#D8F6FB]/10">
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-x border-[#D1F5EE]/15 rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
+      <div class="space-y-1.5 pb-3 border-b border-[#D1F5EE]/10">
         <a href="/" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
             <i class="fa-solid fa-house-chimney text-xs text-[#7EADA3] w-4"></i>
@@ -135,7 +135,7 @@
             <i class="fa-solid fa-layer-group text-xs text-[#7EADA3] w-4"></i>
             <span>Services</span>
           </span>
-          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#38BDF8]/10 text-[#38BDF8]">9 Pillars</span>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#20E1B2]/10 text-[#20E1B2]">9 Pillars</span>
         </a>
         <a href="/projects" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
@@ -153,16 +153,16 @@
         </a>
         <a href="/offers" class="mobile-nav-link mobile-link flex items-center justify-between active">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-tags text-xs text-[#38BDF8] w-4"></i>
-            <span class="font-bold text-[#38BDF8]">Special Offers</span>
+            <i class="fa-solid fa-tags text-xs text-[#20E1B2] w-4"></i>
+            <span class="font-bold text-[#20E1B2]">Special Offers</span>
           </span>
-          <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-white shadow-xs">EMI 🔥</span>
+          <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-gradient-to-r from-[#20E1B2] to-[#0D9488] text-white shadow-xs">EMI 🔥</span>
         </a>
       </div>
 
       <!-- Quick Action Contact in Mobile Menu -->
       <div class="pt-2 flex items-center gap-2">
-        <a href="/contact" class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-[#38BDF8]/25 hover:shadow-lg transition-all active:scale-98">
+        <a href="/contact" class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#20E1B2] to-[#0D9488] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-[#20E1B2]/25 hover:shadow-lg transition-all active:scale-98">
           <i class="fa-solid fa-paper-plane text-xs"></i>
           <span>Get in Touch</span>
         </a>
@@ -185,7 +185,7 @@
           <span>SPECIAL GROWTH PACKAGES &amp; OFFERS</span>
         </div>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
-          Engineered for <span class="bg-gradient-to-r from-[#38BDF8] to-[#0284C7] bg-clip-text text-transparent">Rapid Commercial ROI</span>
+          Engineered for <span class="bg-gradient-to-r from-[#20E1B2] to-[#0D9488] bg-clip-text text-transparent">Rapid Commercial ROI</span>
         </h1>
       </div>
 
@@ -193,19 +193,19 @@
       <div id="offersGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
 
       <!-- Offer Card: Fully Customized E-com Website -->
-      <div class="morphy-card bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 hover:border-[#38BDF8]/40 rounded-[28px] overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-2xl hover:shadow-[#38BDF8]/15 hover:-translate-y-2 transition-all duration-300 p-6 sm:p-7 relative group">
+      <div class="morphy-card bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 hover:border-[#20E1B2]/40 rounded-[28px] overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-2xl hover:shadow-[#20E1B2]/15 hover:-translate-y-2 transition-all duration-300 p-6 sm:p-7 relative group">
         
         <!-- Top Media Frame with Inset Rounded Container -->
         <div class="space-y-4">
-          <div class="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-[#E2F4EF] border border-[#D8F6FB]/15/70">
+          <div class="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-[#E2F4EF] border border-[#D1F5EE]/15/70">
             <img src="/assets/offers/ecom-admin.png" alt="Fully Customized E-com Website" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
           </div>
 
           <!-- Badges Bar -->
           <div class="flex items-center justify-between gap-2 pt-1">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10.5px] font-extrabold bg-[#38BDF8]/10 text-[#38BDF8] border border-[#38BDF8]/20 uppercase tracking-wider">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#38BDF8] animate-pulse"></span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10.5px] font-extrabold bg-[#20E1B2]/10 text-[#20E1B2] border border-[#20E1B2]/20 uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#20E1B2] animate-pulse"></span>
               <span>E-Commerce Flagship</span>
             </span>
             <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10.5px] font-extrabold bg-[#10B981]/10 text-[#10B981] border border-[#10B981]/25">
@@ -215,10 +215,10 @@
 
           <!-- Title & Description -->
           <div class="pt-1">
-            <h3 class="text-xl sm:text-[22px] font-extrabold text-white tracking-tight leading-snug group-hover:text-[#38BDF8] transition-colors">
+            <h3 class="text-xl sm:text-[22px] font-extrabold text-white tracking-tight leading-snug group-hover:text-[#20E1B2] transition-colors">
               Fully Customized E-com Website
             </h3>
-            <div class="text-xs font-bold text-[#38BDF8] mt-0.5 mb-2.5">(with EMI Facility)</div>
+            <div class="text-xs font-bold text-[#20E1B2] mt-0.5 mb-2.5">(with EMI Facility)</div>
 
             <p class="text-xs sm:text-[13px] text-[#7EADA3] leading-relaxed line-clamp-3">
               High-converting digital storefront engineered for sub-second checkouts, multi-currency payment gateways, automated courier dispatch, and zero drop-off cart conversion.
@@ -228,18 +228,18 @@
           <!-- Feature Chips -->
           <div class="flex flex-wrap gap-1.5 pt-1">
             
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#092A3B] border border-[#D8F6FB]/15 text-[11px] font-bold text-[#A3CEC5]">
-        <i class="fa-solid fa-check text-[9px] text-[#38BDF8]"></i>
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#06232B] border border-[#D1F5EE]/15 text-[11px] font-bold text-[#A3CEC5]">
+        <i class="fa-solid fa-check text-[9px] text-[#20E1B2]"></i>
         <span>Headless Storefront</span>
       </span>
     
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#092A3B] border border-[#D8F6FB]/15 text-[11px] font-bold text-[#A3CEC5]">
-        <i class="fa-solid fa-check text-[9px] text-[#38BDF8]"></i>
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#06232B] border border-[#D1F5EE]/15 text-[11px] font-bold text-[#A3CEC5]">
+        <i class="fa-solid fa-check text-[9px] text-[#20E1B2]"></i>
         <span>Local & Global Gateways</span>
       </span>
     
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#092A3B] border border-[#D8F6FB]/15 text-[11px] font-bold text-[#A3CEC5]">
-        <i class="fa-solid fa-check text-[9px] text-[#38BDF8]"></i>
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#06232B] border border-[#D1F5EE]/15 text-[11px] font-bold text-[#A3CEC5]">
+        <i class="fa-solid fa-check text-[9px] text-[#20E1B2]"></i>
         <span>Sub-Second Speed</span>
       </span>
     
@@ -247,8 +247,8 @@
         </div>
 
         <!-- Action Button -->
-        <div class="pt-5 mt-6 border-t border-[#D8F6FB]/10">
-          <a href="/offers/ecommerce" class="w-full py-3.5 px-5 rounded-2xl bg-[#092A3B] group-hover:bg-gradient-to-r group-hover:from-[#38BDF8] group-hover:to-[#0284C7] text-white group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D8F6FB]/15 group-hover:border-transparent shadow-2xs group-hover:shadow-lg group-hover:shadow-[#38BDF8]/25 active:scale-98">
+        <div class="pt-5 mt-6 border-t border-[#D1F5EE]/10">
+          <a href="/offers/ecommerce" class="w-full py-3.5 px-5 rounded-2xl bg-[#06232B] group-hover:bg-gradient-to-r group-hover:from-[#20E1B2] group-hover:to-[#0D9488] text-white group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D1F5EE]/15 group-hover:border-transparent shadow-2xs group-hover:shadow-lg group-hover:shadow-[#20E1B2]/25 active:scale-98">
             <span>View E-Com Plans & EMI Matrix</span>
             <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
           </a>
@@ -256,19 +256,19 @@
       </div>
     
       <!-- Offer Card: Fully Customized Service-Based Platform -->
-      <div class="morphy-card bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 hover:border-[#38BDF8]/40 rounded-[28px] overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-2xl hover:shadow-[#38BDF8]/15 hover:-translate-y-2 transition-all duration-300 p-6 sm:p-7 relative group">
+      <div class="morphy-card bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 hover:border-[#20E1B2]/40 rounded-[28px] overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-2xl hover:shadow-[#20E1B2]/15 hover:-translate-y-2 transition-all duration-300 p-6 sm:p-7 relative group">
         
         <!-- Top Media Frame with Inset Rounded Container -->
         <div class="space-y-4">
-          <div class="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-[#E2F4EF] border border-[#D8F6FB]/15/70">
+          <div class="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-[#E2F4EF] border border-[#D1F5EE]/15/70">
             <img src="/assets/offers/service.jpg" alt="Fully Customized Service-Based Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
           </div>
 
           <!-- Badges Bar -->
           <div class="flex items-center justify-between gap-2 pt-1">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10.5px] font-extrabold bg-[#38BDF8]/10 text-[#38BDF8] border border-[#38BDF8]/20 uppercase tracking-wider">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#38BDF8] animate-pulse"></span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10.5px] font-extrabold bg-[#20E1B2]/10 text-[#20E1B2] border border-[#20E1B2]/20 uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#20E1B2] animate-pulse"></span>
               <span>Service Engine</span>
             </span>
             <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10.5px] font-extrabold bg-[#10B981]/10 text-[#10B981] border border-[#10B981]/25">
@@ -278,10 +278,10 @@
 
           <!-- Title & Description -->
           <div class="pt-1">
-            <h3 class="text-xl sm:text-[22px] font-extrabold text-white tracking-tight leading-snug group-hover:text-[#38BDF8] transition-colors">
+            <h3 class="text-xl sm:text-[22px] font-extrabold text-white tracking-tight leading-snug group-hover:text-[#20E1B2] transition-colors">
               Fully Customized Service-Based Platform
             </h3>
-            <div class="text-xs font-bold text-[#38BDF8] mt-0.5 mb-2.5">(with EMI Facility)</div>
+            <div class="text-xs font-bold text-[#20E1B2] mt-0.5 mb-2.5">(with EMI Facility)</div>
 
             <p class="text-xs sm:text-[13px] text-[#7EADA3] leading-relaxed line-clamp-3">
               Tailored conversion architecture for agencies, consultancies, and B2B enterprises to automate lead generation, interactive quotations, and client onboarding.
@@ -291,18 +291,18 @@
           <!-- Feature Chips -->
           <div class="flex flex-wrap gap-1.5 pt-1">
             
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#092A3B] border border-[#D8F6FB]/15 text-[11px] font-bold text-[#A3CEC5]">
-        <i class="fa-solid fa-check text-[9px] text-[#38BDF8]"></i>
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#06232B] border border-[#D1F5EE]/15 text-[11px] font-bold text-[#A3CEC5]">
+        <i class="fa-solid fa-check text-[9px] text-[#20E1B2]"></i>
         <span>Interactive Quotations</span>
       </span>
     
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#092A3B] border border-[#D8F6FB]/15 text-[11px] font-bold text-[#A3CEC5]">
-        <i class="fa-solid fa-check text-[9px] text-[#38BDF8]"></i>
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#06232B] border border-[#D1F5EE]/15 text-[11px] font-bold text-[#A3CEC5]">
+        <i class="fa-solid fa-check text-[9px] text-[#20E1B2]"></i>
         <span>Calendar & WhatsApp Sync</span>
       </span>
     
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#092A3B] border border-[#D8F6FB]/15 text-[11px] font-bold text-[#A3CEC5]">
-        <i class="fa-solid fa-check text-[9px] text-[#38BDF8]"></i>
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#06232B] border border-[#D1F5EE]/15 text-[11px] font-bold text-[#A3CEC5]">
+        <i class="fa-solid fa-check text-[9px] text-[#20E1B2]"></i>
         <span>Automated CRM</span>
       </span>
     
@@ -310,8 +310,8 @@
         </div>
 
         <!-- Action Button -->
-        <div class="pt-5 mt-6 border-t border-[#D8F6FB]/10">
-          <a href="/offers/service-platform" class="w-full py-3.5 px-5 rounded-2xl bg-[#092A3B] group-hover:bg-gradient-to-r group-hover:from-[#38BDF8] group-hover:to-[#0284C7] text-white group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D8F6FB]/15 group-hover:border-transparent shadow-2xs group-hover:shadow-lg group-hover:shadow-[#38BDF8]/25 active:scale-98">
+        <div class="pt-5 mt-6 border-t border-[#D1F5EE]/10">
+          <a href="/offers/service-platform" class="w-full py-3.5 px-5 rounded-2xl bg-[#06232B] group-hover:bg-gradient-to-r group-hover:from-[#20E1B2] group-hover:to-[#0D9488] text-white group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D1F5EE]/15 group-hover:border-transparent shadow-2xs group-hover:shadow-lg group-hover:shadow-[#20E1B2]/25 active:scale-98">
             <span>View Service Platform Plans & EMI</span>
             <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
           </a>
@@ -319,19 +319,19 @@
       </div>
     
       <!-- Offer Card: Fully Customized Personal Portfolio Website -->
-      <div class="morphy-card bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 hover:border-[#38BDF8]/40 rounded-[28px] overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-2xl hover:shadow-[#38BDF8]/15 hover:-translate-y-2 transition-all duration-300 p-6 sm:p-7 relative group">
+      <div class="morphy-card bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 hover:border-[#20E1B2]/40 rounded-[28px] overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-2xl hover:shadow-[#20E1B2]/15 hover:-translate-y-2 transition-all duration-300 p-6 sm:p-7 relative group">
         
         <!-- Top Media Frame with Inset Rounded Container -->
         <div class="space-y-4">
-          <div class="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-[#E2F4EF] border border-[#D8F6FB]/15/70">
+          <div class="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-[#E2F4EF] border border-[#D1F5EE]/15/70">
             <img src="/assets/offers/portfolio.jpg" alt="Fully Customized Personal Portfolio Website" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
           </div>
 
           <!-- Badges Bar -->
           <div class="flex items-center justify-between gap-2 pt-1">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10.5px] font-extrabold bg-[#38BDF8]/10 text-[#38BDF8] border border-[#38BDF8]/20 uppercase tracking-wider">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#38BDF8] animate-pulse"></span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10.5px] font-extrabold bg-[#20E1B2]/10 text-[#20E1B2] border border-[#20E1B2]/20 uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#20E1B2] animate-pulse"></span>
               <span>Executive Brand</span>
             </span>
             <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10.5px] font-extrabold bg-[#10B981]/10 text-[#10B981] border border-[#10B981]/25">
@@ -341,10 +341,10 @@
 
           <!-- Title & Description -->
           <div class="pt-1">
-            <h3 class="text-xl sm:text-[22px] font-extrabold text-white tracking-tight leading-snug group-hover:text-[#38BDF8] transition-colors">
+            <h3 class="text-xl sm:text-[22px] font-extrabold text-white tracking-tight leading-snug group-hover:text-[#20E1B2] transition-colors">
               Fully Customized Personal Portfolio Website
             </h3>
-            <div class="text-xs font-bold text-[#38BDF8] mt-0.5 mb-2.5">(with EMI Facility)</div>
+            <div class="text-xs font-bold text-[#20E1B2] mt-0.5 mb-2.5">(with EMI Facility)</div>
 
             <p class="text-xs sm:text-[13px] text-[#7EADA3] leading-relaxed line-clamp-3">
               Ultra-luxury personal branding platform designed for founders, consultants, directors, and executives to command premium authority, credentials showcase, and client trust.
@@ -354,18 +354,18 @@
           <!-- Feature Chips -->
           <div class="flex flex-wrap gap-1.5 pt-1">
             
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#092A3B] border border-[#D8F6FB]/15 text-[11px] font-bold text-[#A3CEC5]">
-        <i class="fa-solid fa-check text-[9px] text-[#38BDF8]"></i>
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#06232B] border border-[#D1F5EE]/15 text-[11px] font-bold text-[#A3CEC5]">
+        <i class="fa-solid fa-check text-[9px] text-[#20E1B2]"></i>
         <span>Morphy Bento Layout</span>
       </span>
     
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#092A3B] border border-[#D8F6FB]/15 text-[11px] font-bold text-[#A3CEC5]">
-        <i class="fa-solid fa-check text-[9px] text-[#38BDF8]"></i>
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#06232B] border border-[#D1F5EE]/15 text-[11px] font-bold text-[#A3CEC5]">
+        <i class="fa-solid fa-check text-[9px] text-[#20E1B2]"></i>
         <span>99/100 PageSpeed</span>
       </span>
     
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#092A3B] border border-[#D8F6FB]/15 text-[11px] font-bold text-[#A3CEC5]">
-        <i class="fa-solid fa-check text-[9px] text-[#38BDF8]"></i>
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#06232B] border border-[#D1F5EE]/15 text-[11px] font-bold text-[#A3CEC5]">
+        <i class="fa-solid fa-check text-[9px] text-[#20E1B2]"></i>
         <span>100% IP Ownership</span>
       </span>
     
@@ -373,8 +373,8 @@
         </div>
 
         <!-- Action Button -->
-        <div class="pt-5 mt-6 border-t border-[#D8F6FB]/10">
-          <a href="/offers/portfolio" class="w-full py-3.5 px-5 rounded-2xl bg-[#092A3B] group-hover:bg-gradient-to-r group-hover:from-[#38BDF8] group-hover:to-[#0284C7] text-white group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D8F6FB]/15 group-hover:border-transparent shadow-2xs group-hover:shadow-lg group-hover:shadow-[#38BDF8]/25 active:scale-98">
+        <div class="pt-5 mt-6 border-t border-[#D1F5EE]/10">
+          <a href="/offers/portfolio" class="w-full py-3.5 px-5 rounded-2xl bg-[#06232B] group-hover:bg-gradient-to-r group-hover:from-[#20E1B2] group-hover:to-[#0D9488] text-white group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D1F5EE]/15 group-hover:border-transparent shadow-2xs group-hover:shadow-lg group-hover:shadow-[#20E1B2]/25 active:scale-98">
             <span>View Portfolio Plans & EMI Matrix</span>
             <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
           </a>
@@ -388,7 +388,7 @@
 
 
   <!-- 5. TRANSPARENT SPRINT TERMS & FAQ ACCORDION -->
-  <section class="py-16 md:py-24 border-t border-[#D8F6FB]/15 bg-[#0B354A]/35 backdrop-blur-xl relative z-10">
+  <section class="py-16 md:py-24 border-t border-[#D1F5EE]/15 bg-[#0B3844]/35 backdrop-blur-xl relative z-10">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-14">
@@ -401,40 +401,40 @@
 
       <div class="space-y-4">
         
-        <div class="morphy-card p-6 bg-[#092A3B] border border-[#D8F6FB]/15 space-y-2">
+        <div class="morphy-card p-6 bg-[#06232B] border border-[#D1F5EE]/15 space-y-2">
           <h3 class="text-base font-black text-white flex items-center justify-between">
             <span>How quickly can we kick off our campaign or platform sprint?</span>
-            <i class="fa-solid fa-bolt text-xs text-[#38BDF8]"></i>
+            <i class="fa-solid fa-bolt text-xs text-[#20E1B2]"></i>
           </h3>
           <p class="text-xs text-[#7EADA3] leading-relaxed pt-1">
             Once an offer is confirmed and brief intake is completed, sprint onboarding happens within 24 to 48 hours. We set up shared communication channels and commence architecture immediately.
           </p>
         </div>
 
-        <div class="morphy-card p-6 bg-[#092A3B] border border-[#D8F6FB]/15 space-y-2">
+        <div class="morphy-card p-6 bg-[#06232B] border border-[#D1F5EE]/15 space-y-2">
           <h3 class="text-base font-black text-white flex items-center justify-between">
             <span>What are the milestone payment terms?</span>
-            <i class="fa-solid fa-shield-halved text-xs text-[#38BDF8]"></i>
+            <i class="fa-solid fa-shield-halved text-xs text-[#20E1B2]"></i>
           </h3>
           <p class="text-xs text-[#7EADA3] leading-relaxed pt-1">
             All fixed-scope builds follow a transparent 50/50 milestone schedule (50% commencement deposit, 50% upon verified production deployment). Custom monthly retainers are invoiced at the beginning of each 30-day sprint.
           </p>
         </div>
 
-        <div class="morphy-card p-6 bg-[#092A3B] border border-[#D8F6FB]/15 space-y-2">
+        <div class="morphy-card p-6 bg-[#06232B] border border-[#D1F5EE]/15 space-y-2">
           <h3 class="text-base font-black text-white flex items-center justify-between">
             <span>Can a sprint package be tailored for our specific business model?</span>
-            <i class="fa-solid fa-sliders text-xs text-[#38BDF8]"></i>
+            <i class="fa-solid fa-sliders text-xs text-[#20E1B2]"></i>
           </h3>
           <p class="text-xs text-[#7EADA3] leading-relaxed pt-1">
             Yes. Every enterprise is unique. We frequently customize hybrid sprints that combine paid ads scaling with bespoke web architecture or brand repositioning.
           </p>
         </div>
 
-        <div class="morphy-card p-6 bg-[#092A3B] border border-[#D8F6FB]/15 space-y-2">
+        <div class="morphy-card p-6 bg-[#06232B] border border-[#D1F5EE]/15 space-y-2">
           <h3 class="text-base font-black text-white flex items-center justify-between">
             <span>Do we own 100% of our code, creative assets, and ad accounts?</span>
-            <i class="fa-solid fa-lock text-xs text-[#38BDF8]"></i>
+            <i class="fa-solid fa-lock text-xs text-[#20E1B2]"></i>
           </h3>
           <p class="text-xs text-[#7EADA3] leading-relaxed pt-1">
             Absolutely. You maintain 100% intellectual property ownership of your codebase, design source files, domain assets, and ad account billing. Zero vendor lock-in.
@@ -447,14 +447,14 @@
   </section>
 
   <!-- 6. COMMISSION A PLATFORM BANNER -->
-  <section class="py-20 bg-[#0B354A]/35 backdrop-blur-xl border-t border-[#D8F6FB]/15 relative z-10">
+  <section class="py-20 bg-[#0B3844]/35 backdrop-blur-xl border-t border-[#D1F5EE]/15 relative z-10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
       <div class="morphy-tag-primary justify-center">
         <i class="fa-solid fa-comments"></i>
         <span>CUSTOM PROPOSAL</span>
       </div>
       <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
-        Need a Tailored Commercial <span class="text-[#38BDF8]">Scope or Retainer?</span>
+        Need a Tailored Commercial <span class="text-[#20E1B2]">Scope or Retainer?</span>
       </h2>
       <p class="text-sm sm:text-base text-[#7EADA3] max-w-2xl mx-auto leading-relaxed">
         Let's discuss your exact deliverables, timelines, and milestones in a private strategic consultation.
@@ -473,12 +473,12 @@
   </section>
 
   <!-- 7. FOOTER -->
-  <footer class="py-16 border-t border-[#D8F6FB]/15 bg-[#0B354A]/35 backdrop-blur-xl relative z-10 text-xs text-[#7EADA3]">
+  <footer class="py-16 border-t border-[#D1F5EE]/15 bg-[#0B3844]/35 backdrop-blur-xl relative z-10 text-xs text-[#7EADA3]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         <div class="space-y-3">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-xl bg-[#38BDF8] text-white flex items-center justify-center font-black text-xs shadow-sm">
+            <div class="w-8 h-8 rounded-xl bg-[#20E1B2] text-white flex items-center justify-center font-black text-xs shadow-sm">
               ✦
             </div>
             <span class="font-bold text-white tracking-tight text-base">Md. Shakibur Rahaman</span>
@@ -490,39 +490,39 @@
         <div>
           <div class="text-white font-bold uppercase tracking-wider text-[11px] mb-3">Explore Hubs</div>
           <div class="space-y-2">
-            <div><a href="/" class="hover:text-[#38BDF8] transition-colors">Home</a></div>
-            <div><a href="/about" class="hover:text-[#38BDF8] transition-colors">About</a></div>
-            <div><a href="/services" class="hover:text-[#38BDF8] transition-colors">9 Strategic Services</a></div>
-            <div><a href="/projects" class="hover:text-[#38BDF8] transition-colors">15 Web Projects</a></div>
-            <div><a href="/experience" class="hover:text-[#38BDF8] transition-colors">Experience Roadmap</a></div>
-            <div><a href="/offers" class="hover:text-[#38BDF8] text-[#38BDF8] font-bold transition-colors">Growth Offers &amp; Sprints</a></div>
-            <div><a href="/consultation" class="hover:text-[#38BDF8] transition-colors">Consultation Booking</a></div>
+            <div><a href="/" class="hover:text-[#20E1B2] transition-colors">Home</a></div>
+            <div><a href="/about" class="hover:text-[#20E1B2] transition-colors">About</a></div>
+            <div><a href="/services" class="hover:text-[#20E1B2] transition-colors">9 Strategic Services</a></div>
+            <div><a href="/projects" class="hover:text-[#20E1B2] transition-colors">15 Web Projects</a></div>
+            <div><a href="/experience" class="hover:text-[#20E1B2] transition-colors">Experience Roadmap</a></div>
+            <div><a href="/offers" class="hover:text-[#20E1B2] text-[#20E1B2] font-bold transition-colors">Growth Offers &amp; Sprints</a></div>
+            <div><a href="/consultation" class="hover:text-[#20E1B2] transition-colors">Consultation Booking</a></div>
           </div>
         </div>
         <div>
           <div class="text-white font-bold uppercase tracking-wider text-[11px] mb-3">Core Disciplines</div>
           <div class="space-y-2">
-            <div><a href="/services/branding" class="hover:text-[#38BDF8] transition-colors">01 Branding &amp; Strategy</a></div>
-            <div><a href="/services/graphics-design" class="hover:text-[#38BDF8] transition-colors">02 Graphics &amp; UI/UX</a></div>
-            <div><a href="/services/web-development" class="hover:text-[#38BDF8] transition-colors">03 Full-Stack Web Dev</a></div>
-            <div><a href="/services/social-media-marketing" class="hover:text-[#38BDF8] transition-colors">04 Social Media &amp; Meta</a></div>
-            <div><a href="/services/google-ads" class="hover:text-[#38BDF8] transition-colors">07 Google Ads Scaling</a></div>
+            <div><a href="/services/branding" class="hover:text-[#20E1B2] transition-colors">01 Branding &amp; Strategy</a></div>
+            <div><a href="/services/graphics-design" class="hover:text-[#20E1B2] transition-colors">02 Graphics &amp; UI/UX</a></div>
+            <div><a href="/services/web-development" class="hover:text-[#20E1B2] transition-colors">03 Full-Stack Web Dev</a></div>
+            <div><a href="/services/social-media-marketing" class="hover:text-[#20E1B2] transition-colors">04 Social Media &amp; Meta</a></div>
+            <div><a href="/services/google-ads" class="hover:text-[#20E1B2] transition-colors">07 Google Ads Scaling</a></div>
           </div>
         </div>
         <div>
           <div class="text-white font-bold uppercase tracking-wider text-[11px] mb-3">Direct Contact</div>
           <div class="space-y-2">
-            <div><a href="mailto:shakibur188@gmail.com" class="hover:text-[#38BDF8] font-bold transition-colors">shakibur188@gmail.com</a></div>
-            <div><a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#38BDF8] font-bold transition-colors">+880 1838-070468</a></div>
+            <div><a href="mailto:shakibur188@gmail.com" class="hover:text-[#20E1B2] font-bold transition-colors">shakibur188@gmail.com</a></div>
+            <div><a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#20E1B2] font-bold transition-colors">+880 1838-070468</a></div>
             
           </div>
         </div>
       </div>
-      <div class="pt-8 border-t border-[#D8F6FB]/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+      <div class="pt-8 border-t border-[#D1F5EE]/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
         <div>&copy; 2026 Md. Shakibur Rahaman. All rights reserved.</div>
         <div class="flex items-center gap-4">
-          <a href="https://github.com/shakibur188-tech/Shakib-Portfolio" target="_blank" class="hover:text-[#38BDF8] transition-colors">GitHub</a>
-          <a href="https://www.linkedin.com/in/md-shakibur-rahaman" target="_blank" class="hover:text-[#38BDF8] transition-colors">LinkedIn</a>
+          <a href="https://github.com/shakibur188-tech/Shakib-Portfolio" target="_blank" class="hover:text-[#20E1B2] transition-colors">GitHub</a>
+          <a href="https://www.linkedin.com/in/md-shakibur-rahaman" target="_blank" class="hover:text-[#20E1B2] transition-colors">LinkedIn</a>
         </div>
       </div>
     </div>
@@ -530,17 +530,17 @@
 
   <!-- 8. INTERACTIVE OFFER BOOKING MODAL -->
   <div id="offerModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-    <div class="relative w-full max-w-lg p-6 sm:p-8 rounded-3xl bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto">
+    <div class="relative w-full max-w-lg p-6 sm:p-8 rounded-3xl bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto">
       
       <!-- Close Button -->
-      <button onclick="closeOfferModal()" aria-label="Close Modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-[#092A3B] border border-[#D8F6FB]/15 text-white flex items-center justify-center hover:bg-[#38BDF8] hover:text-white transition-colors">
+      <button onclick="closeOfferModal()" aria-label="Close Modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-[#06232B] border border-[#D1F5EE]/15 text-white flex items-center justify-center hover:bg-[#20E1B2] hover:text-white transition-colors">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
       <!-- Modal Header -->
       <div>
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#38BDF8]/10 text-[#38BDF8] text-[10.5px] font-black uppercase tracking-wider">
-          <i class="fa-solid fa-tag text-[#38BDF8]"></i>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#20E1B2]/10 text-[#20E1B2] text-[10.5px] font-black uppercase tracking-wider">
+          <i class="fa-solid fa-tag text-[#20E1B2]"></i>
           <span>SPRINT PACKAGE CLAIM</span>
         </div>
         <h3 class="text-xl sm:text-2xl font-black text-white mt-2" id="modalOfferTitle">
@@ -559,28 +559,28 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div class="space-y-1">
             <label class="text-xs font-bold text-white">Your Name *</label>
-            <input type="text" id="modalName" required placeholder="Md. Rahim" class="w-full px-3.5 py-2.5 rounded-xl bg-[#092A3B] border border-[#D8F6FB]/15 text-xs text-white focus:outline-none focus:border-[#38BDF8]">
+            <input type="text" id="modalName" required placeholder="Md. Rahim" class="w-full px-3.5 py-2.5 rounded-xl bg-[#06232B] border border-[#D1F5EE]/15 text-xs text-white focus:outline-none focus:border-[#20E1B2]">
           </div>
           <div class="space-y-1">
             <label class="text-xs font-bold text-white">Email Address *</label>
-            <input type="email" id="modalEmail" required placeholder="rahim@company.com" class="w-full px-3.5 py-2.5 rounded-xl bg-[#092A3B] border border-[#D8F6FB]/15 text-xs text-white focus:outline-none focus:border-[#38BDF8]">
+            <input type="email" id="modalEmail" required placeholder="rahim@company.com" class="w-full px-3.5 py-2.5 rounded-xl bg-[#06232B] border border-[#D1F5EE]/15 text-xs text-white focus:outline-none focus:border-[#20E1B2]">
           </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div class="space-y-1">
             <label class="text-xs font-bold text-white">WhatsApp / Phone *</label>
-            <input type="tel" id="modalPhone" required placeholder="+880 1838..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#092A3B] border border-[#D8F6FB]/15 text-xs text-white focus:outline-none focus:border-[#38BDF8]">
+            <input type="tel" id="modalPhone" required placeholder="+880 1838..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#06232B] border border-[#D1F5EE]/15 text-xs text-white focus:outline-none focus:border-[#20E1B2]">
           </div>
           <div class="space-y-1">
             <label class="text-xs font-bold text-white">Company / Website</label>
-            <input type="text" id="modalCompany" placeholder="Brand Name / URL" class="w-full px-3.5 py-2.5 rounded-xl bg-[#092A3B] border border-[#D8F6FB]/15 text-xs text-white focus:outline-none focus:border-[#38BDF8]">
+            <input type="text" id="modalCompany" placeholder="Brand Name / URL" class="w-full px-3.5 py-2.5 rounded-xl bg-[#06232B] border border-[#D1F5EE]/15 text-xs text-white focus:outline-none focus:border-[#20E1B2]">
           </div>
         </div>
 
         <div class="space-y-1">
           <label class="text-xs font-bold text-white">Project Notes / Key Objectives</label>
-          <textarea id="modalMessage" rows="3" placeholder="Describe your business goals, launch timeline, or specific project requirements..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#092A3B] border border-[#D8F6FB]/15 text-xs text-white focus:outline-none focus:border-[#38BDF8]"></textarea>
+          <textarea id="modalMessage" rows="3" placeholder="Describe your business goals, launch timeline, or specific project requirements..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#06232B] border border-[#D1F5EE]/15 text-xs text-white focus:outline-none focus:border-[#20E1B2]"></textarea>
         </div>
 
         <!-- Alert Box -->

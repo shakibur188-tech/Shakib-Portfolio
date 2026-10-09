@@ -17,67 +17,67 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="antialiased bg-[#061B27] text-white min-h-screen">
+<body class="antialiased bg-[#041B21] text-white min-h-screen">
 
   <div id="scrollProgressBar"></div>
   <canvas id="ambientCanvas"></canvas>
 
   <!-- NAVBAR COMPONENT -->
               <!-- 1. FIXED GLASS NAVBAR (Morphy Style) -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#061B27]/95 backdrop-blur-2xl border-b border-[#D8F6FB]/15 transition-all duration-300 shadow-2xs">
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#041B21]/95 backdrop-blur-2xl border-b border-[#D1F5EE]/15 transition-all duration-300 shadow-2xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
       <!-- Brand Logo -->
       <a href="/" class="flex items-center gap-3 group min-w-0">
-        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#38BDF8] to-[#0B354A] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#38BDF8]/25 border border-white/20 shrink-0">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#20E1B2] to-[#0B3844] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#20E1B2]/25 border border-white/20 shrink-0">
           ✦
         </div>
         <div class="flex flex-col min-w-0">
-          <span class="font-extrabold text-white tracking-tight text-base sm:text-lg group-hover:text-[#38BDF8] transition-colors truncate" id="navBrandName">Md. Shakibur Rahaman</span>
-          <span class="text-[10px] text-[#38BDF8] font-extrabold tracking-wider uppercase truncate">Strategic Lead &amp; Digital Architect</span>
+          <span class="font-extrabold text-white tracking-tight text-base sm:text-lg group-hover:text-[#20E1B2] transition-colors truncate" id="navBrandName">Md. Shakibur Rahaman</span>
+          <span class="text-[10px] text-[#20E1B2] font-extrabold tracking-wider uppercase truncate">Strategic Lead &amp; Digital Architect</span>
         </div>
       </a>
 
       <!-- Centered Floating Pill Navigation Menu (Desktop Only) -->
-      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-[#061B27]/95 border border-[#D8F6FB]/15 text-sm font-semibold text-[#DDF6F0] backdrop-blur-md shadow-xs shrink-0">
-        <a href="/" class="hover:text-[#38BDF8] transition-colors">Home</a>
-        <a href="/about" class="hover:text-[#38BDF8] transition-colors">About</a>
+      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-[#041B21]/95 border border-[#D1F5EE]/15 text-sm font-semibold text-[#DDF6F0] backdrop-blur-md shadow-xs shrink-0">
+        <a href="/" class="hover:text-[#20E1B2] transition-colors">Home</a>
+        <a href="/about" class="hover:text-[#20E1B2] transition-colors">About</a>
         
         <!-- Services with dropdown arrow -->
         <div class="relative group">
-          <a href="/services" class="flex items-center gap-1.5 hover:text-[#38BDF8] transition-colors py-1">
+          <a href="/services" class="flex items-center gap-1.5 hover:text-[#20E1B2] transition-colors py-1">
             <span>Services</span>
-            <i class="fa-solid fa-chevron-down text-[10px] text-[#7EADA3] group-hover:text-[#38BDF8] group-hover:rotate-180 transition-transform duration-200"></i>
+            <i class="fa-solid fa-chevron-down text-[10px] text-[#7EADA3] group-hover:text-[#20E1B2] group-hover:rotate-180 transition-transform duration-200"></i>
           </a>
           <!-- Dropdown card -->
-          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#D8F6FB]/15 shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">Social Media &amp; Meta Ads</a>
-            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">Google Ads &amp; Search</a>
-            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">Full-Stack Web Development</a>
-            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">SEO &amp; AI Engine Optimization</a>
-            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">Graphics &amp; Visual Assets</a>
-            <div class="my-1.5 border-t border-[#D8F6FB]/15"></div>
-            <a href="/services" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#38BDF8] hover:bg-[#38BDF8]/10 text-center">View All 9 Services &rarr;</a>
+          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#D1F5EE]/15 shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">Social Media &amp; Meta Ads</a>
+            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">Google Ads &amp; Search</a>
+            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">Full-Stack Web Development</a>
+            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">SEO &amp; AI Engine Optimization</a>
+            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">Graphics &amp; Visual Assets</a>
+            <div class="my-1.5 border-t border-[#D1F5EE]/15"></div>
+            <a href="/services" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#20E1B2] hover:bg-[#20E1B2]/10 text-center">View All 9 Services &rarr;</a>
           </div>
         </div>
 
-        <a href="/projects" class="hover:text-[#38BDF8] transition-colors">Projects</a>
-        <a href="/experience" class="hover:text-[#38BDF8] transition-colors">Experience</a>
-        <a href="/offers" class="hover:text-[#38BDF8] transition-colors">Offers</a>
-        <a href="/consultation" class="text-[#38BDF8] font-bold transition-colors">Consultation</a>
+        <a href="/projects" class="hover:text-[#20E1B2] transition-colors">Projects</a>
+        <a href="/experience" class="hover:text-[#20E1B2] transition-colors">Experience</a>
+        <a href="/offers" class="hover:text-[#20E1B2] transition-colors">Offers</a>
+        <a href="/consultation" class="text-[#20E1B2] font-bold transition-colors">Consultation</a>
       </nav>
 
       <!-- Right Header Actions (Mobile Hamburger Toggle) -->
       <div class="flex items-center gap-3 shrink-0">
-        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 hover:border-[#38BDF8]/30 hover:bg-[#38BDF8]/5 text-white hover:text-[#38BDF8] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
+        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 hover:border-[#20E1B2]/30 hover:bg-[#20E1B2]/5 text-white hover:text-[#20E1B2] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
           <i id="mobileMenuIcon" class="fa-solid fa-bars-staggered text-base"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Dropdown Menu (Morphy Glassmorphic Design) -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-x border-[#D8F6FB]/15 rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
-      <div class="space-y-1.5 pb-3 border-b border-[#D8F6FB]/10">
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-x border-[#D1F5EE]/15 rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
+      <div class="space-y-1.5 pb-3 border-b border-[#D1F5EE]/10">
         <a href="/" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
             <i class="fa-solid fa-house-chimney text-xs text-[#7EADA3] w-4"></i>
@@ -97,7 +97,7 @@
             <i class="fa-solid fa-layer-group text-xs text-[#7EADA3] w-4"></i>
             <span>Services</span>
           </span>
-          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#38BDF8]/10 text-[#38BDF8]">9 Pillars</span>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#20E1B2]/10 text-[#20E1B2]">9 Pillars</span>
         </a>
         <a href="/projects" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
@@ -115,16 +115,16 @@
         </a>
         <a href="/offers" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-tags text-xs text-[#38BDF8] w-4"></i>
-            <span class="font-bold text-[#38BDF8]">Special Offers</span>
+            <i class="fa-solid fa-tags text-xs text-[#20E1B2] w-4"></i>
+            <span class="font-bold text-[#20E1B2]">Special Offers</span>
           </span>
-          <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-white shadow-xs">EMI 🔥</span>
+          <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-gradient-to-r from-[#20E1B2] to-[#0D9488] text-white shadow-xs">EMI 🔥</span>
         </a>
       </div>
 
       <!-- Quick Action Contact in Mobile Menu -->
       <div class="pt-2 flex items-center gap-2">
-        <a href="/contact" class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-[#38BDF8]/25 hover:shadow-lg transition-all active:scale-98">
+        <a href="/contact" class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#20E1B2] to-[#0D9488] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-[#20E1B2]/25 hover:shadow-lg transition-all active:scale-98">
           <i class="fa-solid fa-paper-plane text-xs"></i>
           <span>Get in Touch</span>
         </a>
@@ -143,7 +143,7 @@
         <span>1-on-1 Growth Diagnostic</span>
       </div>
       <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white">
-        Book Your Private <span class="text-[#38BDF8]">Strategy Consultation</span>
+        Book Your Private <span class="text-[#20E1B2]">Strategy Consultation</span>
       </h1>
       <p class="text-base sm:text-lg text-[#7EADA3] font-medium leading-relaxed">
         Let's dissect your current advertising metrics, identify conversion leaks, and map a bespoke roadmap to profitable customer acquisition.
@@ -162,7 +162,7 @@
           
           <div class="space-y-4">
             <div class="flex items-start gap-4">
-              <div class="w-8 h-8 rounded-xl bg-[#38BDF8]/10 text-[#38BDF8] flex items-center justify-center font-bold text-sm shrink-0">1</div>
+              <div class="w-8 h-8 rounded-xl bg-[#20E1B2]/10 text-[#20E1B2] flex items-center justify-center font-bold text-sm shrink-0">1</div>
               <div>
                 <h4 class="text-sm font-bold text-white">Ad Account Health Audit</h4>
                 <p class="text-xs text-[#7EADA3] mt-0.5">Live teardown of your Meta/Google ad account structure, audience overlap, and budget distribution.</p>
@@ -170,7 +170,7 @@
             </div>
 
             <div class="flex items-start gap-4">
-              <div class="w-8 h-8 rounded-xl bg-[#38BDF8]/10 text-[#38BDF8] flex items-center justify-center font-bold text-sm shrink-0">2</div>
+              <div class="w-8 h-8 rounded-xl bg-[#20E1B2]/10 text-[#20E1B2] flex items-center justify-center font-bold text-sm shrink-0">2</div>
               <div>
                 <h4 class="text-sm font-bold text-white">Funnel &amp; CRO Breakdown</h4>
                 <p class="text-xs text-[#7EADA3] mt-0.5">Reviewing your landing page speed, copy hooks, mobile conversion friction, and offer positioning.</p>
@@ -178,7 +178,7 @@
             </div>
 
             <div class="flex items-start gap-4">
-              <div class="w-8 h-8 rounded-xl bg-[#38BDF8]/10 text-[#38BDF8] flex items-center justify-center font-bold text-sm shrink-0">3</div>
+              <div class="w-8 h-8 rounded-xl bg-[#20E1B2]/10 text-[#20E1B2] flex items-center justify-center font-bold text-sm shrink-0">3</div>
               <div>
                 <h4 class="text-sm font-bold text-white">Actionable 90-Day Scaling Plan</h4>
                 <p class="text-xs text-[#7EADA3] mt-0.5">A clear step-by-step roadmap to lower your CPA and achieve predictable ROAS targets.</p>
@@ -186,8 +186,8 @@
             </div>
           </div>
 
-          <div class="p-4 rounded-2xl bg-[#38BDF8]/5 border border-[#38BDF8]/15">
-            <div class="text-xs font-bold text-[#38BDF8] flex items-center gap-2">
+          <div class="p-4 rounded-2xl bg-[#20E1B2]/5 border border-[#20E1B2]/15">
+            <div class="text-xs font-bold text-[#20E1B2] flex items-center gap-2">
               <i class="fa-solid fa-shield-check"></i>
               <span>100% No-Pressure Guarantee</span>
             </div>
@@ -199,7 +199,7 @@
         <div class="morphy-card p-6 space-y-3 text-sm">
           <div class="font-bold text-white">Prefer Direct Messaging?</div>
           <div class="flex items-center gap-3 text-xs text-[#7EADA3]">
-            <i class="fa-solid fa-envelope text-[#38BDF8]"></i>
+            <i class="fa-solid fa-envelope text-[#20E1B2]"></i>
             <span>contact@shakibur.info</span>
           </div>
           <div class="flex items-center gap-3 text-xs text-[#7EADA3]">
@@ -212,7 +212,7 @@
       <!-- RIGHT: Interactive Booking Intake Form (7 cols) -->
       <div class="lg:col-span-7">
         <div class="morphy-card p-8 sm:p-10 space-y-6">
-          <div class="border-b border-[#D8F6FB]/15 pb-4">
+          <div class="border-b border-[#D1F5EE]/15 pb-4">
             <h2 class="text-2xl font-extrabold text-white">Reserve Your Session</h2>
             <p class="text-xs text-[#7EADA3] mt-1">Fill out the briefing below so we can analyze your business before our call.</p>
           </div>
@@ -223,22 +223,22 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
                 <label class="block text-xs font-bold text-white uppercase tracking-wider mb-2">Your Full Name *</label>
-                <input type="text" name="name" required placeholder="e.g. Michael Vance" class="w-full px-4 py-3 rounded-xl border border-[#D8F6FB]/15 bg-[#0B354A]/35 backdrop-blur-xl text-sm focus:outline-none focus:border-[#38BDF8] transition-colors">
+                <input type="text" name="name" required placeholder="e.g. Michael Vance" class="w-full px-4 py-3 rounded-xl border border-[#D1F5EE]/15 bg-[#0B3844]/35 backdrop-blur-xl text-sm focus:outline-none focus:border-[#20E1B2] transition-colors">
               </div>
               <div>
                 <label class="block text-xs font-bold text-white uppercase tracking-wider mb-2">Work Email *</label>
-                <input type="email" name="email" required placeholder="michael@company.com" class="w-full px-4 py-3 rounded-xl border border-[#D8F6FB]/15 bg-[#0B354A]/35 backdrop-blur-xl text-sm focus:outline-none focus:border-[#38BDF8] transition-colors">
+                <input type="email" name="email" required placeholder="michael@company.com" class="w-full px-4 py-3 rounded-xl border border-[#D1F5EE]/15 bg-[#0B3844]/35 backdrop-blur-xl text-sm focus:outline-none focus:border-[#20E1B2] transition-colors">
               </div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
                 <label class="block text-xs font-bold text-white uppercase tracking-wider mb-2">Website / Store URL *</label>
-                <input type="url" name="website" required placeholder="https://yourbrand.com" class="w-full px-4 py-3 rounded-xl border border-[#D8F6FB]/15 bg-[#0B354A]/35 backdrop-blur-xl text-sm focus:outline-none focus:border-[#38BDF8] transition-colors">
+                <input type="url" name="website" required placeholder="https://yourbrand.com" class="w-full px-4 py-3 rounded-xl border border-[#D1F5EE]/15 bg-[#0B3844]/35 backdrop-blur-xl text-sm focus:outline-none focus:border-[#20E1B2] transition-colors">
               </div>
               <div>
                 <label class="block text-xs font-bold text-white uppercase tracking-wider mb-2">Current Monthly Ad Spend</label>
-                <select name="ad_spend" class="w-full px-4 py-3 rounded-xl border border-[#D8F6FB]/15 bg-[#0B354A]/35 backdrop-blur-xl text-sm focus:outline-none focus:border-[#38BDF8] transition-colors">
+                <select name="ad_spend" class="w-full px-4 py-3 rounded-xl border border-[#D1F5EE]/15 bg-[#0B3844]/35 backdrop-blur-xl text-sm focus:outline-none focus:border-[#20E1B2] transition-colors">
                   <option value="under_1k">Under $1,000 / month</option>
                   <option value="1k_5k">$1,000 - $5,000 / month</option>
                   <option value="5k_20k" selected>$5,000 - $20,000 / month</option>
@@ -250,7 +250,7 @@
 
             <div>
               <label class="block text-xs font-bold text-white uppercase tracking-wider mb-2">Primary Consultation Focus *</label>
-              <select name="service" class="w-full px-4 py-3 rounded-xl border border-[#D8F6FB]/15 bg-[#0B354A]/35 backdrop-blur-xl text-sm focus:outline-none focus:border-[#38BDF8] transition-colors">
+              <select name="service" class="w-full px-4 py-3 rounded-xl border border-[#D1F5EE]/15 bg-[#0B3844]/35 backdrop-blur-xl text-sm focus:outline-none focus:border-[#20E1B2] transition-colors">
                 <option value="meta_ads">Meta (Facebook/Instagram) Paid Ads Scaling</option>
                 <option value="google_ads">Google Ads &amp; Search Intent Optimization</option>
                 <option value="web_cro">Full-Stack Web Rebuild &amp; Conversion Optimization</option>
@@ -260,10 +260,10 @@
 
             <div>
               <label class="block text-xs font-bold text-white uppercase tracking-wider mb-2">Key Bottlenecks &amp; Current Goals</label>
-              <textarea name="message" rows="4" placeholder="Briefly describe your current ROAS, CPA challenges, or revenue targets for this quarter..." class="w-full px-4 py-3 rounded-xl border border-[#D8F6FB]/15 bg-[#0B354A]/35 backdrop-blur-xl text-sm focus:outline-none focus:border-[#38BDF8] transition-colors"></textarea>
+              <textarea name="message" rows="4" placeholder="Briefly describe your current ROAS, CPA challenges, or revenue targets for this quarter..." class="w-full px-4 py-3 rounded-xl border border-[#D1F5EE]/15 bg-[#0B3844]/35 backdrop-blur-xl text-sm focus:outline-none focus:border-[#20E1B2] transition-colors"></textarea>
             </div>
 
-            <button type="submit" class="w-full py-4 rounded-xl bg-[#38BDF8] hover:bg-[#0284C7] text-white font-extrabold text-sm uppercase tracking-wider transition-all duration-300 shadow-lg shadow-[#38BDF8]/25 hover:scale-[1.01] active:scale-[0.99]">
+            <button type="submit" class="w-full py-4 rounded-xl bg-[#20E1B2] hover:bg-[#0D9488] text-white font-extrabold text-sm uppercase tracking-wider transition-all duration-300 shadow-lg shadow-[#20E1B2]/25 hover:scale-[1.01] active:scale-[0.99]">
               <span>Request Consultation Slot &rarr;</span>
             </button>
           </form>
@@ -296,20 +296,20 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="border-t border-[#D8F6FB]/15 bg-[#0B354A]/35 backdrop-blur-xl py-12">
+  <footer class="border-t border-[#D1F5EE]/15 bg-[#0B3844]/35 backdrop-blur-xl py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-[#7EADA3]">
       <div class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-[#38BDF8]"></span>
+        <span class="w-2 h-2 rounded-full bg-[#20E1B2]"></span>
         <span>&copy; 2026 Md. Shakibur Rahaman. All Rights Reserved.</span>
       </div>
       <div class="flex items-center gap-6 font-semibold text-white">
-        <a href="/" class="hover:text-[#38BDF8] transition-colors">Home</a>
-        <a href="/about" class="hover:text-[#38BDF8] transition-colors">About</a>
-        <a href="/services" class="hover:text-[#38BDF8] transition-colors">Services</a>
-        <a href="/projects" class="hover:text-[#38BDF8] transition-colors">Projects</a>
-        <a href="/experience" class="hover:text-[#38BDF8] transition-colors">Experience</a>
-        <a href="/offers" class="hover:text-[#38BDF8] transition-colors">Offers</a>
-        <a href="/consultation" class="hover:text-[#38BDF8] transition-colors">Consultation</a>
+        <a href="/" class="hover:text-[#20E1B2] transition-colors">Home</a>
+        <a href="/about" class="hover:text-[#20E1B2] transition-colors">About</a>
+        <a href="/services" class="hover:text-[#20E1B2] transition-colors">Services</a>
+        <a href="/projects" class="hover:text-[#20E1B2] transition-colors">Projects</a>
+        <a href="/experience" class="hover:text-[#20E1B2] transition-colors">Experience</a>
+        <a href="/offers" class="hover:text-[#20E1B2] transition-colors">Offers</a>
+        <a href="/consultation" class="hover:text-[#20E1B2] transition-colors">Consultation</a>
       </div>
     </div>
   </footer>

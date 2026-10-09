@@ -553,28 +553,28 @@
           
           <!-- CRM Summary Metric Cards -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-            <div class="p-4 rounded-2xl bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 shadow-sm flex items-center justify-between">
+            <div class="p-4 rounded-2xl bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 shadow-sm flex items-center justify-between">
               <div>
                 <div class="text-[11px] font-bold uppercase tracking-wider text-[#7EADA3]">Total Inquiries</div>
                 <div class="text-2xl font-black text-white mt-0.5" id="crmTotalLeads">0</div>
               </div>
-              <div class="w-10 h-10 rounded-xl bg-blue-50 text-[#38BDF8] flex items-center justify-center text-base">📊</div>
+              <div class="w-10 h-10 rounded-xl bg-blue-50 text-[#20E1B2] flex items-center justify-center text-base">📊</div>
             </div>
-            <div class="p-4 rounded-2xl bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 shadow-sm flex items-center justify-between">
+            <div class="p-4 rounded-2xl bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 shadow-sm flex items-center justify-between">
               <div>
                 <div class="text-[11px] font-bold uppercase tracking-wider text-blue-600">New / Unread</div>
                 <div class="text-2xl font-black text-blue-600 mt-0.5" id="crmNewLeads">0</div>
               </div>
               <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-base font-bold">✨</div>
             </div>
-            <div class="p-4 rounded-2xl bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 shadow-sm flex items-center justify-between">
+            <div class="p-4 rounded-2xl bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 shadow-sm flex items-center justify-between">
               <div>
                 <div class="text-[11px] font-bold uppercase tracking-wider text-amber-600">In Discussion</div>
                 <div class="text-2xl font-black text-amber-600 mt-0.5" id="crmProgressLeads">0</div>
               </div>
               <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-base font-bold">⏳</div>
             </div>
-            <div class="p-4 rounded-2xl bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 shadow-sm flex items-center justify-between">
+            <div class="p-4 rounded-2xl bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 shadow-sm flex items-center justify-between">
               <div>
                 <div class="text-[11px] font-bold uppercase tracking-wider text-emerald-600">Deals Won</div>
                 <div class="text-2xl font-black text-emerald-600 mt-0.5" id="crmWonLeads">0</div>
@@ -613,7 +613,7 @@
                   <span>Export to Excel</span>
                 </button>
 
-                <button type="button" onclick="openAddLeadModal()" class="px-3.5 py-2 rounded-xl bg-[#38BDF8] hover:bg-[#0284C7] text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-xs">
+                <button type="button" onclick="openAddLeadModal()" class="px-3.5 py-2 rounded-xl bg-[#20E1B2] hover:bg-[#0D9488] text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-xs">
                   <i class="fa-solid fa-plus"></i>
                   <span>Add Lead</span>
                 </button>
@@ -626,10 +626,10 @@
 
           <!-- Add Manual Lead Modal -->
           <div id="addLeadModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-            <div class="relative w-full max-w-lg p-6 rounded-3xl bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 shadow-2xl space-y-4">
+            <div class="relative w-full max-w-lg p-6 rounded-3xl bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 shadow-2xl space-y-4">
               <div class="flex items-center justify-between">
                 <h3 class="text-lg font-black text-white">➕ Add Manual Lead to CRM</h3>
-                <button type="button" onclick="closeAddLeadModal()" class="w-8 h-8 rounded-full bg-[#092A3B] text-[#7EADA3] hover:text-white flex items-center justify-center">✕</button>
+                <button type="button" onclick="closeAddLeadModal()" class="w-8 h-8 rounded-full bg-[#06232B] text-[#7EADA3] hover:text-white flex items-center justify-center">✕</button>
               </div>
               <form id="addLeadForm" class="space-y-3">
                 <div>
@@ -666,7 +666,7 @@
                 </div>
                 <div class="flex justify-end gap-2 pt-2">
                   <button type="button" onclick="closeAddLeadModal()" class="px-4 py-2 rounded-xl bg-slate-100 font-bold text-xs text-[#7EADA3]">Cancel</button>
-                  <button type="submit" class="px-5 py-2 rounded-xl bg-[#38BDF8] hover:bg-[#0284C7] font-bold text-xs text-white">Save Lead</button>
+                  <button type="submit" class="px-5 py-2 rounded-xl bg-[#20E1B2] hover:bg-[#0D9488] font-bold text-xs text-white">Save Lead</button>
                 </div>
               </form>
             </div>
@@ -708,17 +708,17 @@
           <div id="subtabTemplatesView" class="space-y-6">
             <div class="glass-panel p-4 flex flex-wrap items-center justify-between gap-4">
               <div class="flex flex-wrap items-center gap-2" id="templateCategoryFilters">
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#38BDF8] text-white" data-cat="all">All (22)</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B354A]/35 backdrop-blur-xl border border-[#38BDF8]/25 text-white hover:bg-[#F1F4EE]" data-cat="Strategy">Strategy</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B354A]/35 backdrop-blur-xl border border-[#38BDF8]/25 text-white hover:bg-[#F1F4EE]" data-cat="Branding">Branding</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B354A]/35 backdrop-blur-xl border border-[#38BDF8]/25 text-white hover:bg-[#F1F4EE]" data-cat="Web Development">Web Dev</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B354A]/35 backdrop-blur-xl border border-[#38BDF8]/25 text-white hover:bg-[#F1F4EE]" data-cat="Paid Media">Paid Media</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B354A]/35 backdrop-blur-xl border border-[#38BDF8]/25 text-white hover:bg-[#F1F4EE]" data-cat="Creative Media">Video/Photo</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B354A]/35 backdrop-blur-xl border border-[#38BDF8]/25 text-white hover:bg-[#F1F4EE]" data-cat="Experiential">Events/3D</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B354A]/35 backdrop-blur-xl border border-[#38BDF8]/25 text-white hover:bg-[#F1F4EE]" data-cat="Organic Growth">SEO/AEO</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B354A]/35 backdrop-blur-xl border border-[#38BDF8]/25 text-white hover:bg-[#F1F4EE]" data-cat="PR & Media">PR</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B354A]/35 backdrop-blur-xl border border-[#38BDF8]/25 text-white hover:bg-[#F1F4EE]" data-cat="Feedback & QA">Feedback</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B354A]/35 backdrop-blur-xl border border-[#38BDF8]/25 text-white hover:bg-[#F1F4EE]" data-cat="Careers & Hiring">Careers</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#20E1B2] text-white" data-cat="all">All (22)</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B3844]/35 backdrop-blur-xl border border-[#20E1B2]/25 text-white hover:bg-[#F1F4EE]" data-cat="Strategy">Strategy</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B3844]/35 backdrop-blur-xl border border-[#20E1B2]/25 text-white hover:bg-[#F1F4EE]" data-cat="Branding">Branding</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B3844]/35 backdrop-blur-xl border border-[#20E1B2]/25 text-white hover:bg-[#F1F4EE]" data-cat="Web Development">Web Dev</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B3844]/35 backdrop-blur-xl border border-[#20E1B2]/25 text-white hover:bg-[#F1F4EE]" data-cat="Paid Media">Paid Media</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B3844]/35 backdrop-blur-xl border border-[#20E1B2]/25 text-white hover:bg-[#F1F4EE]" data-cat="Creative Media">Video/Photo</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B3844]/35 backdrop-blur-xl border border-[#20E1B2]/25 text-white hover:bg-[#F1F4EE]" data-cat="Experiential">Events/3D</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B3844]/35 backdrop-blur-xl border border-[#20E1B2]/25 text-white hover:bg-[#F1F4EE]" data-cat="Organic Growth">SEO/AEO</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B3844]/35 backdrop-blur-xl border border-[#20E1B2]/25 text-white hover:bg-[#F1F4EE]" data-cat="PR & Media">PR</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B3844]/35 backdrop-blur-xl border border-[#20E1B2]/25 text-white hover:bg-[#F1F4EE]" data-cat="Feedback & QA">Feedback</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0B3844]/35 backdrop-blur-xl border border-[#20E1B2]/25 text-white hover:bg-[#F1F4EE]" data-cat="Careers & Hiring">Careers</button>
               </div>
               <div class="w-full sm:w-64">
                 <input type="text" id="templateSearchInput" class="admin-input text-xs py-2" placeholder="🔍 Search 22 templates...">
@@ -765,7 +765,7 @@
 
           <!-- SUBTAB 3: VISUAL FORM BUILDER -->
           <div id="subtabBuilderView" class="hidden space-y-6">
-            <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-[#38BDF8]/15">
+            <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-[#20E1B2]/15">
               <div>
                 <h3 class="text-lg font-bold text-white" id="builderFormModeHeading">Create / Edit Form</h3>
                 <p class="text-xs text-[#7EADA3]">Configure form schema, drag-and-drop fields, and preview live.</p>
@@ -786,7 +786,7 @@
               <div class="space-y-6">
                 <!-- General Info Card -->
                 <div class="builder-panel">
-                  <h4 class="text-xs font-extrabold uppercase tracking-wider text-[#38BDF8] mb-4 flex items-center gap-2">
+                  <h4 class="text-xs font-extrabold uppercase tracking-wider text-[#20E1B2] mb-4 flex items-center gap-2">
                     <i class="fa-solid fa-sliders text-xs"></i>
                     <span>Form Settings &amp; Metadata</span>
                   </h4>
@@ -831,9 +831,9 @@
                     </div>
                   </div>
 
-                  <div class="flex items-center justify-between pt-3 border-t border-[#38BDF8]/15">
+                  <div class="flex items-center justify-between pt-3 border-t border-[#20E1B2]/15">
                     <label class="flex items-center gap-2 text-xs font-bold text-white cursor-pointer">
-                      <input type="checkbox" id="builderFormIsActive" class="rounded text-[#38BDF8] focus:ring-[#38BDF8]" checked>
+                      <input type="checkbox" id="builderFormIsActive" class="rounded text-[#20E1B2] focus:ring-[#20E1B2]" checked>
                       <span>Form is Active &amp; Accepting Submissions</span>
                     </label>
                   </div>
@@ -842,11 +842,11 @@
                 <!-- Field Builder Card -->
                 <div class="builder-panel">
                   <div class="flex items-center justify-between mb-4">
-                    <h4 class="text-xs font-extrabold uppercase tracking-wider text-[#38BDF8] flex items-center gap-2">
+                    <h4 class="text-xs font-extrabold uppercase tracking-wider text-[#20E1B2] flex items-center gap-2">
                       <i class="fa-solid fa-list-check text-xs"></i>
                       <span>Form Fields (<span id="builderFieldsCount">0</span>)</span>
                     </h4>
-                    <button type="button" id="builderAddFieldBtn" class="px-3 py-1.5 rounded-lg bg-[#38BDF8]/10 hover:bg-[#38BDF8]/20 text-[#38BDF8] text-xs font-bold transition-colors flex items-center gap-1.5">
+                    <button type="button" id="builderAddFieldBtn" class="px-3 py-1.5 rounded-lg bg-[#20E1B2]/10 hover:bg-[#20E1B2]/20 text-[#20E1B2] text-xs font-bold transition-colors flex items-center gap-1.5">
                       <i class="fa-solid fa-plus text-[10px]"></i>
                       <span>Add New Field</span>
                     </button>
@@ -861,15 +861,15 @@
               <!-- Right Column: Live Interactive Preview -->
               <div>
                 <div class="builder-panel sticky top-28">
-                  <div class="flex items-center justify-between pb-3 mb-4 border-b border-[#38BDF8]/15">
+                  <div class="flex items-center justify-between pb-3 mb-4 border-b border-[#20E1B2]/15">
                     <span class="text-xs font-extrabold uppercase tracking-wider text-white flex items-center gap-1.5">
-                      <i class="fa-solid fa-eye text-[#38BDF8]"></i>
+                      <i class="fa-solid fa-eye text-[#20E1B2]"></i>
                       <span>Live Client Preview</span>
                     </span>
                     <span class="text-[11px] text-[#7EADA3] font-semibold">Updates in Real-Time</span>
                   </div>
 
-                  <div class="p-6 rounded-2xl bg-[#092A3B] border border-[#38BDF8]/20 shadow-inner max-h-[75vh] overflow-y-auto" id="builderLivePreviewBox">
+                  <div class="p-6 rounded-2xl bg-[#06232B] border border-[#20E1B2]/20 shadow-inner max-h-[75vh] overflow-y-auto" id="builderLivePreviewBox">
                     <!-- Form preview rendered dynamically -->
                   </div>
                 </div>
@@ -910,7 +910,7 @@
         <!-- Template Preview Modal -->
         <div id="templatePreviewModal" class="admin-modal-overlay hidden">
           <div class="admin-modal-content">
-            <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#38BDF8]/15">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#20E1B2]/15">
               <div>
                 <span id="tplModalCatBadge" class="template-cat-badge">Category</span>
                 <h3 id="tplModalTitle" class="text-xl font-bold text-white mt-1">Template Title</h3>
@@ -922,11 +922,11 @@
             <p id="tplModalDesc" class="text-xs text-[#7EADA3] leading-relaxed mb-6"></p>
 
             <div class="mb-6">
-              <h4 class="text-xs font-extrabold uppercase tracking-wider text-[#38BDF8] mb-3">Included Fields Schema:</h4>
+              <h4 class="text-xs font-extrabold uppercase tracking-wider text-[#20E1B2] mb-3">Included Fields Schema:</h4>
               <div id="tplModalFieldsList" class="space-y-2 max-h-64 overflow-y-auto pr-2"></div>
             </div>
 
-            <div class="flex items-center justify-end gap-3 pt-4 border-t border-[#38BDF8]/15">
+            <div class="flex items-center justify-end gap-3 pt-4 border-t border-[#20E1B2]/15">
               <button type="button" id="closeTplModalSecondaryBtn" class="btn-ghost text-xs">Close</button>
               <button type="button" id="useThisTemplateBtn" class="btn-primary-gold text-xs">
                 <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
@@ -939,9 +939,9 @@
         <!-- Embed Code & Public Link Modal -->
         <div id="embedCodeModal" class="admin-modal-overlay hidden">
           <div class="admin-modal-content">
-            <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#38BDF8]/15">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#20E1B2]/15">
               <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                <i class="fa-solid fa-share-nodes text-[#38BDF8]"></i>
+                <i class="fa-solid fa-share-nodes text-[#20E1B2]"></i>
                 <span>Share &amp; Embed Custom Form</span>
               </h3>
               <button type="button" id="closeEmbedModalBtn" class="text-gray-400 hover:text-gray-600 text-lg">
@@ -977,7 +977,7 @@
               </div>
             </div>
 
-            <div class="flex justify-end pt-4 mt-6 border-t border-[#38BDF8]/15">
+            <div class="flex justify-end pt-4 mt-6 border-t border-[#20E1B2]/15">
               <button type="button" id="closeEmbedModalSecondaryBtn" class="btn-ghost text-xs">Done</button>
             </div>
           </div>

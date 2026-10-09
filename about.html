@@ -18,67 +18,67 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="antialiased bg-[#061B27] text-white min-h-screen">
+<body class="antialiased bg-[#041B21] text-white min-h-screen">
 
   <div id="scrollProgressBar"></div>
   <canvas id="ambientCanvas"></canvas>
 
   <!-- FIXED GLASS NAVBAR -->
             <!-- 1. FIXED GLASS NAVBAR (Morphy Style) -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#061B27]/95 backdrop-blur-2xl border-b border-[#D8F6FB]/15 transition-all duration-300 shadow-2xs">
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#041B21]/95 backdrop-blur-2xl border-b border-[#D1F5EE]/15 transition-all duration-300 shadow-2xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
       <!-- Brand Logo -->
       <a href="/" class="flex items-center gap-3 group min-w-0">
-        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#38BDF8] to-[#0B354A] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#38BDF8]/25 border border-white/20 shrink-0">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#20E1B2] to-[#0B3844] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#20E1B2]/25 border border-white/20 shrink-0">
           ✦
         </div>
         <div class="flex flex-col min-w-0">
-          <span class="font-extrabold text-white tracking-tight text-base sm:text-lg group-hover:text-[#38BDF8] transition-colors truncate" id="navBrandName">Md. Shakibur Rahaman</span>
-          <span class="text-[10px] text-[#38BDF8] font-extrabold tracking-wider uppercase truncate">Strategic Lead &amp; Digital Architect</span>
+          <span class="font-extrabold text-white tracking-tight text-base sm:text-lg group-hover:text-[#20E1B2] transition-colors truncate" id="navBrandName">Md. Shakibur Rahaman</span>
+          <span class="text-[10px] text-[#20E1B2] font-extrabold tracking-wider uppercase truncate">Strategic Lead &amp; Digital Architect</span>
         </div>
       </a>
 
       <!-- Centered Floating Pill Navigation Menu (Desktop Only) -->
-      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-[#061B27]/95 border border-[#D8F6FB]/15 text-sm font-semibold text-[#DDF6F0] backdrop-blur-md shadow-xs shrink-0">
-        <a href="/" class="hover:text-[#38BDF8] transition-colors">Home</a>
-        <a href="/about" class="text-[#38BDF8] font-bold transition-colors">About</a>
+      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-[#041B21]/95 border border-[#D1F5EE]/15 text-sm font-semibold text-[#DDF6F0] backdrop-blur-md shadow-xs shrink-0">
+        <a href="/" class="hover:text-[#20E1B2] transition-colors">Home</a>
+        <a href="/about" class="text-[#20E1B2] font-bold transition-colors">About</a>
         
         <!-- Services with dropdown arrow -->
         <div class="relative group">
-          <a href="/services" class="flex items-center gap-1.5 hover:text-[#38BDF8] transition-colors py-1">
+          <a href="/services" class="flex items-center gap-1.5 hover:text-[#20E1B2] transition-colors py-1">
             <span>Services</span>
-            <i class="fa-solid fa-chevron-down text-[10px] text-[#7EADA3] group-hover:text-[#38BDF8] group-hover:rotate-180 transition-transform duration-200"></i>
+            <i class="fa-solid fa-chevron-down text-[10px] text-[#7EADA3] group-hover:text-[#20E1B2] group-hover:rotate-180 transition-transform duration-200"></i>
           </a>
           <!-- Dropdown card -->
-          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#D8F6FB]/15 shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">Social Media &amp; Meta Ads</a>
-            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">Google Ads &amp; Search</a>
-            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">Full-Stack Web Development</a>
-            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">SEO &amp; AI Engine Optimization</a>
-            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#38BDF8]/5 hover:text-[#38BDF8] transition-colors">Graphics &amp; Visual Assets</a>
-            <div class="my-1.5 border-t border-[#D8F6FB]/15"></div>
-            <a href="/services" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#38BDF8] hover:bg-[#38BDF8]/10 text-center">View All 9 Services &rarr;</a>
+          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#D1F5EE]/15 shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">Social Media &amp; Meta Ads</a>
+            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">Google Ads &amp; Search</a>
+            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">Full-Stack Web Development</a>
+            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">SEO &amp; AI Engine Optimization</a>
+            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">Graphics &amp; Visual Assets</a>
+            <div class="my-1.5 border-t border-[#D1F5EE]/15"></div>
+            <a href="/services" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#20E1B2] hover:bg-[#20E1B2]/10 text-center">View All 9 Services &rarr;</a>
           </div>
         </div>
 
-        <a href="/projects" class="hover:text-[#38BDF8] transition-colors">Projects</a>
-        <a href="/experience" class="hover:text-[#38BDF8] transition-colors">Experience</a>
-        <a href="/offers" class="hover:text-[#38BDF8] transition-colors">Offers</a>
-        <a href="/consultation" class="hover:text-[#38BDF8] transition-colors">Consultation</a>
+        <a href="/projects" class="hover:text-[#20E1B2] transition-colors">Projects</a>
+        <a href="/experience" class="hover:text-[#20E1B2] transition-colors">Experience</a>
+        <a href="/offers" class="hover:text-[#20E1B2] transition-colors">Offers</a>
+        <a href="/consultation" class="hover:text-[#20E1B2] transition-colors">Consultation</a>
       </nav>
 
       <!-- Right Header Actions (Mobile Hamburger Toggle) -->
       <div class="flex items-center gap-3 shrink-0">
-        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-[#0B354A]/35 backdrop-blur-xl border border-[#D8F6FB]/15 hover:border-[#38BDF8]/30 hover:bg-[#38BDF8]/5 text-white hover:text-[#38BDF8] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
+        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 hover:border-[#20E1B2]/30 hover:bg-[#20E1B2]/5 text-white hover:text-[#20E1B2] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
           <i id="mobileMenuIcon" class="fa-solid fa-bars-staggered text-base"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Dropdown Menu (Morphy Glassmorphic Design) -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-x border-[#D8F6FB]/15 rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
-      <div class="space-y-1.5 pb-3 border-b border-[#D8F6FB]/10">
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-x border-[#D1F5EE]/15 rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
+      <div class="space-y-1.5 pb-3 border-b border-[#D1F5EE]/10">
         <a href="/" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
             <i class="fa-solid fa-house-chimney text-xs text-[#7EADA3] w-4"></i>
@@ -88,7 +88,7 @@
         </a>
         <a href="/about" class="mobile-nav-link mobile-link flex items-center justify-between active">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-user text-xs text-[#38BDF8] w-4"></i>
+            <i class="fa-solid fa-user text-xs text-[#20E1B2] w-4"></i>
             <span>About</span>
           </span>
           <i class="fa-solid fa-chevron-right text-[10px] text-[#94A3B8]"></i>
@@ -98,7 +98,7 @@
             <i class="fa-solid fa-layer-group text-xs text-[#7EADA3] w-4"></i>
             <span>Services</span>
           </span>
-          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#38BDF8]/10 text-[#38BDF8]">9 Pillars</span>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#20E1B2]/10 text-[#20E1B2]">9 Pillars</span>
         </a>
         <a href="/projects" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
@@ -116,16 +116,16 @@
         </a>
         <a href="/offers" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-tags text-xs text-[#38BDF8] w-4"></i>
-            <span class="font-bold text-[#38BDF8]">Special Offers</span>
+            <i class="fa-solid fa-tags text-xs text-[#20E1B2] w-4"></i>
+            <span class="font-bold text-[#20E1B2]">Special Offers</span>
           </span>
-          <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-white shadow-xs">EMI 🔥</span>
+          <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-gradient-to-r from-[#20E1B2] to-[#0D9488] text-white shadow-xs">EMI 🔥</span>
         </a>
       </div>
 
       <!-- Quick Action Contact in Mobile Menu -->
       <div class="pt-2 flex items-center gap-2">
-        <a href="/contact" class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-[#38BDF8]/25 hover:shadow-lg transition-all active:scale-98">
+        <a href="/contact" class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#20E1B2] to-[#0D9488] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-[#20E1B2]/25 hover:shadow-lg transition-all active:scale-98">
           <i class="fa-solid fa-paper-plane text-xs"></i>
           <span>Get in Touch</span>
         </a>
@@ -142,24 +142,24 @@
       
       <!-- Left: Executive Portrait & Status Card (5 cols) -->
       <div class="lg:col-span-5">
-        <div class="morphy-card p-6 sm:p-8 bg-[#0B354A]/35 backdrop-blur-xl border-2 border-[#D8F6FB]/15 shadow-xl shadow-[#38BDF8]/10 space-y-6">
+        <div class="morphy-card p-6 sm:p-8 bg-[#0B3844]/35 backdrop-blur-xl border-2 border-[#D1F5EE]/15 shadow-xl shadow-[#20E1B2]/10 space-y-6">
           <div class="relative rounded-2xl overflow-hidden aspect-square bg-[#08201A] group">
             <img src="/assets/shakibur.jpg" alt="Md. Shakibur Rahaman" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-[#08201A]/80 via-transparent to-transparent"></div>
             
             <div class="absolute bottom-4 left-4 right-4 text-white">
               <div class="text-xl font-black">Md. Shakibur Rahaman</div>
-              <div class="text-xs text-[#38BDF8] font-bold bg-[#061B27]/90 px-2.5 py-0.5 rounded-full inline-block mt-1">Strategic Lead &amp; Digital Architect</div>
+              <div class="text-xs text-[#20E1B2] font-bold bg-[#041B21]/90 px-2.5 py-0.5 rounded-full inline-block mt-1">Strategic Lead &amp; Digital Architect</div>
             </div>
           </div>
 
           <div class="space-y-3 pt-2">
-            <div class="flex items-center justify-between text-xs font-bold text-white p-3 rounded-xl bg-[#092A3B] border border-[#D8F6FB]/15">
+            <div class="flex items-center justify-between text-xs font-bold text-white p-3 rounded-xl bg-[#06232B] border border-[#D1F5EE]/15">
               <div class="flex items-center gap-2">
                 <span class="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-ping"></span>
                 <span>Active Retainer Availability</span>
               </div>
-              <span class="text-[#38BDF8] uppercase">Q3 / Q4 2026</span>
+              <span class="text-[#20E1B2] uppercase">Q3 / Q4 2026</span>
             </div>
 
             <div class="flex items-center justify-between text-xs font-medium text-[#7EADA3] px-1">
@@ -185,7 +185,7 @@
         </div>
 
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
-          Bridging Creative Vision, Code Architecture &amp; <span class="text-[#38BDF8]">Commercial ROI</span>
+          Bridging Creative Vision, Code Architecture &amp; <span class="text-[#20E1B2]">Commercial ROI</span>
         </h1>
 
         <p class="text-base sm:text-lg text-[#A3CEC5] leading-relaxed font-normal">
@@ -199,7 +199,7 @@
         <!-- 4 Key Figures -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
           <div class="morphy-card p-4 text-center">
-            <div class="text-3xl font-black text-[#38BDF8]">$1.2M+</div>
+            <div class="text-3xl font-black text-[#20E1B2]">$1.2M+</div>
             <div class="text-[10.5px] font-bold text-[#7EADA3] uppercase mt-1">Ad Spend Managed</div>
           </div>
           <div class="morphy-card p-4 text-center">
@@ -207,7 +207,7 @@
             <div class="text-[10.5px] font-bold text-[#7EADA3] uppercase mt-1">Live Web Portals</div>
           </div>
           <div class="morphy-card p-4 text-center">
-            <div class="text-3xl font-black text-[#38BDF8]">4.2x</div>
+            <div class="text-3xl font-black text-[#20E1B2]">4.2x</div>
             <div class="text-[10.5px] font-bold text-[#7EADA3] uppercase mt-1">Average ROAS</div>
           </div>
           <div class="morphy-card p-4 text-center">
@@ -222,7 +222,7 @@
   </section>
 
   <!-- 4 STRATEGIC PILLARS OF LEADERSHIP -->
-  <section class="py-20 bg-[#0B354A]/35 backdrop-blur-xl border-y border-[#D8F6FB]/15">
+  <section class="py-20 bg-[#0B3844]/35 backdrop-blur-xl border-y border-[#D1F5EE]/15">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
@@ -237,7 +237,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
         <div class="morphy-card p-8 space-y-4">
-          <div class="w-12 h-12 rounded-2xl bg-[#38BDF8]/10 text-[#38BDF8] flex items-center justify-center text-xl">
+          <div class="w-12 h-12 rounded-2xl bg-[#20E1B2]/10 text-[#20E1B2] flex items-center justify-center text-xl">
             <i class="fa-solid fa-fingerprint"></i>
           </div>
           <h3 class="text-lg font-bold text-white">Brand &amp; Positioning</h3>
@@ -257,7 +257,7 @@
         </div>
 
         <div class="morphy-card p-8 space-y-4">
-          <div class="w-12 h-12 rounded-2xl bg-[#38BDF8]/10 text-[#38BDF8] flex items-center justify-center text-xl">
+          <div class="w-12 h-12 rounded-2xl bg-[#20E1B2]/10 text-[#20E1B2] flex items-center justify-center text-xl">
             <i class="fa-solid fa-chart-line"></i>
           </div>
           <h3 class="text-lg font-bold text-white">Paid Acquisition</h3>
@@ -283,13 +283,13 @@
 
   <!-- CTA BANNER -->
   <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-    <div class="morphy-card p-10 sm:p-14 text-center bg-gradient-to-r from-[#38BDF8] to-[#0B354A] text-white border-0 shadow-2xl space-y-6">
+    <div class="morphy-card p-10 sm:p-14 text-center bg-gradient-to-r from-[#20E1B2] to-[#0B3844] text-white border-0 shadow-2xl space-y-6">
       <h2 class="text-3xl sm:text-5xl font-black tracking-tight">Ready to Partner on Your Next Growth Leap?</h2>
       <p class="text-white/80 max-w-xl mx-auto text-base">
         Book a 1-on-1 strategy consultation to discuss ad scaling, web rebuilds, or comprehensive branding retainers.
       </p>
       <div class="pt-2 flex flex-wrap items-center justify-center gap-4">
-        <a href="/consultation" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#0B354A]/35 backdrop-blur-xl text-[#38BDF8] font-extrabold text-xs uppercase tracking-wider hover:bg-slate-100 hover:scale-105 transition-all shadow-lg">
+        <a href="/consultation" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#0B3844]/35 backdrop-blur-xl text-[#20E1B2] font-extrabold text-xs uppercase tracking-wider hover:bg-slate-100 hover:scale-105 transition-all shadow-lg">
           <span>Book Strategy Call</span>
           <i class="fa-solid fa-arrow-right text-xs"></i>
         </a>
@@ -301,20 +301,20 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="border-t border-[#D8F6FB]/15 bg-[#0B354A]/35 backdrop-blur-xl py-12">
+  <footer class="border-t border-[#D1F5EE]/15 bg-[#0B3844]/35 backdrop-blur-xl py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-[#7EADA3]">
       <div class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-[#38BDF8]"></span>
+        <span class="w-2 h-2 rounded-full bg-[#20E1B2]"></span>
         <span>&copy; 2026 Md. Shakibur Rahaman. All Rights Reserved.</span>
       </div>
       <div class="flex items-center gap-6 font-semibold text-white">
-        <a href="/" class="hover:text-[#38BDF8] transition-colors">Home</a>
-        <a href="/about" class="hover:text-[#38BDF8] transition-colors">About</a>
-        <a href="/services" class="hover:text-[#38BDF8] transition-colors">Services</a>
-        <a href="/projects" class="hover:text-[#38BDF8] transition-colors">Projects</a>
-        <a href="/experience" class="hover:text-[#38BDF8] transition-colors">Experience</a>
-        <a href="/offers" class="hover:text-[#38BDF8] transition-colors">Offers</a>
-        <a href="/consultation" class="hover:text-[#38BDF8] transition-colors">Consultation</a>
+        <a href="/" class="hover:text-[#20E1B2] transition-colors">Home</a>
+        <a href="/about" class="hover:text-[#20E1B2] transition-colors">About</a>
+        <a href="/services" class="hover:text-[#20E1B2] transition-colors">Services</a>
+        <a href="/projects" class="hover:text-[#20E1B2] transition-colors">Projects</a>
+        <a href="/experience" class="hover:text-[#20E1B2] transition-colors">Experience</a>
+        <a href="/offers" class="hover:text-[#20E1B2] transition-colors">Offers</a>
+        <a href="/consultation" class="hover:text-[#20E1B2] transition-colors">Consultation</a>
       </div>
     </div>
   </footer>
