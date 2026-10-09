@@ -492,139 +492,140 @@
       </div>
 
 
-      <!-- 1. CARD GRID VIEW (Initially hidden - mutually exclusive with table view) -->
+      <!-- 1. CARD GRID VIEW (Glass Styled) -->
       <div id="pricingCardsView" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
         
         <!-- Plan 1: 12-Month EMI (Startup Plan) -->
-        <div class="morphy-card p-6 bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 rounded-3xl flex flex-col justify-between space-y-5 hover:border-[#20E1B2]/40 hover:shadow-xl transition-all">
+        <div class="morphy-card p-6 sm:p-7 bg-[#082830]/45 backdrop-blur-2xl border border-[#D1F5EE]/20 hover:border-[#20E1B2]/60 hover:bg-[#082830]/70 rounded-[28px] flex flex-col justify-between space-y-5 hover:shadow-2xl hover:shadow-[#20E1B2]/20 hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden shadow-xl">
           <div>
             <div class="flex items-center justify-between">
-              <span class="text-[10.5px] font-black uppercase text-[#7EADA3] bg-[#06232B] px-2.5 py-1 rounded-md border border-[#D1F5EE]/15">12 মাসের কিস্তি</span>
-              <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded font-eng">Save 50%</span>
+              <span class="text-[10.5px] font-black uppercase text-[#20E1B2] bg-[#20E1B2]/10 px-3 py-1 rounded-full border border-[#20E1B2]/25">12 মাসের কিস্তি</span>
+              <span class="text-[10px] font-extrabold text-[#10B981] bg-[#10B981]/15 px-2.5 py-0.5 rounded-full border border-[#10B981]/30 font-eng">Save 50%</span>
             </div>
-            <h3 class="text-xl font-black text-white mt-3">Startup প্ল্যান</h3>
-            <div class="text-2xl font-black text-white mt-1 font-eng">৳ 2,500 <span class="text-xs text-[#7EADA3] font-normal font-bengali">/ মাস</span></div>
+            <h3 class="text-2xl font-black text-white mt-4 tracking-tight group-hover:text-[#20E1B2] transition-colors">Startup প্ল্যান</h3>
+            <div class="text-3xl font-black text-white mt-1.5 font-eng">৳ 2,500 <span class="text-xs text-[#A7E7DC] font-normal font-bengali">/ মাস</span></div>
             <p class="text-xs font-bold text-[#20E1B2] mt-1 font-eng">Total ৳ 30,000 (12 Installments)</p>
             
-            <ul class="space-y-2 pt-4 border-t border-[#D1F5EE]/15 text-xs text-[#A3CEC5] font-medium leading-relaxed">
-              <li>✓ সম্পূর্ণ কাস্টমাইজড ই-কমার্স স্টোর</li>
-              <li>✓ লোডিং স্পিড: 1 সেকেন্ডের কম</li>
-              <li>✓ মোবাইল ও ট্যাব 100% অপ্টিমাইজড</li>
-              <li>✓ ফুল অ্যাডমিন ড্যাশবোর্ড অ্যাক্সেস</li>
-              <li>✓ ইনকমপ্লিট কার্ট রিকভারি</li>
-              <li>✓ কাস্টমার অ্যাড্রেস ভিত্তিক অটো কুরিয়ার চার্জ</li>
-              <li>✓ ফ্রি পিক্সেল সেটআপ (Facebook Pixel & CAPI)</li>
-              <li>✓ <strong>পেমেন্ট গেটওয়ে (6 মাস পর)</strong></li>
-              <li>✓ <strong>অর্ডার টাইমে অ্যাডভান্স পেমেন্ট (6 মাস পর)</strong></li>
-              <li>✓ <strong>কুরিয়ার এপিআই (Steadfast ও Pathao) (6 মাস পর)</strong></li>
-              <li>✓ <strong>2 টি বিজনেস ইমেইল</strong></li>
-              <li>✓ <strong>cPanel হ্যান্ডওভার: 12 মাস পর</strong></li>
+            <ul class="space-y-2.5 pt-5 mt-4 border-t border-[#D1F5EE]/15 text-xs text-[#D1F5EE] font-medium leading-relaxed">
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>সম্পূর্ণ কাস্টমাইজড ই-কমার্স স্টোর</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>লোডিং স্পিড: 1 সেকেন্ডের কম</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>মোবাইল ও ট্যাব 100% অপ্টিমাইজড</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফুল অ্যাডমিন ড্যাশবোর্ড অ্যাক্সেস</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ইনকমপ্লিট কার্ট রিকভারি</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>কাস্টমার অ্যাড্রেস ভিত্তিক অটো কুরিয়ার চার্জ</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফ্রি পিক্সেল সেটআপ (Facebook Pixel & CAPI)</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>পেমেন্ট গেটওয়ে (6 মাস পর)</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>অর্ডার টাইমে অ্যাডভান্স পেমেন্ট (6 মাস পর)</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>কুরিয়ার এপিআই (Steadfast ও Pathao) (6 মাস পর)</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>2 টি বিজনেস ইমেইল</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>cPanel হ্যান্ডওভার: 12 মাস পর</span></li>
             </ul>
           </div>
-          <button onclick="openOfferModal('Startup Plan (12-Mo EMI)', '৳ 2,500/মাস (মোট ৳ 30,000)')" class="w-full py-3 rounded-xl bg-[#06232B] hover:bg-[#20E1B2] hover:text-white font-bold text-xs text-white transition-all border border-[#D1F5EE]/15 shadow-2xs">
+          <button onclick="openOfferModal('Startup Plan (12-Mo EMI)', '৳ 2,500/মাস (মোট ৳ 30,000)')" class="w-full py-3.5 rounded-2xl bg-[#06232B] hover:bg-gradient-to-r hover:from-[#20E1B2] hover:to-[#0D9488] font-extrabold text-xs text-white transition-all duration-300 border border-[#D1F5EE]/20 hover:border-transparent shadow-md hover:shadow-lg hover:shadow-[#20E1B2]/25 active:scale-98">
             প্যাকেজটি বেছে নিন
           </button>
         </div>
 
         <!-- Plan 2: 6-Month EMI (Accelerate Plan) -->
-        <div class="morphy-card p-6 bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 rounded-3xl flex flex-col justify-between space-y-5 hover:border-[#20E1B2]/40 hover:shadow-xl transition-all">
+        <div class="morphy-card p-6 sm:p-7 bg-[#082830]/45 backdrop-blur-2xl border border-[#D1F5EE]/20 hover:border-[#20E1B2]/60 hover:bg-[#082830]/70 rounded-[28px] flex flex-col justify-between space-y-5 hover:shadow-2xl hover:shadow-[#20E1B2]/20 hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden shadow-xl">
           <div>
             <div class="flex items-center justify-between">
-              <span class="text-[10.5px] font-black uppercase text-[#7EADA3] bg-[#06232B] px-2.5 py-1 rounded-md border border-[#D1F5EE]/15">6 মাসের কিস্তি</span>
-              <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded font-eng">Save 55%</span>
+              <span class="text-[10.5px] font-black uppercase text-[#20E1B2] bg-[#20E1B2]/10 px-3 py-1 rounded-full border border-[#20E1B2]/25">6 মাসের কিস্তি</span>
+              <span class="text-[10px] font-extrabold text-[#10B981] bg-[#10B981]/15 px-2.5 py-0.5 rounded-full border border-[#10B981]/30 font-eng">Save 55%</span>
             </div>
-            <h3 class="text-xl font-black text-white mt-3">Accelerate প্ল্যান</h3>
-            <div class="text-2xl font-black text-white mt-1 font-eng">৳ 4,500 <span class="text-xs text-[#7EADA3] font-normal font-bengali">/ মাস</span></div>
+            <h3 class="text-2xl font-black text-white mt-4 tracking-tight group-hover:text-[#20E1B2] transition-colors">Accelerate প্ল্যান</h3>
+            <div class="text-3xl font-black text-white mt-1.5 font-eng">৳ 4,500 <span class="text-xs text-[#A7E7DC] font-normal font-bengali">/ মাস</span></div>
             <p class="text-xs font-bold text-[#20E1B2] mt-1 font-eng">Total ৳ 27,000 (6 Installments)</p>
             
-            <ul class="space-y-2 pt-4 border-t border-[#D1F5EE]/15 text-xs text-[#A3CEC5] font-medium leading-relaxed">
-              <li>✓ সম্পূর্ণ কাস্টমাইজড ই-কমার্স স্টোর</li>
-              <li>✓ লোডিং স্পিড: 1 সেকেন্ডের কম</li>
-              <li>✓ মোবাইল ও ট্যাব 100% অপ্টিমাইজড</li>
-              <li>✓ ফুল অ্যাডমিন ড্যাশবোর্ড অ্যাক্সেস</li>
-              <li>✓ পেমেন্ট গেটওয়ে (বিকাশ, নগদ, কার্ড, EMI System)</li>
-              <li>✓ অর্ডার টাইমে অ্যাডভান্স পেমেন্ট সিস্টেম</li>
-              <li>✓ ইনকমপ্লিট কার্ট রিকভারি</li>
-              <li>✓ কুরিয়ার এপিআই (Steadfast ও Pathao)</li>
-              <li>✓ কাস্টমার অ্যাড্রেস ভিত্তিক অটো কুরিয়ার চার্জ</li>
-              <li>✓ ফ্রি পিক্সেল সেটআপ (Facebook Pixel & CAPI)</li>
-              <li>✓ <strong>2 টি বিজনেস ইমেইল</strong></li>
-              <li>✓ <strong>cPanel হ্যান্ডওভার: 6 মাস পর</strong></li>
+            <ul class="space-y-2.5 pt-5 mt-4 border-t border-[#D1F5EE]/15 text-xs text-[#D1F5EE] font-medium leading-relaxed">
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>সম্পূর্ণ কাস্টমাইজড ই-কমার্স স্টোর</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>লোডিং স্পিড: 1 সেকেন্ডের কম</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>মোবাইল ও ট্যাব 100% অপ্টিমাইজড</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফুল অ্যাডমিন ড্যাশবোর্ড অ্যাক্সেস</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>পেমেন্ট গেটওয়ে (বিকাশ, নগদ, কার্ড, EMI System)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>অর্ডার টাইমে অ্যাডভান্স পেমেন্ট সিস্টেম</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ইনকমপ্লিট কার্ট রিকভারি</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>কুরিয়ার এপিআই (Steadfast ও Pathao)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>কাস্টমার অ্যাড্রেস ভিত্তিক অটো কুরিয়ার চার্জ</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফ্রি পিক্সেল সেটআপ (Facebook Pixel & CAPI)</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>2 টি বিজনেস ইমেইল</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>cPanel হ্যান্ডওভার: 6 মাস পর</span></li>
             </ul>
           </div>
-          <button onclick="openOfferModal('Accelerate Plan (6-Mo EMI)', '৳ 4,500/মাস (মোট ৳ 27,000)')" class="w-full py-3 rounded-xl bg-[#06232B] hover:bg-[#20E1B2] hover:text-white font-bold text-xs text-white transition-all border border-[#D1F5EE]/15 shadow-2xs">
+          <button onclick="openOfferModal('Accelerate Plan (6-Mo EMI)', '৳ 4,500/মাস (মোট ৳ 27,000)')" class="w-full py-3.5 rounded-2xl bg-[#06232B] hover:bg-gradient-to-r hover:from-[#20E1B2] hover:to-[#0D9488] font-extrabold text-xs text-white transition-all duration-300 border border-[#D1F5EE]/20 hover:border-transparent shadow-md hover:shadow-lg hover:shadow-[#20E1B2]/25 active:scale-98">
             প্যাকেজটি বেছে নিন
           </button>
         </div>
 
         <!-- Plan 3: 3-Month EMI (Momentum Plan) -->
-        <div class="morphy-card p-6 bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 rounded-3xl flex flex-col justify-between space-y-5 hover:border-[#20E1B2]/40 hover:shadow-xl transition-all">
+        <div class="morphy-card p-6 sm:p-7 bg-[#082830]/45 backdrop-blur-2xl border border-[#D1F5EE]/20 hover:border-[#20E1B2]/60 hover:bg-[#082830]/70 rounded-[28px] flex flex-col justify-between space-y-5 hover:shadow-2xl hover:shadow-[#20E1B2]/20 hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden shadow-xl">
           <div>
             <div class="flex items-center justify-between">
-              <span class="text-[10.5px] font-black uppercase text-[#7EADA3] bg-[#06232B] px-2.5 py-1 rounded-md border border-[#D1F5EE]/15">3 মাসের কিস্তি</span>
-              <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded font-eng">Save 57.5%</span>
+              <span class="text-[10.5px] font-black uppercase text-[#20E1B2] bg-[#20E1B2]/10 px-3 py-1 rounded-full border border-[#20E1B2]/25">3 মাসের কিস্তি</span>
+              <span class="text-[10px] font-extrabold text-[#10B981] bg-[#10B981]/15 px-2.5 py-0.5 rounded-full border border-[#10B981]/30 font-eng">Save 57.5%</span>
             </div>
-            <h3 class="text-xl font-black text-white mt-3">Momentum প্ল্যান</h3>
-            <div class="text-2xl font-black text-white mt-1 font-eng">৳ 8,500 <span class="text-xs text-[#7EADA3] font-normal font-bengali">/ মাস</span></div>
+            <h3 class="text-2xl font-black text-white mt-4 tracking-tight group-hover:text-[#20E1B2] transition-colors">Momentum প্ল্যান</h3>
+            <div class="text-3xl font-black text-white mt-1.5 font-eng">৳ 8,500 <span class="text-xs text-[#A7E7DC] font-normal font-bengali">/ মাস</span></div>
             <p class="text-xs font-bold text-[#20E1B2] mt-1 font-eng">Total ৳ 25,500 (3 Installments)</p>
             
-            <ul class="space-y-2 pt-4 border-t border-[#D1F5EE]/15 text-xs text-[#A3CEC5] font-medium leading-relaxed">
-              <li>✓ সম্পূর্ণ কাস্টমাইজড ই-কমার্স স্টোর</li>
-              <li>✓ লোডিং স্পিড: 1 সেকেন্ডের কম</li>
-              <li>✓ মোবাইল ও ট্যাব 100% অপ্টিমাইজড</li>
-              <li>✓ ফুল অ্যাডমিন ড্যাশবোর্ড অ্যাক্সেস</li>
-              <li>✓ ফ্রি ডোমেইন (.com)</li>
-              <li>✓ SSL (প্রথম বছর ফ্রি)</li>
-              <li>✓ 10 GB NVMe ক্লাউড হোস্টিং (1 বছর ফ্রি)</li>
-              <li>✓ পেমেন্ট গেটওয়ে (বিকাশ, নগদ, কার্ড, EMI System)</li>
-              <li>✓ অর্ডার টাইমে অ্যাডভান্স পেমেন্ট সিস্টেম</li>
-              <li>✓ ইনকমপ্লিট কার্ট রিকভারি</li>
-              <li>✓ কুরিয়ার এপিআই (Steadfast ও Pathao)</li>
-              <li>✓ কাস্টমার অ্যাড্রেস ভিত্তিক অটো কুরিয়ার চার্জ</li>
-              <li>✓ ফ্রি পিক্সেল সেটআপ (Facebook Pixel & CAPI)</li>
-              <li>✓ <strong>2 টি বিজনেস ইমেইল</strong></li>
-              <li>✓ <strong>cPanel হ্যান্ডওভার: 3 মাস পর</strong></li>
+            <ul class="space-y-2.5 pt-5 mt-4 border-t border-[#D1F5EE]/15 text-xs text-[#D1F5EE] font-medium leading-relaxed">
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>সম্পূর্ণ কাস্টমাইজড ই-কমার্স স্টোর</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>লোডিং স্পিড: 1 সেকেন্ডের কম</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>মোবাইল ও ট্যাব 100% অপ্টিমাইজড</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফুল অ্যাডমিন ড্যাশবোর্ড অ্যাক্সেস</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফ্রি ডোমেইন (.com)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>SSL (প্রথম বছর ফ্রি)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>10 GB NVMe ক্লাউড হোস্টিং (1 বছর ফ্রি)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>পেমেন্ট গেটওয়ে (বিকাশ, নগদ, কার্ড, EMI System)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>অর্ডার টাইমে অ্যাডভান্স পেমেন্ট সিস্টেম</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ইনকমপ্লিট কার্ট রিকভারি</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>কুরিয়ার এপিআই (Steadfast ও Pathao)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>কাস্টমার অ্যাড্রেস ভিত্তিক অটো কুরিয়ার চার্জ</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফ্রি পিক্সেল সেটআপ (Facebook Pixel & CAPI)</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>2 টি বিজনেস ইমেইল</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>cPanel হ্যান্ডওভার: 3 মাস পর</span></li>
             </ul>
           </div>
-          <button onclick="openOfferModal('Momentum Plan (3-Mo EMI)', '৳ 8,500/মাস (মোট ৳ 25,500)')" class="w-full py-3 rounded-xl bg-[#06232B] hover:bg-[#20E1B2] hover:text-white font-bold text-xs text-white transition-all border border-[#D1F5EE]/15 shadow-2xs">
+          <button onclick="openOfferModal('Momentum Plan (3-Mo EMI)', '৳ 8,500/মাস (মোট ৳ 25,500)')" class="w-full py-3.5 rounded-2xl bg-[#06232B] hover:bg-gradient-to-r hover:from-[#20E1B2] hover:to-[#0D9488] font-extrabold text-xs text-white transition-all duration-300 border border-[#D1F5EE]/20 hover:border-transparent shadow-md hover:shadow-lg hover:shadow-[#20E1B2]/25 active:scale-98">
             প্যাকেজটি বেছে নিন
           </button>
         </div>
 
         <!-- Plan 4: Pay In Full (Founder Plan) -->
-        <div class="morphy-card p-6 bg-[#0B3844]/35 backdrop-blur-xl border-2 border-[#20E1B2] rounded-3xl flex flex-col justify-between space-y-5 shadow-xl shadow-[#20E1B2]/15 relative hover:-translate-y-1 transition-all">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-[#20E1B2] text-white text-[10px] font-black uppercase tracking-wider shadow-xs font-eng">
+        <div class="morphy-card p-6 sm:p-7 bg-gradient-to-b from-[#082830]/90 via-[#06232B]/85 to-[#041B21]/95 backdrop-blur-2xl border-2 border-[#20E1B2] rounded-[28px] flex flex-col justify-between space-y-5 shadow-2xl shadow-[#20E1B2]/25 relative hover:-translate-y-2 transition-all duration-300 group overflow-hidden">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#20E1B2] to-[#0D9488] text-[#03171B] text-[10.5px] font-black uppercase tracking-wider shadow-lg shadow-[#20E1B2]/30 font-eng">
             BEST VALUE DEAL 🔥
           </div>
           <div>
-            <div class="flex items-center justify-between">
-              <span class="text-[10.5px] font-black uppercase text-[#20E1B2] bg-[#20E1B2]/10 px-2.5 py-1 rounded-md border border-[#20E1B2]/20">এককালীন পেমেন্ট</span>
-              <span class="text-[10px] font-black text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded font-eng">Save 67%</span>
+            <div class="flex items-center justify-between mt-1">
+              <span class="text-[10.5px] font-black uppercase text-[#20E1B2] bg-[#20E1B2]/15 px-3 py-1 rounded-full border border-[#20E1B2]/30">এককালীন পেমেন্ট</span>
+              <span class="text-[10px] font-black text-[#03171B] bg-[#20E1B2] px-2.5 py-0.5 rounded-full font-eng shadow-xs">Save 67%</span>
             </div>
-            <h3 class="text-xl font-black text-white mt-3">Founder প্ল্যান</h3>
-            <div class="text-2xl font-black text-white mt-1 font-eng">৳ 19,990 <span class="text-xs text-[#7EADA3] font-normal font-bengali">এককালীন</span></div>
-            <p class="text-xs font-black text-emerald-600 mt-1 font-eng">One-Time (Save 67% Discount)</p>
+            <h3 class="text-2xl font-black text-white mt-4 tracking-tight group-hover:text-[#20E1B2] transition-colors">Founder প্ল্যান</h3>
+            <div class="text-3xl font-black text-white mt-1.5 font-eng">৳ 19,990 <span class="text-xs text-[#A7E7DC] font-normal font-bengali">এককালীন</span></div>
+            <p class="text-xs font-black text-[#20E1B2] mt-1 font-eng">One-Time (Save 67% Discount)</p>
             
-            <ul class="space-y-2 pt-4 border-t border-[#D1F5EE]/10 text-xs text-[#DDF6F0] font-medium leading-relaxed">
-              <li>✓ সম্পূর্ণ কাস্টমাইজড ই-কমার্স স্টোর</li>
-              <li>✓ লোডিং স্পিড: 1 সেকেন্ডের কম</li>
-              <li>✓ মোবাইল ও ট্যাব 100% অপ্টিমাইজড</li>
-              <li>✓ <strong>1st দিনেই ফুল মাস্টার অ্যাক্সেস</strong></li>
-              <li>✓ ফ্রি ডোমেইন (.com)</li>
-              <li>✓ SSL (প্রথম বছর ফ্রি)</li>
-              <li>✓ 10 GB NVMe ক্লাউড হোস্টিং (1 বছর ফ্রি)</li>
-              <li>✓ পেমেন্ট গেটওয়ে (বিকাশ, নগদ, কার্ড, EMI System)</li>
-              <li>✓ অর্ডার টাইমে অ্যাডভান্স পেমেন্ট সিস্টেম</li>
-              <li>✓ ইনকমপ্লিট কার্ট রিকভারি</li>
-              <li>✓ কুরিয়ার এপিআই (Steadfast ও Pathao)</li>
-              <li>✓ কাস্টমার অ্যাড্রেস ভিত্তিক অটো কুরিয়ার চার্জ</li>
-              <li>✓ ফ্রি পিক্সেল সেটআপ (Facebook Pixel & CAPI)</li>
-              <li>✓ <strong>আনলিমিটেড বিজনেস ইমেইল</strong></li>
-              <li>✓ <strong>cPanel হ্যান্ডওভার: তাত্ক্ষণিক (1st দিনে)</strong></li>
+            <ul class="space-y-2.5 pt-5 mt-4 border-t border-[#D1F5EE]/15 text-xs text-[#D1F5EE] font-medium leading-relaxed">
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>সম্পূর্ণ কাস্টমাইজড ই-কমার্স স্টোর</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>লোডিং স্পিড: 1 সেকেন্ডের কম</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>মোবাইল ও ট্যাব 100% অপ্টিমাইজড</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>1st দিনেই ফুল মাস্টার অ্যাক্সেস</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফ্রি ডোমেইন (.com)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>SSL (প্রথম বছর ফ্রি)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>10 GB NVMe ক্লাউড হোস্টিং (1 বছর ফ্রি)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>পেমেন্ট গেটওয়ে (বিকাশ, নগদ, কার্ড, EMI System)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>অর্ডার টাইমে অ্যাডভান্স পেমেন্ট সিস্টেম</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ইনকমপ্লিট কার্ট রিকভারি</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>কুরিয়ার এপিআই (Steadfast ও Pathao)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>কাস্টমার অ্যাড্রেস ভিত্তিক অটো কুরিয়ার চার্জ</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফ্রি পিক্সেল সেটআপ (Facebook Pixel & CAPI)</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>আনলিমিটেড বিজনেস ইমেইল</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>cPanel হ্যান্ডওভার: তাত্ক্ষণিক (1st দিনে)</span></li>
             </ul>
           </div>
-          <button onclick="openOfferModal('Founder Plan (Pay In Full)', '৳ 19,990 এককালীন (Save 67%)')" class="w-full py-3.5 rounded-xl bg-[#20E1B2] hover:bg-[#0D9488] font-black text-xs text-white transition-all shadow-md shadow-[#20E1B2]/30 active:scale-98">
-            অফারটি ক্লেইম করুন ➔
+          <button onclick="openOfferModal('Founder Plan (Pay In Full)', '৳ 19,990 এককালীন (Save 67%)')" class="btn-morphy-primary w-full justify-center text-xs py-3.5 shadow-lg shadow-[#20E1B2]/30 active:scale-98">
+            <span>অফারটি ক্লেইম করুন</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
           </button>
         </div>
 
@@ -1200,11 +1201,20 @@
       }
     }
 
-    // Trigger on Load
-    document.addEventListener('DOMContentLoaded', () => {
-      // Set table view as active default (both PC & mobile show table first, cards hidden)
-      setPricingView('table');
-    });
+    // Trigger on Load - Mobile shows Cards view first, Desktop shows Table view first
+    function initDefaultPricingView() {
+      if (window.innerWidth < 768) {
+        setPricingView('cards');
+      } else {
+        setPricingView('table');
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initDefaultPricingView);
+    } else {
+      initDefaultPricingView();
+    }
   </script>
 
 </body>
