@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="bn" class="scroll-smooth">
 <head>
+  <base href="/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>জিরো-রিস্ক ই-কমার্স প্যাকেজ (সহজ EMI সুবিধাসহ) | Md. Shakibur Rahaman</title>
@@ -17,82 +18,1102 @@
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-    <!-- =========================================================================
-       WELCOME LEAD CAPTURE MODAL (Loads on page start, ask name & contact)
-       ========================================================================= -->
-  <div id="welcomeLeadModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md transition-all duration-300">
-    <div class="morphy-card max-w-md w-full p-6 sm:p-8 bg-[#041B21] border-2 border-[#20E1B2] rounded-[32px] shadow-2xl shadow-[#20E1B2]/25 relative animate-fade-in text-center space-y-5">
-      
-      <!-- Close button -->
-      <button type="button" onclick="closeWelcomeModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-[#082830] border border-[#D1F5EE]/20 text-[#A7E7DC] hover:text-white hover:border-[#20E1B2] flex items-center justify-center transition-all" aria-label="Close">
-        <i class="fa-solid fa-xmark text-sm"></i>
-      </button>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#20E1B2',
+              forest: '#0B3844',
+              slate: '#20E1B2',
+              mist: '#68A89C',
+              stone: 'rgba(209, 245, 238, 0.15)',
+              emerald: '#20E1B2',
+              brunswick: '#0B3844',
+              polar: '#D1F5EE',
+              canvas: '#041B21',
+              card: 'rgba(8, 40, 48, 0.42)'
+            },
+            canvas: '#041B21'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            bengali: ['"Hind Siliguri"', '"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
 
-      <!-- Stage 1: Form -->
-      <div id="welcomeFormStage" class="space-y-4 text-left">
-        <div class="text-center space-y-2">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#20E1B2] to-[#0B3844] text-white flex items-center justify-center text-2xl mx-auto shadow-lg shadow-[#20E1B2]/30 border border-white/20">
-            ✦
+  <!-- Custom Unified Morphy Stylesheet -->
+  <link rel="stylesheet" href="/styles.css?v=4.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+
+    :root {
+      --font-bengali: 'Hind Siliguri', 'Noto Sans Bengali', 'SolaimanLipi', 'Segoe UI', sans-serif;
+    }
+
+    * {
+      font-family: var(--font-bengali);
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-feature-settings: "kern" 1, "liga" 1;
+    }
+
+    .font-eng {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+    }
+  </style>
+  <!-- Guaranteed Mobile Navigation Contrast & Visibility (Anti-Cache) -->
+  <style id="mobile-nav-fix">
+    #navbar {
+      background-color: #041B21 !important;
+      background: #041B21 !important;
+      border-bottom: 1px solid rgba(32, 225, 178, 0.25) !important;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7) !important;
+    }
+    #navbar #navBrandName,
+    #navbar span.font-extrabold {
+      color: #FFFFFF !important;
+    }
+    #mobileMenuToggle,
+    #svcMobileToggle {
+      background-color: #0B3844 !important;
+      border: 1.5px solid #20E1B2 !important;
+      color: #20E1B2 !important;
+    }
+    #mobileMenuToggle i,
+    #svcMobileToggle i {
+      color: #20E1B2 !important;
+    }
+    #mobileMenu,
+    #svcMobileMenu {
+      background-color: #041B21 !important;
+      background: #041B21 !important;
+      border: 1.5px solid rgba(32, 225, 178, 0.35) !important;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.95), 0 0 40px rgba(32, 225, 178, 0.2) !important;
+      border-radius: 24px !important;
+    }
+    .mobile-nav-link,
+    .mobile-link {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 14px 18px !important;
+      margin-bottom: 8px !important;
+      border-radius: 14px !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      color: #FFFFFF !important;
+      background-color: #082830 !important;
+      background: #082830 !important;
+      border: 1px solid rgba(32, 225, 178, 0.25) !important;
+      text-decoration: none !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    }
+    .mobile-nav-link span,
+    .mobile-link span {
+      color: #FFFFFF !important;
+      font-weight: 700 !important;
+    }
+    .mobile-nav-link i,
+    .mobile-link i {
+      color: #20E1B2 !important;
+    }
+    .mobile-nav-link .fa-chevron-right,
+    .mobile-link .fa-chevron-right {
+      color: #7EADA3 !important;
+    }
+    .mobile-nav-link:hover,
+    .mobile-nav-link:active,
+    .mobile-link:hover,
+    .mobile-link:active {
+      background: rgba(32, 225, 178, 0.22) !important;
+      border-color: #20E1B2 !important;
+      color: #FFFFFF !important;
+    }
+    .mobile-nav-link.active,
+    .mobile-link.active {
+      background: linear-gradient(135deg, rgba(32, 225, 178, 0.35) 0%, #0B3844 100%) !important;
+      border-color: #20E1B2 !important;
+      box-shadow: 0 4px 22px rgba(32, 225, 178, 0.35) !important;
+    }
+    .mobile-nav-link.active span,
+    .mobile-link.active span {
+      color: #20E1B2 !important;
+      font-weight: 800 !important;
+    }
+  </style>
+
+  <style>
+    /* Continuous Animated Lighting & Shimmer Effect for Submit Buttons */
+    @keyframes lightningGlow {
+      0%, 100% {
+        box-shadow: 0 0 15px rgba(32, 225, 178, 0.45), 0 0 35px rgba(32, 225, 178, 0.25), inset 0 0 12px rgba(255, 255, 255, 0.35);
+      }
+      50% {
+        box-shadow: 0 0 28px rgba(32, 225, 178, 0.9), 0 0 65px rgba(32, 225, 178, 0.55), inset 0 0 20px rgba(255, 255, 255, 0.7);
+      }
+    }
+    @keyframes lightSweep {
+      0% {
+        transform: translateX(-140%) skewX(-25deg);
+      }
+      45%, 100% {
+        transform: translateX(260%) skewX(-25deg);
+      }
+    }
+    .animated-lighting-btn {
+      animation: lightningGlow 2.2s infinite ease-in-out !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+    .animated-lighting-btn::after {
+      content: '' !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 50% !important;
+      height: 100% !important;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.75), transparent) !important;
+      transform: translateX(-140%) skewX(-25deg) !important;
+      animation: lightSweep 2.4s infinite linear !important;
+      pointer-events: none !important;
+    }
+    .glass-dark-card {
+      background: rgba(8, 40, 48, 0.55);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(209, 245, 238, 0.18);
+    }
+  </style>
+
+</head>
+<body class="bg-[#041B21] text-white font-sans antialiased selection:bg-[#20E1B2] selection:text-white relative overflow-x-hidden">
+
+  <!-- 0. Top Scroll Progress Bar -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- 1. Ambient Background Canvas & Glow -->
+  <div class="ambient-mesh-glow"></div>
+  <canvas id="ambientCanvas"></canvas>
+  <div class="ambient-vignette"></div>
+
+  <!-- Navbar hidden as requested for focused landing page -->
+
+  <!-- 1. HERO SECTION (বাংলা) -->
+  <section class="relative pt-12 pb-8 md:pt-16 md:pb-12 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
+      
+      <div class="morphy-tag-primary justify-center mb-1">
+        <i class="fa-solid fa-cart-shopping text-[#20E1B2]"></i>
+        <span>জিরো-রিস্ক ফুল কাস্টমাইজড ই-কমার্স প্যাকেজ (EMI সুবিধাসহ)</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.25] max-w-4xl mx-auto">
+        আপনার বিজনেসের জন্য <span class="bg-gradient-to-r from-[#20E1B2] to-[#0D9488] bg-clip-text text-transparent">হাই-কনভার্টিং ই-কমার্স প্ল্যাটফর্ম</span>
+      </h1>
+
+      <p class="text-base sm:text-lg text-[#A3CEC5] max-w-3xl mx-auto leading-relaxed font-medium">
+        রেগুলার প্রাইস <span class="line-through text-[#94A3B8]">৳ 60,000 টাকা</span> — স্পেশাল অফারে <strong class="text-[#20E1B2]">3 মাস, 6 মাস ও 12 মাসের সহজ কিস্তিতে (EMI)</strong> অথবা এককালীন পেমেন্টে সর্বোচ্চ ডিসকাউন্ট!
+      </p>
+
+      <!-- Quick Benefit Badges -->
+      <div class="pt-1 flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-bold text-[#DDF6F0]">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 shadow-2xs">
+          <i class="fa-solid fa-gauge-high text-[#20E1B2]"></i> 1 সেকেন্ডের কম লোডিং
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 shadow-2xs">
+          <i class="fa-solid fa-shield-halved text-emerald-600"></i> 100% ফুল অ্যাডমিন কন্ট্রোল
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 shadow-2xs">
+          <i class="fa-solid fa-credit-card text-purple-600"></i> বিকাশ, নগদ, কার্ড ও EMI গেটওয়ে
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 shadow-2xs">
+          <i class="fa-solid fa-truck-fast text-blue-600"></i> অটো কুরিয়ার চার্জ ও ট্র্যাকিং
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       2. একটি পূর্ণাঙ্গ ই-কমার্স ওয়েবসাইটে আপনি যা যা পাচ্ছেন (AT START)
+       ========================================================================= -->
+  <section class="py-12 md:py-16 bg-[#0B3844]/35 backdrop-blur-xl border-y border-[#D1F5EE]/15 relative z-10" id="deliverables">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#20E1B2]/10 text-[#20E1B2] text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>ফুল ডেলিভারেবলস ও ফিচার প্যাকেজ</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+          একটি পূর্ণাঙ্গ ই-কমার্স ওয়েবসাইটে <span class="text-[#20E1B2]">আপনি যা যা পাচ্ছেন</span>
+        </h2>
+        <p class="text-sm sm:text-base text-[#7EADA3] leading-relaxed">
+          কোনো সাধারণ থিম নয় — সম্পূর্ণ কাস্টমাইজড, সুপারফাস্ট এবং সর্বাধিক সেলস নিশ্চিত করার জন্য হাই-কনভার্টিং আর্কিটেকচার ও লাইভ ড্যাশবোর্ড:
+        </p>
+      </div>
+
+      <!-- 6 Detailed Feature Breakdown Cards (Exact Cards Requested - Glass Styled) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Module Card 1: Revenue & Analytics -->
+        <div class="morphy-card p-6 sm:p-7 bg-[#082830]/45 backdrop-blur-2xl border border-[#D1F5EE]/20 hover:border-[#20E1B2]/60 hover:bg-[#082830]/70 rounded-[28px] space-y-4 hover:shadow-2xl hover:shadow-[#20E1B2]/20 hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden flex flex-col justify-between shadow-xl">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-[#20E1B2]/15 border border-[#20E1B2]/30 text-[#20E1B2] flex items-center justify-center text-xl font-bold shadow-md shadow-[#20E1B2]/20 group-hover:scale-110 group-hover:bg-[#20E1B2] group-hover:text-[#03171B] transition-all duration-300">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-white group-hover:text-[#20E1B2] transition-colors tracking-tight">1. রিয়েল-টাইম সেলস অ্যানালিটিক্স</h3>
+            <p class="text-xs sm:text-[13px] text-[#A7E7DC] leading-relaxed">
+              দৈনিক, সাপ্তাহিক ও মাসিক সেলস গ্রাফ, মোট রেভিনিউ, ক্যাটাগরি অনুযায়ী বিক্রির পার্সেন্টেজ এবং পেমেন্ট মেথড ব্রেকডাউন (SSLCommerz, bKash, COD)।
+            </p>
           </div>
-          <div class="morphy-tag-primary justify-center text-[10.5px]">
-            <span>EXCLUSIVE E-COMMERCE OFFER</span>
-          </div>
-          <h3 class="text-xl sm:text-2xl font-black text-white tracking-tight">
-            স্বাগতম! <span class="text-[#20E1B2]">আপনার প্রোফাইল যুক্ত করুন</span>
-          </h3>
-          <p class="text-xs text-[#A7E7DC] leading-relaxed">
-            স্পেশাল ই-কমার্স ডিসকাউন্ট এবং EMI সুবিধা আনলক করতে আপনার নাম ও যোগাযোগ নম্বর দিন:
-          </p>
+          <ul class="text-xs text-[#D1F5EE] space-y-2 pt-4 mt-2 border-t border-[#D1F5EE]/15 font-medium">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>টোটাল সেলস ও রেভিনিউ মিটার</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>ক্যাটাগরি ওয়াইজ সেলস ট্র্যাকিং</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>লাইভ অর্ডার কাউন্ট ও AOV ট্র্যাকার</span></li>
+          </ul>
         </div>
 
-        <form id="welcomeLeadForm" class="space-y-4 pt-1">
-          <div>
-            <label class="block text-[11px] font-bold text-[#D1F5EE] uppercase tracking-wider mb-1.5">আপনার নাম <span class="text-rose-400">*</span></label>
-            <input type="text" id="welcomeName" required placeholder="আপনার পূর্ণ নাম লিখুন" class="w-full px-4 py-3 rounded-xl bg-[#082830] border border-[#D1F5EE]/20 text-sm text-white focus:outline-none focus:border-[#20E1B2] transition-all">
+        <!-- Module Card 2: Live Traffic & Funnel -->
+        <div class="morphy-card p-6 sm:p-7 bg-[#082830]/45 backdrop-blur-2xl border border-[#D1F5EE]/20 hover:border-[#20E1B2]/60 hover:bg-[#082830]/70 rounded-[28px] space-y-4 hover:shadow-2xl hover:shadow-[#20E1B2]/20 hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden flex flex-col justify-between shadow-xl">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-amber-500/15 border border-amber-500/30 text-amber-400 flex items-center justify-center text-xl font-bold shadow-md shadow-amber-500/20 group-hover:scale-110 group-hover:bg-amber-400 group-hover:text-[#03171B] transition-all duration-300">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-white group-hover:text-[#20E1B2] transition-colors tracking-tight">2. লাইভ ট্রাফিক ও ফানেল অ্যানালিটিক্স</h3>
+            <p class="text-xs sm:text-[13px] text-[#A7E7DC] leading-relaxed">
+              এই মুহূর্তে ওয়েবসাইটে কতজন লাইভ ভিজিটর ব্রাউজ করছেন, 24 ঘণ্টার প্রতি ঘণ্টার ডেটা (ভিজিটর, Add to Cart, Order Now ও কমপ্লিট পারচেজ)।
+            </p>
+          </div>
+          <ul class="text-xs text-[#D1F5EE] space-y-2 pt-4 mt-2 border-t border-[#D1F5EE]/15 font-medium">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>লাইভ একটিভ ভিজিটর ট্র্যাকিং</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>পিক আওয়ার (Peak Hours) ডিটেকশন</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>ফানেল ড্রপ-অফ ও কনভার্শন রেট</span></li>
+          </ul>
+        </div>
+
+        <!-- Module Card 3: Orders & Courier Dispatch -->
+        <div class="morphy-card p-6 sm:p-7 bg-[#082830]/45 backdrop-blur-2xl border border-[#D1F5EE]/20 hover:border-[#20E1B2]/60 hover:bg-[#082830]/70 rounded-[28px] space-y-4 hover:shadow-2xl hover:shadow-[#20E1B2]/20 hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden flex flex-col justify-between shadow-xl">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-indigo-500/15 border border-indigo-500/30 text-indigo-400 flex items-center justify-center text-xl font-bold shadow-md shadow-indigo-500/20 group-hover:scale-110 group-hover:bg-indigo-400 group-hover:text-[#03171B] transition-all duration-300">
+              <i class="fa-solid fa-box"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-white group-hover:text-[#20E1B2] transition-colors tracking-tight">3. অর্ডার ও অটো কুরিয়ার চার্জ</h3>
+            <p class="text-xs sm:text-[13px] text-[#A7E7DC] leading-relaxed">
+              ইনকমপ্লিট অর্ডার ফিল্টার, কাস্টমার অ্যাড্রেস ভিত্তিক অটো কুরিয়ার চার্জ এবং Steadfast ও Pathao কুরিয়ারে 1-ক্লিকে অটোমেটেড পার্সেল তৈরি।
+            </p>
+          </div>
+          <ul class="text-xs text-[#D1F5EE] space-y-2 pt-4 mt-2 border-t border-[#D1F5EE]/15 font-medium">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>কাস্টমার অ্যাড্রেস ভিত্তিক অটো কুরিয়ার চার্জ</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>ড্রপড ও ইনকমপ্লিট কার্ট রিকভারি</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>1-ক্লিক স্টেডফাস্ট ও পাঠাও এপিআই</span></li>
+          </ul>
+        </div>
+
+        <!-- Module Card 4: Payment Gateways -->
+        <div class="morphy-card p-6 sm:p-7 bg-[#082830]/45 backdrop-blur-2xl border border-[#D1F5EE]/20 hover:border-[#20E1B2]/60 hover:bg-[#082830]/70 rounded-[28px] space-y-4 hover:shadow-2xl hover:shadow-[#20E1B2]/20 hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden flex flex-col justify-between shadow-xl">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl font-bold shadow-md shadow-emerald-500/20 group-hover:scale-110 group-hover:bg-emerald-400 group-hover:text-[#03171B] transition-all duration-300">
+              <i class="fa-solid fa-credit-card"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-white group-hover:text-[#20E1B2] transition-colors tracking-tight">4. পেমেন্ট গেটওয়ে ও অ্যাডভান্স পেমেন্ট</h3>
+            <p class="text-xs sm:text-[13px] text-[#A7E7DC] leading-relaxed">
+              বিকাশ, নগদ, কার্ড, EMI System, অর্ডার টাইমে অ্যাডভান্স পেমেন্ট সিস্টেম (ডেলিভারি চার্জ অগ্রিম গ্রহণ) ও ফ্রি পিক্সেল সেটআপ।
+            </p>
+          </div>
+          <ul class="text-xs text-[#D1F5EE] space-y-2 pt-4 mt-2 border-t border-[#D1F5EE]/15 font-medium">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>পেমেন্ট গেটওয়ে (বিকাশ, নগদ, কার্ড, EMI System)</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>অর্ডার টাইমে অ্যাডভান্স পেমেন্ট সিস্টেম</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>ফ্রি পিক্সেল সেটআপ (Facebook Pixel & CAPI)</span></li>
+          </ul>
+        </div>
+
+        <!-- Module Card 5: Customer Intelligence -->
+        <div class="morphy-card p-6 sm:p-7 bg-[#082830]/45 backdrop-blur-2xl border border-[#D1F5EE]/20 hover:border-[#20E1B2]/60 hover:bg-[#082830]/70 rounded-[28px] space-y-4 hover:shadow-2xl hover:shadow-[#20E1B2]/20 hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden flex flex-col justify-between shadow-xl">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-purple-500/15 border border-purple-500/30 text-purple-400 flex items-center justify-center text-xl font-bold shadow-md shadow-purple-500/20 group-hover:scale-110 group-hover:bg-purple-400 group-hover:text-[#03171B] transition-all duration-300">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-white group-hover:text-[#20E1B2] transition-colors tracking-tight">5. কাস্টমার ইন্টেলিজেন্স ও LTV</h3>
+            <p class="text-xs sm:text-[13px] text-[#A7E7DC] leading-relaxed">
+              কাস্টমার প্রোফাইল, মোট লাইফটাইম স্পেন্ড রেকর্ড (৳ 42,620+), গড় কেনাকাটার পরিমাণ, রিপিট বায়ার রেট এবং VIP কাস্টমারদের বিস্তারিত তালিকা।
+            </p>
+          </div>
+          <ul class="text-xs text-[#D1F5EE] space-y-2 pt-4 mt-2 border-t border-[#D1F5EE]/15 font-medium">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>কাস্টমার লাইফটাইম ভ্যালু (LTV)</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>রিপিট বায়ার ট্র্যাকিং ও হিস্ট্রি</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>ডিস্ট্রিক্ট ও লোকেশন অ্যানালাইসিস</span></li>
+          </ul>
+        </div>
+
+        <!-- Module Card 6: EMI Ledger & Billing -->
+        <div class="morphy-card p-6 sm:p-7 bg-[#082830]/45 backdrop-blur-2xl border border-[#D1F5EE]/20 hover:border-[#20E1B2]/60 hover:bg-[#082830]/70 rounded-[28px] space-y-4 hover:shadow-2xl hover:shadow-[#20E1B2]/20 hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden flex flex-col justify-between shadow-xl">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-rose-500/15 border border-rose-500/30 text-rose-400 flex items-center justify-center text-xl font-bold shadow-md shadow-rose-500/20 group-hover:scale-110 group-hover:bg-rose-400 group-hover:text-[#03171B] transition-all duration-300">
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-white group-hover:text-[#20E1B2] transition-colors tracking-tight">6. স্বচ্ছ EMI বিলিং লেজার</h3>
+            <p class="text-xs sm:text-[13px] text-[#A7E7DC] leading-relaxed">
+              আপনার 3, 6 বা 12 মাসের কিস্তি পেমেন্ট শিডিউল, মাসিক চালান ও রসিদ, ভেরিফাইড লেজার এবং 100% স্বচ্ছ ট্র্যাকিং কন্ট্রোল।
+            </p>
+          </div>
+          <ul class="text-xs text-[#D1F5EE] space-y-2 pt-4 mt-2 border-t border-[#D1F5EE]/15 font-medium">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>মাসিক কিস্তি ও ডিউ ট্র্যাকার</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>ভেরিফাইড পেমেন্ট রিসিট হিস্ট্রি</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs"></i> <span>কোনো হিডেন চার্জ ছাড়া ক্লিয়ার চুক্তি</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+
+      <!-- Interactive Tabbed Browser Live Preview -->
+      <div class="max-w-5xl mx-auto space-y-4 pt-6">
+        
+        <div class="text-center space-y-1 mb-2">
+          <h3 class="text-xl sm:text-2xl font-black text-white">লাইভ ড্যাশবোর্ড ও স্ক্রিনশট প্রিভিউ</h3>
+          <p class="text-xs sm:text-sm text-[#7EADA3]">নিচের ট্যাবে ক্লিক করে আসল লাইভ ইন্টারফেস দেখুন:</p>
+        </div>
+
+        <!-- Showcase Navigation Tabs -->
+        <div class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-2 scrollbar-none px-1">
+          <button type="button" onclick="switchEcomScreen('analytics')" id="tab-analytics" class="ecom-tab-btn active px-3.5 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 transition-all duration-200 shrink-0 bg-[#20E1B2] text-white shadow-md shadow-[#20E1B2]/20">
+            <i class="fa-solid fa-chart-pie text-xs"></i>
+            <span>1. রেভিনিউ ও সেলস</span>
+          </button>
+          <button type="button" onclick="switchEcomScreen('traffic')" id="tab-traffic" class="ecom-tab-btn px-3.5 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 transition-all duration-200 shrink-0 bg-[#0B3844]/35 backdrop-blur-xl hover:bg-[#06232B] text-[#7EADA3] hover:text-white border border-[#D1F5EE]/15">
+            <i class="fa-solid fa-bolt text-xs text-amber-500"></i>
+            <span>2. লাইভ ট্রাফিক ও ফানেল</span>
+          </button>
+          <button type="button" onclick="switchEcomScreen('orders')" id="tab-orders" class="ecom-tab-btn px-3.5 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 transition-all duration-200 shrink-0 bg-[#0B3844]/35 backdrop-blur-xl hover:bg-[#06232B] text-[#7EADA3] hover:text-white border border-[#D1F5EE]/15">
+            <i class="fa-solid fa-box text-xs text-blue-500"></i>
+            <span>3. অর্ডার ও কুরিয়ার</span>
+          </button>
+          <button type="button" onclick="switchEcomScreen('payments')" id="tab-payments" class="ecom-tab-btn px-3.5 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 transition-all duration-200 shrink-0 bg-[#0B3844]/35 backdrop-blur-xl hover:bg-[#06232B] text-[#7EADA3] hover:text-white border border-[#D1F5EE]/15">
+            <i class="fa-solid fa-credit-card text-xs text-emerald-500"></i>
+            <span>4. পেমেন্ট গেটওয়ে</span>
+          </button>
+          <button type="button" onclick="switchEcomScreen('customers')" id="tab-customers" class="ecom-tab-btn px-3.5 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 transition-all duration-200 shrink-0 bg-[#0B3844]/35 backdrop-blur-xl hover:bg-[#06232B] text-[#7EADA3] hover:text-white border border-[#D1F5EE]/15">
+            <i class="fa-solid fa-users text-xs text-indigo-500"></i>
+            <span>5. কাস্টমার LTV</span>
+          </button>
+          <button type="button" onclick="switchEcomScreen('billing')" id="tab-billing" class="ecom-tab-btn px-3.5 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 transition-all duration-200 shrink-0 bg-[#0B3844]/35 backdrop-blur-xl hover:bg-[#06232B] text-[#7EADA3] hover:text-white border border-[#D1F5EE]/15">
+            <i class="fa-solid fa-file-invoice-dollar text-xs text-purple-500"></i>
+            <span>6. EMI লেজার</span>
+          </button>
+        </div>
+
+        <!-- Glassmorphic Mac Browser Window Frame -->
+        <div class="morphy-card p-2.5 sm:p-4 bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 rounded-3xl shadow-2xl overflow-hidden group">
+          
+          <!-- Browser Frame Top Bar -->
+          <div class="flex items-center justify-between px-3 py-2 border-b border-[#D1F5EE]/10 mb-2.5 bg-[#041B21] rounded-t-2xl">
+            <div class="flex items-center gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+            </div>
+            <div class="flex items-center gap-2 px-3 py-1 rounded-lg bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 text-[11px] font-semibold text-[#7EADA3] shadow-2xs">
+              <i class="fa-solid fa-lock text-[10px] text-emerald-600"></i>
+              <span id="screenUrl" class="font-eng truncate max-w-[200px] sm:max-w-none">luxora-furniture.com/admin/analytics</span>
+            </div>
+            <button type="button" onclick="openImageLightbox()" class="text-[11px] font-bold text-[#20E1B2] hover:text-[#0D9488] bg-[#20E1B2]/10 hover:bg-[#20E1B2]/15 px-3 py-1 rounded-md transition-all flex items-center gap-1.5">
+              <i class="fa-solid fa-expand text-[10px]"></i>
+              <span class="hidden sm:inline">বড় করে দেখুন</span>
+            </button>
           </div>
 
-          <div>
-            <label class="block text-[11px] font-bold text-[#D1F5EE] uppercase tracking-wider mb-1.5">যোগাযোগ / WhatsApp নম্বর <span class="text-rose-400">*</span></label>
-            <div class="relative flex items-center">
-              <span class="absolute left-3.5 text-xs font-black text-[#20E1B2] font-eng select-none">+880</span>
-              <input type="tel" id="welcomePhone" required placeholder="1838070468" class="w-full pl-14 pr-4 py-3 rounded-xl bg-[#082830] border border-[#D1F5EE]/20 text-sm text-white focus:outline-none focus:border-[#20E1B2] transition-all font-eng" oninput="formatBdPhone(this)">
+          <!-- Dynamic Active Image Container -->
+          <div class="relative rounded-2xl overflow-hidden border border-[#D1F5EE]/15/80 shadow-xs bg-[#06232B] cursor-zoom-in" onclick="openImageLightbox()">
+            <img id="activeScreenImg" src="/assets/offers/ecom-admin.png" alt="Luxora Furniture E-Commerce Admin Module" class="w-full h-auto object-contain transition-all duration-300 group-hover:scale-[1.008]" loading="lazy">
+            <div class="absolute bottom-3 right-3 bg-black/85 hover:bg-black/90 backdrop-blur-md text-white text-[11px] font-bold px-3 py-1.5 rounded-xl flex items-center gap-1.5 shadow-lg pointer-events-none">
+              <i class="fa-solid fa-magnifying-glass-plus text-xs"></i>
+              <span>জুম করতে ক্লিক করুন</span>
             </div>
           </div>
 
-          <button type="submit" id="welcomeSubmitBtn" class="btn-morphy-primary w-full justify-center text-xs py-3.5 shadow-lg shadow-[#20E1B2]/30 active:scale-98">
-            <span>অফার ও এক্সেস আনলক করুন</span>
-            <i class="fa-solid fa-arrow-right text-xs"></i>
-          </button>
-        </form>
+          <!-- Screenshot Context Info Bar (বাংলা) -->
+          <div class="mt-3.5 p-3.5 rounded-2xl bg-[#06232B] border border-[#D1F5EE]/15 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-left">
+            <div>
+              <div id="screenTitle" class="text-sm sm:text-base font-black text-white">
+                1. এক্সিকিউটিভ রেভিনিউ ও সেলস অ্যানালিটিক্স
+              </div>
+              <div id="screenDesc" class="text-xs sm:text-[13px] text-[#A3CEC5] font-medium mt-1 leading-relaxed">
+                রিয়েল-টাইম লাইভ সেলস ট্র্যাকিং (যেমন: ৳ 1,26,599), অর্ডার ভলিউম, গড় অর্ডার ভ্যালু (AOV ৳ 9,738) এবং ক্যাটাগরিভিত্তিক সেলস ব্রেকডাউন।
+              </div>
+            </div>
+            <div class="shrink-0">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-emerald-500/10 text-emerald-600 border border-emerald-500/20">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>প্রোডাকশন রেডি</span>
+              </span>
+            </div>
+          </div>
+
+        </div>
+
       </div>
 
-      <!-- Stage 2: Congratulations! -->
-      <div id="welcomeSuccessStage" class="hidden space-y-4 text-center py-4">
-        <div class="w-16 h-16 rounded-3xl bg-emerald-500/20 border border-emerald-500/40 text-[#20E1B2] flex items-center justify-center text-3xl mx-auto shadow-xl shadow-emerald-500/30">
-          🎉
-        </div>
-        <div class="space-y-2">
-          <h3 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
-            Congratulations!
-          </h3>
-          <p class="text-sm font-bold text-[#20E1B2]">
-            অভিনন্দন! আপনার তথ্য সফলভাবে যুক্ত হয়েছে।
-          </p>
-          <p class="text-xs text-[#A7E7DC] max-w-xs mx-auto leading-relaxed">
-            আপনার জন্য বিশেষ প্যাকেজ ডিসকাউন্ট সক্রিয় করা হয়েছে। এখন প্যাকেজসমূহ বিস্তারিত দেখে অর্ডার করতে পারেন।
+      <!-- Infrastructure Deliverables Grid (Glass Styled) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+        <div class="morphy-card p-6 rounded-2xl bg-[#082830]/45 backdrop-blur-2xl border border-[#D1F5EE]/20 hover:border-[#20E1B2]/50 hover:bg-[#082830]/65 space-y-2.5 shadow-lg transition-all duration-300">
+          <div class="text-base font-extrabold text-white flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-xl bg-[#20E1B2]/15 border border-[#20E1B2]/30 text-[#20E1B2] flex items-center justify-center text-sm"><i class="fa-solid fa-bolt"></i></span>
+            <span>1 সেকেন্ডের কম লোডিং স্পিড</span>
+          </div>
+          <p class="text-xs text-[#A7E7DC] leading-relaxed">
+            আল্ট্রা-অপ্টিমাইজড আর্কিটেকচার যা যেকোনো ডিভাইসে ইনস্ট্যান্ট লোড হয় এবং বাউন্স রেট কমায়।
           </p>
         </div>
-        <button type="button" onclick="closeWelcomeModal()" class="btn-morphy-primary w-full justify-center text-xs py-3.5 shadow-lg shadow-[#20E1B2]/30">
-          <span>প্যাকেজসমূহ দেখুন</span>
-          <i class="fa-solid fa-sparkles text-xs"></i>
-        </button>
+        <div class="morphy-card p-6 rounded-2xl bg-[#082830]/45 backdrop-blur-2xl border border-[#D1F5EE]/20 hover:border-[#20E1B2]/50 hover:bg-[#082830]/65 space-y-2.5 shadow-lg transition-all duration-300">
+          <div class="text-base font-extrabold text-white flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-xl bg-blue-500/15 border border-blue-500/30 text-blue-400 flex items-center justify-center text-sm"><i class="fa-solid fa-server"></i></span>
+            <span>10 GB NVMe হোস্টিং + ফ্রি ডোমেইন</span>
+          </div>
+          <p class="text-xs text-[#A7E7DC] leading-relaxed">
+            প্রথম বছরের জন্য হাই-স্পিড NVMe ক্লাউড হোস্টিং, .com/.net ডোমেইন এবং ফ্রি লাইফটাইম SSL।
+          </p>
+        </div>
+        <div class="morphy-card p-6 rounded-2xl bg-[#082830]/45 backdrop-blur-2xl border border-[#D1F5EE]/20 hover:border-[#20E1B2]/50 hover:bg-[#082830]/65 space-y-2.5 shadow-lg transition-all duration-300">
+          <div class="text-base font-extrabold text-white flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-xl bg-rose-500/15 border border-rose-500/30 text-rose-400 flex items-center justify-center text-sm"><i class="fa-solid fa-bullseye"></i></span>
+            <span>পিক্সেল, CAPI ও GA4 ট্র্যাকিং</span>
+          </div>
+          <p class="text-xs text-[#A7E7DC] leading-relaxed">
+            Facebook Pixel, Conversion API (CAPI) ও Google Analytics 4 নির্ভুল কনভার্শন ট্র্যাকিংয়ের জন্য রেডি।
+          </p>
+        </div>
       </div>
+
+    </div>
+  </section>
+
+
+    <!-- =========================================================================
+       3. PRICING & EMI PACKAGES (UPDATED: 2500, 4500, 8500, 19990)
+       ========================================================================= -->
+  <section class="py-14 md:py-20 border-t border-[#D1F5EE]/15 bg-[#041B21] relative z-10" id="packages">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <!-- Section Header with Switcher -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="morphy-tag-primary justify-center">
+          <i class="fa-solid fa-tags text-[#20E1B2]"></i>
+          <span>সহজ কিস্তি (EMI) ও এককালীন প্রাইসিং প্যাকেজ</span>
+        </div>
+        
+        <h2 class="text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+          আপনার বাজেট অনুযায়ী <span class="text-[#20E1B2]">প্যাকেজ নির্বাচন করুন</span>
+        </h2>
+        
+        <p class="text-sm sm:text-base text-[#7EADA3] leading-relaxed">
+          3 মাস, 6 মাস ও 12 মাসের সহজ কিস্তি সুবিধা অথবা এককালীন পেমেন্টে সবচেয়ে বড় ডিসকাউন্ট:
+        </p>
+
+        <!-- View Switcher -->
+        <div class="pt-2 flex items-center justify-center">
+          <div class="p-1.5 rounded-2xl bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 shadow-sm inline-flex items-center gap-1.5">
+            <button id="viewCardsBtn" type="button" onclick="setPricingView('cards')" class="px-5 py-2.5 rounded-xl font-black text-xs flex items-center gap-2 transition-all duration-200 bg-[#0B3844]/35 backdrop-blur-xl text-[#7EADA3] hover:bg-[#06232B]">
+              <i class="fa-solid fa-table-cells-large text-xs"></i>
+              <span>কার্ড ভিউ (Card View)</span>
+            </button>
+            <button id="viewTableBtn" type="button" onclick="setPricingView('table')" class="px-5 py-2.5 rounded-xl font-black text-xs flex items-center gap-2 transition-all duration-200 bg-[#20E1B2] text-white shadow-md shadow-[#20E1B2]/20">
+              <i class="fa-solid fa-table-list text-xs"></i>
+              <span>তুলনামূলক টেবিল (Table View)</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- 1. CARD GRID VIEW (Glass Styled) -->
+      <div id="pricingCardsView" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        
+        <!-- Plan 1: 12-Month EMI (Startup Plan) -->
+        <div class="morphy-card p-6 sm:p-7 bg-[#082830]/45 backdrop-blur-2xl border border-[#D1F5EE]/20 hover:border-[#20E1B2]/60 hover:bg-[#082830]/70 rounded-[28px] flex flex-col justify-between space-y-5 hover:shadow-2xl hover:shadow-[#20E1B2]/20 hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden shadow-xl">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-[10.5px] font-black uppercase text-[#20E1B2] bg-[#20E1B2]/10 px-3 py-1 rounded-full border border-[#20E1B2]/25">12 মাসের কিস্তি</span>
+              <span class="text-[10px] font-extrabold text-[#10B981] bg-[#10B981]/15 px-2.5 py-0.5 rounded-full border border-[#10B981]/30 font-eng">Save 50%</span>
+            </div>
+            <h3 class="text-2xl font-black text-white mt-4 tracking-tight group-hover:text-[#20E1B2] transition-colors">Startup প্ল্যান</h3>
+            <div class="text-3xl font-black text-white mt-1.5 font-eng">৳ 2,500 <span class="text-xs text-[#A7E7DC] font-normal font-bengali">/ মাস</span></div>
+            <p class="text-xs font-bold text-[#20E1B2] mt-1 font-eng">Total ৳ 30,000 (12 Installments)</p>
+            
+            <ul class="space-y-2.5 pt-5 mt-4 border-t border-[#D1F5EE]/15 text-xs text-[#D1F5EE] font-medium leading-relaxed">
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>সম্পূর্ণ কাস্টমাইজড ই-কমার্স স্টোর</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>লোডিং স্পিড: 1 সেকেন্ডের কম</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>মোবাইল ও ট্যাব 100% অপ্টিমাইজড</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফুল অ্যাডমিন ড্যাশবোর্ড অ্যাক্সেস</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ইনকমপ্লিট কার্ট রিকভারি</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>কাস্টমার অ্যাড্রেস ভিত্তিক অটো কুরিয়ার চার্জ</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফ্রি পিক্সেল সেটআপ (Facebook Pixel & CAPI)</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>পেমেন্ট গেটওয়ে (6 মাস পর)</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>অর্ডার টাইমে অ্যাডভান্স পেমেন্ট (6 মাস পর)</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>কুরিয়ার এপিআই (Steadfast ও Pathao) (6 মাস পর)</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>2 টি বিজনেস ইমেইল</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>cPanel হ্যান্ডওভার: 12 মাস পর</span></li>
+            </ul>
+          </div>
+          <button onclick="selectPackageAndScroll('Startup Plan (12-Mo EMI)', '৳ 2,500/মাস (মোট ৳ 30,000)')" class="w-full py-3.5 rounded-2xl bg-[#06232B] hover:bg-gradient-to-r hover:from-[#20E1B2] hover:to-[#0D9488] font-extrabold text-xs text-white transition-all duration-300 border border-[#D1F5EE]/20 hover:border-transparent shadow-md hover:shadow-lg hover:shadow-[#20E1B2]/25 active:scale-98">
+            প্যাকেজটি বেছে নিন
+          </button>
+        </div>
+
+        <!-- Plan 2: 6-Month EMI (Accelerate Plan) -->
+        <div class="morphy-card p-6 sm:p-7 bg-[#082830]/45 backdrop-blur-2xl border border-[#D1F5EE]/20 hover:border-[#20E1B2]/60 hover:bg-[#082830]/70 rounded-[28px] flex flex-col justify-between space-y-5 hover:shadow-2xl hover:shadow-[#20E1B2]/20 hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden shadow-xl">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-[10.5px] font-black uppercase text-[#20E1B2] bg-[#20E1B2]/10 px-3 py-1 rounded-full border border-[#20E1B2]/25">6 মাসের কিস্তি</span>
+              <span class="text-[10px] font-extrabold text-[#10B981] bg-[#10B981]/15 px-2.5 py-0.5 rounded-full border border-[#10B981]/30 font-eng">Save 55%</span>
+            </div>
+            <h3 class="text-2xl font-black text-white mt-4 tracking-tight group-hover:text-[#20E1B2] transition-colors">Accelerate প্ল্যান</h3>
+            <div class="text-3xl font-black text-white mt-1.5 font-eng">৳ 4,500 <span class="text-xs text-[#A7E7DC] font-normal font-bengali">/ মাস</span></div>
+            <p class="text-xs font-bold text-[#20E1B2] mt-1 font-eng">Total ৳ 27,000 (6 Installments)</p>
+            
+            <ul class="space-y-2.5 pt-5 mt-4 border-t border-[#D1F5EE]/15 text-xs text-[#D1F5EE] font-medium leading-relaxed">
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>সম্পূর্ণ কাস্টমাইজড ই-কমার্স স্টোর</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>লোডিং স্পিড: 1 সেকেন্ডের কম</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>মোবাইল ও ট্যাব 100% অপ্টিমাইজড</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফুল অ্যাডমিন ড্যাশবোর্ড অ্যাক্সেস</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>পেমেন্ট গেটওয়ে (বিকাশ, নগদ, কার্ড, EMI System)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>অর্ডার টাইমে অ্যাডভান্স পেমেন্ট সিস্টেম</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ইনকমপ্লিট কার্ট রিকভারি</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>কুরিয়ার এপিআই (Steadfast ও Pathao)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>কাস্টমার অ্যাড্রেস ভিত্তিক অটো কুরিয়ার চার্জ</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফ্রি পিক্সেল সেটআপ (Facebook Pixel & CAPI)</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>2 টি বিজনেস ইমেইল</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>cPanel হ্যান্ডওভার: 6 মাস পর</span></li>
+            </ul>
+          </div>
+          <button onclick="selectPackageAndScroll('Accelerate Plan (6-Mo EMI)', '৳ 4,500/মাস (মোট ৳ 27,000)')" class="w-full py-3.5 rounded-2xl bg-[#06232B] hover:bg-gradient-to-r hover:from-[#20E1B2] hover:to-[#0D9488] font-extrabold text-xs text-white transition-all duration-300 border border-[#D1F5EE]/20 hover:border-transparent shadow-md hover:shadow-lg hover:shadow-[#20E1B2]/25 active:scale-98">
+            প্যাকেজটি বেছে নিন
+          </button>
+        </div>
+
+        <!-- Plan 3: 3-Month EMI (Momentum Plan) -->
+        <div class="morphy-card p-6 sm:p-7 bg-[#082830]/45 backdrop-blur-2xl border border-[#D1F5EE]/20 hover:border-[#20E1B2]/60 hover:bg-[#082830]/70 rounded-[28px] flex flex-col justify-between space-y-5 hover:shadow-2xl hover:shadow-[#20E1B2]/20 hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden shadow-xl">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-[10.5px] font-black uppercase text-[#20E1B2] bg-[#20E1B2]/10 px-3 py-1 rounded-full border border-[#20E1B2]/25">3 মাসের কিস্তি</span>
+              <span class="text-[10px] font-extrabold text-[#10B981] bg-[#10B981]/15 px-2.5 py-0.5 rounded-full border border-[#10B981]/30 font-eng">Save 57.5%</span>
+            </div>
+            <h3 class="text-2xl font-black text-white mt-4 tracking-tight group-hover:text-[#20E1B2] transition-colors">Momentum প্ল্যান</h3>
+            <div class="text-3xl font-black text-white mt-1.5 font-eng">৳ 8,500 <span class="text-xs text-[#A7E7DC] font-normal font-bengali">/ মাস</span></div>
+            <p class="text-xs font-bold text-[#20E1B2] mt-1 font-eng">Total ৳ 25,500 (3 Installments)</p>
+            
+            <ul class="space-y-2.5 pt-5 mt-4 border-t border-[#D1F5EE]/15 text-xs text-[#D1F5EE] font-medium leading-relaxed">
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>সম্পূর্ণ কাস্টমাইজড ই-কমার্স স্টোর</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>লোডিং স্পিড: 1 সেকেন্ডের কম</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>মোবাইল ও ট্যাব 100% অপ্টিমাইজড</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফুল অ্যাডমিন ড্যাশবোর্ড অ্যাক্সেস</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফ্রি ডোমেইন (.com)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>SSL (প্রথম বছর ফ্রি)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>10 GB NVMe ক্লাউড হোস্টিং (1 বছর ফ্রি)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>পেমেন্ট গেটওয়ে (বিকাশ, নগদ, কার্ড, EMI System)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>অর্ডার টাইমে অ্যাডভান্স পেমেন্ট সিস্টেম</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ইনকমপ্লিট কার্ট রিকভারি</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>কুরিয়ার এপিআই (Steadfast ও Pathao)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>কাস্টমার অ্যাড্রেস ভিত্তিক অটো কুরিয়ার চার্জ</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফ্রি পিক্সেল সেটআপ (Facebook Pixel & CAPI)</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>2 টি বিজনেস ইমেইল</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>cPanel হ্যান্ডওভার: 3 মাস পর</span></li>
+            </ul>
+          </div>
+          <button onclick="selectPackageAndScroll('Momentum Plan (3-Mo EMI)', '৳ 8,500/মাস (মোট ৳ 25,500)')" class="w-full py-3.5 rounded-2xl bg-[#06232B] hover:bg-gradient-to-r hover:from-[#20E1B2] hover:to-[#0D9488] font-extrabold text-xs text-white transition-all duration-300 border border-[#D1F5EE]/20 hover:border-transparent shadow-md hover:shadow-lg hover:shadow-[#20E1B2]/25 active:scale-98">
+            প্যাকেজটি বেছে নিন
+          </button>
+        </div>
+
+        <!-- Plan 4: Pay In Full (Founder Plan) -->
+        <div class="morphy-card p-6 sm:p-7 bg-gradient-to-b from-[#082830]/90 via-[#06232B]/85 to-[#041B21]/95 backdrop-blur-2xl border-2 border-[#20E1B2] rounded-[28px] flex flex-col justify-between space-y-5 shadow-2xl shadow-[#20E1B2]/25 relative hover:-translate-y-2 transition-all duration-300 group overflow-hidden">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#20E1B2] to-[#0D9488] text-[#03171B] text-[10.5px] font-black uppercase tracking-wider shadow-lg shadow-[#20E1B2]/30 font-eng">
+            BEST VALUE DEAL 🔥
+          </div>
+          <div>
+            <div class="flex items-center justify-between mt-1">
+              <span class="text-[10.5px] font-black uppercase text-[#20E1B2] bg-[#20E1B2]/15 px-3 py-1 rounded-full border border-[#20E1B2]/30">এককালীন পেমেন্ট</span>
+              <span class="text-[10px] font-black text-[#03171B] bg-[#20E1B2] px-2.5 py-0.5 rounded-full font-eng shadow-xs">Save 67%</span>
+            </div>
+            <h3 class="text-2xl font-black text-white mt-4 tracking-tight group-hover:text-[#20E1B2] transition-colors">Founder প্ল্যান</h3>
+            <div class="text-3xl font-black text-white mt-1.5 font-eng">৳ 19,990 <span class="text-xs text-[#A7E7DC] font-normal font-bengali">এককালীন</span></div>
+            <p class="text-xs font-black text-[#20E1B2] mt-1 font-eng">One-Time (Save 67% Discount)</p>
+            
+            <ul class="space-y-2.5 pt-5 mt-4 border-t border-[#D1F5EE]/15 text-xs text-[#D1F5EE] font-medium leading-relaxed">
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>সম্পূর্ণ কাস্টমাইজড ই-কমার্স স্টোর</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>লোডিং স্পিড: 1 সেকেন্ডের কম</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>মোবাইল ও ট্যাব 100% অপ্টিমাইজড</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>1st দিনেই ফুল মাস্টার অ্যাক্সেস</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফ্রি ডোমেইন (.com)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>SSL (প্রথম বছর ফ্রি)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>10 GB NVMe ক্লাউড হোস্টিং (1 বছর ফ্রি)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>পেমেন্ট গেটওয়ে (বিকাশ, নগদ, কার্ড, EMI System)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>অর্ডার টাইমে অ্যাডভান্স পেমেন্ট সিস্টেম</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ইনকমপ্লিট কার্ট রিকভারি</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>কুরিয়ার এপিআই (Steadfast ও Pathao)</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>কাস্টমার অ্যাড্রেস ভিত্তিক অটো কুরিয়ার চার্জ</span></li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>ফ্রি পিক্সেল সেটআপ (Facebook Pixel & CAPI)</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>আনলিমিটেড বিজনেস ইমেইল</span></li>
+              <li class="flex items-start gap-2 text-white font-bold"><i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-0.5 shrink-0"></i> <span>cPanel হ্যান্ডওভার: তাত্ক্ষণিক (1st দিনে)</span></li>
+            </ul>
+          </div>
+          <button onclick="selectPackageAndScroll('Founder Plan (Pay In Full)', '৳ 19,990 এককালীন (Save 67%)')" class="btn-morphy-primary w-full justify-center text-xs py-3.5 shadow-lg shadow-[#20E1B2]/30 active:scale-98">
+            <span>অফারটি ক্লেইম করুন</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+
+      </div>
+
+
+      <!-- 2. COMPARISON TABLE VIEW (Visible by default) -->
+      <div id="pricingTableView" class="morpy-table-container morphy-card p-0 rounded-3xl bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 shadow-xl overflow-hidden">
+        
+        <!-- Mobile Horizontal Scroll Alert -->
+        <div class="md:hidden flex items-center justify-center gap-2 p-2.5 text-xs font-bold text-[#7EADA3] bg-[#06232B] border-b border-[#D1F5EE]/15">
+          <i class="fa-solid fa-arrows-left-right text-[#20E1B2] animate-pulse"></i>
+          <span>4টি প্ল্যান তুলনা করতে ডানে-বামে সোয়াইপ করুন</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse min-w-[720px]">
+            <thead>
+              <tr class="border-b border-[#D1F5EE]/15 bg-[#06232B]">
+                <th class="py-3 px-3 sm:py-4 sm:px-4 text-xs sm:text-sm font-black text-white w-[24%]">মডিউল ও ফিচারসমূহ</th>
+                
+                <th class="py-3 px-3 sm:py-4 sm:px-4 text-center border-l border-[#D1F5EE]/15 w-[19%]">
+                  <div class="text-[11px] font-black uppercase text-[#7EADA3]">Startup</div>
+                  <div class="text-[11px] font-bold text-[#20E1B2] mt-0.5">12 মাসের কিস্তি</div>
+                  <div class="text-base sm:text-lg font-black text-white mt-1 font-eng">৳ 2,500 <span class="text-[10px] font-normal text-[#7EADA3] font-bengali">/ মাস</span></div>
+                  <div class="text-[9.5px] font-bold text-[#20E1B2] bg-[#20E1B2]/10 py-0.5 px-1.5 rounded mt-0.5 inline-block font-eng">মোট ৳ 30,000</div>
+                </th>
+
+                <th class="py-3 px-3 sm:py-4 sm:px-4 text-center border-l border-[#D1F5EE]/15 w-[19%]">
+                  <div class="text-[11px] font-black uppercase text-[#7EADA3]">Accelerate</div>
+                  <div class="text-[11px] font-bold text-[#20E1B2] mt-0.5">6 মাসের কিস্তি</div>
+                  <div class="text-base sm:text-lg font-black text-white mt-1 font-eng">৳ 4,500 <span class="text-[10px] font-normal text-[#7EADA3] font-bengali">/ মাস</span></div>
+                  <div class="text-[9.5px] font-bold text-[#20E1B2] bg-[#20E1B2]/10 py-0.5 px-1.5 rounded mt-0.5 inline-block font-eng">মোট ৳ 27,000</div>
+                </th>
+
+                <th class="py-3 px-3 sm:py-4 sm:px-4 text-center border-l border-[#D1F5EE]/15 w-[19%]">
+                  <div class="text-[11px] font-black uppercase text-[#7EADA3]">Momentum</div>
+                  <div class="text-[11px] font-bold text-[#20E1B2] mt-0.5">3 মাসের কিস্তি</div>
+                  <div class="text-base sm:text-lg font-black text-white mt-1 font-eng">৳ 8,500 <span class="text-[10px] font-normal text-[#7EADA3] font-bengali">/ মাস</span></div>
+                  <div class="text-[9.5px] font-bold text-[#20E1B2] bg-[#20E1B2]/10 py-0.5 px-1.5 rounded mt-0.5 inline-block font-eng">মোট ৳ 25,500</div>
+                </th>
+
+                <th class="py-3 px-3 sm:py-4 sm:px-4 text-center border-l-2 border-[#20E1B2] bg-[#20E1B2]/5 w-[19%] relative">
+                  <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-[#20E1B2] text-white text-[8.5px] font-black uppercase tracking-wider font-eng">BEST VALUE</div>
+                  <div class="text-[11px] font-black uppercase text-[#20E1B2]">Founder</div>
+                  <div class="text-[11px] font-bold text-white mt-0.5">এককালীন পেমেন্ট</div>
+                  <div class="text-lg sm:text-xl font-black text-white mt-1 font-eng">৳ 19,990 <span class="text-[10px] font-normal text-[#7EADA3] font-bengali">এককালীন</span></div>
+                  <div class="text-[9.5px] font-black text-white bg-[#20E1B2] py-0.5 px-1.5 rounded mt-0.5 inline-block shadow-xs font-eng">সেভ 67%</div>
+                </th>
+              </tr>
+            </thead>
+            
+            <tbody class="divide-y divide-[#D1F5EE]/10 text-xs font-medium text-[#A3CEC5]">
+              <tr class="hover:bg-[#06232B]">
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-white">ওয়েবসাইট পারফরম্যান্স</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15">1 সেকেন্ডের কম</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15">1 সেকেন্ডের কম</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15">1 সেকেন্ডের কম</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#20E1B2] bg-[#20E1B2]/5 font-bold text-white">1 সেকেন্ডের কম</td>
+              </tr>
+              <tr class="hover:bg-[#06232B]">
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-white">মোবাইল ও ট্যাব অপ্টিমাইজড</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#20E1B2] bg-[#20E1B2]/5 text-emerald-600 font-bold text-sm">✓</td>
+              </tr>
+              <tr class="hover:bg-[#06232B]">
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-white">অ্যাডমিন ড্যাশবোর্ড অ্যাক্সেস</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15">অ্যাডমিন অ্যাক্সেস</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15">অ্যাডমিন অ্যাক্সেস</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15">অ্যাডমিন অ্যাক্সেস</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#20E1B2] bg-[#20E1B2]/5 font-black text-[#20E1B2]">মাস্টার অ্যাক্সেস</td>
+              </tr>
+              <tr class="hover:bg-[#06232B]">
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-white">ফ্রি ডোমেইন (.com)</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-slate-400 font-bold">—</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-slate-400 font-bold">—</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold">প্রথম বছর ফ্রি</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#20E1B2] bg-[#20E1B2]/5 font-bold text-emerald-600">প্রথম বছর ফ্রি</td>
+              </tr>
+              <tr class="hover:bg-[#06232B]">
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-white">SSL সার্টিফিকেট</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-slate-400 font-bold">—</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-slate-400 font-bold">—</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold">প্রথম বছর ফ্রি</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#20E1B2] bg-[#20E1B2]/5 font-bold text-emerald-600">প্রথম বছর ফ্রি</td>
+              </tr>
+              <tr class="hover:bg-[#06232B]">
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-white">হোস্টিং ব্যান্ডউইথ ও স্টোরেজ</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-slate-400 font-bold">—</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-slate-400 font-bold">—</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15">10 GB NVMe (1 বছর ফ্রি)</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#20E1B2] bg-[#20E1B2]/5 font-bold">10 GB NVMe (1 বছর ফ্রি)</td>
+              </tr>
+              <tr class="hover:bg-[#06232B]">
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-white">পেমেন্ট গেটওয়ে (বিকাশ, নগদ, কার্ড, EMI)</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-amber-600 font-bold">6 মাস পর</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#20E1B2] bg-[#20E1B2]/5 text-emerald-600 font-bold text-sm">✓</td>
+              </tr>
+              <tr class="hover:bg-[#06232B]">
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-white">অর্ডার টাইমে অ্যাডভান্স পেমেন্ট সিস্টেম</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-amber-600 font-bold">6 মাস পর</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#20E1B2] bg-[#20E1B2]/5 text-emerald-600 font-bold text-sm">✓</td>
+              </tr>
+              <tr class="hover:bg-[#06232B]">
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-white">ইনকমপ্লিট কার্ট রিকভারি</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#20E1B2] bg-[#20E1B2]/5 text-emerald-600 font-bold text-sm">✓</td>
+              </tr>
+              <tr class="hover:bg-[#06232B]">
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-white">কুরিয়ার এপিআই (Steadfast/Pathao)</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-amber-600 font-bold">6 মাস পর</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#20E1B2] bg-[#20E1B2]/5 text-emerald-600 font-bold text-sm">✓</td>
+              </tr>
+              <tr class="hover:bg-[#06232B]">
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-white">অটো কুরিয়ার চার্জ ও ট্র্যাকিং</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#20E1B2] bg-[#20E1B2]/5 text-emerald-600 font-bold text-sm">✓</td>
+              </tr>
+              <tr class="hover:bg-[#06232B]">
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-white">ফ্রি পিক্সেল সেটআপ (Pixel & CAPI)</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 text-emerald-600 font-bold text-sm">✓</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#20E1B2] bg-[#20E1B2]/5 text-emerald-600 font-bold text-sm">✓</td>
+              </tr>
+              <tr class="hover:bg-[#06232B]">
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-white">বিজনেস ইমেইল অ্যাকাউন্ট</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 font-bold">2 টি</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 font-bold">2 টি</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15 font-bold">2 টি</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#20E1B2] bg-[#20E1B2]/5 font-black text-[#20E1B2]">আনলিমিটেড</td>
+              </tr>
+              <tr class="hover:bg-[#06232B]">
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 font-bold text-white">cPanel হ্যান্ডওভার</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15">12 মাস পর</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15">6 মাস পর</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l border-[#D1F5EE]/15">3 মাস পর</td>
+                <td class="py-2.5 px-3 sm:py-3 sm:px-4 text-center border-l-2 border-[#20E1B2] bg-[#20E1B2]/5 font-black text-emerald-600">তাত্ক্ষণিক (1st দিনে)</td>
+              </tr>
+              <tr class="bg-[#06232B]">
+                <td class="py-3 px-3 sm:py-4 sm:px-4 font-bold text-white">অ্যাকশন</td>
+                <td class="py-3 px-3 sm:py-4 sm:px-4 text-center border-l border-[#D1F5EE]/15">
+                  <button onclick="selectPackageAndScroll('Startup Plan (12-Mo EMI)', '৳ 2,500/মাস (মোট ৳ 30,000)')" class="w-full py-2 sm:py-2.5 rounded-xl bg-[#0B3844]/35 backdrop-blur-xl hover:bg-[#20E1B2] hover:text-white font-bold text-xs text-white transition-all border border-[#D1F5EE]/15">
+                    সিলেক্ট করুন
+                  </button>
+                </td>
+                <td class="py-3 px-3 sm:py-4 sm:px-4 text-center border-l border-[#D1F5EE]/15">
+                  <button onclick="selectPackageAndScroll('Accelerate Plan (6-Mo EMI)', '৳ 4,500/মাস (মোট ৳ 27,000)')" class="w-full py-2 sm:py-2.5 rounded-xl bg-[#0B3844]/35 backdrop-blur-xl hover:bg-[#20E1B2] hover:text-white font-bold text-xs text-white transition-all border border-[#D1F5EE]/15">
+                    সিলেক্ট করুন
+                  </button>
+                </td>
+                <td class="py-3 px-3 sm:py-4 sm:px-4 text-center border-l border-[#D1F5EE]/15">
+                  <button onclick="selectPackageAndScroll('Momentum Plan (3-Mo EMI)', '৳ 8,500/মাস (মোট ৳ 25,500)')" class="w-full py-2 sm:py-2.5 rounded-xl bg-[#0B3844]/35 backdrop-blur-xl hover:bg-[#20E1B2] hover:text-white font-bold text-xs text-white transition-all border border-[#D1F5EE]/15">
+                    সিলেক্ট করুন
+                  </button>
+                </td>
+                <td class="py-3 px-3 sm:py-4 sm:px-4 text-center border-l-2 border-[#20E1B2] bg-[#20E1B2]/5">
+                  <button onclick="selectPackageAndScroll('Founder Plan (Pay In Full)', '৳ 19,990 এককালীন (Save 67%)')" class="w-full py-2 sm:py-2.5 rounded-xl bg-[#20E1B2] hover:bg-[#0D9488] font-black text-xs text-white transition-all shadow-md shadow-[#20E1B2]/25">
+                    ক্লেইম করুন ➔
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       4. CUSTOM CONSULTATION BANNER
+       ========================================================================= -->
+  <section class="py-16 bg-[#0B3844]/35 backdrop-blur-xl border-t border-[#D1F5EE]/15 relative z-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
+      <div class="morphy-tag-primary justify-center">
+        <i class="fa-solid fa-comments"></i>
+        <span>কাস্টম প্রপোজাল ও পরামর্শ</span>
+      </div>
+      <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight">
+        আপনার কি কোনো <span class="text-[#20E1B2]">বিশেষ রিকোয়ারমেন্ট বা কাস্টম ফিচার</span> লাগবে?
+      </h2>
+      <p class="text-sm sm:text-base text-[#7EADA3] max-w-2xl mx-auto leading-relaxed">
+        আপনার বিজনেস মডেল অনুযায়ী কাস্টম সলিউশন ও টাইমলাইন নিয়ে কথা বলতে সরাসরি হোয়াটসঅ্যাপে নক দিন অথবা স্ট্র্যাটেজিক কনসালটেশন বুক করুন।
+      </p>
+      <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
+        <a href="https://wa.me/8801838070468" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#1EBE5B] text-white font-bold text-xs sm:text-sm flex items-center gap-2 shadow-md shadow-[#25D366]/25 transition-all active:scale-98">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>সরাসরি WhatsApp-এ কথা বলুন</span>
+        </a>
+        <a href="/consultation" class="btn-morphy-outline text-xs sm:text-sm px-6 py-3.5">
+          <span>স্ট্র্যাটেজিক কনসালটেশন বুক করুন</span>
+          <i class="fa-solid fa-calendar-check text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  
+    <!-- =========================================================================
+         IN-PAGE PACKAGE BOOKING SECTION (Smooth scroll destination)
+         ========================================================================= -->
+    <section id="packageBookingSection" class="py-20 relative z-20 scroll-mt-24">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="glass-dark-card rounded-[32px] p-6 sm:p-12 border-2 border-[#20E1B2]/50 shadow-2xl shadow-[#20E1B2]/20 relative overflow-hidden">
+          
+          <!-- Background Glow Elements -->
+          <div class="absolute -top-24 -right-24 w-60 h-60 bg-[#20E1B2]/15 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -bottom-24 -left-24 w-60 h-60 bg-[#0D9488]/20 rounded-full blur-3xl pointer-events-none"></div>
+
+          <!-- Section Header -->
+          <div class="text-center space-y-3 mb-8 relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#20E1B2]/15 border border-[#20E1B2]/40 text-[#20E1B2] text-xs font-black uppercase tracking-widest">
+              <i class="fa-solid fa-bolt text-[#20E1B2] animate-pulse"></i>
+              <span>INSTANT PACKAGE BOOKING</span>
+            </div>
+            <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight">
+              প্যাকেজ বুকিং ও <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#20E1B2] to-[#D1F5EE]">ফ্রি স্ট্র্যাটেজি কল</span>
+            </h2>
+            <p class="text-sm text-[#D1F5EE] max-w-xl mx-auto leading-relaxed">
+              আপনার পছন্দের প্যাকেজ ও ব্যবসার ধরন সিলেক্ট করে বুকিং কনফার্ম করুন। আমাদের বিশেষজ্ঞ টিম সরাসরি যোগাযোগ করে লাইভ ডেমো ও সেটআপ শুরু করবে।
+            </p>
+          </div>
+
+          <!-- Alert Box -->
+          <div id="bookingAlertBox" class="hidden mb-6"></div>
+
+          <!-- Main Booking Form -->
+          <form id="ecomPackageBookingForm" class="space-y-5 relative z-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              
+              <!-- 1. Name -->
+              <div>
+                <label class="block text-xs font-bold text-[#D1F5EE] uppercase tracking-wider mb-2">
+                  আপনার নাম <span class="text-rose-400">*</span>
+                </label>
+                <input type="text" id="bookingName" required placeholder="যেমন: আরিফুল ইসলাম" 
+                  class="w-full px-4 py-3.5 rounded-2xl bg-[#041B21] border border-[#20E1B2]/30 text-white placeholder-[#7EADA3] focus:outline-none focus:border-[#20E1B2] focus:ring-2 focus:ring-[#20E1B2]/30 transition-all text-sm font-medium">
+              </div>
+
+              <!-- 2. Contact Starting with +880 -->
+              <div>
+                <label class="block text-xs font-bold text-[#D1F5EE] uppercase tracking-wider mb-2">
+                  যোগাযোগ / WhatsApp নম্বর <span class="text-rose-400">*</span>
+                </label>
+                <div class="relative flex items-center">
+                  <span class="absolute left-4 text-sm font-black text-[#20E1B2] font-mono select-none">+880</span>
+                  <input type="tel" id="bookingPhone" required placeholder="1838070468" 
+                    class="w-full pl-16 pr-4 py-3.5 rounded-2xl bg-[#041B21] border border-[#20E1B2]/30 text-white placeholder-[#7EADA3] focus:outline-none focus:border-[#20E1B2] focus:ring-2 focus:ring-[#20E1B2]/30 transition-all text-sm font-mono"
+                    oninput="formatBdPhone(this)">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              
+              <!-- 3. Select Package -->
+              <div>
+                <label class="block text-xs font-bold text-[#D1F5EE] uppercase tracking-wider mb-2">
+                  প্যাকেজ নির্বাচন করুন <span class="text-rose-400">*</span>
+                </label>
+                <div class="relative">
+                  <select id="bookingPackage" required 
+                    class="w-full px-4 py-3.5 rounded-2xl bg-[#041B21] border border-[#20E1B2]/30 text-white focus:outline-none focus:border-[#20E1B2] focus:ring-2 focus:ring-[#20E1B2]/30 transition-all text-sm appearance-none cursor-pointer">
+                    <option value="Starter Store (৳ ১২,০০০)" class="bg-[#041B21] text-white">Starter Store — ৳ ১২,০০০ (এককালীন)</option>
+                    <option value="Growth Pro (৳ ২২,০০০)" selected class="bg-[#041B21] text-white">Growth Pro — ৳ ২২,০০০ (সবচেয়ে জনপ্রিয় / EMI)</option>
+                    <option value="Advanced Scale (৳ ৩৮,০০০)" class="bg-[#041B21] text-white">Advanced Scale — ৳ ৩৮,০০০ (হাই-ভলিউম স্কেলিং)</option>
+                    <option value="Enterprise Custom (৳ ৬৫,০০০+)" class="bg-[#041B21] text-white">Enterprise Custom — ৳ ৬৫,০০০+ (কাস্টম আর্কিটেকচার)</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-[#20E1B2] pointer-events-none text-xs"></i>
+                </div>
+              </div>
+
+              <!-- 4. Business Types -->
+              <div>
+                <label class="block text-xs font-bold text-[#D1F5EE] uppercase tracking-wider mb-2">
+                  ব্যবসার ধরন (Business Type) <span class="text-rose-400">*</span>
+                </label>
+                <div class="relative">
+                  <select id="bookingBusinessType" required onchange="handleBusinessTypeChange(this)"
+                    class="w-full px-4 py-3.5 rounded-2xl bg-[#041B21] border border-[#20E1B2]/30 text-white focus:outline-none focus:border-[#20E1B2] focus:ring-2 focus:ring-[#20E1B2]/30 transition-all text-sm appearance-none cursor-pointer">
+                    <option value="Clothing, Fashion & Apparel" class="bg-[#041B21] text-white">পোশাক, ফ্যাশন ও ক্লদিং ব্র্যান্ড</option>
+                    <option value="Electronics, Gadgets & Accessories" class="bg-[#041B21] text-white">ইলেকট্রনিক্স ও গ্যাজেট শপ</option>
+                    <option value="Cosmetics, Skincare & Beauty" class="bg-[#041B21] text-white">কসমেটিকস, স্কিনকেয়ার ও বিউটি</option>
+                    <option value="Grocery, Organic & Honey/Food" class="bg-[#041B21] text-white">অর্গানিক ফুড, মধু ও গ্রোসারি</option>
+                    <option value="Footwear, Bags & Leather Goods" class="bg-[#041B21] text-white">জুতো, ব্যাগ ও লেদার গুডস</option>
+                    <option value="Furniture, Decor & Lifestyle" class="bg-[#041B21] text-white">ফার্নিচার ও হোম ডেকর</option>
+                    <option value="Jewelry, Watches & Luxury" class="bg-[#041B21] text-white">জুয়েলারি ও ঘড়ি শপ</option>
+                    <option value="Multi-Vendor / General Store" class="bg-[#041B21] text-white">মাল্টি-ভেন্ডর বা জেনারেল ই-কমার্স</option>
+                    <option value="Others" class="bg-[#041B21] text-white">Others (অন্যান্য ধরন লিখুন...)</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-[#20E1B2] pointer-events-none text-xs"></i>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Conditional Others Field -->
+            <div id="otherBusinessTypeContainer" class="hidden animate-fade-in">
+              <label class="block text-xs font-bold text-[#20E1B2] uppercase tracking-wider mb-2">
+                আপনার ব্যবসার ধরন বিস্তারিত লিখুন <span class="text-rose-400">*</span>
+              </label>
+              <input type="text" id="otherBusinessTypeInput" placeholder="যেমন: বুক শপ, মেডিসিন ডেলিভারি, জিম ইকুইপমেন্ট ইত্যাদি"
+                class="w-full px-4 py-3.5 rounded-2xl bg-[#041B21] border-2 border-[#20E1B2] text-white placeholder-[#7EADA3] focus:outline-none focus:ring-2 focus:ring-[#20E1B2]/50 transition-all text-sm font-medium">
+            </div>
+
+            <!-- 5. Submit Button with Animated Lighting Glow -->
+            <div class="pt-3">
+              <button type="submit" id="bookingSubmitBtn" 
+                class="animated-lighting-btn w-full justify-center text-sm font-black py-4 px-8 rounded-2xl relative overflow-hidden text-[#021217] bg-gradient-to-r from-[#20E1B2] via-[#2CEAA0] to-[#0D9488] shadow-xl shadow-[#20E1B2]/50 flex items-center justify-center gap-3 cursor-pointer transition-transform hover:scale-[1.01] active:scale-98">
+                <span class="relative z-10 font-black tracking-wide text-base">প্যাকেজ বুকিং কনফার্ম করুন</span>
+                <i class="fa-solid fa-arrow-right text-sm relative z-10"></i>
+              </button>
+            </div>
+
+            <div class="flex items-center justify-center gap-6 pt-2 text-xs text-[#A7E7DC]">
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-[#20E1B2]"></i> ১০০% জিরো রিস্ক গ্যারান্টি</span>
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-bolt text-[#20E1B2]"></i> ২৪ ঘণ্টার মধ্যে রেসপন্স</span>
+              <span class="flex items-center gap-1.5"><i class="fa-brands fa-whatsapp text-[#20E1B2]"></i> সরাসরি WhatsApp সাপোর্ট</span>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+<footer class="py-6 border-t border-[#D1F5EE]/15 bg-[#0B3844]/35 backdrop-blur-xl text-center text-xs text-[#94A3B8] relative z-10">
+    <div class="max-w-7xl mx-auto px-4">
+      &copy; 2026 Md. Shakibur Rahaman. All rights reserved.
+    </div>
+  </footer>
+
+
+  <!-- =========================================================================
+       6. FULLSCREEN IMAGE LIGHTBOX MODAL
+       ========================================================================= -->
+  <div id="imageLightboxModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md transition-all duration-300" onclick="closeImageLightbox()">
+    <div class="relative max-w-7xl max-h-[92vh] w-full flex flex-col items-center justify-center" onclick="event.stopPropagation()">
+      <button type="button" onclick="closeImageLightbox()" aria-label="Close Lightbox" class="absolute -top-12 right-0 sm:top-4 sm:right-4 z-50 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 text-white flex items-center justify-center backdrop-blur-md transition-all">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+      <img id="lightboxImg" src="/assets/offers/ecom-admin.png" alt="Fullscreen Screenshot Preview" class="w-full h-auto max-h-[88vh] object-contain rounded-2xl shadow-2xl border border-white/10">
+      <div id="lightboxCaption" class="mt-3 text-center text-xs font-bold text-white/80">
+        Executive Analytics &amp; Sales Velocity (Luxora Furniture Admin)
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       7. INTERACTIVE UNIFIED BOOKING MODAL (বাংলা)
+       ========================================================================= -->
+  <div id="offerModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="relative w-full max-w-lg p-6 sm:p-8 rounded-3xl bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto">
+      
+      <!-- Close Button -->
+      <button onclick="closeOfferModal()" aria-label="Close Modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-[#06232B] border border-[#D1F5EE]/15 text-white flex items-center justify-center hover:bg-[#20E1B2] hover:text-white transition-colors">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#20E1B2]/10 text-[#20E1B2] text-[10.5px] font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-tag text-[#20E1B2]"></i>
+          <span>ই-কমার্স প্যাকেজ বুকিং</span>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form id="offerBookingForm" class="space-y-4">
+        
+        <!-- 1. Name -->
+        <div class="space-y-1">
+          <label class="text-xs font-bold text-white">আপনার নাম *</label>
+          <input type="text" id="modalName" required placeholder="মোঃ রহিম" class="w-full px-3.5 py-2.5 rounded-xl bg-[#06232B] border border-[#D1F5EE]/15 text-xs text-white font-medium focus:outline-none focus:border-[#20E1B2]">
+        </div>
+
+        <!-- 2. Contact & Email in 2 columns -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="space-y-1">
+            <label class="text-xs font-bold text-white">মোবাইল / WhatsApp নম্বর *</label>
+            <input type="tel" id="modalPhone" required placeholder="017XXXXXXXX" class="w-full px-3.5 py-2.5 rounded-xl bg-[#06232B] border border-[#D1F5EE]/15 text-xs text-white font-medium focus:outline-none focus:border-[#20E1B2]">
+          </div>
+          <div class="space-y-1">
+            <label class="text-xs font-bold text-white">ইমেইল এড্রেস *</label>
+            <input type="email" id="modalEmail" required placeholder="rahim@brand.com" class="w-full px-3.5 py-2.5 rounded-xl bg-[#06232B] border border-[#D1F5EE]/15 text-xs text-white font-medium focus:outline-none focus:border-[#20E1B2]">
+          </div>
+        </div>
+
+        <!-- 3. Which package he wants to take (Dropdown) -->
+        <div class="space-y-1">
+          <label class="text-xs font-bold text-white">যে প্যাকেজটি নিতে চান *</label>
+          <select id="modalPackage" required class="w-full px-3.5 py-2.5 rounded-xl bg-[#06232B] border border-[#D1F5EE]/15 text-xs text-white font-bold focus:outline-none focus:border-[#20E1B2]">
+            <option value="Startup Plan (12-Mo EMI) - ৳ 2,500/মাস">Startup Plan (12-Mo EMI) - ৳ 2,500/মাস (মোট ৳ 30,000)</option>
+            <option value="Accelerate Plan (6-Mo EMI) - ৳ 4,500/মাস">Accelerate Plan (6-Mo EMI) - ৳ 4,500/মাস (মোট ৳ 27,000)</option>
+            <option value="Momentum Plan (3-Mo EMI) - ৳ 8,500/মাস">Momentum Plan (3-Mo EMI) - ৳ 8,500/মাস (মোট ৳ 25,500)</option>
+            <option value="Founder Plan (Pay In Full) - ৳ 19,990 এককালীন">Founder Plan (Pay In Full) - ৳ 19,990 এককালীন (Save 67%)</option>
+          </select>
+        </div>
+
+        <!-- 4. Details about the business -->
+        <div class="space-y-1">
+          <label class="text-xs font-bold text-white">বিজনেসের বিবরণ বা কোনো বিশেষ রিকোয়ারমেন্ট *</label>
+          <textarea id="modalMessage" rows="3" required placeholder="আপনার প্রোডাক্ট বা বিজনেসের ধরন, শপ/পেইজের নাম, টার্গেট লঞ্চ টাইম..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#06232B] border border-[#D1F5EE]/15 text-xs text-white font-medium focus:outline-none focus:border-[#20E1B2]"></textarea>
+        </div>
+
+        <!-- Alert Box -->
+        <div id="modalAlertBox" class="hidden p-3.5 rounded-xl text-xs font-semibold"></div>
+
+        <!-- Action Buttons -->
+        <div class="pt-2 flex flex-col sm:flex-row gap-2.5">
+          <button type="submit" id="modalSubmitBtn" class="btn-morphy-primary flex-1 justify-center text-xs py-3.5">
+            <span>প্যাকেজ বুকিং সাবমিট করুন</span>
+            <i class="fa-solid fa-paper-plane text-xs"></i>
+          </button>
+          <button type="button" onclick="directWhatsAppClaim()" class="px-4 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#1EBE5B] text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-98">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>WhatsApp-এ পাঠান</span>
+          </button>
+        </div>
+
+      </form>
 
     </div>
   </div>
 
   <script>
-    // --- 1. PRICING VIEW SWITCHER (Cards vs. Table) ---
+    // --- 1. PRICING VIEW SWITCHER (Cards vs. Table - Mutually Exclusive) ---
     function setPricingView(viewMode) {
       const cardsView = document.getElementById('pricingCardsView');
       const tableView = document.getElementById('pricingTableView');
@@ -183,6 +1204,7 @@
       if (lightboxImg) lightboxImg.src = data.img;
       if (lightboxCap) lightboxCap.innerText = data.title;
 
+      // Update button classes
       document.querySelectorAll('.ecom-tab-btn').forEach(btn => {
         btn.classList.remove('bg-[#20E1B2]', 'text-white', 'shadow-md', 'shadow-[#20E1B2]/20');
         btn.classList.add('bg-[#0B3844]/35 backdrop-blur-xl', 'text-[#7EADA3]', 'border', 'border-[#D1F5EE]/15');
@@ -212,7 +1234,288 @@
       }
     }
 
-    // --- 4. SELECT PACKAGE & SMOOTH SCROLL (NO POPUP) ---
+    // --- 4. UNIFIED BOOKING MODAL ---
+    function selectPackageAndScroll(planTitle, planPrice) {
+      const modal = document.getElementById('offerModal');
+      const pkgSelect = document.getElementById('modalPackage');
+      const alertBox = document.getElementById('modalAlertBox');
+
+      if (alertBox) alertBox.classList.add('hidden');
+
+      if (pkgSelect && planTitle) {
+        for (let i = 0; i < pkgSelect.options.length; i++) {
+          if (pkgSelect.options[i].value.toLowerCase().includes(planTitle.split(' ')[0].toLowerCase())) {
+            pkgSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeOfferModal() {
+      const modal = document.getElementById('offerModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // WhatsApp Direct Message
+    function directWhatsAppClaim() {
+      const name = document.getElementById('modalName')?.value.trim() || 'কাস্টমার';
+      const phone = document.getElementById('modalPhone')?.value.trim() || '';
+      const email = document.getElementById('modalEmail')?.value.trim() || '';
+      const pkg = document.getElementById('modalPackage')?.value || 'E-Commerce Package';
+      const msg = document.getElementById('modalMessage')?.value.trim() || 'বিজনেসের জন্য নতুন ই-কমার্স ওয়েবসাইট প্রয়োজন।';
+
+      const text = `আসসালামু আলাইকুম শাকিল ভাই,\nআমি ${name}। আমি আপনার "${pkg}" অফারটি নিতে আগ্রহী।\n\n📱 মোবাইল: ${phone}\n✉️ ইমেইল: ${email}\n💼 বিজনেসের বিবরণ: ${msg}`;
+      const url = `https://wa.me/8801838070468?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+
+    // Handle Modal Booking Submission
+    const offerBookingForm = document.getElementById('offerBookingForm');
+    if (offerBookingForm) {
+      offerBookingForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitBtn = document.getElementById('modalSubmitBtn');
+        const alertBox = document.getElementById('modalAlertBox');
+        
+        const name = document.getElementById('modalName').value.trim();
+        const phone = document.getElementById('modalPhone').value.trim();
+        const email = document.getElementById('modalEmail').value.trim();
+        const selectedPackage = document.getElementById('modalPackage').value;
+        const message = document.getElementById('modalMessage').value.trim();
+
+        // Validate 11-digit phone
+        const bdRegex = /^(?:\+?8801|01)[3-9]\d{8}$/;
+        const intlRegex = /^\+?[1-9]\d{9,14}$/;
+        if (!bdRegex.test(phone) && !intlRegex.test(phone)) {
+          if (alertBox) {
+            alertBox.className = 'p-3.5 rounded-xl text-xs font-semibold bg-rose-50 text-rose-700 border border-rose-200';
+            alertBox.innerText = 'দয়া করে একটি সঠিক ১১ ডিজিটের মোবাইল / WhatsApp নম্বর দিন (যেমন: 017XXXXXXXX)।';
+            alertBox.classList.remove('hidden');
+          }
+          return;
+        }
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<span>তথ্য পাঠানো হচ্ছে...</span><i class="fa-solid fa-spinner fa-spin text-xs"></i>';
+        }
+
+        const payload = {
+          name: name,
+          phone: phone,
+          email: email,
+          package: selectedPackage,
+          services: selectedPackage,
+          service: 'E-Commerce: ' + selectedPackage,
+          budget: selectedPackage.includes('2,500') ? '৳ 2,500/Month (৳ 30,000)' : (selectedPackage.includes('4,500') ? '৳ 4,500/Month (৳ 27,000)' : (selectedPackage.includes('8,500') ? '৳ 8,500/Month (৳ 25,500)' : '৳ 19,990 (Pay In Full)')),
+          message: 'প্যাকেজ: ' + selectedPackage + ' | বিবরণ: ' + message,
+          date: new Date().toISOString()
+        };
+
+        try {
+          await fetch('/api/leads', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+
+          if (alertBox) {
+            alertBox.className = 'p-3.5 rounded-xl text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200';
+            alertBox.innerText = 'ধন্যবাদ! আপনার বুকিং রিকোয়েস্ট সফলভাবে গৃহীত হয়েছে। আমরা অতি দ্রুত WhatsApp অথবা ফোনে যোগাযোগ করব।';
+            alertBox.classList.remove('hidden');
+          }
+
+          offerBookingForm.reset();
+
+          setTimeout(() => {
+            closeOfferModal();
+          }, 3000);
+        } catch (err) {
+          console.error('Lead submit error:', err);
+          if (alertBox) {
+            alertBox.className = 'p-3.5 rounded-xl text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200';
+            alertBox.innerText = 'আপনার তথ্য সেভ করা হয়েছে। দ্রুত যোগাযোগের জন্য সরাসরি WhatsApp-এ বার্তা পাঠাতে পারেন।';
+            alertBox.classList.remove('hidden');
+          }
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<span>প্যাকেজ বুকিং সাবমিট করুন</span><i class="fa-solid fa-paper-plane text-xs"></i>';
+          }
+        }
+      });
+    }
+
+    // WhatsApp Phone Number Validator (Bangladesh / International)
+    function validateWhatsAppNumber(input) {
+      const val = input.value.trim().replace(/\s+/g, '');
+      const errEl = document.getElementById('phoneValidationError');
+      const bdRegex = /^(?:\+?8801|01)[3-9]\d{8}$/;
+      const intlRegex = /^\+?[1-9]\d{9,14}$/;
+
+      if (val.length > 0 && !bdRegex.test(val) && !intlRegex.test(val)) {
+        if (errEl) errEl.classList.remove('hidden');
+        input.classList.add('border-rose-500', 'bg-rose-50/30');
+        input.classList.remove('border-[#D1F5EE]/15');
+        return false;
+      } else {
+        if (errEl) errEl.classList.add('hidden');
+        input.classList.remove('border-rose-500', 'bg-rose-50/30');
+        input.classList.add('border-[#D1F5EE]/15');
+        return true;
+      }
+    }
+
+    // Trigger on Load - Mobile shows Cards view first, Desktop shows Table view first
+    function initDefaultPricingView() {
+      if (window.innerWidth < 768) {
+        setPricingView('cards');
+      } else {
+        setPricingView('table');
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initDefaultPricingView);
+    } else {
+      initDefaultPricingView();
+    }
+  </script>
+
+
+  <!-- =========================================================================
+       WELCOME LEAD CAPTURE MODAL (Page Load First-Touch High-Contrast Modal)
+       ========================================================================= -->
+  <div id="welcomeLeadModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md transition-all duration-300">
+    <div class="glass-dark-card max-w-md w-full p-6 sm:p-8 bg-[#041B21] border-2 border-[#20E1B2] rounded-[32px] shadow-2xl shadow-[#20E1B2]/30 relative animate-fade-in text-center space-y-5">
+      
+      <!-- Close button -->
+      <button type="button" onclick="closeWelcomeModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-[#082830] border border-[#20E1B2]/40 text-[#D1F5EE] hover:text-white hover:border-[#20E1B2] flex items-center justify-center transition-all cursor-pointer" aria-label="Close">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+
+      <!-- Stage 1: Form -->
+      <div id="welcomeFormStage" class="space-y-4 text-left">
+        <div class="text-center space-y-2.5">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#20E1B2] to-[#0B3844] text-[#021217] font-black flex items-center justify-center text-2xl mx-auto shadow-lg shadow-[#20E1B2]/40 border border-white/20">
+            ✦
+          </div>
+          <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#20E1B2]/15 border border-[#20E1B2]/50 text-[#20E1B2] text-[11px] font-extrabold uppercase tracking-widest mx-auto">
+            <i class="fa-solid fa-bolt text-[#20E1B2] text-xs animate-pulse"></i>
+            <span>EXCLUSIVE E-COMMERCE OFFER</span>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-black text-white tracking-tight">
+            স্বাগতম! <span class="text-[#20E1B2]">আপনার প্রোফাইল যুক্ত করুন</span>
+          </h3>
+          <p class="text-xs text-[#D1F5EE] leading-relaxed font-medium">
+            স্পেশাল ই-কমার্স ডিসকাউন্ট এবং EMI সুবিধা আনলক করতে আপনার নাম ও যোগাযোগ নম্বর দিন:
+          </p>
+        </div>
+
+        <form id="welcomeLeadForm" class="space-y-4 pt-1">
+          <div>
+            <label class="block text-xs font-bold text-[#D1F5EE] uppercase tracking-wider mb-1.5">
+              আপনার নাম <span class="text-rose-400">*</span>
+            </label>
+            <input type="text" id="welcomeName" required placeholder="আপনার পূর্ণ নাম লিখুন" 
+              class="w-full px-4 py-3.5 rounded-xl bg-[#082830] border border-[#20E1B2]/40 text-white placeholder-[#7EADA3] focus:outline-none focus:border-[#20E1B2] focus:ring-2 focus:ring-[#20E1B2]/30 transition-all text-sm font-medium">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-[#D1F5EE] uppercase tracking-wider mb-1.5">
+              যোগাযোগ / WhatsApp নম্বর <span class="text-rose-400">*</span>
+            </label>
+            <div class="relative flex items-center">
+              <span class="absolute left-3.5 text-xs font-black text-[#20E1B2] font-mono select-none">+880</span>
+              <input type="tel" id="welcomePhone" required placeholder="1838070468" 
+                class="w-full pl-14 pr-4 py-3.5 rounded-xl bg-[#082830] border border-[#20E1B2]/40 text-white placeholder-[#7EADA3] focus:outline-none focus:border-[#20E1B2] focus:ring-2 focus:ring-[#20E1B2]/30 transition-all text-sm font-mono" 
+                oninput="formatBdPhone(this)">
+            </div>
+          </div>
+
+          <!-- Submit Button with Continuous Animated Lighting -->
+          <div class="pt-2">
+            <button type="submit" id="welcomeSubmitBtn" 
+              class="animated-lighting-btn w-full justify-center text-sm font-black py-4 px-6 rounded-2xl relative overflow-hidden text-[#021217] bg-gradient-to-r from-[#20E1B2] via-[#2CEAA0] to-[#0D9488] shadow-xl shadow-[#20E1B2]/50 flex items-center justify-center gap-2 cursor-pointer transition-transform hover:scale-[1.02] active:scale-98">
+              <span class="relative z-10 font-black tracking-wide">অফার ও এক্সেস আনলক করুন</span>
+              <i class="fa-solid fa-arrow-right text-xs relative z-10"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Stage 2: Congratulations! -->
+      <div id="welcomeSuccessStage" class="hidden space-y-4 text-center py-4">
+        <div class="w-16 h-16 rounded-3xl bg-emerald-500/20 border border-emerald-500/40 text-[#20E1B2] flex items-center justify-center text-3xl mx-auto shadow-xl shadow-emerald-500/30">
+          🎉
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
+            Congratulations!
+          </h3>
+          <p class="text-sm font-bold text-[#20E1B2]">
+            অভিনন্দন! আপনার তথ্য সফলভাবে যুক্ত হয়েছে।
+          </p>
+          <p class="text-xs text-[#D1F5EE] max-w-xs mx-auto leading-relaxed font-medium">
+            আপনার জন্য বিশেষ প্যাকেজ ডিসকাউন্ট সক্রিয় করা হয়েছে। এখন প্যাকেজসমূহ বিস্তারিত দেখে অর্ডার করতে পারেন।
+          </p>
+        </div>
+        <button type="button" onclick="closeWelcomeModal()" 
+          class="animated-lighting-btn w-full justify-center text-xs font-black py-3.5 px-6 rounded-2xl relative overflow-hidden text-[#021217] bg-gradient-to-r from-[#20E1B2] to-[#0D9488] shadow-lg shadow-[#20E1B2]/30 flex items-center justify-center gap-2 cursor-pointer">
+          <span class="relative z-10">প্যাকেজসমূহ দেখুন</span>
+          <i class="fa-solid fa-sparkles text-xs relative z-10"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script>
+    // --- 1. PRICING VIEW SWITCHER (Cards vs. Table) ---
+    function setPricingView(viewMode) {
+      const cardsView = document.getElementById('pricingCardsView');
+      const tableView = document.getElementById('pricingTableView');
+      const cardsBtn = document.getElementById('viewCardsBtn');
+      const tableBtn = document.getElementById('viewTableBtn');
+
+      if (!cardsView || !tableView || !cardsBtn || !tableBtn) return;
+
+      const activeClasses = ['bg-[#20E1B2]', 'text-[#021217]', 'font-black', 'shadow-md', 'shadow-[#20E1B2]/30'];
+      const inactiveClasses = ['bg-[#0B3844]/35', 'backdrop-blur-xl', 'text-[#7EADA3]', 'hover:bg-[#06232B]'];
+
+      if (viewMode === 'cards') {
+        cardsView.classList.remove('hidden');
+        tableView.classList.add('hidden');
+
+        cardsBtn.classList.remove(...inactiveClasses);
+        cardsBtn.classList.add(...activeClasses);
+
+        tableBtn.classList.remove(...activeClasses);
+        tableBtn.classList.add(...inactiveClasses);
+      } else {
+        tableView.classList.remove('hidden');
+        cardsView.classList.add('hidden');
+
+        tableBtn.classList.remove(...inactiveClasses);
+        tableBtn.classList.add(...activeClasses);
+
+        cardsBtn.classList.remove(...activeClasses);
+        cardsBtn.classList.add(...inactiveClasses);
+      }
+    }
+
+    // --- 2. SELECT PACKAGE & SMOOTH SCROLL (NO POPUP) ---
     function selectPackageAndScroll(packageName) {
       const formSection = document.getElementById('packageBookingSection');
       const packageSelect = document.getElementById('bookingPackage');
@@ -228,7 +1531,7 @@
 
       if (formSection) {
         formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        const formCard = formSection.querySelector('.morphy-card');
+        const formCard = formSection.querySelector('.glass-dark-card');
         if (formCard) {
           formCard.classList.add('border-[#20E1B2]', 'shadow-[#20E1B2]/40', 'ring-2', 'ring-[#20E1B2]/50');
           setTimeout(() => {
@@ -240,7 +1543,7 @@
       }
     }
 
-    // --- 5. BUSINESS TYPE CONDITIONAL INPUT ---
+    // --- 3. BUSINESS TYPE CONDITIONAL INPUT ---
     function handleBusinessTypeChange(selectEl) {
       const otherContainer = document.getElementById('otherBusinessTypeContainer');
       const otherInput = document.getElementById('otherBusinessTypeInput');
@@ -257,7 +1560,7 @@
       }
     }
 
-    // Helper for phone format
+    // Helper for phone format (+880 prefix handling)
     function formatBdPhone(input) {
       input.value = input.value.replace(/[^0-9]/g, '');
       if (input.value.startsWith('880')) {
@@ -268,7 +1571,7 @@
       }
     }
 
-    // --- 6. IN-PAGE BOOKING FORM SUBMISSION ---
+    // --- 4. IN-PAGE BOOKING FORM SUBMISSION ---
     const bookingForm = document.getElementById('ecomPackageBookingForm');
     if (bookingForm) {
       bookingForm.addEventListener('submit', async function(e) {
@@ -314,20 +1617,26 @@
           existingInquiries.unshift(leadData);
           localStorage.setItem('shakib_inquiries', JSON.stringify(existingInquiries));
 
+          // Post to server API if available
+          try {
+            fetch('/api/leads', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(leadData)
+            }).catch(() => {});
+          } catch (_) {}
+
           // Success feedback
           if (alertBox) {
-            alertBox.className = 'p-4 rounded-2xl text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 block space-y-1';
+            alertBox.className = 'p-5 rounded-2xl text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/50 block space-y-1';
             alertBox.innerHTML = '<div>🎉 <strong>অভিনন্দন! আপনার বুকিং তথ্য সফলভাবে গ্রহণ করা হয়েছে।</strong></div><div class="text-[11px] text-[#D1F5EE]">আমাদের টিম শীঘ্রই (+880 ' + phone + ') নম্বরে যোগাযোগ করবে।</div>';
           }
 
-          // WhatsApp Trigger Message
-          const waMsg = encodeURIComponent('নমস্কার Shakibur Rahaman,\n\nআমি ই-কমার্স প্যাকেজ বুকিং করতে চাই:\n• নাম: ' + name + '\n• ফোন: ' + fullPhone + '\n• প্যাকেজ: ' + pkg + '\n• ব্যবসার ধরন: ' + finalBusinessType);
-          
           setTimeout(() => {
             bookingForm.reset();
             if (submitBtn) {
               submitBtn.disabled = false;
-              submitBtn.innerHTML = '<span>প্যাকেজ বুকিং কনফার্ম করুন</span><i class="fa-solid fa-arrow-right text-xs"></i>';
+              submitBtn.innerHTML = '<span class="relative z-10 font-black tracking-wide text-base">প্যাকেজ বুকিং কনফার্ম করুন</span><i class="fa-solid fa-arrow-right text-sm relative z-10"></i>';
             }
           }, 3000);
 
@@ -341,7 +1650,7 @@
       });
     }
 
-    // --- 7. WELCOME LEAD CAPTURE MODAL LOGIC ---
+    // --- 5. WELCOME LEAD CAPTURE MODAL LOGIC ---
     function openWelcomeModal() {
       const modal = document.getElementById('welcomeLeadModal');
       if (modal) {
@@ -385,6 +1694,15 @@
           existingLeads.unshift(leadData);
           localStorage.setItem('shakib_leads', JSON.stringify(existingLeads));
 
+          // Post to server API
+          try {
+            fetch('/api/leads', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(leadData)
+            }).catch(() => {});
+          } catch (_) {}
+
           // Autofill in-page form with their name and phone
           const bookingName = document.getElementById('bookingName');
           const bookingPhone = document.getElementById('bookingPhone');
@@ -405,9 +1723,9 @@
       });
     }
 
-    // --- 8. INITIALIZATION ON LOAD ---
+    // --- 6. INITIALIZATION ON LOAD ---
     function initPageBehaviors() {
-      // 1. Mobile shows Cards first, PC shows Table first
+      // 1. Mobile shows Cards first, Desktop shows Table first
       if (window.innerWidth < 768) {
         setPricingView('cards');
       } else {
