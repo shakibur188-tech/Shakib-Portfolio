@@ -1,4 +1,10 @@
-/* ==========================================================================
+const fs = require('fs');
+const path = require('path');
+
+const rootDir = path.resolve(__dirname, '..');
+
+// 1. UPDATE styles.css
+const newStylesCss = `/* ==========================================================================
    Md. Shakibur Rahaman - Strategic Lead & Digital Architect
    LUXURY "MONESTRA / AROUNDA" EMERALD & BRUNSWICK GREEN THEME
    Palette: #0C4137 (Brunswick Green), #06D6A0 (Emerald), #E6FBF6 (Polar Mint)
@@ -572,3 +578,233 @@ body {
   font-weight: 800;
   border-color: rgba(6, 214, 160, 0.35);
 }
+`;
+
+fs.writeFileSync(path.join(rootDir, 'styles.css'), newStylesCss, 'utf8');
+
+// 2. UPDATE admin.css
+const adminCssPath = path.join(rootDir, 'admin.css');
+if (fs.existsSync(adminCssPath)) {
+  let adminCss = fs.readFileSync(adminCssPath, 'utf8');
+  adminCss = adminCss
+    .replace(/#0066FF/gi, '#06D6A0')
+    .replace(/#0052FF/gi, '#05B386')
+    .replace(/#0B0F19/gi, '#08201A')
+    .replace(/#F8FAFC/gi, '#F4FBF8')
+    .replace(/#FAFCFF/gi, '#F4FBF8')
+    .replace(/rgba\(0,\s*102,\s*255,/gi, 'rgba(6, 214, 160,');
+  fs.writeFileSync(adminCssPath, adminCss, 'utf8');
+}
+
+// 3. UPDATE app.js and services/service-page.js (Ambient Canvas Engine)
+function updateCanvasAnimation(filePath) {
+  if (!fs.existsSync(filePath)) return;
+  let code = fs.readFileSync(filePath, 'utf8');
+
+  // Replace Canvas sky and cloud drawing logic with Luminous Emerald & Brunswick Aurora Mesh
+  const oldCanvasBlockRegex = /function initAmbientBackground\(\)[\s\S]*?requestAnimationFrame\(render\);\s*\}/m;
+  const newCanvasBlock = `function initAmbientBackground() {
+  const canvas = document.getElementById('ambientCanvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let width = (canvas.width = window.innerWidth);
+  let height = (canvas.height = window.innerHeight);
+
+  let mouse = { x: width / 2, y: height / 2, targetX: width / 2, targetY: height / 2 };
+
+  window.addEventListener('resize', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    initOrbs();
+  }, { passive: true });
+
+  window.addEventListener('mousemove', (e) => {
+    mouse.targetX = e.clientX;
+    mouse.targetY = e.clientY;
+  }, { passive: true });
+
+  // Monestra & Arounda Luminous Emerald Aurora Mesh Orbs
+  let orbs = [];
+  function initOrbs() {
+    orbs = [];
+    const count = width > 768 ? 9 : 5;
+    const colors = [
+      { r: 6, g: 214, b: 160 },    // Luminous Emerald (#06D6A0)
+      { r: 12, g: 65, b: 55 },     // Brunswick Green (#0C4137)
+      { r: 230, g: 251, b: 246 },  // Polar Mint (#E6FBF6)
+      { r: 5, g: 179, b: 134 }     // Mint Glow (#05B386)
+    ];
+
+    for (let i = 0; i < count; i++) {
+      const col = colors[i % colors.length];
+      orbs.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        r: Math.random() * 220 + 140,
+        vx: (Math.random() - 0.5) * 0.45,
+        vy: (Math.random() - 0.5) * 0.45,
+        color: col,
+        alpha: Math.random() * 0.22 + 0.12,
+        phase: Math.random() * Math.PI * 2
+      });
+    }
+  }
+  initOrbs();
+
+  function render() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Smooth mouse parallax
+    mouse.x += (mouse.targetX - mouse.x) * 0.04;
+    mouse.y += (mouse.targetY - mouse.y) * 0.04;
+
+    // 1. Subtle Polar Mint canvas background
+    const bgGrad = ctx.createLinearGradient(0, 0, 0, height);
+    bgGrad.addColorStop(0, 'rgba(244, 251, 248, 0.98)');
+    bgGrad.addColorStop(0.5, 'rgba(235, 249, 244, 0.92)');
+    bgGrad.addColorStop(1, 'rgba(244, 251, 248, 0.98)');
+    ctx.fillStyle = bgGrad;
+    ctx.fillRect(0, 0, width, height);
+
+    // 2. Render drifting luminous Aurora Orbs
+    orbs.forEach(orb => {
+      orb.phase += 0.008;
+      orb.x += orb.vx + Math.sin(orb.phase) * 0.25;
+      orb.y += orb.vy + Math.cos(orb.phase) * 0.25;
+
+      // Wrap around bounds softly
+      if (orb.x < -orb.r) orb.x = width + orb.r;
+      if (orb.x > width + orb.r) orb.x = -orb.r;
+      if (orb.y < -orb.r) orb.y = height + orb.r;
+      if (orb.y > height + orb.r) orb.y = -orb.r;
+
+      const parallaxX = (mouse.x - width / 2) * 0.03;
+      const parallaxY = (mouse.y - height / 2) * 0.03;
+      const ox = orb.x + parallaxX;
+      const oy = orb.y + parallaxY;
+
+      const grad = ctx.createRadialGradient(ox, oy, 0, ox, oy, orb.r);
+      grad.addColorStop(0, \`rgba(\${orb.color.r}, \${orb.color.g}, \${orb.color.b}, \${orb.alpha})\`);
+      grad.addColorStop(0.6, \`rgba(\${orb.color.r}, \${orb.color.g}, \${orb.color.b}, \${orb.alpha * 0.4})\`);
+      grad.addColorStop(1, \`rgba(\${orb.color.r}, \${orb.color.g}, \${orb.color.b}, 0)\`);
+
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(ox, oy, orb.r, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    requestAnimationFrame(render);
+  }
+
+  requestAnimationFrame(render);
+}`;
+
+  if (oldCanvasBlockRegex.test(code)) {
+    code = code.replace(oldCanvasBlockRegex, newCanvasBlock);
+  }
+
+  // Also replace any residual blue hexes in JS
+  code = code
+    .replace(/#0066FF/gi, '#06D6A0')
+    .replace(/#0052FF/gi, '#05B386')
+    .replace(/rgba\(0,\s*102,\s*255,/gi, 'rgba(6, 214, 160,')
+    .replace(/rgba\(0,\s*82,\s*255,/gi, 'rgba(5, 179, 134,');
+
+  fs.writeFileSync(filePath, code, 'utf8');
+}
+
+updateCanvasAnimation(path.join(rootDir, 'app.js'));
+updateCanvasAnimation(path.join(rootDir, 'services', 'service-page.js'));
+
+// 4. FUNCTION TO UPDATE HTML FILES
+function updateHtmlFile(filePath) {
+  let content = fs.readFileSync(filePath, 'utf8');
+
+  // Tailwind configuration replacement
+  const tailwindRegex = /tailwind\.config\s*=\s*\{[\s\S]*?theme:\s*\{[\s\S]*?extend:\s*\{[\s\S]*?colors:\s*\{[\s\S]*?\}\s*\}\s*\}\s*\}/m;
+  const newTailwindConfig = `tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#06D6A0',
+              forest: '#0C4137',
+              slate: '#06D6A0',
+              mist: '#73968E',
+              stone: '#D7EFE9',
+              emerald: '#06D6A0',
+              brunswick: '#0C4137',
+              polar: '#E6FBF6'
+            },
+            canvas: '#F4FBF8'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'monospace']
+          }
+        }
+      }
+    }`;
+
+  if (tailwindRegex.test(content)) {
+    content = content.replace(tailwindRegex, newTailwindConfig);
+  }
+
+  // Replace Hex Colors and Classes across HTML
+  content = content
+    // Primary electric blue to Monestra Emerald
+    .replace(/#0066FF/gi, '#06D6A0')
+    .replace(/#0052FF/gi, '#05B386')
+    .replace(/#003ECC/gi, '#0C4137')
+    .replace(/#0040C1/gi, '#0C4137')
+    .replace(/#004BD6/gi, '#0C4137')
+    .replace(/#00D2FF/gi, '#E6FBF6')
+    
+    // Background canvas
+    .replace(/#FAFCFF/gi, '#F4FBF8')
+    .replace(/#F8FAFC/gi, '#EDF9F5')
+    
+    // Dark texts/accents
+    .replace(/#0B0F19/gi, '#08201A')
+    
+    // Borders
+    .replace(/#E2E8F0/gi, '#D7EFE9')
+    .replace(/#F1F5F9/gi, '#E2F4EF')
+    
+    // RGBAs
+    .replace(/rgba\(0,\s*102,\s*255,/gi, 'rgba(6, 214, 160,')
+    .replace(/rgba\(0,\s*82,\s*255,/gi, 'rgba(5, 179, 134,')
+    .replace(/rgba\(0,\s*210,\s*255,/gi, 'rgba(230, 251, 246,')
+    .replace(/rgba\(120,\s*0,\s*255,/gi, 'rgba(12, 65, 55,')
+    .replace(/rgba\(11,\s*15,\s*25,/gi, 'rgba(8, 32, 26,');
+
+  fs.writeFileSync(filePath, content, 'utf8');
+}
+
+// Find all HTML files recursively
+function getHtmlFiles(dir) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  list.forEach(file => {
+    if (file === 'node_modules' || file === '.git') return;
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+    if (stat && stat.isDirectory()) {
+      results = results.concat(getHtmlFiles(fullPath));
+    } else if (file.endsWith('.html')) {
+      results.push(fullPath);
+    }
+  });
+  return results;
+}
+
+const htmlFiles = getHtmlFiles(rootDir);
+htmlFiles.forEach(file => {
+  updateHtmlFile(file);
+  console.log('Updated:', path.relative(rootDir, file));
+});
+
+console.log('\\n✅ Full Monestra / Arounda Emerald & Brunswick Green Theme Successfully Applied!');

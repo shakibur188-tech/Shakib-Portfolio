@@ -1,7 +1,7 @@
 /**
  * Md. Shakibur Rahaman - Standalone Service Pages Engine
  * Botanical Forest & Steel Slate Light Theme, Ambient Motion Canvas, Scroll Reveals, & 3D Card Flipping
- * Palette: #0066FF (Olive), #0B0F19 (Forest), #64748B (Slate), #94A3B8 (Mist), #CBD5E1 (Stone)
+ * Palette: #06D6A0 (Olive), #0B0F19 (Forest), #64748B (Slate), #94A3B8 (Mist), #CBD5E1 (Stone)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -276,11 +276,11 @@ function initServiceLeadForm() {
 
       if (!res.ok) throw new Error('Failed to submit');
 
-      alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-[#0066FF]/15 text-[#0B0F19] border border-[#0066FF]/35 block';
+      alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-[#06D6A0]/15 text-[#0B0F19] border border-[#06D6A0]/35 block';
       alertBox.textContent = `✅ Thank you, ${name}! Your project brief for "${serviceName}" has been received. Shakibur will contact you within 24 business hours.`;
       form.reset();
     } catch (err) {
-      alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-[#0066FF]/15 text-[#0B0F19] border border-[#0066FF]/35 block';
+      alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-[#06D6A0]/15 text-[#0B0F19] border border-[#06D6A0]/35 block';
       alertBox.textContent = 'Brief received! You may also connect instantly with Shakibur via WhatsApp.';
     } finally {
       btn.disabled = false;
@@ -386,7 +386,7 @@ function initInteractiveWorkflow() {
     if (progressBar) {
       const percentage = ((index + 1) / stepBtns.length) * 100;
       progressBar.style.width = `${percentage}%`;
-      progressBar.style.backgroundColor = '#0066FF';
+      progressBar.style.backgroundColor = '#06D6A0';
     }
   }
 

@@ -1,7 +1,7 @@
 /**
  * Md. Shakibur Rahaman - Strategic Lead & Digital Architect
  * BOTANICAL FOREST & STEEL SLATE LIGHT THEME ENGINE
- * Palette: #0066FF (Olive), #0B0F19 (Forest), #64748B (Slate), #94A3B8 (Mist), #CBD5E1 (Stone)
+ * Palette: #06D6A0 (Olive), #0B0F19 (Forest), #64748B (Slate), #94A3B8 (Mist), #CBD5E1 (Stone)
  * Dynamic Scroll Progress Bar, Animated Counters, Ambient Canvas, Before/After Slider & Point Architecture
  */
 
@@ -134,7 +134,7 @@ function initAmbientBackground() {
   window.addEventListener('resize', () => {
     width = canvas.width = window.innerWidth;
     height = canvas.height = window.innerHeight;
-    initClouds();
+    initOrbs();
   }, { passive: true });
 
   window.addEventListener('mousemove', (e) => {
@@ -142,27 +142,33 @@ function initAmbientBackground() {
     mouse.targetY = e.clientY;
   }, { passive: true });
 
-  // Generate realistic layered drifting clouds
-  let clouds = [];
-  function initClouds() {
-    clouds = [];
-    const count = width > 768 ? 14 : 8;
+  // Monestra & Arounda Luminous Emerald Aurora Mesh Orbs
+  let orbs = [];
+  function initOrbs() {
+    orbs = [];
+    const count = width > 768 ? 9 : 5;
+    const colors = [
+      { r: 6, g: 214, b: 160 },    // Luminous Emerald (#06D6A0)
+      { r: 12, g: 65, b: 55 },     // Brunswick Green (#0C4137)
+      { r: 230, g: 251, b: 246 },  // Polar Mint (#E6FBF6)
+      { r: 5, g: 179, b: 134 }     // Mint Glow (#05B386)
+    ];
+
     for (let i = 0; i < count; i++) {
-      clouds.push({
-        x: Math.random() * (width + 400) - 200,
-        y: Math.random() * (height * 0.95),
-        radius: Math.random() * 140 + 100,
-        speed: Math.random() * 0.35 + 0.15,
-        opacity: Math.random() * 0.35 + 0.25,
-        puffs: Array.from({ length: 6 }, () => ({
-          dx: (Math.random() - 0.5) * 160,
-          dy: (Math.random() - 0.5) * 60,
-          r: Math.random() * 90 + 60
-        }))
+      const col = colors[i % colors.length];
+      orbs.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        r: Math.random() * 220 + 140,
+        vx: (Math.random() - 0.5) * 0.45,
+        vy: (Math.random() - 0.5) * 0.45,
+        color: col,
+        alpha: Math.random() * 0.22 + 0.12,
+        phase: Math.random() * Math.PI * 2
       });
     }
   }
-  initClouds();
+  initOrbs();
 
   function render() {
     ctx.clearRect(0, 0, width, height);
@@ -171,46 +177,47 @@ function initAmbientBackground() {
     mouse.x += (mouse.targetX - mouse.x) * 0.04;
     mouse.y += (mouse.targetY - mouse.y) * 0.04;
 
-    // 1. Draw subtle ambient sky gradients
-    const skyGrad = ctx.createLinearGradient(0, 0, 0, height);
-    skyGrad.addColorStop(0, 'rgba(240, 246, 255, 0.95)');
-    skyGrad.addColorStop(0.5, 'rgba(248, 250, 252, 0.9)');
-    skyGrad.addColorStop(1, 'rgba(255, 255, 255, 0.98)');
-    ctx.fillStyle = skyGrad;
+    // 1. Subtle Polar Mint canvas background
+    const bgGrad = ctx.createLinearGradient(0, 0, 0, height);
+    bgGrad.addColorStop(0, 'rgba(244, 251, 248, 0.98)');
+    bgGrad.addColorStop(0.5, 'rgba(235, 249, 244, 0.92)');
+    bgGrad.addColorStop(1, 'rgba(244, 251, 248, 0.98)');
+    ctx.fillStyle = bgGrad;
     ctx.fillRect(0, 0, width, height);
 
-    // 2. Render and drift soft clouds
-    clouds.forEach(c => {
-      c.x += c.speed;
-      // Seamless wrap-around
-      if (c.x - c.radius > width + 200) {
-        c.x = -c.radius - 200;
-        c.y = Math.random() * (height * 0.95);
-      }
+    // 2. Render drifting luminous Aurora Orbs
+    orbs.forEach(orb => {
+      orb.phase += 0.008;
+      orb.x += orb.vx + Math.sin(orb.phase) * 0.25;
+      orb.y += orb.vy + Math.cos(orb.phase) * 0.25;
 
-      ctx.save();
-      const parallaxX = (mouse.x - width / 2) * (c.speed * 0.08);
-      const parallaxY = (mouse.y - height / 2) * (c.speed * 0.08);
+      // Wrap around bounds softly
+      if (orb.x < -orb.r) orb.x = width + orb.r;
+      if (orb.x > width + orb.r) orb.x = -orb.r;
+      if (orb.y < -orb.r) orb.y = height + orb.r;
+      if (orb.y > height + orb.r) orb.y = -orb.r;
 
-      c.puffs.forEach(p => {
-        const px = c.x + p.dx + parallaxX;
-        const py = c.y + p.dy + parallaxY;
-        const puffGrad = ctx.createRadialGradient(px, py, 0, px, py, p.r);
-        puffGrad.addColorStop(0, `rgba(255, 255, 255, ${c.opacity})`);
-        puffGrad.addColorStop(0.5, `rgba(240, 247, 255, ${c.opacity * 0.75})`);
-        puffGrad.addColorStop(1, 'rgba(240, 247, 255, 0)');
+      const parallaxX = (mouse.x - width / 2) * 0.03;
+      const parallaxY = (mouse.y - height / 2) * 0.03;
+      const ox = orb.x + parallaxX;
+      const oy = orb.y + parallaxY;
 
-        ctx.fillStyle = puffGrad;
-        ctx.beginPath();
-        ctx.arc(px, py, p.r, 0, Math.PI * 2);
-        ctx.fill();
-      });
+      const grad = ctx.createRadialGradient(ox, oy, 0, ox, oy, orb.r);
+      grad.addColorStop(0, `rgba(${orb.color.r}, ${orb.color.g}, ${orb.color.b}, ${orb.alpha})`);
+      grad.addColorStop(0.6, `rgba(${orb.color.r}, ${orb.color.g}, ${orb.color.b}, ${orb.alpha * 0.4})`);
+      grad.addColorStop(1, `rgba(${orb.color.r}, ${orb.color.g}, ${orb.color.b}, 0)`);
 
-      ctx.restore();
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(ox, oy, orb.r, 0, Math.PI * 2);
+      ctx.fill();
     });
 
     requestAnimationFrame(render);
   }
+
+  requestAnimationFrame(render);
+}
 
   requestAnimationFrame(render);
 });
@@ -502,13 +509,13 @@ function renderServices(servicesData) {
 
     const deliverablesHtml = s.deliverables.map(d => `
       <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-        <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+        <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
         <span>${escapeHtml(d)}</span>
       </li>
     `).join('');
 
     return `
-      <a href="/services/${s.slug}" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
+      <a href="/services/${s.slug}" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#06D6A0]/15 hover:border-[#06D6A0] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
         
         <!-- Inset Image Frame with Rounded Corners -->
         <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
@@ -541,10 +548,10 @@ function renderServices(servicesData) {
           <div>
             <!-- Title & Pillar Tag -->
             <div class="flex items-start justify-between gap-2">
-              <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+              <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#06D6A0] transition-colors leading-tight">
                 ${escapeHtml(s.title)}
               </h3>
-              <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+              <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#06D6A0]/30 group-hover:text-[#06D6A0] transition-colors">
                 ${s.pillar}
               </span>
             </div>
@@ -561,7 +568,7 @@ function renderServices(servicesData) {
 
             <!-- Key Deliverable Points -->
             <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
-              <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
+              <div class="text-[10px] font-black tracking-wider text-[#06D6A0] uppercase flex items-center gap-1.5 mb-2">
                 <i class="fa-solid fa-list-check text-[10px]"></i>
                 <span>KEY DELIVERABLES:</span>
               </div>
@@ -574,13 +581,13 @@ function renderServices(servicesData) {
           <!-- Bottom Row: Metric & Morphy Pill Button -->
           <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
             <div class="flex items-baseline gap-1.5">
-              <span class="text-base font-black text-[#0066FF]">${s.metricValue}</span>
+              <span class="text-base font-black text-[#06D6A0]">${s.metricValue}</span>
               <span class="text-xs font-semibold text-[#64748B]">${s.metricLabel}</span>
             </div>
 
-            <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+            <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#06D6A0] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#06D6A0]/30">
               <span>Explore Hub</span>
-              <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+              <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#06D6A0] flex items-center justify-center text-[10px] transition-colors">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </span>
             </div>
@@ -606,13 +613,13 @@ function renderWebProjects(projects) {
     const displayUrl = proj.liveUrl.replace(/^https?:\/\//i, '').replace(/\/$/, '');
     const pointsHtml = (proj.points || ['High-speed cloud deployment', 'Core Web Vitals optimized', 'Mobile-first responsive architecture']).slice(0, 3).map(pt => `
       <li class="flex items-start gap-2 text-xs text-[#475569] font-medium">
-        <i class="fa-solid fa-check text-[10px] text-[#0066FF] mt-0.5 shrink-0"></i>
+        <i class="fa-solid fa-check text-[10px] text-[#06D6A0] mt-0.5 shrink-0"></i>
         <span>${escapeHtml(pt)}</span>
       </li>
     `).join('');
 
     return `
-      <div class="morphy-card p-0 overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF]/40 hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] project-item" data-category="${escapeHtml(proj.category || 'General')}">
+      <div class="morphy-card p-0 overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#06D6A0]/40 hover:shadow-2xl hover:shadow-[#06D6A0]/15 bg-white border border-[#E2E8F0] project-item" data-category="${escapeHtml(proj.category || 'General')}">
         
         <!-- Browser Window Mockup Header -->
         <div class="px-4 py-3 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
@@ -624,7 +631,7 @@ function renderWebProjects(projects) {
           <div class="px-3 py-1 rounded-md bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[200px] truncate">
             ${escapeHtml(displayUrl)}
           </div>
-          <span class="px-2 py-0.5 rounded text-[9.5px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase">
+          <span class="px-2 py-0.5 rounded text-[9.5px] font-black bg-[#06D6A0]/10 text-[#06D6A0] uppercase">
             ${escapeHtml(proj.category)}
           </span>
         </div>
@@ -644,7 +651,7 @@ function renderWebProjects(projects) {
         <!-- Content Area -->
         <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
           <div>
-            <h3 class="text-lg font-extrabold text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-snug">
+            <h3 class="text-lg font-extrabold text-[#0B0F19] group-hover:text-[#06D6A0] transition-colors leading-snug">
               ${escapeHtml(proj.title)}
             </h3>
             <p class="text-xs text-[#64748B] mt-1 mb-3 leading-relaxed">
@@ -658,7 +665,7 @@ function renderWebProjects(projects) {
 
           <!-- Bottom Live Platform CTA Button -->
           <div class="pt-4 border-t border-[#F1F5F9]">
-            <a href="${escapeHtml(proj.liveUrl)}" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-[#0066FF] to-[#0052FF] text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-200 flex items-center justify-between shadow-md shadow-[#0066FF]/20 hover:shadow-lg hover:shadow-[#0066FF]/35 group/btn">
+            <a href="${escapeHtml(proj.liveUrl)}" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-[#06D6A0] to-[#05B386] text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-200 flex items-center justify-between shadow-md shadow-[#06D6A0]/20 hover:shadow-lg hover:shadow-[#06D6A0]/35 group/btn">
               <span>Visit Live Platform</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform"></i>
             </a>
@@ -695,7 +702,7 @@ function renderTechArsenal() {
     { name: 'Figma', icon: 'fa-brands fa-figma', color: '#A259FF' },
     { name: 'Adobe Suite', icon: 'fa-solid fa-palette', color: '#FF0000' },
     { name: 'Google Ads', icon: 'fa-solid fa-chart-line', color: '#4285F4' },
-    { name: 'GA4 / SEO', icon: 'fa-solid fa-magnifying-glass-chart', color: '#0066FF' }
+    { name: 'GA4 / SEO', icon: 'fa-solid fa-magnifying-glass-chart', color: '#06D6A0' }
   ];
 
   container.innerHTML = stack.map(tech => `
@@ -725,7 +732,7 @@ function renderRoadmap() {
       <div class="roadmap-node-circle">
         <i class="fa-solid ${m.icon}"></i>
       </div>
-      <div class="inline-block px-3.5 py-1 rounded-full bg-[#0066FF]/15 border border-[#0066FF]/30 text-[#0B0F19] text-xs font-bold mb-2">
+      <div class="inline-block px-3.5 py-1 rounded-full bg-[#06D6A0]/15 border border-[#06D6A0]/30 text-[#0B0F19] text-xs font-bold mb-2">
         ${escapeHtml(m.year)}
       </div>
       <h4 class="text-base font-extrabold text-[#0B0F19] mb-1.5 uppercase tracking-wider">${escapeHtml(m.title)}</h4>
@@ -970,7 +977,7 @@ function initServiceModal() {
     const modalTools = document.getElementById('modalTools');
     const modalPageLink = document.getElementById('modalPageLink');
 
-    if (modalIcon) modalIcon.className = `fa-solid ${svc.icon || 'fa-layer-group'} text-2xl text-[#0066FF]`;
+    if (modalIcon) modalIcon.className = `fa-solid ${svc.icon || 'fa-layer-group'} text-2xl text-[#06D6A0]`;
     if (modalBadge) modalBadge.textContent = svc.badge || 'Core Vertical';
     if (modalTitle) modalTitle.textContent = svc.title;
     if (modalSubtitle) modalSubtitle.textContent = svc.subtitle || '';
@@ -980,7 +987,7 @@ function initServiceModal() {
     if (modalDeliverables) {
       modalDeliverables.innerHTML = (svc.deliverables || []).map(d => `
         <li class="flex items-start gap-2.5 text-xs text-[#0B0F19]">
-          <i class="fa-solid fa-check text-[#0066FF] mt-0.5 shrink-0"></i>
+          <i class="fa-solid fa-check text-[#06D6A0] mt-0.5 shrink-0"></i>
           <span>${escapeHtml(d)}</span>
         </li>
       `).join('');
@@ -988,7 +995,7 @@ function initServiceModal() {
 
     if (modalTools) {
       modalTools.innerHTML = (svc.tools || []).map(t => `
-        <span class="px-2.5 py-1 rounded-md bg-[#FAFCFF] text-xs text-[#0B0F19] border border-[#0066FF]/25 font-bold">${escapeHtml(t)}</span>
+        <span class="px-2.5 py-1 rounded-md bg-[#FAFCFF] text-xs text-[#0B0F19] border border-[#06D6A0]/25 font-bold">${escapeHtml(t)}</span>
       `).join('');
     }
 
@@ -1064,7 +1071,7 @@ function initContactForm() {
     statusDiv.classList.remove('hidden');
 
     if (type === 'success') {
-      statusDiv.className = 'p-4 rounded-xl text-xs font-semibold bg-[#0066FF]/15 text-[#0B0F19] border border-[#0066FF]/35 block';
+      statusDiv.className = 'p-4 rounded-xl text-xs font-semibold bg-[#06D6A0]/15 text-[#0B0F19] border border-[#06D6A0]/35 block';
     } else {
       statusDiv.className = 'p-4 rounded-xl text-xs font-semibold bg-gray-100 text-[#0B0F19] border border-gray-300 block';
     }
@@ -1179,9 +1186,9 @@ function initMobileMenu() {
     });
 
     navLinks.forEach(link => {
-      link.classList.remove('text-[#0066FF]', 'font-bold');
+      link.classList.remove('text-[#06D6A0]', 'font-bold');
       if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('text-[#0066FF]', 'font-bold');
+        link.classList.add('text-[#06D6A0]', 'font-bold');
       }
     });
   }
@@ -1217,18 +1224,18 @@ function initOffersViewSwitcher() {
       tableView.classList.remove('hidden');
 
       tableBtn.classList.remove('bg-transparent', 'text-[#64748B]');
-      tableBtn.classList.add('bg-[#0066FF]', 'text-white', 'shadow-xs');
+      tableBtn.classList.add('bg-[#06D6A0]', 'text-white', 'shadow-xs');
 
-      gridBtn.classList.remove('bg-[#0066FF]', 'text-white', 'shadow-xs');
+      gridBtn.classList.remove('bg-[#06D6A0]', 'text-white', 'shadow-xs');
       gridBtn.classList.add('bg-transparent', 'text-[#64748B]');
     } else {
       tableView.classList.add('hidden');
       gridView.classList.remove('hidden');
 
       gridBtn.classList.remove('bg-transparent', 'text-[#64748B]');
-      gridBtn.classList.add('bg-[#0066FF]', 'text-white', 'shadow-xs');
+      gridBtn.classList.add('bg-[#06D6A0]', 'text-white', 'shadow-xs');
 
-      tableBtn.classList.remove('bg-[#0066FF]', 'text-white', 'shadow-xs');
+      tableBtn.classList.remove('bg-[#06D6A0]', 'text-white', 'shadow-xs');
       tableBtn.classList.add('bg-transparent', 'text-[#64748B]');
     }
   }
@@ -1255,18 +1262,18 @@ function initSubpagePricingSwitcher() {
       cardsView.classList.remove('hidden');
 
       cardsBtn.classList.remove('bg-transparent', 'text-[#64748B]');
-      cardsBtn.classList.add('bg-[#0066FF]', 'text-white', 'shadow-xs');
+      cardsBtn.classList.add('bg-[#06D6A0]', 'text-white', 'shadow-xs');
 
-      tableBtn.classList.remove('bg-[#0066FF]', 'text-white', 'shadow-xs');
+      tableBtn.classList.remove('bg-[#06D6A0]', 'text-white', 'shadow-xs');
       tableBtn.classList.add('bg-transparent', 'text-[#64748B]');
     } else {
       cardsView.classList.add('hidden');
       tableView.classList.remove('hidden');
 
       tableBtn.classList.remove('bg-transparent', 'text-[#64748B]');
-      tableBtn.classList.add('bg-[#0066FF]', 'text-white', 'shadow-xs');
+      tableBtn.classList.add('bg-[#06D6A0]', 'text-white', 'shadow-xs');
 
-      cardsBtn.classList.remove('bg-[#0066FF]', 'text-white', 'shadow-xs');
+      cardsBtn.classList.remove('bg-[#06D6A0]', 'text-white', 'shadow-xs');
       cardsBtn.classList.add('bg-transparent', 'text-[#64748B]');
     }
   }

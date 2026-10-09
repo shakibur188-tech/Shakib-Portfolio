@@ -13,17 +13,21 @@
         extend: {
           colors: {
             palette: {
-              olive: '#0066FF',
-              forest: '#0B0F19',
-              slate: '#64748B',
-              mist: '#94A3B8',
-              stone: '#CBD5E1'
+              olive: '#06D6A0',
+              forest: '#0C4137',
+              slate: '#06D6A0',
+              mist: '#73968E',
+              stone: '#D7EFE9',
+              emerald: '#06D6A0',
+              brunswick: '#0C4137',
+              polar: '#E6FBF6'
             },
-            canvas: '#F8FAFC'
+            canvas: '#F4FBF8'
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            display: ['"Plus Jakarta Sans"', 'sans-serif']
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'monospace']
           }
         }
       }
@@ -41,7 +45,7 @@
       display: block;
       font-size: 13px;
       font-weight: 700;
-      color: #0B0F19;
+      color: #08201A;
       margin-bottom: 6px;
     }
     .form-field-label .required-star {
@@ -52,16 +56,16 @@
       width: 100%;
       padding: 12px 16px;
       border-radius: 12px;
-      background-color: #F8FAFC;
+      background-color: #EDF9F5;
       border: 1px solid rgba(112, 128, 93, 0.25);
-      color: #0B0F19;
+      color: #08201A;
       font-size: 14px;
       font-family: 'Plus Jakarta Sans', sans-serif;
       transition: all 0.2s ease;
       outline: none;
     }
     .form-field-input:focus {
-      border-color: #0066FF;
+      border-color: #06D6A0;
       background-color: #FFFFFF;
       box-shadow: 0 0 0 4px rgba(112, 128, 93, 0.12);
     }
@@ -71,29 +75,29 @@
       gap: 8px;
       padding: 9px 14px;
       border-radius: 10px;
-      background: #F8FAFC;
+      background: #EDF9F5;
       border: 1px solid rgba(112, 128, 93, 0.22);
       font-size: 13px;
       font-weight: 600;
-      color: #0B0F19;
+      color: #08201A;
       cursor: pointer;
       transition: all 0.2s ease;
       user-select: none;
     }
     .checkbox-pill-label:hover, .radio-pill-label:hover {
-      border-color: #0066FF;
+      border-color: #06D6A0;
       background: #FFFFFF;
     }
     .checkbox-pill-input:checked + span, .radio-pill-input:checked + span {
-      color: #0066FF;
+      color: #06D6A0;
       font-weight: 700;
     }
     .checkbox-pill-input:checked ~ .checkbox-pill-box, .radio-pill-input:checked ~ .radio-pill-box {
-      border-color: #0066FF;
-      background-color: #0066FF;
+      border-color: #06D6A0;
+      background-color: #06D6A0;
     }
     .form-submit-btn {
-      background: linear-gradient(135deg, #0066FF 0%, #0B0F19 100%);
+      background: linear-gradient(135deg, #06D6A0 0%, #08201A 100%);
       color: #FFFFFF;
       font-weight: 700;
       border-radius: 14px;
@@ -107,7 +111,7 @@
     }
   </style>
 </head>
-<body class="bg-[#F8FAFC] text-[#0B0F19] font-sans antialiased selection:bg-[#0066FF] selection:text-white relative overflow-x-hidden min-h-screen flex flex-col justify-between">
+<body class="bg-[#EDF9F5] text-[#08201A] font-sans antialiased selection:bg-[#06D6A0] selection:text-white relative overflow-x-hidden min-h-screen flex flex-col justify-between">
 
   <!-- Ambient Light Background Mesh & Canvas -->
   <div class="ambient-mesh-glow"></div>
@@ -115,20 +119,20 @@
   <div class="ambient-vignette"></div>
 
   <!-- Header Navigation -->
-  <header class="relative z-20 border-b border-[#0066FF]/15 bg-white/90 backdrop-blur-xl">
+  <header class="relative z-20 border-b border-[#06D6A0]/15 bg-white/90 backdrop-blur-xl">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
       <a href="/" class="flex items-center gap-3.5 group">
-        <div class="w-10 h-10 rounded-xl bg-[#0066FF] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#0066FF]/25">
+        <div class="w-10 h-10 rounded-xl bg-[#06D6A0] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#06D6A0]/25">
           SR
         </div>
         <div class="flex flex-col">
-          <span class="font-bold text-[#0B0F19] tracking-tight text-base group-hover:text-[#0066FF] transition-colors">Md. Shakibur Rahaman</span>
-          <span class="text-[10px] text-[#0066FF] font-bold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
+          <span class="font-bold text-[#08201A] tracking-tight text-base group-hover:text-[#06D6A0] transition-colors">Md. Shakibur Rahaman</span>
+          <span class="text-[10px] text-[#06D6A0] font-bold tracking-wider uppercase">Strategic Lead &amp; Digital Architect</span>
         </div>
       </a>
 
       <div class="flex items-center gap-4">
-        <a href="/" class="text-xs font-bold text-[#64748B] hover:text-[#0066FF] flex items-center gap-1.5 transition-colors">
+        <a href="/" class="text-xs font-bold text-[#64748B] hover:text-[#06D6A0] flex items-center gap-1.5 transition-colors">
           <i class="fa-solid fa-arrow-left text-[11px]"></i>
           <span>Return to Website</span>
         </a>
@@ -140,7 +144,7 @@
   <main class="relative z-10 flex-1 max-w-3xl mx-auto w-full px-4 sm:px-6 py-12">
     
     <!-- Loading State Skeleton -->
-    <div id="formLoadingSkeleton" class="bg-white border border-[#0066FF]/20 rounded-3xl p-8 sm:p-12 shadow-xl animate-pulse space-y-6">
+    <div id="formLoadingSkeleton" class="bg-white border border-[#06D6A0]/20 rounded-3xl p-8 sm:p-12 shadow-xl animate-pulse space-y-6">
       <div class="w-24 h-6 bg-gray-200 rounded-full"></div>
       <div class="w-3/4 h-8 bg-gray-200 rounded-lg"></div>
       <div class="w-full h-4 bg-gray-100 rounded"></div>
@@ -156,27 +160,27 @@
       <div class="w-14 h-14 mx-auto rounded-2xl bg-red-50 text-red-500 flex items-center justify-center text-2xl mb-4">
         <i class="fa-solid fa-triangle-exclamation"></i>
       </div>
-      <h2 class="text-xl font-bold text-[#0B0F19] mb-2" id="formErrorTitle">Form Unavailable</h2>
+      <h2 class="text-xl font-bold text-[#08201A] mb-2" id="formErrorTitle">Form Unavailable</h2>
       <p class="text-sm text-[#64748B] mb-6" id="formErrorMessage">This form does not exist, is set to inactive, or has expired.</p>
       <a href="/" class="btn-aesthetic-primary inline-flex">Return to Homepage</a>
     </div>
 
     <!-- Dynamic Form Card Container -->
-    <div id="formCardContainer" class="hidden bg-white border border-[#0066FF]/20 rounded-3xl p-6 sm:p-12 shadow-2xl transition-all">
+    <div id="formCardContainer" class="hidden bg-white border border-[#06D6A0]/20 rounded-3xl p-6 sm:p-12 shadow-2xl transition-all">
       
       <!-- Form Header -->
-      <div class="mb-8 pb-6 border-b border-[#0066FF]/15">
+      <div class="mb-8 pb-6 border-b border-[#06D6A0]/15">
         <div class="flex items-center gap-2 mb-3">
-          <span id="formCategoryBadge" class="text-[10.5px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-[#0066FF]/10 text-[#0066FF] border border-[#0066FF]/25">
+          <span id="formCategoryBadge" class="text-[10.5px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] border border-[#06D6A0]/25">
             General
           </span>
           <span class="text-[11px] text-[#64748B] font-semibold flex items-center gap-1">
-            <i class="fa-solid fa-shield-halved text-[10px] text-[#0066FF]"></i>
+            <i class="fa-solid fa-shield-halved text-[10px] text-[#06D6A0]"></i>
             <span>Encrypted Response</span>
           </span>
         </div>
 
-        <h1 id="formMainTitle" class="text-2xl sm:text-4xl font-extrabold text-[#0B0F19] tracking-tight leading-tight mb-2">
+        <h1 id="formMainTitle" class="text-2xl sm:text-4xl font-extrabold text-[#08201A] tracking-tight leading-tight mb-2">
           Project Briefing Form
         </h1>
         <p id="formMainDescription" class="text-xs sm:text-sm text-[#64748B] leading-relaxed">
@@ -208,7 +212,7 @@
 
         <div class="text-center pt-2">
           <p class="text-[11.5px] text-[#64748B]">
-            <i class="fa-solid fa-lock text-[10px] text-[#0066FF]"></i>
+            <i class="fa-solid fa-lock text-[10px] text-[#06D6A0]"></i>
             Your information is stored strictly for project communication and never shared.
           </p>
         </div>
@@ -216,16 +220,16 @@
 
       <!-- Success Confirmation Card (Replaces form upon completion) -->
       <div id="formSuccessCard" class="hidden text-center py-10 space-y-5">
-        <div class="w-16 h-16 rounded-full bg-[#0066FF]/15 text-[#0066FF] border-2 border-[#0066FF] flex items-center justify-center text-3xl mx-auto animate-bounce shadow-md">
+        <div class="w-16 h-16 rounded-full bg-[#06D6A0]/15 text-[#06D6A0] border-2 border-[#06D6A0] flex items-center justify-center text-3xl mx-auto animate-bounce shadow-md">
           <i class="fa-solid fa-check"></i>
         </div>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0B0F19]">Submission Received!</h2>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#08201A]">Submission Received!</h2>
         <p id="successCardMessage" class="text-sm text-[#64748B] max-w-md mx-auto leading-relaxed">
           Thank you for providing your project details. Md. Shakibur Rahaman will review and respond promptly.
         </p>
         <div class="pt-4 flex flex-wrap items-center justify-center gap-3">
           <a href="/" class="btn-aesthetic-primary text-xs">Return to Public Website</a>
-          <button id="submitAnotherBtn" class="px-5 py-2.5 rounded-full border border-[#0066FF]/30 text-xs font-bold text-[#0B0F19] bg-[#F8FAFC] hover:bg-white transition-all">
+          <button id="submitAnotherBtn" class="px-5 py-2.5 rounded-full border border-[#06D6A0]/30 text-xs font-bold text-[#08201A] bg-[#EDF9F5] hover:bg-white transition-all">
             Submit Another Response
           </button>
         </div>
@@ -235,10 +239,10 @@
   </main>
 
   <!-- Footer -->
-  <footer class="relative z-10 py-8 border-t border-[#0066FF]/15 bg-white/70 text-center text-xs text-[#64748B]">
+  <footer class="relative z-10 py-8 border-t border-[#06D6A0]/15 bg-white/70 text-center text-xs text-[#64748B]">
     <div class="max-w-5xl mx-auto px-4">
       <div>© 2026 Md. Shakibur Rahaman • Enterprise Creative Direction &amp; Digital Architecture</div>
-      <div class="mt-1 text-[11px] text-[#0066FF] font-bold">256-Bit Encrypted &bull; Automated CMS Delivery</div>
+      <div class="mt-1 text-[11px] text-[#06D6A0] font-bold">256-Bit Encrypted &bull; Automated CMS Delivery</div>
     </div>
   </footer>
 
@@ -365,7 +369,7 @@
               const lbl = document.createElement('label');
               lbl.className = 'checkbox-pill-label';
               lbl.innerHTML = `
-                <input type="checkbox" name="${f.id}" value="${escapeHtml(opt)}" class="checkbox-pill-input rounded text-[#0066FF] focus:ring-[#0066FF] border-gray-300">
+                <input type="checkbox" name="${f.id}" value="${escapeHtml(opt)}" class="checkbox-pill-input rounded text-[#06D6A0] focus:ring-[#06D6A0] border-gray-300">
                 <span>${escapeHtml(opt)}</span>
               `;
               optsContainer.appendChild(lbl);
@@ -381,7 +385,7 @@
               const lbl = document.createElement('label');
               lbl.className = 'radio-pill-label';
               lbl.innerHTML = `
-                <input type="radio" name="${f.id}" value="${escapeHtml(opt)}" ${f.required && oIdx === 0 ? 'required' : ''} class="radio-pill-input text-[#0066FF] focus:ring-[#0066FF] border-gray-300">
+                <input type="radio" name="${f.id}" value="${escapeHtml(opt)}" ${f.required && oIdx === 0 ? 'required' : ''} class="radio-pill-input text-[#06D6A0] focus:ring-[#06D6A0] border-gray-300">
                 <span>${escapeHtml(opt)}</span>
               `;
               optsContainer.appendChild(lbl);

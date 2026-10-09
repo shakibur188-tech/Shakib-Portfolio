@@ -23,13 +23,16 @@
         extend: {
           colors: {
             palette: {
-              olive: '#0066FF',
-              forest: '#0B0F19',
-              slate: '#0066FF',
-              mist: '#94A3B8',
-              stone: '#CBD5E1'
+              olive: '#06D6A0',
+              forest: '#0C4137',
+              slate: '#06D6A0',
+              mist: '#73968E',
+              stone: '#D7EFE9',
+              emerald: '#06D6A0',
+              brunswick: '#0C4137',
+              polar: '#E6FBF6'
             },
-            canvas: '#FAFCFF'
+            canvas: '#F4FBF8'
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
@@ -44,7 +47,7 @@
   <!-- Custom Unified Morphy Stylesheet -->
   <link rel="stylesheet" href="/styles.css">
 </head>
-<body class="bg-[#FAFCFF] text-[#0B0F19] font-sans antialiased selection:bg-[#0066FF] selection:text-white relative overflow-x-hidden">
+<body class="bg-[#F4FBF8] text-[#08201A] font-sans antialiased selection:bg-[#06D6A0] selection:text-white relative overflow-x-hidden">
 
   <!-- 0. Top Scroll Progress Bar -->
   <div id="scrollProgressBar"></div>
@@ -56,60 +59,60 @@
 
   <!-- 2. FIXED NAVBAR -->
             <!-- 1. FIXED GLASS NAVBAR (Morphy Style) -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-2xl border-b border-[#E2E8F0] transition-all duration-300 shadow-2xs">
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-2xl border-b border-[#D7EFE9] transition-all duration-300 shadow-2xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
       <!-- Brand Logo -->
       <a href="/" class="flex items-center gap-3 group min-w-0">
-        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#0066FF] to-[#0040C1] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#0066FF]/25 border border-white/20 shrink-0">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#06D6A0] to-[#0C4137] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#06D6A0]/25 border border-white/20 shrink-0">
           ✦
         </div>
         <div class="flex flex-col min-w-0">
-          <span class="font-extrabold text-[#0B0F19] tracking-tight text-base sm:text-lg group-hover:text-[#0066FF] transition-colors truncate" id="navBrandName">Md. Shakibur Rahaman</span>
-          <span class="text-[10px] text-[#0066FF] font-extrabold tracking-wider uppercase truncate">Strategic Lead &amp; Digital Architect</span>
+          <span class="font-extrabold text-[#08201A] tracking-tight text-base sm:text-lg group-hover:text-[#06D6A0] transition-colors truncate" id="navBrandName">Md. Shakibur Rahaman</span>
+          <span class="text-[10px] text-[#06D6A0] font-extrabold tracking-wider uppercase truncate">Strategic Lead &amp; Digital Architect</span>
         </div>
       </a>
 
       <!-- Centered Floating Pill Navigation Menu (Desktop Only) -->
-      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-white/95 border border-[#E2E8F0] text-sm font-semibold text-[#334155] backdrop-blur-md shadow-xs shrink-0">
-        <a href="/" class="hover:text-[#0066FF] transition-colors">Home</a>
-        <a href="/about" class="hover:text-[#0066FF] transition-colors">About</a>
+      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-white/95 border border-[#D7EFE9] text-sm font-semibold text-[#334155] backdrop-blur-md shadow-xs shrink-0">
+        <a href="/" class="hover:text-[#06D6A0] transition-colors">Home</a>
+        <a href="/about" class="hover:text-[#06D6A0] transition-colors">About</a>
         
         <!-- Services with dropdown arrow -->
         <div class="relative group">
-          <a href="/services" class="flex items-center gap-1.5 hover:text-[#0066FF] transition-colors py-1">
+          <a href="/services" class="flex items-center gap-1.5 hover:text-[#06D6A0] transition-colors py-1">
             <span>Services</span>
-            <i class="fa-solid fa-chevron-down text-[10px] text-[#64748B] group-hover:text-[#0066FF] group-hover:rotate-180 transition-transform duration-200"></i>
+            <i class="fa-solid fa-chevron-down text-[10px] text-[#64748B] group-hover:text-[#06D6A0] group-hover:rotate-180 transition-transform duration-200"></i>
           </a>
           <!-- Dropdown card -->
-          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#E2E8F0] shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Social Media &amp; Meta Ads</a>
-            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Google Ads &amp; Search</a>
-            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Full-Stack Web Development</a>
-            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">SEO &amp; AI Engine Optimization</a>
-            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Graphics &amp; Visual Assets</a>
-            <div class="my-1.5 border-t border-[#E2E8F0]"></div>
-            <a href="/services" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#0066FF] hover:bg-[#0066FF]/10 text-center">View All 9 Services &rarr;</a>
+          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#D7EFE9] shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Social Media &amp; Meta Ads</a>
+            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Google Ads &amp; Search</a>
+            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Full-Stack Web Development</a>
+            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">SEO &amp; AI Engine Optimization</a>
+            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Graphics &amp; Visual Assets</a>
+            <div class="my-1.5 border-t border-[#D7EFE9]"></div>
+            <a href="/services" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#06D6A0] hover:bg-[#06D6A0]/10 text-center">View All 9 Services &rarr;</a>
           </div>
         </div>
 
-        <a href="/projects" class="text-[#0066FF] font-bold transition-colors">Projects</a>
-        <a href="/experience" class="hover:text-[#0066FF] transition-colors">Experience</a>
-        <a href="/offers" class="hover:text-[#0066FF] transition-colors">Offers</a>
-        <a href="/consultation" class="hover:text-[#0066FF] transition-colors">Consultation</a>
+        <a href="/projects" class="text-[#06D6A0] font-bold transition-colors">Projects</a>
+        <a href="/experience" class="hover:text-[#06D6A0] transition-colors">Experience</a>
+        <a href="/offers" class="hover:text-[#06D6A0] transition-colors">Offers</a>
+        <a href="/consultation" class="hover:text-[#06D6A0] transition-colors">Consultation</a>
       </nav>
 
       <!-- Right Header Actions (Mobile Hamburger Toggle) -->
       <div class="flex items-center gap-3 shrink-0">
-        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-white border border-[#E2E8F0] hover:border-[#0066FF]/30 hover:bg-[#0066FF]/5 text-[#0B0F19] hover:text-[#0066FF] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
+        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-white border border-[#D7EFE9] hover:border-[#06D6A0]/30 hover:bg-[#06D6A0]/5 text-[#08201A] hover:text-[#06D6A0] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
           <i id="mobileMenuIcon" class="fa-solid fa-bars-staggered text-base"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Dropdown Menu (Morphy Glassmorphic Design) -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-x border-[#E2E8F0] rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
-      <div class="space-y-1.5 pb-3 border-b border-[#F1F5F9]">
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-x border-[#D7EFE9] rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
+      <div class="space-y-1.5 pb-3 border-b border-[#E2F4EF]">
         <a href="/" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
             <i class="fa-solid fa-house-chimney text-xs text-[#64748B] w-4"></i>
@@ -129,11 +132,11 @@
             <i class="fa-solid fa-layer-group text-xs text-[#64748B] w-4"></i>
             <span>Services</span>
           </span>
-          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#0066FF]/10 text-[#0066FF]">9 Pillars</span>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#06D6A0]/10 text-[#06D6A0]">9 Pillars</span>
         </a>
         <a href="/projects" class="mobile-nav-link mobile-link flex items-center justify-between active">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-briefcase text-xs text-[#0066FF] w-4"></i>
+            <i class="fa-solid fa-briefcase text-xs text-[#06D6A0] w-4"></i>
             <span>Projects</span>
           </span>
           <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#10B981]/10 text-[#10B981]">Featured</span>
@@ -147,16 +150,16 @@
         </a>
         <a href="/offers" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-tags text-xs text-[#0066FF] w-4"></i>
-            <span class="font-bold text-[#0066FF]">Special Offers</span>
+            <i class="fa-solid fa-tags text-xs text-[#06D6A0] w-4"></i>
+            <span class="font-bold text-[#06D6A0]">Special Offers</span>
           </span>
-          <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-gradient-to-r from-[#0066FF] to-[#0052FF] text-white shadow-xs">EMI 🔥</span>
+          <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-gradient-to-r from-[#06D6A0] to-[#05B386] text-white shadow-xs">EMI 🔥</span>
         </a>
       </div>
 
       <!-- Quick Action Contact in Mobile Menu -->
       <div class="pt-2 flex items-center gap-2">
-        <a href="/contact" class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#0066FF] to-[#0052FF] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-[#0066FF]/25 hover:shadow-lg transition-all active:scale-98">
+        <a href="/contact" class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#06D6A0] to-[#05B386] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-[#06D6A0]/25 hover:shadow-lg transition-all active:scale-98">
           <i class="fa-solid fa-paper-plane text-xs"></i>
           <span>Get in Touch</span>
         </a>
@@ -176,9 +179,9 @@
         <span>15 PRODUCTION PLATFORMS DEPLOYED</span>
       </div>
 
-      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.08] max-w-5xl mx-auto">
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-[#08201A] tracking-tight leading-[1.08] max-w-5xl mx-auto">
         High-Performance Web Platforms &amp; <br>
-        <span class="bg-gradient-to-r from-[#0066FF] to-[#0052FF] bg-clip-text text-transparent">Commercial Flagships.</span>
+        <span class="bg-gradient-to-r from-[#06D6A0] to-[#05B386] bg-clip-text text-transparent">Commercial Flagships.</span>
       </h1>
 
       <p class="text-sm sm:text-base text-[#64748B] max-w-3xl mx-auto leading-relaxed">
@@ -188,20 +191,20 @@
       <!-- Key Stat Counters Strip -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto pt-6">
         <div class="morphy-card p-5 text-center bg-white shadow-xs">
-          <div class="text-2xl sm:text-3xl font-extrabold text-[#0B0F19]" data-counter-target="15" data-counter-suffix="+">15+</div>
-          <div class="text-[11px] text-[#0066FF] uppercase mt-1 font-bold">Live Portals</div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-[#08201A]" data-counter-target="15" data-counter-suffix="+">15+</div>
+          <div class="text-[11px] text-[#06D6A0] uppercase mt-1 font-bold">Live Portals</div>
         </div>
         <div class="morphy-card p-5 text-center bg-white shadow-xs">
-          <div class="text-2xl sm:text-3xl font-extrabold text-[#0B0F19]" data-counter-target="0.6" data-counter-suffix="s">0.6s</div>
-          <div class="text-[11px] text-[#0066FF] uppercase mt-1 font-bold">TTFB Latency</div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-[#08201A]" data-counter-target="0.6" data-counter-suffix="s">0.6s</div>
+          <div class="text-[11px] text-[#06D6A0] uppercase mt-1 font-bold">TTFB Latency</div>
         </div>
         <div class="morphy-card p-5 text-center bg-white shadow-xs">
-          <div class="text-2xl sm:text-3xl font-extrabold text-[#0B0F19]" data-counter-target="99" data-counter-suffix="/100">99/100</div>
-          <div class="text-[11px] text-[#0066FF] uppercase mt-1 font-bold">PageSpeed Score</div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-[#08201A]" data-counter-target="99" data-counter-suffix="/100">99/100</div>
+          <div class="text-[11px] text-[#06D6A0] uppercase mt-1 font-bold">PageSpeed Score</div>
         </div>
         <div class="morphy-card p-5 text-center bg-white shadow-xs">
-          <div class="text-2xl sm:text-3xl font-extrabold text-[#0B0F19]" data-counter-target="100" data-counter-suffix="%">100%</div>
-          <div class="text-[11px] text-[#0066FF] uppercase mt-1 font-bold">Clean Code &amp; IP</div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-[#08201A]" data-counter-target="100" data-counter-suffix="%">100%</div>
+          <div class="text-[11px] text-[#06D6A0] uppercase mt-1 font-bold">Clean Code &amp; IP</div>
         </div>
       </div>
 
@@ -209,34 +212,34 @@
   </section>
 
   <!-- 4. ENGINEERING PHILOSOPHY BENTO STRIP -->
-  <section class="py-12 border-t border-[#E2E8F0] bg-white relative z-10">
+  <section class="py-12 border-t border-[#D7EFE9] bg-white relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="morphy-card p-7 bg-[#F8FAFC] border border-[#E2E8F0] space-y-3">
-          <div class="w-10 h-10 rounded-2xl bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-base">
+        <div class="morphy-card p-7 bg-[#EDF9F5] border border-[#D7EFE9] space-y-3">
+          <div class="w-10 h-10 rounded-2xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-base">
             <i class="fa-solid fa-gauge-high"></i>
           </div>
-          <h3 class="text-lg font-black text-[#0B0F19]">Sub-Second Speed &amp; Core Web Vitals</h3>
+          <h3 class="text-lg font-black text-[#08201A]">Sub-Second Speed &amp; Core Web Vitals</h3>
           <p class="text-xs text-[#64748B] leading-relaxed">
             Every platform is optimized for 95+ Google PageSpeed with zero render-blocking bloat, optimized WebP assets, and edge CDN routing.
           </p>
         </div>
 
-        <div class="morphy-card p-7 bg-[#F8FAFC] border border-[#E2E8F0] space-y-3">
-          <div class="w-10 h-10 rounded-2xl bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-base">
+        <div class="morphy-card p-7 bg-[#EDF9F5] border border-[#D7EFE9] space-y-3">
+          <div class="w-10 h-10 rounded-2xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-base">
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
-          <h3 class="text-lg font-black text-[#0B0F19]">Conversion-Obsessed Architecture</h3>
+          <h3 class="text-lg font-black text-[#08201A]">Conversion-Obsessed Architecture</h3>
           <p class="text-xs text-[#64748B] leading-relaxed">
             Strategic checkout funnels, direct booking engines, and friction-free intake workflows designed to maximize client revenue.
           </p>
         </div>
 
-        <div class="morphy-card p-7 bg-[#F8FAFC] border border-[#E2E8F0] space-y-3">
-          <div class="w-10 h-10 rounded-2xl bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-base">
+        <div class="morphy-card p-7 bg-[#EDF9F5] border border-[#D7EFE9] space-y-3">
+          <div class="w-10 h-10 rounded-2xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-base">
             <i class="fa-solid fa-shield-halved"></i>
           </div>
-          <h3 class="text-lg font-black text-[#0B0F19]">100% Client IP &amp; Clean Code</h3>
+          <h3 class="text-lg font-black text-[#08201A]">100% Client IP &amp; Clean Code</h3>
           <p class="text-xs text-[#64748B] leading-relaxed">
             Zero vendor lock-in. Full ownership of semantic codebase, custom design systems, documentation, and database architecture.
           </p>
@@ -246,7 +249,7 @@
   </section>
 
   <!-- 5. FILTER BAR & 15 DETAILED PROJECTS GRID -->
-  <section class="py-16 md:py-24 border-t border-[#E2E8F0] bg-[#FAFCFF] relative z-10">
+  <section class="py-16 md:py-24 border-t border-[#D7EFE9] bg-[#F4FBF8] relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Category Filter Pills -->
@@ -262,34 +265,34 @@
       <!-- Projects Grid: Strictly 3 cards per row on desktop -->
       <div id="fullProjectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] project-card" data-category="Architecture">
+    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#06D6A0] hover:shadow-2xl hover:shadow-[#06D6A0]/15 bg-white border border-[#D7EFE9] project-card" data-category="Architecture">
       
       <!-- Modern Browser Mockup Top Bar -->
-      <div class="px-5 py-3.5 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+      <div class="px-5 py-3.5 bg-[#EDF9F5] border-b border-[#D7EFE9] flex items-center justify-between">
         <div class="flex items-center gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/90"></span>
         </div>
-        <div class="px-3 py-1 rounded-full bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
+        <div class="px-3 py-1 rounded-full bg-white border border-[#D7EFE9] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
           interior.asapsl.com
         </div>
-        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase tracking-wider">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#06D6A0]/10 text-[#06D6A0] uppercase tracking-wider">
           Architecture & Interior
         </span>
       </div>
 
       <!-- High-Resolution Project Screenshot Preview -->
-      <div class="relative h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <div class="relative h-52 w-full overflow-hidden bg-[#08201A]">
         <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="ASAP Interior Solutions" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/85 via-[#0B0F19]/25 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#08201A]/85 via-[#08201A]/25 to-transparent"></div>
         
         <!-- Top Project Index Badge (for top flagships) -->
-        <div class="absolute top-3.5 left-4 px-2.5 py-0.5 rounded-full bg-[#0066FF] text-white text-[10px] font-black tracking-wider uppercase shadow-md">Flagship #1</div>
+        <div class="absolute top-3.5 left-4 px-2.5 py-0.5 rounded-full bg-[#06D6A0] text-white text-[10px] font-black tracking-wider uppercase shadow-md">Flagship #1</div>
 
         <!-- Bottom Floating Client Tag -->
         <div class="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white">
-          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#0B0F19] shadow-sm truncate max-w-[200px]">ASAP Solutions Limited</span>
+          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#08201A] shadow-sm truncate max-w-[200px]">ASAP Solutions Limited</span>
           <span class="px-2.5 py-1 rounded-full bg-[#10B981]/25 backdrop-blur-md text-[10px] font-black text-[#10B981] border border-[#10B981]/30 shrink-0">● Live Production</span>
         </div>
       </div>
@@ -298,57 +301,57 @@
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
         <div>
           <!-- Title & Value Headline -->
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-snug">
+          <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-snug">
             ASAP Interior Solutions
           </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-0.5 mb-2.5">
+          <p class="text-xs font-bold text-[#06D6A0] mt-0.5 mb-2.5">
             Commercial & Residential Interior Architecture Flagship
           </p>
 
           <!-- Problem & Solution Narrative -->
-          <div class="space-y-2 p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#F1F5F9] mb-4">
+          <div class="space-y-2 p-3.5 rounded-2xl bg-[#EDF9F5] border border-[#E2F4EF] mb-4">
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0B0F19]">Challenge:</span> Consultation inquiries were scattered across unstructured channels without a centralized 3D project showcase or instant quotation calculator.
+              <span class="font-extrabold text-[#08201A]">Challenge:</span> Consultation inquiries were scattered across unstructured channels without a centralized 3D project showcase or instant quotation calculator.
             </div>
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0066FF]">Solution:</span> Engineered a high-converting corporate interior architecture platform featuring interactive spatial project galleries, service tier breakdowns, and an automated consultation booking engine.
+              <span class="font-extrabold text-[#06D6A0]">Solution:</span> Engineered a high-converting corporate interior architecture platform featuring interactive spatial project galleries, service tier breakdowns, and an automated consultation booking engine.
             </div>
           </div>
 
           <!-- Key Deliverables List -->
-          <ul class="space-y-2 pt-2 border-t border-[#F1F5F9]">
+          <ul class="space-y-2 pt-2 border-t border-[#E2F4EF]">
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Interactive 3D spatial project portfolio with before/after views</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Smart quotation intake form with budget & area calculator</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Direct WhatsApp and calendar consultation scheduling integration</span>
               </li>
             
           </ul>
 
           <!-- Tech Stack Badges -->
-          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#F1F5F9]">
-            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Next.js</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Framer Motion</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">REST Booking API</span>
+          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#E2F4EF]">
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Next.js</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Framer Motion</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">REST Booking API</span>
           </div>
         </div>
 
         <!-- Metric & Action Bar -->
-        <div class="pt-4 border-t border-[#F1F5F9] space-y-3">
-          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15">
-            <span class="text-[11px] font-extrabold text-[#0066FF]">+310% Inbound Inquiries</span>
+        <div class="pt-4 border-t border-[#E2F4EF] space-y-3">
+          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#06D6A0]/5 border border-[#06D6A0]/15">
+            <span class="text-[11px] font-extrabold text-[#06D6A0]">+310% Inbound Inquiries</span>
             <span class="text-[10.5px] font-bold text-[#64748B]">0.7s Fast Load</span>
           </div>
 
-          <a href="https://interior.asapsl.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <a href="https://interior.asapsl.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#EDF9F5] group-hover:bg-gradient-to-r group-hover:from-[#06D6A0] group-hover:to-[#05B386] text-[#08201A] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D7EFE9] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#06D6A0]/30">
             <span>Visit Live Platform</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
           </a>
@@ -358,34 +361,34 @@
     </div>
   
 
-    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] project-card" data-category="E-Commerce">
+    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#06D6A0] hover:shadow-2xl hover:shadow-[#06D6A0]/15 bg-white border border-[#D7EFE9] project-card" data-category="E-Commerce">
       
       <!-- Modern Browser Mockup Top Bar -->
-      <div class="px-5 py-3.5 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+      <div class="px-5 py-3.5 bg-[#EDF9F5] border-b border-[#D7EFE9] flex items-center justify-between">
         <div class="flex items-center gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/90"></span>
         </div>
-        <div class="px-3 py-1 rounded-full bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
+        <div class="px-3 py-1 rounded-full bg-white border border-[#D7EFE9] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
           luxorafurniture.com
         </div>
-        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase tracking-wider">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#06D6A0]/10 text-[#06D6A0] uppercase tracking-wider">
           E-Commerce & Retail
         </span>
       </div>
 
       <!-- High-Resolution Project Screenshot Preview -->
-      <div class="relative h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <div class="relative h-52 w-full overflow-hidden bg-[#08201A]">
         <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" alt="Luxora Furniture" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/85 via-[#0B0F19]/25 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#08201A]/85 via-[#08201A]/25 to-transparent"></div>
         
         <!-- Top Project Index Badge (for top flagships) -->
-        <div class="absolute top-3.5 left-4 px-2.5 py-0.5 rounded-full bg-[#0066FF] text-white text-[10px] font-black tracking-wider uppercase shadow-md">Flagship #2</div>
+        <div class="absolute top-3.5 left-4 px-2.5 py-0.5 rounded-full bg-[#06D6A0] text-white text-[10px] font-black tracking-wider uppercase shadow-md">Flagship #2</div>
 
         <!-- Bottom Floating Client Tag -->
         <div class="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white">
-          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#0B0F19] shadow-sm truncate max-w-[200px]">Luxora Luxury Furnishings</span>
+          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#08201A] shadow-sm truncate max-w-[200px]">Luxora Luxury Furnishings</span>
           <span class="px-2.5 py-1 rounded-full bg-[#10B981]/25 backdrop-blur-md text-[10px] font-black text-[#10B981] border border-[#10B981]/30 shrink-0">● Live Production</span>
         </div>
       </div>
@@ -394,57 +397,57 @@
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
         <div>
           <!-- Title & Value Headline -->
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-snug">
+          <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-snug">
             Luxora Furniture
           </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-0.5 mb-2.5">
+          <p class="text-xs font-bold text-[#06D6A0] mt-0.5 mb-2.5">
             Bespoke Luxury Furniture D2C E-Commerce Storefront
           </p>
 
           <!-- Problem & Solution Narrative -->
-          <div class="space-y-2 p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#F1F5F9] mb-4">
+          <div class="space-y-2 p-3.5 rounded-2xl bg-[#EDF9F5] border border-[#E2F4EF] mb-4">
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0B0F19]">Challenge:</span> Complex custom furniture variants (fabrics, wood finishes, dimensions) caused high user drop-off during online checkout.
+              <span class="font-extrabold text-[#08201A]">Challenge:</span> Complex custom furniture variants (fabrics, wood finishes, dimensions) caused high user drop-off during online checkout.
             </div>
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0066FF]">Solution:</span> Designed a luxury headless e-commerce store with dynamic product finish selectors, room visualization guides, and an accelerated 1-click checkout.
+              <span class="font-extrabold text-[#06D6A0]">Solution:</span> Designed a luxury headless e-commerce store with dynamic product finish selectors, room visualization guides, and an accelerated 1-click checkout.
             </div>
           </div>
 
           <!-- Key Deliverables List -->
-          <ul class="space-y-2 pt-2 border-t border-[#F1F5F9]">
+          <ul class="space-y-2 pt-2 border-t border-[#E2F4EF]">
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Dynamic finish & fabric visual customizer with live pricing</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Frictionless checkout with multi-currency & COD payment support</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Real-time nationwide inventory & courier dispatch tracking</span>
               </li>
             
           </ul>
 
           <!-- Tech Stack Badges -->
-          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#F1F5F9]">
-            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Shopify Headless</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Custom Variant Engine</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Stripe</span>
+          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#E2F4EF]">
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Shopify Headless</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Custom Variant Engine</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Stripe</span>
           </div>
         </div>
 
         <!-- Metric & Action Bar -->
-        <div class="pt-4 border-t border-[#F1F5F9] space-y-3">
-          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15">
-            <span class="text-[11px] font-extrabold text-[#0066FF]">+45% Conversion Lift</span>
+        <div class="pt-4 border-t border-[#E2F4EF] space-y-3">
+          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#06D6A0]/5 border border-[#06D6A0]/15">
+            <span class="text-[11px] font-extrabold text-[#06D6A0]">+45% Conversion Lift</span>
             <span class="text-[10.5px] font-bold text-[#64748B]">11.8x Peak ROAS</span>
           </div>
 
-          <a href="https://luxorafurniture.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <a href="https://luxorafurniture.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#EDF9F5] group-hover:bg-gradient-to-r group-hover:from-[#06D6A0] group-hover:to-[#05B386] text-[#08201A] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D7EFE9] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#06D6A0]/30">
             <span>Visit Live Platform</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
           </a>
@@ -454,34 +457,34 @@
     </div>
   
 
-    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] project-card" data-category="Architecture">
+    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#06D6A0] hover:shadow-2xl hover:shadow-[#06D6A0]/15 bg-white border border-[#D7EFE9] project-card" data-category="Architecture">
       
       <!-- Modern Browser Mockup Top Bar -->
-      <div class="px-5 py-3.5 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+      <div class="px-5 py-3.5 bg-[#EDF9F5] border-b border-[#D7EFE9] flex items-center justify-between">
         <div class="flex items-center gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/90"></span>
         </div>
-        <div class="px-3 py-1 rounded-full bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
+        <div class="px-3 py-1 rounded-full bg-white border border-[#D7EFE9] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
           interior3.shakibur.info
         </div>
-        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase tracking-wider">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#06D6A0]/10 text-[#06D6A0] uppercase tracking-wider">
           Architecture & Interior
         </span>
       </div>
 
       <!-- High-Resolution Project Screenshot Preview -->
-      <div class="relative h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <div class="relative h-52 w-full overflow-hidden bg-[#08201A]">
         <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="UDC (Unity Design Consultancy)" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/85 via-[#0B0F19]/25 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#08201A]/85 via-[#08201A]/25 to-transparent"></div>
         
         <!-- Top Project Index Badge (for top flagships) -->
-        <div class="absolute top-3.5 left-4 px-2.5 py-0.5 rounded-full bg-[#0066FF] text-white text-[10px] font-black tracking-wider uppercase shadow-md">Flagship #3</div>
+        <div class="absolute top-3.5 left-4 px-2.5 py-0.5 rounded-full bg-[#06D6A0] text-white text-[10px] font-black tracking-wider uppercase shadow-md">Flagship #3</div>
 
         <!-- Bottom Floating Client Tag -->
         <div class="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white">
-          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#0B0F19] shadow-sm truncate max-w-[200px]">Unity Design Consultancy</span>
+          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#08201A] shadow-sm truncate max-w-[200px]">Unity Design Consultancy</span>
           <span class="px-2.5 py-1 rounded-full bg-[#10B981]/25 backdrop-blur-md text-[10px] font-black text-[#10B981] border border-[#10B981]/30 shrink-0">● Live Production</span>
         </div>
       </div>
@@ -490,57 +493,57 @@
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
         <div>
           <!-- Title & Value Headline -->
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-snug">
+          <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-snug">
             UDC (Unity Design Consultancy)
           </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-0.5 mb-2.5">
+          <p class="text-xs font-bold text-[#06D6A0] mt-0.5 mb-2.5">
             Architectural Design & Structural Engineering Consultation Hub
           </p>
 
           <!-- Problem & Solution Narrative -->
-          <div class="space-y-2 p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#F1F5F9] mb-4">
+          <div class="space-y-2 p-3.5 rounded-2xl bg-[#EDF9F5] border border-[#E2F4EF] mb-4">
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0B0F19]">Challenge:</span> Communicating complex structural engineering, BIM modeling, and master-planning scopes to high-value institutional developers.
+              <span class="font-extrabold text-[#08201A]">Challenge:</span> Communicating complex structural engineering, BIM modeling, and master-planning scopes to high-value institutional developers.
             </div>
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0066FF]">Solution:</span> Architected an authoritative architectural consultancy hub featuring interactive blueprint case studies, client testimonial carousels, and a multi-step RFP intake flow.
+              <span class="font-extrabold text-[#06D6A0]">Solution:</span> Architected an authoritative architectural consultancy hub featuring interactive blueprint case studies, client testimonial carousels, and a multi-step RFP intake flow.
             </div>
           </div>
 
           <!-- Key Deliverables List -->
-          <ul class="space-y-2 pt-2 border-t border-[#F1F5F9]">
+          <ul class="space-y-2 pt-2 border-t border-[#E2F4EF]">
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Interactive architectural blueprint & 3D render case study explorer</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Enterprise Request for Proposal (RFP/RFQ) multi-step intake flow</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Fast edge-rendered portfolio with sub-second asset delivery</span>
               </li>
             
           </ul>
 
           <!-- Tech Stack Badges -->
-          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#F1F5F9]">
-            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Next.js 14</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Blueprint Viewer</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Node.js</span>
+          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#E2F4EF]">
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Next.js 14</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Blueprint Viewer</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Node.js</span>
           </div>
         </div>
 
         <!-- Metric & Action Bar -->
-        <div class="pt-4 border-t border-[#F1F5F9] space-y-3">
-          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15">
-            <span class="text-[11px] font-extrabold text-[#0066FF]">99/100 PageSpeed</span>
+        <div class="pt-4 border-t border-[#E2F4EF] space-y-3">
+          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#06D6A0]/5 border border-[#06D6A0]/15">
+            <span class="text-[11px] font-extrabold text-[#06D6A0]">99/100 PageSpeed</span>
             <span class="text-[10.5px] font-bold text-[#64748B]">+260% RFP Submissions</span>
           </div>
 
-          <a href="https://interior3.shakibur.info" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <a href="https://interior3.shakibur.info" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#EDF9F5] group-hover:bg-gradient-to-r group-hover:from-[#06D6A0] group-hover:to-[#05B386] text-[#08201A] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D7EFE9] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#06D6A0]/30">
             <span>Visit Live Platform</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
           </a>
@@ -550,34 +553,34 @@
     </div>
   
 
-    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] project-card" data-category="Media">
+    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#06D6A0] hover:shadow-2xl hover:shadow-[#06D6A0]/15 bg-white border border-[#D7EFE9] project-card" data-category="Media">
       
       <!-- Modern Browser Mockup Top Bar -->
-      <div class="px-5 py-3.5 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+      <div class="px-5 py-3.5 bg-[#EDF9F5] border-b border-[#D7EFE9] flex items-center justify-between">
         <div class="flex items-center gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/90"></span>
         </div>
-        <div class="px-3 py-1 rounded-full bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
+        <div class="px-3 py-1 rounded-full bg-white border border-[#D7EFE9] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
           news.shakibur.info
         </div>
-        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase tracking-wider">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#06D6A0]/10 text-[#06D6A0] uppercase tracking-wider">
           Media & Publications
         </span>
       </div>
 
       <!-- High-Resolution Project Screenshot Preview -->
-      <div class="relative h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <div class="relative h-52 w-full overflow-hidden bg-[#08201A]">
         <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80" alt="Gram Banglar Poth e Poth e" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/85 via-[#0B0F19]/25 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#08201A]/85 via-[#08201A]/25 to-transparent"></div>
         
         <!-- Top Project Index Badge (for top flagships) -->
-        <div class="absolute top-3.5 left-4 px-2.5 py-0.5 rounded-full bg-[#0066FF] text-white text-[10px] font-black tracking-wider uppercase shadow-md">Flagship #4</div>
+        <div class="absolute top-3.5 left-4 px-2.5 py-0.5 rounded-full bg-[#06D6A0] text-white text-[10px] font-black tracking-wider uppercase shadow-md">Flagship #4</div>
 
         <!-- Bottom Floating Client Tag -->
         <div class="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white">
-          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#0B0F19] shadow-sm truncate max-w-[200px]">Gram Banglar Poth e Poth e Media</span>
+          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#08201A] shadow-sm truncate max-w-[200px]">Gram Banglar Poth e Poth e Media</span>
           <span class="px-2.5 py-1 rounded-full bg-[#10B981]/25 backdrop-blur-md text-[10px] font-black text-[#10B981] border border-[#10B981]/30 shrink-0">● Live Production</span>
         </div>
       </div>
@@ -586,57 +589,57 @@
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
         <div>
           <!-- Title & Value Headline -->
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-snug">
+          <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-snug">
             Gram Banglar Poth e Poth e
           </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-0.5 mb-2.5">
+          <p class="text-xs font-bold text-[#06D6A0] mt-0.5 mb-2.5">
             High-Traffic Cultural Documentary & Digital News Publication
           </p>
 
           <!-- Problem & Solution Narrative -->
-          <div class="space-y-2 p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#F1F5F9] mb-4">
+          <div class="space-y-2 p-3.5 rounded-2xl bg-[#EDF9F5] border border-[#E2F4EF] mb-4">
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0B0F19]">Challenge:</span> Massive traffic surges during breaking cultural stories causing server bottlenecks, high mobile bounce rates, and layout shifts.
+              <span class="font-extrabold text-[#08201A]">Challenge:</span> Massive traffic surges during breaking cultural stories causing server bottlenecks, high mobile bounce rates, and layout shifts.
             </div>
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0066FF]">Solution:</span> Engineered an ultra-lightweight, AMP-compatible digital news publication with automated newsletter subscription, video embeds, and category filtering.
+              <span class="font-extrabold text-[#06D6A0]">Solution:</span> Engineered an ultra-lightweight, AMP-compatible digital news publication with automated newsletter subscription, video embeds, and category filtering.
             </div>
           </div>
 
           <!-- Key Deliverables List -->
-          <ul class="space-y-2 pt-2 border-t border-[#F1F5F9]">
+          <ul class="space-y-2 pt-2 border-t border-[#E2F4EF]">
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Lightning-fast reader experience with zero cumulative layout shift (CLS: 0.00)</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Categorized cultural video documentaries & investigative essays repository</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Automated newsletter dispatch and push notification subscription</span>
               </li>
             
           </ul>
 
           <!-- Tech Stack Badges -->
-          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#F1F5F9]">
-            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Next.js</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Headless CMS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Cloudflare CDN</span>
+          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#E2F4EF]">
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Next.js</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Headless CMS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Cloudflare CDN</span>
           </div>
         </div>
 
         <!-- Metric & Action Bar -->
-        <div class="pt-4 border-t border-[#F1F5F9] space-y-3">
-          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15">
-            <span class="text-[11px] font-extrabold text-[#0066FF]">0.5s Reader TTFB</span>
+        <div class="pt-4 border-t border-[#E2F4EF] space-y-3">
+          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#06D6A0]/5 border border-[#06D6A0]/15">
+            <span class="text-[11px] font-extrabold text-[#06D6A0]">0.5s Reader TTFB</span>
             <span class="text-[10.5px] font-bold text-[#64748B]">50k+ Daily Readers</span>
           </div>
 
-          <a href="https://news.shakibur.info" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <a href="https://news.shakibur.info" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#EDF9F5] group-hover:bg-gradient-to-r group-hover:from-[#06D6A0] group-hover:to-[#05B386] text-[#08201A] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D7EFE9] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#06D6A0]/30">
             <span>Visit Live Platform</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
           </a>
@@ -646,34 +649,34 @@
     </div>
   
 
-    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] project-card" data-category="Hospitality">
+    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#06D6A0] hover:shadow-2xl hover:shadow-[#06D6A0]/15 bg-white border border-[#D7EFE9] project-card" data-category="Hospitality">
       
       <!-- Modern Browser Mockup Top Bar -->
-      <div class="px-5 py-3.5 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+      <div class="px-5 py-3.5 bg-[#EDF9F5] border-b border-[#D7EFE9] flex items-center justify-between">
         <div class="flex items-center gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/90"></span>
         </div>
-        <div class="px-3 py-1 rounded-full bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
+        <div class="px-3 py-1 rounded-full bg-white border border-[#D7EFE9] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
           hotel.shakibur.info
         </div>
-        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase tracking-wider">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#06D6A0]/10 text-[#06D6A0] uppercase tracking-wider">
           Hospitality & Booking
         </span>
       </div>
 
       <!-- High-Resolution Project Screenshot Preview -->
-      <div class="relative h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <div class="relative h-52 w-full overflow-hidden bg-[#08201A]">
         <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Hotel Booking Platform" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/85 via-[#0B0F19]/25 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#08201A]/85 via-[#08201A]/25 to-transparent"></div>
         
         <!-- Top Project Index Badge (for top flagships) -->
-        <div class="absolute top-3.5 left-4 px-2.5 py-0.5 rounded-full bg-[#0066FF] text-white text-[10px] font-black tracking-wider uppercase shadow-md">Flagship #5</div>
+        <div class="absolute top-3.5 left-4 px-2.5 py-0.5 rounded-full bg-[#06D6A0] text-white text-[10px] font-black tracking-wider uppercase shadow-md">Flagship #5</div>
 
         <!-- Bottom Floating Client Tag -->
         <div class="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white">
-          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#0B0F19] shadow-sm truncate max-w-[200px]">Shakib Hospitality Flagship</span>
+          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#08201A] shadow-sm truncate max-w-[200px]">Shakib Hospitality Flagship</span>
           <span class="px-2.5 py-1 rounded-full bg-[#10B981]/25 backdrop-blur-md text-[10px] font-black text-[#10B981] border border-[#10B981]/30 shrink-0">● Live Production</span>
         </div>
       </div>
@@ -682,57 +685,57 @@
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
         <div>
           <!-- Title & Value Headline -->
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-snug">
+          <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-snug">
             Hotel Booking Platform
           </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-0.5 mb-2.5">
+          <p class="text-xs font-bold text-[#06D6A0] mt-0.5 mb-2.5">
             5-Star Direct Hotel Reservation & Dining Concierge Engine
           </p>
 
           <!-- Problem & Solution Narrative -->
-          <div class="space-y-2 p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#F1F5F9] mb-4">
+          <div class="space-y-2 p-3.5 rounded-2xl bg-[#EDF9F5] border border-[#E2F4EF] mb-4">
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0B0F19]">Challenge:</span> Traditional hotel booking templates are bloated, slow, and lose up to 70% of potential guests before checkout confirmation.
+              <span class="font-extrabold text-[#08201A]">Challenge:</span> Traditional hotel booking templates are bloated, slow, and lose up to 70% of potential guests before checkout confirmation.
             </div>
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0066FF]">Solution:</span> Built an ultra-modern luxury booking engine featuring instant date-range room availability, add-on dining packages, and multi-currency instant checkout.
+              <span class="font-extrabold text-[#06D6A0]">Solution:</span> Built an ultra-modern luxury booking engine featuring instant date-range room availability, add-on dining packages, and multi-currency instant checkout.
             </div>
           </div>
 
           <!-- Key Deliverables List -->
-          <ul class="space-y-2 pt-2 border-t border-[#F1F5F9]">
+          <ul class="space-y-2 pt-2 border-t border-[#E2F4EF]">
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Direct reservation workflow with real-time room availability matrix</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Dining table reservation & spa package add-on bundling</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Instant booking confirmation with automated email & SMS ticketing</span>
               </li>
             
           </ul>
 
           <!-- Tech Stack Badges -->
-          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#F1F5F9]">
-            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Next.js 14</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Availability Engine API</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Stripe</span>
+          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#E2F4EF]">
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Next.js 14</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Availability Engine API</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Stripe</span>
           </div>
         </div>
 
         <!-- Metric & Action Bar -->
-        <div class="pt-4 border-t border-[#F1F5F9] space-y-3">
-          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15">
-            <span class="text-[11px] font-extrabold text-[#0066FF]">+340% Direct Bookings</span>
+        <div class="pt-4 border-t border-[#E2F4EF] space-y-3">
+          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#06D6A0]/5 border border-[#06D6A0]/15">
+            <span class="text-[11px] font-extrabold text-[#06D6A0]">+340% Direct Bookings</span>
             <span class="text-[10.5px] font-bold text-[#64748B]">0.6s Checkout Flow</span>
           </div>
 
-          <a href="https://hotel.shakibur.info" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <a href="https://hotel.shakibur.info" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#EDF9F5] group-hover:bg-gradient-to-r group-hover:from-[#06D6A0] group-hover:to-[#05B386] text-[#08201A] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D7EFE9] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#06D6A0]/30">
             <span>Visit Live Platform</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
           </a>
@@ -742,34 +745,34 @@
     </div>
   
 
-    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] project-card" data-category="Hospitality">
+    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#06D6A0] hover:shadow-2xl hover:shadow-[#06D6A0]/15 bg-white border border-[#D7EFE9] project-card" data-category="Hospitality">
       
       <!-- Modern Browser Mockup Top Bar -->
-      <div class="px-5 py-3.5 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+      <div class="px-5 py-3.5 bg-[#EDF9F5] border-b border-[#D7EFE9] flex items-center justify-between">
         <div class="flex items-center gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/90"></span>
         </div>
-        <div class="px-3 py-1 rounded-full bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
+        <div class="px-3 py-1 rounded-full bg-white border border-[#D7EFE9] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
           peninsulactg.com
         </div>
-        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase tracking-wider">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#06D6A0]/10 text-[#06D6A0] uppercase tracking-wider">
           Hospitality & Booking
         </span>
       </div>
 
       <!-- High-Resolution Project Screenshot Preview -->
-      <div class="relative h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <div class="relative h-52 w-full overflow-hidden bg-[#08201A]">
         <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" alt="The Peninsula Chittagong" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/85 via-[#0B0F19]/25 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#08201A]/85 via-[#08201A]/25 to-transparent"></div>
         
         <!-- Top Project Index Badge (for top flagships) -->
         
 
         <!-- Bottom Floating Client Tag -->
         <div class="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white">
-          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#0B0F19] shadow-sm truncate max-w-[200px]">The Peninsula Hotels Group</span>
+          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#08201A] shadow-sm truncate max-w-[200px]">The Peninsula Hotels Group</span>
           <span class="px-2.5 py-1 rounded-full bg-[#10B981]/25 backdrop-blur-md text-[10px] font-black text-[#10B981] border border-[#10B981]/30 shrink-0">● Live Production</span>
         </div>
       </div>
@@ -778,57 +781,57 @@
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
         <div>
           <!-- Title & Value Headline -->
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-snug">
+          <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-snug">
             The Peninsula Chittagong
           </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-0.5 mb-2.5">
+          <p class="text-xs font-bold text-[#06D6A0] mt-0.5 mb-2.5">
             5-Star Direct Booking Portal & VIP Amenities Engine
           </p>
 
           <!-- Problem & Solution Narrative -->
-          <div class="space-y-2 p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#F1F5F9] mb-4">
+          <div class="space-y-2 p-3.5 rounded-2xl bg-[#EDF9F5] border border-[#E2F4EF] mb-4">
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0B0F19]">Challenge:</span> Heavy dependence on 3rd-party OTAs with high commission fees, sluggish mobile reservations, and lack of real-time dining sync.
+              <span class="font-extrabold text-[#08201A]">Challenge:</span> Heavy dependence on 3rd-party OTAs with high commission fees, sluggish mobile reservations, and lack of real-time dining sync.
             </div>
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0066FF]">Solution:</span> Engineered a headless direct reservation architecture with instant payment processing, interactive 3D suite previews, and automated concierge workflows.
+              <span class="font-extrabold text-[#06D6A0]">Solution:</span> Engineered a headless direct reservation architecture with instant payment processing, interactive 3D suite previews, and automated concierge workflows.
             </div>
           </div>
 
           <!-- Key Deliverables List -->
-          <ul class="space-y-2 pt-2 border-t border-[#F1F5F9]">
+          <ul class="space-y-2 pt-2 border-t border-[#E2F4EF]">
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Direct reservation engine with zero OTA commissions</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Interactive 3D luxury suite & amenities previews</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Sub-second mobile checkout with multi-gateway payments</span>
               </li>
             
           </ul>
 
           <!-- Tech Stack Badges -->
-          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#F1F5F9]">
-            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Next.js 14</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Direct Booking API</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Stripe</span>
+          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#E2F4EF]">
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Next.js 14</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Direct Booking API</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Stripe</span>
           </div>
         </div>
 
         <!-- Metric & Action Bar -->
-        <div class="pt-4 border-t border-[#F1F5F9] space-y-3">
-          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15">
-            <span class="text-[11px] font-extrabold text-[#0066FF]">+320% Direct Bookings</span>
+        <div class="pt-4 border-t border-[#E2F4EF] space-y-3">
+          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#06D6A0]/5 border border-[#06D6A0]/15">
+            <span class="text-[11px] font-extrabold text-[#06D6A0]">+320% Direct Bookings</span>
             <span class="text-[10.5px] font-bold text-[#64748B]">0.7s TTFB</span>
           </div>
 
-          <a href="https://peninsulactg.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <a href="https://peninsulactg.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#EDF9F5] group-hover:bg-gradient-to-r group-hover:from-[#06D6A0] group-hover:to-[#05B386] text-[#08201A] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D7EFE9] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#06D6A0]/30">
             <span>Visit Live Platform</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
           </a>
@@ -838,34 +841,34 @@
     </div>
   
 
-    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] project-card" data-category="Hospitality">
+    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#06D6A0] hover:shadow-2xl hover:shadow-[#06D6A0]/15 bg-white border border-[#D7EFE9] project-card" data-category="Hospitality">
       
       <!-- Modern Browser Mockup Top Bar -->
-      <div class="px-5 py-3.5 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+      <div class="px-5 py-3.5 bg-[#EDF9F5] border-b border-[#D7EFE9] flex items-center justify-between">
         <div class="flex items-center gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/90"></span>
         </div>
-        <div class="px-3 py-1 rounded-full bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
+        <div class="px-3 py-1 rounded-full bg-white border border-[#D7EFE9] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
           agrabadhotels.com
         </div>
-        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase tracking-wider">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#06D6A0]/10 text-[#06D6A0] uppercase tracking-wider">
           Hospitality & Booking
         </span>
       </div>
 
       <!-- High-Resolution Project Screenshot Preview -->
-      <div class="relative h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <div class="relative h-52 w-full overflow-hidden bg-[#08201A]">
         <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80" alt="Hotel Agrabad Luxury" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/85 via-[#0B0F19]/25 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#08201A]/85 via-[#08201A]/25 to-transparent"></div>
         
         <!-- Top Project Index Badge (for top flagships) -->
         
 
         <!-- Bottom Floating Client Tag -->
         <div class="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white">
-          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#0B0F19] shadow-sm truncate max-w-[200px]">Agrabad Luxury Group</span>
+          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#08201A] shadow-sm truncate max-w-[200px]">Agrabad Luxury Group</span>
           <span class="px-2.5 py-1 rounded-full bg-[#10B981]/25 backdrop-blur-md text-[10px] font-black text-[#10B981] border border-[#10B981]/30 shrink-0">● Live Production</span>
         </div>
       </div>
@@ -874,57 +877,57 @@
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
         <div>
           <!-- Title & Value Headline -->
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-snug">
+          <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-snug">
             Hotel Agrabad Luxury
           </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-0.5 mb-2.5">
+          <p class="text-xs font-bold text-[#06D6A0] mt-0.5 mb-2.5">
             Heritage Luxury Hotel Portal & Banquet Event Engine
           </p>
 
           <!-- Problem & Solution Narrative -->
-          <div class="space-y-2 p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#F1F5F9] mb-4">
+          <div class="space-y-2 p-3.5 rounded-2xl bg-[#EDF9F5] border border-[#E2F4EF] mb-4">
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0B0F19]">Challenge:</span> Outdated legacy site with poor mobile conversion, no international currency support, and manual event inquiry processing.
+              <span class="font-extrabold text-[#08201A]">Challenge:</span> Outdated legacy site with poor mobile conversion, no international currency support, and manual event inquiry processing.
             </div>
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0066FF]">Solution:</span> Architected a bespoke digital flagship with dynamic multi-currency payments, 3D banquet hall walkthroughs, and automated VIP reservation pipelines.
+              <span class="font-extrabold text-[#06D6A0]">Solution:</span> Architected a bespoke digital flagship with dynamic multi-currency payments, 3D banquet hall walkthroughs, and automated VIP reservation pipelines.
             </div>
           </div>
 
           <!-- Key Deliverables List -->
-          <ul class="space-y-2 pt-2 border-t border-[#F1F5F9]">
+          <ul class="space-y-2 pt-2 border-t border-[#E2F4EF]">
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Multi-currency international gateway for global travelers</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Interactive banquet & corporate event booking system</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Real-time room inventory sync with property management system</span>
               </li>
             
           </ul>
 
           <!-- Tech Stack Badges -->
-          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#F1F5F9]">
-            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Next.js</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Multi-Currency Gateway</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Framer Motion</span>
+          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#E2F4EF]">
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Next.js</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Multi-Currency Gateway</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Framer Motion</span>
           </div>
         </div>
 
         <!-- Metric & Action Bar -->
-        <div class="pt-4 border-t border-[#F1F5F9] space-y-3">
-          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15">
-            <span class="text-[11px] font-extrabold text-[#0066FF]">+280% Event Inquiries</span>
+        <div class="pt-4 border-t border-[#E2F4EF] space-y-3">
+          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#06D6A0]/5 border border-[#06D6A0]/15">
+            <span class="text-[11px] font-extrabold text-[#06D6A0]">+280% Event Inquiries</span>
             <span class="text-[10.5px] font-bold text-[#64748B]">99/100 Speed</span>
           </div>
 
-          <a href="https://agrabadhotels.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <a href="https://agrabadhotels.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#EDF9F5] group-hover:bg-gradient-to-r group-hover:from-[#06D6A0] group-hover:to-[#05B386] text-[#08201A] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D7EFE9] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#06D6A0]/30">
             <span>Visit Live Platform</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
           </a>
@@ -934,34 +937,34 @@
     </div>
   
 
-    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] project-card" data-category="E-Commerce">
+    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#06D6A0] hover:shadow-2xl hover:shadow-[#06D6A0]/15 bg-white border border-[#D7EFE9] project-card" data-category="E-Commerce">
       
       <!-- Modern Browser Mockup Top Bar -->
-      <div class="px-5 py-3.5 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+      <div class="px-5 py-3.5 bg-[#EDF9F5] border-b border-[#D7EFE9] flex items-center justify-between">
         <div class="flex items-center gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/90"></span>
         </div>
-        <div class="px-3 py-1 rounded-full bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
+        <div class="px-3 py-1 rounded-full bg-white border border-[#D7EFE9] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
           aarong.com
         </div>
-        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase tracking-wider">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#06D6A0]/10 text-[#06D6A0] uppercase tracking-wider">
           E-Commerce & Retail
         </span>
       </div>
 
       <!-- High-Resolution Project Screenshot Preview -->
-      <div class="relative h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <div class="relative h-52 w-full overflow-hidden bg-[#08201A]">
         <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Aarong Lifestyle Flagship" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/85 via-[#0B0F19]/25 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#08201A]/85 via-[#08201A]/25 to-transparent"></div>
         
         <!-- Top Project Index Badge (for top flagships) -->
         
 
         <!-- Bottom Floating Client Tag -->
         <div class="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white">
-          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#0B0F19] shadow-sm truncate max-w-[200px]">BRAC Social Enterprise</span>
+          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#08201A] shadow-sm truncate max-w-[200px]">BRAC Social Enterprise</span>
           <span class="px-2.5 py-1 rounded-full bg-[#10B981]/25 backdrop-blur-md text-[10px] font-black text-[#10B981] border border-[#10B981]/30 shrink-0">● Live Production</span>
         </div>
       </div>
@@ -970,57 +973,57 @@
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
         <div>
           <!-- Title & Value Headline -->
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-snug">
+          <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-snug">
             Aarong Lifestyle Flagship
           </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-0.5 mb-2.5">
+          <p class="text-xs font-bold text-[#06D6A0] mt-0.5 mb-2.5">
             High-Traffic Omnichannel D2C Lifestyle Flagship Store
           </p>
 
           <!-- Problem & Solution Narrative -->
-          <div class="space-y-2 p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#F1F5F9] mb-4">
+          <div class="space-y-2 p-3.5 rounded-2xl bg-[#EDF9F5] border border-[#E2F4EF] mb-4">
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0B0F19]">Challenge:</span> High cart abandonment during festive sales spikes, complex multi-warehouse inventory desync, and sluggish product filtering.
+              <span class="font-extrabold text-[#08201A]">Challenge:</span> High cart abandonment during festive sales spikes, complex multi-warehouse inventory desync, and sluggish product filtering.
             </div>
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0066FF]">Solution:</span> Engineered an enterprise headless e-commerce storefront with Algolia instant search, real-time stock sync across 20+ hubs, and 1-click checkout.
+              <span class="font-extrabold text-[#06D6A0]">Solution:</span> Engineered an enterprise headless e-commerce storefront with Algolia instant search, real-time stock sync across 20+ hubs, and 1-click checkout.
             </div>
           </div>
 
           <!-- Key Deliverables List -->
-          <ul class="space-y-2 pt-2 border-t border-[#F1F5F9]">
+          <ul class="space-y-2 pt-2 border-t border-[#E2F4EF]">
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Enterprise headless architecture handling 2.4M monthly visits</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Multi-warehouse inventory logic with zero overselling</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Instant elastic search filtering with sub-50ms query response</span>
               </li>
             
           </ul>
 
           <!-- Tech Stack Badges -->
-          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#F1F5F9]">
-            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Shopify Plus</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Algolia Search</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Klaviyo CRM</span>
+          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#E2F4EF]">
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Shopify Plus</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Algolia Search</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Klaviyo CRM</span>
           </div>
         </div>
 
         <!-- Metric & Action Bar -->
-        <div class="pt-4 border-t border-[#F1F5F9] space-y-3">
-          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15">
-            <span class="text-[11px] font-extrabold text-[#0066FF]">+48% Cart Completion</span>
+        <div class="pt-4 border-t border-[#E2F4EF] space-y-3">
+          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#06D6A0]/5 border border-[#06D6A0]/15">
+            <span class="text-[11px] font-extrabold text-[#06D6A0]">+48% Cart Completion</span>
             <span class="text-[10.5px] font-bold text-[#64748B]">12.4x Peak ROAS</span>
           </div>
 
-          <a href="https://aarong.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <a href="https://aarong.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#EDF9F5] group-hover:bg-gradient-to-r group-hover:from-[#06D6A0] group-hover:to-[#05B386] text-[#08201A] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D7EFE9] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#06D6A0]/30">
             <span>Visit Live Platform</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
           </a>
@@ -1030,34 +1033,34 @@
     </div>
   
 
-    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] project-card" data-category="E-Commerce">
+    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#06D6A0] hover:shadow-2xl hover:shadow-[#06D6A0]/15 bg-white border border-[#D7EFE9] project-card" data-category="E-Commerce">
       
       <!-- Modern Browser Mockup Top Bar -->
-      <div class="px-5 py-3.5 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+      <div class="px-5 py-3.5 bg-[#EDF9F5] border-b border-[#D7EFE9] flex items-center justify-between">
         <div class="flex items-center gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/90"></span>
         </div>
-        <div class="px-3 py-1 rounded-full bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
+        <div class="px-3 py-1 rounded-full bg-white border border-[#D7EFE9] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
           apex4u.com
         </div>
-        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase tracking-wider">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#06D6A0]/10 text-[#06D6A0] uppercase tracking-wider">
           E-Commerce & Retail
         </span>
       </div>
 
       <!-- High-Resolution Project Screenshot Preview -->
-      <div class="relative h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <div class="relative h-52 w-full overflow-hidden bg-[#08201A]">
         <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80" alt="Apex Footwear E-Store" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/85 via-[#0B0F19]/25 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#08201A]/85 via-[#08201A]/25 to-transparent"></div>
         
         <!-- Top Project Index Badge (for top flagships) -->
         
 
         <!-- Bottom Floating Client Tag -->
         <div class="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white">
-          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#0B0F19] shadow-sm truncate max-w-[200px]">Apex Footwear Ltd.</span>
+          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#08201A] shadow-sm truncate max-w-[200px]">Apex Footwear Ltd.</span>
           <span class="px-2.5 py-1 rounded-full bg-[#10B981]/25 backdrop-blur-md text-[10px] font-black text-[#10B981] border border-[#10B981]/30 shrink-0">● Live Production</span>
         </div>
       </div>
@@ -1066,57 +1069,57 @@
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
         <div>
           <!-- Title & Value Headline -->
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-snug">
+          <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-snug">
             Apex Footwear E-Store
           </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-0.5 mb-2.5">
+          <p class="text-xs font-bold text-[#06D6A0] mt-0.5 mb-2.5">
             Enterprise Footwear Storefront with Automated Logistics Dispatch
           </p>
 
           <!-- Problem & Solution Narrative -->
-          <div class="space-y-2 p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#F1F5F9] mb-4">
+          <div class="space-y-2 p-3.5 rounded-2xl bg-[#EDF9F5] border border-[#E2F4EF] mb-4">
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0B0F19]">Challenge:</span> High return rates due to shoe sizing ambiguity, manual courier dispatch bottlenecks, and lack of personalized buyer incentives.
+              <span class="font-extrabold text-[#08201A]">Challenge:</span> High return rates due to shoe sizing ambiguity, manual courier dispatch bottlenecks, and lack of personalized buyer incentives.
             </div>
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0066FF]">Solution:</span> Created an intelligent digital size recommender, automated courier API dispatch pipeline, and personalized customer loyalty points engine.
+              <span class="font-extrabold text-[#06D6A0]">Solution:</span> Created an intelligent digital size recommender, automated courier API dispatch pipeline, and personalized customer loyalty points engine.
             </div>
           </div>
 
           <!-- Key Deliverables List -->
-          <ul class="space-y-2 pt-2 border-t border-[#F1F5F9]">
+          <ul class="space-y-2 pt-2 border-t border-[#E2F4EF]">
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>AI-assisted size & fit recommender reducing return rates</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Automated logistics courier API dispatch pipeline</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Personalized dynamic discount & loyalty reward tiers</span>
               </li>
             
           </ul>
 
           <!-- Tech Stack Badges -->
-          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#F1F5F9]">
-            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">React.js</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Node.js / Express</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">PostgreSQL</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Logistics API</span>
+          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#E2F4EF]">
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">React.js</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Node.js / Express</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">PostgreSQL</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Logistics API</span>
           </div>
         </div>
 
         <!-- Metric & Action Bar -->
-        <div class="pt-4 border-t border-[#F1F5F9] space-y-3">
-          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15">
-            <span class="text-[11px] font-extrabold text-[#0066FF]">-34% Return Rate</span>
+        <div class="pt-4 border-t border-[#E2F4EF] space-y-3">
+          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#06D6A0]/5 border border-[#06D6A0]/15">
+            <span class="text-[11px] font-extrabold text-[#06D6A0]">-34% Return Rate</span>
             <span class="text-[10.5px] font-bold text-[#64748B]">+210% Mobile Orders</span>
           </div>
 
-          <a href="https://apex4u.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <a href="https://apex4u.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#EDF9F5] group-hover:bg-gradient-to-r group-hover:from-[#06D6A0] group-hover:to-[#05B386] text-[#08201A] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D7EFE9] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#06D6A0]/30">
             <span>Visit Live Platform</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
           </a>
@@ -1126,34 +1129,34 @@
     </div>
   
 
-    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] project-card" data-category="Architecture">
+    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#06D6A0] hover:shadow-2xl hover:shadow-[#06D6A0]/15 bg-white border border-[#D7EFE9] project-card" data-category="Architecture">
       
       <!-- Modern Browser Mockup Top Bar -->
-      <div class="px-5 py-3.5 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+      <div class="px-5 py-3.5 bg-[#EDF9F5] border-b border-[#D7EFE9] flex items-center justify-between">
         <div class="flex items-center gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/90"></span>
         </div>
-        <div class="px-3 py-1 rounded-full bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
+        <div class="px-3 py-1 rounded-full bg-white border border-[#D7EFE9] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
           luxehaven-interior.com
         </div>
-        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase tracking-wider">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#06D6A0]/10 text-[#06D6A0] uppercase tracking-wider">
           Architecture & Interior
         </span>
       </div>
 
       <!-- High-Resolution Project Screenshot Preview -->
-      <div class="relative h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <div class="relative h-52 w-full overflow-hidden bg-[#08201A]">
         <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="LuxeHaven Interiors" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/85 via-[#0B0F19]/25 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#08201A]/85 via-[#08201A]/25 to-transparent"></div>
         
         <!-- Top Project Index Badge (for top flagships) -->
         
 
         <!-- Bottom Floating Client Tag -->
         <div class="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white">
-          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#0B0F19] shadow-sm truncate max-w-[200px]">LuxeHaven Architectural Studio</span>
+          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#08201A] shadow-sm truncate max-w-[200px]">LuxeHaven Architectural Studio</span>
           <span class="px-2.5 py-1 rounded-full bg-[#10B981]/25 backdrop-blur-md text-[10px] font-black text-[#10B981] border border-[#10B981]/30 shrink-0">● Live Production</span>
         </div>
       </div>
@@ -1162,57 +1165,57 @@
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
         <div>
           <!-- Title & Value Headline -->
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-snug">
+          <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-snug">
             LuxeHaven Interiors
           </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-0.5 mb-2.5">
+          <p class="text-xs font-bold text-[#06D6A0] mt-0.5 mb-2.5">
             Architectural Design Studio with 3D Spatial Virtual Showcase
           </p>
 
           <!-- Problem & Solution Narrative -->
-          <div class="space-y-2 p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#F1F5F9] mb-4">
+          <div class="space-y-2 p-3.5 rounded-2xl bg-[#EDF9F5] border border-[#E2F4EF] mb-4">
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0B0F19]">Challenge:</span> Inability to effectively present high-end 3D residential and commercial interior projects to high-net-worth clients digitally.
+              <span class="font-extrabold text-[#08201A]">Challenge:</span> Inability to effectively present high-end 3D residential and commercial interior projects to high-net-worth clients digitally.
             </div>
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0066FF]">Solution:</span> Designed an ultra-clean architectural showcase with interactive 3D spatial tours, custom project moodboards, and consultation booking.
+              <span class="font-extrabold text-[#06D6A0]">Solution:</span> Designed an ultra-clean architectural showcase with interactive 3D spatial tours, custom project moodboards, and consultation booking.
             </div>
           </div>
 
           <!-- Key Deliverables List -->
-          <ul class="space-y-2 pt-2 border-t border-[#F1F5F9]">
+          <ul class="space-y-2 pt-2 border-t border-[#E2F4EF]">
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Interactive 3D room tour engine with real-time lighting previews</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>High-ticket consultation intake funnel with calendar sync</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Full case study retrospective library with high-res galleries</span>
               </li>
             
           </ul>
 
           <!-- Tech Stack Badges -->
-          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#F1F5F9]">
-            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">React</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Three.js Canvas</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Calendly API</span>
+          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#E2F4EF]">
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">React</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Three.js Canvas</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Calendly API</span>
           </div>
         </div>
 
         <!-- Metric & Action Bar -->
-        <div class="pt-4 border-t border-[#F1F5F9] space-y-3">
-          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15">
-            <span class="text-[11px] font-extrabold text-[#0066FF]">+310% Inbound Leads</span>
+        <div class="pt-4 border-t border-[#E2F4EF] space-y-3">
+          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#06D6A0]/5 border border-[#06D6A0]/15">
+            <span class="text-[11px] font-extrabold text-[#06D6A0]">+310% Inbound Leads</span>
             <span class="text-[10.5px] font-bold text-[#64748B]">99/100 Speed</span>
           </div>
 
-          <a href="https://luxehaven-interior.example.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <a href="https://luxehaven-interior.example.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#EDF9F5] group-hover:bg-gradient-to-r group-hover:from-[#06D6A0] group-hover:to-[#05B386] text-[#08201A] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D7EFE9] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#06D6A0]/30">
             <span>Visit Live Platform</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
           </a>
@@ -1222,34 +1225,34 @@
     </div>
   
 
-    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] project-card" data-category="Web Apps">
+    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#06D6A0] hover:shadow-2xl hover:shadow-[#06D6A0]/15 bg-white border border-[#D7EFE9] project-card" data-category="Web Apps">
       
       <!-- Modern Browser Mockup Top Bar -->
-      <div class="px-5 py-3.5 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+      <div class="px-5 py-3.5 bg-[#EDF9F5] border-b border-[#D7EFE9] flex items-center justify-between">
         <div class="flex items-center gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/90"></span>
         </div>
-        <div class="px-3 py-1 rounded-full bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
+        <div class="px-3 py-1 rounded-full bg-white border border-[#D7EFE9] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
           novapulse-saas.com
         </div>
-        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase tracking-wider">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#06D6A0]/10 text-[#06D6A0] uppercase tracking-wider">
           Web Apps & SaaS
         </span>
       </div>
 
       <!-- High-Resolution Project Screenshot Preview -->
-      <div class="relative h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <div class="relative h-52 w-full overflow-hidden bg-[#08201A]">
         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="NovaPulse SaaS Dashboard" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/85 via-[#0B0F19]/25 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#08201A]/85 via-[#08201A]/25 to-transparent"></div>
         
         <!-- Top Project Index Badge (for top flagships) -->
         
 
         <!-- Bottom Floating Client Tag -->
         <div class="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white">
-          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#0B0F19] shadow-sm truncate max-w-[200px]">NovaPulse Technologies</span>
+          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#08201A] shadow-sm truncate max-w-[200px]">NovaPulse Technologies</span>
           <span class="px-2.5 py-1 rounded-full bg-[#10B981]/25 backdrop-blur-md text-[10px] font-black text-[#10B981] border border-[#10B981]/30 shrink-0">● Live Production</span>
         </div>
       </div>
@@ -1258,57 +1261,57 @@
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
         <div>
           <!-- Title & Value Headline -->
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-snug">
+          <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-snug">
             NovaPulse SaaS Dashboard
           </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-0.5 mb-2.5">
+          <p class="text-xs font-bold text-[#06D6A0] mt-0.5 mb-2.5">
             AI-Powered Omnichannel Social Analytics & Attribution Suite
           </p>
 
           <!-- Problem & Solution Narrative -->
-          <div class="space-y-2 p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#F1F5F9] mb-4">
+          <div class="space-y-2 p-3.5 rounded-2xl bg-[#EDF9F5] border border-[#E2F4EF] mb-4">
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0B0F19]">Challenge:</span> Growth marketers struggling to unify cross-platform ad attribution and social engagement metrics into a single real-time dashboard.
+              <span class="font-extrabold text-[#08201A]">Challenge:</span> Growth marketers struggling to unify cross-platform ad attribution and social engagement metrics into a single real-time dashboard.
             </div>
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0066FF]">Solution:</span> Engineered a high-performance web app aggregating Meta, Google Ads, and TikTok analytics with integrated AI copywriting recommendations.
+              <span class="font-extrabold text-[#06D6A0]">Solution:</span> Engineered a high-performance web app aggregating Meta, Google Ads, and TikTok analytics with integrated AI copywriting recommendations.
             </div>
           </div>
 
           <!-- Key Deliverables List -->
-          <ul class="space-y-2 pt-2 border-t border-[#F1F5F9]">
+          <ul class="space-y-2 pt-2 border-t border-[#E2F4EF]">
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Real-time multi-platform ad attribution and ROAS tracking</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Interactive data visualization with custom date range comparisons</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>AI caption and ad hook generator powered by LLM API</span>
               </li>
             
           </ul>
 
           <!-- Tech Stack Badges -->
-          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#F1F5F9]">
-            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Next.js 14</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">TypeScript</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Recharts</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">OpenAI API</span>
+          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#E2F4EF]">
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Next.js 14</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">TypeScript</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Recharts</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">OpenAI API</span>
           </div>
         </div>
 
         <!-- Metric & Action Bar -->
-        <div class="pt-4 border-t border-[#F1F5F9] space-y-3">
-          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15">
-            <span class="text-[11px] font-extrabold text-[#0066FF]">10k+ Events / Min</span>
+        <div class="pt-4 border-t border-[#E2F4EF] space-y-3">
+          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#06D6A0]/5 border border-[#06D6A0]/15">
+            <span class="text-[11px] font-extrabold text-[#06D6A0]">10k+ Events / Min</span>
             <span class="text-[10.5px] font-bold text-[#64748B]">Sub-100ms Query</span>
           </div>
 
-          <a href="https://novapulse-saas.example.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <a href="https://novapulse-saas.example.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#EDF9F5] group-hover:bg-gradient-to-r group-hover:from-[#06D6A0] group-hover:to-[#05B386] text-[#08201A] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D7EFE9] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#06D6A0]/30">
             <span>Visit Live Platform</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
           </a>
@@ -1318,34 +1321,34 @@
     </div>
   
 
-    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] project-card" data-category="Web Apps">
+    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#06D6A0] hover:shadow-2xl hover:shadow-[#06D6A0]/15 bg-white border border-[#D7EFE9] project-card" data-category="Web Apps">
       
       <!-- Modern Browser Mockup Top Bar -->
-      <div class="px-5 py-3.5 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+      <div class="px-5 py-3.5 bg-[#EDF9F5] border-b border-[#D7EFE9] flex items-center justify-between">
         <div class="flex items-center gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/90"></span>
         </div>
-        <div class="px-3 py-1 rounded-full bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
+        <div class="px-3 py-1 rounded-full bg-white border border-[#D7EFE9] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
           prestige-club.com
         </div>
-        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase tracking-wider">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#06D6A0]/10 text-[#06D6A0] uppercase tracking-wider">
           Web Apps & SaaS
         </span>
       </div>
 
       <!-- High-Resolution Project Screenshot Preview -->
-      <div class="relative h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <div class="relative h-52 w-full overflow-hidden bg-[#08201A]">
         <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80" alt="Prestige VIP Concierge" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/85 via-[#0B0F19]/25 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#08201A]/85 via-[#08201A]/25 to-transparent"></div>
         
         <!-- Top Project Index Badge (for top flagships) -->
         
 
         <!-- Bottom Floating Client Tag -->
         <div class="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white">
-          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#0B0F19] shadow-sm truncate max-w-[200px]">Prestige Global Club</span>
+          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#08201A] shadow-sm truncate max-w-[200px]">Prestige Global Club</span>
           <span class="px-2.5 py-1 rounded-full bg-[#10B981]/25 backdrop-blur-md text-[10px] font-black text-[#10B981] border border-[#10B981]/30 shrink-0">● Live Production</span>
         </div>
       </div>
@@ -1354,57 +1357,57 @@
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
         <div>
           <!-- Title & Value Headline -->
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-snug">
+          <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-snug">
             Prestige VIP Concierge
           </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-0.5 mb-2.5">
+          <p class="text-xs font-bold text-[#06D6A0] mt-0.5 mb-2.5">
             Gated Ultra-HNW Membership Verification & Concierge Portal
           </p>
 
           <!-- Problem & Solution Narrative -->
-          <div class="space-y-2 p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#F1F5F9] mb-4">
+          <div class="space-y-2 p-3.5 rounded-2xl bg-[#EDF9F5] border border-[#E2F4EF] mb-4">
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0B0F19]">Challenge:</span> Strict requirement for ironclad zero-trust authentication, private jet booking confidentiality, and VIP member privacy.
+              <span class="font-extrabold text-[#08201A]">Challenge:</span> Strict requirement for ironclad zero-trust authentication, private jet booking confidentiality, and VIP member privacy.
             </div>
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0066FF]">Solution:</span> Engineered a gated member portal featuring biometric 2FA authentication, encrypted concierge messaging, and private lounge reservations.
+              <span class="font-extrabold text-[#06D6A0]">Solution:</span> Engineered a gated member portal featuring biometric 2FA authentication, encrypted concierge messaging, and private lounge reservations.
             </div>
           </div>
 
           <!-- Key Deliverables List -->
-          <ul class="space-y-2 pt-2 border-t border-[#F1F5F9]">
+          <ul class="space-y-2 pt-2 border-t border-[#E2F4EF]">
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Gated membership verification with biometric 2FA security</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Private jet charter & luxury suite reservation portal</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>End-to-end encrypted direct concierge messaging pipeline</span>
               </li>
             
           </ul>
 
           <!-- Tech Stack Badges -->
-          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#F1F5F9]">
-            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">React</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Supabase Auth</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">WebSockets</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Stripe</span>
+          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#E2F4EF]">
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">React</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Supabase Auth</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">WebSockets</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Stripe</span>
           </div>
         </div>
 
         <!-- Metric & Action Bar -->
-        <div class="pt-4 border-t border-[#F1F5F9] space-y-3">
-          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15">
-            <span class="text-[11px] font-extrabold text-[#0066FF]">100% Zero-Trust</span>
+        <div class="pt-4 border-t border-[#E2F4EF] space-y-3">
+          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#06D6A0]/5 border border-[#06D6A0]/15">
+            <span class="text-[11px] font-extrabold text-[#06D6A0]">100% Zero-Trust</span>
             <span class="text-[10.5px] font-bold text-[#64748B]">500+ HNW Members</span>
           </div>
 
-          <a href="https://prestige-club.example.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <a href="https://prestige-club.example.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#EDF9F5] group-hover:bg-gradient-to-r group-hover:from-[#06D6A0] group-hover:to-[#05B386] text-[#08201A] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D7EFE9] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#06D6A0]/30">
             <span>Visit Live Platform</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
           </a>
@@ -1414,34 +1417,34 @@
     </div>
   
 
-    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] project-card" data-category="Web Apps">
+    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#06D6A0] hover:shadow-2xl hover:shadow-[#06D6A0]/15 bg-white border border-[#D7EFE9] project-card" data-category="Web Apps">
       
       <!-- Modern Browser Mockup Top Bar -->
-      <div class="px-5 py-3.5 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+      <div class="px-5 py-3.5 bg-[#EDF9F5] border-b border-[#D7EFE9] flex items-center justify-between">
         <div class="flex items-center gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/90"></span>
         </div>
-        <div class="px-3 py-1 rounded-full bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
+        <div class="px-3 py-1 rounded-full bg-white border border-[#D7EFE9] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
           zenith-health.com
         </div>
-        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase tracking-wider">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#06D6A0]/10 text-[#06D6A0] uppercase tracking-wider">
           Web Apps & SaaS
         </span>
       </div>
 
       <!-- High-Resolution Project Screenshot Preview -->
-      <div class="relative h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <div class="relative h-52 w-full overflow-hidden bg-[#08201A]">
         <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Zenith Health Clinics" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/85 via-[#0B0F19]/25 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#08201A]/85 via-[#08201A]/25 to-transparent"></div>
         
         <!-- Top Project Index Badge (for top flagships) -->
         
 
         <!-- Bottom Floating Client Tag -->
         <div class="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white">
-          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#0B0F19] shadow-sm truncate max-w-[200px]">Zenith Medical Network</span>
+          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#08201A] shadow-sm truncate max-w-[200px]">Zenith Medical Network</span>
           <span class="px-2.5 py-1 rounded-full bg-[#10B981]/25 backdrop-blur-md text-[10px] font-black text-[#10B981] border border-[#10B981]/30 shrink-0">● Live Production</span>
         </div>
       </div>
@@ -1450,57 +1453,57 @@
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
         <div>
           <!-- Title & Value Headline -->
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-snug">
+          <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-snug">
             Zenith Health Clinics
           </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-0.5 mb-2.5">
+          <p class="text-xs font-bold text-[#06D6A0] mt-0.5 mb-2.5">
             HIPAA-Compliant Telehealth & Digital Prescription Suite
           </p>
 
           <!-- Problem & Solution Narrative -->
-          <div class="space-y-2 p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#F1F5F9] mb-4">
+          <div class="space-y-2 p-3.5 rounded-2xl bg-[#EDF9F5] border border-[#E2F4EF] mb-4">
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0B0F19]">Challenge:</span> Phone-based doctor appointment bottlenecks, delayed lab result delivery, and fragmented telehealth video consultations.
+              <span class="font-extrabold text-[#08201A]">Challenge:</span> Phone-based doctor appointment bottlenecks, delayed lab result delivery, and fragmented telehealth video consultations.
             </div>
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0066FF]">Solution:</span> Created a modern healthcare portal featuring live doctor schedule booking, integrated WebRTC video calls, and encrypted digital EMR access.
+              <span class="font-extrabold text-[#06D6A0]">Solution:</span> Created a modern healthcare portal featuring live doctor schedule booking, integrated WebRTC video calls, and encrypted digital EMR access.
             </div>
           </div>
 
           <!-- Key Deliverables List -->
-          <ul class="space-y-2 pt-2 border-t border-[#F1F5F9]">
+          <ul class="space-y-2 pt-2 border-t border-[#E2F4EF]">
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Real-time doctor appointment booking with automated reminders</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>HD WebRTC video consultation room with in-call chat</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Encrypted patient EMR portal and digital prescription generator</span>
               </li>
             
           </ul>
 
           <!-- Tech Stack Badges -->
-          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#F1F5F9]">
-            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Next.js</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">WebRTC Video Engine</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Node.js</span>
+          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#E2F4EF]">
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Next.js</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">WebRTC Video Engine</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Node.js</span>
           </div>
         </div>
 
         <!-- Metric & Action Bar -->
-        <div class="pt-4 border-t border-[#F1F5F9] space-y-3">
-          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15">
-            <span class="text-[11px] font-extrabold text-[#0066FF]">+350% Telehealth Visits</span>
+        <div class="pt-4 border-t border-[#E2F4EF] space-y-3">
+          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#06D6A0]/5 border border-[#06D6A0]/15">
+            <span class="text-[11px] font-extrabold text-[#06D6A0]">+350% Telehealth Visits</span>
             <span class="text-[10.5px] font-bold text-[#64748B]">99.98% Uptime</span>
           </div>
 
-          <a href="https://zenith-health.example.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <a href="https://zenith-health.example.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#EDF9F5] group-hover:bg-gradient-to-r group-hover:from-[#06D6A0] group-hover:to-[#05B386] text-[#08201A] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D7EFE9] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#06D6A0]/30">
             <span>Visit Live Platform</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
           </a>
@@ -1510,34 +1513,34 @@
     </div>
   
 
-    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] project-card" data-category="Media">
+    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#06D6A0] hover:shadow-2xl hover:shadow-[#06D6A0]/15 bg-white border border-[#D7EFE9] project-card" data-category="Media">
       
       <!-- Modern Browser Mockup Top Bar -->
-      <div class="px-5 py-3.5 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+      <div class="px-5 py-3.5 bg-[#EDF9F5] border-b border-[#D7EFE9] flex items-center justify-between">
         <div class="flex items-center gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/90"></span>
         </div>
-        <div class="px-3 py-1 rounded-full bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
+        <div class="px-3 py-1 rounded-full bg-white border border-[#D7EFE9] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
           echosoundfestival.com
         </div>
-        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase tracking-wider">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#06D6A0]/10 text-[#06D6A0] uppercase tracking-wider">
           Media & Publications
         </span>
       </div>
 
       <!-- High-Resolution Project Screenshot Preview -->
-      <div class="relative h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <div class="relative h-52 w-full overflow-hidden bg-[#08201A]">
         <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80" alt="EchoSound Music Festival" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/85 via-[#0B0F19]/25 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#08201A]/85 via-[#08201A]/25 to-transparent"></div>
         
         <!-- Top Project Index Badge (for top flagships) -->
         
 
         <!-- Bottom Floating Client Tag -->
         <div class="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white">
-          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#0B0F19] shadow-sm truncate max-w-[200px]">EchoSound Live Entertainment</span>
+          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#08201A] shadow-sm truncate max-w-[200px]">EchoSound Live Entertainment</span>
           <span class="px-2.5 py-1 rounded-full bg-[#10B981]/25 backdrop-blur-md text-[10px] font-black text-[#10B981] border border-[#10B981]/30 shrink-0">● Live Production</span>
         </div>
       </div>
@@ -1546,57 +1549,57 @@
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
         <div>
           <!-- Title & Value Headline -->
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-snug">
+          <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-snug">
             EchoSound Music Festival
           </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-0.5 mb-2.5">
+          <p class="text-xs font-bold text-[#06D6A0] mt-0.5 mb-2.5">
             Serverless Concert Ticket Engine & Interactive Venue Seating
           </p>
 
           <!-- Problem & Solution Narrative -->
-          <div class="space-y-2 p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#F1F5F9] mb-4">
+          <div class="space-y-2 p-3.5 rounded-2xl bg-[#EDF9F5] border border-[#E2F4EF] mb-4">
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0B0F19]">Challenge:</span> Website crashing under 50,000 concurrent fans during flash ticket drops and rampant ticket scalping fraud.
+              <span class="font-extrabold text-[#08201A]">Challenge:</span> Website crashing under 50,000 concurrent fans during flash ticket drops and rampant ticket scalping fraud.
             </div>
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0066FF]">Solution:</span> Architected a serverless ticket queueing architecture with interactive zone maps, dynamic encrypted QR entry passes, and anti-scalping token limits.
+              <span class="font-extrabold text-[#06D6A0]">Solution:</span> Architected a serverless ticket queueing architecture with interactive zone maps, dynamic encrypted QR entry passes, and anti-scalping token limits.
             </div>
           </div>
 
           <!-- Key Deliverables List -->
-          <ul class="space-y-2 pt-2 border-t border-[#F1F5F9]">
+          <ul class="space-y-2 pt-2 border-t border-[#E2F4EF]">
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Serverless queue system handling 50k+ concurrent fans</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Interactive 2D stage zone & seating selection interface</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Dynamic anti-counterfeit QR entry passes with wallet integration</span>
               </li>
             
           </ul>
 
           <!-- Tech Stack Badges -->
-          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#F1F5F9]">
-            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Next.js</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">AWS Lambda</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Redis Queue</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Stripe</span>
+          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#E2F4EF]">
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Next.js</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">AWS Lambda</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Redis Queue</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Tailwind CSS</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Stripe</span>
           </div>
         </div>
 
         <!-- Metric & Action Bar -->
-        <div class="pt-4 border-t border-[#F1F5F9] space-y-3">
-          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15">
-            <span class="text-[11px] font-extrabold text-[#0066FF]">50k+ Concurrent Fans</span>
+        <div class="pt-4 border-t border-[#E2F4EF] space-y-3">
+          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#06D6A0]/5 border border-[#06D6A0]/15">
+            <span class="text-[11px] font-extrabold text-[#06D6A0]">50k+ Concurrent Fans</span>
             <span class="text-[10.5px] font-bold text-[#64748B]">Zero Downtime</span>
           </div>
 
-          <a href="https://echosoundfestival.example.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <a href="https://echosoundfestival.example.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#EDF9F5] group-hover:bg-gradient-to-r group-hover:from-[#06D6A0] group-hover:to-[#05B386] text-[#08201A] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D7EFE9] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#06D6A0]/30">
             <span>Visit Live Platform</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
           </a>
@@ -1606,34 +1609,34 @@
     </div>
   
 
-    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#0066FF] hover:shadow-2xl hover:shadow-[#0066FF]/15 bg-white border border-[#E2E8F0] project-card" data-category="Media">
+    <div class="morphy-card p-0 rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#06D6A0] hover:shadow-2xl hover:shadow-[#06D6A0]/15 bg-white border border-[#D7EFE9] project-card" data-category="Media">
       
       <!-- Modern Browser Mockup Top Bar -->
-      <div class="px-5 py-3.5 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+      <div class="px-5 py-3.5 bg-[#EDF9F5] border-b border-[#D7EFE9] flex items-center justify-between">
         <div class="flex items-center gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/90"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/90"></span>
         </div>
-        <div class="px-3 py-1 rounded-full bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
+        <div class="px-3 py-1 rounded-full bg-white border border-[#D7EFE9] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[190px] truncate shadow-xs">
           prismcreative.com
         </div>
-        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#0066FF]/10 text-[#0066FF] uppercase tracking-wider">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#06D6A0]/10 text-[#06D6A0] uppercase tracking-wider">
           Media & Publications
         </span>
       </div>
 
       <!-- High-Resolution Project Screenshot Preview -->
-      <div class="relative h-52 w-full overflow-hidden bg-[#0B0F19]">
+      <div class="relative h-52 w-full overflow-hidden bg-[#08201A]">
         <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80" alt="Prism Creative Collective" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/85 via-[#0B0F19]/25 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#08201A]/85 via-[#08201A]/25 to-transparent"></div>
         
         <!-- Top Project Index Badge (for top flagships) -->
         
 
         <!-- Bottom Floating Client Tag -->
         <div class="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white">
-          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#0B0F19] shadow-sm truncate max-w-[200px]">Prism Studios International</span>
+          <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black text-[#08201A] shadow-sm truncate max-w-[200px]">Prism Studios International</span>
           <span class="px-2.5 py-1 rounded-full bg-[#10B981]/25 backdrop-blur-md text-[10px] font-black text-[#10B981] border border-[#10B981]/30 shrink-0">● Live Production</span>
         </div>
       </div>
@@ -1642,57 +1645,57 @@
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
         <div>
           <!-- Title & Value Headline -->
-          <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-snug">
+          <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-snug">
             Prism Creative Collective
           </h3>
-          <p class="text-xs font-bold text-[#0066FF] mt-0.5 mb-2.5">
+          <p class="text-xs font-bold text-[#06D6A0] mt-0.5 mb-2.5">
             Cinema Director Portfolio with Adaptive 4K Video Streaming
           </p>
 
           <!-- Problem & Solution Narrative -->
-          <div class="space-y-2 p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#F1F5F9] mb-4">
+          <div class="space-y-2 p-3.5 rounded-2xl bg-[#EDF9F5] border border-[#E2F4EF] mb-4">
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0B0F19]">Challenge:</span> Heavy 4K commercial showreels causing slow initial page loads, stuttering playback on mobile, and loss of prospective client interest.
+              <span class="font-extrabold text-[#08201A]">Challenge:</span> Heavy 4K commercial showreels causing slow initial page loads, stuttering playback on mobile, and loss of prospective client interest.
             </div>
             <div class="text-[11px] text-[#475569] leading-relaxed">
-              <span class="font-extrabold text-[#0066FF]">Solution:</span> Constructed an ultra-sleek cinema director portfolio with adaptive HLS video streaming, dark-mode theater view, and project inquiry forms.
+              <span class="font-extrabold text-[#06D6A0]">Solution:</span> Constructed an ultra-sleek cinema director portfolio with adaptive HLS video streaming, dark-mode theater view, and project inquiry forms.
             </div>
           </div>
 
           <!-- Key Deliverables List -->
-          <ul class="space-y-2 pt-2 border-t border-[#F1F5F9]">
+          <ul class="space-y-2 pt-2 border-t border-[#E2F4EF]">
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Adaptive HLS video streaming delivering bufferless 4K playback</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Custom cinema theater modal with director audio commentary</span>
               </li>
             
               <li class="flex items-start gap-2.5 text-xs text-[#475569] font-medium">
-                <div class="w-4 h-4 rounded-full bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
+                <div class="w-4 h-4 rounded-full bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black">✓</div>
                 <span>Interactive creative inquiry intake form with budget filter</span>
               </li>
             
           </ul>
 
           <!-- Tech Stack Badges -->
-          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#F1F5F9]">
-            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">React</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Mux Video API</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">HLS Streaming</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#E2E8F0]">Tailwind CSS</span>
+          <div class="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-[#E2F4EF]">
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">React</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Mux Video API</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">HLS Streaming</span><span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white text-[#334155] border border-[#D7EFE9]">Tailwind CSS</span>
           </div>
         </div>
 
         <!-- Metric & Action Bar -->
-        <div class="pt-4 border-t border-[#F1F5F9] space-y-3">
-          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#0066FF]/5 border border-[#0066FF]/15">
-            <span class="text-[11px] font-extrabold text-[#0066FF]">Zero Video Buffering</span>
+        <div class="pt-4 border-t border-[#E2F4EF] space-y-3">
+          <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#06D6A0]/5 border border-[#06D6A0]/15">
+            <span class="text-[11px] font-extrabold text-[#06D6A0]">Zero Video Buffering</span>
             <span class="text-[10.5px] font-bold text-[#64748B]">+240% Inbound Leads</span>
           </div>
 
-          <a href="https://prismcreative.example.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#F8FAFC] group-hover:bg-gradient-to-r group-hover:from-[#0066FF] group-hover:to-[#0052FF] text-[#0B0F19] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#E2E8F0] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#0066FF]/30">
+          <a href="https://prismcreative.example.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-full bg-[#EDF9F5] group-hover:bg-gradient-to-r group-hover:from-[#06D6A0] group-hover:to-[#05B386] text-[#08201A] group-hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-between border border-[#D7EFE9] group-hover:border-transparent shadow-xs group-hover:shadow-lg group-hover:shadow-[#06D6A0]/30">
             <span>Visit Live Platform</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
           </a>
@@ -1707,14 +1710,14 @@
   </section>
 
   <!-- 6. COMMISSION A PLATFORM BANNER -->
-  <section class="py-20 bg-white border-t border-[#E2E8F0] relative z-10">
+  <section class="py-20 bg-white border-t border-[#D7EFE9] relative z-10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
       <div class="morphy-tag-primary justify-center">
         <i class="fa-solid fa-rocket"></i>
         <span>NEXT-GEN ARCHITECTURE</span>
       </div>
-      <h2 class="text-3xl sm:text-5xl font-black text-[#0B0F19] tracking-tight">
-        Ready to Engineer Your Next <span class="text-[#0066FF]">Flagship Platform?</span>
+      <h2 class="text-3xl sm:text-5xl font-black text-[#08201A] tracking-tight">
+        Ready to Engineer Your Next <span class="text-[#06D6A0]">Flagship Platform?</span>
       </h2>
       <p class="text-sm sm:text-base text-[#64748B] max-w-2xl mx-auto leading-relaxed">
         Let's discuss your project scope, custom architecture, conversion funnel, and timeline in a private strategic consultation.
@@ -1733,55 +1736,55 @@
   </section>
 
   <!-- 7. FOOTER -->
-  <footer class="py-16 border-t border-[#E2E8F0] bg-white relative z-10 text-xs text-[#64748B]">
+  <footer class="py-16 border-t border-[#D7EFE9] bg-white relative z-10 text-xs text-[#64748B]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         <div class="space-y-3">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-xl bg-[#0066FF] text-white flex items-center justify-center font-black text-xs shadow-sm">
+            <div class="w-8 h-8 rounded-xl bg-[#06D6A0] text-white flex items-center justify-center font-black text-xs shadow-sm">
               ✦
             </div>
-            <span class="font-bold text-[#0B0F19] tracking-tight text-base">Md. Shakibur Rahaman</span>
+            <span class="font-bold text-[#08201A] tracking-tight text-base">Md. Shakibur Rahaman</span>
           </div>
           <p class="text-xs text-[#64748B] leading-relaxed">
             Strategic Lead &amp; Digital Architect directing integrated branding, modern web engineering, and commercial media.
           </p>
         </div>
         <div>
-          <div class="text-[#0B0F19] font-bold uppercase tracking-wider text-[11px] mb-3">Explore Hubs</div>
+          <div class="text-[#08201A] font-bold uppercase tracking-wider text-[11px] mb-3">Explore Hubs</div>
           <div class="space-y-2">
-            <div><a href="/" class="hover:text-[#0066FF] transition-colors">Home</a></div>
-            <div><a href="/about" class="hover:text-[#0066FF] transition-colors">About</a></div>
-            <div><a href="/services" class="hover:text-[#0066FF] transition-colors">9 Strategic Services</a></div>
-            <div><a href="/projects" class="hover:text-[#0066FF] text-[#0066FF] font-bold transition-colors">15 Web Projects</a></div>
-            <div><a href="/experience" class="hover:text-[#0066FF] transition-colors">Experience Roadmap</a></div>
-            <div><a href="/consultation" class="hover:text-[#0066FF] transition-colors">Consultation Booking</a></div>
+            <div><a href="/" class="hover:text-[#06D6A0] transition-colors">Home</a></div>
+            <div><a href="/about" class="hover:text-[#06D6A0] transition-colors">About</a></div>
+            <div><a href="/services" class="hover:text-[#06D6A0] transition-colors">9 Strategic Services</a></div>
+            <div><a href="/projects" class="hover:text-[#06D6A0] text-[#06D6A0] font-bold transition-colors">15 Web Projects</a></div>
+            <div><a href="/experience" class="hover:text-[#06D6A0] transition-colors">Experience Roadmap</a></div>
+            <div><a href="/consultation" class="hover:text-[#06D6A0] transition-colors">Consultation Booking</a></div>
           </div>
         </div>
         <div>
-          <div class="text-[#0B0F19] font-bold uppercase tracking-wider text-[11px] mb-3">Core Disciplines</div>
+          <div class="text-[#08201A] font-bold uppercase tracking-wider text-[11px] mb-3">Core Disciplines</div>
           <div class="space-y-2">
-            <div><a href="/services/branding" class="hover:text-[#0066FF] transition-colors">01 Branding &amp; Strategy</a></div>
-            <div><a href="/services/graphics-design" class="hover:text-[#0066FF] transition-colors">02 Graphics &amp; UI/UX</a></div>
-            <div><a href="/services/web-development" class="hover:text-[#0066FF] transition-colors">03 Full-Stack Web Dev</a></div>
-            <div><a href="/services/social-media-marketing" class="hover:text-[#0066FF] transition-colors">04 Social Media &amp; Meta</a></div>
-            <div><a href="/services/google-ads" class="hover:text-[#0066FF] transition-colors">07 Google Ads Scaling</a></div>
+            <div><a href="/services/branding" class="hover:text-[#06D6A0] transition-colors">01 Branding &amp; Strategy</a></div>
+            <div><a href="/services/graphics-design" class="hover:text-[#06D6A0] transition-colors">02 Graphics &amp; UI/UX</a></div>
+            <div><a href="/services/web-development" class="hover:text-[#06D6A0] transition-colors">03 Full-Stack Web Dev</a></div>
+            <div><a href="/services/social-media-marketing" class="hover:text-[#06D6A0] transition-colors">04 Social Media &amp; Meta</a></div>
+            <div><a href="/services/google-ads" class="hover:text-[#06D6A0] transition-colors">07 Google Ads Scaling</a></div>
           </div>
         </div>
         <div>
-          <div class="text-[#0B0F19] font-bold uppercase tracking-wider text-[11px] mb-3">Direct Contact</div>
+          <div class="text-[#08201A] font-bold uppercase tracking-wider text-[11px] mb-3">Direct Contact</div>
           <div class="space-y-2">
-            <div><a href="mailto:shakibur188@gmail.com" class="hover:text-[#0066FF] font-bold transition-colors">shakibur188@gmail.com</a></div>
-            <div><a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#0066FF] font-bold transition-colors">+880 1838-070468</a></div>
+            <div><a href="mailto:shakibur188@gmail.com" class="hover:text-[#06D6A0] font-bold transition-colors">shakibur188@gmail.com</a></div>
+            <div><a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#06D6A0] font-bold transition-colors">+880 1838-070468</a></div>
             
           </div>
         </div>
       </div>
-      <div class="pt-8 border-t border-[#E2E8F0] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+      <div class="pt-8 border-t border-[#D7EFE9] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
         <div>&copy; 2026 Md. Shakibur Rahaman. All rights reserved.</div>
         <div class="flex items-center gap-4">
-          <a href="https://github.com/shakibur188-tech/Shakib-Portfolio" target="_blank" class="hover:text-[#0066FF] transition-colors">GitHub</a>
-          <a href="https://www.linkedin.com/in/md-shakibur-rahaman" target="_blank" class="hover:text-[#0066FF] transition-colors">LinkedIn</a>
+          <a href="https://github.com/shakibur188-tech/Shakib-Portfolio" target="_blank" class="hover:text-[#06D6A0] transition-colors">GitHub</a>
+          <a href="https://www.linkedin.com/in/md-shakibur-rahaman" target="_blank" class="hover:text-[#06D6A0] transition-colors">LinkedIn</a>
         </div>
       </div>
     </div>

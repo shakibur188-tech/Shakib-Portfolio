@@ -553,28 +553,28 @@
           
           <!-- CRM Summary Metric Cards -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-            <div class="p-4 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm flex items-center justify-between">
+            <div class="p-4 rounded-2xl bg-white border border-[#D7EFE9] shadow-sm flex items-center justify-between">
               <div>
                 <div class="text-[11px] font-bold uppercase tracking-wider text-[#64748B]">Total Inquiries</div>
-                <div class="text-2xl font-black text-[#0B0F19] mt-0.5" id="crmTotalLeads">0</div>
+                <div class="text-2xl font-black text-[#08201A] mt-0.5" id="crmTotalLeads">0</div>
               </div>
-              <div class="w-10 h-10 rounded-xl bg-blue-50 text-[#0066FF] flex items-center justify-center text-base">📊</div>
+              <div class="w-10 h-10 rounded-xl bg-blue-50 text-[#06D6A0] flex items-center justify-center text-base">📊</div>
             </div>
-            <div class="p-4 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm flex items-center justify-between">
+            <div class="p-4 rounded-2xl bg-white border border-[#D7EFE9] shadow-sm flex items-center justify-between">
               <div>
                 <div class="text-[11px] font-bold uppercase tracking-wider text-blue-600">New / Unread</div>
                 <div class="text-2xl font-black text-blue-600 mt-0.5" id="crmNewLeads">0</div>
               </div>
               <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-base font-bold">✨</div>
             </div>
-            <div class="p-4 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm flex items-center justify-between">
+            <div class="p-4 rounded-2xl bg-white border border-[#D7EFE9] shadow-sm flex items-center justify-between">
               <div>
                 <div class="text-[11px] font-bold uppercase tracking-wider text-amber-600">In Discussion</div>
                 <div class="text-2xl font-black text-amber-600 mt-0.5" id="crmProgressLeads">0</div>
               </div>
               <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-base font-bold">⏳</div>
             </div>
-            <div class="p-4 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm flex items-center justify-between">
+            <div class="p-4 rounded-2xl bg-white border border-[#D7EFE9] shadow-sm flex items-center justify-between">
               <div>
                 <div class="text-[11px] font-bold uppercase tracking-wider text-emerald-600">Deals Won</div>
                 <div class="text-2xl font-black text-emerald-600 mt-0.5" id="crmWonLeads">0</div>
@@ -589,7 +589,7 @@
               <div>
                 <div class="flex items-center gap-2">
                   <span class="text-xl">📬</span>
-                  <h3 class="text-lg font-black text-[#0B0F19] mb-0">Client Inquiries & CRM Database</h3>
+                  <h3 class="text-lg font-black text-[#08201A] mb-0">Client Inquiries & CRM Database</h3>
                 </div>
                 <p class="section-desc mt-1">Real-time customer bookings, inquiries from /offers & contact forms, status tracking, and notes.</p>
               </div>
@@ -613,7 +613,7 @@
                   <span>Export to Excel</span>
                 </button>
 
-                <button type="button" onclick="openAddLeadModal()" class="px-3.5 py-2 rounded-xl bg-[#0066FF] hover:bg-[#0052FF] text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-xs">
+                <button type="button" onclick="openAddLeadModal()" class="px-3.5 py-2 rounded-xl bg-[#06D6A0] hover:bg-[#05B386] text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-xs">
                   <i class="fa-solid fa-plus"></i>
                   <span>Add Lead</span>
                 </button>
@@ -626,28 +626,28 @@
 
           <!-- Add Manual Lead Modal -->
           <div id="addLeadModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-            <div class="relative w-full max-w-lg p-6 rounded-3xl bg-white border border-[#E2E8F0] shadow-2xl space-y-4">
+            <div class="relative w-full max-w-lg p-6 rounded-3xl bg-white border border-[#D7EFE9] shadow-2xl space-y-4">
               <div class="flex items-center justify-between">
-                <h3 class="text-lg font-black text-[#0B0F19]">➕ Add Manual Lead to CRM</h3>
-                <button type="button" onclick="closeAddLeadModal()" class="w-8 h-8 rounded-full bg-[#F8FAFC] text-[#64748B] hover:text-[#0B0F19] flex items-center justify-center">✕</button>
+                <h3 class="text-lg font-black text-[#08201A]">➕ Add Manual Lead to CRM</h3>
+                <button type="button" onclick="closeAddLeadModal()" class="w-8 h-8 rounded-full bg-[#EDF9F5] text-[#64748B] hover:text-[#08201A] flex items-center justify-center">✕</button>
               </div>
               <form id="addLeadForm" class="space-y-3">
                 <div>
-                  <label class="text-xs font-bold text-[#0B0F19]">Client Name *</label>
+                  <label class="text-xs font-bold text-[#08201A]">Client Name *</label>
                   <input type="text" id="manualLeadName" required placeholder="e.g. Md. Rahim" class="admin-input text-xs py-2">
                 </div>
                 <div class="grid grid-cols-2 gap-3">
                   <div>
-                    <label class="text-xs font-bold text-[#0B0F19]">Phone / WhatsApp *</label>
+                    <label class="text-xs font-bold text-[#08201A]">Phone / WhatsApp *</label>
                     <input type="tel" id="manualLeadPhone" required placeholder="017XXXXXXXX" class="admin-input text-xs py-2">
                   </div>
                   <div>
-                    <label class="text-xs font-bold text-[#0B0F19]">Email Address</label>
+                    <label class="text-xs font-bold text-[#08201A]">Email Address</label>
                     <input type="email" id="manualLeadEmail" placeholder="client@brand.com" class="admin-input text-xs py-2">
                   </div>
                 </div>
                 <div>
-                  <label class="text-xs font-bold text-[#0B0F19]">Package / Service Required</label>
+                  <label class="text-xs font-bold text-[#08201A]">Package / Service Required</label>
                   <select id="manualLeadService" class="admin-input text-xs py-2 font-bold">
                     <option value="Startup Plan (12-Mo EMI)">Startup Plan (12-Mo EMI)</option>
                     <option value="Accelerate Plan (6-Mo EMI)">Accelerate Plan (6-Mo EMI)</option>
@@ -661,12 +661,12 @@
                   </select>
                 </div>
                 <div>
-                  <label class="text-xs font-bold text-[#0B0F19]">Business Details / Client Notes</label>
+                  <label class="text-xs font-bold text-[#08201A]">Business Details / Client Notes</label>
                   <textarea id="manualLeadMsg" rows="3" placeholder="Requirements, meeting notes, or budget..." class="admin-textarea text-xs"></textarea>
                 </div>
                 <div class="flex justify-end gap-2 pt-2">
                   <button type="button" onclick="closeAddLeadModal()" class="px-4 py-2 rounded-xl bg-slate-100 font-bold text-xs text-[#64748B]">Cancel</button>
-                  <button type="submit" class="px-5 py-2 rounded-xl bg-[#0066FF] hover:bg-[#0052FF] font-bold text-xs text-white">Save Lead</button>
+                  <button type="submit" class="px-5 py-2 rounded-xl bg-[#06D6A0] hover:bg-[#05B386] font-bold text-xs text-white">Save Lead</button>
                 </div>
               </form>
             </div>
@@ -680,7 +680,7 @@
         <section id="tab-forms" class="tab-pane">
           <div class="form-builder-header">
             <div>
-              <h2 class="text-xl font-extrabold text-[#0B0F19] tracking-tight">Form Builder &amp; 20+ Template Engine</h2>
+              <h2 class="text-xl font-extrabold text-[#08201A] tracking-tight">Form Builder &amp; 20+ Template Engine</h2>
               <p class="text-xs text-[#64748B] mt-1">Deploy client onboarding forms, enterprise RFPs, event registrations, and custom client intake surveys.</p>
             </div>
             <div class="form-subnav">
@@ -708,17 +708,17 @@
           <div id="subtabTemplatesView" class="space-y-6">
             <div class="glass-panel p-4 flex flex-wrap items-center justify-between gap-4">
               <div class="flex flex-wrap items-center gap-2" id="templateCategoryFilters">
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0066FF] text-white" data-cat="all">All (22)</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#0066FF]/25 text-[#0B0F19] hover:bg-[#F1F4EE]" data-cat="Strategy">Strategy</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#0066FF]/25 text-[#0B0F19] hover:bg-[#F1F4EE]" data-cat="Branding">Branding</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#0066FF]/25 text-[#0B0F19] hover:bg-[#F1F4EE]" data-cat="Web Development">Web Dev</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#0066FF]/25 text-[#0B0F19] hover:bg-[#F1F4EE]" data-cat="Paid Media">Paid Media</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#0066FF]/25 text-[#0B0F19] hover:bg-[#F1F4EE]" data-cat="Creative Media">Video/Photo</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#0066FF]/25 text-[#0B0F19] hover:bg-[#F1F4EE]" data-cat="Experiential">Events/3D</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#0066FF]/25 text-[#0B0F19] hover:bg-[#F1F4EE]" data-cat="Organic Growth">SEO/AEO</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#0066FF]/25 text-[#0B0F19] hover:bg-[#F1F4EE]" data-cat="PR & Media">PR</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#0066FF]/25 text-[#0B0F19] hover:bg-[#F1F4EE]" data-cat="Feedback & QA">Feedback</button>
-                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#0066FF]/25 text-[#0B0F19] hover:bg-[#F1F4EE]" data-cat="Careers & Hiring">Careers</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#06D6A0] text-white" data-cat="all">All (22)</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#06D6A0]/25 text-[#08201A] hover:bg-[#F1F4EE]" data-cat="Strategy">Strategy</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#06D6A0]/25 text-[#08201A] hover:bg-[#F1F4EE]" data-cat="Branding">Branding</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#06D6A0]/25 text-[#08201A] hover:bg-[#F1F4EE]" data-cat="Web Development">Web Dev</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#06D6A0]/25 text-[#08201A] hover:bg-[#F1F4EE]" data-cat="Paid Media">Paid Media</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#06D6A0]/25 text-[#08201A] hover:bg-[#F1F4EE]" data-cat="Creative Media">Video/Photo</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#06D6A0]/25 text-[#08201A] hover:bg-[#F1F4EE]" data-cat="Experiential">Events/3D</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#06D6A0]/25 text-[#08201A] hover:bg-[#F1F4EE]" data-cat="Organic Growth">SEO/AEO</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#06D6A0]/25 text-[#08201A] hover:bg-[#F1F4EE]" data-cat="PR & Media">PR</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#06D6A0]/25 text-[#08201A] hover:bg-[#F1F4EE]" data-cat="Feedback & QA">Feedback</button>
+                <button type="button" class="template-filter-btn px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-[#06D6A0]/25 text-[#08201A] hover:bg-[#F1F4EE]" data-cat="Careers & Hiring">Careers</button>
               </div>
               <div class="w-full sm:w-64">
                 <input type="text" id="templateSearchInput" class="admin-input text-xs py-2" placeholder="🔍 Search 22 templates...">
@@ -734,7 +734,7 @@
           <div id="subtabMyFormsView" class="hidden space-y-6">
             <div class="flex items-center justify-between">
               <div>
-                <h3 class="text-base font-bold text-[#0B0F19]">Active Published Forms</h3>
+                <h3 class="text-base font-bold text-[#08201A]">Active Published Forms</h3>
                 <p class="text-xs text-[#64748B]">Custom forms created and currently active on the website.</p>
               </div>
               <button type="button" id="createNewFormBtn" class="btn-primary-gold text-xs">
@@ -765,9 +765,9 @@
 
           <!-- SUBTAB 3: VISUAL FORM BUILDER -->
           <div id="subtabBuilderView" class="hidden space-y-6">
-            <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-[#0066FF]/15">
+            <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-[#06D6A0]/15">
               <div>
-                <h3 class="text-lg font-bold text-[#0B0F19]" id="builderFormModeHeading">Create / Edit Form</h3>
+                <h3 class="text-lg font-bold text-[#08201A]" id="builderFormModeHeading">Create / Edit Form</h3>
                 <p class="text-xs text-[#64748B]">Configure form schema, drag-and-drop fields, and preview live.</p>
               </div>
               <div class="flex items-center gap-3">
@@ -786,7 +786,7 @@
               <div class="space-y-6">
                 <!-- General Info Card -->
                 <div class="builder-panel">
-                  <h4 class="text-xs font-extrabold uppercase tracking-wider text-[#0066FF] mb-4 flex items-center gap-2">
+                  <h4 class="text-xs font-extrabold uppercase tracking-wider text-[#06D6A0] mb-4 flex items-center gap-2">
                     <i class="fa-solid fa-sliders text-xs"></i>
                     <span>Form Settings &amp; Metadata</span>
                   </h4>
@@ -831,9 +831,9 @@
                     </div>
                   </div>
 
-                  <div class="flex items-center justify-between pt-3 border-t border-[#0066FF]/15">
-                    <label class="flex items-center gap-2 text-xs font-bold text-[#0B0F19] cursor-pointer">
-                      <input type="checkbox" id="builderFormIsActive" class="rounded text-[#0066FF] focus:ring-[#0066FF]" checked>
+                  <div class="flex items-center justify-between pt-3 border-t border-[#06D6A0]/15">
+                    <label class="flex items-center gap-2 text-xs font-bold text-[#08201A] cursor-pointer">
+                      <input type="checkbox" id="builderFormIsActive" class="rounded text-[#06D6A0] focus:ring-[#06D6A0]" checked>
                       <span>Form is Active &amp; Accepting Submissions</span>
                     </label>
                   </div>
@@ -842,11 +842,11 @@
                 <!-- Field Builder Card -->
                 <div class="builder-panel">
                   <div class="flex items-center justify-between mb-4">
-                    <h4 class="text-xs font-extrabold uppercase tracking-wider text-[#0066FF] flex items-center gap-2">
+                    <h4 class="text-xs font-extrabold uppercase tracking-wider text-[#06D6A0] flex items-center gap-2">
                       <i class="fa-solid fa-list-check text-xs"></i>
                       <span>Form Fields (<span id="builderFieldsCount">0</span>)</span>
                     </h4>
-                    <button type="button" id="builderAddFieldBtn" class="px-3 py-1.5 rounded-lg bg-[#0066FF]/10 hover:bg-[#0066FF]/20 text-[#0066FF] text-xs font-bold transition-colors flex items-center gap-1.5">
+                    <button type="button" id="builderAddFieldBtn" class="px-3 py-1.5 rounded-lg bg-[#06D6A0]/10 hover:bg-[#06D6A0]/20 text-[#06D6A0] text-xs font-bold transition-colors flex items-center gap-1.5">
                       <i class="fa-solid fa-plus text-[10px]"></i>
                       <span>Add New Field</span>
                     </button>
@@ -861,15 +861,15 @@
               <!-- Right Column: Live Interactive Preview -->
               <div>
                 <div class="builder-panel sticky top-28">
-                  <div class="flex items-center justify-between pb-3 mb-4 border-b border-[#0066FF]/15">
-                    <span class="text-xs font-extrabold uppercase tracking-wider text-[#0B0F19] flex items-center gap-1.5">
-                      <i class="fa-solid fa-eye text-[#0066FF]"></i>
+                  <div class="flex items-center justify-between pb-3 mb-4 border-b border-[#06D6A0]/15">
+                    <span class="text-xs font-extrabold uppercase tracking-wider text-[#08201A] flex items-center gap-1.5">
+                      <i class="fa-solid fa-eye text-[#06D6A0]"></i>
                       <span>Live Client Preview</span>
                     </span>
                     <span class="text-[11px] text-[#64748B] font-semibold">Updates in Real-Time</span>
                   </div>
 
-                  <div class="p-6 rounded-2xl bg-[#F8FAFC] border border-[#0066FF]/20 shadow-inner max-h-[75vh] overflow-y-auto" id="builderLivePreviewBox">
+                  <div class="p-6 rounded-2xl bg-[#EDF9F5] border border-[#06D6A0]/20 shadow-inner max-h-[75vh] overflow-y-auto" id="builderLivePreviewBox">
                     <!-- Form preview rendered dynamically -->
                   </div>
                 </div>
@@ -910,10 +910,10 @@
         <!-- Template Preview Modal -->
         <div id="templatePreviewModal" class="admin-modal-overlay hidden">
           <div class="admin-modal-content">
-            <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#0066FF]/15">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#06D6A0]/15">
               <div>
                 <span id="tplModalCatBadge" class="template-cat-badge">Category</span>
-                <h3 id="tplModalTitle" class="text-xl font-bold text-[#0B0F19] mt-1">Template Title</h3>
+                <h3 id="tplModalTitle" class="text-xl font-bold text-[#08201A] mt-1">Template Title</h3>
               </div>
               <button type="button" id="closeTplModalBtn" class="text-gray-400 hover:text-gray-600 text-lg">
                 <i class="fa-solid fa-xmark"></i>
@@ -922,11 +922,11 @@
             <p id="tplModalDesc" class="text-xs text-[#64748B] leading-relaxed mb-6"></p>
 
             <div class="mb-6">
-              <h4 class="text-xs font-extrabold uppercase tracking-wider text-[#0066FF] mb-3">Included Fields Schema:</h4>
+              <h4 class="text-xs font-extrabold uppercase tracking-wider text-[#06D6A0] mb-3">Included Fields Schema:</h4>
               <div id="tplModalFieldsList" class="space-y-2 max-h-64 overflow-y-auto pr-2"></div>
             </div>
 
-            <div class="flex items-center justify-end gap-3 pt-4 border-t border-[#0066FF]/15">
+            <div class="flex items-center justify-end gap-3 pt-4 border-t border-[#06D6A0]/15">
               <button type="button" id="closeTplModalSecondaryBtn" class="btn-ghost text-xs">Close</button>
               <button type="button" id="useThisTemplateBtn" class="btn-primary-gold text-xs">
                 <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
@@ -939,9 +939,9 @@
         <!-- Embed Code & Public Link Modal -->
         <div id="embedCodeModal" class="admin-modal-overlay hidden">
           <div class="admin-modal-content">
-            <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#0066FF]/15">
-              <h3 class="text-lg font-bold text-[#0B0F19] flex items-center gap-2">
-                <i class="fa-solid fa-share-nodes text-[#0066FF]"></i>
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#06D6A0]/15">
+              <h3 class="text-lg font-bold text-[#08201A] flex items-center gap-2">
+                <i class="fa-solid fa-share-nodes text-[#06D6A0]"></i>
                 <span>Share &amp; Embed Custom Form</span>
               </h3>
               <button type="button" id="closeEmbedModalBtn" class="text-gray-400 hover:text-gray-600 text-lg">
@@ -951,7 +951,7 @@
 
             <div class="space-y-5">
               <div>
-                <label class="block text-xs font-bold text-[#0B0F19] mb-1.5">Direct Public Link</label>
+                <label class="block text-xs font-bold text-[#08201A] mb-1.5">Direct Public Link</label>
                 <div class="flex items-center gap-2">
                   <input type="text" id="embedDirectUrl" class="admin-input text-xs font-mono" readonly>
                   <button type="button" id="copyDirectUrlBtn" class="btn-primary-gold text-xs px-3 py-2 shrink-0">Copy Link</button>
@@ -960,13 +960,13 @@
               </div>
 
               <div>
-                <label class="block text-xs font-bold text-[#0B0F19] mb-1.5">HTML iFrame Embed Code</label>
+                <label class="block text-xs font-bold text-[#08201A] mb-1.5">HTML iFrame Embed Code</label>
                 <textarea id="embedIframeCode" class="admin-textarea font-mono text-xs" rows="3" readonly></textarea>
                 <button type="button" id="copyIframeBtn" class="btn-ghost text-xs mt-1.5">Copy iFrame Snippet</button>
               </div>
 
               <div>
-                <label class="block text-xs font-bold text-[#0B0F19] mb-1.5">WhatsApp Instant Share Link</label>
+                <label class="block text-xs font-bold text-[#08201A] mb-1.5">WhatsApp Instant Share Link</label>
                 <div class="flex items-center gap-2">
                   <input type="text" id="embedWhatsAppUrl" class="admin-input text-xs font-mono" readonly>
                   <a href="#" id="openWhatsAppShareBtn" target="_blank" class="btn-primary-gold text-xs px-3 py-2 shrink-0 flex items-center gap-1.5 bg-[#25D366]">
@@ -977,7 +977,7 @@
               </div>
             </div>
 
-            <div class="flex justify-end pt-4 mt-6 border-t border-[#0066FF]/15">
+            <div class="flex justify-end pt-4 mt-6 border-t border-[#06D6A0]/15">
               <button type="button" id="closeEmbedModalSecondaryBtn" class="btn-ghost text-xs">Done</button>
             </div>
           </div>

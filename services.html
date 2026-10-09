@@ -23,13 +23,16 @@
         extend: {
           colors: {
             palette: {
-              olive: '#0066FF',
-              forest: '#0B0F19',
-              slate: '#0066FF',
-              mist: '#94A3B8',
-              stone: '#CBD5E1'
+              olive: '#06D6A0',
+              forest: '#0C4137',
+              slate: '#06D6A0',
+              mist: '#73968E',
+              stone: '#D7EFE9',
+              emerald: '#06D6A0',
+              brunswick: '#0C4137',
+              polar: '#E6FBF6'
             },
-            canvas: '#FAFCFF'
+            canvas: '#F4FBF8'
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
@@ -44,7 +47,7 @@
   <!-- Custom Unified Morphy Stylesheet -->
   <link rel="stylesheet" href="/styles.css">
 </head>
-<body class="bg-[#FAFCFF] text-[#0B0F19] font-sans antialiased selection:bg-[#0066FF] selection:text-white relative overflow-x-hidden">
+<body class="bg-[#F4FBF8] text-[#08201A] font-sans antialiased selection:bg-[#06D6A0] selection:text-white relative overflow-x-hidden">
 
   <!-- 0. Top Scroll Progress Bar -->
   <div id="scrollProgressBar"></div>
@@ -56,60 +59,60 @@
 
   <!-- 2. FIXED GLASS NAVBAR -->
             <!-- 1. FIXED GLASS NAVBAR (Morphy Style) -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-2xl border-b border-[#E2E8F0] transition-all duration-300 shadow-2xs">
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-2xl border-b border-[#D7EFE9] transition-all duration-300 shadow-2xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
       <!-- Brand Logo -->
       <a href="/" class="flex items-center gap-3 group min-w-0">
-        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#0066FF] to-[#0040C1] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#0066FF]/25 border border-white/20 shrink-0">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#06D6A0] to-[#0C4137] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#06D6A0]/25 border border-white/20 shrink-0">
           ✦
         </div>
         <div class="flex flex-col min-w-0">
-          <span class="font-extrabold text-[#0B0F19] tracking-tight text-base sm:text-lg group-hover:text-[#0066FF] transition-colors truncate" id="navBrandName">Md. Shakibur Rahaman</span>
-          <span class="text-[10px] text-[#0066FF] font-extrabold tracking-wider uppercase truncate">Strategic Lead &amp; Digital Architect</span>
+          <span class="font-extrabold text-[#08201A] tracking-tight text-base sm:text-lg group-hover:text-[#06D6A0] transition-colors truncate" id="navBrandName">Md. Shakibur Rahaman</span>
+          <span class="text-[10px] text-[#06D6A0] font-extrabold tracking-wider uppercase truncate">Strategic Lead &amp; Digital Architect</span>
         </div>
       </a>
 
       <!-- Centered Floating Pill Navigation Menu (Desktop Only) -->
-      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-white/95 border border-[#E2E8F0] text-sm font-semibold text-[#334155] backdrop-blur-md shadow-xs shrink-0">
-        <a href="/" class="hover:text-[#0066FF] transition-colors">Home</a>
-        <a href="/about" class="hover:text-[#0066FF] transition-colors">About</a>
+      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-white/95 border border-[#D7EFE9] text-sm font-semibold text-[#334155] backdrop-blur-md shadow-xs shrink-0">
+        <a href="/" class="hover:text-[#06D6A0] transition-colors">Home</a>
+        <a href="/about" class="hover:text-[#06D6A0] transition-colors">About</a>
         
         <!-- Services with dropdown arrow -->
         <div class="relative group">
-          <a href="/services" class="flex items-center gap-1.5 text-[#0066FF] font-bold transition-colors py-1">
+          <a href="/services" class="flex items-center gap-1.5 text-[#06D6A0] font-bold transition-colors py-1">
             <span>Services</span>
-            <i class="fa-solid fa-chevron-down text-[10px] text-[#64748B] group-hover:text-[#0066FF] group-hover:rotate-180 transition-transform duration-200"></i>
+            <i class="fa-solid fa-chevron-down text-[10px] text-[#64748B] group-hover:text-[#06D6A0] group-hover:rotate-180 transition-transform duration-200"></i>
           </a>
           <!-- Dropdown card -->
-          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#E2E8F0] shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Social Media &amp; Meta Ads</a>
-            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Google Ads &amp; Search</a>
-            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Full-Stack Web Development</a>
-            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">SEO &amp; AI Engine Optimization</a>
-            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#0B0F19] hover:bg-[#0066FF]/5 hover:text-[#0066FF] transition-colors">Graphics &amp; Visual Assets</a>
-            <div class="my-1.5 border-t border-[#E2E8F0]"></div>
-            <a href="/services" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#0066FF] hover:bg-[#0066FF]/10 text-center">View All 9 Services &rarr;</a>
+          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-white/98 rounded-2xl border border-[#D7EFE9] shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Social Media &amp; Meta Ads</a>
+            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Google Ads &amp; Search</a>
+            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Full-Stack Web Development</a>
+            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">SEO &amp; AI Engine Optimization</a>
+            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-[#08201A] hover:bg-[#06D6A0]/5 hover:text-[#06D6A0] transition-colors">Graphics &amp; Visual Assets</a>
+            <div class="my-1.5 border-t border-[#D7EFE9]"></div>
+            <a href="/services" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#06D6A0] hover:bg-[#06D6A0]/10 text-center">View All 9 Services &rarr;</a>
           </div>
         </div>
 
-        <a href="/projects" class="hover:text-[#0066FF] transition-colors">Projects</a>
-        <a href="/experience" class="hover:text-[#0066FF] transition-colors">Experience</a>
-        <a href="/offers" class="hover:text-[#0066FF] transition-colors">Offers</a>
-        <a href="/consultation" class="hover:text-[#0066FF] transition-colors">Consultation</a>
+        <a href="/projects" class="hover:text-[#06D6A0] transition-colors">Projects</a>
+        <a href="/experience" class="hover:text-[#06D6A0] transition-colors">Experience</a>
+        <a href="/offers" class="hover:text-[#06D6A0] transition-colors">Offers</a>
+        <a href="/consultation" class="hover:text-[#06D6A0] transition-colors">Consultation</a>
       </nav>
 
       <!-- Right Header Actions (Mobile Hamburger Toggle) -->
       <div class="flex items-center gap-3 shrink-0">
-        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-white border border-[#E2E8F0] hover:border-[#0066FF]/30 hover:bg-[#0066FF]/5 text-[#0B0F19] hover:text-[#0066FF] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
+        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-white border border-[#D7EFE9] hover:border-[#06D6A0]/30 hover:bg-[#06D6A0]/5 text-[#08201A] hover:text-[#06D6A0] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
           <i id="mobileMenuIcon" class="fa-solid fa-bars-staggered text-base"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Dropdown Menu (Morphy Glassmorphic Design) -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-x border-[#E2E8F0] rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
-      <div class="space-y-1.5 pb-3 border-b border-[#F1F5F9]">
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-x border-[#D7EFE9] rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
+      <div class="space-y-1.5 pb-3 border-b border-[#E2F4EF]">
         <a href="/" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
             <i class="fa-solid fa-house-chimney text-xs text-[#64748B] w-4"></i>
@@ -126,10 +129,10 @@
         </a>
         <a href="/services" class="mobile-nav-link mobile-link flex items-center justify-between active">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-layer-group text-xs text-[#0066FF] w-4"></i>
+            <i class="fa-solid fa-layer-group text-xs text-[#06D6A0] w-4"></i>
             <span>Services</span>
           </span>
-          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#0066FF]/10 text-[#0066FF]">9 Pillars</span>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#06D6A0]/10 text-[#06D6A0]">9 Pillars</span>
         </a>
         <a href="/projects" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
@@ -147,16 +150,16 @@
         </a>
         <a href="/offers" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
-            <i class="fa-solid fa-tags text-xs text-[#0066FF] w-4"></i>
-            <span class="font-bold text-[#0066FF]">Special Offers</span>
+            <i class="fa-solid fa-tags text-xs text-[#06D6A0] w-4"></i>
+            <span class="font-bold text-[#06D6A0]">Special Offers</span>
           </span>
-          <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-gradient-to-r from-[#0066FF] to-[#0052FF] text-white shadow-xs">EMI 🔥</span>
+          <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-gradient-to-r from-[#06D6A0] to-[#05B386] text-white shadow-xs">EMI 🔥</span>
         </a>
       </div>
 
       <!-- Quick Action Contact in Mobile Menu -->
       <div class="pt-2 flex items-center gap-2">
-        <a href="/contact" class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#0066FF] to-[#0052FF] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-[#0066FF]/25 hover:shadow-lg transition-all active:scale-98">
+        <a href="/contact" class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#06D6A0] to-[#05B386] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-[#06D6A0]/25 hover:shadow-lg transition-all active:scale-98">
           <i class="fa-solid fa-paper-plane text-xs"></i>
           <span>Get in Touch</span>
         </a>
@@ -176,9 +179,9 @@
         <span>9 INTEGRATED STRATEGIC DISCIPLINES</span>
       </div>
 
-      <h1 class="text-4xl sm:text-6xl md:text-7xl font-black text-[#0B0F19] tracking-tight leading-[1.08] max-w-5xl mx-auto">
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-black text-[#08201A] tracking-tight leading-[1.08] max-w-5xl mx-auto">
         End-to-End Creative Direction &amp; <br>
-        <span class="bg-gradient-to-r from-[#0066FF] to-[#0052FF] bg-clip-text text-transparent">Full-Stack Execution</span>
+        <span class="bg-gradient-to-r from-[#06D6A0] to-[#05B386] bg-clip-text text-transparent">Full-Stack Execution</span>
       </h1>
 
       <p class="text-sm sm:text-base text-[#64748B] max-w-3xl mx-auto leading-relaxed">
@@ -188,33 +191,33 @@
       <!-- Key Strategic Points Strip -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto text-left pt-6">
         <div class="morphy-card p-5 flex items-start gap-3 bg-white shadow-xs">
-          <div class="w-8 h-8 rounded-xl bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center font-black text-xs shrink-0">01</div>
+          <div class="w-8 h-8 rounded-xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center font-black text-xs shrink-0">01</div>
           <div>
-            <h4 class="text-xs font-black text-[#0B0F19]">Unified Authority</h4>
+            <h4 class="text-xs font-black text-[#08201A]">Unified Authority</h4>
             <p class="text-[11px] text-[#64748B] leading-snug mt-0.5">Single decisive lead across design, code &amp; media.</p>
           </div>
         </div>
 
         <div class="morphy-card p-5 flex items-start gap-3 bg-white shadow-xs">
-          <div class="w-8 h-8 rounded-xl bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center font-black text-xs shrink-0">02</div>
+          <div class="w-8 h-8 rounded-xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center font-black text-xs shrink-0">02</div>
           <div>
-            <h4 class="text-xs font-black text-[#0B0F19]">High-Speed Architecture</h4>
+            <h4 class="text-xs font-black text-[#08201A]">High-Speed Architecture</h4>
             <p class="text-[11px] text-[#64748B] leading-snug mt-0.5">95+ Core Web Vitals &amp; conversion optimization.</p>
           </div>
         </div>
 
         <div class="morphy-card p-5 flex items-start gap-3 bg-white shadow-xs">
-          <div class="w-8 h-8 rounded-xl bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center font-black text-xs shrink-0">03</div>
+          <div class="w-8 h-8 rounded-xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center font-black text-xs shrink-0">03</div>
           <div>
-            <h4 class="text-xs font-black text-[#0B0F19]">100% Full IP Handover</h4>
+            <h4 class="text-xs font-black text-[#08201A]">100% Full IP Handover</h4>
             <p class="text-[11px] text-[#64748B] leading-snug mt-0.5">Master vector source files &amp; production codebase.</p>
           </div>
         </div>
 
         <div class="morphy-card p-5 flex items-start gap-3 bg-white shadow-xs">
-          <div class="w-8 h-8 rounded-xl bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center font-black text-xs shrink-0">04</div>
+          <div class="w-8 h-8 rounded-xl bg-[#06D6A0]/10 text-[#06D6A0] flex items-center justify-center font-black text-xs shrink-0">04</div>
           <div>
-            <h4 class="text-xs font-black text-[#0B0F19]">Quantifiable Growth</h4>
+            <h4 class="text-xs font-black text-[#08201A]">Quantifiable Growth</h4>
             <p class="text-[11px] text-[#64748B] leading-snug mt-0.5">Data-backed ROAS &amp; milestone sprint guarantees.</p>
           </div>
         </div>
@@ -224,15 +227,15 @@
   </section>
 
   <!-- 4. 9 SERVICES MASTER GRID (3 CARDS PER ROW) -->
-  <section class="py-16 md:py-24 border-t border-[#E2E8F0] bg-[#FAFCFF] relative z-10">
+  <section class="py-16 md:py-24 border-t border-[#D7EFE9] bg-[#F4FBF8] relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div id="servicesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-    <a href="/services/branding" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
+    <a href="/services/branding" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#D7EFE9] shadow-sm hover:shadow-2xl hover:shadow-[#06D6A0]/15 hover:border-[#06D6A0] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
       <!-- Inset Image Frame with Rounded Corners -->
-      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#08201A] mb-5">
         <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80" alt="Branding & Brand Strategy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
@@ -268,10 +271,10 @@
         <div>
           <!-- Title & Pillar Tag -->
           <div class="flex items-start justify-between gap-2">
-            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+            <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-tight">
               Branding & Brand Strategy
             </h3>
-            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+            <span class="px-3 py-1 rounded-full border border-[#D7EFE9] text-[11px] font-bold text-[#64748B] bg-[#EDF9F5] shrink-0 group-hover:border-[#06D6A0]/30 group-hover:text-[#06D6A0] transition-colors">
               Pillar 01
             </span>
           </div>
@@ -287,25 +290,25 @@
           </p>
 
           <!-- Key Deliverable Points -->
-          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
-            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
+          <div class="pt-3.5 mt-3.5 border-t border-[#E2F4EF]">
+            <div class="text-[10px] font-black tracking-wider text-[#06D6A0] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
               <span>KEY DELIVERABLES:</span>
             </div>
             <ul class="space-y-1.5">
               
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Brand Positioning Blueprint</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Master Brand Identity Book</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Corporate Stationery Suite</span>
     </li>
   
@@ -314,15 +317,15 @@
         </div>
 
         <!-- Bottom Row: Metric & Morphy Pill Button -->
-        <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
+        <div class="pt-4 border-t border-[#E2F4EF] flex items-center justify-between">
           <div class="flex items-baseline gap-1.5">
-            <span class="text-base font-black text-[#0066FF]">+3.5x</span>
+            <span class="text-base font-black text-[#06D6A0]">+3.5x</span>
             <span class="text-xs font-semibold text-[#64748B]">Valuation Lift</span>
           </div>
 
-          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#08201A] group-hover:bg-[#06D6A0] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#06D6A0]/30">
             <span>Explore Hub</span>
-            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+            <span class="w-6 h-6 rounded-full bg-white text-[#08201A] group-hover:text-[#06D6A0] flex items-center justify-center text-[10px] transition-colors">
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </span>
           </div>
@@ -333,10 +336,10 @@
     </a>
   
 
-    <a href="/services/graphics-design" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
+    <a href="/services/graphics-design" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#D7EFE9] shadow-sm hover:shadow-2xl hover:shadow-[#06D6A0]/15 hover:border-[#06D6A0] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
       <!-- Inset Image Frame with Rounded Corners -->
-      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#08201A] mb-5">
         <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Graphics Design & Visual Systems" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
@@ -372,10 +375,10 @@
         <div>
           <!-- Title & Pillar Tag -->
           <div class="flex items-start justify-between gap-2">
-            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+            <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-tight">
               Graphics Design & Visual Systems
             </h3>
-            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+            <span class="px-3 py-1 rounded-full border border-[#D7EFE9] text-[11px] font-bold text-[#64748B] bg-[#EDF9F5] shrink-0 group-hover:border-[#06D6A0]/30 group-hover:text-[#06D6A0] transition-colors">
               Pillar 02
             </span>
           </div>
@@ -391,25 +394,25 @@
           </p>
 
           <!-- Key Deliverable Points -->
-          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
-            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
+          <div class="pt-3.5 mt-3.5 border-t border-[#E2F4EF]">
+            <div class="text-[10px] font-black tracking-wider text-[#06D6A0] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
               <span>KEY DELIVERABLES:</span>
             </div>
             <ul class="space-y-1.5">
               
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>UI/UX Web & Mobile Interface Design</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Luxury Packaging & Structural Dielines</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Investor Pitch Decks & Keynotes</span>
     </li>
   
@@ -418,15 +421,15 @@
         </div>
 
         <!-- Bottom Row: Metric & Morphy Pill Button -->
-        <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
+        <div class="pt-4 border-t border-[#E2F4EF] flex items-center justify-between">
           <div class="flex items-baseline gap-1.5">
-            <span class="text-base font-black text-[#0066FF]">300+</span>
+            <span class="text-base font-black text-[#06D6A0]">300+</span>
             <span class="text-xs font-semibold text-[#64748B]">Vector Assets Designed</span>
           </div>
 
-          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#08201A] group-hover:bg-[#06D6A0] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#06D6A0]/30">
             <span>Explore Hub</span>
-            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+            <span class="w-6 h-6 rounded-full bg-white text-[#08201A] group-hover:text-[#06D6A0] flex items-center justify-center text-[10px] transition-colors">
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </span>
           </div>
@@ -437,10 +440,10 @@
     </a>
   
 
-    <a href="/services/web-development" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
+    <a href="/services/web-development" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#D7EFE9] shadow-sm hover:shadow-2xl hover:shadow-[#06D6A0]/15 hover:border-[#06D6A0] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
       <!-- Inset Image Frame with Rounded Corners -->
-      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#08201A] mb-5">
         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Web Design & Development" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
@@ -476,10 +479,10 @@
         <div>
           <!-- Title & Pillar Tag -->
           <div class="flex items-start justify-between gap-2">
-            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+            <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-tight">
               Web Design & Development
             </h3>
-            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+            <span class="px-3 py-1 rounded-full border border-[#D7EFE9] text-[11px] font-bold text-[#64748B] bg-[#EDF9F5] shrink-0 group-hover:border-[#06D6A0]/30 group-hover:text-[#06D6A0] transition-colors">
               Pillar 03
             </span>
           </div>
@@ -495,25 +498,25 @@
           </p>
 
           <!-- Key Deliverable Points -->
-          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
-            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
+          <div class="pt-3.5 mt-3.5 border-t border-[#E2F4EF]">
+            <div class="text-[10px] font-black tracking-wider text-[#06D6A0] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
               <span>KEY DELIVERABLES:</span>
             </div>
             <ul class="space-y-1.5">
               
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Custom Corporate Web Architecture</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Headless E-Commerce Flagships</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Conversion Rate Optimization (CRO)</span>
     </li>
   
@@ -522,15 +525,15 @@
         </div>
 
         <!-- Bottom Row: Metric & Morphy Pill Button -->
-        <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
+        <div class="pt-4 border-t border-[#E2F4EF] flex items-center justify-between">
           <div class="flex items-baseline gap-1.5">
-            <span class="text-base font-black text-[#0066FF]">0.8s</span>
+            <span class="text-base font-black text-[#06D6A0]">0.8s</span>
             <span class="text-xs font-semibold text-[#64748B]">Speed • 95+ PageSpeed</span>
           </div>
 
-          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#08201A] group-hover:bg-[#06D6A0] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#06D6A0]/30">
             <span>Explore Hub</span>
-            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+            <span class="w-6 h-6 rounded-full bg-white text-[#08201A] group-hover:text-[#06D6A0] flex items-center justify-center text-[10px] transition-colors">
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </span>
           </div>
@@ -541,10 +544,10 @@
     </a>
   
 
-    <a href="/services/social-media-marketing" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
+    <a href="/services/social-media-marketing" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#D7EFE9] shadow-sm hover:shadow-2xl hover:shadow-[#06D6A0]/15 hover:border-[#06D6A0] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
       <!-- Inset Image Frame with Rounded Corners -->
-      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#08201A] mb-5">
         <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="Social Media Marketing (SMM)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
@@ -580,10 +583,10 @@
         <div>
           <!-- Title & Pillar Tag -->
           <div class="flex items-start justify-between gap-2">
-            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+            <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-tight">
               Social Media Marketing (SMM)
             </h3>
-            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+            <span class="px-3 py-1 rounded-full border border-[#D7EFE9] text-[11px] font-bold text-[#64748B] bg-[#EDF9F5] shrink-0 group-hover:border-[#06D6A0]/30 group-hover:text-[#06D6A0] transition-colors">
               Pillar 04
             </span>
           </div>
@@ -599,25 +602,25 @@
           </p>
 
           <!-- Key Deliverable Points -->
-          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
-            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
+          <div class="pt-3.5 mt-3.5 border-t border-[#E2F4EF]">
+            <div class="text-[10px] font-black tracking-wider text-[#06D6A0] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
               <span>KEY DELIVERABLES:</span>
             </div>
             <ul class="space-y-1.5">
               
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Omnichannel Social Content Engine</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Viral Short-Form Reels & TikToks</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Meta Advantage+ Paid Ad Campaigns</span>
     </li>
   
@@ -626,15 +629,15 @@
         </div>
 
         <!-- Bottom Row: Metric & Morphy Pill Button -->
-        <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
+        <div class="pt-4 border-t border-[#E2F4EF] flex items-center justify-between">
           <div class="flex items-baseline gap-1.5">
-            <span class="text-base font-black text-[#0066FF]">4.8x</span>
+            <span class="text-base font-black text-[#06D6A0]">4.8x</span>
             <span class="text-xs font-semibold text-[#64748B]">Blended ROAS Achieved</span>
           </div>
 
-          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#08201A] group-hover:bg-[#06D6A0] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#06D6A0]/30">
             <span>Explore Hub</span>
-            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+            <span class="w-6 h-6 rounded-full bg-white text-[#08201A] group-hover:text-[#06D6A0] flex items-center justify-center text-[10px] transition-colors">
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </span>
           </div>
@@ -645,10 +648,10 @@
     </a>
   
 
-    <a href="/services/photoshoot-videography" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
+    <a href="/services/photoshoot-videography" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#D7EFE9] shadow-sm hover:shadow-2xl hover:shadow-[#06D6A0]/15 hover:border-[#06D6A0] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
       <!-- Inset Image Frame with Rounded Corners -->
-      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#08201A] mb-5">
         <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80" alt="Commercial Photoshoot & Video" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
@@ -684,10 +687,10 @@
         <div>
           <!-- Title & Pillar Tag -->
           <div class="flex items-start justify-between gap-2">
-            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+            <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-tight">
               Commercial Photoshoot & Video
             </h3>
-            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+            <span class="px-3 py-1 rounded-full border border-[#D7EFE9] text-[11px] font-bold text-[#64748B] bg-[#EDF9F5] shrink-0 group-hover:border-[#06D6A0]/30 group-hover:text-[#06D6A0] transition-colors">
               Pillar 05
             </span>
           </div>
@@ -703,25 +706,25 @@
           </p>
 
           <!-- Key Deliverable Points -->
-          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
-            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
+          <div class="pt-3.5 mt-3.5 border-t border-[#E2F4EF]">
+            <div class="text-[10px] font-black tracking-wider text-[#06D6A0] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
               <span>KEY DELIVERABLES:</span>
             </div>
             <ul class="space-y-1.5">
               
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Broadcast TVCs & Brand Commercials</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Luxury E-Commerce & Product Photography</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Executive Portraits & Corporate Culture</span>
     </li>
   
@@ -730,15 +733,15 @@
         </div>
 
         <!-- Bottom Row: Metric & Morphy Pill Button -->
-        <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
+        <div class="pt-4 border-t border-[#E2F4EF] flex items-center justify-between">
           <div class="flex items-baseline gap-1.5">
-            <span class="text-base font-black text-[#0066FF]">4K</span>
+            <span class="text-base font-black text-[#06D6A0]">4K</span>
             <span class="text-xs font-semibold text-[#64748B]">Cinema Broadcast Masters</span>
           </div>
 
-          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#08201A] group-hover:bg-[#06D6A0] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#06D6A0]/30">
             <span>Explore Hub</span>
-            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+            <span class="w-6 h-6 rounded-full bg-white text-[#08201A] group-hover:text-[#06D6A0] flex items-center justify-center text-[10px] transition-colors">
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </span>
           </div>
@@ -749,10 +752,10 @@
     </a>
   
 
-    <a href="/services/event-activation" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
+    <a href="/services/event-activation" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#D7EFE9] shadow-sm hover:shadow-2xl hover:shadow-[#06D6A0]/15 hover:border-[#06D6A0] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
       <!-- Inset Image Frame with Rounded Corners -->
-      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#08201A] mb-5">
         <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Event Activation & Exhibition" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
@@ -788,10 +791,10 @@
         <div>
           <!-- Title & Pillar Tag -->
           <div class="flex items-start justify-between gap-2">
-            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+            <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-tight">
               Event Activation & Exhibition
             </h3>
-            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+            <span class="px-3 py-1 rounded-full border border-[#D7EFE9] text-[11px] font-bold text-[#64748B] bg-[#EDF9F5] shrink-0 group-hover:border-[#06D6A0]/30 group-hover:text-[#06D6A0] transition-colors">
               Pillar 06
             </span>
           </div>
@@ -807,25 +810,25 @@
           </p>
 
           <!-- Key Deliverable Points -->
-          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
-            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
+          <div class="pt-3.5 mt-3.5 border-t border-[#E2F4EF]">
+            <div class="text-[10px] font-black tracking-wider text-[#06D6A0] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
               <span>KEY DELIVERABLES:</span>
             </div>
             <ul class="space-y-1.5">
               
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Photorealistic 3D Booth Design</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Turnkey Fabrication & Vendor Management</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Experiential Pop-Ups & Brand Launches</span>
     </li>
   
@@ -834,15 +837,15 @@
         </div>
 
         <!-- Bottom Row: Metric & Morphy Pill Button -->
-        <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
+        <div class="pt-4 border-t border-[#E2F4EF] flex items-center justify-between">
           <div class="flex items-baseline gap-1.5">
-            <span class="text-base font-black text-[#0066FF]">3D</span>
+            <span class="text-base font-black text-[#06D6A0]">3D</span>
             <span class="text-xs font-semibold text-[#64748B]">Spatial Renders & Fabrication</span>
           </div>
 
-          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#08201A] group-hover:bg-[#06D6A0] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#06D6A0]/30">
             <span>Explore Hub</span>
-            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+            <span class="w-6 h-6 rounded-full bg-white text-[#08201A] group-hover:text-[#06D6A0] flex items-center justify-center text-[10px] transition-colors">
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </span>
           </div>
@@ -853,10 +856,10 @@
     </a>
   
 
-    <a href="/services/google-ads" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
+    <a href="/services/google-ads" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#D7EFE9] shadow-sm hover:shadow-2xl hover:shadow-[#06D6A0]/15 hover:border-[#06D6A0] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
       <!-- Inset Image Frame with Rounded Corners -->
-      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#08201A] mb-5">
         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Google Ads & Intent Scaling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
@@ -892,10 +895,10 @@
         <div>
           <!-- Title & Pillar Tag -->
           <div class="flex items-start justify-between gap-2">
-            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+            <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-tight">
               Google Ads & Intent Scaling
             </h3>
-            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+            <span class="px-3 py-1 rounded-full border border-[#D7EFE9] text-[11px] font-bold text-[#64748B] bg-[#EDF9F5] shrink-0 group-hover:border-[#06D6A0]/30 group-hover:text-[#06D6A0] transition-colors">
               Pillar 07
             </span>
           </div>
@@ -911,25 +914,25 @@
           </p>
 
           <!-- Key Deliverable Points -->
-          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
-            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
+          <div class="pt-3.5 mt-3.5 border-t border-[#E2F4EF]">
+            <div class="text-[10px] font-black tracking-wider text-[#06D6A0] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
               <span>KEY DELIVERABLES:</span>
             </div>
             <ul class="space-y-1.5">
               
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>High-Intent Google Search Ad Campaigns</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Performance Max (PMax) Full-Funnel Scaling</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>YouTube In-Stream Video Conversion Ads</span>
     </li>
   
@@ -938,15 +941,15 @@
         </div>
 
         <!-- Bottom Row: Metric & Morphy Pill Button -->
-        <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
+        <div class="pt-4 border-t border-[#E2F4EF] flex items-center justify-between">
           <div class="flex items-baseline gap-1.5">
-            <span class="text-base font-black text-[#0066FF]"><20%</span>
+            <span class="text-base font-black text-[#06D6A0]"><20%</span>
             <span class="text-xs font-semibold text-[#64748B]">Target CPA Acquisition</span>
           </div>
 
-          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#08201A] group-hover:bg-[#06D6A0] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#06D6A0]/30">
             <span>Explore Hub</span>
-            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+            <span class="w-6 h-6 rounded-full bg-white text-[#08201A] group-hover:text-[#06D6A0] flex items-center justify-center text-[10px] transition-colors">
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </span>
           </div>
@@ -957,10 +960,10 @@
     </a>
   
 
-    <a href="/services/seo-aeo" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
+    <a href="/services/seo-aeo" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#D7EFE9] shadow-sm hover:shadow-2xl hover:shadow-[#06D6A0]/15 hover:border-[#06D6A0] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
       <!-- Inset Image Frame with Rounded Corners -->
-      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#08201A] mb-5">
         <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80" alt="SEO & Generative AI Optimization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
@@ -996,10 +999,10 @@
         <div>
           <!-- Title & Pillar Tag -->
           <div class="flex items-start justify-between gap-2">
-            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+            <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-tight">
               SEO & Generative AI Optimization
             </h3>
-            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+            <span class="px-3 py-1 rounded-full border border-[#D7EFE9] text-[11px] font-bold text-[#64748B] bg-[#EDF9F5] shrink-0 group-hover:border-[#06D6A0]/30 group-hover:text-[#06D6A0] transition-colors">
               Pillar 08
             </span>
           </div>
@@ -1015,25 +1018,25 @@
           </p>
 
           <!-- Key Deliverable Points -->
-          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
-            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
+          <div class="pt-3.5 mt-3.5 border-t border-[#E2F4EF]">
+            <div class="text-[10px] font-black tracking-wider text-[#06D6A0] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
               <span>KEY DELIVERABLES:</span>
             </div>
             <ul class="space-y-1.5">
               
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Semantic Schema & Entity Graph Engineering</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Generative AI Answer Engine Optimization (AEO)</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Standardized /llms.txt Directives Architecture</span>
     </li>
   
@@ -1042,15 +1045,15 @@
         </div>
 
         <!-- Bottom Row: Metric & Morphy Pill Button -->
-        <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
+        <div class="pt-4 border-t border-[#E2F4EF] flex items-center justify-between">
           <div class="flex items-baseline gap-1.5">
-            <span class="text-base font-black text-[#0066FF]">Top 3</span>
+            <span class="text-base font-black text-[#06D6A0]">Top 3</span>
             <span class="text-xs font-semibold text-[#64748B]">SERP & AI Answer Ready</span>
           </div>
 
-          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#08201A] group-hover:bg-[#06D6A0] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#06D6A0]/30">
             <span>Explore Hub</span>
-            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+            <span class="w-6 h-6 rounded-full bg-white text-[#08201A] group-hover:text-[#06D6A0] flex items-center justify-center text-[10px] transition-colors">
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </span>
           </div>
@@ -1061,10 +1064,10 @@
     </a>
   
 
-    <a href="/services/public-relations" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#0066FF]/15 hover:border-[#0066FF] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
+    <a href="/services/public-relations" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#D7EFE9] shadow-sm hover:shadow-2xl hover:shadow-[#06D6A0]/15 hover:border-[#06D6A0] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
       
       <!-- Inset Image Frame with Rounded Corners -->
-      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
+      <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#08201A] mb-5">
         <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80" alt="Public Relations & Media Outreach" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
         
@@ -1100,10 +1103,10 @@
         <div>
           <!-- Title & Pillar Tag -->
           <div class="flex items-start justify-between gap-2">
-            <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#0066FF] transition-colors leading-tight">
+            <h3 class="text-xl font-black text-[#08201A] group-hover:text-[#06D6A0] transition-colors leading-tight">
               Public Relations & Media Outreach
             </h3>
-            <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#0066FF]/30 group-hover:text-[#0066FF] transition-colors">
+            <span class="px-3 py-1 rounded-full border border-[#D7EFE9] text-[11px] font-bold text-[#64748B] bg-[#EDF9F5] shrink-0 group-hover:border-[#06D6A0]/30 group-hover:text-[#06D6A0] transition-colors">
               Pillar 09
             </span>
           </div>
@@ -1119,25 +1122,25 @@
           </p>
 
           <!-- Key Deliverable Points -->
-          <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
-            <div class="text-[10px] font-black tracking-wider text-[#0066FF] uppercase flex items-center gap-1.5 mb-2">
+          <div class="pt-3.5 mt-3.5 border-t border-[#E2F4EF]">
+            <div class="text-[10px] font-black tracking-wider text-[#06D6A0] uppercase flex items-center gap-1.5 mb-2">
               <i class="fa-solid fa-list-check text-[10px]"></i>
               <span>KEY DELIVERABLES:</span>
             </div>
             <ul class="space-y-1.5">
               
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Strategic Press Release Syndication</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Executive Thought Leadership & Op-Eds</span>
     </li>
   
     <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-      <i class="fa-solid fa-circle-check text-[#0066FF] text-[11px] shrink-0 mt-0.5"></i>
+      <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
       <span>Journalist Relations & Media Pitching</span>
     </li>
   
@@ -1146,15 +1149,15 @@
         </div>
 
         <!-- Bottom Row: Metric & Morphy Pill Button -->
-        <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
+        <div class="pt-4 border-t border-[#E2F4EF] flex items-center justify-between">
           <div class="flex items-baseline gap-1.5">
-            <span class="text-base font-black text-[#0066FF]">Tier-1</span>
+            <span class="text-base font-black text-[#06D6A0]">Tier-1</span>
             <span class="text-xs font-semibold text-[#64748B]">Broadcast & News Reach</span>
           </div>
 
-          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#0066FF] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#0066FF]/30">
+          <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#08201A] group-hover:bg-[#06D6A0] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#06D6A0]/30">
             <span>Explore Hub</span>
-            <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#0066FF] flex items-center justify-center text-[10px] transition-colors">
+            <span class="w-6 h-6 rounded-full bg-white text-[#08201A] group-hover:text-[#06D6A0] flex items-center justify-center text-[10px] transition-colors">
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </span>
           </div>
@@ -1170,14 +1173,14 @@
   </section>
 
   <!-- 5. 4-PHASE DELIVERY FRAMEWORK -->
-  <section class="py-20 bg-white border-t border-[#E2E8F0] relative z-10">
+  <section class="py-20 bg-white border-t border-[#D7EFE9] relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
         <div class="morphy-tag-primary justify-center">
           <i class="fa-solid fa-code-commit"></i>
           <span>TRANSPARENT METHODOLOGY</span>
         </div>
-        <h2 class="text-3xl sm:text-5xl font-black text-[#0B0F19] tracking-tight">
+        <h2 class="text-3xl sm:text-5xl font-black text-[#08201A] tracking-tight">
           4-Phase Delivery Framework
         </h2>
         <p class="text-sm sm:text-base text-[#64748B] font-medium leading-relaxed">
@@ -1186,27 +1189,27 @@
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="morphy-card p-6 bg-white border border-[#E2E8F0] space-y-3">
-          <div class="text-xs font-black text-[#0066FF] uppercase">Phase 01 • Week 01</div>
-          <h3 class="text-lg font-black text-[#0B0F19]">Discovery &amp; Audit</h3>
+        <div class="morphy-card p-6 bg-white border border-[#D7EFE9] space-y-3">
+          <div class="text-xs font-black text-[#06D6A0] uppercase">Phase 01 • Week 01</div>
+          <h3 class="text-lg font-black text-[#08201A]">Discovery &amp; Audit</h3>
           <p class="text-xs text-[#64748B] leading-relaxed">In-depth technical immersion into brand perception, competitor whitespace, analytics telemetry, and commercial bottlenecks.</p>
         </div>
 
-        <div class="morphy-card p-6 bg-white border border-[#E2E8F0] space-y-3">
-          <div class="text-xs font-black text-[#0066FF] uppercase">Phase 02 • Week 02</div>
-          <h3 class="text-lg font-black text-[#0B0F19]">Architecture</h3>
+        <div class="morphy-card p-6 bg-white border border-[#D7EFE9] space-y-3">
+          <div class="text-xs font-black text-[#06D6A0] uppercase">Phase 02 • Week 02</div>
+          <h3 class="text-lg font-black text-[#08201A]">Architecture</h3>
           <p class="text-xs text-[#64748B] leading-relaxed">Drafting foundational blueprints, typographic hierarchies, database schemas, interactive prototypes, and milestone sign-offs.</p>
         </div>
 
-        <div class="morphy-card p-6 bg-white border border-[#E2E8F0] space-y-3">
-          <div class="text-xs font-black text-[#0066FF] uppercase">Phase 03 • Weeks 03–04</div>
-          <h3 class="text-lg font-black text-[#0B0F19]">Sprint Execution</h3>
+        <div class="morphy-card p-6 bg-white border border-[#D7EFE9] space-y-3">
+          <div class="text-xs font-black text-[#06D6A0] uppercase">Phase 03 • Weeks 03–04</div>
+          <h3 class="text-lg font-black text-[#08201A]">Sprint Execution</h3>
           <p class="text-xs text-[#64748B] leading-relaxed">Rapid production iterations, live staging deployments, cross-browser QA, and collaborative client review walkthroughs.</p>
         </div>
 
-        <div class="morphy-card p-6 bg-white border border-[#E2E8F0] space-y-3">
+        <div class="morphy-card p-6 bg-white border border-[#D7EFE9] space-y-3">
           <div class="text-xs font-black text-[#10B981] uppercase">Phase 04 • Week 05</div>
-          <h3 class="text-lg font-black text-[#0B0F19]">Launch &amp; Scaling</h3>
+          <h3 class="text-lg font-black text-[#08201A]">Launch &amp; Scaling</h3>
           <p class="text-xs text-[#64748B] leading-relaxed">Production zero-downtime deployment, team training, full IP master asset transfer, and post-launch optimization.</p>
         </div>
       </div>
@@ -1214,14 +1217,14 @@
   </section>
 
   <!-- 6. BOTTOM STRATEGIC CONSULTATION BANNER -->
-  <section class="py-20 bg-[#FAFCFF] border-t border-[#E2E8F0] relative z-10">
+  <section class="py-20 bg-[#F4FBF8] border-t border-[#D7EFE9] relative z-10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
       <div class="morphy-tag-primary justify-center">
         <i class="fa-solid fa-rocket"></i>
         <span>TAILORED SPRINT ROADMAP</span>
       </div>
-      <h2 class="text-3xl sm:text-5xl font-black text-[#0B0F19] tracking-tight">
-        Ready to Commission a <span class="text-[#0066FF]">Dedicated Discipline?</span>
+      <h2 class="text-3xl sm:text-5xl font-black text-[#08201A] tracking-tight">
+        Ready to Commission a <span class="text-[#06D6A0]">Dedicated Discipline?</span>
       </h2>
       <p class="text-sm sm:text-base text-[#64748B] max-w-2xl mx-auto leading-relaxed">
         Schedule a strategic 1-on-1 consultation session to evaluate your current bottlenecks, target KPIs, and custom delivery sprint.
@@ -1240,55 +1243,55 @@
   </section>
 
   <!-- 7. FOOTER -->
-  <footer class="py-16 border-t border-[#E2E8F0] bg-white relative z-10 text-xs text-[#64748B]">
+  <footer class="py-16 border-t border-[#D7EFE9] bg-white relative z-10 text-xs text-[#64748B]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         <div class="space-y-3">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-xl bg-[#0066FF] text-white flex items-center justify-center font-black text-xs shadow-sm">
+            <div class="w-8 h-8 rounded-xl bg-[#06D6A0] text-white flex items-center justify-center font-black text-xs shadow-sm">
               ✦
             </div>
-            <span class="font-bold text-[#0B0F19] tracking-tight text-base">Md. Shakibur Rahaman</span>
+            <span class="font-bold text-[#08201A] tracking-tight text-base">Md. Shakibur Rahaman</span>
           </div>
           <p class="text-xs text-[#64748B] leading-relaxed">
             Strategic Lead &amp; Digital Architect directing integrated branding, modern web engineering, and commercial growth.
           </p>
         </div>
         <div>
-          <div class="text-[#0B0F19] font-bold uppercase tracking-wider text-[11px] mb-3">Explore Hubs</div>
+          <div class="text-[#08201A] font-bold uppercase tracking-wider text-[11px] mb-3">Explore Hubs</div>
           <div class="space-y-2">
-            <div><a href="/" class="hover:text-[#0066FF] transition-colors">Home</a></div>
-            <div><a href="/about" class="hover:text-[#0066FF] transition-colors">About</a></div>
-            <div><a href="/services" class="hover:text-[#0066FF] text-[#0066FF] font-bold transition-colors">9 Strategic Services</a></div>
-            <div><a href="/projects" class="hover:text-[#0066FF] transition-colors">15 Web Projects</a></div>
-            <div><a href="/experience" class="hover:text-[#0066FF] transition-colors">Experience Roadmap</a></div>
-            <div><a href="/consultation" class="hover:text-[#0066FF] transition-colors">Consultation Booking</a></div>
+            <div><a href="/" class="hover:text-[#06D6A0] transition-colors">Home</a></div>
+            <div><a href="/about" class="hover:text-[#06D6A0] transition-colors">About</a></div>
+            <div><a href="/services" class="hover:text-[#06D6A0] text-[#06D6A0] font-bold transition-colors">9 Strategic Services</a></div>
+            <div><a href="/projects" class="hover:text-[#06D6A0] transition-colors">15 Web Projects</a></div>
+            <div><a href="/experience" class="hover:text-[#06D6A0] transition-colors">Experience Roadmap</a></div>
+            <div><a href="/consultation" class="hover:text-[#06D6A0] transition-colors">Consultation Booking</a></div>
           </div>
         </div>
         <div>
-          <div class="text-[#0B0F19] font-bold uppercase tracking-wider text-[11px] mb-3">Core Disciplines</div>
+          <div class="text-[#08201A] font-bold uppercase tracking-wider text-[11px] mb-3">Core Disciplines</div>
           <div class="space-y-2">
-            <div><a href="/services/branding" class="hover:text-[#0066FF] transition-colors">01 Branding &amp; Strategy</a></div>
-            <div><a href="/services/graphics-design" class="hover:text-[#0066FF] transition-colors">02 Graphics &amp; UI/UX</a></div>
-            <div><a href="/services/web-development" class="hover:text-[#0066FF] transition-colors">03 Full-Stack Web Dev</a></div>
-            <div><a href="/services/social-media-marketing" class="hover:text-[#0066FF] transition-colors">04 Social Media &amp; Meta</a></div>
-            <div><a href="/services/google-ads" class="hover:text-[#0066FF] transition-colors">07 Google Ads Scaling</a></div>
+            <div><a href="/services/branding" class="hover:text-[#06D6A0] transition-colors">01 Branding &amp; Strategy</a></div>
+            <div><a href="/services/graphics-design" class="hover:text-[#06D6A0] transition-colors">02 Graphics &amp; UI/UX</a></div>
+            <div><a href="/services/web-development" class="hover:text-[#06D6A0] transition-colors">03 Full-Stack Web Dev</a></div>
+            <div><a href="/services/social-media-marketing" class="hover:text-[#06D6A0] transition-colors">04 Social Media &amp; Meta</a></div>
+            <div><a href="/services/google-ads" class="hover:text-[#06D6A0] transition-colors">07 Google Ads Scaling</a></div>
           </div>
         </div>
         <div>
-          <div class="text-[#0B0F19] font-bold uppercase tracking-wider text-[11px] mb-3">Direct Contact</div>
+          <div class="text-[#08201A] font-bold uppercase tracking-wider text-[11px] mb-3">Direct Contact</div>
           <div class="space-y-2">
-            <div><a href="mailto:shakibur188@gmail.com" class="hover:text-[#0066FF] font-bold transition-colors">shakibur188@gmail.com</a></div>
-            <div><a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#0066FF] font-bold transition-colors">+880 1838-070468</a></div>
+            <div><a href="mailto:shakibur188@gmail.com" class="hover:text-[#06D6A0] font-bold transition-colors">shakibur188@gmail.com</a></div>
+            <div><a href="https://wa.me/8801838070468" target="_blank" class="hover:text-[#06D6A0] font-bold transition-colors">+880 1838-070468</a></div>
             
           </div>
         </div>
       </div>
-      <div class="pt-8 border-t border-[#E2E8F0] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+      <div class="pt-8 border-t border-[#D7EFE9] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
         <div>&copy; 2026 Md. Shakibur Rahaman. All rights reserved.</div>
         <div class="flex items-center gap-4">
-          <a href="https://github.com/shakibur188-tech/Shakib-Portfolio" target="_blank" class="hover:text-[#0066FF] transition-colors">GitHub</a>
-          <a href="https://www.linkedin.com/in/md-shakibur-rahaman" target="_blank" class="hover:text-[#0066FF] transition-colors">LinkedIn</a>
+          <a href="https://github.com/shakibur188-tech/Shakib-Portfolio" target="_blank" class="hover:text-[#06D6A0] transition-colors">GitHub</a>
+          <a href="https://www.linkedin.com/in/md-shakibur-rahaman" target="_blank" class="hover:text-[#06D6A0] transition-colors">LinkedIn</a>
         </div>
       </div>
     </div>
