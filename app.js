@@ -445,30 +445,30 @@ function renderServices(servicesData) {
 
   const html = dataList.map(s => {
     const tagsHtml = s.tags.map(t => `
-      <span class="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">${t}</span>
+      <span class="px-3 py-1 rounded-full bg-[#041B21]/80 backdrop-blur-md border border-[#D1F5EE]/20 text-white text-[11px] font-semibold">${t}</span>
     `).join('');
 
     const deliverablesHtml = s.deliverables.map(d => `
-      <li class="flex items-start gap-2 text-xs text-[#334155] font-medium leading-tight">
-        <i class="fa-solid fa-circle-check text-[#06D6A0] text-[11px] shrink-0 mt-0.5"></i>
+      <li class="flex items-start gap-2.5 text-xs text-[#DDF6F0] font-medium leading-relaxed">
+        <i class="fa-solid fa-circle-check text-[#20E1B2] text-xs shrink-0 mt-0.5"></i>
         <span>${escapeHtml(d)}</span>
       </li>
     `).join('');
 
     return `
-      <a href="/services/${s.slug}" class="morphy-card group relative flex flex-col justify-between p-4 sm:p-5 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm hover:shadow-2xl hover:shadow-[#06D6A0]/15 hover:border-[#06D6A0] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
+      <a href="/services/${s.slug}" class="morphy-card group relative flex flex-col justify-between p-5 sm:p-6 rounded-[32px] bg-[#06232B]/95 border border-[#D1F5EE]/20 shadow-xl hover:shadow-2xl hover:shadow-[#20E1B2]/20 hover:border-[#20E1B2] transition-all duration-300 hover:-translate-y-2 cursor-pointer no-underline block">
         
         <!-- Inset Image Frame with Rounded Corners -->
-        <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#0B0F19] mb-5">
+        <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#041B21] mb-5 border border-[#D1F5EE]/10">
           <img src="${escapeHtml(s.image)}" alt="${escapeHtml(s.title)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#041B21]/80 via-transparent to-black/30"></div>
           
           <!-- Top Floating Glass Tags & Rating -->
           <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
             <div class="flex items-center gap-1.5 flex-wrap">
               ${tagsHtml}
             </div>
-            <div class="px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1">
+            <div class="px-2.5 py-1 rounded-full bg-[#041B21]/80 backdrop-blur-md border border-[#D1F5EE]/20 text-white text-[11px] font-bold flex items-center gap-1">
               <i class="fa-solid fa-star text-amber-400 text-[10px]"></i>
               <span>${s.rating}</span>
             </div>
@@ -476,7 +476,7 @@ function renderServices(servicesData) {
 
           <!-- Carousel Indicator Dots -->
           <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
-            <span class="w-2 h-2 rounded-full bg-white shadow-xs"></span>
+            <span class="w-2 h-2 rounded-full bg-[#20E1B2] shadow-xs"></span>
             <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
             <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
             <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
@@ -484,51 +484,51 @@ function renderServices(servicesData) {
         </div>
 
         <!-- Card Body Content -->
-        <div class="px-2 pb-2 flex-1 flex flex-col justify-between space-y-4">
+        <div class="px-1 pb-1 flex-1 flex flex-col justify-between space-y-4">
           
           <div>
             <!-- Title & Pillar Tag -->
-            <div class="flex items-start justify-between gap-2">
-              <h3 class="text-xl font-black text-[#0B0F19] group-hover:text-[#06D6A0] transition-colors leading-tight">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-xl font-black text-white group-hover:text-[#20E1B2] transition-colors leading-tight">
                 ${escapeHtml(s.title)}
               </h3>
-              <span class="px-3 py-1 rounded-full border border-[#E2E8F0] text-[11px] font-bold text-[#64748B] bg-[#F8FAFC] shrink-0 group-hover:border-[#06D6A0]/30 group-hover:text-[#06D6A0] transition-colors">
+              <span class="px-3 py-1 rounded-full border border-[#D1F5EE]/20 text-[11px] font-black text-[#20E1B2] bg-[#041B21] shrink-0 group-hover:border-[#20E1B2]/40 transition-colors">
                 ${s.pillar}
               </span>
             </div>
 
             <!-- Subheadline -->
-            <p class="text-xs font-semibold text-[#64748B] mt-1">
+            <p class="text-xs font-bold text-[#20E1B2] mt-1.5">
               ${escapeHtml(s.subtitle)}
             </p>
 
             <!-- Description -->
-            <p class="text-xs text-[#64748B] font-normal leading-relaxed mt-2.5">
+            <p class="text-xs text-[#A3CEC5] font-normal leading-relaxed mt-2.5">
               ${escapeHtml(s.description)}
             </p>
 
             <!-- Key Deliverable Points -->
-            <div class="pt-3.5 mt-3.5 border-t border-[#F1F5F9]">
-              <div class="text-[10px] font-black tracking-wider text-[#06D6A0] uppercase flex items-center gap-1.5 mb-2">
+            <div class="pt-4 mt-4 border-t border-[#D1F5EE]/15">
+              <div class="text-[10px] font-black tracking-wider text-[#20E1B2] uppercase flex items-center gap-1.5 mb-2.5">
                 <i class="fa-solid fa-list-check text-[10px]"></i>
                 <span>KEY DELIVERABLES:</span>
               </div>
-              <ul class="space-y-1.5">
+              <ul class="space-y-2">
                 ${deliverablesHtml}
               </ul>
             </div>
           </div>
 
           <!-- Bottom Row: Metric & Morphy Pill Button -->
-          <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
+          <div class="pt-4 border-t border-[#D1F5EE]/15 flex items-center justify-between">
             <div class="flex items-baseline gap-1.5">
-              <span class="text-base font-black text-[#06D6A0]">${s.metricValue}</span>
-              <span class="text-xs font-semibold text-[#64748B]">${s.metricLabel}</span>
+              <span class="text-base font-black text-[#20E1B2]">${s.metricValue}</span>
+              <span class="text-xs font-semibold text-[#7EADA3]">${s.metricLabel}</span>
             </div>
 
-            <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B0F19] group-hover:bg-[#06D6A0] text-white text-xs font-bold transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:shadow-[#06D6A0]/30">
-              <span>Explore Hub</span>
-              <span class="w-6 h-6 rounded-full bg-white text-[#0B0F19] group-hover:text-[#06D6A0] flex items-center justify-center text-[10px] transition-colors">
+            <div class="inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-[#041B21] border border-[#D1F5EE]/20 group-hover:bg-[#20E1B2] group-hover:border-[#20E1B2] text-white group-hover:text-[#041B21] text-xs font-extrabold transition-all duration-300 shadow-sm">
+              <span class="font-eng font-bold">Explore Hub</span>
+              <span class="w-6 h-6 rounded-full bg-white/10 group-hover:bg-[#041B21] text-[#20E1B2] group-hover:text-white flex items-center justify-center text-[10px] transition-colors">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </span>
             </div>
@@ -553,62 +553,62 @@ function renderWebProjects(projects) {
   const html = projects.map(proj => {
     const displayUrl = proj.liveUrl.replace(/^https?:\/\//i, '').replace(/\/$/, '');
     const pointsHtml = (proj.points || ['High-speed cloud deployment', 'Core Web Vitals optimized', 'Mobile-first responsive architecture']).slice(0, 3).map(pt => `
-      <li class="flex items-start gap-2 text-xs text-[#475569] font-medium">
-        <i class="fa-solid fa-check text-[10px] text-[#06D6A0] mt-0.5 shrink-0"></i>
+      <li class="flex items-start gap-2 text-xs text-[#DDF6F0] font-medium leading-relaxed">
+        <i class="fa-solid fa-check text-[10px] text-[#20E1B2] mt-0.5 shrink-0"></i>
         <span>${escapeHtml(pt)}</span>
       </li>
     `).join('');
 
     return `
-      <div class="morphy-card p-0 overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#06D6A0]/40 hover:shadow-2xl hover:shadow-[#06D6A0]/15 bg-white border border-[#E2E8F0] project-item" data-category="${escapeHtml(proj.category || 'General')}">
+      <div class="morphy-card p-0 overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:border-[#20E1B2]/60 hover:shadow-2xl hover:shadow-[#20E1B2]/20 bg-[#06232B]/95 border border-[#D1F5EE]/20 project-item" data-category="${escapeHtml(proj.category || 'General')}">
         
         <!-- Browser Window Mockup Header -->
-        <div class="px-4 py-3 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+        <div class="px-4 py-3 bg-[#041B21] border-b border-[#D1F5EE]/15 flex items-center justify-between">
           <div class="flex items-center gap-1.5">
             <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/80"></span>
             <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/80"></span>
             <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/80"></span>
           </div>
-          <div class="px-3 py-1 rounded-md bg-white border border-[#E2E8F0] text-[10.5px] font-bold text-[#64748B] tracking-tight max-w-[200px] truncate">
+          <div class="px-3 py-1 rounded-lg bg-[#0B3844]/40 border border-[#D1F5EE]/15 text-[10.5px] font-bold text-[#A3CEC5] tracking-tight max-w-[200px] truncate">
             ${escapeHtml(displayUrl)}
           </div>
-          <span class="px-2 py-0.5 rounded text-[9.5px] font-black bg-[#06D6A0]/10 text-[#06D6A0] uppercase">
+          <span class="px-2.5 py-0.5 rounded-full text-[9.5px] font-black bg-[#20E1B2]/15 text-[#20E1B2] uppercase border border-[#20E1B2]/30">
             ${escapeHtml(proj.category)}
           </span>
         </div>
 
         <!-- Project Screenshot / Preview -->
-        <div class="relative h-48 w-full overflow-hidden bg-[#0B0F19]">
+        <div class="relative h-48 w-full overflow-hidden bg-[#041B21]">
           <img src="${escapeHtml(proj.previewImage)}" alt="${escapeHtml(proj.title)}" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#041B21]/80 via-transparent to-transparent"></div>
           
           <!-- Bottom Client Tag -->
           <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white">
-            <span class="text-xs font-bold text-white/90 drop-shadow-sm">${escapeHtml(proj.client || 'Enterprise Client')}</span>
-            <span class="text-[10px] font-extrabold px-2 py-0.5 rounded bg-white/20 backdrop-blur-md text-white">Production Live</span>
+            <span class="text-xs font-bold text-white drop-shadow-sm">${escapeHtml(proj.client || 'Enterprise Client')}</span>
+            <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-[#20E1B2]/20 border border-[#20E1B2]/30 text-[#20E1B2]">Production Live</span>
           </div>
         </div>
 
         <!-- Content Area -->
         <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
           <div>
-            <h3 class="text-lg font-extrabold text-[#0B0F19] group-hover:text-[#06D6A0] transition-colors leading-snug">
+            <h3 class="text-lg font-black text-white group-hover:text-[#20E1B2] transition-colors leading-snug">
               ${escapeHtml(proj.title)}
             </h3>
-            <p class="text-xs text-[#64748B] mt-1 mb-3 leading-relaxed">
+            <p class="text-xs text-[#A3CEC5] mt-1 mb-3 leading-relaxed">
               ${escapeHtml(proj.highlights || '')}
             </p>
 
-            <ul class="space-y-1.5 pt-3 border-t border-[#F1F5F9]">
+            <ul class="space-y-1.5 pt-3 border-t border-[#D1F5EE]/15">
               ${pointsHtml}
             </ul>
           </div>
 
           <!-- Bottom Live Platform CTA Button -->
-          <div class="pt-4 border-t border-[#F1F5F9]">
-            <a href="${escapeHtml(proj.liveUrl)}" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-[#06D6A0] to-[#05B386] text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-200 flex items-center justify-between shadow-md shadow-[#06D6A0]/20 hover:shadow-lg hover:shadow-[#06D6A0]/35 group/btn">
+          <div class="pt-4 border-t border-[#D1F5EE]/15">
+            <a href="${escapeHtml(proj.liveUrl)}" target="_blank" rel="noopener noreferrer" class="btn-morphy-primary w-full justify-between text-xs py-2.5">
               <span>Visit Live Platform</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform"></i>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
             </a>
           </div>
 
@@ -673,11 +673,11 @@ function renderRoadmap() {
       <div class="roadmap-node-circle">
         <i class="fa-solid ${m.icon}"></i>
       </div>
-      <div class="inline-block px-3.5 py-1 rounded-full bg-[#06D6A0]/15 border border-[#06D6A0]/30 text-[#0B0F19] text-xs font-bold mb-2">
+      <div class="inline-block px-3.5 py-1 rounded-full bg-[#20E1B2]/15 border border-[#20E1B2]/30 text-[#20E1B2] text-xs font-bold mb-2">
         ${escapeHtml(m.year)}
       </div>
-      <h4 class="text-base font-extrabold text-[#0B0F19] mb-1.5 uppercase tracking-wider">${escapeHtml(m.title)}</h4>
-      <p class="text-xs text-[#64748B] leading-relaxed max-w-xs mx-auto">${escapeHtml(m.desc)}</p>
+      <h4 class="text-base font-black text-white mb-1.5 uppercase tracking-wider">${escapeHtml(m.title)}</h4>
+      <p class="text-xs text-[#A3CEC5] leading-relaxed max-w-xs mx-auto">${escapeHtml(m.desc)}</p>
     </div>
   `).join('');
 }
