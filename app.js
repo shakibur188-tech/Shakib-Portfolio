@@ -43,6 +43,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   initScrollReveal();
   initAnimatedCounters();
   initBeforeAfterSliders();
+  if (window.ShakibGSAP && typeof window.ShakibGSAP.refresh === 'function') {
+    window.ShakibGSAP.refresh();
+  }
 });
 
 /* ==========================================================================
@@ -211,78 +214,6 @@ function initAmbientBackground() {
       ctx.fillStyle = grad;
       ctx.beginPath();
       ctx.arc(ox, oy, w.r, 0, Math.PI * 2);
-      ctx.fill();
-    });
-
-    requestAnimationFrame(render);
-  }
-
-  requestAnimationFrame(render);
-}
-
-  requestAnimationFrame(render);
-}
-
-  requestAnimationFrame(render);
-}
-
-  requestAnimationFrame(render);
-}
-
-  requestAnimationFrame(render);
-});
-
-  function render() {
-    if (!isRunning) return;
-
-    // Smooth mouse interpolation
-    mouse.x += (mouse.targetX - mouse.x) * 0.04;
-    mouse.y += (mouse.targetY - mouse.y) * 0.04;
-
-    ctx.clearRect(0, 0, width, height);
-
-    // 1. Draw Nebula Orbs with soft radial blur
-    orbs.forEach(orb => {
-      orb.phase += 0.008;
-      orb.x += orb.vx + Math.sin(orb.phase) * 0.2;
-      orb.y += orb.vy + Math.cos(orb.phase) * 0.2;
-
-      // Wrap around bounds
-      if (orb.x < -orb.r) orb.x = width + orb.r;
-      if (orb.x > width + orb.r) orb.x = -orb.r;
-      if (orb.y < -orb.r) orb.y = height + orb.r;
-      if (orb.y > height + orb.r) orb.y = -orb.r;
-
-      // Parallax shift toward mouse
-      const parallaxX = (mouse.x - width / 2) * 0.025;
-      const parallaxY = (mouse.y - height / 2) * 0.025;
-
-      const grad = ctx.createRadialGradient(
-        orb.x + parallaxX, orb.y + parallaxY, 0,
-        orb.x + parallaxX, orb.y + parallaxY, orb.r
-      );
-      grad.addColorStop(0, orb.color);
-      grad.addColorStop(1, 'transparent');
-
-      ctx.fillStyle = grad;
-      ctx.beginPath();
-      ctx.arc(orb.x + parallaxX, orb.y + parallaxY, orb.r, 0, Math.PI * 2);
-      ctx.fill();
-    });
-
-    // 2. Draw & Update Particles
-    particles.forEach(p => {
-      p.x += p.vx;
-      p.y += p.vy;
-
-      if (p.x < 0) p.x = width;
-      if (p.x > width) p.x = 0;
-      if (p.y < 0) p.y = height;
-      if (p.y > height) p.y = 0;
-
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(${p.color}, ${p.alpha})`;
       ctx.fill();
     });
 
@@ -1185,26 +1116,6 @@ function initMobileMenu() {
       closeMenu();
     }
   });
-}
-
-    let current = '';
-    sections.forEach(sec => {
-      const secTop = sec.offsetTop - 120;
-      if (scrollTop >= secTop) {
-        current = sec.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove('text-[#06D6A0]', 'font-bold');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('text-[#06D6A0]', 'font-bold');
-      }
-    });
-  }
-
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll();
 }
 
 function escapeHtml(str) {
