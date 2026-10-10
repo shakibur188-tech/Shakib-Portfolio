@@ -629,6 +629,11 @@
       btnCards.addEventListener('click', () => {
         cardsSec.classList.remove('hidden');
         tableSec.classList.add('hidden');
+        Array.from(cardsSec.children).forEach(c => {
+          c.style.opacity = '1';
+          c.style.transform = 'none';
+          c.style.visibility = 'visible';
+        });
         btnCards.className = 'px-4 py-2 rounded-xl bg-[#20E1B2] text-white shadow-xs font-black text-xs flex items-center gap-1.5 transition-all';
         btnTable.className = 'px-4 py-2 rounded-xl bg-transparent text-[#7EADA3] hover:text-white font-bold text-xs flex items-center gap-1.5 transition-all';
       });
@@ -644,6 +649,11 @@
       if (btnCards && btnTable && tableSec && cardsSec) {
         cardsSec.classList.remove('hidden');
         tableSec.classList.add('hidden');
+        Array.from(cardsSec.children).forEach(c => {
+          c.style.opacity = '1';
+          c.style.transform = 'none';
+          c.style.visibility = 'visible';
+        });
         btnCards.className = 'px-4 py-2 rounded-xl bg-[#20E1B2] text-white shadow-xs font-black text-xs flex items-center gap-1.5 transition-all';
         btnTable.className = 'px-4 py-2 rounded-xl bg-transparent text-[#7EADA3] hover:text-white font-bold text-xs flex items-center gap-1.5 transition-all';
       }

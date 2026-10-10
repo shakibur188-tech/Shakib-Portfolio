@@ -1187,6 +1187,11 @@
       if (viewMode === 'cards') {
         cardsView.classList.remove('hidden');
         tableView.classList.add('hidden');
+        Array.from(cardsView.children).forEach(c => {
+          c.style.opacity = '1';
+          c.style.transform = 'none';
+          c.style.visibility = 'visible';
+        });
 
         cardsBtn.classList.remove(...inactiveClasses);
         cardsBtn.classList.add(...activeClasses);

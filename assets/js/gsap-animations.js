@@ -3,14 +3,7 @@
  * 
  * Powered by GreenSock Animation Platform (GSAP 3.12+ & ScrollTrigger)
  * 
- * Features:
- * 1. Cinematic Hero Entrance Timeline (Headlines, Badges, CTAs, Hero Mockups)
- * 2. ScrollTrigger Section & Card Stagger Reveals (Services, Projects, Pricing, Testimonials)
- * 3. Interactive 3D Card Hover & Magnetic Tilt Effects
- * 4. Scroll-Triggered Animated Number Counters (Stats, KPIs, Percentages)
- * 5. Smooth Anchor Scrolling via GSAP ScrollToPlugin
- * 6. Ambient Mesh & Glow Parallax Motion
- * 7. Guaranteed Content Visibility & Accessibility (clearProps, prefers-reduced-motion)
+ * Guaranteed 100% Content Visibility & High Performance
  */
 
 (function () {
@@ -35,181 +28,87 @@
     }
 
     // --- 1. HERO SECTION CINEMATIC ENTRANCE ---
-    const heroSection = document.querySelector('#hero, section.hero-section, section:first-of-type');
+    const heroSection = document.querySelector('#hero, section.hero-section');
     if (heroSection) {
       const heroTimeline = gsap.timeline({
-        defaults: { ease: 'power4.out', duration: 0.9 },
+        defaults: { ease: 'power3.out', duration: 0.8 },
         onComplete: () => {
-          gsap.set(heroSection.querySelectorAll('*'), { clearProps: 'opacity,transform' });
+          gsap.set(heroSection.querySelectorAll('*'), { clearProps: 'opacity,transform,visibility' });
         }
       });
 
-      // Eyebrow / Tag Badge
       const heroTags = heroSection.querySelectorAll('.inline-flex.items-center, .morphy-tag-primary, #heroLiveViewersCount, .live-beacon');
       if (heroTags.length > 0) {
         heroTimeline.fromTo(heroTags, 
-          { y: -20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.7, stagger: 0.08, ease: 'power3.out', clearProps: 'opacity,transform' },
+          { y: -15, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.6, stagger: 0.06, ease: 'power2.out', clearProps: 'all' },
           0.05
         );
       }
 
-      // Main Headline (H1)
       const heroHeading = heroSection.querySelector('h1');
       if (heroHeading) {
         heroTimeline.fromTo(heroHeading,
-          { y: 35, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1.0, ease: 'power4.out', clearProps: 'opacity,transform' },
-          0.2
+          { y: 25, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', clearProps: 'all' },
+          0.15
         );
       }
 
-      // Hero Subtitles & Paragraphs
       const heroParagraphs = heroSection.querySelectorAll('p');
       if (heroParagraphs.length > 0) {
         heroTimeline.fromTo(heroParagraphs,
-          { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, stagger: 0.08, ease: 'power3.out', clearProps: 'opacity,transform' },
+          { y: 15, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.7, stagger: 0.06, ease: 'power2.out', clearProps: 'all' },
+          0.25
+        );
+      }
+
+      const heroButtons = heroSection.querySelectorAll('.btn-morphy-primary, .btn-morphy-outline, .btn-morphy-ghost, a[href*="contact"], a[href*="consultation"]');
+      if (heroButtons.length > 0) {
+        heroTimeline.fromTo(heroButtons,
+          { y: 12, opacity: 0, scale: 0.98 },
+          { y: 0, opacity: 1, scale: 1, duration: 0.6, stagger: 0.08, ease: 'back.out(1.2)', clearProps: 'all' },
           0.35
         );
       }
 
-      // Hero CTA Buttons
-      const heroButtons = heroSection.querySelectorAll('.btn-morphy-primary, .btn-morphy-outline, .btn-morphy-ghost, a[href*="contact"], a[href*="consultation"]');
-      if (heroButtons.length > 0) {
-        heroTimeline.fromTo(heroButtons,
-          { y: 15, opacity: 0, scale: 0.97 },
-          { y: 0, opacity: 1, scale: 1, duration: 0.7, stagger: 0.1, ease: 'back.out(1.4)', clearProps: 'opacity,transform' },
-          0.5
-        );
-      }
-
-      // Hero Command Center / Live Preview Window / Image Mockup
       const heroMockup = heroSection.querySelector('.morphy-card.bg-\\[\\#041B21\\]\\/95, #activeScreenImg, .morphy-card.p-2\\.5, .aspect-\\[16\\/10\\]');
       if (heroMockup) {
         heroTimeline.fromTo(heroMockup,
-          { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1.1, ease: 'power3.out', clearProps: 'opacity,transform' },
-          0.6
+          { y: 30, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out', clearProps: 'all' },
+          0.45
         );
       }
     }
 
-    // --- 2. SCROLLTRIGGER SECTION HEADER REVEALS (Excluding Hero) ---
+    // --- 2. SCROLLTRIGGER SECTION HEADER REVEALS ---
     if (typeof ScrollTrigger !== 'undefined') {
-      const nonHeroSections = document.querySelectorAll('section:not(#hero):not(:first-of-type), main > div:not(:first-child)');
+      const nonHeroSections = document.querySelectorAll('section:not(#hero)');
       nonHeroSections.forEach(section => {
-        const sectionHeader = section.querySelector('.morphy-tag-primary, h2, h3.text-2xl, h3.text-3xl, .text-center.max-w-3xl');
-        if (sectionHeader) {
+        const sectionHeader = section.querySelector('.morphy-tag-primary, h2');
+        if (sectionHeader && !sectionHeader.closest('#hero')) {
           gsap.fromTo(sectionHeader,
-            { y: 30, opacity: 0 },
+            { y: 25, opacity: 0 },
             {
               scrollTrigger: {
                 trigger: section,
-                start: 'top 88%',
-                toggleActions: 'play none none none'
-              },
-              y: 0,
-              opacity: 1,
-              duration: 0.8,
-              ease: 'power3.out',
-              clearProps: 'opacity,transform'
-            }
-          );
-        }
-
-        const sectionDesc = section.querySelector('p.text-sm, p.text-base, p.text-xs');
-        if (sectionDesc && sectionHeader) {
-          gsap.fromTo(sectionDesc,
-            { y: 20, opacity: 0 },
-            {
-              scrollTrigger: {
-                trigger: section,
-                start: 'top 86%',
+                start: 'top 90%',
                 toggleActions: 'play none none none'
               },
               y: 0,
               opacity: 1,
               duration: 0.7,
-              delay: 0.1,
               ease: 'power3.out',
-              clearProps: 'opacity,transform'
+              clearProps: 'all'
             }
           );
         }
       });
 
-      // --- 3. CARD GRIDS STAGGERED REVEAL (Safe & Resilient) ---
-      function animateGridCards(containerSelector) {
-        document.querySelectorAll(containerSelector).forEach(container => {
-          if (container.closest('#hero')) return; // do not double animate hero
-          const cards = Array.from(container.children).filter(c => !c.classList.contains('hidden'));
-          if (cards.length > 0) {
-            gsap.fromTo(cards,
-              { y: 35, opacity: 0 },
-              {
-                scrollTrigger: {
-                  trigger: container,
-                  start: 'top 88%',
-                  toggleActions: 'play none none none'
-                },
-                y: 0,
-                opacity: 1,
-                duration: 0.75,
-                stagger: 0.08,
-                ease: 'power3.out',
-                clearProps: 'opacity,transform'
-              }
-            );
-          }
-        });
-      }
-
-      const gridContainers = [
-        '#pricingCardsView',
-        '#offersGrid',
-        '#servicesGrid',
-        '#projectsGrid',
-        '#testimonialsGrid',
-        '.grid.grid-cols-1.md\\:grid-cols-2',
-        '.grid.grid-cols-1.md\\:grid-cols-3',
-        '.grid.grid-cols-1.sm\\:grid-cols-2.lg\\:grid-cols-3'
-      ];
-
-      gridContainers.forEach(sel => animateGridCards(sel));
-
-      // Re-run for dynamic grids after content loads
-      window.addEventListener('load', () => {
-        gridContainers.forEach(sel => animateGridCards(sel));
-        ScrollTrigger.refresh();
-      });
-
-      // --- 4. COMPARISON TABLE & HEATMAP ROW REVEALS ---
-      const tableRows = document.querySelectorAll('tbody tr, .heatmap-zone');
-      if (tableRows.length > 0) {
-        const tableContainer = document.querySelector('tbody, .heatmap-zone')?.parentElement;
-        if (tableContainer) {
-          gsap.fromTo(tableRows,
-            { y: 15, opacity: 0 },
-            {
-              scrollTrigger: {
-                trigger: tableContainer,
-                start: 'top 88%',
-                toggleActions: 'play none none none'
-              },
-              y: 0,
-              opacity: 1,
-              duration: 0.5,
-              stagger: 0.03,
-              ease: 'power2.out',
-              clearProps: 'opacity,transform'
-            }
-          );
-        }
-      }
-
-      // --- 5. AMBIENT BACKGROUND & MESH PARALLAX ---
-      const ambientGlow = document.querySelector('.ambient-mesh-glow, .ambient-vignette');
+      // --- 3. AMBIENT BACKGROUND PARALLAX ---
+      const ambientGlow = document.querySelector('.ambient-mesh-glow');
       if (ambientGlow) {
         gsap.to(ambientGlow, {
           scrollTrigger: {
@@ -218,30 +117,34 @@
             end: 'bottom bottom',
             scrub: 1.5
           },
-          y: 80,
-          opacity: 0.8,
+          y: 60,
+          opacity: 0.85,
           ease: 'none'
         });
       }
     }
 
-    // --- 6. INTERACTIVE 3D TILT EFFECT ON CARDS (Mouse Move) ---
+    // --- 4. INTERACTIVE 3D TILT ON CARDS (Mouse Move) ---
     const tiltCards = document.querySelectorAll('.morphy-card, .glass-card, .glass-dark-card');
     tiltCards.forEach(card => {
+      // Ensure card is always fully visible
+      card.style.opacity = '1';
+      card.style.visibility = 'visible';
+
       card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        const rotateX = ((y - centerY) / centerY) * -3.5;
-        const rotateY = ((x - centerX) / centerX) * 3.5;
+        const rotateX = ((y - centerY) / centerY) * -3;
+        const rotateY = ((x - centerX) / centerX) * 3;
 
         gsap.to(card, {
           rotationX: rotateX,
           rotationY: rotateY,
           transformPerspective: 1000,
-          duration: 0.35,
+          duration: 0.3,
           ease: 'power1.out'
         });
       });
@@ -250,14 +153,14 @@
         gsap.to(card, {
           rotationX: 0,
           rotationY: 0,
-          duration: 0.6,
+          duration: 0.5,
           ease: 'power2.out',
           clearProps: 'transformPerspective'
         });
       });
     });
 
-    // --- 7. SMOOTH ANCHOR LINK SCROLLING ---
+    // --- 5. SMOOTH ANCHOR LINK SCROLLING ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -267,7 +170,7 @@
           e.preventDefault();
           if (typeof gsap.plugins?.scrollTo !== 'undefined' || typeof ScrollToPlugin !== 'undefined') {
             gsap.to(window, {
-              duration: 0.85,
+              duration: 0.8,
               scrollTo: { y: targetEl, offsetY: 80 },
               ease: 'power3.inOut'
             });
@@ -278,7 +181,7 @@
       });
     });
 
-    // --- 8. BUTTON HOVER MAGNETIC EFFECT ---
+    // --- 6. BUTTON HOVER MAGNETIC EFFECT ---
     const magneticBtns = document.querySelectorAll('.btn-morphy-primary, .animated-lighting-btn');
     magneticBtns.forEach(btn => {
       btn.addEventListener('mousemove', (e) => {
@@ -287,9 +190,9 @@
         const y = e.clientY - rect.top - rect.height / 2;
 
         gsap.to(btn, {
-          x: x * 0.15,
-          y: y * 0.15,
-          duration: 0.25,
+          x: x * 0.12,
+          y: y * 0.12,
+          duration: 0.2,
           ease: 'power2.out'
         });
       });
@@ -298,21 +201,24 @@
         gsap.to(btn, {
           x: 0,
           y: 0,
-          duration: 0.5,
+          duration: 0.4,
           ease: 'elastic.out(1.2, 0.4)'
         });
       });
     });
 
-    // --- 9. GLOBAL FAILSAFE (Ensures all elements remain 100% visible) ---
-    setTimeout(() => {
-      document.querySelectorAll('section, h1, h2, h3, p, .morphy-card, .grid > *').forEach(el => {
-        if (window.getComputedStyle(el).opacity === '0') {
-          el.style.opacity = '1';
-        }
+    // --- 7. ABSOLUTE VISIBILITY GUARANTEE ---
+    // Ensure all pricing cards, services, and sections have 100% opacity
+    function ensureAllCardsVisible() {
+      document.querySelectorAll('#pricingCardsView > *, #pricingTableView, #pricingTableView tr, #servicesGrid > *, #projectsGrid > *, #testimonialsGrid > *, .morphy-card').forEach(el => {
+        el.style.opacity = '1';
+        el.style.visibility = 'visible';
       });
-      if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
-    }, 1200);
+    }
+
+    ensureAllCardsVisible();
+    setTimeout(ensureAllCardsVisible, 500);
+    setTimeout(ensureAllCardsVisible, 1500);
   }
 
   // Run on DOM ready
@@ -321,6 +227,14 @@
   } else {
     initGSAP();
   }
+
+  window.addEventListener('load', () => {
+    document.querySelectorAll('#pricingCardsView > *, #pricingTableView tr, .morphy-card').forEach(el => {
+      el.style.opacity = '1';
+      el.style.visibility = 'visible';
+    });
+    if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+  });
 
   // Export to window
   window.ShakibGSAP = {

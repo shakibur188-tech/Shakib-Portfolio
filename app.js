@@ -1181,6 +1181,11 @@ function initSubpagePricingSwitcher() {
     if (mode === 'cards') {
       tableView.classList.add('hidden');
       cardsView.classList.remove('hidden');
+      Array.from(cardsView.children).forEach(c => {
+        c.style.opacity = '1';
+        c.style.transform = 'none';
+        c.style.visibility = 'visible';
+      });
 
       cardsBtn.classList.remove('bg-transparent', 'text-[#64748B]');
       cardsBtn.classList.add('bg-[#06D6A0]', 'text-white', 'shadow-xs');
