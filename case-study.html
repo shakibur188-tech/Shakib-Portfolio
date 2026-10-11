@@ -311,6 +311,7 @@
         </div>
 
         <a href="/projects" class="hover:text-[#20E1B2] transition-colors">Projects</a>
+        <a href="/case-studies" class="hover:text-[#20E1B2] transition-colors">Case Studies</a>
         <a href="/experience" class="hover:text-[#20E1B2] transition-colors">Experience</a>
         <a href="/offers" class="hover:text-[#20E1B2] transition-colors">Offers</a>
         <a href="/consultation" class="hover:text-[#20E1B2] transition-colors">Consultation</a>
@@ -354,6 +355,13 @@
             <span>Projects</span>
           </span>
           <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#10B981]/10 text-[#10B981]">Featured</span>
+        </a>
+        <a href="/case-studies" class="mobile-nav-link mobile-link flex items-center justify-between ">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-lightbulb text-xs text-[#7EADA3] w-4"></i>
+            <span>Case Studies</span>
+          </span>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#20E1B2]/10 text-[#20E1B2]">Deep Dives</span>
         </a>
         <a href="/experience" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
@@ -808,353 +816,1079 @@
   <script>
     // Rich Case Studies Dataset (incorporates user's reference layout + portfolio case studies)
     const richCaseStudies = [
+  {
+    "id": "worknook-coworking",
+    "slug": "worknook-coworking",
+    "category": "WEB ARCHITECTURE & RESERVATION ENGINE",
+    "author": "DIRECTED BY MD. SHAKIBUR RAHAMAN",
+    "date": "FEBRUARY 2026",
+    "badge": "WN",
+    "badgeGradient": "from-[#20E1B2] to-[#0B3844]",
+    "subtitle": "WorkNook Coworking Spaces",
+    "heroTitle": "DESK & SUITE RESERVATION PLATFORM",
+    "tagline": "Real-time seat reservation engine, automated access control, and dynamic pricing architecture.",
+    "problem": "WorkNook struggled with manual desk assignments, fragmented WhatsApp booking inquiries, and double-bookings during peak hours across 3 prime locations in Dhaka.",
+    "solution": [
+      "Engineered an interactive 2D floorplan reservation engine with instant seat selection.",
+      "Integrated automated bKash, Nagad, and Stripe multi-currency payment checkout with instant QR access generation.",
+      "Deployed automated SMS and WhatsApp confirmation triggers reducing front-desk operational overhead by 70%.",
+      "Built a centralized real-time admin portal for occupancy analytics and corporate team pass management."
+    ],
+    "roles": [
+      [
+        "Operational Workflow Audit",
+        "User Journey Mapping",
+        "Reservation Flow UX"
+      ],
+      [
+        "Interactive SVG Floorplan",
+        "Mobile-First Design System",
+        "Checkout Optimization"
+      ],
+      [
+        "Node.js / Express Architecture",
+        "Real-Time Socket Seat Locking",
+        "Payment Gateways"
+      ],
+      [
+        "Load Testing & QA",
+        "Role-Based Staff Access",
+        "GA4 Booking Funnel Tracking"
+      ]
+    ],
+    "duration": "10",
+    "durationUnit": "Weeks",
+    "screens": "42+",
+    "screensUnit": "Screens",
+    "tools": [
       {
-        id: "fae-rental",
-        slug: "online-rental-app",
-        category: "UX CASE STUDY",
-        author: "DESIGN BY MD. SHAKIBUR RAHAMAN",
-        date: "MARCH 2026",
-        badge: "fae",
-        badgeGradient: "from-[#E07A5F] to-[#F28C38]",
-        subtitle: "Online Rental App",
-        heroTitle: "UX CASE STUDY",
-        tagline: "Fae Rental is platform where you can renting furniture, Appliances & Electronics in an affordable prices",
-        problem: "We found out that a lot of people like Bachelors, Paying Guests, working professionals who relocate need furniture, electronics, and appliances. Because of the high cost and no certainty of staying in a place they avoid buying them. These people need the items for a shorter duration. This app will help them to rent the items for what period they want (a week, a month, a year). This includes renting the refurbished & recycled items.",
-        solution: [
-          "Introducing a renting platform for furniture, appliances & electronics.",
-          "The user can choose their desired tenure for renting (Week, Months, or one year).",
-          "Can easily relocate the rented items from our app for free.",
-          "Can swap the rented item for upgradation.",
-          "No delivery charges will be applicable for renting items.",
-          "Easy cleanup & maintenance."
-        ],
-        roles: [
-          ["User Interview", "User Research", "Competitor Analysis"],
-          ["Affinity Mapping", "Persona", "Empathy map", "Customer Journey map"],
-          ["Card Sorting", "User Flow", "Information Architecture"],
-          ["Low Fidelity", "High Fidelity", "Usability Testing"]
-        ],
-        duration: "14",
-        durationUnit: "Weeks",
-        screens: "35+",
-        screensUnit: "Screens",
-        tools: [
-          { name: "Figma", iconType: "svg" },
-          { name: "Photoshop", iconType: "ps" },
-          { name: "Miro", iconType: "miro" },
-          { name: "Google Forms", iconType: "forms" },
-          { name: "Google Sheets", iconType: "sheets" }
-        ],
-        process: [
-          { name: "Empathize", icon: "fa-magnifying-glass", color: "#E07A5F", items: ["User Interview", "User Research", "Competitive Analysis"] },
-          { name: "Define", icon: "fa-user", color: "#64748B", items: ["Affinity Mapping", "Personas", "Empathy Map", "Journey Map"] },
-          { name: "Ideate", icon: "fa-brain", color: "#20E1B2", items: ["User Flow", "Card Sorting", "Information Architecture"] },
-          { name: "Design", icon: "fa-compass-drafting", color: "#64748B", items: ["Low Fidelity", "High Fidelity"] },
-          { name: "Test", icon: "fa-mobile-screen-button", color: "#E07A5F", items: ["Usability Testing", "Implementing Feedback"] }
-        ],
-        metrics: [
-          { title: "Conversion Surge", stat: "+42% Rental Checkout" },
-          { title: "Session Duration", stat: "18m High Engagement" },
-          { title: "Customer CSAT", stat: "94% Approval Rating" }
-        ],
-        coverImage: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80"
+        "name": "Figma",
+        "iconType": "svg"
       },
       {
-        id: "cs-peninsula",
-        slug: "peninsula-chittagong",
-        category: "WEB DEVELOPMENT & UX",
-        author: "DESIGN BY MD. SHAKIBUR RAHAMAN",
-        date: "JANUARY 2025",
-        badge: "PC",
-        badgeGradient: "from-[#20E1B2] to-[#08201A]",
-        subtitle: "The Peninsula Chittagong",
-        heroTitle: "HOSPITALITY BOOKING ENGINE",
-        tagline: "Transitioning a 4-star luxury landmark from OTA commission dependency to a high-margin Jamstack direct booking engine.",
-        problem: "The Peninsula Chittagong was losing 18–25% in commission fees to third-party travel aggregators (OTAs). Their legacy portal suffered from high mobile checkout abandonment (>65%), sluggish page load speeds exceeding 4.2 seconds, and zero real-time inventory synchronization across multi-currency corporate tiers.",
-        solution: [
-          "Engineered a sub-second headless Jamstack booking engine with direct API connectivity.",
-          "Integrated 3D panoramic 360° virtual room visualizers to build booking confidence.",
-          "Implemented multi-currency real-time payment gateway with zero checkout friction.",
-          "Deployed laser-targeted high-intent Google Search & Performance Max customer acquisition funnels.",
-          "Automated VIP guest concierge notifications via WhatsApp Business API."
-        ],
-        roles: [
-          ["Direct OTA Audit", "Guest Intent Research", "Conversion Funnel Mapping"],
-          ["Corporate Personas", "Multi-Currency Flows", "Checkout Optimization"],
-          ["API Architecture", "Headless CMS Engine", "Serverless Edge Caching"],
-          ["High Fidelity UI", "Cross-Device Testing", "Lighthouse 98+ Speed QA"]
-        ],
-        duration: "12",
-        durationUnit: "Weeks",
-        screens: "42+",
-        screensUnit: "Screens",
-        tools: [
-          { name: "Figma", iconType: "svg" },
-          { name: "VS Code", iconType: "code" },
-          { name: "Node.js", iconType: "node" },
-          { name: "Google Analytics", iconType: "ga4" },
-          { name: "Google Ads", iconType: "gads" }
-        ],
-        process: [
-          { name: "Empathize", icon: "fa-magnifying-glass", color: "#20E1B2", items: ["OTA Benchmark", "Guest Friction Audit", "Stakeholder Sign-Off"] },
-          { name: "Define", icon: "fa-user", color: "#64748B", items: ["Booking Persona", "Checkout Wireframe", "API Contracts"] },
-          { name: "Ideate", icon: "fa-brain", color: "#20E1B2", items: ["1-Click Checkout Flow", "Room Visualizer", "Dynamic Pricing Engine"] },
-          { name: "Design", icon: "fa-compass-drafting", color: "#64748B", items: ["Luxury Typography", "Mobile-First UI", "Jamstack Staging"] },
-          { name: "Test", icon: "fa-mobile-screen-button", color: "#20E1B2", items: ["Sub-Second Latency QA", "Payment Gateway Staging", "Launch Go-Live"] }
-        ],
-        metrics: [
-          { title: "Direct Bookings Surge", stat: "+320% Verified Growth" },
-          { title: "Page Speed Benchmark", stat: "0.8s Sub-Second Speed" },
-          { title: "OTA Margin Saved", stat: "18% Commission Saved" }
-        ],
-        coverImage: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+        "name": "Node.js",
+        "iconType": "ps"
       },
       {
-        id: "cs-aarong",
-        slug: "aarong-lifestyle",
-        category: "SOCIAL MEDIA & BRAND ARCHITECTURE",
-        author: "DIRECTED BY MD. SHAKIBUR RAHAMAN",
-        date: "AUGUST 2025",
-        badge: "AR",
-        badgeGradient: "from-[#D97706] to-[#20E1B2]",
-        subtitle: "Aarong Lifestyle Retail",
-        heroTitle: "OMNICHANNEL GROWTH ENGINE",
-        tagline: "Omnichannel rebrand and high-retention social engine orchestrating viral festive campaigns across digital touchpoints.",
-        problem: "Aarong's digital reach was constrained by generic social media formats with low video retention and declining organic engagement among Gen-Z and millennial shoppers who demanded authentic behind-the-scenes artisan craftsmanship stories.",
-        solution: [
-          "Developed an episodic short-form editorial reel series showcasing rural artisan weaving processes.",
-          "Orchestrated Meta Advantage+ paid retargeting with dynamic product catalog overlays.",
-          "Created an influencer co-creation ecosystem generating over 2.4 million organic video views.",
-          "Unified digital aesthetic guidelines across festive collections with cohesive moodboards."
-        ],
-        roles: [
-          ["Trend Analysis", "Audience Demographic Segmentation", "Creative Auditing"],
-          ["Content Moodboarding", "Artisan Storyboarding", "Video Direction"],
-          ["Meta Ad Architecture", "ROAS Optimization", "Conversion Attribution"],
-          ["Motion Design", "Visual Retouching", "Weekly Sprint Iteration"]
-        ],
-        duration: "16",
-        durationUnit: "Weeks",
-        screens: "60+",
-        screensUnit: "Assets",
-        tools: [
-          { name: "Photoshop", iconType: "ps" },
-          { name: "Premiere Pro", iconType: "video" },
-          { name: "Meta Business", iconType: "meta" },
-          { name: "Figma", iconType: "svg" },
-          { name: "Looker Studio", iconType: "sheets" }
-        ],
-        process: [
-          { name: "Empathize", icon: "fa-magnifying-glass", color: "#D97706", items: ["Consumer Sentiment", "Competitor Review", "Artisan Field Research"] },
-          { name: "Define", icon: "fa-user", color: "#64748B", items: ["Festive Personas", "Editorial Calendar", "Brand Voice Deck"] },
-          { name: "Ideate", icon: "fa-brain", color: "#20E1B2", items: ["Viral Story Hooks", "Behind-the-Craft Series", "Ad Copy Testing"] },
-          { name: "Design", icon: "fa-compass-drafting", color: "#64748B", items: ["4K Video Production", "Cinematic Reel Edits", "Color Grading"] },
-          { name: "Test", icon: "fa-mobile-screen-button", color: "#D97706", items: ["A/B Thumbnail Testing", "Meta Campaign Scaling", "ROAS Optimization"] }
-        ],
-        metrics: [
-          { title: "Organic Video Views", stat: "2.4M+ Video Views" },
-          { title: "ROAS Performance", stat: "5.8x Return on Ad Spend" },
-          { title: "Community Growth", stat: "+85K Follower Expansion" }
-        ],
-        coverImage: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=80"
+        "name": "Tailwind CSS",
+        "iconType": "svg"
       },
       {
-        id: "cs-beximco",
-        slug: "beximco-group",
-        category: "PUBLIC RELATIONS & MEDIA STRATEGY",
-        author: "STRATEGY BY MD. SHAKIBUR RAHAMAN",
-        date: "NOVEMBER 2025",
-        badge: "BX",
-        badgeGradient: "from-[#64748B] to-[#08201A]",
-        subtitle: "Beximco Group",
-        heroTitle: "ENTERPRISE CORPORATE PR HUB",
-        tagline: "High-stakes corporate reputation management, tier-1 media syndicated press outreach, and ESG transparency architecture.",
-        problem: "Beximco's international institutional sustainability accomplishments and pharmaceutical innovations lacked a unified digital press hub, causing fractured messaging across domestic and international financial publications.",
-        solution: [
-          "Architected an executive digital press portal with real-time embargoed media kit distributions.",
-          "Executed tier-1 national and international media syndications across leading financial publications.",
-          "Established an executive thought-leadership program for corporate C-suite keynotes.",
-          "Implemented 24/7 brand sentiment intelligence telemetry and crisis mitigation protocols."
-        ],
-        roles: [
-          ["Media Sentiment Audit", "Stakeholder Interviews", "Regulatory Governance"],
-          ["Corporate Press Kit", "Crisis Playbook", "ESG Disclosure Hierarchy"],
-          ["Press Syndication", "Journalist Relations", "Embargo Scheduling"],
-          ["Executive Speechwriting", "Press Portal UX", "Performance Analytics"]
-        ],
-        duration: "20",
-        durationUnit: "Weeks",
-        screens: "28+",
-        screensUnit: "Releases",
-        tools: [
-          { name: "Miro", iconType: "miro" },
-          { name: "Google Forms", iconType: "forms" },
-          { name: "Google Sheets", iconType: "sheets" },
-          { name: "Figma", iconType: "svg" },
-          { name: "Photoshop", iconType: "ps" }
-        ],
-        process: [
-          { name: "Empathize", icon: "fa-magnifying-glass", color: "#64748B", items: ["Media Landscape Audit", "C-Suite Alignment", "Sentiment Mapping"] },
-          { name: "Define", icon: "fa-user", color: "#20E1B2", items: ["Editorial Guidelines", "Crisis Scenarios", "Syndication Matrix"] },
-          { name: "Ideate", icon: "fa-brain", color: "#E07A5F", items: ["Story Angles", "Sustainability Reports", "Executive Op-Eds"] },
-          { name: "Design", icon: "fa-compass-drafting", color: "#64748B", items: ["Digital Press Kit", "Investor Deck", "Interactive Media Portal"] },
-          { name: "Test", icon: "fa-mobile-screen-button", color: "#20E1B2", items: ["Syndication Rollout", "Coverage Monitoring", "Reach Verification"] }
-        ],
-        metrics: [
-          { title: "Mainstream Media", stat: "40+ Mainstream Features" },
-          { title: "Sentiment Index", stat: "98% Positive Coverage" },
-          { title: "Audience Footprint", stat: "12M+ Syndicated Reach" }
-        ],
-        coverImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
+        "name": "GA4 Analytics",
+        "iconType": "ga4"
       },
       {
-        id: "cs-apex",
-        slug: "apex-footwear",
-        category: "EVENT ACTIVATION & 3D EXHIBITION",
-        author: "DIRECTED BY MD. SHAKIBUR RAHAMAN",
-        date: "DECEMBER 2025",
-        badge: "AP",
-        badgeGradient: "from-[#E07A5F] to-[#08201A]",
-        subtitle: "Apex Footwear Ltd.",
-        heroTitle: "3D EXPERIENTIAL PAVILION",
-        tagline: "Photorealistic 3D exhibition booth architecture and interactive digital lead generation system at premier footwear summit.",
-        problem: "Traditional trade expo stalls were static, passive, and generated low visitor dwell times, resulting in untracked visitor walkthroughs and poor post-event B2B lead conversion.",
-        solution: [
-          "Rendered a photorealistic 3D exhibition pavilion with architectural lighting and material specifications.",
-          "Engineered interactive touchscreen digital footwear customizers capturing qualified retailer briefs.",
-          "Coordinated turnkey fabrication, audio-visual display sync, and on-site brand ambassador training.",
-          "Automated instant digital catalog deliveries via QR code and WhatsApp integrations."
-        ],
-        roles: [
-          ["Spatial Walkthrough Audit", "Visitor Flow Simulation", "Exhibition Regulations"],
-          ["3D Booth Modeling", "Material & Lighting Blueprints", "Interactive Touchscreen UX"],
-          ["Fabrication Oversight", "Audio-Visual Engineering", "Lead Capture Logic"],
-          ["On-Site Technical Support", "Visitor Telemetry", "Post-Event Lead Sync"]
-        ],
-        duration: "10",
-        durationUnit: "Weeks",
-        screens: "18+",
-        screensUnit: "Spatial Blueprints",
-        tools: [
-          { name: "Figma", iconType: "svg" },
-          { name: "Blender 3D", iconType: "blender" },
-          { name: "Photoshop", iconType: "ps" },
-          { name: "Google Forms", iconType: "forms" },
-          { name: "Google Sheets", iconType: "sheets" }
-        ],
-        process: [
-          { name: "Empathize", icon: "fa-magnifying-glass", color: "#E07A5F", items: ["Floorplan Analysis", "Visitor Congestion Studies", "Brand Guidelines"] },
-          { name: "Define", icon: "fa-user", color: "#64748B", items: ["Booth Spatial Zones", "Product Showcase Pods", "Lead Funnel Goals"] },
-          { name: "Ideate", icon: "fa-brain", color: "#20E1B2", items: ["3D Conceptual Sketches", "Lighting Hierarchy", "Touchscreen Kiosk UX"] },
-          { name: "Design", icon: "fa-compass-drafting", color: "#64748B", items: ["Blender Spatial Modeling", "Fabrication Blueprints", "Kiosk Software"] },
-          { name: "Test", icon: "fa-mobile-screen-button", color: "#E07A5F", items: ["Structural QA", "On-Site Fabrication", "Live Expo Lead Capture"] }
-        ],
-        metrics: [
-          { title: "Qualified Leads", stat: "1,450+ Verified B2B Leads" },
-          { title: "Average Dwell Time", stat: "14m Booth Engagement" },
-          { title: "Summit Recognition", stat: "Best Exhibition Pavilion" }
-        ],
-        coverImage: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        id: "cs-novapulse",
-        slug: "novapulse-ai",
-        category: "GRAPHICS & PRODUCT ONBOARDING",
-        author: "DESIGN BY MD. SHAKIBUR RAHAMAN",
-        date: "OCTOBER 2025",
-        badge: "NP",
-        badgeGradient: "from-[#3B82F6] to-[#20E1B2]",
-        subtitle: "NovaPulse AI Analytics",
-        heroTitle: "SAAS PRODUCT ONBOARDING",
-        tagline: "End-to-end visual identity architecture and 3-step interactive onboarding reducing SaaS churn by 38%.",
-        problem: "NovaPulse's high-tech machine learning analytics dashboard had steep cognitive overhead, causing 54% of trial users to abandon during initial workspace configuration.",
-        solution: [
-          "Redesigned the entire onboarding journey into a progressive disclosure 3-step micro-survey.",
-          "Created modular iconographic design systems and custom dashboard chart components.",
-          "Implemented interactive empty states, animated guidance tooltips, and sample data sandboxes.",
-          "Designed comprehensive brand design guidelines and pitch decks for Seed-round capital raising."
-        ],
-        roles: [
-          ["Churn Heuristic Evaluation", "Cognitive Load Mapping", "Competitor Teardowns"],
-          ["Progressive Disclosure UX", "Trial Onboarding Flow", "Empty State Design"],
-          ["Design System Tokens", "Vector Iconography", "Chart Aesthetics"],
-          ["Figma Prototype Usability", "Developer Handoff", "Mixpanel Funnel QA"]
-        ],
-        duration: "8",
-        durationUnit: "Weeks",
-        screens: "45+",
-        screensUnit: "Components",
-        tools: [
-          { name: "Figma", iconType: "svg" },
-          { name: "Photoshop", iconType: "ps" },
-          { name: "Miro", iconType: "miro" },
-          { name: "Google Forms", iconType: "forms" },
-          { name: "Google Sheets", iconType: "sheets" }
-        ],
-        process: [
-          { name: "Empathize", icon: "fa-magnifying-glass", color: "#3B82F6", items: ["User Drop-Off Analysis", "Customer Session Recordings", "Stakeholder Goals"] },
-          { name: "Define", icon: "fa-user", color: "#64748B", items: ["Data Analyst Personas", "Setup Task Inventory", "Design Token Rules"] },
-          { name: "Ideate", icon: "fa-brain", color: "#20E1B2", items: ["Micro-Survey Steps", "Instant Value Hooks", "Empty State Visuals"] },
-          { name: "Design", icon: "fa-compass-drafting", color: "#64748B", items: ["High Fidelity Figma Library", "Clickable Prototypes", "Dark/Light Modes"] },
-          { name: "Test", icon: "fa-mobile-screen-button", color: "#3B82F6", items: ["Moderated Usability Tests", "Trial Retention QA", "Production Deployment"] }
-        ],
-        metrics: [
-          { title: "Trial Drop-Off Churn", stat: "-38% Drop-Off Reduction" },
-          { title: "Time-to-Value Setup", stat: "3.5m Accelerated Setup" },
-          { title: "Paid Conversion", stat: "2.8x Trial-to-Paid Lift" }
-        ],
-        coverImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        id: "cs-hotelsarina",
-        slug: "hotel-sarina",
-        category: "GOOGLE ADS & INTENT ACQUISITION",
-        author: "MANAGED BY MD. SHAKIBUR RAHAMAN",
-        date: "FEBRUARY 2026",
-        badge: "HS",
-        badgeGradient: "from-[#D97706] to-[#08201A]",
-        subtitle: "Hotel Sarina Dhaka",
-        heroTitle: "LUXURY INTENT ACQUISITION",
-        tagline: "High-intent Google Search, Display, and Performance Max customer acquisition engine for luxury banquets and private VIP suites.",
-        problem: "Hotel Sarina was experiencing high cost-per-click on broad search terms with minimal attribution to high-ticket corporate banquet and executive suite bookings.",
-        solution: [
-          "Restructured Google Ads account into segmented single-intent ad groups with negative keyword filtering.",
-          "Implemented server-side Google Tag Manager and GA4 enhanced conversion tracking.",
-          "Designed dynamic bespoke landing pages with real-time banquet hall availability calculators.",
-          "Executed Looker Studio executive attribution dashboards tracking exact cost-per-inquiry."
-        ],
-        roles: [
-          ["Keyword Waste Audit", "Intent Mapping", "Competitor Ad Teardown"],
-          ["Landing Page Wireframes", "Value Proposition Copy", "Dynamic Inquiries"],
-          ["Google Ads Account Rebuild", "GA4 Conversion API", "Bid Automation"],
-          ["Multi-Variant Ad Copy QA", "Call Tracking", "Weekly Budget Pacing"]
-        ],
-        duration: "12",
-        durationUnit: "Weeks",
-        screens: "24+",
-        screensUnit: "Campaigns",
-        tools: [
-          { name: "Google Ads", iconType: "gads" },
-          { name: "GA4 Analytics", iconType: "ga4" },
-          { name: "Looker Studio", iconType: "sheets" },
-          { name: "Figma", iconType: "svg" },
-          { name: "Google Sheets", iconType: "sheets" }
-        ],
-        process: [
-          { name: "Empathize", icon: "fa-magnifying-glass", color: "#D97706", items: ["Search Query Audit", "Negative Keyword Mining", "Audience Analysis"] },
-          { name: "Define", icon: "fa-user", color: "#64748B", items: ["High-Net-Worth Personas", "Target ROAS Thresholds", "Attribution Models"] },
-          { name: "Ideate", icon: "fa-brain", color: "#20E1B2", items: ["Bespoke Landing Pages", "Event Pricing Calculators", "Emotional Ad Copy"] },
-          { name: "Design", icon: "fa-compass-drafting", color: "#64748B", items: ["Landing Page UI", "Responsive Display Creatives", "Conversion API"] },
-          { name: "Test", icon: "fa-mobile-screen-button", color: "#D97706", items: ["A/B Headline Testing", "Smart Bidding Optimization", "Monthly Scaling"] }
-        ],
-        metrics: [
-          { title: "Target Return on Ads", stat: "12.4x Target ROAS" },
-          { title: "Cost Per Inquiry", stat: "-46% Cost Reduction" },
-          { title: "Corporate Inquiries", stat: "+180 High-Value Bookings" }
-        ],
-        coverImage: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+        "name": "PostgreSQL",
+        "iconType": "sheets"
       }
-    ];
+    ],
+    "process": [
+      {
+        "name": "Empathize",
+        "icon": "fa-magnifying-glass",
+        "color": "#20E1B2",
+        "items": [
+          "On-Site Member Interviews",
+          "Front-Desk Bottlenecks",
+          "Drop-Off Analysis"
+        ]
+      },
+      {
+        "name": "Define",
+        "icon": "fa-user",
+        "color": "#64748B",
+        "items": [
+          "Freelancer & Enterprise Personas",
+          "Peak Hour Capacity Models",
+          "System Architecture"
+        ]
+      },
+      {
+        "name": "Ideate",
+        "icon": "fa-brain",
+        "color": "#20E1B2",
+        "items": [
+          "Floorplan Micro-Interactions",
+          "3-Click Express Booking",
+          "Instant QR Pass UX"
+        ]
+      },
+      {
+        "name": "Design",
+        "icon": "fa-compass-drafting",
+        "color": "#64748B",
+        "items": [
+          "Interactive SVG Canvas",
+          "Design Token Library",
+          "Admin Analytics Dashboard"
+        ]
+      },
+      {
+        "name": "Test",
+        "icon": "fa-mobile-screen-button",
+        "color": "#20E1B2",
+        "items": [
+          "Payment Gateway Rigor",
+          "Peak Traffic Simulation",
+          "Live Location Rollout"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "title": "Direct Bookings Lift",
+        "stat": "+320% Online Reservations"
+      },
+      {
+        "title": "Front Desk Labor Saved",
+        "stat": "-70% Manual Inquiries"
+      },
+      {
+        "title": "Checkout Speed",
+        "stat": "42s Average Completion"
+      }
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": "luxora-furniture",
+    "slug": "luxora-furniture",
+    "category": "HIGH-CONVERTING LUXURY E-COMMERCE",
+    "author": "DIRECTED BY MD. SHAKIBUR RAHAMAN",
+    "date": "JANUARY 2026",
+    "badge": "LX",
+    "badgeGradient": "from-[#D97706] to-[#041B21]",
+    "subtitle": "Luxora Bespoke Living",
+    "heroTitle": "LUXURY FURNITURE D2C E-STORE",
+    "tagline": "Bespoke 3D product customizer, room dimension estimator, and seamless WhatsApp concierge integration.",
+    "problem": "High-ticket luxury furniture buyers hesitated to purchase bespoke living room sets online without visualizing materials, room scales, and finish customizations.",
+    "solution": [
+      "Designed a photorealistic 3D fabric & wood finish customizer with live price recalculation.",
+      "Engineered an interactive Room Dimension Estimator providing instant AR scale previews.",
+      "Integrated frictionless WhatsApp VIP concierge consultation alongside standard cart checkout.",
+      "Optimized Core Web Vitals to sub-second load times despite high-resolution 4K asset galleries."
+    ],
+    "roles": [
+      [
+        "Luxury Buyer Psychology",
+        "High-Ticket Checkout Audit",
+        "Information Architecture"
+      ],
+      [
+        "3D Configurator UI/UX",
+        "Material Texture Swatches",
+        "Micro-Interactions"
+      ],
+      [
+        "Full-Stack Web Engineering",
+        "Shopify/Custom CMS Engine",
+        "Performance Optimization"
+      ],
+      [
+        "A/B Cart Testing",
+        "Heatmap Usability Studies",
+        "VIP Lead Funnels"
+      ]
+    ],
+    "duration": "12",
+    "durationUnit": "Weeks",
+    "screens": "54+",
+    "screensUnit": "Components",
+    "tools": [
+      {
+        "name": "Figma",
+        "iconType": "svg"
+      },
+      {
+        "name": "Photoshop",
+        "iconType": "ps"
+      },
+      {
+        "name": "Three.js",
+        "iconType": "svg"
+      },
+      {
+        "name": "Shopify API",
+        "iconType": "sheets"
+      },
+      {
+        "name": "GA4 Analytics",
+        "iconType": "ga4"
+      }
+    ],
+    "process": [
+      {
+        "name": "Empathize",
+        "icon": "fa-magnifying-glass",
+        "color": "#D97706",
+        "items": [
+          "Luxury Consumer Interviews",
+          "Showroom Walkthroughs",
+          "Abandonment Mapping"
+        ]
+      },
+      {
+        "name": "Define",
+        "icon": "fa-user",
+        "color": "#64748B",
+        "items": [
+          "Interior Designer Personas",
+          "Bespoke Pricing Rules",
+          "Catalog Hierarchy"
+        ]
+      },
+      {
+        "name": "Ideate",
+        "icon": "fa-brain",
+        "color": "#20E1B2",
+        "items": [
+          "Material Swatch Selector",
+          "Room Scale Visualizer",
+          "WhatsApp VIP Floating Concierge"
+        ]
+      },
+      {
+        "name": "Design",
+        "icon": "fa-compass-drafting",
+        "color": "#64748B",
+        "items": [
+          "Editorial Typography",
+          "Dark/Teal Morphy Luxury UI",
+          "Mobile Sticky Action Bar"
+        ]
+      },
+      {
+        "name": "Test",
+        "icon": "fa-mobile-screen-button",
+        "color": "#D97706",
+        "items": [
+          "Cross-Device Responsive QA",
+          "Checkout Friction Elimination",
+          "Live Launch"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "title": "Average Order Value",
+        "stat": "+185% Cart Value Lift"
+      },
+      {
+        "title": "Mobile Conversion",
+        "stat": "3.4x Faster Funnel"
+      },
+      {
+        "title": "Concierge Inquiries",
+        "stat": "820+ VIP Leads"
+      }
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": "asap-interior",
+    "slug": "asap-interior",
+    "category": "ARCHITECTURE & COMMERCIAL INTERIOR",
+    "author": "DIRECTED BY MD. SHAKIBUR RAHAMAN",
+    "date": "NOVEMBER 2025",
+    "badge": "AS",
+    "badgeGradient": "from-[#20E1B2] to-[#0D9488]",
+    "subtitle": "ASAP Interior Solutions",
+    "heroTitle": "COMMERCIAL & RESIDENTIAL PORTAL",
+    "tagline": "Dynamic interactive project showcase, 3D walkthrough engine, and automated quote generator.",
+    "problem": "ASAP Interior relied on static PDF catalogs and unmeasured referral word-of-mouth, failing to capture premium corporate office and luxury penthouse renovation briefs.",
+    "solution": [
+      "Engineered an interactive project portfolio with category filtering (Corporate, Residential, Retail).",
+      "Created an instant square-footage renovation cost estimator with dynamic milestone breakdowns.",
+      "Integrated embedded 360-degree virtual tour walkthroughs with floorplan hotspots.",
+      "Formulated targeted SEO architecture capturing high-value keywords like 'corporate interior design Dhaka'."
+    ],
+    "roles": [
+      [
+        "Architectural Portfolio Strategy",
+        "Lead Qualification UX",
+        "Competitor Teardowns"
+      ],
+      [
+        "High-Res Project Gallery UI",
+        "Cost Estimator Calculator",
+        "Brand Style Guide"
+      ],
+      [
+        "Performance Web Development",
+        "Interactive 360 Embeds",
+        "Technical SEO Schema"
+      ],
+      [
+        "Lead Magnet Integration",
+        "Analytics Attribution",
+        "Staff CMS Training"
+      ]
+    ],
+    "duration": "8",
+    "durationUnit": "Weeks",
+    "screens": "36+",
+    "screensUnit": "Layouts",
+    "tools": [
+      {
+        "name": "Figma",
+        "iconType": "svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "iconType": "svg"
+      },
+      {
+        "name": "JavaScript",
+        "iconType": "ps"
+      },
+      {
+        "name": "Google Analytics",
+        "iconType": "ga4"
+      },
+      {
+        "name": "Google Sheets",
+        "iconType": "sheets"
+      }
+    ],
+    "process": [
+      {
+        "name": "Empathize",
+        "icon": "fa-magnifying-glass",
+        "color": "#20E1B2",
+        "items": [
+          "Client Decision Journey",
+          "Architectural Review",
+          "Corporate RFP Analysis"
+        ]
+      },
+      {
+        "name": "Define",
+        "icon": "fa-user",
+        "color": "#64748B",
+        "items": [
+          "Commercial Developer Personas",
+          "Budget Tiers",
+          "Information Architecture"
+        ]
+      },
+      {
+        "name": "Ideate",
+        "icon": "fa-brain",
+        "color": "#20E1B2",
+        "items": [
+          "Interactive Cost Calculator",
+          "360 Hotspot Navigation",
+          "Express Consultation CTA"
+        ]
+      },
+      {
+        "name": "Design",
+        "icon": "fa-compass-drafting",
+        "color": "#64748B",
+        "items": [
+          "Minimalist Grid Aesthetics",
+          "Editorial Typography",
+          "Dark Contrast Mode"
+        ]
+      },
+      {
+        "name": "Test",
+        "icon": "fa-mobile-screen-button",
+        "color": "#20E1B2",
+        "items": [
+          "Estimator Calculation QA",
+          "Lighthouse 98/100 Score",
+          "Domain Migration"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "title": "Verified Commercial RFPs",
+        "stat": "+240% Inquiries"
+      },
+      {
+        "title": "Average Session Duration",
+        "stat": "4m 12s Engagement"
+      },
+      {
+        "title": "Closed Project Volume",
+        "stat": "18+ Premium Contracts"
+      }
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": "hotel-sarina",
+    "slug": "hotel-sarina",
+    "category": "HOSPITALITY & REVENUE ARCHITECTURE",
+    "author": "MANAGED BY MD. SHAKIBUR RAHAMAN",
+    "date": "DECEMBER 2025",
+    "badge": "HS",
+    "badgeGradient": "from-[#F59E0B] to-[#78350F]",
+    "subtitle": "Hotel Sarina Dhaka (5-Star)",
+    "heroTitle": "DIRECT RESERVATION & BANQUET SUITE",
+    "tagline": "Direct reservation engine, event hall availability calculator, and dining reservation suite.",
+    "problem": "Hotel Sarina paid crippling 22% OTA commissions on booking aggregators and lacked a unified direct booking engine for corporate banquet halls and luxury presidential suites.",
+    "solution": [
+      "Architected a custom direct room reservation engine with zero middleman commissions.",
+      "Engineered an interactive banquet hall availability and dining table booking system.",
+      "Executed segmented Google Performance Max & Meta ads capturing corporate event decision-makers.",
+      "Implemented automated booking confirmation SMS/email workflows with personalized concierge upsells."
+    ],
+    "roles": [
+      [
+        "Hospitality Revenue Audit",
+        "OTA Cost Analysis",
+        "Banquet Lead Journey"
+      ],
+      [
+        "Direct Booking Flow UI",
+        "Dining Reservation Modal",
+        "Multi-Property Switcher"
+      ],
+      [
+        "API Integration",
+        "Secure Payment Gateway",
+        "Dynamic Room Availability Engine"
+      ],
+      [
+        "Conversion Rate Testing",
+        "High-Intent Google Ads",
+        "Staff POS Synchronization"
+      ]
+    ],
+    "duration": "14",
+    "durationUnit": "Weeks",
+    "screens": "48+",
+    "screensUnit": "Views",
+    "tools": [
+      {
+        "name": "Google Ads",
+        "iconType": "gads"
+      },
+      {
+        "name": "GA4 Analytics",
+        "iconType": "ga4"
+      },
+      {
+        "name": "Figma",
+        "iconType": "svg"
+      },
+      {
+        "name": "Node.js",
+        "iconType": "ps"
+      },
+      {
+        "name": "Stripe / SSLCommerz",
+        "iconType": "sheets"
+      }
+    ],
+    "process": [
+      {
+        "name": "Empathize",
+        "icon": "fa-magnifying-glass",
+        "color": "#F59E0B",
+        "items": [
+          "Guest Booking Surveys",
+          "OTA Dependency Analysis",
+          "Front-Desk Workflow"
+        ]
+      },
+      {
+        "name": "Define",
+        "icon": "fa-user",
+        "color": "#64748B",
+        "items": [
+          "Corporate Planner Personas",
+          "Seasonal Room Rates",
+          "Commission Saving Targets"
+        ]
+      },
+      {
+        "name": "Ideate",
+        "icon": "fa-brain",
+        "color": "#20E1B2",
+        "items": [
+          "Direct Booking Perks UI",
+          "Express 2-Click Suite Selector",
+          "Event Capacity Tool"
+        ]
+      },
+      {
+        "name": "Design",
+        "icon": "fa-compass-drafting",
+        "color": "#64748B",
+        "items": [
+          "5-Star Luxury Teal & Gold UI",
+          "High-Def Room Galleries",
+          "Concierge Add-ons"
+        ]
+      },
+      {
+        "name": "Test",
+        "icon": "fa-mobile-screen-button",
+        "color": "#F59E0B",
+        "items": [
+          "Payment Security Rigor",
+          "PMax Ad Campaign Scaling",
+          "Live Production Rollout"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "title": "Direct Booking Lift",
+        "stat": "+410% Direct Revenue"
+      },
+      {
+        "title": "OTA Commission Saved",
+        "stat": "$45,000+ Annual Savings"
+      },
+      {
+        "title": "Banquet Contracts",
+        "stat": "120+ Corporate Events"
+      }
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": "apex-pmax-ads",
+    "slug": "apex-pmax-ads",
+    "category": "PERFORMANCE MARKETING & INTENT SCALING",
+    "author": "MANAGED BY MD. SHAKIBUR RAHAMAN",
+    "date": "OCTOBER 2025",
+    "badge": "AP",
+    "badgeGradient": "from-[#EF4444] to-[#7F1D1D]",
+    "subtitle": "Apex Scaler Performance",
+    "heroTitle": "PERFORMANCE MAX AD ARCHITECTURE",
+    "tagline": "Omnichannel Google & Meta performance architecture driving high-intent conversions and 5.4x ROAS.",
+    "problem": "Ad budgets were exhausting on fragmented broad campaigns with high cost-per-acquisition (CPA), attribution blindspots, and zero creative fatigue protection.",
+    "solution": [
+      "Re-engineered Google Performance Max campaign structure with segmented asset groups by customer intent.",
+      "Deployed server-side Google Tag Manager (sGTM) and GA4 enhanced conversion tracking with 100% data fidelity.",
+      "Produced multi-variant high-velocity video hooks and localized lifestyle image creatives.",
+      "Implemented automated ROAS-based bid pacing scripts avoiding weekend budget waste."
+    ],
+    "roles": [
+      [
+        "Ad Account Audit",
+        "Attribution Discrepancy Diagnostics",
+        "Competitor Ad Scraping"
+      ],
+      [
+        "Ad Creative Storyboards",
+        "High-Converting UGC Scripts",
+        "Landing Page Wireframes"
+      ],
+      [
+        "Server-Side GTM Setup",
+        "First-Party Data Audiences",
+        "PMax Asset Grouping"
+      ],
+      [
+        "Bid Automation Scripts",
+        "Weekly ROAS Pacing",
+        "Creative Fatigue Rotation"
+      ]
+    ],
+    "duration": "12",
+    "durationUnit": "Weeks",
+    "screens": "65+",
+    "screensUnit": "Creatives",
+    "tools": [
+      {
+        "name": "Google Ads",
+        "iconType": "gads"
+      },
+      {
+        "name": "Meta Ads Manager",
+        "iconType": "ps"
+      },
+      {
+        "name": "Server-side GTM",
+        "iconType": "sheets"
+      },
+      {
+        "name": "GA4 Analytics",
+        "iconType": "ga4"
+      },
+      {
+        "name": "Looker Studio",
+        "iconType": "sheets"
+      }
+    ],
+    "process": [
+      {
+        "name": "Empathize",
+        "icon": "fa-magnifying-glass",
+        "color": "#EF4444",
+        "items": [
+          "Search Term Waste Audit",
+          "Audience Intent Mapping",
+          "Historical CPA Analysis"
+        ]
+      },
+      {
+        "name": "Define",
+        "icon": "fa-user",
+        "color": "#64748B",
+        "items": [
+          "High-LTV Buyer Segments",
+          "Target ROAS Guardrails",
+          "Attribution Modeling"
+        ]
+      },
+      {
+        "name": "Ideate",
+        "icon": "fa-brain",
+        "color": "#20E1B2",
+        "items": [
+          "3-Second Video Hooks",
+          "Problem-Agitate-Solve Creatives",
+          "Dynamic Product Feeds"
+        ]
+      },
+      {
+        "name": "Design",
+        "icon": "fa-compass-drafting",
+        "color": "#64748B",
+        "items": [
+          "Responsive Display Ads",
+          "Short-Form Video Edits",
+          "Comparison Carousels"
+        ]
+      },
+      {
+        "name": "Test",
+        "icon": "fa-mobile-screen-button",
+        "color": "#EF4444",
+        "items": [
+          "A/B Headline Testing",
+          "Smart Bidding Scaling",
+          "Monthly Budget Expansion"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "title": "Measured ROAS",
+        "stat": "5.4x Blended Return"
+      },
+      {
+        "title": "CPA Reduction",
+        "stat": "-42% Cost-Per-Acquisition"
+      },
+      {
+        "title": "Revenue Generated",
+        "stat": "৳4.2M+ Incremental Sales"
+      }
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": "botanica-packaging",
+    "slug": "botanica-packaging",
+    "category": "GRAPHICS & VISUAL IDENTITY",
+    "author": "DESIGNED BY MD. SHAKIBUR RAHAMAN",
+    "date": "SEPTEMBER 2025",
+    "badge": "BO",
+    "badgeGradient": "from-[#10B981] to-[#064E3B]",
+    "subtitle": "Botanica Organics Skincare",
+    "heroTitle": "BRAND IDENTITY & PACKAGING SYSTEM",
+    "tagline": "Eco-luxury brand identity, sustainable packaging system, and 3D product renders.",
+    "problem": "Botanica Organics had premium organic formulas but lacked premium packaging shelf-presence and cohesive brand guidelines to stand out in luxury retail department stores.",
+    "solution": [
+      "Engineered an elegant organic visual identity including wordmark, monogram, and custom botanical illustrations.",
+      "Designed sustainable, foil-embossed glass dropper bottles, cream jars, and biodegradable outer cartons.",
+      "Created 3D photorealistic product renders for D2C e-commerce, retail pitch decks, and billboard campaigns.",
+      "Delivered a comprehensive 60-page Brand Guidelines manual covering typography, color ratios, and photography art direction."
+    ],
+    "roles": [
+      [
+        "Cosmetics Shelf Landscape Audit",
+        "Target Demographic Moodboarding",
+        "Brand Archetype Formulation"
+      ],
+      [
+        "Logo System & Monogram",
+        "Packaging Die-Lines & Foiling",
+        "Label Typography"
+      ],
+      [
+        "3D Photorealistic Modeling",
+        "Lighting & Material Textures",
+        "Print Vendor Press Checks"
+      ],
+      [
+        "Brand Guideline Architecture",
+        "Retail Display Prototyping",
+        "Digital Asset Library"
+      ]
+    ],
+    "duration": "6",
+    "durationUnit": "Weeks",
+    "screens": "60+",
+    "screensUnit": "Brand Assets",
+    "tools": [
+      {
+        "name": "Illustrator",
+        "iconType": "svg"
+      },
+      {
+        "name": "Photoshop",
+        "iconType": "ps"
+      },
+      {
+        "name": "Blender 3D",
+        "iconType": "ps"
+      },
+      {
+        "name": "Figma",
+        "iconType": "svg"
+      },
+      {
+        "name": "InDesign",
+        "iconType": "sheets"
+      }
+    ],
+    "process": [
+      {
+        "name": "Empathize",
+        "icon": "fa-magnifying-glass",
+        "color": "#10B981",
+        "items": [
+          "Consumer Unboxing Interviews",
+          "Retail Shelf Audit",
+          "Sustainable Material Research"
+        ]
+      },
+      {
+        "name": "Define",
+        "icon": "fa-user",
+        "color": "#64748B",
+        "items": [
+          "Eco-Conscious Luxury Persona",
+          "Brand Personality Spectrum",
+          "Packaging Regulatory Specs"
+        ]
+      },
+      {
+        "name": "Ideate",
+        "icon": "fa-brain",
+        "color": "#20E1B2",
+        "items": [
+          "Geometric & Botanical Logos",
+          "Earthy Teal & Gold Palettes",
+          "Embossed Die-Cut Concepts"
+        ]
+      },
+      {
+        "name": "Design",
+        "icon": "fa-compass-drafting",
+        "color": "#64748B",
+        "items": [
+          "Vector Packaging Mechanicals",
+          "3D Photorealistic Textures",
+          "Editorial Brand Book"
+        ]
+      },
+      {
+        "name": "Test",
+        "icon": "fa-mobile-screen-button",
+        "color": "#10B981",
+        "items": [
+          "Physical Press Proof Approvals",
+          "Shelf Legibility Checks",
+          "Retail Launch"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "title": "Retail Distribution",
+        "stat": "140+ Luxury Outlets"
+      },
+      {
+        "title": "Packaging Aesthetic Rating",
+        "stat": "98% Positive Feedback"
+      },
+      {
+        "title": "Retail Sell-Through",
+        "stat": "+210% Shelf Lift"
+      }
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": "zenith-aeo-seo",
+    "slug": "zenith-aeo-seo",
+    "category": "SEO & GENERATIVE AI OPTIMIZATION",
+    "author": "DIRECTED BY MD. SHAKIBUR RAHAMAN",
+    "date": "AUGUST 2025",
+    "badge": "ZH",
+    "badgeGradient": "from-[#6366F1] to-[#1E1B4B]",
+    "subtitle": "Zenith Health Telemedicine",
+    "heroTitle": "GENERATIVE AI & SEO ARCHITECTURE",
+    "tagline": "Search engine optimization and Generative Engine Optimization (GEO/AEO) for ChatGPT, Perplexity, and Google AI Overviews.",
+    "problem": "Zenith Health was invisible in AI answer engines (ChatGPT Search, Perplexity, Google SGE) and losing high-intent telemedicine patients to incumbent healthcare directories.",
+    "solution": [
+      "Built an AI Engine Optimization (AEO) schema framework with MedicalWebPage and Physician structured data.",
+      "Engineered 120+ clinical condition topic clusters with authoritative medical citations and verified FAQ schema.",
+      "Optimized technical core web vitals, achieving 99/100 performance and crawl budgets for LLM scrapers.",
+      "Secured authoritative brand entity associations in Google Knowledge Graph and medical citation databases."
+    ],
+    "roles": [
+      [
+        "AI Search Query Teardown",
+        "Knowledge Graph Extraction",
+        "Competitor Citation Audit"
+      ],
+      [
+        "Content Hub Information Architecture",
+        "Medical Schema Blueprint",
+        "FAQ Semantic Hierarchy"
+      ],
+      [
+        "Technical Crawl Optimization",
+        "Schema JSON-LD Implementation",
+        "LLM Benchmark Tracking"
+      ],
+      [
+        "Editorial Fact-Checking UX",
+        "Author Bio E-E-A-T Credibility",
+        "Performance Monitoring"
+      ]
+    ],
+    "duration": "16",
+    "durationUnit": "Weeks",
+    "screens": "120+",
+    "screensUnit": "Pages",
+    "tools": [
+      {
+        "name": "Google Search Console",
+        "iconType": "ga4"
+      },
+      {
+        "name": "Ahrefs / SEMrush",
+        "iconType": "sheets"
+      },
+      {
+        "name": "Schema JSON-LD",
+        "iconType": "ps"
+      },
+      {
+        "name": "GA4 Analytics",
+        "iconType": "ga4"
+      },
+      {
+        "name": "Perplexity & ChatGPT Pro",
+        "iconType": "svg"
+      }
+    ],
+    "process": [
+      {
+        "name": "Empathize",
+        "icon": "fa-magnifying-glass",
+        "color": "#6366F1",
+        "items": [
+          "Patient Natural Language Queries",
+          "Zero-Click Search Trends",
+          "AI Answer Patterns"
+        ]
+      },
+      {
+        "name": "Define",
+        "icon": "fa-user",
+        "color": "#64748B",
+        "items": [
+          "Telehealth Patient Personas",
+          "E-E-A-T Quality Standards",
+          "Core Topic Pillars"
+        ]
+      },
+      {
+        "name": "Ideate",
+        "icon": "fa-brain",
+        "color": "#20E1B2",
+        "items": [
+          "Semantic Entity Graphs",
+          "Direct Answer Snippets",
+          "Doctor Verified Badges"
+        ]
+      },
+      {
+        "name": "Design",
+        "icon": "fa-compass-drafting",
+        "color": "#64748B",
+        "items": [
+          "Accessible Medical Layouts",
+          "Instant Doctor Match Widget",
+          "Author Authority Headers"
+        ]
+      },
+      {
+        "name": "Test",
+        "icon": "fa-mobile-screen-button",
+        "color": "#6366F1",
+        "items": [
+          "Rich Results Testing",
+          "Perplexity Citation Verification",
+          "Organic Patient Scaling"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "title": "Organic Patient Traffic",
+        "stat": "+480% Organic Growth"
+      },
+      {
+        "title": "AI Search Citations",
+        "stat": "#1 Recommended Provider"
+      },
+      {
+        "title": "Teleconsult Bookings",
+        "stat": "3,800+ Monthly Sessions"
+      }
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": "mega-tech-expo",
+    "slug": "mega-tech-expo",
+    "category": "EVENT ACTIVATION & EXHIBITION",
+    "author": "DIRECTED BY MD. SHAKIBUR RAHAMAN",
+    "date": "JULY 2025",
+    "badge": "MT",
+    "badgeGradient": "from-[#8B5CF6] to-[#3B0764]",
+    "subtitle": "Mega Tech Expo 2025",
+    "heroTitle": "3D EXHIBITION PAVILION & LIVE ACTIVATION",
+    "tagline": "Custom 3D pavilion design, interactive touch kiosks, digital registration, and live brand activation.",
+    "problem": "The client needed an immersive experiential exhibition pavilion at Bangladesh's largest tech summit that would outshine international competitors and capture 1,000+ enterprise leads.",
+    "solution": [
+      "Designed an architectural 3D modular pavilion featuring custom lighting, LED video walls, and meeting lounges.",
+      "Engineered an interactive touch-screen product demo kiosk with gamified quiz lead capture.",
+      "Implemented a contactless QR badge check-in system synchronized with a real-time sales pipeline dashboard.",
+      "Directed on-site brand ambassadors, live product unveiling keynotes, and high-energy video highlights."
+    ],
+    "roles": [
+      [
+        "Floorplan & Traffic Flow Planning",
+        "Summit Sponsorship Strategy",
+        "Visitor Journey Mapping"
+      ],
+      [
+        "3D Architectural Pavilion Renders",
+        "Motion Graphic LED Loops",
+        "Interactive Touchscreen UI"
+      ],
+      [
+        "Kiosk App Development",
+        "QR Scanner Integration",
+        "Real-Time Lead Dashboard"
+      ],
+      [
+        "Fabrication Supervision",
+        "On-Site Technical Direction",
+        "Post-Event Lead Handover"
+      ]
+    ],
+    "duration": "6",
+    "durationUnit": "Weeks",
+    "screens": "18+",
+    "screensUnit": "Stands & Screens",
+    "tools": [
+      {
+        "name": "3ds Max / Blender",
+        "iconType": "ps"
+      },
+      {
+        "name": "After Effects",
+        "iconType": "ps"
+      },
+      {
+        "name": "Figma",
+        "iconType": "svg"
+      },
+      {
+        "name": "Touch Screen Kiosk App",
+        "iconType": "sheets"
+      },
+      {
+        "name": "QR Hub",
+        "iconType": "ga4"
+      }
+    ],
+    "process": [
+      {
+        "name": "Empathize",
+        "icon": "fa-magnifying-glass",
+        "color": "#8B5CF6",
+        "items": [
+          "Summit Attendee Behavior",
+          "Booth Foot-Traffic Bottlenecks",
+          "Executive Visitor Needs"
+        ]
+      },
+      {
+        "name": "Define",
+        "icon": "fa-user",
+        "color": "#64748B",
+        "items": [
+          "Enterprise Buyer Personas",
+          "Pavilion Spatial Constraints",
+          "Lead Capture Targets"
+        ]
+      },
+      {
+        "name": "Ideate",
+        "icon": "fa-brain",
+        "color": "#20E1B2",
+        "items": [
+          "Futuristic Curved LED Canopy",
+          "Interactive Gaming Kiosk",
+          "VIP Meeting Oasis"
+        ]
+      },
+      {
+        "name": "Design",
+        "icon": "fa-compass-drafting",
+        "color": "#64748B",
+        "items": [
+          "Architectural 3D Cad Models",
+          "4K Video Wall Loops",
+          "Touchscreen App Wireframes"
+        ]
+      },
+      {
+        "name": "Test",
+        "icon": "fa-mobile-screen-button",
+        "color": "#8B5CF6",
+        "items": [
+          "Structural Rigging Checks",
+          "Live Network & Kiosk Stress Test",
+          "On-Day Launch"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "title": "Enterprise B2B Leads",
+        "stat": "1,450+ Verified Inquiries"
+      },
+      {
+        "title": "Average Dwell Time",
+        "stat": "14m Booth Engagement"
+      },
+      {
+        "title": "Summit Recognition",
+        "stat": "Best Exhibition Pavilion"
+      }
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80"
+  }
+];
 
     let currentCaseStudyIndex = 0;
 

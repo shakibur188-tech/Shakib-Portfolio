@@ -152,6 +152,7 @@
         </div>
 
         <a href="/projects" class="hover:text-[#20E1B2] transition-colors">Projects</a>
+        <a href="/case-studies" class="text-[#20E1B2] font-bold transition-colors">Case Studies</a>
         <a href="/experience" class="hover:text-[#20E1B2] transition-colors">Experience</a>
         <a href="/offers" class="hover:text-[#20E1B2] transition-colors">Offers</a>
         <a href="/consultation" class="hover:text-[#20E1B2] transition-colors">Consultation</a>
@@ -195,6 +196,13 @@
             <span>Projects</span>
           </span>
           <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#10B981]/10 text-[#10B981]">Featured</span>
+        </a>
+        <a href="/case-studies" class="mobile-nav-link mobile-link flex items-center justify-between active">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-lightbulb text-xs text-[#20E1B2] w-4"></i>
+            <span>Case Studies</span>
+          </span>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#20E1B2]/10 text-[#20E1B2]">Deep Dives</span>
         </a>
         <a href="/experience" class="mobile-nav-link mobile-link flex items-center justify-between ">
           <span class="flex items-center gap-3">
@@ -246,7 +254,7 @@
       <!-- Key Strategic Stats Strip -->
       <div id="csStatsStrip" class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto text-center mb-8">
         <div class="spotlight-card p-4 bg-[#0B3844]/35 backdrop-blur-xl border border-[#20E1B2]/20 rounded-2xl shadow-xs">
-          <div class="text-2xl sm:text-3xl font-black text-white" id="statTotalCases">7+</div>
+          <div class="text-2xl sm:text-3xl font-black text-white" id="statTotalCases">8+</div>
           <div class="text-[11px] text-[#7EADA3] uppercase font-extrabold mt-1">Detailed Case Studies</div>
         </div>
         <div class="spotlight-card p-4 bg-[#0B3844]/35 backdrop-blur-xl border border-[#20E1B2]/20 rounded-2xl shadow-xs">
@@ -278,12 +286,13 @@
         <!-- Filter Pill Buttons -->
         <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
           <button class="cs-filter-btn active" data-category="All">All Works</button>
-          <button class="cs-filter-btn" data-category="Graphics & Visual Identity">Graphics &amp; ID</button>
-          <button class="cs-filter-btn" data-category="Web design & Development">Web Dev</button>
+          <button class="cs-filter-btn" data-category="Web design & Development">Web &amp; E-Commerce</button>
+          <button class="cs-filter-btn" data-category="Google ads & Intent Scaling">Google Ads</button>
+          <button class="cs-filter-btn" data-category="Graphics & Visual Identity">Brand Identity</button>
+          <button class="cs-filter-btn" data-category="SEO & Generative AI (AEO)">SEO &amp; AEO</button>
+          <button class="cs-filter-btn" data-category="Event activation & Exhibition">Events &amp; Expos</button>
           <button class="cs-filter-btn" data-category="Social Media marketing">Social Media</button>
           <button class="cs-filter-btn" data-category="Public relation & Media outreach">PR &amp; Media</button>
-          <button class="cs-filter-btn" data-category="Google ads & Intent Scaling">Google Ads</button>
-          <button class="cs-filter-btn" data-category="Event activation & Exhibition">Events &amp; Expos</button>
         </div>
       </div>
 
@@ -497,32 +506,239 @@
   <!-- Styles for Filter Buttons -->
   <style>
     .cs-filter-btn {
-      padding: 6px 14px;
+      padding: 7px 16px;
       border-radius: 9999px;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 700;
       white-space: nowrap;
-      transition: all 0.2s ease;
-      background: #EDF9F5;
-      color: #64748B;
-      border: 1px solid rgba(112, 128, 93, 0.2);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      background: rgba(8, 40, 48, 0.65);
+      color: #94A3B8;
+      border: 1px solid rgba(32, 225, 178, 0.25);
+      backdrop-filter: blur(12px);
     }
     .cs-filter-btn:hover {
-      background: rgba(112, 128, 93, 0.1);
-      color: #08201A;
-      border-color: rgba(112, 128, 93, 0.4);
+      background: rgba(32, 225, 178, 0.15);
+      color: #FFFFFF;
+      border-color: rgba(32, 225, 178, 0.5);
+      transform: translateY(-1px);
     }
     .cs-filter-btn.active {
-      background: #20E1B2;
-      color: #FFFFFF;
+      background: linear-gradient(135deg, #20E1B2 0%, #0D9488 100%);
+      color: #041B21;
+      font-weight: 800;
       border-color: #20E1B2;
-      box-shadow: 0 4px 12px -2px rgba(112, 128, 93, 0.35);
+      box-shadow: 0 4px 20px rgba(32, 225, 178, 0.4);
+      transform: translateY(-1px);
     }
   </style>
 
   <!-- Controller Script for Case Studies Page -->
   <script>
-    let allCaseStudies = [];
+    const DEFAULT_CASE_STUDIES = [
+  {
+    "id": "worknook-coworking",
+    "title": "WorkNook - Coworking Space & Flexible Desk Reservation System",
+    "client": "WorkNook Global",
+    "category": "Web design & Development",
+    "year": "2025",
+    "tagline": "Engineering an end-to-end coworking reservation system with sub-second floorplan mapping and instant stripe checkout.",
+    "challenge": "Legacy desk reservation portals suffered from sluggish 4.2s load times, confusing seating layouts, and a 68% cart abandonment rate on mobile devices.",
+    "solution": "Architected an ultra-fast Jamstack web portal with interactive SVG floorplan desk selection, real-time availability sync, and seamless 1-click mobile checkout.",
+    "metrics": [
+      "+310% Reservation Volume",
+      "0.7s Average Page Speed",
+      "4.9/5 User Rating",
+      "-48% Drop-off Rate"
+    ],
+    "deliverables": [
+      "Interactive Floorplan UI",
+      "Real-Time Booking API",
+      "Stripe Multi-Currency",
+      "Mobile Responsive App"
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+    "liveUrl": "https://hotel.shakibur.info",
+    "slug": "worknook-coworking"
+  },
+  {
+    "id": "luxora-furniture",
+    "title": "Luxora Furniture - Bespoke Luxury Furniture D2C E-Store",
+    "client": "Luxora Luxury Living",
+    "category": "Web design & Development",
+    "year": "2025",
+    "tagline": "Headless commerce architecture with custom dynamic 3D wood finish selectors and automated EMI installment ledger.",
+    "challenge": "High-ticket luxury furniture struggled to convert online due to lack of dynamic material visualization and absence of flexible installment payment methods.",
+    "solution": "Engineered a headless storefront with ultra-high fidelity variant previewers, custom room dimension calculators, and a multi-month EMI financing tracker.",
+    "metrics": [
+      "+45% Conversion Lift",
+      "৳ 1,26,599 Single Day GMV",
+      "98/100 Google PageSpeed",
+      "4.82x Blended ROAS"
+    ],
+    "deliverables": [
+      "Headless E-Commerce Store",
+      "Interactive Finish Selector",
+      "EMI Installment Ledger",
+      "Automated Courier API"
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80",
+    "liveUrl": "https://luxorafurniture.com",
+    "slug": "luxora-furniture"
+  },
+  {
+    "id": "asap-interior",
+    "title": "ASAP Interior Solutions - Commercial & Residential Architecture Hub",
+    "client": "ASAP Solutions Limited",
+    "category": "Web design & Development",
+    "year": "2025",
+    "tagline": "Digital flagship for an elite interior architecture firm with 3D walkthrough galleries and automated quotation calculator.",
+    "challenge": "High-value commercial clients were bouncing because the previous portfolio couldn't showcase complex spatial plans and required manual email back-and-forth for estimates.",
+    "solution": "Created a sleek glassmorphic portfolio featuring interactive blueprint zooming, instant square-footage estimation tools, and CRM calendar integration.",
+    "metrics": [
+      "+420% Inbound Inquiries",
+      "3.2x Lead Velocity",
+      "100% Inbound Automation",
+      "0.6s Initial Server Response"
+    ],
+    "deliverables": [
+      "Architecture Portal",
+      "Instant Cost Estimator",
+      "Interactive Blueprint Viewer",
+      "Integrated Lead CRM"
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+    "liveUrl": "https://interior.asapsl.com",
+    "slug": "asap-interior"
+  },
+  {
+    "id": "hotel-sarina",
+    "title": "Hotel Sarina Dhaka - 5-Star Direct Booking & Banquet Reservation Suite",
+    "client": "Hotel Sarina Dhaka",
+    "category": "Web design & Development",
+    "year": "2024",
+    "tagline": "Bypassing OTA commission fees with a sub-second direct guest booking engine, culinary event ticketing, and VIP loyalty portal.",
+    "challenge": "Over 75% of reservations flowed through third-party OTAs, incurring 18-22% commission fees and creating fragmented guest communication.",
+    "solution": "Designed and deployed a luxury direct booking platform with live date-picker room availability, banquet event inquiries, and instant SMS voucher delivery.",
+    "metrics": [
+      "+340% Direct Bookings",
+      "৳ 4.8M Direct Revenue",
+      "0% Third-Party Commissions",
+      "99.9% Uptime High-Load"
+    ],
+    "deliverables": [
+      "Direct Reservation Engine",
+      "Banquet Event Inquiries",
+      "Culinary Ticket Portal",
+      "Guest SMS Automation"
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+    "liveUrl": "https://hotel.shakibur.info",
+    "slug": "hotel-sarina"
+  },
+  {
+    "id": "apex-pmax-ads",
+    "title": "Apex Scaler - Meta & Google Performance Max Ad Architecture",
+    "client": "Apex Retail Group",
+    "category": "Google ads & Intent Scaling",
+    "year": "2025",
+    "tagline": "Multi-touch conversion funnel capturing high-intent search buyers combined with Meta Advantage+ creative remarketing.",
+    "challenge": "Ad fatigue and skyrocketing CPMs resulted in a sub-par 1.8x ROAS and inconsistent lead volumes on traditional search keywords.",
+    "solution": "Restructured account taxonomy into intent-segmented Search, Google Performance Max with custom audience signals, and server-side Meta CAPI tracking.",
+    "metrics": [
+      "4.82x Average ROAS",
+      "$184,920 Attributed Revenue",
+      "-32% Blended CPA",
+      "99.4% Attribution Accuracy"
+    ],
+    "deliverables": [
+      "Performance Max Setup",
+      "Google Search Intent Funnels",
+      "Server-Side Meta CAPI",
+      "Custom GA4 Attribution Dashboard"
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    "liveUrl": "https://luxorafurniture.com",
+    "slug": "apex-pmax-ads"
+  },
+  {
+    "id": "botanica-packaging",
+    "title": "Botanica Organics - Luxury Brand Identity, Sustainable Packaging & 3D System",
+    "client": "Botanica Skincare Labs",
+    "category": "Graphics & Visual Identity",
+    "year": "2024",
+    "tagline": "Building an iconic corporate visual system, tactile minimalist packaging, and 3D digital asset guidelines for premium retail shelves.",
+    "challenge": "Generic brand visuals failed to communicate organic luxury, resulting in buyer hesitation at high retail price points.",
+    "solution": "Crafted a bespoke visual identity manual, custom foil-stamped packaging die-lines, and photorealistic 3D bottle renders that command instant prestige.",
+    "metrics": [
+      "+3.5x Brand Valuation Lift",
+      "50+ Packaging SKUs",
+      "Gold Design Award 2024",
+      "100% Print-Ready Accuracy"
+    ],
+    "deliverables": [
+      "Comprehensive Brand Guidelines",
+      "Luxury Box & Bottle Packaging",
+      "3D Photorealistic Renders",
+      "Editorial Print Stationery"
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=80",
+    "liveUrl": "#",
+    "slug": "botanica-packaging"
+  },
+  {
+    "id": "zenith-aeo-seo",
+    "title": "Zenith Health & Telemedicine - Generative AI Engine Optimization (SEO & AEO)",
+    "client": "Zenith Medical Clinics",
+    "category": "SEO & Generative AI (AEO)",
+    "year": "2025",
+    "tagline": "Dominating both traditional Google search rankings and LLM answer engines (ChatGPT, Perplexity, Claude) through entity graph engineering.",
+    "challenge": "Zero visibility in new AI search overviews and declining traditional keyword click-through rates as patients migrated to conversational search.",
+    "solution": "Implemented Schema.org MedicalEntity graphs, standardized /llms.txt content directives, and semantic citation clusters to secure AI answer inclusion.",
+    "metrics": [
+      "Top 3 Google SERP Rankings",
+      "85% AI Citation Inclusion",
+      "+260% Organic Patient Traffic",
+      "100% LLM Grounding Score"
+    ],
+    "deliverables": [
+      "Semantic Knowledge Graph",
+      "AEO /llms.txt Directives",
+      "Medical Entity Schema Markup",
+      "Conversational AI Funnel"
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1200&q=80",
+    "liveUrl": "#",
+    "slug": "zenith-aeo-seo"
+  },
+  {
+    "id": "mega-tech-expo",
+    "title": "Mega Tech Expo 2025 - Turnkey 3D Exhibition Pavilion & Live Activation",
+    "client": "Global Tech Syndicate",
+    "category": "Event activation & Exhibition",
+    "year": "2025",
+    "tagline": "Designing and fabricating a custom 3D exhibition pavilion with interactive LED touch tunnels, live demos, and experiential branding.",
+    "challenge": "Standing out among 200+ competing international tech exhibits and capturing high-intent B2B enterprise leads in a loud environment.",
+    "solution": "Engineered an open-concept architectural pavilion with 3D spatial flow, interactive badge scanning stations, and an immersive LED keynote amphitheater.",
+    "metrics": [
+      "45,000+ Expo Visitors",
+      "12,400+ Qualified QR Scans",
+      "40+ Mainstream Press Features",
+      "100% Turnkey Fabrication"
+    ],
+    "deliverables": [
+      "3D Spatial Pavilion Architecture",
+      "Turnkey Physical Fabrication",
+      "Interactive LED Tunnels",
+      "PR & Media Press Briefs"
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80",
+    "liveUrl": "#",
+    "slug": "mega-tech-expo"
+  }
+];
+
+    let allCaseStudies = DEFAULT_CASE_STUDIES;
     let currentCategory = 'All';
     let currentSearch = '';
 
@@ -559,16 +775,22 @@
         if (e.key === 'Escape') closeCaseStudyModal();
       });
 
-      // 4. Fetch content and load case studies
+      // Immediate initial render from default case studies
+      renderGrid();
+
+      // 4. Fetch latest content if available
       try {
         const res = await fetch('/api/content?t=' + Date.now());
-        const data = await res.json();
-        allCaseStudies = data.caseStudies || [];
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.caseStudies && data.caseStudies.length > 0) {
+            allCaseStudies = data.caseStudies;
+            renderGrid();
+          }
+        }
       } catch (e) {
-        console.error('Failed to fetch case studies:', e);
+        console.warn('API unavailable, rendered from default high-res case studies:', e);
       }
-
-      renderGrid();
 
       // Initialize Scroll Reveal Observer
       const scrollObserver = new IntersectionObserver((entries, obs) => {
@@ -628,14 +850,14 @@
             });
             const resData = await r.json();
             if (r.ok && resData.success) {
-              alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 block';
+              alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-500/30 block';
               alertBox.textContent = '✓ Thank you! Your project brief has been received. Md. Shakibur Rahaman will respond within 24 hours.';
               form.reset();
             } else {
               throw new Error(resData.error || 'Failed to submit brief');
             }
           } catch (err) {
-            alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-red-50 text-red-800 border border-red-200 block';
+            alertBox.className = 'p-4 rounded-xl text-xs font-semibold bg-red-950/80 text-red-300 border border-red-500/30 block';
             alertBox.textContent = 'Error: ' + err.message;
           } finally {
             btn.disabled = false;
@@ -675,37 +897,37 @@
 
       grid.innerHTML = filtered.map(cs => {
         const metricsHtml = (cs.metrics || []).slice(0, 3).map(m => `
-          <span class="px-2.5 py-1 rounded-md bg-[#041B21] text-[11px] font-extrabold text-white border border-[#20E1B2]/20 flex items-center gap-1.5 shadow-2xs">
+          <span class="px-2.5 py-1 rounded-md bg-[#041B21]/90 backdrop-blur-md text-[11px] font-extrabold text-white border border-[#20E1B2]/30 flex items-center gap-1.5 shadow-xs">
             <i class="fa-solid fa-arrow-trend-up text-[#20E1B2] text-[10px]"></i>
             <span>${escapeHtml(m)}</span>
           </span>
         `).join('');
 
         const deliverablesHtml = (cs.deliverables || []).slice(0, 4).map(d => `
-          <span class="text-[10.5px] text-[#7EADA3] font-bold bg-[#0B3844]/35 backdrop-blur-xl px-2 py-0.5 rounded border border-[#20E1B2]/15">${escapeHtml(d)}</span>
+          <span class="text-[10.5px] text-[#A7F3D0] font-bold bg-[#0B3844]/60 backdrop-blur-md px-2.5 py-0.5 rounded-md border border-[#20E1B2]/25">${escapeHtml(d)}</span>
         `).join('');
 
         return `
-          <div onclick="if (!event.target.closest('button, a')) window.location.href='/case-study.html?id=${encodeURIComponent(cs.id)}'" class="h-full flex flex-col justify-between group spotlight-card p-0 overflow-hidden bg-[#0B3844]/35 backdrop-blur-xl border border-[#20E1B2]/25 rounded-3xl shadow-sm hover:shadow-2xl hover:border-[#20E1B2] hover:-translate-y-1.5 transition-all duration-500 cursor-pointer">
+          <div onclick="if (!event.target.closest('button, a')) window.location.href='/case-study.html?id=${encodeURIComponent(cs.id)}'" class="h-full flex flex-col justify-between group morphy-card glass-card p-0 overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl hover:border-[#20E1B2] hover:-translate-y-1.5 transition-all duration-500 cursor-pointer relative">
             <!-- Cover Visual with Badges (Strict Fixed Height) -->
             <div class="relative h-64 sm:h-72 w-full shrink-0 overflow-hidden bg-[#041B21]">
               <img src="${escapeHtml(cs.coverImage || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80')}" alt="${escapeHtml(cs.title)}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" loading="lazy">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#041B21]/90 via-[#041B21]/30 to-transparent"></div>
 
               <!-- Top Pill Badges -->
               <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
-                <span class="px-3 py-1 rounded-full bg-[#041B21]/95 backdrop-blur-md border border-[#20E1B2]/30 text-[11px] font-extrabold text-white shadow-sm flex items-center gap-1.5">
+                <span class="px-3 py-1 rounded-full bg-[#041B21]/90 backdrop-blur-md border border-[#20E1B2]/35 text-[11px] font-extrabold text-white shadow-sm flex items-center gap-1.5">
                   <i class="fa-solid fa-building text-[#20E1B2] text-[10px]"></i>
                   <span>${escapeHtml(cs.client)}</span>
                 </span>
-                <span class="px-2.5 py-1 rounded-full bg-[#08201A]/85 backdrop-blur-md border border-white/20 text-[10.5px] font-bold text-white shadow-sm">
-                  ${escapeHtml(cs.year || '2025')}
+                <span class="px-2.5 py-1 rounded-full bg-[#0B3844]/90 backdrop-blur-md border border-white/20 text-[10.5px] font-bold text-white shadow-sm">
+                  ${escapeHtml(cs.year || '2026')}
                 </span>
               </div>
 
               <!-- Bottom Category Tag on Image -->
               <div class="absolute bottom-3.5 left-4">
-                <span class="px-3 py-1 rounded-lg bg-[#20E1B2] text-white font-extrabold text-[11px] shadow-sm tracking-wide">
+                <span class="px-3 py-1 rounded-lg bg-[#20E1B2] text-[#041B21] font-extrabold text-[11px] shadow-md tracking-wide">
                   ${escapeHtml(cs.category || 'Strategic Growth')}
                 </span>
               </div>
@@ -717,7 +939,7 @@
                 <h3 class="text-xl sm:text-2xl font-black text-white group-hover:text-[#20E1B2] transition-colors tracking-tight leading-snug mb-2 line-clamp-2 min-h-[56px]">
                   <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="hover:text-[#20E1B2] text-inherit no-underline">${escapeHtml(cs.title)}</a>
                 </h3>
-                <p class="text-xs sm:text-sm text-[#7EADA3] leading-relaxed mb-4 line-clamp-2 min-h-[40px]">
+                <p class="text-xs sm:text-sm text-[#D1F5EE] leading-relaxed mb-4 line-clamp-2 min-h-[40px] opacity-90">
                   ${escapeHtml(cs.tagline || cs.challenge || '')}
                 </p>
 
@@ -727,25 +949,25 @@
                 </div>
 
                 <!-- Deliverables Tags Container -->
-                <div class="flex flex-wrap items-center gap-1.5 mb-6 pt-3 border-t border-[#20E1B2]/15 min-h-[42px]">
+                <div class="flex flex-wrap items-center gap-1.5 mb-6 pt-3 border-t border-[#20E1B2]/20 min-h-[42px]">
                   ${deliverablesHtml}
                 </div>
               </div>
 
               <!-- Card Actions Row Pinned to Bottom -->
-              <div class="pt-4 border-t border-[#20E1B2]/15 flex items-center justify-between gap-3 mt-auto">
+              <div class="pt-4 border-t border-[#20E1B2]/20 flex items-center justify-between gap-3 mt-auto">
                 <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="btn-aesthetic-primary text-xs py-2 px-4 justify-center">
                   <span>Deep Dive Case Study</span>
                   <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
                 </a>
 
                 <div class="flex items-center gap-2">
-                  <button type="button" onclick="event.stopPropagation(); openCaseStudyModal('${escapeHtml(cs.id)}')" class="text-xs font-bold text-[#7EADA3] hover:text-white px-2 py-1 transition-colors">
+                  <button type="button" onclick="event.stopPropagation(); openCaseStudyModal('${escapeHtml(cs.id)}')" class="text-xs font-bold text-[#20E1B2] hover:text-white px-2 py-1 transition-colors">
                     <span>Preview</span>
                   </button>
                   ${cs.liveUrl ? `
-                    <a href="${escapeHtml(cs.liveUrl)}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="text-xs font-bold text-[#7EADA3] hover:text-white flex items-center gap-1 transition-colors" title="View Live Website">
-                      <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    <a href="${escapeHtml(cs.liveUrl)}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="text-xs font-bold text-[#7EADA3] hover:text-[#20E1B2] flex items-center gap-1 transition-colors" title="View Live Website">
+                      <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
                     </a>
                   ` : ''}
                 </div>
@@ -773,7 +995,7 @@
 
       if (el('csModalMetrics')) {
         el('csModalMetrics').innerHTML = (cs.metrics || []).map(m => `
-          <div class="p-3 rounded-xl bg-[#0B3844]/35 backdrop-blur-xl border border-[#20E1B2]/20 shadow-2xs">
+          <div class="p-3 rounded-xl bg-[#0B3844]/60 backdrop-blur-xl border border-[#20E1B2]/30 shadow-2xs">
             <div class="text-[10px] text-[#20E1B2] font-extrabold uppercase">Verified Result</div>
             <div class="text-xs sm:text-sm font-black text-white mt-0.5">${escapeHtml(m)}</div>
           </div>
@@ -782,7 +1004,7 @@
 
       if (el('csModalDeliverables')) {
         el('csModalDeliverables').innerHTML = (cs.deliverables || []).map(d => `
-          <span class="px-2.5 py-1 rounded-lg bg-[#06232B] border border-[#20E1B2]/20 text-[11px] font-bold text-white">${escapeHtml(d)}</span>
+          <span class="px-2.5 py-1 rounded-lg bg-[#06232B] border border-[#20E1B2]/25 text-[11px] font-bold text-white">${escapeHtml(d)}</span>
         `).join('');
       }
 
