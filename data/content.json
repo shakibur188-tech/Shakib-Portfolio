@@ -550,7 +550,8 @@
       "client": "Enterprise Growth Matrix",
       "category": "Social Media marketing",
       "year": "2026",
-      "tagline": "End-to-end multi-channel campaign architecture, creative velocity sprint system, and real-time ROAS scaling framework.",
+      "subtitle": "The way how I execute a campaign starting from planning to Result",
+      "tagline": "The way how I execute a campaign starting from planning to Result",
       "challenge": "Scaling ad spend across fragmented paid social and search channels suffered from rapid creative fatigue within 7 days, 35% tracking signal loss from browser privacy updates, and erratic customer acquisition costs.",
       "solution": "Architected an end-to-end Campaign Execution Framework unifying 4-tier audience segmentation, modular weekly creative testing sprints, first-party CAPI conversion pipelines, and automated budget pacing governance.",
       "metrics": [
@@ -560,10 +561,12 @@
         "100% Attribution Data Fidelity"
       ],
       "deliverables": [
-        "Omnichannel Campaign Architecture",
-        "High-Velocity Creative Sprint Matrix",
-        "Server-Side Meta & Google CAPI Tracking",
-        "Automated ROAS Pacing & Bid Governance"
+        "Phase 01: Strategy & Decision",
+        "Phase 02: Finance & Partners",
+        "Phase 03: Creative & Assets",
+        "Phase 04: Marketing & Setup",
+        "Phase 05: Launch & PR",
+        "Phase 06: KPI & Results"
       ],
       "coverImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
       "liveUrl": "#",

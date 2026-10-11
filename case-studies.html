@@ -530,7 +530,8 @@
     "client": "Enterprise Growth Matrix",
     "category": "Social Media marketing",
     "year": "2026",
-    "tagline": "End-to-end multi-channel campaign architecture, creative velocity sprint system, and real-time ROAS scaling framework.",
+    "subtitle": "The way how I execute a campaign starting from planning to Result",
+    "tagline": "The way how I execute a campaign starting from planning to Result",
     "challenge": "Scaling ad spend across fragmented paid social and search channels suffered from rapid creative fatigue within 7 days, 35% tracking signal loss from browser privacy updates, and erratic customer acquisition costs.",
     "solution": "Architected an end-to-end Campaign Execution Framework unifying 4-tier audience segmentation, modular weekly creative testing sprints, first-party CAPI conversion pipelines, and automated budget pacing governance.",
     "metrics": [
@@ -540,10 +541,12 @@
       "100% Attribution Data Fidelity"
     ],
     "deliverables": [
-      "Omnichannel Campaign Architecture",
-      "High-Velocity Creative Sprint Matrix",
-      "Server-Side Meta & Google CAPI Tracking",
-      "Automated ROAS Pacing & Bid Governance"
+      "Phase 01: Strategy & Decision",
+      "Phase 02: Finance & Partners",
+      "Phase 03: Creative & Assets",
+      "Phase 04: Marketing & Setup",
+      "Phase 05: Launch & PR",
+      "Phase 06: KPI & Results"
     ],
     "coverImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
     "liveUrl": "#",
@@ -910,8 +913,26 @@
 
       grid.innerHTML = filtered.map(cs => {
         const targetUrl = cs.id === 'campaign-execution-framework' ? '/campaign-execution-framework' : `/case-study.html?id=${encodeURIComponent(cs.id)}`;
+
+        // Subtitle under headline (specially requested for Campaign Execution Framework)
+        const subtitleText = cs.id === 'campaign-execution-framework'
+          ? (cs.subtitle || 'The way how I execute a campaign starting from planning to Result')
+          : (cs.subtitle || '');
+
+        // 6 Phases for Campaign Execution Framework
+        const deliverablesList = (cs.id === 'campaign-execution-framework')
+          ? [
+              'Phase 01: Strategy & Decision',
+              'Phase 02: Finance & Partners',
+              'Phase 03: Creative & Assets',
+              'Phase 04: Marketing & Setup',
+              'Phase 05: Launch & PR',
+              'Phase 06: KPI & Results'
+            ]
+          : (cs.deliverables || []);
+
         // Bullet points for deliverables / capabilities
-        const pointsHtml = (cs.deliverables || []).map(p => `
+        const pointsHtml = deliverablesList.map(p => `
           <li class="flex items-center gap-2.5 text-xs sm:text-[13px] text-[#D1F5EE] leading-snug">
             <i class="fa-solid fa-circle-check text-[#20E1B2] text-xs shrink-0"></i>
             <span>${escapeHtml(p)}</span>
@@ -935,9 +956,15 @@
               </div>
 
               <!-- Headline (Title) -->
-              <h3 class="text-lg sm:text-xl font-black text-white group-hover:text-[#20E1B2] transition-colors tracking-tight leading-snug mb-3.5">
+              <h3 class="text-lg sm:text-xl font-black text-white group-hover:text-[#20E1B2] transition-colors tracking-tight leading-snug ${subtitleText ? 'mb-2' : 'mb-3.5'}">
                 <a href="${targetUrl}" class="hover:text-[#20E1B2] text-inherit no-underline">${escapeHtml(cs.title)}</a>
               </h3>
+
+              ${subtitleText ? `
+                <p class="text-xs sm:text-[13px] text-[#A7E7DC] font-medium leading-relaxed mb-3.5">
+                  ${escapeHtml(subtitleText)}
+                </p>
+              ` : ''}
 
               <!-- Core Execution Points / Deliverables List -->
               <div class="mb-5 pt-3 border-t border-[#20E1B2]/15">
