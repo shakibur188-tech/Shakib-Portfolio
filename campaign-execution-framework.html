@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Campaign Execution Framework | From Strategic Planning to Successful Campaign Delivery | Md. Shakibur Rahaman</title>
-  <meta name="description" content="Campaign Execution Framework: From Strategic Planning to Successful Campaign Delivery. Explore the 6-phase campaign methodology by Md. Shakibur Rahaman.">
+  <title>Campaign Execution Framework | Strategic Planning to Campaign Delivery | Md. Shakibur Rahaman</title>
+  <meta name="description" content="Campaign Execution Framework: An end-to-end 6-phase strategic methodology from business objective evaluation and financial planning to creative execution, launch PR, and KPI optimization.">
   <link rel="canonical" href="https://www.shakibur.info/campaign-execution-framework">
   
   <!-- Plus Jakarta Sans Font -->
@@ -49,6 +49,82 @@
 
   <!-- Modern Morphy Design Stylesheet -->
   <link rel="stylesheet" href="/styles.css?v=5.0">
+
+  <!-- Page-Specific Rich Visual Styling -->
+  <style>
+    /* Process Graph Connector Track */
+    .roadmap-track {
+      position: relative;
+    }
+    .roadmap-track::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 3%;
+      right: 3%;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(32, 225, 178, 0.2) 0%, rgba(32, 225, 178, 0.7) 50%, rgba(32, 225, 178, 0.2) 100%);
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+    .roadmap-node-pill {
+      position: relative;
+      z-index: 2;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .roadmap-node-pill:hover {
+      transform: translateY(-4px) scale(1.05);
+      border-color: #20E1B2 !important;
+      box-shadow: 0 0 25px rgba(32, 225, 178, 0.4);
+    }
+
+    /* Phase Visual Cover Photo */
+    .phase-visual-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+    .phase-visual-wrap img {
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .phase-visual-wrap:hover img {
+      transform: scale(1.06);
+    }
+
+    /* Icon Graph Box */
+    .step-icon-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(32, 225, 178, 0.22) 0%, rgba(11, 56, 68, 0.6) 100%);
+      border: 1px solid rgba(32, 225, 178, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #20E1B2;
+      font-size: 16px;
+      box-shadow: 0 0 16px rgba(32, 225, 178, 0.25);
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+    .step-card:hover .step-icon-badge {
+      background: linear-gradient(135deg, #20E1B2 0%, #0D9488 100%);
+      color: #041B21;
+      transform: scale(1.1);
+      box-shadow: 0 0 25px rgba(32, 225, 178, 0.6);
+    }
+
+    /* Step Card */
+    .step-card {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .step-card:hover {
+      border-color: rgba(32, 225, 178, 0.6) !important;
+      background: rgba(8, 40, 48, 0.85) !important;
+      transform: translateX(4px);
+    }
+  </style>
 
   <!-- Guaranteed Mobile Navigation Contrast & Visibility (Anti-Cache) -->
   <style id="mobile-nav-fix">
@@ -128,37 +204,6 @@
     .mobile-link.active span {
       color: #20E1B2 !important;
       font-weight: 800 !important;
-    }
-
-    /* Phase Badge Number Glow */
-    .phase-badge-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 16px;
-      border-radius: 9999px;
-      background: rgba(32, 225, 178, 0.12);
-      border: 1px solid rgba(32, 225, 178, 0.35);
-      color: #20E1B2;
-      font-size: 11px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    .step-number-box {
-      width: 36px;
-      height: 36px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, rgba(32, 225, 178, 0.2) 0%, rgba(11, 56, 68, 0.5) 100%);
-      border: 1px solid rgba(32, 225, 178, 0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      font-size: 13px;
-      color: #20E1B2;
-      box-shadow: 0 0 15px rgba(32, 225, 178, 0.2);
-      flex-shrink: 0;
     }
   </style>
 </head>
@@ -293,330 +338,715 @@
   </header>
 
   <!-- 2. HERO DIRECTORY HEADER -->
-  <section class="relative pt-28 pb-12 sm:pt-36 sm:pb-16 md:pt-40 md:pb-20 overflow-hidden">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+  <section class="relative pt-28 pb-10 sm:pt-36 sm:pb-14 md:pt-40 md:pb-16 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
       
       <!-- Back Link -->
       <div class="mb-6 flex justify-center">
-        <a href="/case-studies" class="inline-flex items-center gap-2 text-xs font-bold text-[#7EADA3] hover:text-[#20E1B2] transition-colors px-3 py-1.5 rounded-full bg-[#082830]/80 border border-[#20E1B2]/20">
+        <a href="/case-studies" class="inline-flex items-center gap-2 text-xs font-bold text-[#7EADA3] hover:text-[#20E1B2] transition-colors px-3 py-1.5 rounded-full bg-[#082830]/80 border border-[#20E1B2]/20 shadow-xs">
           <i class="fa-solid fa-arrow-left text-[10px]"></i>
           <span>Back to All Case Studies</span>
         </a>
       </div>
 
-      <div class="section-tag justify-center mb-6">
+      <div class="section-tag justify-center mb-5">
         <span class="pulse-dot-olive"></span>
         <span>CAMPAIGN STRATEGY &amp; DELIVERY MATRIX</span>
       </div>
 
-      <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.14] mb-4">
+      <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.12] mb-4">
         Campaign Execution Framework
       </h1>
 
-      <h3 class="text-lg sm:text-2xl font-bold text-[#20E1B2] tracking-tight mb-6">
+      <h3 class="text-lg sm:text-2xl md:text-3xl font-extrabold text-[#20E1B2] tracking-tight mb-6">
         From Strategic Planning to Successful Campaign Delivery
       </h3>
 
-      <div class="p-6 sm:p-8 rounded-3xl morphy-card glass-card text-left max-w-3xl mx-auto border border-[#20E1B2]/25 shadow-xl mb-6">
-        <p class="text-xs sm:text-sm md:text-base text-[#D1F5EE] leading-relaxed">
-          Every successful campaign starts with a clear business objective and ends with measurable results. My approach combines strategic planning, financial feasibility, partnership development, creative execution, integrated marketing, and continuous performance optimization to deliver a well-coordinated campaign from start to finish.
-        </p>
+      <p class="text-xs sm:text-sm md:text-base text-[#D1F5EE] leading-relaxed max-w-3xl mx-auto mb-10 opacity-95">
+        Every successful campaign starts with a clear business objective and ends with measurable results. My approach combines strategic planning, financial feasibility, partnership development, creative execution, integrated marketing, and continuous performance optimization to deliver a well-coordinated campaign from start to finish.
+      </p>
+
+      <!-- 6-PHASE INTERACTIVE PROCESS ICON GRAPH -->
+      <div class="p-6 sm:p-8 rounded-3xl morphy-card glass-card border border-[#20E1B2]/30 shadow-2xl relative overflow-hidden">
+        <div class="text-[11px] uppercase tracking-widest font-extrabold text-[#20E1B2] mb-6 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-network-wired text-xs"></i>
+          <span>Campaign Execution Pipeline (6-Phase Interactive Roadmap)</span>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 relative z-10">
+          
+          <!-- Node 1 -->
+          <a href="#phase-1" class="roadmap-node-pill p-3.5 rounded-2xl bg-[#041B21]/80 border border-[#20E1B2]/25 hover:border-[#20E1B2] text-center flex flex-col items-center group no-underline">
+            <div class="w-10 h-10 rounded-xl bg-[#20E1B2]/15 text-[#20E1B2] group-hover:bg-[#20E1B2] group-hover:text-[#041B21] flex items-center justify-center text-base mb-2 transition-all">
+              <i class="fa-solid fa-chess"></i>
+            </div>
+            <div class="text-[10px] font-black uppercase tracking-wider text-[#7EADA3] group-hover:text-[#20E1B2]">Phase 01</div>
+            <div class="text-xs font-bold text-white mt-0.5 leading-tight">Strategy &amp; Decision</div>
+          </a>
+
+          <!-- Node 2 -->
+          <a href="#phase-2" class="roadmap-node-pill p-3.5 rounded-2xl bg-[#041B21]/80 border border-[#20E1B2]/25 hover:border-[#20E1B2] text-center flex flex-col items-center group no-underline">
+            <div class="w-10 h-10 rounded-xl bg-[#20E1B2]/15 text-[#20E1B2] group-hover:bg-[#20E1B2] group-hover:text-[#041B21] flex items-center justify-center text-base mb-2 transition-all">
+              <i class="fa-solid fa-coins"></i>
+            </div>
+            <div class="text-[10px] font-black uppercase tracking-wider text-[#7EADA3] group-hover:text-[#20E1B2]">Phase 02</div>
+            <div class="text-xs font-bold text-white mt-0.5 leading-tight">Finance &amp; Partners</div>
+          </a>
+
+          <!-- Node 3 -->
+          <a href="#phase-3" class="roadmap-node-pill p-3.5 rounded-2xl bg-[#041B21]/80 border border-[#20E1B2]/25 hover:border-[#20E1B2] text-center flex flex-col items-center group no-underline">
+            <div class="w-10 h-10 rounded-xl bg-[#20E1B2]/15 text-[#20E1B2] group-hover:bg-[#20E1B2] group-hover:text-[#041B21] flex items-center justify-center text-base mb-2 transition-all">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <div class="text-[10px] font-black uppercase tracking-wider text-[#7EADA3] group-hover:text-[#20E1B2]">Phase 03</div>
+            <div class="text-xs font-bold text-white mt-0.5 leading-tight">Creative &amp; Assets</div>
+          </a>
+
+          <!-- Node 4 -->
+          <a href="#phase-4" class="roadmap-node-pill p-3.5 rounded-2xl bg-[#041B21]/80 border border-[#20E1B2]/25 hover:border-[#20E1B2] text-center flex flex-col items-center group no-underline">
+            <div class="w-10 h-10 rounded-xl bg-[#20E1B2]/15 text-[#20E1B2] group-hover:bg-[#20E1B2] group-hover:text-[#041B21] flex items-center justify-center text-base mb-2 transition-all">
+              <i class="fa-solid fa-bullhorn"></i>
+            </div>
+            <div class="text-[10px] font-black uppercase tracking-wider text-[#7EADA3] group-hover:text-[#20E1B2]">Phase 04</div>
+            <div class="text-xs font-bold text-white mt-0.5 leading-tight">Marketing &amp; Setup</div>
+          </a>
+
+          <!-- Node 5 -->
+          <a href="#phase-5" class="roadmap-node-pill p-3.5 rounded-2xl bg-[#041B21]/80 border border-[#20E1B2]/25 hover:border-[#20E1B2] text-center flex flex-col items-center group no-underline">
+            <div class="w-10 h-10 rounded-xl bg-[#20E1B2]/15 text-[#20E1B2] group-hover:bg-[#20E1B2] group-hover:text-[#041B21] flex items-center justify-center text-base mb-2 transition-all">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <div class="text-[10px] font-black uppercase tracking-wider text-[#7EADA3] group-hover:text-[#20E1B2]">Phase 05</div>
+            <div class="text-xs font-bold text-white mt-0.5 leading-tight">Launch &amp; PR</div>
+          </a>
+
+          <!-- Node 6 -->
+          <a href="#phase-6" class="roadmap-node-pill p-3.5 rounded-2xl bg-[#041B21]/80 border border-[#20E1B2]/25 hover:border-[#20E1B2] text-center flex flex-col items-center group no-underline">
+            <div class="w-10 h-10 rounded-xl bg-[#20E1B2]/15 text-[#20E1B2] group-hover:bg-[#20E1B2] group-hover:text-[#041B21] flex items-center justify-center text-base mb-2 transition-all">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="text-[10px] font-black uppercase tracking-wider text-[#7EADA3] group-hover:text-[#20E1B2]">Phase 06</div>
+            <div class="text-xs font-bold text-white mt-0.5 leading-tight">KPI &amp; Results</div>
+          </a>
+
+        </div>
       </div>
 
     </div>
   </section>
 
-  <!-- 3. MAIN FRAMEWORK PHASES CONTAINER -->
-  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 space-y-10 sm:space-y-12">
+  <!-- =========================================================================
+       3. 6-PHASE DETAILED SHOWCASE WITH PICTURES & STEP ICON GRAPHS
+       ========================================================================= -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 space-y-16">
 
-    <!-- Phase 01 — Strategy & Decision Making -->
-    <div class="morphy-card glass-card p-6 sm:p-8 rounded-3xl border border-[#20E1B2]/30 shadow-xl relative">
-      <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#20E1B2]/20">
-        <div class="flex items-center gap-3">
-          <span class="phase-badge-pill">Phase 01</span>
-          <h2 class="text-lg sm:text-2xl font-black text-white tracking-tight">Strategy &amp; Decision Making</h2>
+    <!-- ==========================================
+         PHASE 01: Strategy & Decision Making
+         ========================================== -->
+    <section id="phase-1" class="scroll-mt-28">
+      <div class="morphy-card glass-card p-6 sm:p-10 rounded-3xl border border-[#20E1B2]/30 shadow-2xl">
+        
+        <!-- Phase Header Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-8 pb-5 border-b border-[#20E1B2]/20">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 rounded-full bg-[#20E1B2]/15 text-[#20E1B2] font-black text-xs uppercase tracking-wider border border-[#20E1B2]/30">Phase 01</span>
+            <h2 class="text-xl sm:text-3xl font-black text-white tracking-tight">Strategy &amp; Decision Making</h2>
+          </div>
+          <div class="text-xs font-bold text-[#7EADA3] flex items-center gap-2">
+            <i class="fa-solid fa-list-check text-[#20E1B2]"></i>
+            <span>3 Foundation Steps</span>
+          </div>
         </div>
-        <i class="fa-solid fa-chess text-[#20E1B2] text-xl opacity-80"></i>
+
+        <!-- 2-Column Split: Picture vs Steps Icon Graph -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Column A: Picture & Meta Visual -->
+          <div class="lg:col-span-5">
+            <div class="phase-visual-wrap h-64 sm:h-80 w-full relative">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Strategy & Decision Making" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#041B21]/95 via-[#041B21]/40 to-transparent"></div>
+              
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 rounded-full bg-[#041B21]/90 backdrop-blur-md border border-[#20E1B2]/35 text-[11px] font-extrabold text-[#20E1B2]">
+                  <i class="fa-solid fa-chess-knight mr-1.5"></i>Strategic Groundwork
+                </span>
+              </div>
+
+              <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-[#041B21]/90 backdrop-blur-md border border-white/10">
+                <div class="text-xs font-bold text-white">Objective Alignment</div>
+                <div class="text-[11px] text-[#A7E7DC] mt-0.5">Evaluating commercial viability, sponsor interest, and offer mechanics before capital deployment.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column B: Icon Steps Graph -->
+          <div class="lg:col-span-7 space-y-4">
+            
+            <!-- Step 01 -->
+            <div class="step-card p-4 sm:p-5 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15 flex items-start gap-4">
+              <div class="step-icon-badge">
+                <i class="fa-solid fa-crosshairs"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] font-black text-[#20E1B2] uppercase tracking-wider">Step 01</span>
+                  <h4 class="text-sm sm:text-base font-extrabold text-white">Campaign Planning &amp; Feasibility</h4>
+                </div>
+                <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+                  Evaluate the campaign opportunity and determine whether to launch based on timing, duration, pricing, business objectives, customer demand, budget, and other key factors.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="step-card p-4 sm:p-5 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15 flex items-start gap-4">
+              <div class="step-icon-badge">
+                <i class="fa-solid fa-handshake"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] font-black text-[#20E1B2] uppercase tracking-wider">Step 02</span>
+                  <h4 class="text-sm sm:text-base font-extrabold text-white">Partnership &amp; Sponsor Mapping</h4>
+                </div>
+                <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+                  Develop an initial, unofficial list of potential banks, sponsors, brands, and collaborators to explore partnership opportunities and assess interest.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="step-card p-4 sm:p-5 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15 flex items-start gap-4">
+              <div class="step-icon-badge">
+                <i class="fa-solid fa-tags"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] font-black text-[#20E1B2] uppercase tracking-wider">Step 03</span>
+                  <h4 class="text-sm sm:text-base font-extrabold text-white">Offer Strategy &amp; Mechanics</h4>
+                </div>
+                <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+                  Define the campaign proposition, including B1G1, B1G2, B1G3, selected bank-card offers, giveaways, discounts, and other promotional mechanics that create value for customers and the business.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
+    </section>
 
-      <div class="space-y-5">
-        <!-- 01 -->
-        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
-          <div class="step-number-box">01</div>
-          <div>
-            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Campaign Planning &amp; Feasibility</h4>
-            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
-              Evaluate the campaign opportunity and determine whether to launch based on timing, duration, pricing, business objectives, customer demand, budget, and other key factors.
-            </p>
+    <!-- ==========================================
+         PHASE 02: Partnership & Financial Planning (Alternating Split)
+         ========================================== -->
+    <section id="phase-2" class="scroll-mt-28">
+      <div class="morphy-card glass-card p-6 sm:p-10 rounded-3xl border border-[#20E1B2]/30 shadow-2xl">
+        
+        <!-- Phase Header Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-8 pb-5 border-b border-[#20E1B2]/20">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 rounded-full bg-[#20E1B2]/15 text-[#20E1B2] font-black text-xs uppercase tracking-wider border border-[#20E1B2]/30">Phase 02</span>
+            <h2 class="text-xl sm:text-3xl font-black text-white tracking-tight">Partnership &amp; Financial Planning</h2>
+          </div>
+          <div class="text-xs font-bold text-[#7EADA3] flex items-center gap-2">
+            <i class="fa-solid fa-calculator text-[#20E1B2]"></i>
+            <span>Commercial Validation</span>
           </div>
         </div>
 
-        <!-- 02 -->
-        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
-          <div class="step-number-box">02</div>
-          <div>
-            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Partnership &amp; Sponsor Mapping</h4>
-            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
-              Develop an initial, unofficial list of potential banks, sponsors, brands, and collaborators to explore partnership opportunities and assess interest.
-            </p>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center lg:flex-row-reverse">
+          
+          <!-- Column B: Icon Steps Graph -->
+          <div class="lg:col-span-7 space-y-4 order-2 lg:order-1">
+            
+            <!-- Step 04 -->
+            <div class="step-card p-4 sm:p-5 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15 flex items-start gap-4">
+              <div class="step-icon-badge">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] font-black text-[#20E1B2] uppercase tracking-wider">Step 04</span>
+                  <h4 class="text-sm sm:text-base font-extrabold text-white">Campaign Concept Development</h4>
+                </div>
+                <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+                  Create an initial visual concept, theme, and design direction to communicate the campaign idea to potential sponsors and partners, helping establish expectations around sponsorship contributions, gifts, and collaboration.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 05 -->
+            <div class="step-card p-4 sm:p-5 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15 flex items-start gap-4">
+              <div class="step-icon-badge">
+                <i class="fa-solid fa-chart-pie"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] font-black text-[#20E1B2] uppercase tracking-wider">Step 05</span>
+                  <h4 class="text-sm sm:text-base font-extrabold text-white">Product Costing &amp; ROI Planning</h4>
+                </div>
+                <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+                  Evaluate product costs, promotional expenses, expected revenue, profit margins, sponsorship value, and target return on investment to ensure commercial viability.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 06 -->
+            <div class="step-card p-4 sm:p-5 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15 flex items-start gap-4">
+              <div class="step-icon-badge">
+                <i class="fa-solid fa-stamp"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] font-black text-[#20E1B2] uppercase tracking-wider">Step 06</span>
+                  <h4 class="text-sm sm:text-base font-extrabold text-white">Management Approval</h4>
+                </div>
+                <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+                  Present the proposed campaign strategy, offer structure, budget, financial projections, and execution plan to senior management for review and approval before proceeding.
+                </p>
+              </div>
+            </div>
+
           </div>
+
+          <!-- Column A: Picture & Meta Visual -->
+          <div class="lg:col-span-5 order-1 lg:order-2">
+            <div class="phase-visual-wrap h-64 sm:h-80 w-full relative">
+              <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=900&q=80" alt="Financial Planning & ROI Modeling" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#041B21]/95 via-[#041B21]/40 to-transparent"></div>
+              
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 rounded-full bg-[#041B21]/90 backdrop-blur-md border border-[#20E1B2]/35 text-[11px] font-extrabold text-[#20E1B2]">
+                  <i class="fa-solid fa-coins mr-1.5"></i>Financial Rigor
+                </span>
+              </div>
+
+              <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-[#041B21]/90 backdrop-blur-md border border-white/10">
+                <div class="text-xs font-bold text-white">Commercial Feasibility</div>
+                <div class="text-[11px] text-[#A7E7DC] mt-0.5">Balancing promotional margins, bank subsidies, and executive approval thresholds.</div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <!-- 03 -->
-        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
-          <div class="step-number-box">03</div>
-          <div>
-            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Offer Strategy &amp; Mechanics</h4>
-            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
-              Define the campaign proposition, including B1G1, B1G2, B1G3, selected bank-card offers, giveaways, discounts, and other promotional mechanics that create value for customers and the business.
-            </p>
-          </div>
-        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Phase 02 — Partnership & Financial Planning -->
-    <div class="morphy-card glass-card p-6 sm:p-8 rounded-3xl border border-[#20E1B2]/30 shadow-xl relative">
-      <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#20E1B2]/20">
-        <div class="flex items-center gap-3">
-          <span class="phase-badge-pill">Phase 02</span>
-          <h2 class="text-lg sm:text-2xl font-black text-white tracking-tight">Partnership &amp; Financial Planning</h2>
+    <!-- ==========================================
+         PHASE 03: Creative Development & Approvals
+         ========================================== -->
+    <section id="phase-3" class="scroll-mt-28">
+      <div class="morphy-card glass-card p-6 sm:p-10 rounded-3xl border border-[#20E1B2]/30 shadow-2xl">
+        
+        <!-- Phase Header Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-8 pb-5 border-b border-[#20E1B2]/20">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 rounded-full bg-[#20E1B2]/15 text-[#20E1B2] font-black text-xs uppercase tracking-wider border border-[#20E1B2]/30">Phase 03</span>
+            <h2 class="text-xl sm:text-3xl font-black text-white tracking-tight">Creative Development &amp; Approvals</h2>
+          </div>
+          <div class="text-xs font-bold text-[#7EADA3] flex items-center gap-2">
+            <i class="fa-solid fa-wand-magic-sparkles text-[#20E1B2]"></i>
+            <span>Asset Production</span>
+          </div>
         </div>
-        <i class="fa-solid fa-coins text-[#20E1B2] text-xl opacity-80"></i>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Column A: Picture & Meta Visual -->
+          <div class="lg:col-span-5">
+            <div class="phase-visual-wrap h-64 sm:h-80 w-full relative">
+              <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=900&q=80" alt="Creative Production & Cinematography" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#041B21]/95 via-[#041B21]/40 to-transparent"></div>
+              
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 rounded-full bg-[#041B21]/90 backdrop-blur-md border border-[#20E1B2]/35 text-[11px] font-extrabold text-[#20E1B2]">
+                  <i class="fa-solid fa-palette mr-1.5"></i>Studio Production
+                </span>
+              </div>
+
+              <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-[#041B21]/90 backdrop-blur-md border border-white/10">
+                <div class="text-xs font-bold text-white">Full-Funnel Creative Suite</div>
+                <div class="text-[11px] text-[#A7E7DC] mt-0.5">High-impact OVC commercials, multi-platform social media design, and partner branding compliance.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column B: Icon Steps Graph -->
+          <div class="lg:col-span-7 space-y-4">
+            
+            <!-- Step 07 -->
+            <div class="step-card p-4 sm:p-5 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15 flex items-start gap-4">
+              <div class="step-icon-badge">
+                <i class="fa-solid fa-film"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] font-black text-[#20E1B2] uppercase tracking-wider">Step 07</span>
+                  <h4 class="text-sm sm:text-base font-extrabold text-white">Final Creative Production</h4>
+                </div>
+                <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+                  Develop the complete campaign identity and execution assets, including event decor, social media creatives, online video commercials (OVC), promotional materials, signage, and other brand communication elements.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 08 -->
+            <div class="step-card p-4 sm:p-5 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15 flex items-start gap-4">
+              <div class="step-icon-badge">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] font-black text-[#20E1B2] uppercase tracking-wider">Step 08</span>
+                  <h4 class="text-sm sm:text-base font-extrabold text-white">Bank &amp; Gift Partner Approval</h4>
+                </div>
+                <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+                  Coordinate with participating banks and gift partners to secure approval for campaign mechanics, terms and conditions, creative assets, branding, and promotional commitments.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
+    </section>
 
-      <div class="space-y-5">
-        <!-- 04 -->
-        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
-          <div class="step-number-box">04</div>
-          <div>
-            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Campaign Concept Development</h4>
-            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
-              Create an initial visual concept, theme, and design direction to communicate the campaign idea to potential sponsors and partners, helping establish expectations around sponsorship contributions, gifts, and collaboration.
-            </p>
+    <!-- ==========================================
+         PHASE 04: Marketing & Event Readiness
+         ========================================== -->
+    <section id="phase-4" class="scroll-mt-28">
+      <div class="morphy-card glass-card p-6 sm:p-10 rounded-3xl border border-[#20E1B2]/30 shadow-2xl">
+        
+        <!-- Phase Header Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-8 pb-5 border-b border-[#20E1B2]/20">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 rounded-full bg-[#20E1B2]/15 text-[#20E1B2] font-black text-xs uppercase tracking-wider border border-[#20E1B2]/30">Phase 04</span>
+            <h2 class="text-xl sm:text-3xl font-black text-white tracking-tight">Marketing &amp; Event Readiness</h2>
+          </div>
+          <div class="text-xs font-bold text-[#7EADA3] flex items-center gap-2">
+            <i class="fa-solid fa-store text-[#20E1B2]"></i>
+            <span>Experiential Setup</span>
           </div>
         </div>
 
-        <!-- 05 -->
-        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
-          <div class="step-number-box">05</div>
-          <div>
-            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Product Costing &amp; ROI Planning</h4>
-            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
-              Evaluate product costs, promotional expenses, expected revenue, profit margins, sponsorship value, and target return on investment to ensure commercial viability.
-            </p>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center lg:flex-row-reverse">
+          
+          <!-- Column B: Icon Steps Graph -->
+          <div class="lg:col-span-7 space-y-4 order-2 lg:order-1">
+            
+            <!-- Step 09 -->
+            <div class="step-card p-4 sm:p-5 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15 flex items-start gap-4">
+              <div class="step-icon-badge">
+                <i class="fa-solid fa-tower-broadcast"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] font-black text-[#20E1B2] uppercase tracking-wider">Step 09</span>
+                  <h4 class="text-sm sm:text-base font-extrabold text-white">Digital Marketing Activation</h4>
+                </div>
+                <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+                  Launch the digital marketing campaign through social media, targeted advertising, content publishing, and coordinated promotional communication to build awareness and anticipation.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 10 -->
+            <div class="step-card p-4 sm:p-5 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15 flex items-start gap-4">
+              <div class="step-icon-badge">
+                <i class="fa-solid fa-shapes"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] font-black text-[#20E1B2] uppercase tracking-wider">Step 10</span>
+                  <h4 class="text-sm sm:text-base font-extrabold text-white">Event Setup &amp; Decoration</h4>
+                </div>
+                <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+                  Bring the campaign concept to life through physical event preparation, branded installations, decoration, signage, displays, and on-site promotional elements.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 11 -->
+            <div class="step-card p-4 sm:p-5 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15 flex items-start gap-4">
+              <div class="step-icon-badge">
+                <i class="fa-solid fa-users-viewfinder"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] font-black text-[#20E1B2] uppercase tracking-wider">Step 11</span>
+                  <h4 class="text-sm sm:text-base font-extrabold text-white">Media, Influencer &amp; VIP Outreach</h4>
+                </div>
+                <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+                  Coordinate invitations and engagement with media representatives, bloggers, influencers, celebrities, and VIP clients to strengthen campaign visibility and launch participation.
+                </p>
+              </div>
+            </div>
+
           </div>
+
+          <!-- Column A: Picture & Meta Visual -->
+          <div class="lg:col-span-5 order-1 lg:order-2">
+            <div class="phase-visual-wrap h-64 sm:h-80 w-full relative">
+              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80" alt="Event Setup & Experiential Installation" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#041B21]/95 via-[#041B21]/40 to-transparent"></div>
+              
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 rounded-full bg-[#041B21]/90 backdrop-blur-md border border-[#20E1B2]/35 text-[11px] font-extrabold text-[#20E1B2]">
+                  <i class="fa-solid fa-store mr-1.5"></i>Physical &amp; Digital Readiness
+                </span>
+              </div>
+
+              <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-[#041B21]/90 backdrop-blur-md border border-white/10">
+                <div class="text-xs font-bold text-white">Omnichannel Preparation</div>
+                <div class="text-[11px] text-[#A7E7DC] mt-0.5">Physical event decor, influencer VIP invitations, and digital ad flight scheduling.</div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <!-- 06 -->
-        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
-          <div class="step-number-box">06</div>
-          <div>
-            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Management Approval</h4>
-            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
-              Present the proposed campaign strategy, offer structure, budget, financial projections, and execution plan to senior management for review and approval before proceeding.
-            </p>
-          </div>
-        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Phase 03 — Creative Development & Approvals -->
-    <div class="morphy-card glass-card p-6 sm:p-8 rounded-3xl border border-[#20E1B2]/30 shadow-xl relative">
-      <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#20E1B2]/20">
-        <div class="flex items-center gap-3">
-          <span class="phase-badge-pill">Phase 03</span>
-          <h2 class="text-lg sm:text-2xl font-black text-white tracking-tight">Creative Development &amp; Approvals</h2>
+    <!-- ==========================================
+         PHASE 05: Launch & PR Activation
+         ========================================== -->
+    <section id="phase-5" class="scroll-mt-28">
+      <div class="morphy-card glass-card p-6 sm:p-10 rounded-3xl border border-[#20E1B2]/30 shadow-2xl">
+        
+        <!-- Phase Header Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-8 pb-5 border-b border-[#20E1B2]/20">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 rounded-full bg-[#20E1B2]/15 text-[#20E1B2] font-black text-xs uppercase tracking-wider border border-[#20E1B2]/30">Phase 05</span>
+            <h2 class="text-xl sm:text-3xl font-black text-white tracking-tight">Launch &amp; PR Activation</h2>
+          </div>
+          <div class="text-xs font-bold text-[#7EADA3] flex items-center gap-2">
+            <i class="fa-solid fa-rocket text-[#20E1B2]"></i>
+            <span>Ignition &amp; Buzz</span>
+          </div>
         </div>
-        <i class="fa-solid fa-palette text-[#20E1B2] text-xl opacity-80"></i>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Column A: Picture & Meta Visual -->
+          <div class="lg:col-span-5">
+            <div class="phase-visual-wrap h-64 sm:h-80 w-full relative">
+              <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80" alt="Launch Day PR & Media Activation" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#041B21]/95 via-[#041B21]/40 to-transparent"></div>
+              
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 rounded-full bg-[#041B21]/90 backdrop-blur-md border border-[#20E1B2]/35 text-[11px] font-extrabold text-[#20E1B2]">
+                  <i class="fa-solid fa-newspaper mr-1.5"></i>Live Ignition
+                </span>
+              </div>
+
+              <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-[#041B21]/90 backdrop-blur-md border border-white/10">
+                <div class="text-xs font-bold text-white">Media Amplification</div>
+                <div class="text-[11px] text-[#A7E7DC] mt-0.5">Press releases, live blogger engagements, and collaborative reach maximization.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column B: Icon Steps Graph -->
+          <div class="lg:col-span-7 space-y-4">
+            
+            <!-- Step 12 -->
+            <div class="step-card p-4 sm:p-5 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15 flex items-start gap-4">
+              <div class="step-icon-badge">
+                <i class="fa-solid fa-champagne-glasses"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] font-black text-[#20E1B2] uppercase tracking-wider">Step 12</span>
+                  <h4 class="text-sm sm:text-base font-extrabold text-white">Campaign Launch &amp; Public Relations</h4>
+                </div>
+                <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+                  Execute the official campaign launch, activate the promotional offer, coordinate launch-day activities, and create public relations opportunities to maximize initial attention and engagement.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 13 -->
+            <div class="step-card p-4 sm:p-5 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15 flex items-start gap-4">
+              <div class="step-icon-badge">
+                <i class="fa-solid fa-camera-retro"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] font-black text-[#20E1B2] uppercase tracking-wider">Step 13</span>
+                  <h4 class="text-sm sm:text-base font-extrabold text-white">Collaborative Media &amp; Blogger Marketing</h4>
+                </div>
+                <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+                  Work collaboratively with media outlets, bloggers, and influencers to extend campaign reach, amplify the campaign message, and sustain audience interest throughout the campaign period.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
+    </section>
 
-      <div class="space-y-5">
-        <!-- 07 -->
-        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
-          <div class="step-number-box">07</div>
-          <div>
-            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Final Creative Production</h4>
-            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
-              Develop the complete campaign identity and execution assets, including event decor, social media creatives, online video commercials (OVC), promotional materials, signage, and other brand communication elements.
-            </p>
+    <!-- ==========================================
+         PHASE 06: Performance Optimization & Closure
+         ========================================== -->
+    <section id="phase-6" class="scroll-mt-28">
+      <div class="morphy-card glass-card p-6 sm:p-10 rounded-3xl border border-[#20E1B2]/30 shadow-2xl">
+        
+        <!-- Phase Header Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-8 pb-5 border-b border-[#20E1B2]/20">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 rounded-full bg-[#20E1B2]/15 text-[#20E1B2] font-black text-xs uppercase tracking-wider border border-[#20E1B2]/30">Phase 06</span>
+            <h2 class="text-xl sm:text-3xl font-black text-white tracking-tight">Performance Optimization &amp; Closure</h2>
+          </div>
+          <div class="text-xs font-bold text-[#7EADA3] flex items-center gap-2">
+            <i class="fa-solid fa-gauge-high text-[#20E1B2]"></i>
+            <span>Continuous Telemetry</span>
           </div>
         </div>
 
-        <!-- 08 -->
-        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
-          <div class="step-number-box">08</div>
-          <div>
-            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Bank &amp; Gift Partner Approval</h4>
-            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
-              Coordinate with participating banks and gift partners to secure approval for campaign mechanics, terms and conditions, creative assets, branding, and promotional commitments.
-            </p>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center lg:flex-row-reverse">
+          
+          <!-- Column B: Icon Steps Graph -->
+          <div class="lg:col-span-7 space-y-4 order-2 lg:order-1">
+            
+            <!-- Step 14 -->
+            <div class="step-card p-4 sm:p-5 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15 flex items-start gap-4">
+              <div class="step-icon-badge">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] font-black text-[#20E1B2] uppercase tracking-wider">Step 14</span>
+                  <h4 class="text-sm sm:text-base font-extrabold text-white">Daily KPI Monitoring &amp; Optimization</h4>
+                </div>
+                <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+                  Track daily campaign performance through relevant KPIs and marketing analytics. Identify opportunities, address performance gaps, optimize ongoing activities, and translate insights into actionable improvements.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 15 -->
+            <div class="step-card p-4 sm:p-5 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15 flex items-start gap-4">
+              <div class="step-icon-badge">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] font-black text-[#20E1B2] uppercase tracking-wider">Step 15</span>
+                  <h4 class="text-sm sm:text-base font-extrabold text-white">Campaign Closure &amp; Results</h4>
+                </div>
+                <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+                  Conclude the campaign with a closing celebration, announce giveaway or prize winners where applicable, review overall performance, document key learnings, and identify opportunities for future campaigns.
+                </p>
+              </div>
+            </div>
+
           </div>
+
+          <!-- Column A: Picture & Meta Visual -->
+          <div class="lg:col-span-5 order-1 lg:order-2">
+            <div class="phase-visual-wrap h-64 sm:h-80 w-full relative">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="Telemetry & KPI Dashboard" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#041B21]/95 via-[#041B21]/40 to-transparent"></div>
+              
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 rounded-full bg-[#041B21]/90 backdrop-blur-md border border-[#20E1B2]/35 text-[11px] font-extrabold text-[#20E1B2]">
+                  <i class="fa-solid fa-chart-line mr-1.5"></i>Actionable Insights
+                </span>
+              </div>
+
+              <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-[#041B21]/90 backdrop-blur-md border border-white/10">
+                <div class="text-xs font-bold text-white">Measurable Commercial Results</div>
+                <div class="text-[11px] text-[#A7E7DC] mt-0.5">Real-time daily KPI pacing, gap resolution, prize fulfillment, and future learnings documentation.</div>
+              </div>
+            </div>
+          </div>
+
         </div>
+
       </div>
-    </div>
+    </section>
 
-    <!-- Phase 04 — Marketing & Event Readiness -->
-    <div class="morphy-card glass-card p-6 sm:p-8 rounded-3xl border border-[#20E1B2]/30 shadow-xl relative">
-      <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#20E1B2]/20">
-        <div class="flex items-center gap-3">
-          <span class="phase-badge-pill">Phase 04</span>
-          <h2 class="text-lg sm:text-2xl font-black text-white tracking-tight">Marketing &amp; Event Readiness</h2>
-        </div>
-        <i class="fa-solid fa-bullhorn text-[#20E1B2] text-xl opacity-80"></i>
-      </div>
+    <!-- ==========================================
+         MY APPROACH SECTION (High-Impact Visual Climax)
+         ========================================== -->
+    <section class="p-8 sm:p-14 rounded-3xl morphy-card glass-card border-2 border-[#20E1B2]/40 shadow-2xl relative overflow-hidden text-center">
+      <div class="max-w-3xl mx-auto relative z-10">
+        
+        <span class="px-3.5 py-1.5 rounded-full bg-[#20E1B2]/15 text-[#20E1B2] font-black text-xs uppercase tracking-wider border border-[#20E1B2]/30 mb-4 inline-block">
+          Core Operating Philosophy
+        </span>
 
-      <div class="space-y-5">
-        <!-- 09 -->
-        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
-          <div class="step-number-box">09</div>
-          <div>
-            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Digital Marketing Activation</h4>
-            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
-              Launch the digital marketing campaign through social media, targeted advertising, content publishing, and coordinated promotional communication to build awareness and anticipation.
-            </p>
-          </div>
-        </div>
-
-        <!-- 10 -->
-        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
-          <div class="step-number-box">10</div>
-          <div>
-            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Event Setup &amp; Decoration</h4>
-            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
-              Bring the campaign concept to life through physical event preparation, branded installations, decoration, signage, displays, and on-site promotional elements.
-            </p>
-          </div>
-        </div>
-
-        <!-- 11 -->
-        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
-          <div class="step-number-box">11</div>
-          <div>
-            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Media, Influencer &amp; VIP Outreach</h4>
-            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
-              Coordinate invitations and engagement with media representatives, bloggers, influencers, celebrities, and VIP clients to strengthen campaign visibility and launch participation.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Phase 05 — Launch & PR Activation -->
-    <div class="morphy-card glass-card p-6 sm:p-8 rounded-3xl border border-[#20E1B2]/30 shadow-xl relative">
-      <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#20E1B2]/20">
-        <div class="flex items-center gap-3">
-          <span class="phase-badge-pill">Phase 05</span>
-          <h2 class="text-lg sm:text-2xl font-black text-white tracking-tight">Launch &amp; PR Activation</h2>
-        </div>
-        <i class="fa-solid fa-rocket text-[#20E1B2] text-xl opacity-80"></i>
-      </div>
-
-      <div class="space-y-5">
-        <!-- 12 -->
-        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
-          <div class="step-number-box">12</div>
-          <div>
-            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Campaign Launch &amp; Public Relations</h4>
-            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
-              Execute the official campaign launch, activate the promotional offer, coordinate launch-day activities, and create public relations opportunities to maximize initial attention and engagement.
-            </p>
-          </div>
-        </div>
-
-        <!-- 13 -->
-        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
-          <div class="step-number-box">13</div>
-          <div>
-            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Collaborative Media &amp; Blogger Marketing</h4>
-            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
-              Work collaboratively with media outlets, bloggers, and influencers to extend campaign reach, amplify the campaign message, and sustain audience interest throughout the campaign period.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Phase 06 — Performance Optimization & Closure -->
-    <div class="morphy-card glass-card p-6 sm:p-8 rounded-3xl border border-[#20E1B2]/30 shadow-xl relative">
-      <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#20E1B2]/20">
-        <div class="flex items-center gap-3">
-          <span class="phase-badge-pill">Phase 06</span>
-          <h2 class="text-lg sm:text-2xl font-black text-white tracking-tight">Performance Optimization &amp; Closure</h2>
-        </div>
-        <i class="fa-solid fa-chart-line text-[#20E1B2] text-xl opacity-80"></i>
-      </div>
-
-      <div class="space-y-5">
-        <!-- 14 -->
-        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
-          <div class="step-number-box">14</div>
-          <div>
-            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Daily KPI Monitoring &amp; Optimization</h4>
-            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
-              Track daily campaign performance through relevant KPIs and marketing analytics. Identify opportunities, address performance gaps, optimize ongoing activities, and translate insights into actionable improvements.
-            </p>
-          </div>
-        </div>
-
-        <!-- 15 -->
-        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
-          <div class="step-number-box">15</div>
-          <div>
-            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Campaign Closure &amp; Results</h4>
-            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
-              Conclude the campaign with a closing celebration, announce giveaway or prize winners where applicable, review overall performance, document key learnings, and identify opportunities for future campaigns.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MY APPROACH SECTION -->
-    <div class="p-8 sm:p-12 rounded-3xl morphy-card glass-card border-2 border-[#20E1B2]/40 shadow-2xl relative overflow-hidden text-center">
-      <div class="max-w-2xl mx-auto">
-        <span class="phase-badge-pill mb-4">Core Philosophy</span>
-        <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight mb-3">
+        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-3">
           My Approach
         </h2>
-        <div class="text-sm sm:text-lg font-extrabold text-[#20E1B2] mb-6 tracking-wide">
+
+        <div class="text-base sm:text-xl md:text-2xl font-black text-[#20E1B2] mb-6 tracking-wide leading-snug">
           Plan Strategically. Collaborate Effectively. Execute Creatively. Optimize Continuously.
         </div>
-        <p class="text-xs sm:text-sm md:text-base text-[#D1F5EE] leading-relaxed mb-8">
+
+        <p class="text-xs sm:text-sm md:text-base text-[#D1F5EE] leading-relaxed mb-10 opacity-95">
           I approach every campaign as an integrated business initiative—aligning commercial objectives, partner expectations, customer value, creative communication, and measurable performance to create a cohesive campaign experience.
         </p>
 
-        <!-- 4 Core Pillars Grid -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-[#20E1B2]/20">
-          <div class="p-3.5 rounded-2xl bg-[#041B21]/70 border border-[#20E1B2]/20 text-center">
-            <div class="text-[#20E1B2] text-sm mb-1"><i class="fa-solid fa-chess-knight"></i></div>
-            <div class="text-xs font-black text-white">Plan Strategically</div>
+        <!-- 4 Philosophy Pillars Grid with Icon Graphs -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6 border-t border-[#20E1B2]/20 text-left">
+          
+          <div class="p-5 rounded-2xl bg-[#041B21]/80 border border-[#20E1B2]/25 hover:border-[#20E1B2] transition-all">
+            <div class="w-10 h-10 rounded-xl bg-[#20E1B2]/15 text-[#20E1B2] flex items-center justify-center text-lg mb-3">
+              <i class="fa-solid fa-chess-knight"></i>
+            </div>
+            <h4 class="text-sm font-extrabold text-white mb-1">Plan Strategically</h4>
+            <p class="text-[11px] text-[#A7E7DC] leading-relaxed">Feasibility audits, commercial viability, and multi-tier audience segmentation.</p>
           </div>
-          <div class="p-3.5 rounded-2xl bg-[#041B21]/70 border border-[#20E1B2]/20 text-center">
-            <div class="text-[#20E1B2] text-sm mb-1"><i class="fa-solid fa-handshake"></i></div>
-            <div class="text-xs font-black text-white">Collaborate Effectively</div>
+
+          <div class="p-5 rounded-2xl bg-[#041B21]/80 border border-[#20E1B2]/25 hover:border-[#20E1B2] transition-all">
+            <div class="w-10 h-10 rounded-xl bg-[#20E1B2]/15 text-[#20E1B2] flex items-center justify-center text-lg mb-3">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <h4 class="text-sm font-extrabold text-white mb-1">Collaborate Effectively</h4>
+            <p class="text-[11px] text-[#A7E7DC] leading-relaxed">Securing bank subsidies, co-branded sponsor deals, and influencer leverage.</p>
           </div>
-          <div class="p-3.5 rounded-2xl bg-[#041B21]/70 border border-[#20E1B2]/20 text-center">
-            <div class="text-[#20E1B2] text-sm mb-1"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-            <div class="text-xs font-black text-white">Execute Creatively</div>
+
+          <div class="p-5 rounded-2xl bg-[#041B21]/80 border border-[#20E1B2]/25 hover:border-[#20E1B2] transition-all">
+            <div class="w-10 h-10 rounded-xl bg-[#20E1B2]/15 text-[#20E1B2] flex items-center justify-center text-lg mb-3">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h4 class="text-sm font-extrabold text-white mb-1">Execute Creatively</h4>
+            <p class="text-[11px] text-[#A7E7DC] leading-relaxed">Cinematic video production, high-velocity social hooks, and physical event decor.</p>
           </div>
-          <div class="p-3.5 rounded-2xl bg-[#041B21]/70 border border-[#20E1B2]/20 text-center">
-            <div class="text-[#20E1B2] text-sm mb-1"><i class="fa-solid fa-chart-line"></i></div>
-            <div class="text-xs font-black text-white">Optimize Continuously</div>
+
+          <div class="p-5 rounded-2xl bg-[#041B21]/80 border border-[#20E1B2]/25 hover:border-[#20E1B2] transition-all">
+            <div class="w-10 h-10 rounded-xl bg-[#20E1B2]/15 text-[#20E1B2] flex items-center justify-center text-lg mb-3">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h4 class="text-sm font-extrabold text-white mb-1">Optimize Continuously</h4>
+            <p class="text-[11px] text-[#A7E7DC] leading-relaxed">Daily telemetry tracking, conversion pacing, gap closure, and post-campaign learnings.</p>
           </div>
+
         </div>
 
-        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <a href="/consultation" class="btn-aesthetic-primary py-3 px-6 text-xs tracking-wider uppercase">
+        <!-- Action Row -->
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <a href="/consultation" class="btn-aesthetic-primary py-3.5 px-8 text-xs tracking-wider uppercase font-extrabold shadow-xl">
             <span>Commission A Campaign Strategy</span>
             <i class="fa-solid fa-arrow-right text-xs"></i>
           </a>
-          <a href="/case-studies" class="btn-pill-glass py-3 px-5 text-xs font-bold text-[#D1F5EE]">
-            <span>Explore Other Case Studies</span>
+          <a href="/case-studies" class="px-6 py-3.5 rounded-full bg-[#0B3844]/60 border border-[#20E1B2]/30 text-xs font-bold text-[#D1F5EE] hover:text-[#20E1B2] hover:border-[#20E1B2] transition-all">
+            <span>Explore Other Case Studies &rarr;</span>
           </a>
         </div>
+
       </div>
-    </div>
+    </section>
 
   </main>
 
