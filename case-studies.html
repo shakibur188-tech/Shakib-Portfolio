@@ -929,81 +929,84 @@
       if (noResults) noResults.classList.add('hidden');
 
       grid.innerHTML = filtered.map(cs => {
+        // Key verified metric boxes
         const metricsHtml = (cs.metrics || []).slice(0, 3).map(m => `
-          <span class="px-2.5 py-1 rounded-md bg-[#041B21]/90 backdrop-blur-md text-[11px] font-extrabold text-white border border-[#20E1B2]/30 flex items-center gap-1.5 shadow-xs">
-            <i class="fa-solid fa-arrow-trend-up text-[#20E1B2] text-[10px]"></i>
-            <span>${escapeHtml(m)}</span>
-          </span>
+          <div class="p-2.5 rounded-xl bg-[#041B21]/90 backdrop-blur-md border border-[#20E1B2]/25 shadow-2xs">
+            <div class="text-[9.5px] uppercase font-bold text-[#7EADA3] flex items-center gap-1">
+              <i class="fa-solid fa-arrow-trend-up text-[#20E1B2] text-[9px]"></i>
+              <span>Impact</span>
+            </div>
+            <div class="text-xs sm:text-sm font-black text-white mt-0.5 truncate" title="${escapeHtml(m)}">${escapeHtml(m)}</div>
+          </div>
         `).join('');
 
-        const deliverablesHtml = (cs.deliverables || []).slice(0, 4).map(d => `
-          <span class="text-[10.5px] text-[#A7F3D0] font-bold bg-[#0B3844]/60 backdrop-blur-md px-2.5 py-0.5 rounded-md border border-[#20E1B2]/25">${escapeHtml(d)}</span>
+        // Bullet points for deliverables / capabilities
+        const pointsHtml = (cs.deliverables || []).map(p => `
+          <li class="flex items-start gap-2.5 text-xs sm:text-sm text-[#D1F5EE] leading-relaxed">
+            <i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-1 shrink-0"></i>
+            <span>${escapeHtml(p)}</span>
+          </li>
         `).join('');
 
         return `
-          <div onclick="if (!event.target.closest('button, a')) window.location.href='/case-study.html?id=${encodeURIComponent(cs.id)}'" class="h-full flex flex-col justify-between group morphy-card glass-card p-0 overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl hover:border-[#20E1B2] hover:-translate-y-1.5 transition-all duration-500 cursor-pointer relative">
-            <!-- Cover Visual with Badges (Strict Fixed Height) -->
-            <div class="relative h-64 sm:h-72 w-full shrink-0 overflow-hidden bg-[#041B21]">
-              <img src="${escapeHtml(cs.coverImage || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80')}" alt="${escapeHtml(cs.title)}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" loading="lazy">
-              <div class="absolute inset-0 bg-gradient-to-t from-[#041B21]/90 via-[#041B21]/30 to-transparent"></div>
-
-              <!-- Top Pill Badges -->
-              <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
-                <span class="px-3 py-1 rounded-full bg-[#041B21]/90 backdrop-blur-md border border-[#20E1B2]/35 text-[11px] font-extrabold text-white shadow-sm flex items-center gap-1.5">
+          <div onclick="if (!event.target.closest('button, a')) window.location.href='/case-study.html?id=${encodeURIComponent(cs.id)}'" class="h-full flex flex-col justify-between group morphy-card glass-card p-6 sm:p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:border-[#20E1B2] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer relative">
+            <div>
+              <!-- Top Metadata Row: Category & Client Pill -->
+              <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                <span class="px-3 py-1 rounded-full bg-[#20E1B2]/15 text-[#20E1B2] font-extrabold text-[11px] border border-[#20E1B2]/30 uppercase tracking-wider shadow-2xs">
+                  ${escapeHtml(cs.category || 'Strategic Growth')}
+                </span>
+                <span class="px-3 py-1 rounded-full bg-[#041B21]/90 backdrop-blur-md border border-[#D1F5EE]/15 text-[11px] font-bold text-[#D1F5EE] flex items-center gap-1.5 shadow-2xs">
                   <i class="fa-solid fa-building text-[#20E1B2] text-[10px]"></i>
                   <span>${escapeHtml(cs.client)}</span>
-                </span>
-                <span class="px-2.5 py-1 rounded-full bg-[#0B3844]/90 backdrop-blur-md border border-white/20 text-[10.5px] font-bold text-white shadow-sm">
-                  ${escapeHtml(cs.year || '2026')}
+                  <span class="text-[#64748B]">•</span>
+                  <span class="text-[#20E1B2] font-extrabold">${escapeHtml(cs.year || '2026')}</span>
                 </span>
               </div>
 
-              <!-- Bottom Category Tag on Image -->
-              <div class="absolute bottom-3.5 left-4">
-                <span class="px-3 py-1 rounded-lg bg-[#20E1B2] text-[#041B21] font-extrabold text-[11px] shadow-md tracking-wide">
-                  ${escapeHtml(cs.category || 'Strategic Growth')}
-                </span>
+              <!-- Headline (Title) -->
+              <h3 class="text-xl sm:text-2xl font-black text-white group-hover:text-[#20E1B2] transition-colors tracking-tight leading-snug mb-3">
+                <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="hover:text-[#20E1B2] text-inherit no-underline">${escapeHtml(cs.title)}</a>
+              </h3>
+
+              <!-- Brief Subtitle / Overview -->
+              <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed mb-5">
+                ${escapeHtml(cs.tagline || cs.challenge || '')}
+              </p>
+
+              <!-- Impact Metrics Strip -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mb-5">
+                ${metricsHtml}
+              </div>
+
+              <!-- Core Execution Points / Deliverables List -->
+              <div class="mb-6 pt-4 border-t border-[#20E1B2]/15">
+                <div class="text-[11px] uppercase tracking-wider font-extrabold text-[#7EADA3] mb-3 flex items-center gap-1.5">
+                  <i class="fa-solid fa-list-check text-[#20E1B2] text-xs"></i>
+                  <span>Core Execution Points &amp; Deliverables:</span>
+                </div>
+                <ul class="space-y-2.5">
+                  ${pointsHtml}
+                </ul>
               </div>
             </div>
 
-            <!-- Content Body (Equal Vertical Height) -->
-            <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
-              <div>
-                <h3 class="text-xl sm:text-2xl font-black text-white group-hover:text-[#20E1B2] transition-colors tracking-tight leading-snug mb-2 line-clamp-2 min-h-[56px]">
-                  <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="hover:text-[#20E1B2] text-inherit no-underline">${escapeHtml(cs.title)}</a>
-                </h3>
-                <p class="text-xs sm:text-sm text-[#D1F5EE] leading-relaxed mb-4 line-clamp-2 min-h-[40px] opacity-90">
-                  ${escapeHtml(cs.tagline || cs.challenge || '')}
-                </p>
+            <!-- Card Bottom Action: Prominent Details Button -->
+            <div class="pt-5 border-t border-[#20E1B2]/20 flex items-center justify-between gap-3 mt-auto">
+              <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="btn-aesthetic-primary text-xs py-3 px-5 flex-1 justify-center shadow-md">
+                <span>View Case Study Details</span>
+                <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+              </a>
 
-                <!-- Metrics Pills Container -->
-                <div class="flex flex-wrap items-center gap-2 mb-4 min-h-[34px]">
-                  ${metricsHtml}
-                </div>
-
-                <!-- Deliverables Tags Container -->
-                <div class="flex flex-wrap items-center gap-1.5 mb-6 pt-3 border-t border-[#20E1B2]/20 min-h-[42px]">
-                  ${deliverablesHtml}
-                </div>
-              </div>
-
-              <!-- Card Actions Row Pinned to Bottom -->
-              <div class="pt-4 border-t border-[#20E1B2]/20 flex items-center justify-between gap-3 mt-auto">
-                <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="btn-aesthetic-primary text-xs py-2 px-4 justify-center">
-                  <span>Deep Dive Case Study</span>
-                  <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-                </a>
-
-                <div class="flex items-center gap-2">
-                  <button type="button" onclick="event.stopPropagation(); openCaseStudyModal('${escapeHtml(cs.id)}')" class="text-xs font-bold text-[#20E1B2] hover:text-white px-2 py-1 transition-colors">
-                    <span>Preview</span>
-                  </button>
-                  ${cs.liveUrl ? `
-                    <a href="${escapeHtml(cs.liveUrl)}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="text-xs font-bold text-[#7EADA3] hover:text-[#20E1B2] flex items-center gap-1 transition-colors" title="View Live Website">
-                      <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
-                    </a>
-                  ` : ''}
-                </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <button type="button" onclick="event.stopPropagation(); openCaseStudyModal('${escapeHtml(cs.id)}')" class="px-3 py-2.5 rounded-xl bg-[#0B3844]/60 border border-[#20E1B2]/25 text-xs font-bold text-[#7EADA3] hover:text-[#20E1B2] hover:border-[#20E1B2] transition-colors" title="Quick Summary Preview">
+                  <span>Preview</span>
+                </button>
+                ${cs.liveUrl ? `
+                  <a href="${escapeHtml(cs.liveUrl)}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="w-10 h-10 rounded-xl bg-[#0B3844]/60 border border-[#20E1B2]/25 text-[#7EADA3] hover:text-[#20E1B2] hover:border-[#20E1B2] flex items-center justify-center transition-colors" title="View Live Portal">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                  </a>
+                ` : ''}
               </div>
             </div>
           </div>
