@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campaign Execution Framework | From Strategic Planning to Successful Campaign Delivery | Md. Shakibur Rahaman</title>
+  <meta name="description" content="Campaign Execution Framework: From Strategic Planning to Successful Campaign Delivery. Explore the 6-phase campaign methodology by Md. Shakibur Rahaman.">
+  <link rel="canonical" href="https://www.shakibur.info/campaign-execution-framework">
+  
+  <!-- Plus Jakarta Sans Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#20E1B2',
+              forest: '#0B3844',
+              slate: '#20E1B2',
+              mist: '#68A89C',
+              stone: 'rgba(209, 245, 238, 0.15)',
+              emerald: '#20E1B2',
+              brunswick: '#0B3844',
+              polar: '#D1F5EE',
+              canvas: '#041B21',
+              card: 'rgba(8, 40, 48, 0.42)'
+            },
+            canvas: '#041B21'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            bengali: ['"Hind Siliguri"', '"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Modern Morphy Design Stylesheet -->
+  <link rel="stylesheet" href="/styles.css?v=5.0">
+
+  <!-- Guaranteed Mobile Navigation Contrast & Visibility (Anti-Cache) -->
+  <style id="mobile-nav-fix">
+    #navbar {
+      background-color: #041B21 !important;
+      background: #041B21 !important;
+      border-bottom: 1px solid rgba(32, 225, 178, 0.25) !important;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7) !important;
+    }
+    #navbar #navBrandName,
+    #navbar span.font-extrabold {
+      color: #FFFFFF !important;
+    }
+    #mobileMenuToggle,
+    #svcMobileToggle {
+      background-color: #0B3844 !important;
+      border: 1.5px solid #20E1B2 !important;
+      color: #20E1B2 !important;
+    }
+    #mobileMenuToggle i,
+    #svcMobileToggle i {
+      color: #20E1B2 !important;
+    }
+    #mobileMenu,
+    #svcMobileMenu {
+      background-color: #041B21 !important;
+      background: #041B21 !important;
+      border: 1.5px solid rgba(32, 225, 178, 0.35) !important;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.95), 0 0 40px rgba(32, 225, 178, 0.2) !important;
+      border-radius: 24px !important;
+    }
+    .mobile-nav-link,
+    .mobile-link {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 14px 18px !important;
+      margin-bottom: 8px !important;
+      border-radius: 14px !important;
+      font-size: 13.5px !important;
+      font-weight: 700 !important;
+      color: #FFFFFF !important;
+      background-color: #082830 !important;
+      background: #082830 !important;
+      border: 1px solid rgba(32, 225, 178, 0.25) !important;
+      text-decoration: none !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    }
+    .mobile-nav-link span,
+    .mobile-link span {
+      color: #FFFFFF !important;
+      font-weight: 700 !important;
+    }
+    .mobile-nav-link i,
+    .mobile-link i {
+      color: #20E1B2 !important;
+    }
+    .mobile-nav-link .fa-chevron-right,
+    .mobile-link .fa-chevron-right {
+      color: #7EADA3 !important;
+    }
+    .mobile-nav-link:hover,
+    .mobile-nav-link:active,
+    .mobile-link:hover,
+    .mobile-link:active {
+      background: rgba(32, 225, 178, 0.22) !important;
+      border-color: #20E1B2 !important;
+      color: #FFFFFF !important;
+    }
+    .mobile-nav-link.active,
+    .mobile-link.active {
+      background: linear-gradient(135deg, rgba(32, 225, 178, 0.35) 0%, #0B3844 100%) !important;
+      border-color: #20E1B2 !important;
+      box-shadow: 0 4px 22px rgba(32, 225, 178, 0.35) !important;
+    }
+    .mobile-nav-link.active span,
+    .mobile-link.active span {
+      color: #20E1B2 !important;
+      font-weight: 800 !important;
+    }
+
+    /* Phase Badge Number Glow */
+    .phase-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      background: rgba(32, 225, 178, 0.12);
+      border: 1px solid rgba(32, 225, 178, 0.35);
+      color: #20E1B2;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .step-number-box {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(32, 225, 178, 0.2) 0%, rgba(11, 56, 68, 0.5) 100%);
+      border: 1px solid rgba(32, 225, 178, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 13px;
+      color: #20E1B2;
+      box-shadow: 0 0 15px rgba(32, 225, 178, 0.2);
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body class="bg-[#041B21] text-white font-sans antialiased selection:bg-[#20E1B2] selection:text-white relative overflow-x-hidden">
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- Ambient Light Mesh Background -->
+  <div class="ambient-mesh-glow"></div>
+  <canvas id="ambientCanvas"></canvas>
+  <div class="ambient-vignette"></div>
+
+  <!-- 1. FIXED GLASS NAVBAR (Morphy Style) -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#041B21]/95 backdrop-blur-2xl border-b border-[#D1F5EE]/15 transition-all duration-300 shadow-2xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="/" class="flex items-center gap-3 group min-w-0">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#20E1B2] to-[#0B3844] flex items-center justify-center font-black text-white text-sm tracking-tight group-hover:scale-105 transition-transform shadow-md shadow-[#20E1B2]/25 border border-white/20 shrink-0">
+          ✦
+        </div>
+        <div class="flex flex-col min-w-0">
+          <span class="font-extrabold text-white tracking-tight text-base sm:text-lg group-hover:text-[#20E1B2] transition-colors truncate" id="navBrandName">Md. Shakibur Rahaman</span>
+          <span class="text-[10px] text-[#20E1B2] font-extrabold tracking-wider uppercase truncate">Strategic Lead &amp; Digital Architect</span>
+        </div>
+      </a>
+
+      <!-- Centered Floating Pill Navigation Menu (Desktop Only) -->
+      <nav class="hidden lg:flex items-center gap-7 px-8 py-3 rounded-full bg-[#041B21]/95 border border-[#D1F5EE]/15 text-sm font-semibold text-[#DDF6F0] backdrop-blur-md shadow-xs shrink-0">
+        <a href="/" class="hover:text-[#20E1B2] transition-colors">Home</a>
+        <a href="/about" class="hover:text-[#20E1B2] transition-colors">About</a>
+        
+        <!-- Services with dropdown arrow -->
+        <div class="relative group">
+          <a href="/services" class="flex items-center gap-1.5 hover:text-[#20E1B2] transition-colors py-1">
+            <span>Services</span>
+            <i class="fa-solid fa-chevron-down text-[10px] text-[#7EADA3] group-hover:text-[#20E1B2] group-hover:rotate-180 transition-transform duration-200"></i>
+          </a>
+          <!-- Dropdown card -->
+          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-[#041B21]/98 rounded-2xl border border-[#D1F5EE]/15 shadow-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="/services/social-media-marketing" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">Social Media &amp; Meta Ads</a>
+            <a href="/services/google-ads" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">Google Ads &amp; Search</a>
+            <a href="/services/web-development" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">Full-Stack Web Development</a>
+            <a href="/services/seo-aeo" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">SEO &amp; AI Engine Optimization</a>
+            <a href="/services/graphics-design" class="block px-3 py-2 rounded-xl text-xs font-semibold text-white hover:bg-[#20E1B2]/5 hover:text-[#20E1B2] transition-colors">Graphics &amp; Visual Assets</a>
+            <div class="my-1.5 border-t border-[#D1F5EE]/15"></div>
+            <a href="/services" class="block px-3 py-1.5 rounded-xl text-[11px] font-bold text-[#20E1B2] hover:bg-[#20E1B2]/10 text-center">View All 9 Services &rarr;</a>
+          </div>
+        </div>
+
+        <a href="/projects" class="hover:text-[#20E1B2] transition-colors">Projects</a>
+        <a href="/case-studies" class="text-[#20E1B2] font-bold transition-colors">Case Studies</a>
+        <a href="/experience" class="hover:text-[#20E1B2] transition-colors">Experience</a>
+        <a href="/offers" class="hover:text-[#20E1B2] transition-colors">Offers</a>
+        <a href="/consultation" class="hover:text-[#20E1B2] transition-colors">Consultation</a>
+      </nav>
+
+      <!-- Right Header Actions (Mobile Hamburger Toggle) -->
+      <div class="flex items-center gap-3 shrink-0">
+        <button id="mobileMenuToggle" type="button" aria-label="Toggle Navigation" class="lg:hidden w-11 h-11 rounded-2xl bg-[#0B3844]/35 backdrop-blur-xl border border-[#D1F5EE]/15 hover:border-[#20E1B2]/30 hover:bg-[#20E1B2]/5 text-white hover:text-[#20E1B2] flex items-center justify-center transition-all duration-200 shadow-xs active:scale-95 shrink-0 z-50">
+          <i id="mobileMenuIcon" class="fa-solid fa-bars-staggered text-base"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu (Morphy Glassmorphic Design) -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-[#041B21]/98 backdrop-blur-2xl border-b border-x border-[#D1F5EE]/15 rounded-b-3xl mx-3 sm:mx-6 px-5 py-6 space-y-2.5 shadow-2xl transition-all duration-300">
+      <div class="space-y-1.5 pb-3 border-b border-[#D1F5EE]/10">
+        <a href="/" class="mobile-nav-link mobile-link flex items-center justify-between ">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-house-chimney text-xs text-[#7EADA3] w-4"></i>
+            <span>Home</span>
+          </span>
+          <i class="fa-solid fa-chevron-right text-[10px] text-[#94A3B8]"></i>
+        </a>
+        <a href="/about" class="mobile-nav-link mobile-link flex items-center justify-between ">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-user text-xs text-[#7EADA3] w-4"></i>
+            <span>About</span>
+          </span>
+          <i class="fa-solid fa-chevron-right text-[10px] text-[#94A3B8]"></i>
+        </a>
+        <a href="/services" class="mobile-nav-link mobile-link flex items-center justify-between ">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-layer-group text-xs text-[#7EADA3] w-4"></i>
+            <span>Services</span>
+          </span>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#20E1B2]/10 text-[#20E1B2]">9 Pillars</span>
+        </a>
+        <a href="/projects" class="mobile-nav-link mobile-link flex items-center justify-between ">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-briefcase text-xs text-[#7EADA3] w-4"></i>
+            <span>Projects</span>
+          </span>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#10B981]/10 text-[#10B981]">Featured</span>
+        </a>
+        <a href="/case-studies" class="mobile-nav-link mobile-link flex items-center justify-between active">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-lightbulb text-xs text-[#20E1B2] w-4"></i>
+            <span>Case Studies</span>
+          </span>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#20E1B2]/10 text-[#20E1B2]">Deep Dives</span>
+        </a>
+        <a href="/experience" class="mobile-nav-link mobile-link flex items-center justify-between ">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-chart-line text-xs text-[#7EADA3] w-4"></i>
+            <span>Experience</span>
+          </span>
+          <i class="fa-solid fa-chevron-right text-[10px] text-[#94A3B8]"></i>
+        </a>
+        <a href="/offers" class="mobile-nav-link mobile-link flex items-center justify-between ">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-tags text-xs text-[#20E1B2] w-4"></i>
+            <span class="font-bold text-[#20E1B2]">Special Offers</span>
+          </span>
+          <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-gradient-to-r from-[#20E1B2] to-[#0D9488] text-white shadow-xs">EMI 🔥</span>
+        </a>
+      </div>
+
+      <!-- Quick Action Contact in Mobile Menu -->
+      <div class="pt-2 flex items-center gap-2">
+        <a href="/contact" class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#20E1B2] to-[#0D9488] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-[#20E1B2]/25 hover:shadow-lg transition-all active:scale-98">
+          <i class="fa-solid fa-paper-plane text-xs"></i>
+          <span>Get in Touch</span>
+        </a>
+        <a href="https://wa.me/8801838070468" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/25 flex items-center justify-center text-lg hover:bg-[#25D366] hover:text-white transition-all shrink-0 active:scale-95" aria-label="WhatsApp Contact">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO DIRECTORY HEADER -->
+  <section class="relative pt-28 pb-12 sm:pt-36 sm:pb-16 md:pt-40 md:pb-20 overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      
+      <!-- Back Link -->
+      <div class="mb-6 flex justify-center">
+        <a href="/case-studies" class="inline-flex items-center gap-2 text-xs font-bold text-[#7EADA3] hover:text-[#20E1B2] transition-colors px-3 py-1.5 rounded-full bg-[#082830]/80 border border-[#20E1B2]/20">
+          <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          <span>Back to All Case Studies</span>
+        </a>
+      </div>
+
+      <div class="section-tag justify-center mb-6">
+        <span class="pulse-dot-olive"></span>
+        <span>CAMPAIGN STRATEGY &amp; DELIVERY MATRIX</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.14] mb-4">
+        Campaign Execution Framework
+      </h1>
+
+      <h3 class="text-lg sm:text-2xl font-bold text-[#20E1B2] tracking-tight mb-6">
+        From Strategic Planning to Successful Campaign Delivery
+      </h3>
+
+      <div class="p-6 sm:p-8 rounded-3xl morphy-card glass-card text-left max-w-3xl mx-auto border border-[#20E1B2]/25 shadow-xl mb-6">
+        <p class="text-xs sm:text-sm md:text-base text-[#D1F5EE] leading-relaxed">
+          Every successful campaign starts with a clear business objective and ends with measurable results. My approach combines strategic planning, financial feasibility, partnership development, creative execution, integrated marketing, and continuous performance optimization to deliver a well-coordinated campaign from start to finish.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. MAIN FRAMEWORK PHASES CONTAINER -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 space-y-10 sm:space-y-12">
+
+    <!-- Phase 01 — Strategy & Decision Making -->
+    <div class="morphy-card glass-card p-6 sm:p-8 rounded-3xl border border-[#20E1B2]/30 shadow-xl relative">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#20E1B2]/20">
+        <div class="flex items-center gap-3">
+          <span class="phase-badge-pill">Phase 01</span>
+          <h2 class="text-lg sm:text-2xl font-black text-white tracking-tight">Strategy &amp; Decision Making</h2>
+        </div>
+        <i class="fa-solid fa-chess text-[#20E1B2] text-xl opacity-80"></i>
+      </div>
+
+      <div class="space-y-5">
+        <!-- 01 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
+          <div class="step-number-box">01</div>
+          <div>
+            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Campaign Planning &amp; Feasibility</h4>
+            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+              Evaluate the campaign opportunity and determine whether to launch based on timing, duration, pricing, business objectives, customer demand, budget, and other key factors.
+            </p>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
+          <div class="step-number-box">02</div>
+          <div>
+            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Partnership &amp; Sponsor Mapping</h4>
+            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+              Develop an initial, unofficial list of potential banks, sponsors, brands, and collaborators to explore partnership opportunities and assess interest.
+            </p>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
+          <div class="step-number-box">03</div>
+          <div>
+            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Offer Strategy &amp; Mechanics</h4>
+            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+              Define the campaign proposition, including B1G1, B1G2, B1G3, selected bank-card offers, giveaways, discounts, and other promotional mechanics that create value for customers and the business.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 02 — Partnership & Financial Planning -->
+    <div class="morphy-card glass-card p-6 sm:p-8 rounded-3xl border border-[#20E1B2]/30 shadow-xl relative">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#20E1B2]/20">
+        <div class="flex items-center gap-3">
+          <span class="phase-badge-pill">Phase 02</span>
+          <h2 class="text-lg sm:text-2xl font-black text-white tracking-tight">Partnership &amp; Financial Planning</h2>
+        </div>
+        <i class="fa-solid fa-coins text-[#20E1B2] text-xl opacity-80"></i>
+      </div>
+
+      <div class="space-y-5">
+        <!-- 04 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
+          <div class="step-number-box">04</div>
+          <div>
+            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Campaign Concept Development</h4>
+            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+              Create an initial visual concept, theme, and design direction to communicate the campaign idea to potential sponsors and partners, helping establish expectations around sponsorship contributions, gifts, and collaboration.
+            </p>
+          </div>
+        </div>
+
+        <!-- 05 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
+          <div class="step-number-box">05</div>
+          <div>
+            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Product Costing &amp; ROI Planning</h4>
+            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+              Evaluate product costs, promotional expenses, expected revenue, profit margins, sponsorship value, and target return on investment to ensure commercial viability.
+            </p>
+          </div>
+        </div>
+
+        <!-- 06 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
+          <div class="step-number-box">06</div>
+          <div>
+            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Management Approval</h4>
+            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+              Present the proposed campaign strategy, offer structure, budget, financial projections, and execution plan to senior management for review and approval before proceeding.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 03 — Creative Development & Approvals -->
+    <div class="morphy-card glass-card p-6 sm:p-8 rounded-3xl border border-[#20E1B2]/30 shadow-xl relative">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#20E1B2]/20">
+        <div class="flex items-center gap-3">
+          <span class="phase-badge-pill">Phase 03</span>
+          <h2 class="text-lg sm:text-2xl font-black text-white tracking-tight">Creative Development &amp; Approvals</h2>
+        </div>
+        <i class="fa-solid fa-palette text-[#20E1B2] text-xl opacity-80"></i>
+      </div>
+
+      <div class="space-y-5">
+        <!-- 07 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
+          <div class="step-number-box">07</div>
+          <div>
+            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Final Creative Production</h4>
+            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+              Develop the complete campaign identity and execution assets, including event decor, social media creatives, online video commercials (OVC), promotional materials, signage, and other brand communication elements.
+            </p>
+          </div>
+        </div>
+
+        <!-- 08 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
+          <div class="step-number-box">08</div>
+          <div>
+            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Bank &amp; Gift Partner Approval</h4>
+            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+              Coordinate with participating banks and gift partners to secure approval for campaign mechanics, terms and conditions, creative assets, branding, and promotional commitments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 04 — Marketing & Event Readiness -->
+    <div class="morphy-card glass-card p-6 sm:p-8 rounded-3xl border border-[#20E1B2]/30 shadow-xl relative">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#20E1B2]/20">
+        <div class="flex items-center gap-3">
+          <span class="phase-badge-pill">Phase 04</span>
+          <h2 class="text-lg sm:text-2xl font-black text-white tracking-tight">Marketing &amp; Event Readiness</h2>
+        </div>
+        <i class="fa-solid fa-bullhorn text-[#20E1B2] text-xl opacity-80"></i>
+      </div>
+
+      <div class="space-y-5">
+        <!-- 09 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
+          <div class="step-number-box">09</div>
+          <div>
+            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Digital Marketing Activation</h4>
+            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+              Launch the digital marketing campaign through social media, targeted advertising, content publishing, and coordinated promotional communication to build awareness and anticipation.
+            </p>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
+          <div class="step-number-box">10</div>
+          <div>
+            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Event Setup &amp; Decoration</h4>
+            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+              Bring the campaign concept to life through physical event preparation, branded installations, decoration, signage, displays, and on-site promotional elements.
+            </p>
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
+          <div class="step-number-box">11</div>
+          <div>
+            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Media, Influencer &amp; VIP Outreach</h4>
+            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+              Coordinate invitations and engagement with media representatives, bloggers, influencers, celebrities, and VIP clients to strengthen campaign visibility and launch participation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 05 — Launch & PR Activation -->
+    <div class="morphy-card glass-card p-6 sm:p-8 rounded-3xl border border-[#20E1B2]/30 shadow-xl relative">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#20E1B2]/20">
+        <div class="flex items-center gap-3">
+          <span class="phase-badge-pill">Phase 05</span>
+          <h2 class="text-lg sm:text-2xl font-black text-white tracking-tight">Launch &amp; PR Activation</h2>
+        </div>
+        <i class="fa-solid fa-rocket text-[#20E1B2] text-xl opacity-80"></i>
+      </div>
+
+      <div class="space-y-5">
+        <!-- 12 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
+          <div class="step-number-box">12</div>
+          <div>
+            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Campaign Launch &amp; Public Relations</h4>
+            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+              Execute the official campaign launch, activate the promotional offer, coordinate launch-day activities, and create public relations opportunities to maximize initial attention and engagement.
+            </p>
+          </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
+          <div class="step-number-box">13</div>
+          <div>
+            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Collaborative Media &amp; Blogger Marketing</h4>
+            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+              Work collaboratively with media outlets, bloggers, and influencers to extend campaign reach, amplify the campaign message, and sustain audience interest throughout the campaign period.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 06 — Performance Optimization & Closure -->
+    <div class="morphy-card glass-card p-6 sm:p-8 rounded-3xl border border-[#20E1B2]/30 shadow-xl relative">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#20E1B2]/20">
+        <div class="flex items-center gap-3">
+          <span class="phase-badge-pill">Phase 06</span>
+          <h2 class="text-lg sm:text-2xl font-black text-white tracking-tight">Performance Optimization &amp; Closure</h2>
+        </div>
+        <i class="fa-solid fa-chart-line text-[#20E1B2] text-xl opacity-80"></i>
+      </div>
+
+      <div class="space-y-5">
+        <!-- 14 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
+          <div class="step-number-box">14</div>
+          <div>
+            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Daily KPI Monitoring &amp; Optimization</h4>
+            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+              Track daily campaign performance through relevant KPIs and marketing analytics. Identify opportunities, address performance gaps, optimize ongoing activities, and translate insights into actionable improvements.
+            </p>
+          </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#041B21]/60 border border-[#20E1B2]/15">
+          <div class="step-number-box">15</div>
+          <div>
+            <h4 class="text-sm sm:text-base font-extrabold text-white mb-1.5">Campaign Closure &amp; Results</h4>
+            <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed">
+              Conclude the campaign with a closing celebration, announce giveaway or prize winners where applicable, review overall performance, document key learnings, and identify opportunities for future campaigns.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MY APPROACH SECTION -->
+    <div class="p-8 sm:p-12 rounded-3xl morphy-card glass-card border-2 border-[#20E1B2]/40 shadow-2xl relative overflow-hidden text-center">
+      <div class="max-w-2xl mx-auto">
+        <span class="phase-badge-pill mb-4">Core Philosophy</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight mb-3">
+          My Approach
+        </h2>
+        <div class="text-sm sm:text-lg font-extrabold text-[#20E1B2] mb-6 tracking-wide">
+          Plan Strategically. Collaborate Effectively. Execute Creatively. Optimize Continuously.
+        </div>
+        <p class="text-xs sm:text-sm md:text-base text-[#D1F5EE] leading-relaxed mb-8">
+          I approach every campaign as an integrated business initiative—aligning commercial objectives, partner expectations, customer value, creative communication, and measurable performance to create a cohesive campaign experience.
+        </p>
+
+        <!-- 4 Core Pillars Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-[#20E1B2]/20">
+          <div class="p-3.5 rounded-2xl bg-[#041B21]/70 border border-[#20E1B2]/20 text-center">
+            <div class="text-[#20E1B2] text-sm mb-1"><i class="fa-solid fa-chess-knight"></i></div>
+            <div class="text-xs font-black text-white">Plan Strategically</div>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-[#041B21]/70 border border-[#20E1B2]/20 text-center">
+            <div class="text-[#20E1B2] text-sm mb-1"><i class="fa-solid fa-handshake"></i></div>
+            <div class="text-xs font-black text-white">Collaborate Effectively</div>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-[#041B21]/70 border border-[#20E1B2]/20 text-center">
+            <div class="text-[#20E1B2] text-sm mb-1"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <div class="text-xs font-black text-white">Execute Creatively</div>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-[#041B21]/70 border border-[#20E1B2]/20 text-center">
+            <div class="text-[#20E1B2] text-sm mb-1"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="text-xs font-black text-white">Optimize Continuously</div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <a href="/consultation" class="btn-aesthetic-primary py-3 px-6 text-xs tracking-wider uppercase">
+            <span>Commission A Campaign Strategy</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+          <a href="/case-studies" class="btn-pill-glass py-3 px-5 text-xs font-bold text-[#D1F5EE]">
+            <span>Explore Other Case Studies</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- 4. FOOTER -->
+  <footer class="py-16 border-t border-[#20E1B2]/15 bg-[#041B21] relative z-10 text-xs text-[#7EADA3]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <div class="flex items-center justify-center gap-3">
+        <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-[#20E1B2] to-[#0B3844] flex items-center justify-center font-bold text-white text-xs">✦</div>
+        <span class="font-extrabold text-white text-base">Md. Shakibur Rahaman</span>
+      </div>
+      <p class="text-[#64748B] max-w-md mx-auto">
+        Strategic Lead &amp; Digital Growth Architect directing high-converting branding systems, modern web platforms, and omnichannel campaigns.
+      </p>
+      <div class="pt-4 border-t border-[#20E1B2]/10 text-[#64748B] flex flex-wrap items-center justify-between gap-4 max-w-4xl mx-auto">
+        <div>&copy; 2026 Md. Shakibur Rahaman. All rights reserved.</div>
+        <div class="flex items-center gap-4">
+          <a href="/" class="hover:text-[#20E1B2]">Home</a>
+          <a href="/case-studies" class="hover:text-[#20E1B2]">Case Studies</a>
+          <a href="/consultation" class="hover:text-[#20E1B2]">Consultation</a>
+          <a href="/contact" class="hover:text-[#20E1B2]">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile Menu Toggle
+      const toggle = document.getElementById('mobileMenuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (toggle && mobileMenu) {
+        toggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+
+      // Scroll Progress Bar
+      const bar = document.getElementById('scrollProgressBar');
+      if (bar) {
+        window.addEventListener('scroll', () => {
+          const s = window.pageYOffset || document.documentElement.scrollTop;
+          const h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          bar.style.width = (h > 0 ? (s / h) * 100 : 0) + '%';
+        });
+      }
+    });
+  </script>
+
+  <script src="/site-hydration.js?v=3.5"></script>
+  <!-- GSAP & ScrollTrigger Animation Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="/assets/js/gsap-animations.js?v=5.0"></script>
+</body>
+</html>

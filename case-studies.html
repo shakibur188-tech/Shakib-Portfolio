@@ -909,6 +909,7 @@
       if (noResults) noResults.classList.add('hidden');
 
       grid.innerHTML = filtered.map(cs => {
+        const targetUrl = cs.id === 'campaign-execution-framework' ? '/campaign-execution-framework' : `/case-study.html?id=${encodeURIComponent(cs.id)}`;
         // Bullet points for deliverables / capabilities
         const pointsHtml = (cs.deliverables || []).map(p => `
           <li class="flex items-center gap-2.5 text-xs sm:text-[13px] text-[#D1F5EE] leading-snug">
@@ -918,7 +919,7 @@
         `).join('');
 
         return `
-          <div onclick="if (!event.target.closest('button, a')) window.location.href='/case-study.html?id=${encodeURIComponent(cs.id)}'" class="flex flex-col justify-between group morphy-card glass-card p-5 sm:p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:border-[#20E1B2] hover:-translate-y-1 transition-all duration-300 cursor-pointer relative">
+          <div onclick="if (!event.target.closest('button, a')) window.location.href='${targetUrl}'" class="flex flex-col justify-between group morphy-card glass-card p-5 sm:p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:border-[#20E1B2] hover:-translate-y-1 transition-all duration-300 cursor-pointer relative">
             <div>
               <!-- Top Metadata Row: Category & Client Pill -->
               <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
@@ -935,7 +936,7 @@
 
               <!-- Headline (Title) -->
               <h3 class="text-lg sm:text-xl font-black text-white group-hover:text-[#20E1B2] transition-colors tracking-tight leading-snug mb-3.5">
-                <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="hover:text-[#20E1B2] text-inherit no-underline">${escapeHtml(cs.title)}</a>
+                <a href="${targetUrl}" class="hover:text-[#20E1B2] text-inherit no-underline">${escapeHtml(cs.title)}</a>
               </h3>
 
               <!-- Core Execution Points / Deliverables List -->
@@ -952,7 +953,7 @@
 
             <!-- Card Bottom Action: Prominent Details Button -->
             <div class="pt-4 border-t border-[#20E1B2]/20 flex items-center justify-between gap-2.5 mt-auto">
-              <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="btn-aesthetic-primary text-xs py-2.5 px-4 flex-1 justify-center shadow-md">
+              <a href="${targetUrl}" class="btn-aesthetic-primary text-xs py-2.5 px-4 flex-1 justify-center shadow-md">
                 <span>View Case Study Details</span>
                 <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
               </a>
@@ -978,7 +979,7 @@
       if (!cs) return;
 
       const el = (i) => document.getElementById(i);
-      if (el('csModalFullPageLink')) el('csModalFullPageLink').href = `/case-study.html?id=${encodeURIComponent(cs.id)}`;
+      if (el('csModalFullPageLink')) el('csModalFullPageLink').href = cs.id === 'campaign-execution-framework' ? '/campaign-execution-framework' : `/case-study.html?id=${encodeURIComponent(cs.id)}`;
       if (el('csModalCategory')) el('csModalCategory').textContent = cs.category || 'Case Study';
       if (el('csModalClient')) el('csModalClient').textContent = cs.client || 'Client Organization';
       if (el('csModalYear')) el('csModalYear').textContent = cs.year || '2026';

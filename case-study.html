@@ -2068,7 +2068,10 @@
       // Read URL query parameter: case-study.html?id=...
       const urlParams = new URLSearchParams(window.location.search);
       const requestedId = urlParams.get('id');
-
+      if (requestedId === 'campaign-execution-framework') {
+        window.location.replace('/campaign-execution-framework');
+        return;
+      }
       if (requestedId) {
         const foundIdx = richCaseStudies.findIndex(c => c.id === requestedId || c.slug === requestedId);
         if (foundIdx !== -1) {
