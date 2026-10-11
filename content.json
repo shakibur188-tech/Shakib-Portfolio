@@ -103,234 +103,168 @@
   ],
   "services": [
     {
-      "id": "branding",
-      "slug": "branding",
-      "title": "Branding & Brand Strategy",
-      "subtitle": "Strategic Brand Positioning, Architecture & Guidelines",
-      "icon": "fa-fingerprint",
-      "badge": "Brand Strategy",
-      "description": "Forging iconic market identities that resonate deeply, command premium pricing, and outpace competition. From market research and positioning architecture to comprehensive corporate brand guidelines and narrative voice.",
+      "id": "social-media-google-marketing",
+      "slug": "social-media-google-marketing",
+      "title": "Social Media & Google Marketing",
+      "subtitle": "Omnichannel Ad Scaling, Meta Ads, Google Ads (PPC/PMax) & Performance Funnels",
+      "icon": "fa-chart-line",
+      "badge": "Pillar 01 • Omnichannel Growth",
+      "description": "Unifying high-impact social media creative storytelling with high-intent Google Search, YouTube, and Performance Max advertising. We engineer full-funnel customer acquisition systems backed by server-side CAPI tracking and automated ROAS bid governance.",
       "deliverables": [
-        "Brand Positioning & Competitive Market Research",
-        "Brand Architecture & Portfolio Structuring",
-        "Corporate Brand Identity Guidelines Manual",
-        "Brand Voice, Tone & Messaging Framework",
-        "Naming Conventions & Trademark Identity Asset Creation"
+        "High-Intent Google Search & PMax Ad Scaling",
+        "Meta Advantage+ Creative & Retargeting Campaigns",
+        "Server-Side CAPI & Offline Conversion Tracking",
+        "Short-Form Video & Viral UGC Ad Creatives",
+        "Multi-Touch Attribution & Real-Time Looker Dashboards",
+        "Automated Budget Pacing & ROAS Bid Governance"
       ],
       "tools": [
-        "Brand Matrix",
-        "Miro",
-        "Figma",
-        "Adobe Suite",
-        "Audience Insights"
+        "Meta Ads Manager",
+        "Google Ads & PMax",
+        "Google Tag Manager (CAPI)",
+        "Looker Studio",
+        "TikTok Ads",
+        "YouTube Studio"
       ],
-      "stats": "25+ Enterprise Brand Blueprints",
-      "pageUrl": "/services/branding.html",
-      "image": "https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      "id": "graphics-design",
-      "slug": "graphics-design",
-      "title": "Graphics Design & Visual Identity",
-      "subtitle": "High-Impact Visual Systems, Packaging & UI/UX",
-      "icon": "fa-bezier-curve",
-      "badge": "Creative Direction",
-      "description": "Building enduring visual systems that command instant attention. From bespoke logo marks and typography hierarchies to luxury packaging, marketing collateral, and digital UI/UX design.",
-      "deliverables": [
-        "Brand Identity Guidelines & Logo Marks",
-        "UI/UX Web & Mobile App Interface Design",
-        "Luxury Packaging & Print Collateral",
-        "Social Media Creative Templates & Key Visuals",
-        "Marketing Decks & Corporate Pitch Kits"
-      ],
-      "tools": [
-        "Figma",
-        "Adobe Illustrator",
-        "Photoshop",
-        "InDesign"
-      ],
-      "stats": "300+ Brand Assets Designed",
-      "pageUrl": "/services/graphics-design.html",
-      "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      "id": "web-development",
-      "slug": "web-development",
-      "title": "Web Design & Development",
-      "subtitle": "High-Performance Modern Web Architecture & E-Commerce",
-      "icon": "fa-code",
-      "badge": "Full-Stack Engineering",
-      "description": "Architecting blazing-fast, responsive websites and web applications tailored for maximum conversion, rock-solid security, and top-tier SEO/AEO indexing with 95+ Google PageSpeed scores.",
-      "deliverables": [
-        "Custom Responsive Corporate Websites",
-        "Headless & Full-Stack E-Commerce Platforms",
-        "Interactive Landing Pages with Ultra-High Conversion",
-        "Custom CMS Integration & API Architecture",
-        "Core Web Vitals & Speed Optimization (95+ score)"
-      ],
-      "tools": [
-        "React",
-        "Next.js",
-        "Tailwind CSS",
-        "WordPress",
-        "Node.js",
-        "Shopify"
-      ],
-      "stats": "15+ Live Web Portals Deployed",
-      "pageUrl": "/services/web-development.html",
-      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      "id": "social-media-marketing",
-      "slug": "social-media-marketing",
-      "title": "Social Media Marketing (SMM)",
-      "subtitle": "Data-Driven Content Strategy, Viral Campaigns & Community",
-      "icon": "fa-hashtag",
-      "badge": "Omnichannel Growth",
-      "description": "Transforming passive followers into brand evangelists through magnetic storytelling, thumb-stopping short-form video content, proactive community management, and paid social scaling.",
-      "deliverables": [
-        "Omnichannel Social Content Architecture",
-        "High-Converting Viral Reels & TikTok Campaigns",
-        "Community Management & Influencer Collaborations",
-        "Meta Paid Advertising (Advantage+ Scaling)",
-        "Monthly Engagement & Audience Growth Analytics"
-      ],
-      "tools": [
-        "Meta Business Suite",
-        "CapCut",
-        "Sprout Social",
-        "Canva Pro",
-        "TikTok Ads"
-      ],
-      "stats": "2M+ Organic Video Views Delivered",
-      "pageUrl": "/services/social-media-marketing.html",
+      "stats": "5.4x Blended ROAS Achieved",
+      "pageUrl": "/services/social-media-google-marketing",
       "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80"
     },
     {
-      "id": "photoshoot-videography",
-      "slug": "photoshoot-videography",
-      "title": "Photoshoot & Videography",
-      "subtitle": "Commercial Cinematography, Product & Brand Storytelling",
-      "icon": "fa-video",
-      "badge": "Studio & Field Production",
-      "description": "Capturing world-class commercial visual assets with cinematic color grading, professional lighting, and dynamic direction for broadcast TVCs, luxury product catalogs, and social reels.",
+      "id": "branding-strategy",
+      "slug": "branding-strategy",
+      "title": "Branding & Strategy",
+      "subtitle": "Strategic Brand Positioning, Identity Architecture & Market Authority",
+      "icon": "fa-fingerprint",
+      "badge": "Pillar 02 • Brand Strategy",
+      "description": "Forging iconic corporate identities that command market prestige, enable pricing power, and foster enduring customer loyalty. From market white-space analysis and positioning to trademarkable naming, identity guidelines, and strategic brand narrative.",
       "deliverables": [
-        "Commercial TVCs & Cinematic Brand Documentaries",
-        "High-End E-Commerce & Editorial Product Photography",
-        "Executive Headshots & Corporate Culture Features",
-        "Event Highlight Aftermovies & Multi-Camera Recaps",
-        "High-Retention Vertical Video Reels & Shorts"
+        "Market Positioning & Competitive White-Space Mapping",
+        "Brand Architecture & Sub-Brand Portfolio Strategy",
+        "Comprehensive Corporate Identity Manual & Guidelines",
+        "Strategic Brand Voice, Storytelling & Messaging Framework",
+        "Executive Stationery, Collateral & Packaging Guidelines",
+        "Brand Equity Audits & Ongoing Evolution Governance"
       ],
       "tools": [
-        "Sony FX Cinema Line",
-        "DaVinci Resolve",
-        "Premiere Pro",
-        "Gimbal & Drone"
+        "Brand Matrix",
+        "Miro Architecture",
+        "Figma Design Systems",
+        "Adobe Creative Cloud",
+        "Audience Persona Labs"
       ],
-      "stats": "50+ Commercial Shoots Directed",
-      "pageUrl": "/services/photoshoot-videography.html",
-      "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80"
+      "stats": "+340% Brand Value & Recall Lift",
+      "pageUrl": "/services/branding-strategy",
+      "image": "https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80"
     },
     {
-      "id": "event-activation",
-      "slug": "event-activation",
-      "title": "Event Activation & Exhibition",
-      "subtitle": "Experiential Marketing, B2B Trade Expos & Brand Launches",
-      "icon": "fa-champagne-glasses",
-      "badge": "Experiential Marketing",
-      "description": "Designing unforgettable live brand experiences, immersive exhibition booths, trade show installations, and corporate gala activations that drive deep emotional brand connection and qualified press buzz.",
+      "id": "graphics-design-visuals",
+      "slug": "graphics-design-visuals",
+      "title": "Graphics Design & Visuals",
+      "subtitle": "High-End Visual Assets, Advertising Creatives, Print & 3D Renders",
+      "icon": "fa-bezier-curve",
+      "badge": "Pillar 03 • Visual Direction",
+      "description": "Crafting breathtaking visual systems that captivate attention across digital and physical touchpoints. From high-converting digital advertising graphics and social templates to luxury packaging die-lines, retail POS displays, and 3D product visualizations.",
       "deliverables": [
-        "3D Exhibition Booth Design & Custom Fabrication",
-        "Experiential Consumer Pop-Ups & Brand Launches",
-        "Corporate Conferences, Galas & Award Ceremonies",
-        "Interactive Tech Activations (AR / Live Touchpoints)",
-        "On-Ground Lead Generation & Press Coordination"
+        "High-Converting Paid Social Ad Creative Suites",
+        "Luxury Product Packaging & Print Die-Line Engineering",
+        "3D Photorealistic Product Renders & Spatial Mockups",
+        "Corporate Presentation Decks & Sales Collateral",
+        "Vector Iconography & Custom Brand Illustration Systems",
+        "Large-Format Retail POS & Exhibition Graphics"
       ],
       "tools": [
-        "3ds Max",
-        "SketchUp",
-        "On-Ground Production",
-        "Spatial Audio & Lighting"
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "Figma",
+        "Blender 3D",
+        "Adobe InDesign"
       ],
-      "stats": "25+ Major Expos & Activations Executed",
-      "pageUrl": "/services/event-activation.html",
-      "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80"
+      "stats": "500+ High-Impact Visual Assets Produced",
+      "pageUrl": "/services/graphics-design-visuals",
+      "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80"
     },
     {
-      "id": "google-ads",
-      "slug": "google-ads",
-      "title": "Google Ads & Intent Scaling",
-      "subtitle": "Precision Search, Performance Max & YouTube Funnels",
-      "icon": "fa-chart-line",
-      "badge": "Paid Media Precision",
-      "description": "Capturing high-intent commercial buyers at the exact moment they search. Structured multi-tier Search, Performance Max, Display Retargeting, and YouTube discovery funnels optimized for maximum ROAS.",
+      "id": "web-design-development",
+      "slug": "web-design-development",
+      "title": "Web Design & Development",
+      "subtitle": "Ultra-Fast Custom Websites, Modern Web Apps & High-Converting UX/UI",
+      "icon": "fa-code",
+      "badge": "Pillar 04 • Web Architecture",
+      "description": "Engineering lightning-fast digital experiences that turn visitors into loyal clients. Custom front-end and back-end development with clean code, sub-second load times, responsive mobile-first layouts, and enterprise security.",
       "deliverables": [
-        "High-Intent Google Search Ads Campaigns",
-        "Performance Max (PMax) Full-Funnel Scaling",
-        "YouTube In-Stream Video Conversion Campaigns",
-        "Google Merchant Center & Smart Shopping Setup",
-        "Granular GA4 Conversion Tracking & Attribution"
+        "High-Conversion E-Commerce & Corporate Websites",
+        "Mobile-First Responsive Design & Modern UI/UX Architecture",
+        "Sub-Second Performance Optimization (95+ Lighthouse Score)",
+        "Custom Lead Generation Engines & Interactive Calculators",
+        "Headless CMS & Intuitive Admin Content Management",
+        "Enterprise Cloud Deployment, SSL & Continuous Monitoring"
       ],
       "tools": [
-        "Google Ads",
-        "Google Merchant Center",
-        "GA4",
-        "Google Tag Manager"
+        "Tailwind CSS",
+        "Modern JavaScript (ES6+)",
+        "Node.js & Express",
+        "PHP & MySQL",
+        "WordPress & Headless CMS",
+        "Git CI/CD"
       ],
-      "stats": "4.8x–12.4x Target Return on Ad Spend",
-      "pageUrl": "/services/google-ads.html",
-      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+      "stats": "0.7s Average Page Speed • 99.9% Uptime",
+      "pageUrl": "/services/web-design-development",
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
     },
     {
-      "id": "seo-aeo",
-      "slug": "seo-aeo",
-      "title": "SEO & AEO (AI Engine Optimization)",
-      "subtitle": "Top-Tier Google SERP & Direct AI Engine Citations",
-      "icon": "fa-robot",
-      "badge": "Search & Generative AI (GEO)",
-      "description": "Dominating both traditional search engines (Google, Bing) and next-generation AI answer engines (ChatGPT, Perplexity, Claude, Gemini). Technical site auditing, keyword clustering, and AEO entity grounding.",
-      "deliverables": [
-        "On-Page, Technical & Semantic Keyword Optimization",
-        "AEO / GEO Optimization (ChatGPT, Perplexity, Claude)",
-        "Standardized /llms.txt Context & AI Bot Directives",
-        "Schema.org Knowledge Graph & Entity Association",
-        "High-Authority Digital PR Backlink Acquisition"
-      ],
-      "tools": [
-        "Ahrefs",
-        "Semrush",
-        "Google Search Console",
-        "Screaming Frog",
-        "Schema Builder"
-      ],
-      "stats": "100% AI Search Grounding Score",
-      "pageUrl": "/services/seo-aeo.html",
-      "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      "id": "public-relations",
-      "slug": "public-relations",
-      "title": "PR (Public Relations) & Media Outreach",
-      "subtitle": "Mainstream Press Coverage, Media Placements & Authority",
+      "id": "pr-media-outreach",
+      "slug": "pr-media-outreach",
+      "title": "PR & Media Outreach",
+      "subtitle": "National Press Coverage, Influencer Relations & Crisis Communications",
       "icon": "fa-bullhorn",
-      "badge": "Brand Reputation & Media",
-      "description": "Amplifying executive thought leadership, securing organic tier-1 news publication coverage, distributing authoritative press releases, and managing comprehensive corporate reputation and crisis communications.",
+      "badge": "Pillar 05 • Public Relations",
+      "description": "Positioning your brand at the forefront of national and industry conversations. We orchestrate press conferences, tier-1 media placements, thought-leadership features, blogger collaborations, and strategic influencer outreach.",
       "deliverables": [
-        "Strategic National & International Press Release Distribution",
-        "Editorial Placements in Tier-1 Business & Lifestyle Media",
-        "Executive Media Training & Thought Leadership By-lines",
-        "Crisis Communication & Reputation Defense Strategies",
-        "Brand Press Conferences & Journalist Relationship Management"
+        "Tier-1 National News & Digital Press Releases",
+        "Strategic Influencer & Celebrity Collaboration Campaigns",
+        "Executive Thought Leadership & CEO Feature Articles",
+        "Press Conference Logistics & Media Kit Production",
+        "Reputation Management & Crisis Communication Playbooks",
+        "Real-Time Media Monitoring & Sentiment Analysis"
       ],
       "tools": [
-        "Media Wire Networks",
-        "Press Distribution",
-        "PR Monitoring",
-        "Journalist Network"
+        "PR Distribution Wire",
+        "National Media Contacts Matrix",
+        "Influencer CRM Lab",
+        "Crisis Response Protocols",
+        "Media Telemetry Tracking"
       ],
-      "stats": "40+ Mainstream Media Features",
-      "pageUrl": "/services/public-relations.html",
+      "stats": "45M+ Earned Media Reach Delivered",
+      "pageUrl": "/services/pr-media-outreach",
       "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "event-activation-exhibition",
+      "slug": "event-activation-exhibition",
+      "title": "Event Activation & Exhibition",
+      "subtitle": "Turnkey Experiential Activations, 3D Exhibition Stalls & Launch Galas",
+      "icon": "fa-champagne-glasses",
+      "badge": "Pillar 06 • Experiential Marketing",
+      "description": "Transforming physical spaces into unforgettable brand experiences. From 3D exhibition booth architectural design and fabrication to experiential consumer pop-ups, VIP launch galas, and interactive engagement setups.",
+      "deliverables": [
+        "Custom 3D Exhibition Pavilion & Booth Design",
+        "Turnkey Physical Fabrication & On-Site Installation QA",
+        "Experiential Brand Activations & Interactive Pop-Up Zones",
+        "Corporate Launch Events, Gala Dinners & VIP Receptions",
+        "Audio-Visual, Dynamic Lighting & LED Display Management",
+        "Post-Event Footfall Analytics & Attendee Lead Generation"
+      ],
+      "tools": [
+        "3D Spatial AutoCAD / SketchUp",
+        "Keynote Presentation Tech",
+        "Lighting & Sound Engineering",
+        "Badge Scanning QR Tech",
+        "Fabrication Quality QA"
+      ],
+      "stats": "100k+ Engaged Footfall Across 25+ Expos",
+      "pageUrl": "/services/event-activation-exhibition",
+      "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80"
     }
   ],
   "webProjects": [

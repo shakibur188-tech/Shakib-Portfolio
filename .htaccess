@@ -33,16 +33,25 @@ Options -Indexes
     RewriteRule ^offers/?$ offers/index.html [L,QSA]
     RewriteRule ^offers/index/?$ offers/index.html [L,QSA]
 
-    # 6. Direct explicit routing for Services subpages
-    RewriteRule ^services/branding/?$ services/branding.html [L,QSA]
-    RewriteRule ^services/graphics-design/?$ services/graphics-design.html [L,QSA]
-    RewriteRule ^services/web-development/?$ services/web-development.html [L,QSA]
-    RewriteRule ^services/social-media-marketing/?$ services/social-media-marketing.html [L,QSA]
-    RewriteRule ^services/photoshoot-videography/?$ services/photoshoot-videography.html [L,QSA]
-    RewriteRule ^services/event-activation/?$ services/event-activation.html [L,QSA]
-    RewriteRule ^services/google-ads/?$ services/google-ads.html [L,QSA]
-    RewriteRule ^services/seo-aeo/?$ services/seo-aeo.html [L,QSA]
-    RewriteRule ^services/public-relations/?$ services/public-relations.html [L,QSA]
+    # 6. Direct explicit routing for Services subpages (6 Core Disciplines)
+    RewriteRule ^services/social-media-google-marketing/?$ services/social-media-google-marketing.html [L,QSA]
+    RewriteRule ^services/branding-strategy/?$ services/branding-strategy.html [L,QSA]
+    RewriteRule ^services/graphics-design-visuals/?$ services/graphics-design-visuals.html [L,QSA]
+    RewriteRule ^services/web-design-development/?$ services/web-design-development.html [L,QSA]
+    RewriteRule ^services/pr-media-outreach/?$ services/pr-media-outreach.html [L,QSA]
+    RewriteRule ^services/event-activation-exhibition/?$ services/event-activation-exhibition.html [L,QSA]
+
+    # Legacy 301 Redirects for Old URLs
+    RewriteRule ^services/branding/?$ /services/branding-strategy [R=301,L]
+    RewriteRule ^services/graphics-design/?$ /services/graphics-design-visuals [R=301,L]
+    RewriteRule ^services/web-development/?$ /services/web-design-development [R=301,L]
+    RewriteRule ^services/social-media-marketing/?$ /services/social-media-google-marketing [R=301,L]
+    RewriteRule ^services/google-ads/?$ /services/social-media-google-marketing [R=301,L]
+    RewriteRule ^services/seo-aeo/?$ /services/web-design-development [R=301,L]
+    RewriteRule ^services/photoshoot-videography/?$ /services/graphics-design-visuals [R=301,L]
+    RewriteRule ^services/public-relations/?$ /services/pr-media-outreach [R=301,L]
+    RewriteRule ^services/event-activation/?$ /services/event-activation-exhibition [R=301,L]
+
     RewriteRule ^services/?$ services/index.html [L,QSA]
     RewriteRule ^services/index/?$ services/index.html [L,QSA]
 
