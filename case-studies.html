@@ -336,7 +336,7 @@
        2. MASTER CASE STUDIES GRID
        ========================================================================= -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-    <div id="allCaseStudiesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div id="allCaseStudiesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Hydrated dynamically from data/content.json -->
     </div>
     <div id="noResultsMsg" class="hidden text-center py-20 text-sm text-[#7EADA3] font-bold">
@@ -929,35 +929,24 @@
       if (noResults) noResults.classList.add('hidden');
 
       grid.innerHTML = filtered.map(cs => {
-        // Key verified metric boxes
-        const metricsHtml = (cs.metrics || []).slice(0, 3).map(m => `
-          <div class="p-2.5 rounded-xl bg-[#041B21]/90 backdrop-blur-md border border-[#20E1B2]/25 shadow-2xs">
-            <div class="text-[9.5px] uppercase font-bold text-[#7EADA3] flex items-center gap-1">
-              <i class="fa-solid fa-arrow-trend-up text-[#20E1B2] text-[9px]"></i>
-              <span>Impact</span>
-            </div>
-            <div class="text-xs sm:text-sm font-black text-white mt-0.5 truncate" title="${escapeHtml(m)}">${escapeHtml(m)}</div>
-          </div>
-        `).join('');
-
         // Bullet points for deliverables / capabilities
         const pointsHtml = (cs.deliverables || []).map(p => `
-          <li class="flex items-start gap-2.5 text-xs sm:text-sm text-[#D1F5EE] leading-relaxed">
-            <i class="fa-solid fa-circle-check text-[#20E1B2] text-xs mt-1 shrink-0"></i>
+          <li class="flex items-center gap-2.5 text-xs sm:text-[13px] text-[#D1F5EE] leading-snug">
+            <i class="fa-solid fa-circle-check text-[#20E1B2] text-xs shrink-0"></i>
             <span>${escapeHtml(p)}</span>
           </li>
         `).join('');
 
         return `
-          <div onclick="if (!event.target.closest('button, a')) window.location.href='/case-study.html?id=${encodeURIComponent(cs.id)}'" class="h-full flex flex-col justify-between group morphy-card glass-card p-6 sm:p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:border-[#20E1B2] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer relative">
+          <div onclick="if (!event.target.closest('button, a')) window.location.href='/case-study.html?id=${encodeURIComponent(cs.id)}'" class="flex flex-col justify-between group morphy-card glass-card p-5 sm:p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:border-[#20E1B2] hover:-translate-y-1 transition-all duration-300 cursor-pointer relative">
             <div>
               <!-- Top Metadata Row: Category & Client Pill -->
-              <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
-                <span class="px-3 py-1 rounded-full bg-[#20E1B2]/15 text-[#20E1B2] font-extrabold text-[11px] border border-[#20E1B2]/30 uppercase tracking-wider shadow-2xs">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-0.5 rounded-full bg-[#20E1B2]/15 text-[#20E1B2] font-extrabold text-[10.5px] border border-[#20E1B2]/30 uppercase tracking-wider shadow-2xs">
                   ${escapeHtml(cs.category || 'Strategic Growth')}
                 </span>
-                <span class="px-3 py-1 rounded-full bg-[#041B21]/90 backdrop-blur-md border border-[#D1F5EE]/15 text-[11px] font-bold text-[#D1F5EE] flex items-center gap-1.5 shadow-2xs">
-                  <i class="fa-solid fa-building text-[#20E1B2] text-[10px]"></i>
+                <span class="px-2.5 py-0.5 rounded-full bg-[#041B21]/90 backdrop-blur-md border border-[#D1F5EE]/15 text-[10.5px] font-bold text-[#D1F5EE] flex items-center gap-1.5 shadow-2xs">
+                  <i class="fa-solid fa-building text-[#20E1B2] text-[9.5px]"></i>
                   <span>${escapeHtml(cs.client)}</span>
                   <span class="text-[#64748B]">•</span>
                   <span class="text-[#20E1B2] font-extrabold">${escapeHtml(cs.year || '2026')}</span>
@@ -965,45 +954,35 @@
               </div>
 
               <!-- Headline (Title) -->
-              <h3 class="text-xl sm:text-2xl font-black text-white group-hover:text-[#20E1B2] transition-colors tracking-tight leading-snug mb-3">
+              <h3 class="text-lg sm:text-xl font-black text-white group-hover:text-[#20E1B2] transition-colors tracking-tight leading-snug mb-3.5">
                 <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="hover:text-[#20E1B2] text-inherit no-underline">${escapeHtml(cs.title)}</a>
               </h3>
 
-              <!-- Brief Subtitle / Overview -->
-              <p class="text-xs sm:text-sm text-[#A7E7DC] leading-relaxed mb-5">
-                ${escapeHtml(cs.tagline || cs.challenge || '')}
-              </p>
-
-              <!-- Impact Metrics Strip -->
-              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mb-5">
-                ${metricsHtml}
-              </div>
-
               <!-- Core Execution Points / Deliverables List -->
-              <div class="mb-6 pt-4 border-t border-[#20E1B2]/15">
-                <div class="text-[11px] uppercase tracking-wider font-extrabold text-[#7EADA3] mb-3 flex items-center gap-1.5">
+              <div class="mb-5 pt-3 border-t border-[#20E1B2]/15">
+                <div class="text-[10px] uppercase tracking-wider font-extrabold text-[#7EADA3] mb-2.5 flex items-center gap-1.5">
                   <i class="fa-solid fa-list-check text-[#20E1B2] text-xs"></i>
                   <span>Core Execution Points &amp; Deliverables:</span>
                 </div>
-                <ul class="space-y-2.5">
+                <ul class="space-y-2">
                   ${pointsHtml}
                 </ul>
               </div>
             </div>
 
             <!-- Card Bottom Action: Prominent Details Button -->
-            <div class="pt-5 border-t border-[#20E1B2]/20 flex items-center justify-between gap-3 mt-auto">
-              <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="btn-aesthetic-primary text-xs py-3 px-5 flex-1 justify-center shadow-md">
+            <div class="pt-4 border-t border-[#20E1B2]/20 flex items-center justify-between gap-2.5 mt-auto">
+              <a href="/case-study.html?id=${encodeURIComponent(cs.id)}" class="btn-aesthetic-primary text-xs py-2.5 px-4 flex-1 justify-center shadow-md">
                 <span>View Case Study Details</span>
                 <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
               </a>
 
               <div class="flex items-center gap-2 shrink-0">
-                <button type="button" onclick="event.stopPropagation(); openCaseStudyModal('${escapeHtml(cs.id)}')" class="px-3 py-2.5 rounded-xl bg-[#0B3844]/60 border border-[#20E1B2]/25 text-xs font-bold text-[#7EADA3] hover:text-[#20E1B2] hover:border-[#20E1B2] transition-colors" title="Quick Summary Preview">
+                <button type="button" onclick="event.stopPropagation(); openCaseStudyModal('${escapeHtml(cs.id)}')" class="px-3 py-2 rounded-xl bg-[#0B3844]/60 border border-[#20E1B2]/25 text-xs font-bold text-[#7EADA3] hover:text-[#20E1B2] hover:border-[#20E1B2] transition-colors" title="Quick Summary Preview">
                   <span>Preview</span>
                 </button>
                 ${cs.liveUrl ? `
-                  <a href="${escapeHtml(cs.liveUrl)}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="w-10 h-10 rounded-xl bg-[#0B3844]/60 border border-[#20E1B2]/25 text-[#7EADA3] hover:text-[#20E1B2] hover:border-[#20E1B2] flex items-center justify-center transition-colors" title="View Live Portal">
+                  <a href="${escapeHtml(cs.liveUrl)}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="w-9 h-9 rounded-xl bg-[#0B3844]/60 border border-[#20E1B2]/25 text-[#7EADA3] hover:text-[#20E1B2] hover:border-[#20E1B2] flex items-center justify-center transition-colors" title="View Live Portal">
                     <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                   </a>
                 ` : ''}
