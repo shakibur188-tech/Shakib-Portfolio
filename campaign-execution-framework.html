@@ -341,21 +341,83 @@
 
   <!-- 2. HERO DIRECTORY HEADER -->
   <section class="relative pt-28 pb-10 sm:pt-36 sm:pb-14 md:pt-40 md:pb-16 overflow-hidden">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
+      <!-- 2-Column Hero: Text on Left, Video Placeholder on Right -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-12 sm:mb-16">
+        
+        <!-- Left: Text Content -->
+        <div class="lg:col-span-7 text-left space-y-4 sm:space-y-5">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#20E1B2]/10 border border-[#20E1B2]/25 text-[#20E1B2] text-xs font-black uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-[#20E1B2] animate-pulse"></span>
+            <span>Strategic Framework</span>
+          </div>
 
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12]">
+            Campaign Execution Framework
+          </h1>
 
-      <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.12] mb-4">
-        Campaign Execution Framework
-      </h1>
+          <h3 class="text-lg sm:text-2xl font-extrabold text-[#20E1B2] tracking-tight">
+            From Strategic Planning to Successful Campaign Delivery
+          </h3>
 
-      <h3 class="text-lg sm:text-2xl md:text-3xl font-extrabold text-[#20E1B2] tracking-tight mb-6">
-        From Strategic Planning to Successful Campaign Delivery
-      </h3>
+          <p class="text-xs sm:text-sm md:text-base text-[#D1F5EE] leading-relaxed opacity-95">
+            Every successful campaign starts with a clear business objective and ends with measurable results. My approach combines strategic planning, financial feasibility, partnership development, creative execution, integrated marketing, and continuous performance optimization to deliver a well-coordinated campaign from start to finish.
+          </p>
 
-      <p class="text-xs sm:text-sm md:text-base text-[#D1F5EE] leading-relaxed max-w-3xl mx-auto mb-10 opacity-95">
-        Every successful campaign starts with a clear business objective and ends with measurable results. My approach combines strategic planning, financial feasibility, partnership development, creative execution, integrated marketing, and continuous performance optimization to deliver a well-coordinated campaign from start to finish.
-      </p>
+          <div class="pt-2 flex flex-wrap items-center gap-3">
+            <a href="#phase-1" class="btn-morphy-primary text-xs py-2.5 px-5 shadow-lg shadow-[#20E1B2]/20">
+              <span>Explore 6 Phases</span>
+              <i class="fa-solid fa-arrow-down text-[10px] ml-1"></i>
+            </a>
+            <a href="/consultation" class="px-4 py-2.5 rounded-full bg-[#06232B] hover:bg-[#20E1B2]/10 border border-[#D1F5EE]/20 hover:border-[#20E1B2] text-xs font-bold text-white transition-all text-center">
+              <span>Book Strategy Session</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Video Showcase Placeholder -->
+        <div class="lg:col-span-5">
+          <div id="videoContainer" class="morphy-card p-3 sm:p-4 rounded-[28px] bg-[#0B3844]/40 backdrop-blur-xl border-2 border-[#20E1B2]/30 shadow-2xl shadow-[#20E1B2]/15 relative group overflow-hidden">
+            
+            <!-- 16:9 Video Aspect Ratio Frame -->
+            <div class="relative aspect-video w-full rounded-[20px] overflow-hidden bg-[#041B21] border border-white/10 flex items-center justify-center">
+              
+              <!-- Video Background Thumbnail / Poster -->
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Campaign Framework Video Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-60">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/40"></div>
+
+              <!-- Top Video Badges -->
+              <div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+                <span class="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-[10px] font-extrabold uppercase tracking-wider flex items-center gap-1.5">
+                  <i class="fa-solid fa-circle-play text-[#20E1B2] text-[10px]"></i>
+                  <span>Framework Walkthrough</span>
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-[#20E1B2]/20 backdrop-blur-md border border-[#20E1B2]/40 text-[#20E1B2] text-[10px] font-black">
+                  4K Video
+                </span>
+              </div>
+
+              <!-- Central Pulsing Glowing Play Button -->
+              <div class="relative z-10 flex flex-col items-center gap-2 cursor-pointer">
+                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-[#20E1B2] to-[#0D9488] text-[#041B21] flex items-center justify-center text-lg sm:text-xl shadow-xl shadow-[#20E1B2]/40 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-play ml-1"></i>
+                </div>
+                <span class="text-[11px] font-extrabold text-white tracking-wider uppercase drop-shadow-md">Watch Strategic Breakdown</span>
+              </div>
+
+              <!-- Bottom Video Caption -->
+              <div class="absolute bottom-3 left-3 right-3 text-left pointer-events-none">
+                <div class="text-[9.5px] font-bold text-[#20E1B2] uppercase tracking-wider">Executive Presentation</div>
+                <div class="text-xs font-black text-white truncate">How I Orchestrate &amp; Deliver Campaigns</div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
 
       <!-- 6-PHASE INTERACTIVE PROCESS ICON GRAPH -->
       <div class="p-6 sm:p-8 rounded-3xl morphy-card glass-card border border-[#20E1B2]/30 shadow-2xl relative overflow-hidden">
