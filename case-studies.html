@@ -15,12 +15,45 @@
   <!-- Font Awesome 6.5.1 CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Compiled Ultra-Fast Standalone CSS -->
-  <link rel="stylesheet" href="/styles.min.css?v=4.0">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palette: {
+              olive: '#20E1B2',
+              forest: '#0B3844',
+              slate: '#20E1B2',
+              mist: '#68A89C',
+              stone: 'rgba(209, 245, 238, 0.15)',
+              emerald: '#20E1B2',
+              brunswick: '#0B3844',
+              polar: '#D1F5EE',
+              canvas: '#041B21',
+              card: 'rgba(8, 40, 48, 0.42)'
+            },
+            canvas: '#041B21'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            bengali: ['"Hind Siliguri"', '"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
 
-  <!-- Custom Unified Aesthetic Stylesheet -->
-  <link rel="stylesheet" href="/styles.min.css?v=4.0">
-  <link rel="stylesheet" href="styles.css?v=5.0">
+  <!-- Modern Morphy Design Stylesheet -->
+  <link rel="stylesheet" href="/styles.css?v=5.0">
+
+  
+
+  
+  
   <!-- Guaranteed Mobile Navigation Contrast & Visibility (Anti-Cache) -->
   <style id="mobile-nav-fix">
     #navbar {
@@ -279,7 +312,7 @@
             <input type="text" id="csSearchInput" placeholder="Search by client, title, keyword..." class="w-full pl-9 pr-4 py-2 rounded-xl bg-[#06232B] border border-[#20E1B2]/20 text-xs text-white focus:outline-none focus:border-[#20E1B2]">
           </div>
           <div class="text-xs text-[#7EADA3] font-bold">
-            Showing <span id="csVisibleCount" class="text-white font-black">7</span> case studies
+            Showing <span id="csVisibleCount" class="text-white font-black">8</span> case studies
           </div>
         </div>
 
