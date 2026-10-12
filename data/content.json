@@ -507,29 +507,31 @@
       "slug": "campaign-execution-framework"
     },
     {
-      "id": "worknook-coworking",
-      "title": "WorkNook - Coworking Space & Flexible Desk Reservation System",
-      "client": "WorkNook Global",
-      "category": "Web design & Development",
-      "year": "2025",
-      "tagline": "Engineering an end-to-end coworking reservation system with sub-second floorplan mapping and instant stripe checkout.",
-      "challenge": "Legacy desk reservation portals suffered from sluggish 4.2s load times, confusing seating layouts, and a 68% cart abandonment rate on mobile devices.",
-      "solution": "Architected an ultra-fast Jamstack web portal with interactive SVG floorplan desk selection, real-time availability sync, and seamless 1-click mobile checkout.",
+      "id": "kitchen-cabinet-lead-generation",
+      "title": "Kitchen Cabinet Lead Generation — Campaign Workflow",
+      "client": "Premium Living Interiors",
+      "category": "Social Media & Google Marketing",
+      "year": "2026",
+      "tagline": "Performance-driven lead generation strategy built around a strong market insight, a 7-day completion offer, and targeted video ads.",
+      "challenge": "The kitchen cabinet market was competitive with businesses offering similar products. Capturing attention and generating leads at scale required standing out from competitors and overcoming low conversion rates.",
+      "solution": "Introduced a bold 7-day completion offer with high-engagement video ads across Meta (Facebook & Instagram), converting inquiries with streamlined sales qualification.",
       "metrics": [
-        "+310% Reservation Volume",
-        "0.7s Average Page Speed",
-        "4.9/5 User Rating",
-        "-48% Drop-off Rate"
+        "140+ Leads Generated",
+        "৳78.34 Cost Per Lead",
+        "28 Clients Secured",
+        "10 Days Conversion Period"
       ],
       "deliverables": [
-        "Interactive Floorplan UI",
-        "Real-Time Booking API",
-        "Stripe Multi-Currency",
-        "Mobile Responsive App"
+        "01. Market Research & Competitor Audit",
+        "02. Bold 7-Day Completion Offer",
+        "03. Video Ad Creative Strategy",
+        "04. Meta (FB & IG) Paid Acquisition",
+        "05. Lead Flow Optimization (৳78.34 CPL)",
+        "06. Rapid Sales Conversion (28 Clients)"
       ],
-      "coverImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
-      "liveUrl": "https://hotel.shakibur.info",
-      "slug": "worknook-coworking"
+      "coverImage": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80",
+      "liveUrl": "#",
+      "slug": "kitchen-cabinet-lead-generation"
     },
     {
       "id": "luxora-furniture",
