@@ -587,13 +587,13 @@
     },
     {
       "id": "hotel-sarina",
-      "title": "Hotel Sarina Dhaka - 5-Star Direct Booking & Banquet Reservation Suite",
+      "title": "Room Promotional Creative",
       "client": "Hotel Sarina Dhaka",
-      "category": "Web design & Development",
+      "category": "Graphics Design & Visuals",
       "year": "2024",
-      "tagline": "Bypassing OTA commission fees with a sub-second direct guest booking engine, culinary event ticketing, and VIP loyalty portal.",
-      "challenge": "Over 75% of reservations flowed through third-party OTAs, incurring 18-22% commission fees and creating fragmented guest communication.",
-      "solution": "Designed and deployed a luxury direct booking platform with live date-picker room availability, banquet event inquiries, and instant SMS voucher delivery.",
+      "tagline": "High-converting luxury hospitality advertising creatives blending premium typography, warm golden illumination, and persuasive psychological triggers to maximize direct staycations.",
+      "challenge": "Hospitality social feeds are cluttered with generic bedroom photos that fail to evoke emotion, resulting in low ad click-through rates and heavy reliance on discount OTA aggregators.",
+      "solution": "Developed an elite suite of 14 tailored room promotional creatives built around seasonal escapism, business travel comfort, romantic getaways, and urgent booking incentives.",
       "metrics": [
         "+340% Direct Bookings",
         "৳ 4.8M Direct Revenue",
@@ -601,12 +601,12 @@
         "99.9% Uptime High-Load"
       ],
       "deliverables": [
-        "Direct Reservation Engine",
-        "Banquet Event Inquiries",
-        "Culinary Ticket Portal",
-        "Guest SMS Automation"
+        "Luxury Visual Hierarchy & Framing",
+        "Emotional Staycation Hooks",
+        "Warm Hospitality Color Harmony",
+        "Persuasive Promotional Typography"
       ],
-      "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "coverImage": "/assets/case-studies/hotel-sarina/refresh-recharge-1.png",
       "liveUrl": "https://hotel.shakibur.info",
       "slug": "hotel-sarina"
     },
