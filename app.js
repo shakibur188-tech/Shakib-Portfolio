@@ -7,15 +7,12 @@
 
 let dynamicContent = null;
 let currentTypewriterTitles = [
+  'Social Media & Google Marketing',
   'Brand Strategy & Corporate Identity Architecture',
   'Graphics Design & Visual Systems',
   'High-Performance Web Design & Full-Stack Development',
-  'Data-Driven Social Media Marketing (SMM)',
-  'Commercial Photoshoot & Cinematic Videography',
-  'Experiential Event Activation & 3D Exhibitions',
-  'High-Conversion Google Ads & Performance Max',
-  'SEO & Generative AI Engine Optimization (AEO)',
-  'Strategic Public Relations (PR) & Mainstream Media'
+  'Strategic Public Relations (PR) & Mainstream Media',
+  'Experiential Event Activation & 3D Exhibitions'
 ];
 
 let currentModalService = null;
@@ -268,15 +265,12 @@ function getEmergencyFallbackData() {
       bio: "Strategic Lead & Full-Stack Digital Architect with the authority and vision to make decisive calls, architect high-converting branding systems, engineer modern web platforms, and drive commercial growth."
     },
     services: [
-      { id: 'branding', slug: 'branding', title: 'Branding & Brand Strategy', badge: 'Core Pillar 01', subtitle: 'Command High Valuation & Brand Equity', description: 'Comprehensive positioning frameworks, brand books, trademarkable naming, and visual identity systems.', icon: 'fa-shield-halved', deliverables: ['Brand Positioning Blueprint', 'Design Language & Master Guidelines', 'Corporate Stationery & Typography System'], points: ['3.5x average lift in brand valuation', '100% intellectual property ownership', 'Complete corporate identity kit'], tools: ['Figma', 'Illustrator', 'Notion Strategy'] },
-      { id: 'graphics-design', slug: 'graphics-design', title: 'Graphics Design & Visual Collateral', badge: 'Core Pillar 02', subtitle: 'Ultra-High Fidelity Visual Communication', description: 'Pixel-perfect digital assets, packaging architecture, advertising design, and corporate editorial decks.', icon: 'fa-pen-ruler', deliverables: ['Luxury Packaging Mockups', 'Investor Pitch Decks', 'Multi-channel Ad Creatives'], points: ['Publication-ready print assets', 'Vector scalable typography', 'Multi-channel social templates'], tools: ['Photoshop', 'Illustrator', 'InDesign'] },
-      { id: 'web-development', slug: 'web-development', title: 'Web Design & Full-Stack Engineering', badge: 'Core Pillar 03', subtitle: 'Blazing-Fast High-Conversion Platforms', description: 'Custom responsive web portals, robust backend integrations, Jamstack architectures, and fluid interactive animations.', icon: 'fa-code', deliverables: ['Full-Stack Web Architecture', 'Custom Headless CMS Engine', 'Core Web Vitals 95+ Performance'], points: ['95+ Google PageSpeed score', 'Sub-second load latencies', 'Mobile-first fluid responsiveness'], tools: ['JavaScript / Node.js', 'Tailwind CSS', 'Docker / Nginx'] },
-      { id: 'social-media-marketing', slug: 'social-media-marketing', title: 'Social Media Marketing (SMM)', badge: 'Core Pillar 04', subtitle: 'Viral Reach & Community Engagement Systems', description: 'Omnichannel content engines, organic community architecture, paid ad amplification, and conversion funnel optimization.', icon: 'fa-share-nodes', deliverables: ['Content Calendar Strategy', 'Multi-Platform Ad Campaigns', 'Engagement & Conversion Analytics'], points: ['5x organic impressions multiplier', 'Audience retention funnels', 'Data-driven weekly KPI reviews'], tools: ['Meta Ads Manager', 'CapCut', 'Hootsuite'] },
-      { id: 'photoshoot-videography', slug: 'photoshoot-videography', title: 'Commercial Photoshoot & Videography', badge: 'Core Pillar 05', subtitle: 'Cinematic Visual Storytelling That Sells', description: 'High-end corporate headshots, 4K commercial reels, product cinematography, and documentary-style brand narratives.', icon: 'fa-video', deliverables: ['4K Commercial Brand Films', 'Product Studio Photography', 'Short-Form Viral Video Editing'], points: ['Cinema-grade color grading', 'High-bitrate studio master files', 'Omnichannel format variations'], tools: ['Sony Cinema FX', 'Premiere Pro', 'DaVinci Resolve'] },
-      { id: 'event-activation', slug: 'event-activation', title: 'Event Activation & Exhibition Stalls', badge: 'Core Pillar 06', subtitle: 'Immersive Real-World Brand Experiences', description: '3D exhibition booth design, corporate symposium production, experiential marketing roadshows, and interactive display technology.', icon: 'fa-cubes', deliverables: ['3D Booth Architecture & Renderings', 'Turnkey Production Oversight', 'Interactive Digital Signage'], points: ['Photorealistic 3D stall renders', 'On-site turnkey vendor management', 'Visitor flow & dwell-time optimization'], tools: ['Blender 3D', '3ds Max', 'AutoCAD'] },
-      { id: 'google-ads', slug: 'google-ads', title: 'Google Ads & Performance Scaling', badge: 'Core Pillar 07', subtitle: 'High-Intent Customer Acquisition Engines', description: 'Laser-targeted Google Search, Display, Performance Max, and YouTube ad campaigns with precision ROI tracking.', icon: 'fa-chart-line', deliverables: ['Performance Max Frameworks', 'Conversion Tracking & Attribution', 'Ad Copy & Creative Testing'], points: ['Sub-20% CPA acquisition targets', 'Advanced conversion API tracking', 'Real-time Looker Studio dashboards'], tools: ['Google Ads', 'GA4 Analytics', 'Looker Studio'] },
-      { id: 'seo-aeo', slug: 'seo-aeo', title: 'SEO & Generative AI Optimization (AEO)', badge: 'Core Pillar 08', subtitle: 'Dominate Google Search & AI Answers', description: 'Semantic schema engineering, entity authority optimization, and visibility across Google, ChatGPT, and Perplexity.', icon: 'fa-magnifying-glass-chart', deliverables: ['Semantic Entity Architecture', 'Top-10 Organic Rankings', 'AI Citations in LLM Search'], points: ['Structured JSON-LD schema graphs', 'Top 3 positions for high-intent keywords', 'Perplexity and ChatGPT citation readiness'], tools: ['Ahrefs', 'Screaming Frog', 'Google Search Console'] },
-      { id: 'public-relations', slug: 'public-relations', title: 'Public Relations & Mainstream Media', badge: 'Core Pillar 09', subtitle: 'National & Global Media Authority Outreach', description: 'Strategic press releases, executive positioning, broadcast interviews, and digital editorial placements.', icon: 'fa-newspaper', deliverables: ['Press Release Syndication', 'Executive Media Training', 'Crisis Communications Blueprint'], points: ['National news media distribution', 'Thought-leadership op-ed placement', '24/7 crisis communication safeguards'], tools: ['Cision', 'PR Newswire', 'Direct Journalist Network'] }
+      { id: 'social-media-google-marketing', slug: 'social-media-google-marketing', title: 'Social Media & Google Marketing', badge: 'Core Pillar 01', subtitle: 'Omnichannel Ad Scaling & Meta/Google Ads', description: 'Unifying high-impact social media creative storytelling with high-intent Google Search, YouTube, and Performance Max advertising.', icon: 'fa-chart-line', deliverables: ['High-Intent Google Search & PMax Ad Scaling', 'Meta Advantage+ Creative & Retargeting Campaigns', 'Server-Side CAPI & Offline Conversion Tracking'], points: ['5.4x blended ROAS achieved', 'Server-side CAPI tracking architecture', 'Granular multi-touch attribution'], tools: ['Meta Ads Manager', 'Google Ads & PMax', 'Looker Studio'] },
+      { id: 'branding-strategy', slug: 'branding-strategy', title: 'Branding & Strategy', badge: 'Core Pillar 02', subtitle: 'Strategic Brand Positioning & Architecture', description: 'Forging iconic corporate identities that command market prestige, enable pricing power, and foster enduring customer loyalty.', icon: 'fa-fingerprint', deliverables: ['Market Positioning & White-Space Mapping', 'Brand Architecture & Sub-Brand Portfolio', 'Corporate Identity Manual & Guidelines'], points: ['+340% lift in brand valuation & recall', '100% intellectual property ownership', 'Comprehensive brand system'], tools: ['Brand Matrix', 'Figma', 'Illustrator'] },
+      { id: 'graphics-design-visuals', slug: 'graphics-design-visuals', title: 'Graphics Design & Visuals', badge: 'Core Pillar 03', subtitle: 'High-Impact Visual Systems & Luxury UI/UX', description: 'Crafting breathtaking visual systems that captivate attention across digital and physical touchpoints, packaging, and UI.', icon: 'fa-bezier-curve', deliverables: ['High-Converting Paid Social Ad Creatives', 'Luxury Product Packaging & Print Die-Lines', '3D Photorealistic Product Renders'], points: ['500+ high-impact assets produced', 'Publication-ready print die-lines', '3D photorealistic mockups'], tools: ['Photoshop', 'Illustrator', 'Blender 3D'] },
+      { id: 'web-design-development', slug: 'web-design-development', title: 'Web Design & Development', badge: 'Core Pillar 04', subtitle: 'Ultra-Fast Jamstack & High-Conversion UX/UI', description: 'Engineering lightning-fast digital experiences that turn visitors into loyal clients with sub-second load times and clean code.', icon: 'fa-code', deliverables: ['Custom Responsive Corporate Websites', 'Headless & Full-Stack E-Commerce', 'Sub-Second Performance Optimization'], points: ['95+ Google PageSpeed score', '0.7s average page speed', 'Mobile-first fluid responsiveness'], tools: ['Tailwind CSS', 'JavaScript / Node.js', 'WordPress / Headless CMS'] },
+      { id: 'pr-media-outreach', slug: 'pr-media-outreach', title: 'PR & Media Outreach', badge: 'Core Pillar 05', subtitle: 'Mainstream Press Coverage & Executive Authority', description: 'Positioning your brand at the forefront of national and industry conversations through tier-1 placements and strategic PR.', icon: 'fa-bullhorn', deliverables: ['Tier-1 National News & Press Releases', 'Strategic Influencer & Celebrity Campaigns', 'Executive Thought Leadership & CEO Features'], points: ['45M+ earned media reach delivered', 'National news media distribution', '24/7 reputation management'], tools: ['PR Distribution Wire', 'Media Contacts Matrix', 'Influencer CRM'] },
+      { id: 'event-activation-exhibition', slug: 'event-activation-exhibition', title: 'Event Activation & Exhibition', badge: 'Core Pillar 06', subtitle: 'Turnkey Experiential Activations & 3D Stalls', description: 'Transforming physical spaces into unforgettable brand experiences with photorealistic 3D stalls and turnkey gala activations.', icon: 'fa-champagne-glasses', deliverables: ['3D Exhibition Booth Architectural Design', 'Experiential Pop-Ups & VIP Launch Galas', 'Interactive Brand Installations & Displays'], points: ['100k+ visitor footfall activated', 'Photorealistic 3D stall renders', 'Turnkey vendor management'], tools: ['Blender 3D', '3ds Max', 'AutoCAD'] }
     ],
     projects: [
       { id: 'proj-1', title: 'The Peninsula Chittagong', category: 'Hospitality', liveUrl: 'https://peninsulactg.com', previewImage: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80', client: 'The Peninsula Hotels', highlights: 'Direct booking conversion portal with 3D room panoramas and VIP amenities manager.', points: ['320% surge in direct bookings', 'Integrated real-time reservation engine', 'Sub-second mobile checkout'], ctaText: 'Visit Live Website' },
@@ -355,95 +349,118 @@ function applyContentToDOM(content) {
 }
 
 /* ==========================================================================
-   4. Render 9 Core Services (Ultra-Clean Morphy Bento Card Theme)
+   4. Render 6 Core Services (Ultra-Clean Morphy Bento Card Theme)
    ========================================================================== */
 function renderServices(servicesData) {
   const container = document.getElementById('servicesContainer');
   if (!container) return;
 
-  const dataList = [
+  const defaultServices = [
     {
-      id: 'branding', slug: 'branding', pillar: 'Pillar 01', rating: '5.0',
-      tags: ['Brand Strategy', 'Identity Systems'],
-      title: 'Branding & Brand Strategy', subtitle: 'Strategic Brand Positioning & Architecture',
-      description: 'Forging iconic market identities that resonate deeply, command premium pricing, and outpace competition.',
-      deliverables: ['Brand Positioning & Market Research', 'Brand Architecture & Portfolio Structure', 'Corporate Brand Guidelines Manual'],
-      metricValue: '+3.5x', metricLabel: 'Valuation Lift',
-      image: 'https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      id: 'graphics-design', slug: 'graphics-design', pillar: 'Pillar 02', rating: '4.9',
-      tags: ['UI/UX Design', 'Packaging'],
-      title: 'Graphics Design & Visual Systems', subtitle: 'High-Impact Visual Systems & Luxury UI/UX',
-      description: 'Building enduring visual systems that command instant attention across decks, packaging, and digital UI.',
-      deliverables: ['Brand Identity Guidelines & Logo Marks', 'UI/UX Web & Mobile App Interface Design', 'Luxury Packaging & Print Collateral'],
-      metricValue: '300+', metricLabel: 'Vector Assets',
-      image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      id: 'web-development', slug: 'web-development', pillar: 'Pillar 03', rating: '5.0',
-      tags: ['Full-Stack', 'Next.js Jamstack'],
-      title: 'Web Design & Development', subtitle: 'High-Performance Jamstack & Headless Commerce',
-      description: 'Architecting blazing-fast websites and web applications tailored for 95+ PageSpeed scores and high conversion.',
-      deliverables: ['Custom Responsive Corporate Websites', 'Headless & Full-Stack E-Commerce', 'Interactive Landing Pages (CRO)'],
-      metricValue: '0.8s', metricLabel: 'Speed • 95+ PageSpeed',
-      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      id: 'social-media-marketing', slug: 'social-media-marketing', pillar: 'Pillar 04', rating: '4.9',
-      tags: ['Meta Ads', 'Viral Reels'],
-      title: 'Social Media Marketing (SMM)', subtitle: 'Data-Driven Content Strategy & Meta Scaling',
-      description: 'Transforming passive followers into brand evangelists through magnetic short video reels and Advantage+ ads.',
-      deliverables: ['Omnichannel Social Content Architecture', 'High-Converting Viral Reels & TikToks', 'Community Management & Scaling'],
-      metricValue: '4.8x', metricLabel: 'Blended ROAS',
+      id: 'social-media-google-marketing',
+      slug: 'social-media-google-marketing',
+      pillar: 'Pillar 01',
+      rating: '4.9',
+      tags: ['Meta & Google Ads', 'CAPI Tracking'],
+      title: 'Social Media & Google Marketing',
+      subtitle: 'Omnichannel Ad Scaling, Meta Ads, Google Ads (PPC/PMax) & Performance Funnels',
+      description: 'Unifying high-impact social media creative storytelling with high-intent Google Search, YouTube, and Performance Max advertising.',
+      deliverables: ['High-Intent Google Search & PMax Ad Scaling', 'Meta Advantage+ Creative & Retargeting Campaigns', 'Server-Side CAPI & Offline Conversion Tracking'],
+      metricValue: '5.4x',
+      metricLabel: 'Blended ROAS',
       image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80'
     },
     {
-      id: 'photoshoot-videography', slug: 'photoshoot-videography', pillar: 'Pillar 05', rating: '5.0',
-      tags: ['4K Cinema', 'TVC Production'],
-      title: 'Photoshoot & Videography', subtitle: 'Commercial Cinematography & Product Shoots',
-      description: 'Capturing world-class visual assets with cinematic color grading and professional studio lighting.',
-      deliverables: ['Commercial TVCs & Brand Films', 'High-End E-Commerce Photography', 'Executive Headshots & Reels'],
-      metricValue: '4K', metricLabel: 'Cinema Masters',
-      image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80'
+      id: 'branding-strategy',
+      slug: 'branding-strategy',
+      pillar: 'Pillar 02',
+      rating: '5.0',
+      tags: ['Brand Strategy', 'Identity Systems'],
+      title: 'Branding & Strategy',
+      subtitle: 'Strategic Brand Positioning, Identity Architecture & Market Authority',
+      description: 'Forging iconic corporate identities that command market prestige, enable pricing power, and foster enduring customer loyalty.',
+      deliverables: ['Market Positioning & White-Space Mapping', 'Brand Architecture & Sub-Brand Portfolio Strategy', 'Comprehensive Corporate Identity Manual & Guidelines'],
+      metricValue: '+340%',
+      metricLabel: 'Brand Value Lift',
+      image: 'https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80'
     },
     {
-      id: 'event-activation', slug: 'event-activation', pillar: 'Pillar 06', rating: '4.9',
-      tags: ['3D Booths', 'Trade Expos'],
-      title: 'Event Activation & Exhibition', subtitle: 'Experiential Brand Pop-Ups & 3D Spatial Design',
-      description: 'Designing unforgettable live brand environments, photorealistic 3D exhibition stalls, and turnkey galas.',
-      deliverables: ['3D Exhibition Booth Design & Fabrication', 'Experiential Pop-Ups & Brand Launches', 'Corporate Galas & Tech Activations'],
-      metricValue: '3D', metricLabel: 'Spatial Renders',
-      image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80'
+      id: 'graphics-design-visuals',
+      slug: 'graphics-design-visuals',
+      pillar: 'Pillar 03',
+      rating: '4.9',
+      tags: ['Visual Direction', 'Packaging & 3D'],
+      title: 'Graphics Design & Visuals',
+      subtitle: 'High-End Visual Assets, Advertising Creatives, Print & 3D Renders',
+      description: 'Crafting breathtaking visual systems that captivate attention across digital and physical touchpoints, packaging, and UI.',
+      deliverables: ['High-Converting Paid Social Ad Creative Suites', 'Luxury Product Packaging & Print Die-Line Engineering', '3D Photorealistic Product Renders & Spatial Mockups'],
+      metricValue: '500+',
+      metricLabel: 'Visual Assets',
+      image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80'
     },
     {
-      id: 'google-ads', slug: 'google-ads', pillar: 'Pillar 07', rating: '5.0',
-      tags: ['PMax', 'Search Funnels'],
-      title: 'Google Ads & Intent Scaling', subtitle: 'Performance Max & High-Intent Search Funnels',
-      description: 'Capturing commercial buyers at peak intent with structured multi-tier Search, PMax, and GA4 attribution.',
-      deliverables: ['High-Intent Google Search Campaigns', 'Performance Max (PMax) Scaling', 'YouTube In-Stream Video Funnels'],
-      metricValue: '<20%', metricLabel: 'Target CPA',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'
+      id: 'web-design-development',
+      slug: 'web-design-development',
+      pillar: 'Pillar 04',
+      rating: '5.0',
+      tags: ['Full-Stack', 'Next.js Jamstack'],
+      title: 'Web Design & Development',
+      subtitle: 'Ultra-Fast Custom Websites, Modern Web Apps & High-Converting UX/UI',
+      description: 'Engineering lightning-fast digital experiences that turn visitors into loyal clients with sub-second load times and clean code.',
+      deliverables: ['Custom Responsive Corporate Websites', 'Headless & Full-Stack E-Commerce', 'Sub-Second Performance Optimization (95+ Lighthouse Score)'],
+      metricValue: '0.7s',
+      metricLabel: 'Speed • 95+ PageSpeed',
+      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80'
     },
     {
-      id: 'seo-aeo', slug: 'seo-aeo', pillar: 'Pillar 08', rating: '4.9',
-      tags: ['SERP Top 3', 'ChatGPT Citations'],
-      title: 'SEO & AEO (AI Optimization)', subtitle: 'Top-Tier Google SERP & Generative AI Citations',
-      description: 'Dominating search rankings and AI answer engines through semantic schema engineering and entity authority.',
-      deliverables: ['Semantic Entity Architecture & On-Page', 'AEO Optimization (ChatGPT, Perplexity)', 'Standardized /llms.txt Directives'],
-      metricValue: 'Top 3', metricLabel: 'Rank & AI Answers',
-      image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      id: 'public-relations', slug: 'public-relations', pillar: 'Pillar 09', rating: '5.0',
+      id: 'pr-media-outreach',
+      slug: 'pr-media-outreach',
+      pillar: 'Pillar 05',
+      rating: '5.0',
       tags: ['Tier-1 Press', 'Executive PR'],
-      title: 'PR & Media Outreach', subtitle: 'Mainstream Press Coverage & Executive Authority',
-      description: 'Amplifying executive leadership, securing organic tier-1 news placements, and syndicating press releases.',
-      deliverables: ['Tier-1 Press Release Distribution', 'Editorial Placements in Business Media', 'Executive Media Training & Op-Eds'],
-      metricValue: 'Tier-1', metricLabel: 'Media Placements',
+      title: 'PR & Media Outreach',
+      subtitle: 'National Press Coverage, Influencer Relations & Crisis Communications',
+      description: 'Positioning your brand at the forefront of national and industry conversations through tier-1 placements and strategic PR.',
+      deliverables: ['Tier-1 National News & Digital Press Releases', 'Strategic Influencer & Celebrity Collaboration Campaigns', 'Executive Thought Leadership & CEO Feature Articles'],
+      metricValue: '45M+',
+      metricLabel: 'Media Reach',
       image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id: 'event-activation-exhibition',
+      slug: 'event-activation-exhibition',
+      pillar: 'Pillar 06',
+      rating: '4.9',
+      tags: ['3D Booths', 'Trade Expos'],
+      title: 'Event Activation & Exhibition',
+      subtitle: 'Turnkey Experiential Activations, 3D Exhibition Stalls & Launch Galas',
+      description: 'Transforming physical spaces into unforgettable brand experiences with photorealistic 3D stalls and turnkey gala activations.',
+      deliverables: ['3D Exhibition Booth Architectural Design & Fabrication', 'Experiential Consumer Pop-Ups & VIP Launch Galas', 'Interactive Brand Installations & Sensory Displays'],
+      metricValue: '100k+',
+      metricLabel: 'Visitor Footfall',
+      image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80'
     }
   ];
+
+  const sourceList = (Array.isArray(servicesData) && servicesData.length > 0) ? servicesData.slice(0, 6) : defaultServices;
+
+  const dataList = sourceList.map((s, idx) => {
+    const fallback = defaultServices.find(d => d.slug === s.slug || d.id === s.id) || defaultServices[idx] || defaultServices[0];
+    return {
+      id: s.id || fallback.id,
+      slug: s.slug || fallback.slug,
+      pillar: s.badge ? s.badge.split('•')[0].trim() : fallback.pillar,
+      rating: fallback.rating || '5.0',
+      tags: s.tools ? s.tools.slice(0, 2) : fallback.tags,
+      title: s.title || fallback.title,
+      subtitle: s.subtitle || fallback.subtitle,
+      description: s.description || fallback.description,
+      deliverables: (Array.isArray(s.deliverables) && s.deliverables.length > 0) ? s.deliverables.slice(0, 3) : fallback.deliverables,
+      metricValue: s.stats ? (s.stats.split(' ')[0] || fallback.metricValue) : fallback.metricValue,
+      metricLabel: s.stats ? (s.stats.split(' ').slice(1).join(' ') || fallback.metricLabel) : fallback.metricLabel,
+      image: s.image || fallback.image
+    };
+  });
 
   const html = dataList.map(s => {
     const tagsHtml = s.tags.map(t => `
