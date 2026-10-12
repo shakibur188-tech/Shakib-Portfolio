@@ -447,20 +447,7 @@
   <!-- Fixed navbar offset -->
   <div class="h-20"></div>
 
-  <!-- =========================================================================
-       CASE STUDY SELECTOR BAR (Seamless switching between all project studies)
-       ========================================================================= -->
-  <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 pt-4 pb-2">
-    <div class="flex items-center justify-between gap-3 pb-3 border-b border-[#20E1B2]/15 overflow-x-auto no-scrollbar">
-      <div class="text-[11px] font-extrabold uppercase tracking-wider text-[#20E1B2] flex items-center gap-1.5 shrink-0">
-        <i class="fa-solid fa-layer-group"></i>
-        <span>Explore Studies:</span>
-      </div>
-      <div class="flex items-center gap-2 shrink-0" id="csSwitcherPills">
-        <!-- Rendered dynamically by script -->
-      </div>
-    </div>
-  </div>
+  
 
   <!-- =========================================================================
        MAIN CASE STUDY CONTAINER (Faithful to User Screenshot Layout)
@@ -468,6 +455,7 @@
   <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-8 py-8 sm:py-12" id="caseStudyMain">
 
     <!-- HERO TITLE SECTION -->
+    <div class="text-left pt-2 sm:pt-4 pb-8 sm:pb-10 reveal-on-scroll">
 
       <!-- App Subtitle -->
       <h3 id="csHeroSubtitle" class="text-lg sm:text-2xl font-bold text-white mb-2 tracking-tight">
@@ -480,7 +468,7 @@
       </h1>
 
       <!-- Summary / Tagline -->
-      <p id="csHeroTagline" class="text-sm sm:text-base text-[#7EADA3] max-w-2xl mx-auto leading-relaxed font-medium">
+      <p id="csHeroTagline" class="text-sm sm:text-base text-[#7EADA3] max-w-3xl leading-relaxed font-medium">
         Fae Rental is platform where you can renting furniture, Appliances &amp; Electronics in an affordable prices
       </p>
 
@@ -601,37 +589,7 @@
       </div>
     </section>
 
-    <!-- =========================================================================
-         6. PROJECT DURATION & DELIVERY SCOPE
-         ========================================================================= -->
-    <section class="mb-16 sm:mb-24 reveal-on-scroll">
-      <div class="bg-[#041B21]/80 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-[#20E1B2]/20 shadow-sm">
-        <div class="accent-title-wrap mb-6">
-          <h2 class="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
-            Project Duration &amp; Delivery Scope
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 items-center" id="csDurationMetrics">
-          <div class="p-4 rounded-2xl bg-[#06232B] border border-[#20E1B2]/15">
-            <div class="text-3xl sm:text-4xl font-black text-white tracking-tight" id="csMetricDuration">14</div>
-            <div class="text-xs font-bold text-[#7EADA3] mt-1 uppercase tracking-wider">Weeks Duration</div>
-          </div>
-          <div class="p-4 rounded-2xl bg-[#06232B] border border-[#20E1B2]/15">
-            <div class="text-3xl sm:text-4xl font-black text-white tracking-tight" id="csMetricScreens">35+</div>
-            <div class="text-xs font-bold text-[#7EADA3] mt-1 uppercase tracking-wider">Key UI/UX Screens</div>
-          </div>
-          <div class="p-4 rounded-2xl bg-[#06232B] border border-[#20E1B2]/15">
-            <div class="text-3xl sm:text-4xl font-black text-[#20E1B2] tracking-tight">Agile</div>
-            <div class="text-xs font-bold text-[#7EADA3] mt-1 uppercase tracking-wider">Weekly Sprints</div>
-          </div>
-          <div class="p-4 rounded-2xl bg-[#06232B] border border-[#20E1B2]/15">
-            <div class="text-3xl sm:text-4xl font-black text-white tracking-tight">100%</div>
-            <div class="text-xs font-bold text-[#7EADA3] mt-1 uppercase tracking-wider">Turnkey Handover</div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- =========================================================================
          7. DESIGN PROCESS (5-Stage Pipeline matching the screenshot)
