@@ -3,10 +3,10 @@
  * Md. Shakibur Rahaman Website & Offers
  * 
  * Features:
- * 1. Synchronized Viewer Count (Upper Right Corner):
+ * 1. Synchronized Viewer Count (Offers Ecommerce Page Only):
  *    - Mathematical cross-device synchronization (every device sees the EXACT SAME number at the same second)
- *    - Baseline: 277 (realistic deterministic oscillation around 270 - 286)
- *    - Position: Upper Right Corner (top-right fixed badge)
+ *    - Baseline: 17 (realistic deterministic oscillation around 14 - 23)
+ *    - Target: Dedicated hero badge on https://www.shakibur.info/offers/ecommerce
  * 
  * 2. Synchronized Social Proof Booking Toasts:
  *    - Every device sees the EXACT SAME client name and plan at the exact same moment
@@ -73,17 +73,17 @@
 
   // --- 2. DETERMINISTIC CROSS-DEVICE TIME SYNCHRONIZATION ---
   
-  // Computes the exact same visitor count on all devices based on universal UTC time
+  // Computes synchronized visitor count for offers/ecommerce page (starting at 17)
   function getSynchronizedVisitorCount() {
     const timeSlot = Math.floor(Date.now() / 6000); // changes every 6s in unison
-    const base = 277;
-    // Smooth deterministic sinusoidal wave
-    const wave = Math.sin(timeSlot * 0.45) * 5.5;
+    const base = 17;
+    // Smooth deterministic sinusoidal wave (-2 to +3)
+    const wave = Math.sin(timeSlot * 0.45) * 2.2;
     // Pseudo-random offset based on timestamp hash
     const hash = ((timeSlot * 9301 + 49297) % 233280) / 233280;
-    const offset = Math.floor((hash - 0.5) * 6);
+    const offset = Math.floor((hash - 0.5) * 2.5);
     
-    return Math.round(base + wave + offset);
+    return Math.max(14, Math.min(23, Math.round(base + wave + offset)));
   }
 
   // Computes the exact same active booking notification on all devices
@@ -109,63 +109,32 @@
     };
   }
 
-  // Update all counter elements on the page
+  // Update counter element ONLY on the designated ecommerce offer page
   function updateAllCounterElements(count) {
-    const floatingCountSpan = document.getElementById('floatingLiveViewersSpan');
-    if (floatingCountSpan) {
-      floatingCountSpan.textContent = count;
+    const isEcommercePage = window.location.pathname.includes('/ecommerce') || 
+      window.location.pathname.endsWith('ecommerce.html') ||
+      (document.getElementById('heroLiveViewersCount') && document.getElementById('heroLiveViewersCount').closest('div') && document.getElementById('heroLiveViewersCount').closest('div').textContent.includes('অফারটি দেখছেন'));
+
+    if (isEcommercePage) {
+      const heroLiveViewersCount = document.getElementById('heroLiveViewersCount');
+      if (heroLiveViewersCount) {
+        heroLiveViewersCount.textContent = count;
+      }
     }
 
-    const heroLiveViewersCount = document.getElementById('heroLiveViewersCount');
-    if (heroLiveViewersCount) {
-      heroLiveViewersCount.textContent = count;
+    // Ensure NO upper-right floating badge exists anywhere
+    const floatingBadge = document.getElementById('floatingLiveViewersBadge');
+    if (floatingBadge) {
+      floatingBadge.remove();
     }
-
-    document.querySelectorAll('[data-live-counter]').forEach(el => {
-      el.textContent = count;
-    });
   }
 
-  // --- 3. INJECT CSS STYLES (Upper Right Fixed Badge + Bottom Left Toast) ---
+  // --- 3. INJECT CSS STYLES (Bottom Left Booking Toast Only) ---
   function injectStyles() {
     if (document.getElementById('social-proof-synchronized-styles')) return;
     const style = document.createElement('style');
     style.id = 'social-proof-synchronized-styles';
     style.textContent = `
-      /* Fixed Live Viewers Badge in UPPER RIGHT CORNER */
-      #floatingLiveViewersBadge {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 9980;
-        pointer-events: auto;
-        user-select: none;
-        background: rgba(8, 40, 48, 0.95);
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
-        border: 1.5px solid rgba(32, 225, 178, 0.7);
-        border-radius: 9999px;
-        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.75), 0 0 28px rgba(32, 225, 178, 0.4);
-        padding: 10px 18px;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 13px;
-        font-weight: 800;
-        color: #FFFFFF;
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        animation: subtlePulseTop 3.5s ease-in-out infinite alternate;
-      }
-      #floatingLiveViewersBadge:hover {
-        transform: translateY(-2px) scale(1.03);
-        border-color: #20E1B2;
-        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.85), 0 0 36px rgba(32, 225, 178, 0.6);
-      }
-      @keyframes subtlePulseTop {
-        0% { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75), 0 0 20px rgba(32, 225, 178, 0.3); }
-        100% { box-shadow: 0 14px 40px rgba(0, 0, 0, 0.85), 0 0 32px rgba(32, 225, 178, 0.55); }
-      }
-
       /* Fixed Social Proof Toast Container (Bottom-Left Corner) */
       #socialProofToastContainer {
         position: fixed;
@@ -180,13 +149,6 @@
 
       /* Mobile responsiveness */
       @media (max-width: 768px) {
-        #floatingLiveViewersBadge {
-          top: 14px;
-          right: 12px;
-          padding: 8px 13px;
-          font-size: 11.5px;
-          gap: 7px;
-        }
         #socialProofToastContainer {
           bottom: 16px;
           left: 12px;
@@ -246,34 +208,7 @@
     document.head.appendChild(style);
   }
 
-  // --- 4. RENDER UPPER RIGHT LIVE VIEWERS BADGE ---
-  function renderUpperRightLiveViewerBadge() {
-    let badge = document.getElementById('floatingLiveViewersBadge');
-    const initialCount = getSynchronizedVisitorCount();
 
-    if (!badge) {
-      badge = document.createElement('div');
-      badge.id = 'floatingLiveViewersBadge';
-      badge.setAttribute('role', 'status');
-      badge.setAttribute('aria-live', 'polite');
-      badge.innerHTML = `
-        <span class="relative flex h-2.5 w-2.5">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#20E1B2] opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#20E1B2]"></span>
-        </span>
-        <span>🔥 বর্তমানে <strong id="floatingLiveViewersSpan" class="text-[#20E1B2] font-black text-sm font-eng">${initialCount}</strong> জন এই অফারটি দেখছেন</span>
-      `;
-      document.body.appendChild(badge);
-    } else {
-      badge.innerHTML = `
-        <span class="relative flex h-2.5 w-2.5">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#20E1B2] opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#20E1B2]"></span>
-        </span>
-        <span>🔥 বর্তমানে <strong id="floatingLiveViewersSpan" class="text-[#20E1B2] font-black text-sm font-eng">${initialCount}</strong> জন এই অফারটি দেখছেন</span>
-      `;
-    }
-  }
 
   // --- 5. RENDER SYNCHRONIZED SOCIAL PROOF TOAST ---
   function createToastContainer() {
@@ -379,9 +314,12 @@
   // --- 7. INITIALIZATION ---
   function init() {
     injectStyles();
-    renderUpperRightLiveViewerBadge();
 
-    // 1. Initial count & cross-device synchronized counter ticker (every 3 seconds)
+    // Ensure any legacy floating badge is removed immediately
+    const existingBadge = document.getElementById('floatingLiveViewersBadge');
+    if (existingBadge) existingBadge.remove();
+
+    // 1. Initial count & synchronized counter ticker (only active on ecommerce offer page)
     const initialCount = getSynchronizedVisitorCount();
     updateAllCounterElements(initialCount);
 

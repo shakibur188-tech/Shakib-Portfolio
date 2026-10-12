@@ -21,18 +21,20 @@ let currentTypewriterTitles = [
 let currentModalService = null;
 
 document.addEventListener('DOMContentLoaded', async () => {
-  // 1. Initialize Top Scroll Progress Bar & Timed Scroll Animations
+  // 1. Initialize Mobile Menu IMMEDIATELY (0ms delay, no blocking by async fetches)
+  initMobileMenu();
+
+  // 2. Initialize Top Scroll Progress Bar & Timed Scroll Animations
   initScrollProgressBar();
 
-  // 2. Initialize Full-Page Ambient Background Animation
+  // 3. Initialize Full-Page Ambient Background Animation
   initAmbientBackground();
 
-  // 3. Fetch dynamic CMS content & Hydrate SEO & All Sections
+  // 4. Fetch dynamic CMS content & Hydrate SEO & All Sections
   await fetchAndHydrateContent();
 
-  // 4. Initialize Interactive Features & Motion Engines
+  // 5. Initialize Interactive Features & Motion Engines
   initTypewriter();
-  initMobileMenu();
   initOffersViewSwitcher();
   initSubpagePricingSwitcher();
   initProjectFilter();
@@ -1067,15 +1069,18 @@ function initTypewriter() {
    15. Mobile Menu Navigation (Enhanced Glassmorphic Drawer)
    ========================================================================== */
 function initMobileMenu() {
-  const toggleBtn = document.getElementById('mobileMenuToggle');
-  const menu = document.getElementById('mobileMenu');
+  const toggleBtn = document.getElementById('mobileMenuToggle') || document.getElementById('svcMobileToggle');
+  const menu = document.getElementById('mobileMenu') || document.getElementById('svcMobileMenu');
   const icon = document.getElementById('mobileMenuIcon') || (toggleBtn ? toggleBtn.querySelector('i') : null);
   if (!toggleBtn || !menu) return;
+
+  if (toggleBtn.dataset.menuInitialized === 'true') return;
+  toggleBtn.dataset.menuInitialized = 'true';
 
   function openMenu() {
     menu.classList.remove('hidden');
     if (icon) {
-      icon.classList.remove('fa-bars-staggered');
+      icon.classList.remove('fa-bars-staggered', 'fa-bars');
       icon.classList.add('fa-xmark');
     }
   }
@@ -1089,6 +1094,7 @@ function initMobileMenu() {
   }
 
   toggleBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     e.stopPropagation();
     if (menu.classList.contains('hidden')) {
       openMenu();
@@ -1097,7 +1103,7 @@ function initMobileMenu() {
     }
   });
 
-  document.querySelectorAll('.mobile-nav-link, .mobile-link').forEach(link => {
+  menu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       closeMenu();
     });

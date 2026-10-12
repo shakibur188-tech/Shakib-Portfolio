@@ -298,10 +298,13 @@ function initMobileNav() {
   const icon = document.getElementById('mobileMenuIcon') || (toggleBtn ? toggleBtn.querySelector('i') : null);
   if (!toggleBtn || !menu) return;
 
+  if (toggleBtn.dataset.menuInitialized === 'true') return;
+  toggleBtn.dataset.menuInitialized = 'true';
+
   function openMenu() {
     menu.classList.remove('hidden');
     if (icon) {
-      icon.classList.remove('fa-bars-staggered');
+      icon.classList.remove('fa-bars-staggered', 'fa-bars');
       icon.classList.add('fa-xmark');
     }
   }
@@ -315,6 +318,7 @@ function initMobileNav() {
   }
 
   toggleBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     e.stopPropagation();
     if (menu.classList.contains('hidden')) {
       openMenu();

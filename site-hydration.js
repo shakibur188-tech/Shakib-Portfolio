@@ -639,30 +639,32 @@
         });
       });
     } else if (toggleBtn && mobileMenu) {
-      if (!toggleBtn.dataset.menuHydrated) {
-        toggleBtn.dataset.menuHydrated = 'true';
-        function openMenu() {
-          mobileMenu.classList.remove('hidden');
-          if (icon) {
-            icon.classList.remove('fa-bars-staggered', 'fa-bars');
-            icon.classList.add('fa-xmark');
-          }
+      if (toggleBtn.dataset.menuInitialized === 'true' || toggleBtn.dataset.menuHydrated === 'true') return;
+      toggleBtn.dataset.menuInitialized = 'true';
+      toggleBtn.dataset.menuHydrated = 'true';
+      function openMenu() {
+        mobileMenu.classList.remove('hidden');
+        if (icon) {
+          icon.classList.remove('fa-bars-staggered', 'fa-bars');
+          icon.classList.add('fa-xmark');
         }
-        function closeMenu() {
-          mobileMenu.classList.add('hidden');
-          if (icon) {
-            icon.classList.remove('fa-xmark');
-            icon.classList.add('fa-bars-staggered');
-          }
+      }
+      function closeMenu() {
+        mobileMenu.classList.add('hidden');
+        if (icon) {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars-staggered');
         }
-        toggleBtn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          if (mobileMenu.classList.contains('hidden')) {
-            openMenu();
-          } else {
-            closeMenu();
-          }
-        });
+      }
+      toggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (mobileMenu.classList.contains('hidden')) {
+          openMenu();
+        } else {
+          closeMenu();
+        }
+      });
         mobileMenu.querySelectorAll('a').forEach(link => {
           link.addEventListener('click', () => closeMenu());
         });

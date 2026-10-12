@@ -660,6 +660,9 @@ body {
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.95), 0 0 40px rgba(32, 225, 178, 0.2) !important;
   border-radius: 24px !important;
   z-index: 10000 !important;
+  max-height: calc(100vh - 5.5rem);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 #mobileMenu.hidden,

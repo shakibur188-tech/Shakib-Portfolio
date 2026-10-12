@@ -640,16 +640,7 @@
     let currentSearch = '';
 
     document.addEventListener('DOMContentLoaded', async () => {
-      // 1. Mobile Menu Toggle
-      const toggle = document.getElementById('mobileMenuToggle');
-      const mobileMenu = document.getElementById('mobileMenu');
-      if (toggle && mobileMenu) {
-        toggle.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-        });
-      }
-
-      // 2. Scroll Progress Bar
+      // 1. Scroll Progress Bar
       const bar = document.getElementById('scrollProgressBar');
       if (bar) {
         window.addEventListener('scroll', () => {
