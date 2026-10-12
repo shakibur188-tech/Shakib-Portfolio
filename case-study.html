@@ -2289,22 +2289,22 @@
           let imgGalleryHtml = '';
           if (images.length > 0) {
             const gridColsClass = images.length === 1 
-              ? 'grid-cols-1 sm:grid-cols-2 max-w-xl' 
+              ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 max-w-2xl' 
               : images.length === 2 
-                ? 'grid-cols-1 sm:grid-cols-2' 
-                : 'grid-cols-2 sm:grid-cols-3';
+                ? 'grid-cols-1 sm:grid-cols-2 max-w-4xl' 
+                : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3';
             
             imgGalleryHtml = `
-              <div class="mt-3.5 mb-2 grid ${gridColsClass} gap-3">
+              <div class="mt-4 mb-3 grid ${gridColsClass} gap-4">
                 ${images.map((img, imgIdx) => `
-                  <div class="group relative rounded-2xl overflow-hidden border border-[#20E1B2]/25 bg-[#041B21]/90 shadow-md hover:border-[#20E1B2] transition-all cursor-zoom-in" onclick="openCsLightbox('${img.src}', '${escapeHtml(img.caption || '')}')">
-                    <div class="aspect-[4/3] w-full overflow-hidden bg-black/40">
-                      <img src="${img.src}" alt="${escapeHtml(img.caption || 'Step Asset')}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                  <div class="group relative rounded-2xl overflow-hidden border border-[#20E1B2]/25 bg-[#041B21]/90 shadow-lg hover:border-[#20E1B2] transition-all cursor-zoom-in" onclick="openCsLightbox('${img.src}', '${escapeHtml(img.caption || '')}')">
+                    <div class="w-full overflow-hidden bg-black/40 flex items-center justify-center">
+                      <img src="${img.src}" alt="${escapeHtml(img.caption || 'Step Asset')}" class="w-full h-auto block object-contain group-hover:scale-[1.02] transition-transform duration-300" loading="lazy">
                     </div>
                     ${img.caption ? `
-                      <div class="p-2 bg-[#06232B]/90 backdrop-blur-sm border-t border-[#20E1B2]/15 text-[11px] font-semibold text-[#E2FBF6] truncate flex items-center justify-between">
+                      <div class="p-2.5 bg-[#06232B]/90 backdrop-blur-sm border-t border-[#20E1B2]/15 text-[11.5px] font-semibold text-[#E2FBF6] flex items-center justify-between">
                         <span class="truncate">${escapeHtml(img.caption)}</span>
-                        <i class="fa-solid fa-expand text-[10px] text-[#20E1B2] ml-1 shrink-0"></i>
+                        <i class="fa-solid fa-expand text-[10px] text-[#20E1B2] ml-1.5 shrink-0"></i>
                       </div>
                     ` : ''}
                   </div>
