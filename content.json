@@ -561,31 +561,6 @@
       "slug": "peshawari-food-festival"
     },
     {
-      "id": "asap-interior",
-      "title": "ASAP Interior Solutions - Commercial & Residential Architecture Hub",
-      "client": "ASAP Solutions Limited",
-      "category": "Web design & Development",
-      "year": "2025",
-      "tagline": "Digital flagship for an elite interior architecture firm with 3D walkthrough galleries and automated quotation calculator.",
-      "challenge": "High-value commercial clients were bouncing because the previous portfolio couldn't showcase complex spatial plans and required manual email back-and-forth for estimates.",
-      "solution": "Created a sleek glassmorphic portfolio featuring interactive blueprint zooming, instant square-footage estimation tools, and CRM calendar integration.",
-      "metrics": [
-        "+420% Inbound Inquiries",
-        "3.2x Lead Velocity",
-        "100% Inbound Automation",
-        "0.6s Initial Server Response"
-      ],
-      "deliverables": [
-        "Architecture Portal",
-        "Instant Cost Estimator",
-        "Interactive Blueprint Viewer",
-        "Integrated Lead CRM"
-      ],
-      "coverImage": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
-      "liveUrl": "https://interior.asapsl.com",
-      "slug": "asap-interior"
-    },
-    {
       "id": "room-promotional-creative",
       "title": "Room Promotional Creative",
       "client": "Hotel Sarina Dhaka",
@@ -609,106 +584,6 @@
       "coverImage": "/assets/case-studies/hotel-sarina/refresh-recharge-1.png",
       "liveUrl": "https://hotel.shakibur.info",
       "slug": "room-promotional-creative"
-    },
-    {
-      "id": "apex-pmax-ads",
-      "title": "Apex Scaler - Meta & Google Performance Max Ad Architecture",
-      "client": "Apex Retail Group",
-      "category": "Google ads & Intent Scaling",
-      "year": "2025",
-      "tagline": "Multi-touch conversion funnel capturing high-intent search buyers combined with Meta Advantage+ creative remarketing.",
-      "challenge": "Ad fatigue and skyrocketing CPMs resulted in a sub-par 1.8x ROAS and inconsistent lead volumes on traditional search keywords.",
-      "solution": "Restructured account taxonomy into intent-segmented Search, Google Performance Max with custom audience signals, and server-side Meta CAPI tracking.",
-      "metrics": [
-        "4.82x Average ROAS",
-        "$184,920 Attributed Revenue",
-        "-32% Blended CPA",
-        "99.4% Attribution Accuracy"
-      ],
-      "deliverables": [
-        "Performance Max Setup",
-        "Google Search Intent Funnels",
-        "Server-Side Meta CAPI",
-        "Custom GA4 Attribution Dashboard"
-      ],
-      "coverImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-      "liveUrl": "https://luxorafurniture.com",
-      "slug": "apex-pmax-ads"
-    },
-    {
-      "id": "botanica-packaging",
-      "title": "Botanica Organics - Luxury Brand Identity, Sustainable Packaging & 3D System",
-      "client": "Botanica Skincare Labs",
-      "category": "Graphics & Visual Identity",
-      "year": "2024",
-      "tagline": "Building an iconic corporate visual system, tactile minimalist packaging, and 3D digital asset guidelines for premium retail shelves.",
-      "challenge": "Generic brand visuals failed to communicate organic luxury, resulting in buyer hesitation at high retail price points.",
-      "solution": "Crafted a bespoke visual identity manual, custom foil-stamped packaging die-lines, and photorealistic 3D bottle renders that command instant prestige.",
-      "metrics": [
-        "+3.5x Brand Valuation Lift",
-        "50+ Packaging SKUs",
-        "Gold Design Award 2024",
-        "100% Print-Ready Accuracy"
-      ],
-      "deliverables": [
-        "Comprehensive Brand Guidelines",
-        "Luxury Box & Bottle Packaging",
-        "3D Photorealistic Renders",
-        "Editorial Print Stationery"
-      ],
-      "coverImage": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=80",
-      "liveUrl": "#",
-      "slug": "botanica-packaging"
-    },
-    {
-      "id": "zenith-aeo-seo",
-      "title": "Zenith Health & Telemedicine - Generative AI Engine Optimization (SEO & AEO)",
-      "client": "Zenith Medical Clinics",
-      "category": "SEO & Generative AI (AEO)",
-      "year": "2025",
-      "tagline": "Dominating both traditional Google search rankings and LLM answer engines (ChatGPT, Perplexity, Claude) through entity graph engineering.",
-      "challenge": "Zero visibility in new AI search overviews and declining traditional keyword click-through rates as patients migrated to conversational search.",
-      "solution": "Implemented Schema.org MedicalEntity graphs, standardized /llms.txt content directives, and semantic citation clusters to secure AI answer inclusion.",
-      "metrics": [
-        "Top 3 Google SERP Rankings",
-        "85% AI Citation Inclusion",
-        "+260% Organic Patient Traffic",
-        "100% LLM Grounding Score"
-      ],
-      "deliverables": [
-        "Semantic Knowledge Graph",
-        "AEO /llms.txt Directives",
-        "Medical Entity Schema Markup",
-        "Conversational AI Funnel"
-      ],
-      "coverImage": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1200&q=80",
-      "liveUrl": "#",
-      "slug": "zenith-aeo-seo"
-    },
-    {
-      "id": "mega-tech-expo",
-      "title": "Mega Tech Expo 2025 - Turnkey 3D Exhibition Pavilion & Live Activation",
-      "client": "Global Tech Syndicate",
-      "category": "Event activation & Exhibition",
-      "year": "2025",
-      "tagline": "Designing and fabricating a custom 3D exhibition pavilion with interactive LED touch tunnels, live demos, and experiential branding.",
-      "challenge": "Standing out among 200+ competing international tech exhibits and capturing high-intent B2B enterprise leads in a loud environment.",
-      "solution": "Engineered an open-concept architectural pavilion with 3D spatial flow, interactive badge scanning stations, and an immersive LED keynote amphitheater.",
-      "metrics": [
-        "45,000+ Expo Visitors",
-        "12,400+ Qualified QR Scans",
-        "40+ Mainstream Press Features",
-        "100% Turnkey Fabrication"
-      ],
-      "deliverables": [
-        "3D Spatial Pavilion Architecture",
-        "Turnkey Physical Fabrication",
-        "Interactive LED Tunnels",
-        "PR & Media Press Briefs"
-      ],
-      "coverImage": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80",
-      "liveUrl": "#",
-      "slug": "mega-tech-expo"
     }
   ]
 }
