@@ -128,7 +128,9 @@
 
     /* Process Step Card */
     .process-step-box {
-      background: #FFFFFF;
+      background: rgba(8, 40, 48, 0.75) !important;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border: 1px solid rgba(112, 128, 93, 0.18);
       border-radius: 20px;
       padding: 24px 16px;
@@ -172,15 +174,14 @@
       margin-bottom: 10px;
       line-height: 1.6;
       font-size: 13.5px;
-      color: #334432;
+      color: #E2FBF6 !important; font-weight: 500;
     }
     .cs-bullet-list li::before {
       content: '•';
       position: absolute;
       left: 2px;
       top: -1px;
-      color: #E07A5F;
-      font-size: 18px;
+      color: #20E1B2 !important; font-size: 20px;
       font-weight: 900;
     }
 
@@ -206,6 +207,22 @@
       color: #FFFFFF;
       border-color: #20E1B2;
       box-shadow: 0 4px 12px rgba(112, 128, 93, 0.35);
+    }
+  
+    .process-step-box h4 {
+      color: #FFFFFF !important;
+      font-weight: 800 !important;
+    }
+    .process-step-box div.text-\[11px\],
+    .process-step-box div.text-\[11px\] div {
+      color: #D1F5EE !important;
+      font-weight: 600 !important;
+    }
+    #csProblemContent {
+      color: #E2FBF6 !important;
+      font-size: 14.5px !important;
+      line-height: 1.8 !important;
+      white-space: pre-line !important;
     }
   </style>
   
@@ -494,7 +511,7 @@
         </h2>
       </div>
 
-      <p id="csProblemContent" class="text-xs sm:text-sm md:text-[15px] text-[#3A4E37] leading-relaxed max-w-3xl">
+      <p id="csProblemContent" class="text-sm sm:text-base text-[#E2FBF6] leading-relaxed max-w-3xl whitespace-pre-line font-medium opacity-95">
         We found out that a lot of people like Bachelors, Paying Guests, working professionals who relocate need furniture, electronics, and appliances. Because of the high cost and no certainty of staying in a place they avoid buying them. These people need the items for a shorter duration. This app will help them to rent the items for what period they want (a week, a month, a year). This includes renting the refurbished &amp; recycled items.
       </p>
     </section>
