@@ -115,14 +115,42 @@
       box-shadow: 0 0 25px rgba(32, 225, 178, 0.6);
     }
 
-    /* Step Card */
+    /* Ultra Frosted Glassmorphism for Phase Cards */
+    .glass-card,
+    .morphy-card {
+      background: linear-gradient(135deg, rgba(8, 48, 58, 0.38) 0%, rgba(4, 27, 33, 0.52) 100%) !important;
+      backdrop-filter: blur(28px) saturate(190%) !important;
+      -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
+      border: 1.5px solid rgba(32, 225, 178, 0.28) !important;
+      border-radius: 28px !important;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.65), 
+                  0 0 40px -10px rgba(32, 225, 178, 0.12),
+                  inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.25), 
+                  inset 0 -1px 2px 0 rgba(0, 0, 0, 0.35) !important;
+    }
+    .glass-card:hover,
+    .morphy-card:hover {
+      background: linear-gradient(135deg, rgba(11, 62, 75, 0.52) 0%, rgba(6, 36, 44, 0.68) 100%) !important;
+      border-color: rgba(32, 225, 178, 0.55) !important;
+      box-shadow: 0 30px 70px -10px rgba(0, 0, 0, 0.75), 
+                  0 0 50px -5px rgba(32, 225, 178, 0.30), 
+                  inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.45) !important;
+    }
+
+    /* Glassy Step Card with Translucent Frosted Glass */
     .step-card {
+      background: linear-gradient(135deg, rgba(11, 56, 68, 0.35) 0%, rgba(4, 27, 33, 0.55) 100%) !important;
+      backdrop-filter: blur(16px) saturate(180%) !important;
+      -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+      border: 1px solid rgba(32, 225, 178, 0.22) !important;
+      box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.45), inset 0 1px 1px 0 rgba(255, 255, 255, 0.18) !important;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .step-card:hover {
-      border-color: rgba(32, 225, 178, 0.6) !important;
-      background: rgba(8, 40, 48, 0.85) !important;
+      border-color: rgba(32, 225, 178, 0.65) !important;
+      background: linear-gradient(135deg, rgba(14, 75, 90, 0.55) 0%, rgba(8, 40, 48, 0.75) 100%) !important;
       transform: translateX(4px);
+      box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6), 0 0 25px rgba(32, 225, 178, 0.25), inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.35) !important;
     }
   </style>
 
