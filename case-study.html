@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UX Case Study Details | Md. Shakibur Rahaman</title>
-  <meta name="description" content="In-depth UX Case Study breakdown covering user research, problem framing, strategic solutions, project duration, and the 5-stage design process by Md. Shakibur Rahaman.">
-  <link rel="canonical" href="http://localhost:5500/case-study.html">
+  <title>Case Study Details | Md. Shakibur Rahaman</title>
+  <meta name="description" content="In-depth Case Study breakdown covering campaign strategy, execution frameworks, creative production, and verified business outcomes by Md. Shakibur Rahaman.">
+  <link rel="canonical" href="https://www.shakibur.info/case-study.html">
   
   <!-- Plus Jakarta Sans Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -226,6 +226,19 @@
     }
     #csLightboxModal {
       z-index: 999999 !important;
+    }
+    .aspect-1080-1350 {
+      aspect-ratio: 1080 / 1350;
+    }
+    .aspect-4-3 {
+      aspect-ratio: 4 / 3;
+    }
+    #caseStudyMain {
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+    #caseStudyMain.cs-loaded {
+      opacity: 1 !important;
     }
   </style>
   
@@ -461,19 +474,13 @@
     <div class="text-left pt-2 sm:pt-4 pb-8 sm:pb-10 reveal-on-scroll">
 
       <!-- App Subtitle -->
-      <h3 id="csHeroSubtitle" class="text-lg sm:text-2xl font-bold text-white mb-2 tracking-tight">
-        Online Rental App
-      </h3>
+      <h3 id="csHeroSubtitle" class="text-lg sm:text-2xl font-bold text-white mb-2 tracking-tight min-h-[1.5rem]"></h3>
 
       <!-- Huge Bold Hero Title -->
-      <h1 id="csHeroTitle" class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight uppercase mb-6 leading-tight">
-        UX CASE STUDY
-      </h1>
+      <h1 id="csHeroTitle" class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight uppercase mb-6 leading-tight min-h-[3rem]"></h1>
 
       <!-- Summary / Tagline -->
-      <p id="csHeroTagline" class="text-sm sm:text-base text-[#7EADA3] max-w-3xl leading-relaxed font-medium">
-        Fae Rental is platform where you can renting furniture, Appliances &amp; Electronics in an affordable prices
-      </p>
+      <p id="csHeroTagline" class="text-sm sm:text-base text-[#7EADA3] max-w-3xl leading-relaxed font-medium min-h-[1.5rem]"></p>
 
     </div>
 
@@ -487,9 +494,7 @@
         </h2>
       </div>
 
-      <p id="csProblemContent" class="text-sm sm:text-base text-[#E2FBF6] leading-relaxed max-w-3xl whitespace-pre-line font-medium opacity-95">
-        We found out that a lot of people like Bachelors, Paying Guests, working professionals who relocate need furniture, electronics, and appliances. Because of the high cost and no certainty of staying in a place they avoid buying them. These people need the items for a shorter duration. This app will help them to rent the items for what period they want (a week, a month, a year). This includes renting the refurbished &amp; recycled items.
-      </p>
+      <p id="csProblemContent" class="text-sm sm:text-base text-[#E2FBF6] leading-relaxed max-w-3xl whitespace-pre-line font-medium opacity-95"></p>
     </section>
 
     <!-- =========================================================================
@@ -546,52 +551,11 @@
         </h2>
       </div>
 
-      <div id="csRoleGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-2">
-        
-        <!-- Column 1 -->
-        <div>
-          <ul class="cs-bullet-list">
-            <li>User Interview</li>
-            <li>User Research</li>
-            <li>Competitor Analysis</li>
-          </ul>
-        </div>
-
-        <!-- Column 2 -->
-        <div>
-          <ul class="cs-bullet-list">
-            <li>Affinity Mapping</li>
-            <li>Persona</li>
-            <li>Empathy map</li>
-            <li>Customer Journey map</li>
-          </ul>
-        </div>
-
-        <!-- Column 3 -->
-        <div>
-          <ul class="cs-bullet-list">
-            <li>Card Sorting</li>
-            <li>User Flow</li>
-            <li>Information Architecture</li>
-          </ul>
-        </div>
-
-        <!-- Column 4 -->
-        <div>
-          <ul class="cs-bullet-list">
-            <li>Low Fidelity</li>
-            <li>High Fidelity</li>
-            <li>Usability Testing</li>
-          </ul>
-        </div>
-
-      </div>
+      <div id="csRoleGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-2"></div>
     </section>
 
-    
-
     <!-- =========================================================================
-         7. DESIGN PROCESS (5-Stage Pipeline matching the screenshot)
+         7. DESIGN PROCESS / CAMPAIGN WORKFLOW
          ========================================================================= -->
     <section class="mb-16 sm:mb-24 reveal-on-scroll">
       <div class="accent-title-wrap">
@@ -600,73 +564,7 @@
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-5 gap-4 sm:gap-2 items-stretch mt-6 relative" id="csProcessSteps">
-        
-        <!-- Step 1: Empathize -->
-        <div class="process-step-box flex flex-col items-center text-center">
-          <div class="w-12 h-12 rounded-2xl bg-[#E07A5F]/15 border border-[#E07A5F]/30 text-[#E07A5F] flex items-center justify-center text-lg mb-3.5 shadow-xs">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <h4 class="text-sm font-extrabold text-white mb-2">Empathize</h4>
-          <div class="text-[11px] text-[#7EADA3] leading-relaxed space-y-1">
-            <div>User Interview</div>
-            <div>User Research</div>
-            <div>Competitive Analysis</div>
-          </div>
-        </div>
-
-        <!-- Step 2: Define -->
-        <div class="process-step-box flex flex-col items-center text-center">
-          <div class="w-12 h-12 rounded-2xl bg-[#64748B]/15 border border-[#64748B]/30 text-[#7EADA3] flex items-center justify-center text-lg mb-3.5 shadow-xs">
-            <i class="fa-solid fa-user"></i>
-          </div>
-          <h4 class="text-sm font-extrabold text-white mb-2">Define</h4>
-          <div class="text-[11px] text-[#7EADA3] leading-relaxed space-y-1">
-            <div>Affinity Mapping</div>
-            <div>Personas</div>
-            <div>Empathy Map</div>
-            <div>Journey Map</div>
-          </div>
-        </div>
-
-        <!-- Step 3: Ideate -->
-        <div class="process-step-box flex flex-col items-center text-center">
-          <div class="w-12 h-12 rounded-2xl bg-[#20E1B2]/15 border border-[#20E1B2]/30 text-[#20E1B2] flex items-center justify-center text-lg mb-3.5 shadow-xs">
-            <i class="fa-solid fa-brain"></i>
-          </div>
-          <h4 class="text-sm font-extrabold text-white mb-2">Ideate</h4>
-          <div class="text-[11px] text-[#7EADA3] leading-relaxed space-y-1">
-            <div>User Flow</div>
-            <div>Card Sorting</div>
-            <div>Information Architecture</div>
-          </div>
-        </div>
-
-        <!-- Step 4: Design -->
-        <div class="process-step-box flex flex-col items-center text-center">
-          <div class="w-12 h-12 rounded-2xl bg-[#64748B]/15 border border-[#64748B]/30 text-[#7EADA3] flex items-center justify-center text-lg mb-3.5 shadow-xs">
-            <i class="fa-solid fa-compass-drafting"></i>
-          </div>
-          <h4 class="text-sm font-extrabold text-white mb-2">Design</h4>
-          <div class="text-[11px] text-[#7EADA3] leading-relaxed space-y-1">
-            <div>Low Fidelity</div>
-            <div>High Fidelity</div>
-          </div>
-        </div>
-
-        <!-- Step 5: Test -->
-        <div class="process-step-box flex flex-col items-center text-center">
-          <div class="w-12 h-12 rounded-2xl bg-[#E07A5F]/15 border border-[#E07A5F]/30 text-[#E07A5F] flex items-center justify-center text-lg mb-3.5 shadow-xs">
-            <i class="fa-solid fa-mobile-screen-button"></i>
-          </div>
-          <h4 class="text-sm font-extrabold text-white mb-2">Test</h4>
-          <div class="text-[11px] text-[#7EADA3] leading-relaxed space-y-1">
-            <div>Usability Testing</div>
-            <div>Implementing Feedback</div>
-          </div>
-        </div>
-
-      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-5 gap-4 sm:gap-2 items-stretch mt-6 relative" id="csProcessSteps"></div>
     </section>
 
     <!-- =========================================================================
@@ -679,20 +577,7 @@
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6" id="csVerifiedMetricsGrid">
-        <div class="p-5 rounded-2xl bg-[#0B3844]/35 backdrop-blur-xl border border-[#20E1B2]/20 shadow-sm">
-          <div class="text-xs font-bold text-[#20E1B2] uppercase tracking-wider mb-1">Conversion Surge</div>
-          <div class="text-2xl sm:text-3xl font-black text-white">+42% Rental Checkout</div>
-        </div>
-        <div class="p-5 rounded-2xl bg-[#0B3844]/35 backdrop-blur-xl border border-[#20E1B2]/20 shadow-sm">
-          <div class="text-xs font-bold text-[#20E1B2] uppercase tracking-wider mb-1">Session Duration</div>
-          <div class="text-2xl sm:text-3xl font-black text-white">18m High Engagement</div>
-        </div>
-        <div class="p-5 rounded-2xl bg-[#0B3844]/35 backdrop-blur-xl border border-[#20E1B2]/20 shadow-sm">
-          <div class="text-xs font-bold text-[#20E1B2] uppercase tracking-wider mb-1">Customer CSAT</div>
-          <div class="text-2xl sm:text-3xl font-black text-white">94% Approval Rating</div>
-        </div>
-      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6" id="csVerifiedMetricsGrid"></div>
     </section>
 
     <!-- =========================================================================
@@ -1460,8 +1345,9 @@
     "coverImage": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80"
   },
   {
-    "id": "hotel-sarina",
-    "slug": "hotel-sarina",
+    "id": "room-promotional-creative",
+    "slug": "room-promotional-creative",
+    "aliases": ["hotel-sarina"],
     "category": "GRAPHICS DESIGN & VISUAL ADVERTISING",
     "author": "DESIGNED BY MD. SHAKIBUR RAHAMAN",
     "date": "2024",
@@ -2163,28 +2049,37 @@
 
     let currentCaseStudyIndex = 0;
 
+    function resolveRequestedIndex() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const requestedId = urlParams.get('id');
+      if (requestedId === 'campaign-execution-framework') {
+        window.location.replace('/campaign-execution-framework');
+        return -1;
+      }
+      if (requestedId) {
+        const foundIdx = richCaseStudies.findIndex(c => c.id === requestedId || c.slug === requestedId || (c.aliases && c.aliases.includes(requestedId)));
+        if (foundIdx !== -1) {
+          return foundIdx;
+        }
+      }
+      return 0;
+    }
+
+    // Immediate synchronous pre-hydration to eliminate any FOUC before DOMContentLoaded
+    const initIdx = resolveRequestedIndex();
+    if (initIdx !== -1) {
+      currentCaseStudyIndex = initIdx;
+      renderActiveCaseStudy(false, false);
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       initScrollProgressBar();
       initAmbientCanvas();
       initScrollReveal();
       initLeadForm();
 
-      // Read URL query parameter: case-study.html?id=...
-      const urlParams = new URLSearchParams(window.location.search);
-      const requestedId = urlParams.get('id');
-      if (requestedId === 'campaign-execution-framework') {
-        window.location.replace('/campaign-execution-framework');
-        return;
-      }
-      if (requestedId) {
-        const foundIdx = richCaseStudies.findIndex(c => c.id === requestedId || c.slug === requestedId);
-        if (foundIdx !== -1) {
-          currentCaseStudyIndex = foundIdx;
-        }
-      }
-
       renderSwitcherPills();
-      renderActiveCaseStudy(false);
+      renderActiveCaseStudy(false, false);
 
       // Previous / Next buttons
       const prevBtn = document.getElementById('prevCaseStudyBtn');
@@ -2193,14 +2088,14 @@
       if (prevBtn) {
         prevBtn.addEventListener('click', () => {
           currentCaseStudyIndex = (currentCaseStudyIndex - 1 + richCaseStudies.length) % richCaseStudies.length;
-          renderActiveCaseStudy(true);
+          renderActiveCaseStudy(true, true);
         });
       }
 
       if (nextBtn) {
         nextBtn.addEventListener('click', () => {
           currentCaseStudyIndex = (currentCaseStudyIndex + 1) % richCaseStudies.length;
-          renderActiveCaseStudy(true);
+          renderActiveCaseStudy(true, true);
         });
       }
 
@@ -2228,20 +2123,24 @@
           const idx = parseInt(btn.getAttribute('data-cs-idx'), 10);
           if (idx !== currentCaseStudyIndex) {
             currentCaseStudyIndex = idx;
-            renderActiveCaseStudy(true);
+            renderActiveCaseStudy(true, true);
           }
         });
       });
     }
 
     // Render Active Case Study Details into DOM
-    function renderActiveCaseStudy(smoothScrollToTop) {
+    function renderActiveCaseStudy(smoothScrollToTop, isUserAction) {
       const cs = richCaseStudies[currentCaseStudyIndex];
       if (!cs) return;
 
-      // Update URL query param without reload
+      // Update URL query param name-wise
       const newUrl = `${window.location.pathname}?id=${encodeURIComponent(cs.id)}`;
-      window.history.pushState({ id: cs.id }, '', newUrl);
+      if (isUserAction) {
+        window.history.pushState({ id: cs.id }, '', newUrl);
+      } else {
+        window.history.replaceState({ id: cs.id }, '', newUrl);
+      }
 
       // Update pills
       document.querySelectorAll('.cs-switcher-pill').forEach((b, i) => {
@@ -2254,15 +2153,13 @@
 
       // 1. Top Metadata
       const el = id => document.getElementById(id);
-      if (el('csTopCategory')) el('csTopCategory').textContent = cs.category || 'UX CASE STUDY';
+      if (el('csTopCategory')) el('csTopCategory').textContent = cs.category || 'Strategic Case Study';
       if (el('csTopAuthor')) el('csTopAuthor').textContent = cs.author || 'DESIGN BY MD. SHAKIBUR RAHAMAN';
-      if (el('csTopDate')) el('csTopDate').textContent = cs.date || 'MARCH 2026';
+      if (el('csTopDate')) el('csTopDate').textContent = cs.date || '2026';
 
       // 2. Hero Section
-      // Monogram and top strip removed per user request
-
       if (el('csHeroSubtitle')) el('csHeroSubtitle').textContent = cs.subtitle || '';
-      if (el('csHeroTitle')) el('csHeroTitle').textContent = cs.heroTitle || 'UX CASE STUDY';
+      if (el('csHeroTitle')) el('csHeroTitle').textContent = cs.heroTitle || 'CASE STUDY';
       if (el('csHeroTagline')) el('csHeroTagline').textContent = cs.tagline || '';
 
       // 3. Problem Statement
@@ -2272,7 +2169,6 @@
       const videoCol = el('csVideoCol');
       const solutionCol = el('csSolutionCol');
       const videoFrame = el('csVideoFrame');
-      // driveLink removed
 
       if (cs.videoUrl) {
         if (videoCol) videoCol.classList.remove('hidden');
@@ -2293,7 +2189,7 @@
         }
       }
 
-      // 4. Solution List (Restored previous multi-card grid, clicking opens full lightbox with arrow navigation)
+      // 4. Solution List (Multi-card grid with 1080x1350 aspect ratio support and lightbox navigation)
       const solList = el('csSolutionList');
       if (solList && cs.solution) {
         solList.innerHTML = cs.solution.map((item, itemIdx) => {
@@ -2303,30 +2199,51 @@
           let imgGalleryHtml = '';
           if (images.length > 0) {
             const isPeshawari = cs.id === 'peshawari-food-festival';
-            const gridColsClass = isPeshawari
-              ? 'grid-cols-1 max-w-2xl'
-              : (images.length === 1 
-                  ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 max-w-2xl' 
-                  : images.length === 2 
-                    ? 'grid-cols-1 sm:grid-cols-2 max-w-4xl' 
-                    : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3');
+            const isStep12 = isPeshawari && (itemIdx === 11 || (text && text.includes('Step 12')));
+            const isRoomCreative = cs.id === 'room-promotional-creative' || cs.id === 'hotel-sarina';
+            
+            // Grid columns:
+            // - Step 12 of Peshawari: 3 images in one row
+            // - Room Promotional Creative: 3 images in one row
+            // - Peshawari other steps: 1 image or 2 images
+            let gridColsClass = '';
+            if (isStep12) {
+              gridColsClass = 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3';
+            } else if (isRoomCreative) {
+              gridColsClass = 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3';
+            } else if (isPeshawari) {
+              gridColsClass = images.length === 1 
+                ? 'grid-cols-1 max-w-md' 
+                : (images.length === 2 ? 'grid-cols-1 sm:grid-cols-2 max-w-4xl' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3');
+            } else {
+              gridColsClass = images.length === 1 
+                ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 max-w-2xl' 
+                : (images.length === 2 ? 'grid-cols-1 sm:grid-cols-2 max-w-4xl' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3');
+            }
             
             const stepGalleryId = 'stepGallery_' + itemIdx;
             imgGalleryHtml = `
-              <div class="mt-4 mb-4 grid ${gridColsClass} gap-4 sm:gap-5" id="${stepGalleryId}">
-                ${images.map((img, imgIdx) => `
-                  <div class="group relative rounded-2xl overflow-hidden border border-[#20E1B2]/25 bg-[#041B21] shadow-lg hover:border-[#20E1B2] transition-all cursor-zoom-in" onclick="openStepLightbox('${stepGalleryId}', ${imgIdx})">
-                    <div class="w-full aspect-[4/3] overflow-hidden bg-[#041B21] flex items-center justify-center">
-                      <img src="${img.src}" alt="${escapeHtml(img.caption || 'Step Asset')}" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300" loading="lazy">
-                    </div>
-                    ${img.caption ? `
-                      <div class="p-2.5 sm:p-3 bg-[#06232B] border-t border-[#20E1B2]/15 text-[11.5px] sm:text-xs font-semibold text-[#E2FBF6] flex items-center justify-between">
-                        <span class="truncate">${escapeHtml(img.caption)}</span>
-                        <i class="fa-solid fa-expand text-[10px] text-[#20E1B2] ml-1.5 shrink-0"></i>
+              <div class="mt-4 mb-5 grid ${gridColsClass} gap-4 sm:gap-6" id="${stepGalleryId}">
+                ${images.map((img, imgIdx) => {
+                  const isPortraitCreative = isRoomCreative || 
+                    (img.src && (img.src.includes('step3-') || img.src.includes('step4-') || img.src.includes('step7-')));
+                  
+                  const aspectStyleClass = isPortraitCreative ? 'aspect-1080-1350' : 'aspect-4-3';
+
+                  return `
+                    <div class="group relative rounded-2xl overflow-hidden border border-[#20E1B2]/25 bg-[#041B21] shadow-lg hover:border-[#20E1B2] transition-all cursor-zoom-in" onclick="openStepLightbox('${stepGalleryId}', ${imgIdx})">
+                      <div class="w-full ${aspectStyleClass} overflow-hidden bg-[#041B21] flex items-center justify-center">
+                        <img src="${img.src}" alt="${escapeHtml(img.caption || 'Step Asset')}" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" loading="lazy">
                       </div>
-                    ` : ''}
-                  </div>
-                `).join('')}
+                      ${img.caption ? `
+                        <div class="p-2.5 sm:p-3 bg-[#06232B] border-t border-[#20E1B2]/15 text-[11.5px] sm:text-xs font-semibold text-[#E2FBF6] flex items-center justify-between">
+                          <span class="truncate">${escapeHtml(img.caption)}</span>
+                          <i class="fa-solid fa-expand text-[10px] text-[#20E1B2] ml-1.5 shrink-0"></i>
+                        </div>
+                      ` : ''}
+                    </div>
+                  `;
+                }).join('')}
               </div>
             `;
           }
@@ -2366,8 +2283,6 @@
       if (el('csMetricDuration')) el('csMetricDuration').textContent = cs.duration || '14';
       if (el('csMetricScreens')) el('csMetricScreens').textContent = cs.screens || '35+';
 
-
-
       // 8. Design Process Pipeline
       const procGrid = el('csProcessSteps');
       const pHead = el('csProcessHeading'); if (pHead) { pHead.textContent = cs.workflowHeading || 'Design Process'; }
@@ -2399,6 +2314,12 @@
       // 10. Cover Image
       if (el('csCoverImage') && cs.coverImage) {
         el('csCoverImage').src = cs.coverImage;
+      }
+
+      // Reveal main container without any flash
+      const mainEl = document.getElementById('caseStudyMain');
+      if (mainEl) {
+        mainEl.classList.add('cs-loaded');
       }
 
       if (smoothScrollToTop) {

@@ -586,7 +586,7 @@
       "slug": "asap-interior"
     },
     {
-      "id": "hotel-sarina",
+      "id": "room-promotional-creative",
       "title": "Room Promotional Creative",
       "client": "Hotel Sarina Dhaka",
       "category": "Graphics Design & Visuals",
@@ -608,7 +608,7 @@
       ],
       "coverImage": "/assets/case-studies/hotel-sarina/refresh-recharge-1.png",
       "liveUrl": "https://hotel.shakibur.info",
-      "slug": "hotel-sarina"
+      "slug": "room-promotional-creative"
     },
     {
       "id": "apex-pmax-ads",
