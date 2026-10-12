@@ -2275,7 +2275,7 @@
         }
       }
 
-      // 4. Solution List (Supports text and step visual assets)
+      // 4. Solution List (Supports text, single/double previews, and interactive arrow-slider galleries)
       const solList = el('csSolutionList');
       if (solList && cs.solution) {
         solList.innerHTML = cs.solution.map((item, itemIdx) => {
@@ -2283,19 +2283,62 @@
           const images = typeof item === 'object' && Array.isArray(item.images) ? item.images : [];
           
           let imgGalleryHtml = '';
-          if (images.length > 0) {
+          if (images.length > 2) {
+            // Interactive Carousel Slider for 3+ images (uniform size with left/right arrows, keyboard, and dots)
+            const sliderId = 'csSlider_' + itemIdx;
+            imgGalleryHtml = `
+              <div class="mt-4 mb-3 relative max-w-3xl cs-step-slider-container" id="${sliderId}" data-current="0" data-total="${images.length}">
+                <!-- Uniform Aspect Ratio Viewport (16:10 / 4:3 widescreen) -->
+                <div class="relative w-full aspect-[16/10] sm:aspect-[16/10] rounded-2xl overflow-hidden bg-black/60 border border-[#20E1B2]/30 shadow-xl group">
+                  ${images.map((img, imgIdx) => `
+                    <div class="cs-slide-item absolute inset-0 transition-opacity duration-300 flex items-center justify-center cursor-zoom-in ${imgIdx === 0 ? 'opacity-100 z-10' : 'opacity-0 pointer-events-none z-0'}" 
+                         data-slide-index="${imgIdx}" 
+                         onclick="openCsLightbox('${img.src}', '${escapeHtml(img.caption || '')}', '${sliderId}')">
+                      <img src="${img.src}" alt="${escapeHtml(img.caption || 'Gallery Image')}" class="w-full h-full object-contain select-none" loading="lazy">
+                    </div>
+                  `).join('')}
+
+                  <!-- Left Arrow Button -->
+                  <button type="button" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-[#041B21]/80 hover:bg-[#20E1B2] text-white hover:text-[#041B21] border border-[#20E1B2]/30 flex items-center justify-center transition-all shadow-lg active:scale-90" onclick="changeCsSlide('${sliderId}', -1)" aria-label="Previous Image">
+                    <i class="fa-solid fa-chevron-left text-sm"></i>
+                  </button>
+
+                  <!-- Right Arrow Button -->
+                  <button type="button" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-[#041B21]/80 hover:bg-[#20E1B2] text-white hover:text-[#041B21] border border-[#20E1B2]/30 flex items-center justify-center transition-all shadow-lg active:scale-90" onclick="changeCsSlide('${sliderId}', 1)" aria-label="Next Image">
+                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                  </button>
+
+                  <!-- Counter Badge -->
+                  <div class="absolute top-3 right-3 z-20 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md border border-[#20E1B2]/30 text-[11px] font-bold text-[#E2FBF6]">
+                    <span class="cs-counter-current">1</span> / ${images.length}
+                  </div>
+                </div>
+
+                <!-- Footer Bar with Active Caption & Dot Navigators -->
+                <div class="mt-2.5 flex flex-col sm:flex-row items-center justify-between gap-2 px-1">
+                  <div class="cs-slide-caption text-[12px] font-semibold text-[#E2FBF6] truncate">
+                    ${escapeHtml(images[0].caption || 'Image 1 of ' + images.length)}
+                  </div>
+                  <div class="flex items-center gap-1.5 shrink-0">
+                    ${images.map((_, dotIdx) => `
+                      <button type="button" class="cs-slide-dot w-2.5 h-2.5 rounded-full transition-all ${dotIdx === 0 ? 'bg-[#20E1B2] scale-125' : 'bg-white/30 hover:bg-white/60'}" onclick="setCsSlide('${sliderId}', ${dotIdx})" aria-label="Slide ${dotIdx + 1}"></button>
+                    `).join('')}
+                  </div>
+                </div>
+              </div>
+            `;
+          } else if (images.length > 0) {
+            // For 1 or 2 images: clean uniform responsive preview cards
             const gridColsClass = images.length === 1 
-              ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 max-w-2xl' 
-              : images.length === 2 
-                ? 'grid-cols-1 sm:grid-cols-2 max-w-4xl' 
-                : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3';
+              ? 'grid-cols-1 sm:grid-cols-2 max-w-xl' 
+              : 'grid-cols-1 sm:grid-cols-2 max-w-3xl';
             
             imgGalleryHtml = `
               <div class="mt-4 mb-3 grid ${gridColsClass} gap-4">
                 ${images.map((img, imgIdx) => `
                   <div class="group relative rounded-2xl overflow-hidden border border-[#20E1B2]/25 bg-[#041B21]/90 shadow-lg hover:border-[#20E1B2] transition-all cursor-zoom-in" onclick="openCsLightbox('${img.src}', '${escapeHtml(img.caption || '')}')">
-                    <div class="w-full overflow-hidden bg-black/40 flex items-center justify-center">
-                      <img src="${img.src}" alt="${escapeHtml(img.caption || 'Step Asset')}" class="w-full h-auto block object-contain group-hover:scale-[1.02] transition-transform duration-300" loading="lazy">
+                    <div class="w-full aspect-[4/3] overflow-hidden bg-black/50 flex items-center justify-center p-1">
+                      <img src="${img.src}" alt="${escapeHtml(img.caption || 'Step Asset')}" class="w-full h-full object-contain group-hover:scale-[1.03] transition-transform duration-300" loading="lazy">
                     </div>
                     ${img.caption ? `
                       <div class="p-2.5 bg-[#06232B]/90 backdrop-blur-sm border-t border-[#20E1B2]/15 text-[11.5px] font-semibold text-[#E2FBF6] flex items-center justify-between">
@@ -2520,10 +2563,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
   <script src="/assets/js/gsap-animations.js?v=5.0"></script>
 
-  <!-- LIGHTBOX MODAL FOR CASE STUDY ASSETS -->
+  <!-- LIGHTBOX MODAL & INTERACTIVE STEP GALLERY SCRIPT -->
   <div id="csLightboxModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex flex-col items-center justify-center p-4 transition-opacity duration-200" onclick="closeCsLightbox()">
-    <button type="button" class="absolute top-6 right-6 w-11 h-11 rounded-full bg-white/10 hover:bg-[#20E1B2] text-white hover:text-[#041B21] transition-all flex items-center justify-center text-lg z-10" onclick="closeCsLightbox()" aria-label="Close Preview">
+    <button type="button" class="absolute top-6 right-6 w-11 h-11 rounded-full bg-white/10 hover:bg-[#20E1B2] text-white hover:text-[#041B21] transition-all flex items-center justify-center text-lg z-20" onclick="closeCsLightbox()" aria-label="Close Preview">
       <i class="fa-solid fa-xmark"></i>
+    </button>
+    <!-- Modal Navigation Arrows for Gallery Slides -->
+    <button id="csModalPrevBtn" type="button" class="hidden absolute left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#041B21]/90 hover:bg-[#20E1B2] text-white hover:text-[#041B21] border border-[#20E1B2]/40 items-center justify-center text-lg transition-all shadow-xl active:scale-95" onclick="event.stopPropagation(); modalNavigateSlide(-1)" aria-label="Previous">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button id="csModalNextBtn" type="button" class="hidden absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#041B21]/90 hover:bg-[#20E1B2] text-white hover:text-[#041B21] border border-[#20E1B2]/40 items-center justify-center text-lg transition-all shadow-xl active:scale-95" onclick="event.stopPropagation(); modalNavigateSlide(1)" aria-label="Next">
+      <i class="fa-solid fa-chevron-right"></i>
     </button>
     <div class="relative max-w-5xl max-h-[85vh] flex flex-col items-center" onclick="event.stopPropagation()">
       <img id="csLightboxImg" src="" alt="Enlarged Preview" class="max-w-full max-h-[78vh] object-contain rounded-xl border border-[#20E1B2]/30 shadow-2xl">
@@ -2532,27 +2582,125 @@
   </div>
 
   <script>
-    function openCsLightbox(src, caption) {
+    // Gallery Slider Controller
+    function changeCsSlide(sliderId, direction) {
+      const container = document.getElementById(sliderId);
+      if (!container) return;
+      const total = parseInt(container.getAttribute('data-total') || '1', 10);
+      let current = parseInt(container.getAttribute('data-current') || '0', 10);
+      current = (current + direction + total) % total;
+      setCsSlide(sliderId, current);
+    }
+
+    function setCsSlide(sliderId, index) {
+      const container = document.getElementById(sliderId);
+      if (!container) return;
+      container.setAttribute('data-current', index);
+
+      const slides = container.querySelectorAll('.cs-slide-item');
+      slides.forEach((sl, idx) => {
+        if (idx === index) {
+          sl.classList.remove('opacity-0', 'pointer-events-none');
+          sl.classList.add('opacity-100');
+        } else {
+          sl.classList.remove('opacity-100');
+          sl.classList.add('opacity-0', 'pointer-events-none');
+        }
+      });
+
+      const dots = container.querySelectorAll('.cs-slide-dot');
+      dots.forEach((dot, idx) => {
+        if (idx === index) {
+          dot.className = 'cs-slide-dot w-2.5 h-2.5 rounded-full transition-all bg-[#20E1B2] scale-125';
+        } else {
+          dot.className = 'cs-slide-dot w-2.5 h-2.5 rounded-full transition-all bg-white/30 hover:bg-white/60';
+        }
+      });
+
+      const counterCurrent = container.querySelector('.cs-counter-current');
+      if (counterCurrent) counterCurrent.textContent = (index + 1);
+
+      const captionEl = container.querySelector('.cs-slide-caption');
+      const activeSlideImg = slides[index] ? slides[index].querySelector('img') : null;
+      if (captionEl && activeSlideImg) {
+        captionEl.textContent = activeSlideImg.getAttribute('alt') || '';
+      }
+    }
+
+    let activeLightboxSliderId = null;
+
+    function openCsLightbox(src, caption, sliderId = null) {
       const modal = document.getElementById('csLightboxModal');
       const img = document.getElementById('csLightboxImg');
       const cap = document.getElementById('csLightboxCaption');
+      const prevBtn = document.getElementById('csModalPrevBtn');
+      const nextBtn = document.getElementById('csModalNextBtn');
       if (!modal || !img) return;
+
+      activeLightboxSliderId = sliderId;
       img.src = src;
       if (cap) {
         cap.textContent = caption || '';
         cap.style.display = caption ? 'inline-block' : 'none';
       }
+
+      if (sliderId) {
+        if (prevBtn) { prevBtn.classList.remove('hidden'); prevBtn.classList.add('flex'); }
+        if (nextBtn) { nextBtn.classList.remove('hidden'); nextBtn.classList.add('flex'); }
+      } else {
+        if (prevBtn) { prevBtn.classList.add('hidden'); prevBtn.classList.remove('flex'); }
+        if (nextBtn) { nextBtn.classList.add('hidden'); nextBtn.classList.remove('flex'); }
+      }
+
       modal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
     }
+
+    function modalNavigateSlide(dir) {
+      if (!activeLightboxSliderId) return;
+      changeCsSlide(activeLightboxSliderId, dir);
+      const container = document.getElementById(activeLightboxSliderId);
+      if (!container) return;
+      const current = parseInt(container.getAttribute('data-current') || '0', 10);
+      const activeSlide = container.querySelectorAll('.cs-slide-item')[current];
+      const activeImg = activeSlide ? activeSlide.querySelector('img') : null;
+      if (activeImg) {
+        openCsLightbox(activeImg.src, activeImg.getAttribute('alt'), activeLightboxSliderId);
+      }
+    }
+
     function closeCsLightbox() {
       const modal = document.getElementById('csLightboxModal');
       if (!modal) return;
       modal.classList.add('hidden');
       document.body.style.overflow = '';
+      activeLightboxSliderId = null;
     }
+
+    // Global Keyboard Arrow Navigation
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeCsLightbox();
+      const modal = document.getElementById('csLightboxModal');
+      const isModalOpen = modal && !modal.classList.contains('hidden');
+
+      if (e.key === 'Escape') {
+        closeCsLightbox();
+      } else if (e.key === 'ArrowLeft') {
+        if (isModalOpen && activeLightboxSliderId) {
+          modalNavigateSlide(-1);
+        } else {
+          // Navigate first visible page slider
+          const slider = document.querySelector('.cs-step-slider-container');
+          if (slider) changeCsSlide(slider.id, -1);
+        }
+      } else if (e.key === 'ArrowRight') {
+        if (isModalOpen && activeLightboxSliderId) {
+          modalNavigateSlide(1);
+        } else {
+          // Navigate first visible page slider
+          const slider = document.querySelector('.cs-step-slider-container');
+          if (slider) changeCsSlide(slider.id, 1);
+        }
+      }
     });
   </script>
 
