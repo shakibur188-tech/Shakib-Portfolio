@@ -410,16 +410,17 @@
         <div class="w-full">
           <div id="videoContainer" class="morphy-card p-3 sm:p-4 rounded-[28px] bg-[#0B3844]/40 backdrop-blur-xl border-2 border-[#20E1B2]/30 shadow-2xl shadow-[#20E1B2]/20 relative group overflow-hidden">
             
-            <!-- 16:9 Video Aspect Ratio Frame with Direct Real Google Drive Video Screen -->
+            <!-- 16:9 Video Aspect Ratio Frame with Clean HTML5 Video Player -->
             <div id="videoPlayerFrame" class="relative aspect-video w-full rounded-[20px] overflow-hidden bg-black border border-[#20E1B2]/25 shadow-inner">
-              <iframe 
-                src="https://drive.google.com/file/d/197PtYAyogdvqTF6R2lRGfhVR4QoccuLS/preview" 
-                class="w-full h-full border-0 rounded-[20px]" 
-                allow="autoplay; fullscreen" 
-                allowfullscreen 
-                loading="lazy"
+              <video 
+                src="/assets/videos/campaign-framework-walkthrough.mp4" 
+                controls 
+                playsinline 
+                preload="metadata" 
+                class="w-full h-full object-cover rounded-[20px] bg-black" 
                 title="Campaign Execution Framework Strategic Walkthrough">
-              </iframe>
+                Your browser does not support the video tag.
+              </video>
             </div>
 
             <!-- Video Footer Bar -->
@@ -1144,11 +1145,11 @@
 
   <!-- Scripts -->
   <script>
-    // Play Google Drive Video Inline
+    // Play Video Inline
     function playDriveVideo() {
       const frame = document.getElementById('videoPlayerFrame');
       if (!frame) return;
-      frame.innerHTML = '<iframe src="https://drive.google.com/file/d/197PtYAyogdvqTF6R2lRGfhVR4QoccuLS/preview" class="w-full h-full border-0 rounded-[20px]" allow="autoplay; fullscreen" allowfullscreen></iframe>';
+      frame.innerHTML = '<video src="/assets/videos/campaign-framework-walkthrough.mp4" controls autoplay playsinline class="w-full h-full object-cover rounded-[20px] bg-black"></video>';
     }
 
     document.addEventListener('DOMContentLoaded', () => {

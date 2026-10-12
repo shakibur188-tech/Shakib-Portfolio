@@ -861,12 +861,12 @@
 
             <!-- Card Bottom Action: Prominent Details Button -->
             <div class="pt-4 border-t border-[#20E1B2]/20 flex items-center justify-between gap-2.5 mt-auto">
-              <a href="${targetUrl}" class="btn-aesthetic-primary text-xs py-2.5 px-4 flex-1 justify-center shadow-md">
+              <a href="${targetUrl}" class="w-full sm:flex-1 py-3 px-5 rounded-xl bg-[#20E1B2] hover:bg-[#1AD0A3] text-[#041B21] font-extrabold text-xs tracking-wide flex items-center justify-center gap-2 shadow-md shadow-[#20E1B2]/25 hover:shadow-lg transition-all active:scale-[0.98]">
                 <span>View Case Study Details</span>
                 <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
               </a>
 
-              <div class="flex items-center gap-2 shrink-0">
+              <div class="hidden sm:flex items-center gap-2 shrink-0">
                 <button type="button" onclick="event.stopPropagation(); openCaseStudyModal('${escapeHtml(cs.id)}')" class="px-3 py-2 rounded-xl bg-[#0B3844]/60 border border-[#20E1B2]/25 text-xs font-bold text-[#7EADA3] hover:text-[#20E1B2] hover:border-[#20E1B2] transition-colors" title="Quick Summary Preview">
                   <span>Preview</span>
                 </button>
