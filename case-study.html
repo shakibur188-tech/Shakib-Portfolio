@@ -465,24 +465,9 @@
   <!-- =========================================================================
        MAIN CASE STUDY CONTAINER (Faithful to User Screenshot Layout)
        ========================================================================= -->
-  <main class="relative z-10 max-w-4xl mx-auto px-4 sm:px-8 py-8 sm:py-12" id="caseStudyMain">
+  <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-8 py-8 sm:py-12" id="caseStudyMain">
 
-    <!-- 1. TOP METADATA HEADER -->
-    <div class="flex items-center justify-between text-[11px] sm:text-xs font-bold uppercase tracking-widest text-[#7EADA3] pb-6 border-b border-[#20E1B2]/15 reveal-on-scroll">
-      <span id="csTopCategory" class="text-[#20E1B2]">UX CASE STUDY</span>
-      <span id="csTopAuthor" class="hidden sm:inline text-white">DESIGN BY MD. SHAKIBUR RAHAMAN</span>
-      <span id="csTopDate">MARCH 2026</span>
-    </div>
-
-    <!-- 2. HERO LOGO & TITLE SECTION -->
-    <div class="text-center pt-4 sm:pt-6 pb-8 sm:pb-10 reveal-on-scroll">
-      
-      <!-- Brand / App Circular Monogram Badge -->
-      <div class="flex justify-center mb-6">
-        <div id="csBrandBadge" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr from-[#E07A5F] to-[#F28C38] flex items-center justify-center text-white font-black text-xl sm:text-2xl shadow-lg shadow-[#E07A5F]/35 border-2 border-white transform transition-transform duration-300 hover:scale-105">
-          fae
-        </div>
-      </div>
+    <!-- HERO TITLE SECTION -->
 
       <!-- App Subtitle -->
       <h3 id="csHeroSubtitle" class="text-lg sm:text-2xl font-bold text-white mb-2 tracking-tight">
@@ -517,23 +502,48 @@
     </section>
 
     <!-- =========================================================================
-         4. THE SOLUTION
+         4. THE SOLUTION (With Left-Side Video Player When Available)
          ========================================================================= -->
-    <section class="mb-14 sm:mb-20 reveal-on-scroll">
-      <div class="accent-title-wrap">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-          The Solution
-        </h2>
-      </div>
+    <section class="mb-14 sm:mb-20 reveal-on-scroll" id="csSolutionSection">
+      <div id="csSolutionContainer" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left Side: Video Player Column -->
+        <div id="csVideoCol" class="lg:col-span-6 hidden">
+          <div class="accent-title-wrap mb-4">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              Campaign Video
+            </h2>
+          </div>
+          <div class="morphy-card p-3 rounded-[24px] bg-[#0B3844]/40 border-2 border-[#20E1B2]/30 shadow-2xl relative overflow-hidden">
+            <div id="csVideoFrame" class="relative aspect-video w-full rounded-[18px] overflow-hidden bg-black border border-[#20E1B2]/25 shadow-inner">
+              <!-- Video iframe dynamically loaded -->
+            </div>
+            <div class="mt-2.5 flex items-center justify-between px-1 text-[11px]">
+              <span class="text-[#7EADA3] flex items-center gap-1.5 font-medium">
+                <i class="fa-solid fa-circle-play text-[#20E1B2]"></i>
+                <span class="text-white/90 font-semibold">Strategic Execution Video</span>
+              </span>
+              <a id="csVideoDriveLink" href="#" target="_blank" rel="noopener noreferrer" class="text-[#20E1B2] hover:underline font-bold flex items-center gap-1 bg-[#20E1B2]/10 px-2 py-0.5 rounded-full border border-[#20E1B2]/30">
+                <span>Open in Drive</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
 
-      <ul id="csSolutionList" class="cs-bullet-list max-w-3xl space-y-2.5">
-        <li>Introducing a renting platform for furniture, appliances &amp; electronics.</li>
-        <li>The user can choose their desired tenure for renting (Week, Months, or one year).</li>
-        <li>Can easily relocate the rented items from our app for free.</li>
-        <li>Can swap the rented item for upgradation.</li>
-        <li>No delivery charges will be applicable for renting items.</li>
-        <li>Easy cleanup &amp; maintenance.</li>
-      </ul>
+        <!-- Right Side: The Solution Content Column -->
+        <div id="csSolutionCol" class="lg:col-span-12">
+          <div class="accent-title-wrap mb-4">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              The Solution
+            </h2>
+          </div>
+          <ul id="csSolutionList" class="cs-bullet-list space-y-2.5">
+            <!-- Rendered dynamically -->
+          </ul>
+        </div>
+
+      </div>
     </section>
 
     <!-- =========================================================================
@@ -1004,6 +1014,8 @@
   },
   {
     "id": "kitchen-cabinet-lead-generation",
+    "videoUrl": "https://drive.google.com/file/d/1XhdZ0YySoKUgXlLQYfAalYSGyV3Co4zX/preview",
+    "videoDriveLink": "https://drive.google.com/file/d/1XhdZ0YySoKUgXlLQYfAalYSGyV3Co4zX/view?usp=drive_link",
     "slug": "kitchen-cabinet-lead-generation",
     "category": "META ADS & LEAD GENERATION WORKFLOW",
     "author": "DIRECTED BY MD. SHAKIBUR RAHAMAN",
@@ -2181,11 +2193,7 @@
       if (el('csTopDate')) el('csTopDate').textContent = cs.date || 'MARCH 2026';
 
       // 2. Hero Section
-      const badge = el('csBrandBadge');
-      if (badge) {
-        badge.textContent = cs.badge || 'SR';
-        badge.className = `w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr ${cs.badgeGradient || 'from-[#E07A5F] to-[#F28C38]'} flex items-center justify-center text-white font-black text-xl sm:text-2xl shadow-lg shadow-[#E07A5F]/35 border-2 border-white transform transition-transform duration-300 hover:scale-105`;
-      }
+      // Monogram and top strip removed per user request
 
       if (el('csHeroSubtitle')) el('csHeroSubtitle').textContent = cs.subtitle || '';
       if (el('csHeroTitle')) el('csHeroTitle').textContent = cs.heroTitle || 'UX CASE STUDY';
@@ -2194,10 +2202,47 @@
       // 3. Problem Statement
       if (el('csProblemContent')) el('csProblemContent').textContent = cs.problem || '';
 
+      // Video on Left Side of The Solution
+      const videoCol = el('csVideoCol');
+      const solutionCol = el('csSolutionCol');
+      const videoFrame = el('csVideoFrame');
+      const driveLink = el('csVideoDriveLink');
+
+      if (cs.videoUrl) {
+        if (videoCol) videoCol.classList.remove('hidden');
+        if (solutionCol) {
+          solutionCol.className = 'lg:col-span-6';
+        }
+        if (videoFrame) {
+          videoFrame.innerHTML = `<iframe src="${cs.videoUrl}" class="w-full h-full border-0 rounded-[18px]" allow="autoplay; fullscreen" allowfullscreen loading="lazy" title="Campaign Walkthrough"></iframe>`;
+        }
+        if (driveLink) {
+          driveLink.href = cs.videoDriveLink || cs.videoUrl;
+        }
+      } else {
+        if (videoCol) videoCol.classList.add('hidden');
+        if (solutionCol) {
+          solutionCol.className = 'lg:col-span-12';
+        }
+        if (videoFrame) {
+          videoFrame.innerHTML = '';
+        }
+      }
+
       // 4. Solution List
       const solList = el('csSolutionList');
       if (solList && cs.solution) {
         solList.innerHTML = cs.solution.map(s => `<li>${escapeHtml(s)}</li>`).join('');
+      }
+
+      // Render Key Takeaway if present
+      const takeawayBox = el('csTakeawaySection');
+      const takeawayContent = el('csTakeawayContent');
+      if (cs.takeaway && takeawayBox && takeawayContent) {
+        takeawayBox.classList.remove('hidden');
+        takeawayContent.textContent = cs.takeaway;
+      } else if (takeawayBox) {
+        takeawayBox.classList.add('hidden');
       }
 
       // 5. My Role Grid
