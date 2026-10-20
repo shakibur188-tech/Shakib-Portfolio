@@ -368,7 +368,7 @@ function renderServices(servicesData) {
       deliverables: ['High-Intent Google Search & PMax Ad Scaling', 'Meta Advantage+ Creative & Retargeting Campaigns', 'Server-Side CAPI & Offline Conversion Tracking'],
       metricValue: '5.4x',
       metricLabel: 'Blended ROAS',
-      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80'
+      image: '/assets/services/social-media-google-marketing.jpg'
     },
     {
       id: 'branding-strategy',
@@ -382,7 +382,7 @@ function renderServices(servicesData) {
       deliverables: ['Market Positioning & White-Space Mapping', 'Brand Architecture & Sub-Brand Portfolio Strategy', 'Comprehensive Corporate Identity Manual & Guidelines'],
       metricValue: '+340%',
       metricLabel: 'Brand Value Lift',
-      image: 'https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80'
+      image: '/assets/services/branding-strategy.jpg'
     },
     {
       id: 'graphics-design-visuals',
@@ -396,7 +396,7 @@ function renderServices(servicesData) {
       deliverables: ['High-Converting Paid Social Ad Creative Suites', 'Luxury Product Packaging & Print Die-Line Engineering', '3D Photorealistic Product Renders & Spatial Mockups'],
       metricValue: '500+',
       metricLabel: 'Visual Assets',
-      image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80'
+      image: '/assets/services/graphics-design-visuals.jpg'
     },
     {
       id: 'web-design-development',
@@ -450,7 +450,6 @@ function renderServices(servicesData) {
       id: s.id || fallback.id,
       slug: s.slug || fallback.slug,
       pillar: s.badge ? s.badge.split('•')[0].trim() : fallback.pillar,
-      rating: fallback.rating || '5.0',
       tags: s.tools ? s.tools.slice(0, 2) : fallback.tags,
       title: s.title || fallback.title,
       subtitle: s.subtitle || fallback.subtitle,
@@ -480,25 +479,13 @@ function renderServices(servicesData) {
         <!-- Inset Image Frame with Rounded Corners -->
         <div class="relative h-56 sm:h-60 w-full rounded-[24px] overflow-hidden bg-[#041B21] mb-5 border border-[#D1F5EE]/10">
           <img src="${escapeHtml(s.image)}" alt="${escapeHtml(s.title)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'">
-          <div class="absolute inset-0 bg-gradient-to-t from-[#041B21]/80 via-transparent to-black/30"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
           
-          <!-- Top Floating Glass Tags & Rating -->
+          <!-- Top Floating Glass Tags -->
           <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
             <div class="flex items-center gap-1.5 flex-wrap">
               ${tagsHtml}
             </div>
-            <div class="px-2.5 py-1 rounded-full bg-[#041B21]/80 backdrop-blur-md border border-[#D1F5EE]/20 text-white text-[11px] font-bold flex items-center gap-1">
-              <i class="fa-solid fa-star text-amber-400 text-[10px]"></i>
-              <span>${s.rating}</span>
-            </div>
-          </div>
-
-          <!-- Carousel Indicator Dots -->
-          <div class="absolute bottom-3.5 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
-            <span class="w-2 h-2 rounded-full bg-[#20E1B2] shadow-xs"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
           </div>
         </div>
 

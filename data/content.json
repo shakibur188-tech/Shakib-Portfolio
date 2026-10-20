@@ -122,7 +122,7 @@
       ],
       "stats": "5.4x Blended ROAS Achieved",
       "pageUrl": "/services/social-media-google-marketing",
-      "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80"
+      "image": "/assets/services/social-media-google-marketing.jpg"
     },
     {
       "id": "branding-strategy",
@@ -149,7 +149,7 @@
       ],
       "stats": "+340% Brand Value & Recall Lift",
       "pageUrl": "/services/branding-strategy",
-      "image": "https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80"
+      "image": "/assets/services/branding-strategy.jpg"
     },
     {
       "id": "graphics-design-visuals",
@@ -176,7 +176,7 @@
       ],
       "stats": "500+ High-Impact Visual Assets Produced",
       "pageUrl": "/services/graphics-design-visuals",
-      "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80"
+      "image": "/assets/services/graphics-design-visuals.jpg"
     },
     {
       "id": "web-design-development",

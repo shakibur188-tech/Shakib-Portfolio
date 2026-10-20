@@ -2,8 +2,12 @@ User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /api/
+Disallow: /data/
 
 # AI Search & Large Language Model Crawlers (Permitted for Citations & RAG Retrieval)
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 
